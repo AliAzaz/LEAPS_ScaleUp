@@ -9,6 +9,7 @@ import android.arch.persistence.room.Update;
 import com.example.hassannaqvi.wfppishincr.data.AppDatabase.Sub_DBConnection;
 import com.example.hassannaqvi.wfppishincr.data.entities.Forms;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Dao
@@ -21,7 +22,7 @@ public interface FormsDAO {
     Forms getLastForm(int id);
 
     @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORM + " WHERE synced = ''")
-    Forms getUnSynced();
+    ArrayList<Forms> getUnSyncedForms();
 
     @Insert
     Long insertAll(Forms forms);

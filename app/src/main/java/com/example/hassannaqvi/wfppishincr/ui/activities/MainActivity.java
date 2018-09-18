@@ -20,12 +20,8 @@ import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.wfppishincr.R;
@@ -247,7 +243,7 @@ public class MainActivity extends Activity {
     }
 
     public void openForm() {
-        final Intent oF = new Intent(MainActivity.this, SectionAActivity.class);
+        final Intent oF = new Intent(MainActivity.this, StartActivity.class);
 
         if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
             startActivity(oF);
@@ -456,19 +452,19 @@ public class MainActivity extends Activity {
 
     public void openA(View v) {
 
-        startActivity1(SectionAActivity.class);
+//        startActivity1(SectionAActivity.class);
 
     }
 
     public void openB(View v) {
 
-        startActivity1(SectionBActivity.class);
+//        startActivity1(SectionBActivity.class);
 
     }
 
     public void openC(View v) {
 
-        startActivity1(SectionCActivity.class);
+//        startActivity1(SectionCActivity.class);
 
     }
 

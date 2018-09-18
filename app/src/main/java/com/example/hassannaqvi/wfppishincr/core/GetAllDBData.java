@@ -3,39 +3,28 @@ package com.example.hassannaqvi.wfppishincr.core;
 import android.os.AsyncTask;
 
 import com.example.hassannaqvi.wfppishincr.data.AppDatabase;
-import com.example.hassannaqvi.wfppishincr.data.entities.Forms;
+
+import java.util.Collection;
 
 /**
  * Created by openm on 19-Jul-18.
  */
 
-public class GetAllDBData extends AsyncTask<Long, Void, Forms> {
+public class GetAllDBData extends AsyncTask<Long, Void, Collection<?>> {
 
-    Forms userData, userInfo;
+    Collection<?> userData;
     AppDatabase db;
-    int type;
 
-    public GetAllDBData(AppDatabase db, Forms userInfo, int type) {
+    public GetAllDBData(AppDatabase db) {
         this.db = db;
-        this.userInfo = userInfo;
-        this.type = type;
     }
 
     @Override
-    protected Forms doInBackground(Long... data) {
+    protected Collection<?> doInBackground(Long... data) {
 
-        Forms curUser = null;
+        Collection<?> curUser = db.formsDao().getUnSyncedForms();
 
-        switch (type) {
-            case 1:
-                curUser = db.formsDao().getLastForm(data[0].intValue());
-                break;
-            case 2:
-                curUser = db.formsDao().getUnSynced();
-                break;
-        }
-
-        userData = curUser != null ? new Forms(curUser) : null;
+        userData = curUser.size() > 0 ? curUser : null;
 
         return userData;
     }
