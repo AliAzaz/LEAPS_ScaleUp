@@ -7,14 +7,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.wfppishincr.R;
-import com.example.hassannaqvi.wfppishincr.core.DatabaseHelper;
-import com.example.hassannaqvi.wfppishincr.core.MainApp;
+import com.example.hassannaqvi.wfppishincr.core.crudOperations;
 import com.example.hassannaqvi.wfppishincr.databinding.ActivityEndingBinding;
-
-import org.json.JSONException;
+import com.example.hassannaqvi.wfppishincr.validation.validatorClass;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
 
 
 public class EndingActivity extends AppCompatActivity {
@@ -22,23 +21,25 @@ public class EndingActivity extends AppCompatActivity {
     private static final String TAG = EndingActivity.class.getSimpleName();
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
-    ActivityEndingBinding binding;
+    ActivityEndingBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_ending);
-        binding.setCallback(this);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
+        bi.setCallback(this);
+
+        this.setTitle("End Interview");
 
         Boolean check = getIntent().getExtras().getBoolean("complete");
 
         if (check) {
-            binding.istatusa.setEnabled(true);
-            binding.istatusb.setEnabled(false);
+            bi.istatusa.setEnabled(true);
+            bi.istatusb.setEnabled(false);
         } else {
-            binding.istatusa.setEnabled(false);
-            binding.istatusb.setEnabled(true);
+            bi.istatusa.setEnabled(false);
+            bi.istatusb.setEnabled(true);
         }
 
 /*        istatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -57,78 +58,42 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
-        Toast.makeText(this, "Processing This Section", Toast.LENGTH_SHORT).show();
         if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
+
+            SaveDraft();
             if (UpdateDB()) {
-
-                finish();
-
-                Intent endSec = new Intent(this, MainActivity.class);
-                startActivity(endSec);
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
             } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
+
         }
     }
 
-    private void SaveDraft() throws JSONException {
-        Toast.makeText(this, "Saving Draft for  This Section", Toast.LENGTH_SHORT).show();
-
-        MainApp.fc.setIstatus(binding.istatusa.isChecked() ? "1"
-                : binding.istatusb.isChecked() ? "2"
-                : "0");
-
-//        MainApp.fc.setIstatus88x(istatus88x.getText().toString());
-        MainApp.fc.setEndingdatetime(dtToday);
-
-
-        Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
+    private void SaveDraft() {
+        StartActivity.fc.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : "0");
+        StartActivity.fc.setEndtime(dtToday);
     }
 
     private boolean UpdateDB() {
-        DatabaseHelper db = new DatabaseHelper(this);
+        try {
 
+            Long longID = new crudOperations(1, StartActivity.db, StartActivity.fc).execute().get();
+            return longID == 1;
 
-        int updcount = db.updateEnding();
-
-        if (updcount == 1) {
-            Toast.makeText(this, "Updating Database... Successful!", Toast.LENGTH_SHORT).show();
-            return true;
-        } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-            return false;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
         }
+
+        return false;
 
     }
 
     private boolean formValidation() {
-        Toast.makeText(this, "Validating This Section ", Toast.LENGTH_SHORT).show();
 
-        /*if (!validatorClass.EmptyRadioButton(this, binding.istatus, binding.istatusb, getString(R.string.istatus))) {
-            return false;
-        }*/
-
-        /*if (istatus88.isChecked()) {
-
-            if (istatus88x.getText().toString().isEmpty()) {
-                Toast.makeText(this, "ERROR(empty): " + getString(R.string.other), Toast.LENGTH_SHORT).show();
-                istatus88x.setError("This data is Required!");    // Set Error on last radio button
-                Log.i(TAG, "istatus88x: This data is Required!");
-                return false;
-            } else {
-                istatus88x.setError(null);
-            }
-
-        }*/
-
-
-        return true;
+        return validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusb, getString(R.string.istatus));
     }
 
 

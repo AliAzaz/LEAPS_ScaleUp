@@ -50,13 +50,13 @@ public class EndInterview extends AppCompatActivity {
     }
 
     public void SaveDraft() {
-        StartActivity.formContract.setIstatus(istatusa.isChecked() ? "1" : istatusb.isChecked() ? "2" : "0");
+        StartActivity.fc.setIstatus(istatusa.isChecked() ? "1" : istatusb.isChecked() ? "2" : "0");
     }
 
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(1, StartActivity.db, StartActivity.formContract).execute().get();
+            Long longID = new crudOperations(1, StartActivity.db, StartActivity.fc).execute().get();
             return longID == 1;
 
         } catch (InterruptedException e) {

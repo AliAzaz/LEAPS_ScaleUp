@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutionException;
 
 public class StartActivity extends AppCompatActivity {
 
-    public static Forms formContract;
+    public static Forms fc;
     public static AppDatabase db;
 
     EditText txtName;
@@ -115,18 +115,18 @@ public class StartActivity extends AppCompatActivity {
 
     public void SaveDraft() {
 
-        formContract = new Forms();
-        formContract.setUsername(txtName.getText().toString());
+        fc = new Forms();
+        fc.setUsername(txtName.getText().toString());
 
     }
 
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(0, db, formContract).execute().get();
+            Long longID = new crudOperations(0, db, fc).execute().get();
 
             if (longID != 0) {
-                formContract.setId(longID.intValue());
+                fc.setId(longID.intValue());
                 return true;
             } else {
                 return false;
