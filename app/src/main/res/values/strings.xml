@@ -1,0 +1,732 @@
+<resources>
+    <string name="app_name">WFP Pishin CR</string>
+
+<!--copied Strings for splash, login and main screen-->
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="istatus">انٹروہو کا نتیجہ</string>
+    <string name="istatusa">مکمل</string>
+    <string name="istatusb">نا مکمل</string>
+    <string name="istatusc">انکار کردیا</string>
+    <string name="istatusd">گھر بند ہے</string>
+    <string name="nextSection">اگلا سیکشن</string>
+    <string name="addMember">افراد کا اندراج</string>
+    <string name="other">دیگر (وضاحت کریں)</string>
+    <string name="dkn">معلوم نہیں</string>
+    <string name="ccmfood01">(جانور اور فصلیں) اپنی پیداوار</string>
+    <string name="ccmfood02">ماہی گیری /شکار</string>
+    <string name="ccmfood03">اکٹھا ہونا</string>
+    <string name="ccmfood04">قرض</string>
+    <string name="ccmfood05">بازار(پیسوں سے خریداری)</string>
+    <string name="ccmfood06">بازار (ادھار پر خریداری)</string>
+    <string name="ccmfood07">خوراک کے لیے بھیک مانگنا</string>
+    <string name="ccmfood08">کھانے پینے کی اشیاء یا مزدوری کا تبادلہ</string>
+    <string name="ccmfood09">دوستوں یا رشتہ داروں کی طرف سے خوراک کا تحفہ</string>
+    <string name="ccmfood10">این جی او، غیر سرکاری تنظیموں عا لمی ادارہ خوراک کی طرف سے امداد</string>
+
+    <!--common strings-->
+    <string name="end_interview">اختتام</string>
+    <string name="start_interview">انٹرویو شروع کریں</string>
+
+    <!--Section A-->
+    <string name="ccaHeading">شناخت</string>
+    <string name="cca01"> انٹرویو لینے والے کا نام  </string>
+    <string name="cca02">ضلع کا نام</string>
+    <string name="cca03">تحصیل کا نام </string>
+    <string name="cca04">  یونین کونسل کانام</string>
+    <string name="cca05">علاقہ / گاؤں کا نام</string>
+    <string name="cca06">لیڈی ہیلتھ ورکر کا نام  </string>
+    <string name="cca07">کلسٹر کی قسم</string>
+    <string name="cca07a">انٹروینشن</string>
+    <string name="cca07b">کنٹرول</string>
+    <string name="cca08"> کیا جوابدہندہ مطالعے میں شامل ہونے کے لیے رضامندہے ؟    </string>
+    <string name="cca08a">ہاں</string>
+    <string name="cca08b"> نہیں</string>
+
+    <!--Section B-->
+    <string name="ccbHeading">خاندان کی معلومات </string>
+    <string name="ccbSubHeading">گھر کے سربراہ سے شروع کریں</string>
+    <string name="ccb01">گھر کے افراد کے نام</string>
+    <string name="ccb02">جنس</string>
+    <string name="ccb02a">مرد</string>
+    <string name="ccb02b">عورت</string>
+    <string name="ccb03">پیدائش کی تاریخ(پانچ سال سے کم عمر کے  بچوں کیلئے)</string>
+    <string name="ccb03m">مہینہ</string>
+    <string name="ccb04"> عمرپانچ سال سے بڑے (مکمل سالوں میں)</string>
+    <string name="ccb05">تعلیمی معیار </string>
+    <string name="ccb05a">نہیں </string>
+    <string name="ccb05b">پرائمری(1-5 سال )</string>
+    <string name="ccb05c">(مڈل پاس (6-8 سال
+
+ </string>
+    <string name="ccb05d">سیکنڈری (9-10 سال )
+ </string>
+    <string name="ccb05e">(انٹرمیڈیٹ (11-12 سال
+ </string>
+    <string name="ccb05f">گریجویشن 13-14 سال)
+ </string>
+    <string name="ccb05g">ماسٹرز(15-16 سال)
+ </string>
+    <string name="ccb05h">M.Phil./ PhD ایم فل / پی ایچ ڈی</string>
+    <string name="ccb06">پیشہ </string>
+    <string name="ccb06a">قابل اطلاق نہیں
+ </string>
+    <string name="ccb06b">گھریلو عورت
+</string>
+    <string name="ccb06c">ڈاکٹر / انجینئر / ماسٹر / مینیجر وغیرہ
+ </string>
+    <string name="ccb06d">کلرک / ٹیکنیکل
+ </string>
+    <string name="ccb06e">سیلز اور سروسز
+ </string>
+    <string name="ccb06f"> ہنر مند مزدور
+ </string>
+    <string name="ccb06g">غیر ہنر مند مزدور
+ </string>
+    <string name="ccb06h">زراعت
+ </string>
+    <string name="ccb06i">کاروبار
+ </string>
+    <string name="ccb06j">شاگرد
+ </string>
+    <string name="ccb06k"> بیروز گار
+ </string>
+
+    <!--Section C-->
+    <string name="cccHeading">بچے کی معلومات</string>
+    <string name="ccc01">بچے کی شناخت</string>
+    <string name="ccc02">بچے کا نام
+</string>
+    <string name="ccc03">بچے کی جنس</string>
+    <string name="ccc03a">مرد</string>
+    <string name="ccc03b">عورت</string>
+    <string name="ccc04">بچے کی تاریخ َپیدائش
+</string>
+    <string name="ccc05"> بچے کی عمر اندراج کے وقت</string>
+    <string name="ccc05m">ماہ</string>
+    <string name="ccc05d"> دن</string>
+    <string name="ccc06">کیابچہ اپنی مدت پوری کر کے پیدا ہوا تھا؟</string>
+    <string name="ccc06a">ہاں</string>
+    <string name="ccc06b">نا</string>
+    <string name="ccc07">حمل کی مدت</string>
+    <string name="ccc07w">ہفتے
+</string>
+    <string name="ccc08">کیا بچے کا پیدائشی وزن کیا گیا تھا؟</string>
+    <string name="ccc08a">ہاں
+</string>
+    <string name="ccc08b">نہیں
+</string>
+    <string name="ccc08c">معلوم نہیں
+</string>
+    <string name="ccc09">بچے کا کتنا وزن تھا ؟
+</string>
+    <string name="ccc09a">کلوگرام
+</string>
+    <string name="ccc09b">معلوم نہیں
+</string>
+
+    <!--Section D-->
+    <string name="ccdHeading">Child Anthropometry </string>
+    <string name="ccd01">لمبائی</string>
+    <string name="ccd02">وزن</string>
+
+    <!--Section E-->
+    <string name="cceHeading">Mother Anthropometry </string>
+
+    <!--Section F-->
+    <string name="ccfHeading">Father Anthropometry</string>
+    <string name="ccf01">والد گھر میں موجود نہیں ہے</string>
+
+    <!--Section G-->
+    <string name="ccgHeading">بچے کی بیماریاںاور ان کا علاج</string>
+    <string name="ccg01">کیا بچہ پچھلے دو ہفتوں کے دوران ان میں سے کسی بیماری میں مبتلا رہا ہے ؟</string>
+    <string name="ccg01a"> شدید بخار</string>
+    <string name="ccg01b">اسہال
+</string>
+    <string name="ccg01c">کھانسی /زکام
+</string>
+    <string name="ccg01d">سانس میں دشواری
+</string>
+    <string name="ccg01e"> سینے کی تکلیف
+</string>
+    <string name="ccg01f">جلد کی بیماری
+</string>
+    <string name="ccg01g">پاخانے میں کیڑے
+</string>
+    <string name="ccg01h">داخ دھبے اور خارش
+</string>
+    <string name="ccg0196">دیگر وضاحت کریں
+</string>
+    <string name="ccg0197">کوئی نہیں
+</string>
+
+    <string name="ccg02">کیا آپ نےپچھلے دو ہفتوں میں کسی بیماری کا علاج کروایا؟</string>
+
+    <string name="ccg02a">ہاں</string>
+    <string name="ccg02b">نہیں</string>
+
+    <string name="ccg03">پچھلےدو ہفتوںمیں ان میں سے کس بیماری کا علاج کس سے کروایا؟</string>
+    <string name="ccg03a">ڈاکٹر
+</string>
+    <string name="ccg03b">نرس /دائی/لیڈی ہیلتھ وزیٹر
+</string>
+    <string name="ccg03c">کمیونٹی مڈ وائف
+</string>
+    <string name="ccg03d">دائی/ ٹی بی اے
+</string>
+    <string name="ccg03e">لیڈی ہیلتھ ورکر
+</string>
+    <string name="ccg03f"> ہومیوپیھتک
+</string>
+    <string name="ccg03g">  حکیم
+</string>
+    <string name="ccg03h">   کمپوڈر/ڈسپنسر
+</string>
+    <string name="ccg0396">دیگر وضاحت کریں</string>
+
+    <!--section H-->
+    <string name="cchHeading">Child Vaccination Status </string>
+    <string name="cch01">کیا کبھی بچے نے کسی بیماری کی ویکسین لگوائی ہے بشمول پولیو  کے  قومی مہم کے دوران  لگوائی  ہو؟</string>
+    <string name="cch01a">ہاں</string>
+    <string name="cch01b">نہیں</string>
+
+    <string name="cch02">پیدائش کے وقت</string>
+    <string name="cch0201">BCG</string>
+    <string name="cch0202">Polio 0</string>
+    <string name="cch0202a"> کارڈ کے مطابق  ویکسینیشن کی تصدیق</string>
+    <string name="cch0202b">ماں کے مطابق</string>
+    <string name="cch0202c">دی نہیں گئی</string>
+
+    <string name="cch03">6 ہفتوں کی عمر میں </string>
+    <string name="cch0301">Penta 1 </string>
+    <string name="cch0302">PCV 1 </string>
+    <string name="cch0303">OPV 1</string>
+
+    <string name="cch04">10 ہفتوں کی عمر میں</string>
+    <string name="cch0401">Penta 2 </string>
+    <string name="cch0402">PCV 2 </string>
+    <string name="cch0403">OPV 2</string>
+
+    <string name="cch05">14 ہفتوں کی عمر میں</string>
+    <string name="cch0501">Penta 3 </string>
+    <string name="cch0502">PCV 3 </string>
+    <string name="cch0503">OPV 3</string>
+    <string name="cch0504">IPV</string>
+
+    <string name="cch06"> 6 مہینوں  کی عمر میں</string>
+    <string name="cch0601"> Vitamin A</string>
+
+    <string name="cch07"> 9 مہینوں  کی عمر میں</string>
+    <string name="cch0701">Measles</string>
+
+    <!--Section I-->
+    <string name="cciHeading">Infant and Young Child Feeding (IYCF) (WHO Standards)</string>
+    <string name="cci01">کیا آپ نے کبھی بچے کو ماں کا دودھ دیا؟</string>
+    <string name="cci01a">ہاں</string>
+    <string name="cci01b">نہیں</string>
+    <string name="cci98">معلوم نہیں</string>
+
+    <string name="cci02">کیا بچے کو کل دن یا رات کے وقت ان میں سے کسی طریقے سے دودھ پلایا گیا؟</string>
+    <string name="cci02sub">کبھی کبھار بچوں کو مختلف طریقے سے دودھ پلاپا جاتاہے۔مثال کے طور پر  چمچ کے ذریعے،کپ یا بوتل میں۔یہ اس وقت ہوتا ہے جب بچہ ہمیشہ ماں کے پاس نہیں ہوتا ہے۔کبھی کبھار دوسری عورت بچے کو دودھ پلاتی ہے۔یہ اس وقت ہوتا ہے جب ماں اپنے بچے کو دودھ نہیں پلا سکتی ہے۔ </string>
+
+    <string name="cci03">پیدائش کے کتنی دیر بعد پہلی دفعہ بچے کو اپنا دودھ دیا؟</string>
+    <string name="cci03a">فورا</string>
+    <string name="cci03h">گھنٹے</string>
+    <string name="cci03d">دن</string>
+
+    <string name="cci04">کیا کل بچے کو دن اور رات کے وقت ماں کا دودھ پلایا گیا؟</string>
+    <string name="cci05">کیا بچے کو وٹامن کے قطرے یا کوئی اور دوا کل دن یا رات کے دوران دی گیا؟</string>
+    <string name="cci06">کیا بچے کوکل دن یا رات کے دوران نمکول  یا او- آر- ایس دیا گیا؟</string>
+
+    <string name="cci07">کیا (نام) نے نیچے دی ہوئی  لسٹ میں سے کچھ لیا ۔لسٹ پڑھتے ہوے پانی سے شروع کریں</string>
+    <string name="cci07a">سادہ پانی </string>
+    <string name="cci07b">بچوں کے لئے بننے والا دودھ جو پانی کی شکل میں ہو</string>
+    <string name="cci07c">ڈبے کا دودھ، پاؤڈر،یا جانوروں کا تازہ دودھ</string>
+    <string name="cci07d">جوس یا جوس کے مشروبات</string>
+    <string name="cci07e">شوربہ یا سوپ </string>
+    <string name="cci07f">دہی </string>
+    <string name="cci07g">پتلا دلیہ </string>
+    <string name="cci07h">اور کوئی مائع جیسے (گرائیپ واٹر ،چائے،چاول کا پانی)</string>
+    <string name="cci07i"> کوئی اور مائع؟</string>
+    <string name="cci07sub"> اب میں آپ سے کچھ مائع  اشیاء کے بارے میں جاننا چاہتی  ہوں جو کہ بچے نے کل دن یا رات میں مائع چیز یں لی ہوں</string>
+
+    <string name="cci08">ان دی ہوئی اشیاء  میں سےگزشتہ دن اور رات کے دوران (بچے کا نام) نے کچھ کھایا یا پیا؟</string>
+    <string name="cci08a">کھچڑی،دلیہ ،  روٹی، چاول، نوڈلز، یا دیگر اناج سے بنائے گئے کھانے کی اشیاء</string>
+    <string name="cci08b">کدو، گاجر، اسکواش، یا  میٹھے آلو پیلے یا نارنجی اندر سے</string>
+    <string name="cci08c">سفید آلو، شکرکندی ،سفید یامس،کساوا، یا جڑوں سے بنائی گئی کسی دوسرے کھانے کی اشیاء </string>
+    <string name="cci08d">کوئی بھی  گہری ہری پتےدار سبزیاں</string>
+    <string name="cci08e">ا (دیگر مقامی وٹامن اے سے بھرپور پھل شامل کریں ) پکا ہوا آم، پکا ہوا پپیتا </string>
+    <string name="cci08f">کوئی دوسرے پھل یا سبزیاں</string>
+    <string name="cci08g">جگر، گردے، دل، یا دوسرے اعضاء کا گوشت</string>
+    <string name="cci08h">کوئی  بھی گوشت، جیسے بڑا گوشت، بھیڑ کے بچےکا  گوشت، بکری، چکن، بطخ    کا  گوشت</string>
+    <string name="cci08i">انڈے </string>
+    <string name="cci08j">فش تازہ یا خشک مچھلی، شیل سمندری غذا </string>
+    <string name="cci08k">پھلیاں، مٹر، دال، گری دار میوے، یا بیجوں سے بنائی گئی کسی بھی کھانے کی اشیاء</string>
+    <string name="cci08l">پنیر، دہی، یا دوسرے دودھ کی مصنوعات</string>
+    <string name="cci08m">کوئی تیل، چربی، یا مکھن، یا ان میں سے کسی کے ساتھ کی گئی کھانے کی اشیاء</string>
+    <string name="cci08n">میٹھے  سے بنی   اشیاءجیسے چاکلیٹ، مٹھائیاں، کینڈی، پیسٹری، کیک، بسکٹ یا کوئی اور   </string>
+    <string name="cci08o">جیسے مرچیں، جڑی بوٹیاں، یا مچھلی پاؤڈر ذائقہ کے لئے مصالحہ جات</string>
+    <string name="cci08p">کیڑا،  گھونگا اور کیڑے مکوڑے</string>
+    <string name="cci08q">سرخ پام آئل  یا  سرخ کھجور    نٹ یا سرخ پام نٹ، گدہ یا   چٹنی کے فوڈذ</string>
+
+    <string name="cci09">کیا بچے (نام)نے گزشتہ دن اور رات کے دوران ٹھوس یا نیم ٹھوس یا نرم غذا کھایا/کھائی تھی؟</string>
+    <string name="cci09sub">اگر ہاں توبار بار  پوچھیں  کیا ٹھوس یا نیم ٹھوس یا نرم غذا کھایا/کھائی تھی؟ </string>
+
+    <string name="cci10">کتنی مرتبہ ٹھوس یا نیم ٹھوس یا نرم غذا کھایا/کھائی تھی؟مائع یا پانی جیسی غذاؤں کے علاوہ۔</string>
+    <string name="cci11">کیا بچے (نام)نے گزشتہ دن اور رات کے دوران بوتل سے دودھ یا کوئی اور مائع چیز پی  تھی؟</string>
+    <string name="cci12">کیا بچے (نام)نے گزشتہ دن اور رات کے دوران بچوں کے لیے بنائے گئے خوراک میں سے کچھ کھایا/کھائی تھی؟</string>
+    <string name="cci12sub">شیر خوار اور چھوٹے بچے کی نشوونما کے خاکہ میں اضافے کے لیے زائد سوالات ۔  اب میں آپ سے کچھ خاص کھانوں کے بارے میں
+ پوچھوں گی جو کہ ہو سکتا ہے کہ بچے نے کھائے ہوں، میں یہ معلوم کرنا چاہتی ہوں کے آپ کے بچے نے وہ کھانے دوسرے کھانوں کے ساتھ کھائے ہیں۔
+اب میں آپ سے کچھ اور سوالات اضافی خوراک سے متعلق پوچھوں گی کہ مجھے یہ پتہ کرنا ہے کہ کیا آپ کے بچے نے کچھ مکس خوراک  کھائی ہو؟
+</string>
+
+    <string name="cci13">کیا بچے (نام)نے گزشتہ دن اور رات کے دوران بچے نے سپرینکل پاوڈر یا وٹامکس کھایا /کھائی تھی</string>
+    <string name="cci14">کیا بچے (نام)نے گزشتہ دن اور رات کے دوران بچے نے واوامیم یا اس جیسی تیار شدہ اضافی خوراک کی پیکٹ کھایا /کھائی تھی؟</string>
+    <string name="cci14sub">کل دن اور رات سے کیا بچے نے نیوٹرنٹ سپلیمنٹ یا ایل ،این ،ایس استعمال کیں۔ سروے ائریا میں واوامیم دکھائیں۔</string>
+
+    <string name="cci15">کیا بچے (نام)نے گزشتہ دن اور رات کے دوران بچے نےبچوں کے لیے بنے ہوئے دودھ کا استعمال کیا تھا /کی تھی؟</string>
+    <string name="cci16">کس عمر سے اضافی خوراک شروع کی ہے ؟</string>
+    <string name="cci16m">عمر مہینوں میں </string>
+    <string name="cci16d">عمر دنوں  میں </string>
+    <string name="cci1697">ابھی شروع نہیں کی  </string>
+
+    <!--Section J-->
+    <string name="ccjHeading">تولیدی عمر اور حمل کے دوران کئے گئے طبی معائنے کی معلومات</string>
+    <string name="ccj01">اب تک کل حمل کی تعداد</string>
+    <string name="ccj01a"> تعداد</string>
+
+    <string name="ccj02">اب تک کل زندہ پیدائشوں کی تعداد </string>
+    <string name="ccj03">کیا آپ نے آخری حمل کے دوران اپنا معائنہ کروایا تھا ؟ </string>
+    <string name="ccj04">کس سے معائنہ کروایا تھا؟ س سے معائنہ کروایا تھا؟
+اسکے علاوہ کسی اور سے معائنہ کروایا تھا ؟
+ </string>
+    <string name="ccj04sub1"> صحت کے ذمہ دار</string>
+    <string name="ccj04a">ڈاکٹر</string>
+    <string name="ccj04b">نرس/ مڈوائف / لیڈی ہیلتھ وزیٹر</string>
+    <string name="ccj04c">کمیونٹی مڈ وائف</string>
+    <string name="ccj04sub2">دیگر افراد</string>
+    <string name="ccj04d">دائی/ٹی بی اے</string>
+    <string name="ccj04e">لیڈی ہیلتھ ورکر</string>
+    <string name="ccj04f">ہومیوپیتھک</string>
+    <string name="ccj04g">حکیم</string>
+    <string name="ccj04h">ڈسپینسر/کمپوڈر</string>
+
+    <string name="ccj05">آپ نےآخری حمل کا معائنہ کہاں سے کروایا تھا؟ کہیں اور؟</string>
+    <string name="ccj05a">گھر</string>
+    <string name="ccj05b">گورنمنٹ مرکز صحت</string>
+    <string name="ccj05c">پرائیوٹ  مرکز صحت</string>
+    <string name="ccj05d">حکیم /ہومیوپیتھک </string>
+    <string name="ccj0596">دیگر وضاحت کریں</string>
+
+    <string name="ccj06">حمل کتنے مہینے کا تھا جب آپ نے آخری حمل کے دوران پہلی دفعہ معائنہ کروایا تھا ؟ </string>
+    <string name="ccj07">آپ نے آخری حمل کے دوران کتنی مرتبہ اپنا معائنہ کروایا تھا ؟ </string>
+    <string name="ccj08">آخری حمل کے معائنے کے دوران ان میں سے کم سے کم کوئی ایک ٹیسٹ کروایا تھا؟  </string>
+    <string name="ccj08a">بلڈ پریشر   </string>
+    <string name="ccj08b">وزن  </string>
+    <string name="ccj08c"> پیشاب کا نمونہ  </string>
+    <string name="ccj08d">خون کے نمونے  </string>
+    <string name="ccj08e">الٹرا ساونڈ  </string>
+    <string name="ccj0896"> دیگر (وضاحت کریں)  </string>
+
+
+    <string name="ccj09">کیا آخری حمل کے دوران ، آپ تشنج  سے بچانے کے لئے کولہوں یا آپ کے بازو میں ایک انجکشن لگایا گیا تھا  </string>
+    <string name="ccj10">آخری حمل کے دوران آپ نے کتنی دفعہ تشنج سے بچاو کا ٹیکہ لگوایاتھا؟  </string>
+    <string name="ccj11">کیا آخری حمل سے پہلے کسی بھی وقت، آپ کو کوئی تشنج کے انجکشن لگے تھے؟ </string>
+    <string name="ccj12">ٓخری حمل سے پہلے، آپ کوتشنج کے انجکشن کتنی دفعہ لگے تھے؟ </string>
+    <string name="ccj13">ٓآخری حمل سے پہلے کتنے سال پہلے آپ کو آخری دفعہ تشنج کے انجکشن لگے تھے ؟ </string>
+    <string name="ccj14">ٓآخری حمل کے دوران آپ کو فولاد کی گولیاں دی گئی یا  آپ نے خود خریدی؟ گولیاں ؍شربت دیکھا ئیں</string>
+    <string name="ccj15">آخری حمل کے دوران کتنے دنوں تک  گولیاں یا شربت استعمال کی؟</string>
+    <string name="ccj16">اآخری حمل کے دوران کیا آپ نے کوئی پیٹ کے کیڑوں کی دوائی کھائی تھی؟</string>
+    <string name="ccj17">کیا آخری حمل کے دوران پیچدگیوں میں سے کوئی پیچیدگی پیش آئی تھی؟</string>
+    <string name="ccj17a">کھانسی / زکام </string>
+    <string name="ccj17b">تيز بخار</string>
+    <string name="ccj17c">سر میں درد</string>
+    <string name="ccj17d">پیٹ کے نچلے حصے میں درد</string>
+    <string name="ccj17e">اندام نہانی سے خون کا اخراج</string>
+    <string name="ccj17f">اندام نہانی سے بدبو دار مواد کا اخراج</string>
+    <string name="ccj17g">چہرے یا پاؤ ں پر سوجن</string>
+    <string name="ccj17h">بلند فشار خون</string>
+    <string name="ccj17i">جھٹکے</string>
+    <string name="ccj17j">ٹی بی</string>
+    <string name="ccj17k">ملیریا</string>
+    <string name="ccj17l"> ذیابیطس </string>
+    <string name="ccj17m">دھندلا نظر آنا </string>
+    <string name="ccj17n">پیشاب میں جلن</string>
+    <string name="ccj1796">دیگر (وضاحت کریں)</string>
+    <string name="ccj1797">کوئی پیچیدگی نہیں </string>
+
+    <string name="ccj18">کیا آخری حمل  کے دوران،آپ نے ان پیچیدگیوں کے لئے علاج کر وایاتھا؟</string>
+
+    <string name="ccj19">آخری حمل کے دوران ان پیچیدگیوں کے لئے علاج کس  سےکروایاتھا؟</string>
+    <string name="ccj19a">ڈاکٹر</string>
+    <string name="ccj19b">نرس/مڈوائف/ایل ایچ وی </string>
+    <string name="ccj19c">کمیونٹی مڈوائف </string>
+    <string name="ccj19d">دائی/ٹی بی اے </string>
+    <string name="ccj19e">لیڈی ہیلتھ ورکر</string>
+    <string name="ccj19f">ہومیوپیتھک </string>
+    <string name="ccj19g">حکیم </string>
+    <string name="ccj19h">ڈسپینسر/ کمپا ؤ نڈر</string>
+    <string name="ccj1996">وضاحت کریں</string>
+
+    <string name="ccj20">آپ نے اس (نام) کوکہاں جنم دی تھی؟</string>
+    <string name="ccj20a">گھر</string>
+    <string name="ccj20b">گورنمنٹ مرکز صحت</string>
+    <string name="ccj20c"> پرائیوٹ  مرکز صحت</string>
+    <string name="ccj2096">دیگر</string>
+
+    <string name="ccj21">(نام) کی  پیدائش کس نے کروائی تھی ؟</string>
+    <string name="ccj22">زچگی کے کتنے عرصے بعد پہلی دفعہ معائنہ کروایا؟</string>
+    <string name="ccj23">اس وقت کس نے آپ کا معائنہ کیا؟</string>
+    <string name="ccj24">   کیا آپ نےآخری حمل یا دودھ پلانے کے دوران Maamta کھائی تھی؟</string>
+    <string name="ccj25">  آپ نے گزشتہ حمل یا دودھ پلانے کے دوران کتنے دن اور کتنے ساششے استعمال کیے تھے؟</string>
+    <string name="ccj26">یڈی ہیلتھ ورکر نے آخری مرتبہ آپ کے گھر کا دورہ کبکیا تھا؟</string>
+    <string name="ccj26m">مہینوں</string>
+    <string name="ccj26d">دنوں</string>
+    <string name="ccj2697">کبھی نہیں </string>
+
+    <string name="ccj27">آپ کو کتنی مرتبہ لیڈی ہیلتھ ورکر ملنے آتی ہے/آپ کے گھر کا کتنی مرتبہ دورہ کرتی ہے؟</string>
+    <string name="ccj27a">ہرہفتے</string>
+    <string name="ccj27b">ہر پندرہ دن بعد </string>
+    <string name="ccj27c">ہر مہینے </string>
+    <string name="ccj27d">کبھی کبھار   </string>
+    <string name="ccj27e">صرف پولیو پلانے کے لیے  </string>
+    <string name="ccj2796">دیگر وضاحت کریں   </string>
+
+    <string name="ccj28">لیڈی ہیلتھ ورکر کے گزشتہ دورے کا مقصدکیاتھا؟</string>
+    <string name="ccj28a"> صحت اور غذائیت کا سیشن</string>
+    <string name="ccj28b">مانع حمل کی فراہمی </string>
+    <string name="ccj28c">صحت مرکز کی طرف ریفر </string>
+    <string name="ccj28d">حفاظتی ٹیکوں کا شیڈول </string>
+    <string name="ccj28e">پولیو کے قطرے </string>
+    <string name="ccj28f">ماں کا علاج </string>
+    <string name="ccj28g">چے کا علاج </string>
+    <string name="ccj28h">اضافی خوراک کی فراہمی </string>
+
+    <!--Section K-->
+    <string name="cckHeading">سماجی اقتصادی معلومات</string>
+    <string name="cck01">ٓپ کی مادری زبان کیا ہے؟</string>
+    <string name="cck01a">اردو</string>
+    <string name="cck01b">پنجابی</string>
+    <string name="cck01c">ٓسندھی</string>
+    <string name="cck01d">پشتو</string>
+    <string name="cck01e">بلوچی</string>
+    <string name="cck01f">ٓفارسی</string>
+    <string name="cck0196">ٓدیگروضاحت کریں</string>
+
+    <string name="cck02">ٓآپ کےگھرکےافراد کےلئے پینے کے پانی کا سب سے اہم ذریعہ کیا ہے؟</string>
+    <string name="cck02a">ٓ گھرمیں نلکا </string>
+    <string name="cck02b">ٓپلاٹ میں نلکا</string>
+    <string name="cck02c">عوامی نلکا</string>
+    <string name="cck02d"> ٹیوب ویل یا بور کا پانی</string>
+    <string name="cck02e">ٓ ہینڈ پمپ</string>
+    <string name="cck02f">تالاب  محفوظ  </string>
+    <string name="cck02g">ٓغیر محفوظ تالاب</string>
+    <string name="cck02h">  محفوظ چشمہ  </string>
+    <string name="cck02i">  غیر محفوظ  چشمہ</string>
+    <string name="cck02j">بارش کا پانی</string>
+    <string name="cck02k"> ٹینکر کا پانی</string>
+    <string name="cck02l"> فلٹریشن پلانٹ</string>
+    <string name="cck02m">ٓچھوٹے ٹینک والا پانی  </string>
+    <string name="cck02n">ٓسطح والا پانی(دریا ،ڈیم ،جھیل  ،نہر ، تالاب ٓبپاشی کےلئے نہر</string>
+    <string name="cck02o">ٓبوتل کا پانی</string>
+    <string name="cck0296">ٓدیگر وضاحت کریں</string>
+
+    <string name="cck03">ٓکیا آپ پانی کو محفوظ  بنانے کے لئے کچھ کرتے ہیں؟</string>
+    <string name="cck04">ٓاگر ہاں تو عام طور پر پینے کے پانی کو محفوظ بنانے کے لئے کونسا طریقہ استعمال کرتے ہیں؟</string>
+    <string name="cck04a"> ابالتے ہیں </string>
+    <string name="cck04b">ٓکلورین ؍بلیچ  ملاتے ہیں</string>
+    <string name="cck04c">ٓکپڑےکے ذریعے چھانتے ہیں</string>
+    <string name="cck04d">ٓواٹر فلٹر استعمال کرتے ہیں</string>
+    <string name="cck04e">سورج کی شعاعوں سے محفوظ کرتے ہیں</string>
+    <string name="cck04f">برتن میں ڈال کے کچھ دیر کیلئے رکھتے ہیں </string>
+    <string name="cck0496">ٓدیگروضاحت کریں</string>
+
+    <string name="cck05">ٓآپ کے گھر کے افراد عام طور پر کس قسم کی لیٹرین استعمال کرتے ہیں؟</string>
+    <string name="cck05sub1">ٓفلش یا انڈیل کر پانی ڈالنے والا</string>
+    <string name="cck05sub2"> گڑھے والا  لیٹرین</string>
+    <string name="cck05a">ٓفلش   سیوریج کے نظام سے ملا ہوا</string>
+    <string name="cck05b">ٓ فلش سیپٹیک ٹینک سے جڑا ہوا</string>
+    <string name="cck05c">ٓ فلش   گڑھے والا لیٹرین سے جڑاہوا</string>
+    <string name="cck05d">ٓفلش کہیں اور</string>
+    <string name="cck05e">ٓبہتر ہوا دار گڑھے والا لیٹرین</string>
+    <string name="cck05f"> گڑھے والا لیٹرین ڈھکا ہوا</string>
+    <string name="cck05g"> گڑھے والا کھلاہوا  لیٹرین</string>
+    <string name="cck05h">ٓبالٹی والا ٹوائلٹ</string>
+    <string name="cck05i">ٓ کوئی سہولت نہیں /جھاڑیوں/زمین پر</string>
+    <string name="cck0596"> دیگر وضاحت کریں </string>
+
+    <string name="cck06">کیاآپ کے لیٹرین کی  یہ سہولت دوسرے گھر انےبھی استعمال کرتے ہیں؟</string>
+    <string name="cck07">اگرہاں تو دوسرے کتنے گھر لیٹرین کی یہ سہولت استعمال کرتے ہیں؟</string>
+    <string name="cck07a">گھروں کی تعداد  </string>
+
+    <string name="cck08">کیا آپ کے گھر میں یہ چیز یں موجود ہیں؟</string>
+    <string name="cck08a">بجلی</string>
+    <string name="cck08b">ریڈیو</string>
+    <string name="cck08c"> ٹی۔وی</string>
+    <string name="cck08d">ٹیلی فون</string>
+    <string name="cck08e"> فریج</string>
+    <string name="cck08f">الماری؍خانے</string>
+    <string name="cck08g">کر سی</string>
+    <string name="cck08h">روم کولر</string>
+    <string name="cck08i">ایئر کنڈیشن</string>
+    <string name="cck08j"> واشنگ مشین</string>
+    <string name="cck08k">واٹر پمپ</string>
+    <string name="cck08l">پلنگ, چار پائی</string>
+    <string name="cck08m">گھڑی  دیوار پر لگانے والی</string>
+    <string name="cck08n">صوفہ</string>
+    <string name="cck08o">کیمرہ</string>
+    <string name="cck08p">سلائی مشین</string>
+    <string name="cck08q">کمپیو ٹر</string>
+    <string name="cck08r">انٹرنیٹ کنکشن</string>
+
+    <string name="cck09"> آپ کے گھر میں بنیادی طور پر کھانا پکانے کے لئے کس قسم کے ایندھن کا استعمال ہوتا ہے؟؟</string>
+    <string name="cck09a">بجلی
+</string>
+    <string name="cck09b">ایل –پی-جی   سیلنڈر
+</string>
+    <string name="cck09c"> قدرتی گیس
+</string>
+    <string name="cck09d"> با ئیو گیس
+</string>
+    <string name="cck09e"> مٹی کا تیل
+</string>
+    <string name="cck09f"> کوئلہ
+</string>
+    <string name="cck09g">لکٹری کاکوئہ
+</string>
+    <string name="cck09h"> لکٹری
+</string>
+    <string name="cck09i"> تنکے/جھاڑیاں/گھاس پھونس
+</string>
+    <string name="cck09j">جانوروں کا گوبر(اوپلے)
+</string>
+    <string name="cck09k">گھر میں کھانا نہیں پکتا
+</string>
+    <string name="cck0996">دیگر وضاحت کریں
+</string>
+    <string name="cck10"> کیا  کھانا آپ  گھر میں الگ  کمرے  میں یا باہر پکاتے ہیں؟</string>
+    <string name="cck10a">گھر میں</string>
+    <string name="cck10b">  الگ جگہ؍کمرے میں </string>
+    <string name="cck10c">گھر سے باہر </string>
+    <string name="cck1096"> دیگر وضاحت کریں</string>
+
+    <string name="cck11"> کیا آپ کے گھرمیں کو ئی ا لگ کمرہ ہے جو کیچن کے طور پر استعمال ہوتا ہے؟</string>
+    <string name="cck12"> فرش کی تعمیر میں استعمال ہونے والا مواد</string>
+
+    <string name="cck12sub1">  قدرتی فرش
+
+</string>
+    <string name="cck12sub2">بنیادی /ابتدائی فرش
+</string>
+    <string name="cck12sub3"> تیار فرش
+د</string>
+    <string name="cck12a">مٹی/چکنی مٹی/زمین/ریت /جانوروں کا گوبر
+</string>
+    <string name="cck12b">جانوروں کا گوبر
+</string>
+    <string name="cck12c">  لکٹری کے تختے
+</string>
+    <string name="cck12d">کھجور  یاناریل کے پتے /بانس
+</string>
+    <string name="cck12e"> لکڑی کا فرش یا پالش والی لکڑی
+</string>
+    <string name="cck12f"> کڑی کی پلائی یا لکڑی کے ٹائلز
+</string>
+    <string name="cck12g"> سرامک ٹائلز
+</string>
+    <string name="cck12h"> سیمنٹ
+</string>
+    <string name="cck12i"> قالین
+د</string>
+    <string name="cck12j">اینٹیں
+</string>
+    <string name="cck12k">چونے کا پتھر
+</string>
+    <string name="cck1296">  دیگر وضاحت کریں
+</string>
+
+    <string name="cck13"> چھت کی تعمیر میں استعمال ہونے والا مواد</string>
+    <string name="cck13sub1">قدرتی چھت</string>
+    <string name="cck13sub2"> بنیادی سادہ چھت</string>
+    <string name="cck13sub3">  تیار چھت</string>
+    <string name="cck13a"> کوئی چھت نہیں  </string>
+    <string name="cck13b"> گھاس پھونس /کھجو ر کے پتے</string>
+    <string name="cck13c">  گھاس پھوس سے بنی ہوئی چھت</string>
+    <string name="cck13d"> تنکے کی  چٹائی</string>
+    <string name="cck13e"> کھجور  یاناریل کے درخت/بانس</string>
+    <string name="cck13f">  لکڑی کے تختے</string>
+    <string name="cck13g"> گتے سے بنی ہوئی چھت</string>
+    <string name="cck13h"> دھات/ٹین/سی جی آئی</string>
+    <string name="cck13i"> لکٹری سے بنی ہوئی چھت</string>
+    <string name="cck13j"> کیلا مائن/سیمنٹ فائبر </string>
+    <string name="cck13k">  سرامک ٹائلز</string>
+    <string name="cck13l"> سیمنٹ آر سی سی(پکی چھت)</string>
+    <string name="cck13m">چھت میں استعمال ہونے والے ٹائلز</string>
+    <string name="cck13n">اینٹیں</string>
+    <string name="cck1396"> دیگر وضاحت کریں</string>
+
+    <string name="cck14"> چھت کی تعمیر میں استعمال ہونے والا مواد</string>
+    <string name="cck14sub1"> قدرتی دیواریں</string>
+    <string name="cck14sub2"> بنیادی سادہ دیواریں</string>
+    <string name="cck14sub3"> تیاردیواریں</string>
+    <string name="cck14a">کوئی دیوار نہیں</string>
+    <string name="cck14b"> کھجور کے درخت  /بانس</string>
+    <string name="cck14c">مٹی؍گارا</string>
+    <string name="cck14d"> بانس اور مٹی سے بنی ہوئی  </string>
+    <string name="cck14e"> پتھر اور مٹی </string>
+    <string name="cck14f"> کچی اینٹوں سے بنی</string>
+    <string name="cck14g"> لکڑی کی پلائی</string>
+    <string name="cck14h">گّتہ</string>
+    <string name="cck14i"> استعمال کی ہوئی لکڑی</string>
+    <string name="cck14j">کپڑا/پردے/شامیانہ</string>
+    <string name="cck14k"> سیمنٹ</string>
+    <string name="cck14l"> پتھرچونے/سیمنٹ کے ساتھ</string>
+    <string name="cck14m">اینٹیں</string>
+    <string name="cck14n"> سیمنٹ سے بنی ہوئی بلاکس</string>
+    <string name="cck14o"> کچی اینٹوں سے بنی</string>
+    <string name="cck14p"> / لکڑی کے تختے</string>
+    <string name="cck1496">دیگر وضاحت کریں </string>
+
+    <string name="cck15"> اس گھر  میں سونے کے لئے کتنے کمرے استعمال ہوتے ہیں؟</string>
+    <string name="cck16">کیا اس گھر میں کسی کے پاس یہ چیزیں ہیں ؟ </string>
+    <string name="cck16a">ہاتھ پر باندھنے والی گھٹری </string>
+    <string name="cck16b"> موبائل فون </string>
+    <string name="cck16c">ائی سائیکل</string>
+    <string name="cck16d">موٹر سائیکل/اسکوٹر </string>
+    <string name="cck16e">گدھا /گھوڑا گاڑی </string>
+    <string name="cck16f">کار/ ٹرک /بس </string>
+    <string name="cck16g">ٹریکٹر</string>
+
+    <string name="cck17">کیا اس گھر میں کسی کی اپنی زرعی زمین ہے </string>
+    <string name="cck18">اگر ہاں تو کتنی ایکڑ اور کنال زرعی زمین ہے؟ </string>
+    <string name="cck18a">ایکڑ </string>
+    <string name="cck18b">کانال  </string>
+    <string name="cck18c">مرلہ  </string>
+    <string name="cck1898">معلوم نہیں  </string>+
+    <string name="cck19">کیا آپ کے اپنے مال مویشی  یا مرغیاں ہیں؟ </string>
+    <string name="cck20">اگر ہاں تو کتنے مال مویشی اور مرغیاں ہیں؟ </string>
+    <string name="cck20a">گائے ،بیل  </string>
+    <string name="cck20b">دھے ، گھوڑے، خچر          </string>
+    <string name="cck20c">بکریاں  </string>
+    <string name="cck20d">بھیڑیں   </string>
+    <string name="cck20e">مرغیاں  </string>
+    <string name="cck20f">بھینسیں    </string>
+    <string name="cck20g">اونٹ</string>
+
+    <!--Section L-->
+    <string name="cclHeading">ہاتھ دہونے کی معلومات</string>
+    <string name="ccl01">براہ مہربانی وہ جگہ دکھا  ئیں جہاں آپ اور آپ کے گھروالے اکثر ہاتھ دھوتے ہیں؟</string>
+    <string name="ccl01a"> مشاہدہ کیا </string>
+    <string name="ccl01b">مشاہدہ نہیں کیا</string>
+    <string name="ccl01c">رہائشی جگہ اور پلاٹ میں موجود نہیں</string>
+    <string name="ccl01d">دیکھنے کی اجازت نہیں </string>
+    <string name="ccl0196">کو  ئی اور وجہ  </string>
+
+    <string name="ccl02">ہاتھ دھونے کے لئے مخصوص جگہ پر پانی کی موجودگی کا مشاہدہ</string>
+    <string name="ccl02sub">صرف مشاہدہ</string>
+    <string name="ccl02a">پانی موجود ہے</string>
+    <string name="ccl02b">پانی موجود نہیں  ہے ۔</string>
+
+    <string name="ccl03">صابن، ڈٹرجنٹ یا دیگر صفائی ایجنٹ کی موجودگی کا مشاہدہ</string>
+    <string name="ccl03a"> نہانے یا ہاتھ دھونے ولا صابن</string>
+    <string name="ccl03b">ڈٹرجنٹ پاوڈریا پانی جیسی پیسٹ</string>
+    <string name="ccl03c"> مائع یا پانی والا صابن</string>
+    <string name="ccl03d"> خاک /مٹی/ریت</string>
+    <string name="ccl0397">کچھ نہیں</string>
+
+    <string name="ccl04">کیاآپ کے گھر میں  ہاتھ دھونے کے لئے کوئی صابن یا ڈٹرجنٹ ہے؟</string>
+    <string name="ccl05">کیاآپ کے گھر میں  ہاتھ دھونے کے لئے کوئی صابن یا ڈٹرجنٹ ہے؟</string>
+    <string name="ccl05a">صابن </string>
+    <string name="ccl05b"> مائع صابن</string>
+    <string name="ccl05c"> ریت /مٹی/راکھ</string>
+    <string name="ccl05d"> خاک /مٹی/ریت</string>
+    <string name="ccl0597">کچھ نہیں</string>
+
+    <string name="ccl06">کن حالات میں آپ صابن سے ہاتھ دھوتے ہیں؟</string>
+    <string name="ccl06sub">یہ کھلا سوال ہے کوئی بھی جواب پڑھ کے نہیں سنانا ہے۔ہر سوال کےوقفے کے  بعد بار دھرانا ہے  جب تک  جواب دہندہ  سمجھیں  کہ ان کے پاس کوئی اور جواب نہیں۔</string>
+    <string name="ccl06a">کھانا تیار کرنے سے پہلے</string>
+    <string name="ccl06b">کھانا پکانے سے پہلے </string>
+    <string name="ccl06c">کھانا کھانے سے پہلے  </string>
+    <string name="ccl06d">بچے کو  کھانا کھلانے  سے پہلے </string>
+    <string name="ccl06e">بچے کو  ما ں کا دودھ پلانے سے پہلے </string>
+    <string name="ccl06f">بچے کا پاخانہ  صاف  کرنے کے  بعد  </string>
+    <string name="ccl06g">بچے کی نیپی تبدیل کرنے کے بعد </string>
+    <string name="ccl06h">بچوں کا پاخانہ پھینکنے کے بعد  </string>
+    <string name="ccl06i">لیٹرین استعمال کرنے کے بعد </string>
+    <string name="ccl0696">دیگر وضاحت کریں</string>
+
+    <!--Section M-->
+    <string name="ccmHeading"> گھریلو خوراک کی کھپت اور خوراک کی تنوع</string>
+    <string name="ccmrec">پچھلے 7دنوں میں کھانے کا ریکارڈ</string>
+    <string name="ccmsource"> پچھلے 7 دنوں میں کھانے حاصل کرنے کے لیے اہم اور بنیادی ذریعہ لکھیں</string>
+    <string name="ccmsubHeading"> آپ کے گھر والوں نے گزشتہ کتنے دن نیچے دی گئی اشیاء گھر پر یا گھر سے باہر کھائی تھی اور اس کا ذریعہ یا وسیلہ کیا تھا ؟</string>
+    <string name="ccm01">دالیں،اناج،چرووالہی سبزیاں ، پاستا، روٹی ، باجرہ،جوار،شکرقندی،کساوی، سفید اور میٹھے آلو۔ </string>
+    <string name="ccm02">پھلیاں یا گری دار میوے ، پھلیاں ،مونگ پھلی، دال گری دار میوے سویا بین ، مٹر ، اور دیگر گری دار میوے۔ </string>
+    <string name="ccm03">دودھ اور دودھ کی دیگر مصنوعات ، دہی،پنیر،لسی ،دیگر ڈیر ی مصنوعات (مارجرین/مکھن/چائے یا کافی کے لیے دودھ کی تھوڑ ی مقدار  </string>
+    <string name="ccm04">گوشت ،مچھلی اور انڈے ، بکری یا گائے/ بیل کا گوشت ، مرغی ، خشک مچھلی ،جھینگے اور دیگر سمندری غذا ، انڈے سمیت گوشت اور مچھلی بڑی مقدار میں استعمال ہوں
+        ، ۔(ذائقے کے طور پر استعمال ہونے والی چیزیں شامل نہ کریں) </string>
+    <string name="ccm0401">جانوروں اور پرندوں کا گوشت:
+بیل،گائے کا گوشت ، بھیڑ ، بکری ،خرگوش مرغی ، بطخ، اور دیگر پرندے</string>
+    <string name="ccm0402">اعضاء کا گوشت ، جگر ، گردے ،دل اور دیگر دوسرے اعضاء کا گوشت </string>
+    <string name="ccm0403">مچھلی /سیل مچھلی ، مچھلی یا خشک مچھلی جھینگے ، دیگر سمندری غذا ،(مچھلی کا استعمال زیادہ مقدار میں ہو مصالحہ جات کے طور پر نہیں ) </string>
+    <string name="ccm0404">انڈے </string>
+    <string name="ccm05">پتے اور سبزیاں ۔ پالک ، پیاز ، ٹماٹر ، گاجر ، مرچیں، سبز مٹڑ وغیرہ ،  </string>
+    <string name="ccm0501">وٹامن اے والی سبزیاں ۔گاجر ،سرخ مرچ ،کدو، میٹھے آلو  </string>
+    <string name="ccm0502">سبز پتوں والی سبزیاں ۔ پالک ،شاخ گوبھی، اور دیگر سبز پتوں والی سبزیاں ، سلاد کے  پتے   </string>
+    <string name="ccm06">فروٹ۔ کیلا ، سیب، لیمو، آم ، پپیتا، خوبانی ، آڑو وغیرہ  </string>
+    <string name="ccm0601">اورینج پھل(وٹامین اے سے بھرپور)۔ آم پپیتا ، خوبانی ، آڑو  </string>
+    <string name="ccm07">تیل/چکنائی/مکھن۔ سبزیوں کا تیل ، بادام کا تیل ، مکھن، مارجرین  دیگر چکنائی یا تیل </string>
+    <string name="ccm08">شوگر یا میٹھائی۔چینی ، شہد، جام ، کیک، ٹافیاں ، بسکٹ، پیسٹری ، کیک اور دوسری میٹھی اشیاء(میٹھے مشروبات) </string>
+    <string name="ccm09">مصالا جات- چائے، کافی، کوکا ، نمک، لہسن، خمیر، میٹھا سوڈھا ، ٹماٹر ، سوس ، گوشت اور مچھلی کے مصالا جات ، دودھ چائے کی چھوٹی سی مقدار   </string>
+
+    <!--Section N-->
+    <string name="ccnHeading"> گھر میں خوراک کی کمی کو پورا کرنے کے لئے حکمت عملی(صرف کھانوں سے متعلق) </string>
+    <string name="ccnsubHeading"> گزشتہ 7 دنوں میں، اگر کسی وقت آپ کے گھر میں کافی مقدار میں کھانا نہیں تھا یا کھانا خریدنے کے لئے رقم نہیں تھی، تو اکثر ایسا آپ کے گھر میں کتنی مرتبہ ہوا </string>
+    <string name="ccn01">سستے اور کم قیمت کھانوں پر انحصار کرنا</string>
+    <string name="ccn01a">کبھی نہیں </string>
+    <string name="ccn01b">گزشتہ 7 دنوں میں ایک مرتبہ </string>
+    <string name="ccn01c">گزشتہ 7 دنوں میں دو مرتبہ</string>
+    <string name="ccn01d">گزشتہ 7 دنوں میں تین مرتبہ</string>
+    <string name="ccn01e">      گزشتہ 7 دنوں میں چار مرتبہ</string>
+    <string name="ccn01f">گزشتہ 7 دنوں میں پانچ مرتبہ </string>
+    <string name="ccn01g">گزشتہ 7 دنوں میں چھ مرتبہ</string>
+    <string name="ccn01h">7 مرتبہ یا گزشتہ 7 دنوں میں ہر روز</string>
+    <string name="ccn02">کھانا ادھار لینا، یا دوست یا رشتہ دار کی مدد پر انحصار کرنا</string>
+    <string name="ccn03">کھانے کے وقت کم مقدار  میں کھانا </string>
+    <string name="ccn04">بچوں کا کھانا پورا کرنے کے لئے بڑوں کو کھانے سے روکنا </string>
+    <string name="ccn05">پورے دن میں کھانوں کی تعداد کم کرنا </string>
+
+    <!--Section O-->
+    <string name="ccoHeading"> گزشتہ ایک ماہ  میں بھوک کا پیمانہ / شدت  </string>
+    <string name="cco01">گزشتہ 4 ہفتوں میں(30دن)، کبھی ایسا وقت آیا کہ آپ کے گھر میں زرائع کی کمی  کی وجہ سے کھانا نہیں تھا؟ </string>
+    <string name="cco01a">کبھی نہیں </string>
+    <string name="cco01b">بہت مشکل سے ایک مرتبہ(1 سے 2 مرتبہ)  </string>
+    <string name="cco01c">کبھی کبھی (3 سے 10 مرتبہ)</string>
+    <string name="cco01d">اکثر اوقات (10 مرتبہ سے زیادہ) </string>
+    <string name="cco02">گزشتہ 4 ہفتوں میں(30دن)، کبھی ایسا وقت آیا کہ آپ کے گھر میں زرائع کی کمی  کی وجہ سے کھانا نہیں تھا؟ </string>
+    <string name="cco03">گزشتہ 4 ہفتوں میں(30دن)، کبھی ایسا وقت آیا کہ آپ کے گھر میں زرائع کی کمی  کی وجہ سے کھانا نہیں تھا؟ </string>
+
+    <!--Section P-->
+    <string name="ccpHeading"> کھانے کے لئے کوئی مدد  </string>
+    <string name="ccpsubHeading"> کیا پچھلے 3 مہینے میں آپ کے گھر سے کسی نے درج ذیل میں سے کوئی امدد حاصل کی تھی؟   </string>
+    <string name="ccp01">بچے کے لیئے وا وا میم</string>
+    <string name="ccp01b">فائدہ مندوں کی تعداد</string>
+    <string name="ccp01ngo"> این جی او/ ذرائع</string>
+    <string name="ccp02"> بچوں کے لیے وٹا مکسی </string>
+    <string name="ccp03">حاملہ اور دودھ پلانے والی عورتوں کے لئے مامتا   </string>
+    <string name="ccp04">بینظیر انکم سپورٹ پروگرام سے پیسے </string>
+    <string name="ccp05"> دوائی ، طبعی امداد</string>
+    <string name="ccp06">تعلیم  کےلئے  امداد (فیس،وردی، کتابیں)</string>
+    <string name="ccp07">ذرعی امداد (بیج،کھاد،اوزار)</string>
+    <string name="ccp08">جانوروں کے لئے مصنوعات (ادویات ، خوراک)</string>
+    <string name="ccp09">غذائی تعلیم</string>
+    <string name="ccp10">آئرن فولک ایسڈ</string>
+    <string name="ccp11">وٹامن اے </string>
+    <string name="ccp12">دیگر </string>
+
+</resources>
