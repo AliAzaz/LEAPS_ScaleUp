@@ -56,7 +56,7 @@ public class EndInterview extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(1, StartActivity.db, StartActivity.fc).execute().get();
+            Long longID = new crudOperations(1, MainActivity.db, StartActivity.fc).execute().get();
             return longID == 1;
 
         } catch (InterruptedException e) {
