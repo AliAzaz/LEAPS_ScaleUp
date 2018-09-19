@@ -19,7 +19,7 @@ android {
         versionProps.store(versionPropsFile.newWriter(), null)
 
         defaultConfig {
-            applicationId "com.example.hassannaqvi.wfppishincr"
+            applicationId "com.example.hassannaqvi.leaps_scaleup"
             minSdkVersion 22
             targetSdkVersion 27
 
