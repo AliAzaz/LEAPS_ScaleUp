@@ -42,10 +42,12 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.EndingActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.StartActivity"
             android:screenOrientation="portrait" />
     </application>
 

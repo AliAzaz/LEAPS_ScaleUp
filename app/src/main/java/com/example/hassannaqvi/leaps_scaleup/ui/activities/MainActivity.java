@@ -32,6 +32,7 @@ import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
 import com.example.hassannaqvi.leaps_scaleup.core.GetAllDBData;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityMainBinding;
 import com.example.hassannaqvi.leaps_scaleup.sync.SyncAllData;
 
@@ -221,8 +222,10 @@ public class MainActivity extends Activity {
 
 
         try {
-            Collection<?> data = new GetAllDBData(db).execute().get();
-
+            Collection<?> data = new GetAllDBData(db).execute(FormsDAO.class.getName(), "formsDao", "getUnSyncedForms").get();
+            if (data != null) {
+                Toast.makeText(this, "" + data.size(), Toast.LENGTH_SHORT).show();
+            }
 
         } catch (InterruptedException e) {
             e.printStackTrace();

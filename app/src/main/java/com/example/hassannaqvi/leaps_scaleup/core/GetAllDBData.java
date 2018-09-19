@@ -4,6 +4,9 @@ import android.os.AsyncTask;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Collection;
 
 /**
@@ -12,7 +15,6 @@ import java.util.Collection;
 
 public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
 
-    Collection<?> userData;
     AppDatabase db;
 
     public GetAllDBData(AppDatabase db) {
@@ -22,11 +24,38 @@ public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
     @Override
     protected Collection<?> doInBackground(String... fnNames) {
 
-        Collection<?> curData = db.formsDao().getUnSyncedForms();
+        Collection<?> curData = new ArrayList<>();
 
+        try {
 
-        userData = curData.size() > 0 ? curData : null;
+            Method[] fn = db.getClass().getDeclaredMethods();
+            for (Method method : fn) {
+                if (method.getName().equals(fnNames[1])) {
 
-        return userData;
+                    Class<?> fnClass = Class.forName(fnNames[0]);
+
+                    for (Method method2 : fnClass.getDeclaredMethods()) {
+                        if (method2.getName().equals(fnNames[2])) {
+
+                            curData = (Collection<?>) fnClass.getMethod(method2.getName()).invoke(db.getClass().getMethod(fnNames[1]).invoke(db));
+
+                            break;
+                        }
+                    }
+
+                    break;
+                }
+            }
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        return curData;
     }
 }

@@ -31,7 +31,7 @@ public class EndInterview extends AppCompatActivity {
 
                 SaveDraft();
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), StartActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 } else {
                     Toast.makeText(EndInterview.this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }

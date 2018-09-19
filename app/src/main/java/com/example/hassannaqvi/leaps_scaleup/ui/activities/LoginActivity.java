@@ -94,17 +94,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         try {
             long installedOn = this
                     .getPackageManager()
-                    .getPackageInfo("com.example.hassannaqvi.wfppishincr", 0)
+                    .getPackageInfo("com.example.hassannaqvi.leaps_scaleup", 0)
                     .lastUpdateTime;
             Integer versionCode = this
                     .getPackageManager()
-                    .getPackageInfo("com.example.hassannaqvi.wfppishincr", 0)
+                    .getPackageInfo("com.example.hassannaqvi.leaps_scaleup", 0)
                     .versionCode;
             String versionName = this
                     .getPackageManager()
-                    .getPackageInfo("com.example.hassannaqvi.wfppishincr", 0)
+                    .getPackageInfo("com.example.hassannaqvi.leaps_scaleup", 0)
                     .versionName;
-//            txtinstalldate.setText("Ver. " + versionName + "." + String.valueOf(versionCode) + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
+            bi.txtinstalldate.setText("Ver. " + versionName + "." + String.valueOf(versionCode) + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
 
             MainApp.versionCode = versionCode;
             MainApp.versionName = versionName;
@@ -135,17 +135,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         });
 
         populateAutoComplete();
-        bi.password2.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
-                    MainApp.loginMem[2] = bi.email2.getText().toString();
-                    return true;
-                }
-                return false;
-            }
-        });
 
         Target viewTarget = new ViewTarget(R.id.syncData, this);
 
@@ -279,15 +268,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         bi.email.setError(null);
         bi.password.setError(null);
 
-        bi.email2.setError(null);
-        bi.password2.setError(null);
-
         // Store values at the time of the login attempt.
         String email = bi.email.getText().toString();
         String password = bi.password.getText().toString();
-
-        String email2 = bi.email2.getText().toString();
-        String password2 = bi.password2.getText().toString();
 
         boolean cancel = false;
         View focusView = null;
@@ -299,32 +282,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             cancel = true;
         }
 
-        if (!TextUtils.isEmpty(password2) && !isPasswordValid(password2)) {
-            bi.password2.setError(getString(R.string.error_invalid_password));
-            focusView = bi.password2;
-            cancel = true;
-        }
-
-        if (TextUtils.isEmpty(email2)) {
-            bi.email2.setError(getString(R.string.error_field_required));
-            focusView = bi.email2;
-            cancel = true;
-        } /*else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
-        }*/
-
         // Check for a valid email address.
         if (TextUtils.isEmpty(email)) {
             bi.email.setError(getString(R.string.error_field_required));
             focusView = bi.email;
             cancel = true;
-        } /*else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
-        }*/
+        }
 
 
         if (cancel) {
@@ -335,7 +298,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
-            mAuthTask = new UserLoginTask(email, password, email2, password2);
+            mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
 
 
@@ -433,17 +396,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         }
     }
 
-    public void onShowPasswordClick2() {
-        //TODO implement
-        if (bi.password2.getTransformationMethod() == null) {
-            bi.password2.setTransformationMethod(new PasswordTransformationMethod());
-            bi.password2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_black_24dp, 0, 0, 0);
-        } else {
-            bi.password2.setTransformationMethod(null);
-            bi.password2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_open_black_24dp, 0, 0, 0);
-        }
-    }
-
     public void gotoMain(View v) {
 
         finish();
@@ -471,15 +423,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         private final String mEmail;
         private final String mPassword;
 
-        private final String mEmail2;
-        private final String mPassword2;
-
-        UserLoginTask(String email, String password, String email2, String password2) {
+        UserLoginTask(String email, String password) {
             mEmail = email;
             mPassword = password;
-
-            mEmail2 = email2;
-            mPassword2 = password2;
         }
 
 
@@ -519,27 +465,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                         || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {
                     MainApp.userName = mEmail;
 
-                    if ((mEmail2.equals("dmu@aku") && mPassword2.equals("aku?dmu")) || db.Login(mEmail2, mPassword2) ||
-                            (mEmail2.equals("test1234") && mPassword2.equals("test1234")) || (mEmail2.equals("test12345") && mPassword2.equals("test12345"))) {
-                        if (!mEmail.equals(mEmail2)) {
+                    finish();
 
-                            MainApp.userName2 = mEmail2;
-                            MainApp.admin = mEmail2.contains("@");
-
-                            finish();
-
-                            Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(iLogin);
-                        } else {
-                            bi.email2.setError("Same username..");
-                            bi.email2.requestFocus();
-                        }
-
-                    } else {
-                        bi.password2.setError(getString(R.string.error_incorrect_password));
-                        bi.password2.requestFocus();
-                        Toast.makeText(LoginActivity.this, mEmail2 + " " + mPassword2, Toast.LENGTH_SHORT).show();
-                    }
+                    Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(iLogin);
 
                 } else {
                     bi.password.setError(getString(R.string.error_incorrect_password));

@@ -90,55 +90,55 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
-                    <LinearLayout
+                    <EditText
+                        android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="0.99"
+                        android:drawableEnd="@drawable/ic_assignment_ind_black_24dp"
+                        android:drawablePadding="8dp"
+                        android:hint="Username/Code"
+                        android:imeActionId="6"
+                        android:imeActionLabel="@string/action_sign_in_short"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:paddingEnd="4dp"
+                        android:paddingStart="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white"
+                        android:textSize="18sp">
 
-                        <EditText
-                            android:textColor="@color/white"
-                            android:id="@+id/email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_weight="0.99"
-                            android:drawableEnd="@drawable/ic_assignment_ind_black_24dp"
-                            android:drawablePadding="8dp"
-                            android:hint="Username/Code"
-                            android:imeActionId="6"
-                            android:imeActionLabel="@string/action_sign_in_short"
-                            android:imeOptions="actionUnspecified"
-                            android:inputType="textEmailAddress"
-                            android:maxLines="1"
-                            android:paddingEnd="4dp"
-                            android:paddingStart="4dp"
-                            android:singleLine="true"
-                            android:textSize="18sp">
+                        <requestFocus />
 
-                            <requestFocus />
+                    </EditText>
 
-                        </EditText>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp">
 
                         <Button
                             android:id="@+id/showPassword"
                             style="?android:attr/borderlessButtonStyle"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="3dp"
                             android:background="@drawable/round_button"
-                            android:onClick="@{() -> callback.onShowPasswordClick()}"
                             android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
                             android:gravity="center"
+                            android:onClick="@{() -> callback.onShowPasswordClick()}"
                             android:padding="3dp" />
 
                         <EditText
-                            android:textColor="@color/white"
                             android:id="@+id/password"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="-10dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
                             android:layout_weight="0.99"
                             android:drawableEnd="@drawable/ic_lock_black_24dp"
                             android:drawablePadding="2dp"
@@ -151,63 +151,11 @@
                             android:paddingEnd="4dp"
                             android:paddingStart="4dp"
                             android:singleLine="true"
+                            android:textColor="@color/white"
                             android:textSize="18sp" />
 
-                        <EditText
-                            android:textColor="@color/white"
-                            android:id="@+id/email2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="30dp"
-                            android:layout_weight="0.99"
-                            android:drawableEnd="@drawable/ic_assignment_ind_black_24dp"
-                            android:drawablePadding="8dp"
-                            android:hint="Username/Code"
-                            android:imeActionId="8"
-                            android:imeActionLabel="@string/action_sign_in_short"
-                            android:imeOptions="actionUnspecified"
-                            android:inputType="textEmailAddress"
-                            android:maxLines="1"
-                            android:paddingEnd="4dp"
-                            android:paddingStart="4dp"
-                            android:singleLine="true"
-                            android:textSize="18sp">
 
-                        </EditText>
-
-                        <Button
-                            android:id="@+id/showPassword2"
-                            style="?android:attr/borderlessButtonStyle"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/round_button"
-                            android:onClick="@{() -> callback.onShowPasswordClick2()}"
-                            android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
-                            android:gravity="center"
-                            android:padding="3dp" />
-
-                        <EditText
-                            android:textColor="@color/white"
-                            android:id="@+id/password2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="-10dp"
-                            android:layout_weight="0.99"
-                            android:drawableEnd="@drawable/ic_lock_black_24dp"
-                            android:drawablePadding="8dp"
-                            android:hint="@string/prompt_password"
-                            android:imeActionId="9"
-                            android:imeActionLabel="@string/action_sign_in_short"
-                            android:imeOptions="actionUnspecified"
-                            android:inputType="textPassword"
-                            android:maxLines="1"
-                            android:paddingEnd="4dp"
-                            android:paddingStart="4dp"
-                            android:singleLine="true"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -233,8 +181,8 @@
                         android:layout_weight="38"
                         android:background="@color/black_overlay"
                         android:drawableStart="@drawable/ic_cloud_download_black_24dp"
-                        android:padding="15dp"
                         android:onClick="@{() -> callback.onSyncDataClick()}"
+                        android:padding="15dp"
                         android:text="Sync Data"
                         android:textStyle="bold" />
 
