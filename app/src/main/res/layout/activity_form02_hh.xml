@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.activities.Form01Enrolment">
+    tools:context=".ui.activities.Form02HHActivity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="com.example.hassannaqvi.wfppishincr.ui.activities.Form01Enrolment" />
+            type="com.example.hassannaqvi.wfppishincr.ui.activities.Form02HHActivity" />
     </data>
 
     <LinearLayout
