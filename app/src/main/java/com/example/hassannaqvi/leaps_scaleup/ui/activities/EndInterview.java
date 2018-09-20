@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 
 import java.util.concurrent.ExecutionException;
 
@@ -56,7 +57,7 @@ public class EndInterview extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(1, MainActivity.db, StartActivity.fc).execute().get();
+            Long longID = new crudOperations(MainActivity.db, StartActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {

@@ -23,13 +23,16 @@ public interface FormsDAO {
     @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORM + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
 
+    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORM + " WHERE formDate LIKE :date")
+    List<Forms> getTodaysForms(String date);
+
     @Insert
-    Long insertAll(Forms forms);
+    Long insertForm(Forms forms);
 
     @Delete
     void delete(Forms forms);
 
     @Update
-    int updateForm(Forms... forms);
+    int updateForm(Forms forms);
 
 }

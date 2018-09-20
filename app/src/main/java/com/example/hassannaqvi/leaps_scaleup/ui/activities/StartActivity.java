@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 
 import java.util.concurrent.ExecutionException;
@@ -118,7 +119,7 @@ public class StartActivity extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(0, MainActivity.db, fc).execute().get();
+            Long longID = new crudOperations(MainActivity.db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
 
             if (longID != 0) {
                 fc.setId(longID.intValue());

@@ -3,34 +3,61 @@ package com.example.hassannaqvi.leaps_scaleup.core;
 import android.os.AsyncTask;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * Created by openm on 19-Jul-18.
  */
 
-public class crudOperations extends AsyncTask<Void, Void, Long> {
+public class crudOperations extends AsyncTask<String, Void, Long> {
 
-    int type;
     AppDatabase db;
-    Forms forms;
+    Object forms;
 
-    public crudOperations(int type, AppDatabase db, Forms forms) {
-        this.type = type;
+    public crudOperations(AppDatabase db, Object forms) {
         this.db = db;
         this.forms = forms;
     }
 
     @Override
-    protected Long doInBackground(Void... voids) {
+    protected Long doInBackground(String... fnNames) {
 
-        Long longID = null;
+        Long longID = new Long(0);
 
-        if (type == 0) {
-            longID = db.formsDao().insertAll(forms);
-        } else if (type == 1) {
-            longID = Long.valueOf(db.formsDao().updateForm(forms));
+        try {
+
+            Method[] fn = db.getClass().getDeclaredMethods();
+            for (Method method : fn) {
+                if (method.getName().equals(fnNames[1])) {
+
+                    Class<?> fnClass = Class.forName(fnNames[0]);
+
+                    for (Method method2 : fnClass.getDeclaredMethods()) {
+                        if (method2.getName().equals(fnNames[2])) {
+
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
+                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), forms)));
+
+                            break;
+                        }
+                    }
+
+                    break;
+                }
+            }
+
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
         }
+
 
         return longID;
     }

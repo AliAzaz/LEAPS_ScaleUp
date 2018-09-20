@@ -464,6 +464,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                         (mEmail.equals("test1234") && mPassword.equals("test1234"))
                         || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {
                     MainApp.userName = mEmail;
+                    MainApp.admin = mEmail.contains("@");
 
                     finish();
 

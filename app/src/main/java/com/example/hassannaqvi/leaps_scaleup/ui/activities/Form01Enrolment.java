@@ -2,14 +2,13 @@ package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
 import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm01EnrolmentBinding;
@@ -95,7 +94,7 @@ public class Form01Enrolment extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(0, MainActivity.db, fc).execute().get();
+            Long longID = new crudOperations(MainActivity.db, fc).execute().get();
 
             if (longID != 0) {
                 fc.setId(longID.intValue());
@@ -334,9 +333,7 @@ public class Form01Enrolment extends AppCompatActivity {
             if (!validatorClass.EmptyRadioButton(this, bi.ls01f10b, bi.ls01f10b96, bi.ls01f10b96x, getString(R.string.ls01f10b))) {
                 return false;
             }
-            if (!validatorClass.EmptyRadioButton(this, bi.ls01f10c, bi.ls01f10c96, bi.ls01f10c96x, getString(R.string.ls01f10c))) {
-                return false;
-            }
+            return validatorClass.EmptyRadioButton(this, bi.ls01f10c, bi.ls01f10c96, bi.ls01f10c96x, getString(R.string.ls01f10c));
         }
 
         return true;

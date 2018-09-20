@@ -33,6 +33,7 @@ import com.example.hassannaqvi.leaps_scaleup.core.GetAllDBData;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityMainBinding;
 import com.example.hassannaqvi.leaps_scaleup.sync.SyncAllData;
 
@@ -140,11 +141,16 @@ public class MainActivity extends Activity {
         if (MainApp.admin) {
             mainBinding.adminsec.setVisibility(View.VISIBLE);
 
-            /*Collection<FormsContract> todaysForms = db.getTodayForms();
-            Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();*/
-
-            Collection<FormsContract> todaysForms = null;
-            Collection<FormsContract> unsyncedForms = null;
+            Collection<Forms> todaysForms = null;
+            Collection<Forms> unsyncedForms = null;
+            try {
+                todaysForms = (Collection<Forms>) new GetAllDBData(db).execute(FormsDAO.class.getName(), "formsDao", "getUnSyncedForms").get();
+                unsyncedForms = (Collection<Forms>) new GetAllDBData(db).execute(FormsDAO.class.getName(), "formsDao", "getUnSyncedForms").get();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
 
             rSumText += "TODAY'S RECORDS SUMMARY\r\n";
 
@@ -159,7 +165,7 @@ public class MainActivity extends Activity {
                 rSumText += "[ Form_ID ] \t[Form Status] \t[Sync Status]----------\r\n";
                 rSumText += "--------------------------------------------------\r\n";
 
-                for (FormsContract fc : todaysForms) {
+                for (Forms fc : todaysForms) {
                     if (fc.getIstatus() != null) {
                         switch (fc.getIstatus()) {
                             case "1":
@@ -181,7 +187,7 @@ public class MainActivity extends Activity {
                         iStatus = "\tN/A";
                     }
 
-                    rSumText += fc.get_ID();
+                    rSumText += fc.getId();
 
                     rSumText += " " + iStatus + " ";
 
@@ -211,10 +217,8 @@ public class MainActivity extends Activity {
 //        Testing visibility
         if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
             mainBinding.testing.setVisibility(View.GONE);
-//            testing.setVisibility(View.GONE);
         } else {
             mainBinding.testing.setVisibility(View.VISIBLE);
-//            testing.setVisibility(View.VISIBLE);
         }
 
 //        Logins manage
