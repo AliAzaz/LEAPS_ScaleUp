@@ -7,8 +7,9 @@ import android.content.Context;
 
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
 
-@Database(entities = {Forms.class}, version = AppDatabase.Sub_DBConnection.DATABASE_VERSION, exportSchema = false)
+@Database(entities = {Forms.class, Users.class}, version = AppDatabase.Sub_DBConnection.DATABASE_VERSION, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     /*@VisibleForTesting
@@ -40,8 +41,9 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract FormsDAO formsDao();
 
     public interface Sub_DBConnection {
-        String DATABASE_NAME = "wfppishincr";
+        String DATABASE_NAME = "leapsSUP";
         int DATABASE_VERSION = 1;
-        String TABLE_FORM = "forms";
+        String TABLE_FORMS = "forms";
+        String TABLE_USERS = "users";
     }
 }

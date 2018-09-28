@@ -14,16 +14,16 @@ import java.util.List;
 @Dao
 public interface FormsDAO {
 
-    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORM)
+    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORMS)
     List<Forms> getAll();
 
-    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORM + " WHERE id=:id")
+    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORMS + " WHERE id=:id")
     Forms getLastForm(int id);
 
-    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORM + " WHERE synced = ''")
+    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORMS + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
 
-    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORM + " WHERE formDate LIKE :date")
+    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORMS + " WHERE formDate LIKE :date")
     List<Forms> getTodaysForms(String date);
 
     @Insert

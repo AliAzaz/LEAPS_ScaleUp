@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 
-@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORM)
+@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS)
 public class Forms {
 
     @Ignore
