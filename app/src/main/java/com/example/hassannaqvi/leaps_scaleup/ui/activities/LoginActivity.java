@@ -37,6 +37,7 @@ import android.widget.Toast;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityLoginBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.GetAllData;
 import com.github.amlcurran.showcaseview.ShowcaseView;
@@ -49,7 +50,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
+import java.nio.channels.FileChannel;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -173,10 +174,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
     public void dbBackup() {
 
-        sharedPref = getSharedPreferences("dss01", MODE_PRIVATE);
+        sharedPref = getSharedPreferences("leapsScaleUp", MODE_PRIVATE);
         editor = sharedPref.edit();
 
-        if (sharedPref.getBoolean("flag", false)) {
+        if (sharedPref.getBoolean("flag", true)) {
 
             String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()).toString());
 
@@ -186,7 +187,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 editor.commit();
             }
 
-            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-PISHIN");
+            File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-LEAPSSUP");
             boolean success = true;
             if (!folder.exists()) {
                 success = folder.mkdirs();
@@ -201,11 +202,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 if (success) {
 
                     try {
-                        File dbFile = new File(this.getDatabasePath(DatabaseHelper.DATABASE_NAME).getPath());
+                        /*File dbFile = new File(this.getDatabasePath(AppDatabase.Sub_DBConnection.DATABASE_NAME).getAbsolutePath());
                         FileInputStream fis = new FileInputStream(dbFile);
 
                         String outFileName = DirectoryName + File.separator +
-                                DatabaseHelper.DB_NAME;
+                                AppDatabase.Sub_DBConnection.DATABASE_NAME + ".db";
 
                         // Open the empty db as the output stream
                         OutputStream output = new FileOutputStream(outFileName);
@@ -219,7 +220,21 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                         // Close the streams
                         output.flush();
                         output.close();
-                        fis.close();
+                        fis.close();*/
+
+                        String dbFileName = this.getDatabasePath(AppDatabase.Sub_DBConnection.DATABASE_NAME).getAbsolutePath();
+                        String outFileName = DirectoryName + File.separator + AppDatabase.Sub_DBConnection.DATABASE_NAME + ".db";
+
+                        File currentDB = new File(dbFileName);
+                        File backupDB = new File(outFileName);
+
+                        FileChannel src = new FileInputStream(currentDB).getChannel();
+                        FileChannel dst = new FileOutputStream(backupDB).getChannel();
+                        dst.transferFrom(src, 0, src.size());
+                        src.close();
+                        dst.close();
+
+
                     } catch (IOException e) {
                         Log.e("dbBackup:", e.getMessage());
                     }

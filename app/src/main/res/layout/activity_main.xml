@@ -239,6 +239,16 @@
                 android:onClick="syncServer"
                 android:text="Upload Data" />
 
+            <Button
+                android:id="@+id/openDB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                android:onClick="openDB"
+                android:text="Open Database Manager" />
+
+
             <LinearLayout
                 android:id="@+id/adminsec"
                 android:layout_width="match_parent"
@@ -276,14 +286,14 @@
                     android:text="Update App"
                     android:visibility="gone" />
 
-                <Button
+                <!--<Button
                     android:id="@+id/openDB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:onClick="openDB"
-                    android:text="Open Database Manager" />
+                    android:text="Open Database Manager" />-->
 
                 <Button
                     android:id="@+id/testGPS"

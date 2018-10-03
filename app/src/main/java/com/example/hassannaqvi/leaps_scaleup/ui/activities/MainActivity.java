@@ -27,7 +27,6 @@ import android.widget.Toast;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.contracts.FamilyMembersContract;
 import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
-import com.example.hassannaqvi.leaps_scaleup.core.AndroidDatabaseManager;
 import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
 import com.example.hassannaqvi.leaps_scaleup.core.GetAllDBData;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
@@ -48,6 +47,8 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
+
+import im.dino.dbinspector.activities.DbInspectorActivity;
 
 
 public class MainActivity extends Activity {
@@ -132,7 +133,6 @@ public class MainActivity extends Activity {
 
 //        Binding setting
 //        DatabaseHelper db = new DatabaseHelper(this);
-
 
 //        Room DB instantiate
         db = AppDatabase.getDatabase(getApplicationContext());
@@ -351,7 +351,7 @@ public class MainActivity extends Activity {
     }
 
     public void openDB(View v) {
-        Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);
+        Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
         startActivity(dbmanager);
     }
 

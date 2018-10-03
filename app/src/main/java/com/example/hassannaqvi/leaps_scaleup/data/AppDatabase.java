@@ -31,6 +31,7 @@ public abstract class AppDatabase extends RoomDatabase {
                 if (sInstance == null) {
                     sInstance = Room.databaseBuilder(context, AppDatabase.class, Sub_DBConnection.DATABASE_NAME)
 //                            .addMigrations(MIGRATION_v1_v2, MIGRATION_v2_v3)
+                            .setJournalMode(JournalMode.TRUNCATE)
                             .build();
                 }
             }
@@ -41,9 +42,9 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract FormsDAO formsDao();
 
     public interface Sub_DBConnection {
-        String DATABASE_NAME = "leapsSUP";
+        String DATABASE_NAME = "leaps_sup";
         int DATABASE_VERSION = 1;
-        String TABLE_FORMS = "forms";
-        String TABLE_USERS = "users";
+        String TABLE_FORMS = "forms1";
+        String TABLE_USERS = "users1";
     }
 }
