@@ -16,6 +16,9 @@ public class Users {
     private String ROW_USERNAME = "";
     private String ROW_PASSWORD = "";
 
+    public Users() {
+    }
+
     public Users(Users users) {
         this.ROW_USERNAME = users.ROW_USERNAME;
         this.ROW_PASSWORD = users.ROW_PASSWORD;
