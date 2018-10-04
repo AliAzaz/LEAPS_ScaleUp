@@ -34,10 +34,24 @@ public class Form01Enrolment extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form01_enrolment);
         bi.setCallback(this);
         setupView();
-
+        bi.ls01f03.setManager(getSupportFragmentManager());
+        bi.ls01f05.setManager(getSupportFragmentManager());
+        bi.ls01a10.setManager(getSupportFragmentManager());
     }
 
     private void setupView() {
+        bi.ls01a07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.ls01a07a) {
+                    bi.fldgrpls01a07.setVisibility(GONE);
+                    ClearClass.ClearAllFields(bi.fldgrpls01a07, false);
+                } else {
+                    bi.fldgrpls01a07.setVisibility(VISIBLE);
+                    ClearClass.ClearAllFields(bi.fldgrpls01a07, true);
+                }
+            }
+        });
         bi.ls01a08.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -78,17 +92,18 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public void BtnContinue() {
+//        if (formValidation()) {
         try {
             SaveDraft();
-            if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), EndInterview.class));
-            } else {
-                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
-            }
+//                if (UpdateDB()) {
+            startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+//                } else {
+            Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+//                }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
+//        }
     }
 
     public boolean UpdateDB() {
@@ -113,7 +128,7 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
+        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
 
     private void SaveDraft() throws JSONException {
@@ -239,12 +254,14 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls01a07, bi.ls01a07a, getString(R.string.ls01a07))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0896, bi.ls01a0896x, getString(R.string.ls01a08))) {
-            return false;
-        }
-        if (bi.ls01a08a.isChecked()) {
-            if (!validatorClass.EmptyRadioButton(this, bi.ls01a09, bi.ls01a09a, getString(R.string.ls01a09))) {
+        if (!bi.ls01a07a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0896, bi.ls01a0896x, getString(R.string.ls01a08))) {
                 return false;
+            }
+            if (bi.ls01a08a.isChecked()) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls01a09, bi.ls01a09a, getString(R.string.ls01a09))) {
+                    return false;
+                }
             }
         }
 

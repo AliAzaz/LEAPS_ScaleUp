@@ -80,7 +80,8 @@ public class MainActivity extends Activity {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-        mainBinding.lblheader.setText("Welcome! You're assigned to block ' " + MainApp.userName);
+//        mainBinding.lblheader.setText("Welcome! You're assigned to block ' " + MainApp.userName);
+        mainBinding.lblheader.setText("Welcome!");
 
         /*TagID Start*/
         sharedPref = getSharedPreferences("tagName", MODE_PRIVATE);
@@ -241,7 +242,8 @@ public class MainActivity extends Activity {
     }
 
     public void openForm() {
-        final Intent oF = new Intent(MainActivity.this, StartActivity.class);
+//        final Intent oF = new Intent(MainActivity.this, StartActivity.class);
+        final Intent oF = new Intent(MainActivity.this, Form01Enrolment.class);
 
         if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
             startActivity(oF);
@@ -369,7 +371,8 @@ public class MainActivity extends Activity {
 
             DatabaseHelper db = new DatabaseHelper(this);
 
-            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Under Construction", Toast.LENGTH_SHORT).show();
+        /*    Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
 
 
             new SyncAllData(
@@ -391,7 +394,7 @@ public class MainActivity extends Activity {
                     db.getUnsyncedFamilyMembers()
             ).execute();
 
-
+*/
             SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = syncPref.edit();
 
@@ -411,6 +414,7 @@ public class MainActivity extends Activity {
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
+            Toast.makeText(this,"Under Development",Toast.LENGTH_SHORT).show();
 
             // Sync Random
             /*new GetBLRandom(this).execute();*/

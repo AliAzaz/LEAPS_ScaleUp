@@ -256,8 +256,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            new syncData(this).execute();
-
+//            new syncData(this).execute();
+            Toast.makeText(this, "Under Development", Toast.LENGTH_SHORT).show();
 
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();

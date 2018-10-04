@@ -17,6 +17,7 @@
         android:fitsSystemWindows="true"
         android:gravity="center_horizontal"
         android:orientation="vertical"
+
         tools:context=".ui.activities.LoginActivity">
 
         <!-- Login progress -->
@@ -41,7 +42,6 @@
                 android:layout_marginLeft="72dp"
                 android:layout_marginRight="72dp"
                 android:layout_marginTop="50dp"
-                android:layoutDirection="rtl"
                 android:orientation="vertical">
 
                 <TextView
@@ -98,7 +98,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_weight="0.99"
-                        android:drawableEnd="@drawable/ic_assignment_ind_black_24dp"
+                        android:layoutDirection="ltr"
+                        android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
                         android:drawablePadding="8dp"
                         android:hint="Username/Code"
                         android:imeActionId="6"
@@ -116,22 +117,12 @@
 
                     </EditText>
 
-                    <RelativeLayout
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp">
+                        android:layout_marginTop="30dp"
+                        android:orientation="horizontal">
 
-                        <Button
-                            android:id="@+id/showPassword"
-                            style="?android:attr/borderlessButtonStyle"
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_marginTop="3dp"
-                            android:background="@drawable/round_button"
-                            android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
-                            android:gravity="center"
-                            android:onClick="@{() -> callback.onShowPasswordClick()}"
-                            android:padding="3dp" />
 
                         <EditText
                             android:id="@+id/password"
@@ -140,7 +131,9 @@
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_weight="0.99"
-                            android:drawableEnd="@drawable/ic_lock_black_24dp"
+                            android:layoutDirection="ltr"
+
+                            android:drawableStart="@drawable/ic_lock_black_24dp"
                             android:drawablePadding="2dp"
                             android:hint="@string/prompt_password"
                             android:imeActionId="7"
@@ -154,8 +147,19 @@
                             android:textColor="@color/white"
                             android:textSize="18sp" />
 
+                        <Button
+                            android:id="@+id/showPassword"
+                            style="?android:attr/borderlessButtonStyle"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@drawable/round_button"
+                            android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
+                            android:gravity="center"
+                            android:onClick="@{() -> callback.onShowPasswordClick()}"
+                            android:padding="3dp" />
 
-                    </RelativeLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
 

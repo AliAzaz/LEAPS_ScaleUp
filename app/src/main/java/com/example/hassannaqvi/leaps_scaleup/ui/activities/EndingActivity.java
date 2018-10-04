@@ -61,24 +61,27 @@ public class EndingActivity extends AppCompatActivity {
         if (formValidation()) {
 
             SaveDraft();
-            if (UpdateDB()) {
+//            if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-            } else {
+//            } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
-            }
+//            }
 
         }
     }
 
     private void SaveDraft() {
-        StartActivity.fc.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : "0");
-        StartActivity.fc.setEndtime(dtToday);
+       /* StartActivity.fc.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : "0");
+        StartActivity.fc.setEndtime(dtToday);*/
+        Form01Enrolment.fc.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : "0");
+        Form01Enrolment.fc.setEndtime(dtToday);
     }
 
     private boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(MainActivity.db, StartActivity.fc).execute().get();
+//            Long longID = new crudOperations(MainActivity.db, StartActivity.fc).execute().get();
+            Long longID = new crudOperations(MainActivity.db, Form01Enrolment.fc).execute().get();
             return longID == 1;
 
         } catch (InterruptedException e) {
