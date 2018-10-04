@@ -8,7 +8,7 @@
     <color name="colorPrimaryAlpha">#90a4ae</color>
     <color name="colorPrimaryBeta">#f50057</color>-->
     <color name="colorPrimary">#01579b</color>
-    <color name="colorPrimaryDark">#ffff0000</color>
+    <color name="colorPrimaryDark">#d50000</color>
     <color name="colorPrimaryAlpha">#c9ff4c4c</color>
     <color name="colorPrimaryBeta">#f50057</color>
 
@@ -22,7 +22,7 @@
     <color name="black_overlay">#66000000</color>
     <color name="dullWhile">#d6d6d6</color>
     <color name="selectedBlue">#2b3581</color>
-    <color name="gray">#7f7f7f</color>
+    <color name="gray">#757575</color>
     <color name="green">#4caf50</color>
     <color name="black">#ff000000</color>
     <color name="grayOverlay">#7f7f7f7f</color>

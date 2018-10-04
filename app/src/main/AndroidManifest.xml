@@ -60,6 +60,7 @@
             android:screenOrientation="portrait" />
         <activity android:name=".ui.activities.Form01Enrolment"
         android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
         />
     </application>
 

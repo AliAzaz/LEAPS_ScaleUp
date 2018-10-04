@@ -30,7 +30,6 @@ public class Form01Enrolment extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form01_enrolment);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form01_enrolment);
         bi.setCallback(this);
         setupView();
