@@ -135,7 +135,8 @@
     <string name="ls02pe01c01"> گورنمينٽ </string>
     <string name="ls02pe01c02"> پرائيوٽ </string>
     <string name="ls02pe01c03"> مدرسو </string>
-    <string name="ls02pe01c04"> ليپس پري اسڪول </string>
+    <string name="ls02pe01c04"> ۾NGO </string>
+    <string name="ls02pe01c05"> ليپس پري اسڪول </string>
     <string name="ls02pe01d"> جيڪڏهن ٻار ليپس پري اسڪول ۾ داخل آهي ته ان جي آڊي لکو </string>
     <string name="ls02pe01e"> ليپس پري اسڪول جي ايڊريس لکو </string>
     <string name="ls02pe01f"> ليپس پري اسڪول جي ٽيچر (CYL ) جو نالو ڇا آهي؟ </string>
@@ -149,7 +150,8 @@
     <string name="ls02pe02c01"> گورنمينٽ </string>
     <string name="ls02pe02c02"> پرائيوٽ </string>
     <string name="ls02pe02c03"> مدرسو </string>
-    <string name="ls02pe02c04"> NGO </string>
+    <string name="ls02pe02c04"> ۾NGO </string>
+
     <string name="ls02pe02c05"> ليپس پري اسڪول </string>
     <string name="ls02pe02d"> جيڪڏهن ٻار ليپس پري اسڪول ۾ داخل آهي ته ان جي آڊي لکو </string>
     <string name="ls02pe02e"> ليپس پري اسڪول جي ايڊريس لکو </string>
@@ -170,8 +172,10 @@
     <string name="ls02pe03d01"> گورنمينٽ </string>
     <string name="ls02pe03d02"> پرائيوٽ </string>
     <string name="ls02pe03d03"> مدرسو </string>
-    <string name="ls02pe03d04"> NGO </string>
+    <string name="ls02pe03d04"> ۾NGO </string>
+
     <string name="lsseheading"> PART 2: HOUSEHOLD INFORMATION (HI) &amp; SOCIO-ECONOMIC STATUS (SE) </string>
+    <string name="ls01seheading"> Household Information</string>
     <string name="ls02hi01"> توهان جي خاندان جي جوڙجڪ ڪهڙي آهي؟ </string>
     <string name="ls02hi01a"> گڏيل/ وڌيل/ ماني الڳ آهي پر رهن گڏ ٿا </string>
     <string name="ls02hi01b"> الڳ الڳ </string>
@@ -256,6 +260,8 @@
     <string name="ls02se14b02"> هندو </string>
     <string name="ls02se14b03"> عيسائي </string>
     <string name="ls02se15"> گھريلو شيون: (جواب ڏيندڙ کان ھيٺين گھريلو شيون جو تعداد معلوم ڪريو) اگر انھن وٽ ڪجھ نه آھي ته ڪوڊ 0 لکو. </string>
+
+    <string name="number"> number </string>
     <string name="ls02se15a"> مينهون، ڍڳيون، پالتو جانور </string>
     <string name="ls02se15b"> رڍون، ٻڪريون </string>
     <string name="ls02se15c"> گهوڙا ۽ گڏهه </string>
@@ -312,6 +318,9 @@
     <string name="ls02fs07b03"> اڪثر ڪري (گذريل 4 هفتن ۾ 10 کان وڌيڪ دفعا </string>
     <string name="ls02fs08a"> گذريل 4 هفتن ۾ توهان يا توهان جي گهر جو ڪو ٻئو فرد بک تي سمهي پيو ڇو جو کاڌو ٿورو هئو؟ </string>
     <string name="ls02fs08b"> جيڪڏهن ها ته اڪثر ڪيترو؟ </string>
+    <string name="ls02fs08b01"> تمام گهٽ (گذريل 4 هفتن ۾ هڪ کان 2 دفعا) </string>
+    <string name="ls02fs08b02"> ڪڏهن ڪڏهن (گذريل 4 هفتن ۾ 3 کان 10 دفعا) </string>
+    <string name="ls02fs08b03"> اڪثر ڪري (گذريل 4 هفتن ۾ 10 کان وڌيڪ دفعا </string>
     <string name="ls02fs09a"> ڇا گذريل 4 هفتن ۾ توهان يا توهان جي گهر جو ڪو به فرد ڏينهن رات بک تي رهيو؟ ڇو ته گهر ۾ کاڌو پورو نه هيو؟ </string>
     <string name="ls02fs09b"> جيڪڏهن ها ته اڪثر ڪيترو؟ </string>
     <string name="ls02fs09b01"> تمام گهٽ (گذريل 4 هفتن ۾ هڪ کان 2 دفعا) </string>
