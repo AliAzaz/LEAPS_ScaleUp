@@ -95,7 +95,7 @@ public class Form01Enrolment extends AppCompatActivity {
         try {
             SaveDraft();
 //                if (UpdateDB()) {
-            startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+            startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
 //                } else {
             Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
 //                }
