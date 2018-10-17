@@ -385,4 +385,32 @@
     <string name="ls02ee15"> هي ٻار ڪهڙي نمبر تي ڄائو آهي؟ </string>
     <string name="ls02ee15a"> نمبر </string>
 
+
+    <!--Form 7-->
+    <string name="ls07id01"> اسيسر جي ID </string>
+    <string name="ls07id02"> فيميل يوٿ جو نالو ۽ ذات </string>
+    <string name="ls07id03"> یوتھ IID </string>
+    <string name="ls07id04"> ضلعو </string>
+    <string name="ls07id05"> فيميل يوٿ جوگروپ </string>
+    <string name="ls07id05a"> انٽروينشن </string>
+    <string name="ls07id05b"> ڪنٽرول </string>
+    <string name="ls07id06"> فيميل يوٿ جي پيدائش جي تاريخ </string>
+    <string name="ls07id07"> فيميل يوٿ جي عمر </string>
+    <string name="ls07id08"> فيميل يوٿ جو نادرا شناختي ڪارڊ آهي؟ </string>
+    <string name="ls07id09"> جيڪڏهن نادرا شناختي ڪارڊ آهي ته ڇا اهو ڏيکاريو </string>
+    <string name="ls07id10"> فيميل يوٿ شادي شده آهي؟ </string>
+    <string name="ls07id11"> فيميل يوٿ کي ڪيترا ٻار آهن؟ </string>
+    <string name="ls07id12"> فيميل يوٿ جي تعليم ڪيتري آهي؟ </string>
+    <string name="ls07id12a">    ميٽرڪ </string>
+    <string name="ls07id12b">       11 درجا </string>
+    <string name="ls07id12c">     12 درجا </string>
+    <string name="ls07id12d">       يونيورسٽي </string>
+    <string name="ls07id12e"> ٻيو ڪجھ </string>
+    <string name="ls07id13"> انٽرويو جي تاريخ </string>
+    <string name="ls07id14"> فيميل يوٿ ڪهڙي رائونڊ ۾ داخل ٿي؟ </string>
+    <string name="ls07id14a">    اسٽيپ 1 </string>
+    <string name="ls07id14b">    اسٽيپ 2 </string>
+    <string name="ls07id14c">      اسٽيپ 3 </string>
+
+
 </resources>

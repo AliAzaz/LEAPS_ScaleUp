@@ -161,6 +161,7 @@
                         android:textSize="20sp" />
 
                     <RadioGroup
+                        android:orientation="vertical"
                         android:id="@+id/ls02ee01c"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -834,7 +835,7 @@
                         android:id="@+id/ls02ee13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
                         <RadioButton
                             android:id="@+id/ls02ee13a"

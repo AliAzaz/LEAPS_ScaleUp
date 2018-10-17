@@ -12,11 +12,10 @@
     <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:button">@null</item>
-        <item name="android:drawableRight">@android:drawable/btn_radio</item>
         <item name="android:textSize">20sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:padding">16dp</item>
+        <item name="android:background">@color/white</item>
         <item name="android:elevation">1dp</item>
     </style>
 
@@ -28,7 +27,7 @@
         <item name="android:textSize">24sp</item>
         <item name="android:typeface">serif</item>
         <item name="android:drawableRight">?android:attr/listChoiceIndicatorMultiple</item>
-        <item name="android:background">#d6d6d6</item>
+        <item name="android:background">@color/white</item>
         <item name="android:padding">4dp</item>
 
 
@@ -68,7 +67,7 @@
     </style>
     <style name="BackgroundStyle" parent="android:Widget.Material.Light.ScrollView">
     <item name="android:background">@drawable/bg</item>
-    <item name="android:padding">16dp</item>
+    <item name="android:padding">10dp</item>
 </style>
     <style name="labels" parent="android:Widget.Material.Light.TextView">
         <item name="android:layout_width">match_parent</item>
@@ -87,10 +86,10 @@
 
     </style>
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:background">@drawable/et_style</item>
-        <item name="android:padding">16dp</item>
         <item name="android:textColorHint">@color/gray</item>
+        <item name="android:padding">10dp</item>
 
     </style>
 
