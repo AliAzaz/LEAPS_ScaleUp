@@ -3,40 +3,59 @@ package com.example.hassannaqvi.leaps_scaleup.core;
 import android.os.AsyncTask;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collection;
 
 /**
  * Created by openm on 19-Jul-18.
  */
 
-public class GetIndDBData extends AsyncTask<Long, Void, Forms> {
+public class GetIndDBData extends AsyncTask<String, Void, Collection<?>> {
 
-    Forms userData, userInfo;
     AppDatabase db;
-    int type;
 
-    public GetIndDBData(AppDatabase db, Forms userInfo, int type) {
+    public GetIndDBData(AppDatabase db) {
         this.db = db;
-        this.userInfo = userInfo;
-        this.type = type;
     }
 
     @Override
-    protected Forms doInBackground(Long... data) {
+    protected Collection<?> doInBackground(String... fnNames) {
 
-        Forms curUser = null;
+        Collection<?> curData = new ArrayList<>();
 
-        switch (type) {
-            case 1:
-                curUser = db.formsDao().getLastForm(data[0].intValue());
-                break;
-            case 2:
+        try {
 
-                break;
+            Method[] fn = db.getClass().getDeclaredMethods();
+            for (Method method : fn) {
+                if (method.getName().equals(fnNames[1])) {
+
+                    Class<?> fnClass = Class.forName(fnNames[0]);
+
+                    for (Method method2 : fnClass.getDeclaredMethods()) {
+                        if (method2.getName().equals(fnNames[2])) {
+
+                            curData = (Collection<?>) fnClass.getMethod(method2.getName()).invoke(db.getClass().getMethod(fnNames[1]).invoke(db));
+
+                            break;
+                        }
+                    }
+
+                    break;
+                }
+            }
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
         }
 
-        userData = curUser != null ? new Forms(curUser) : null;
-
-        return userData;
+        return curData;
     }
 }

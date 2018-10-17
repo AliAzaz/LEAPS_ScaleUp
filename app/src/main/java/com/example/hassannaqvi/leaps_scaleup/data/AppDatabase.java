@@ -44,7 +44,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public interface Sub_DBConnection {
         String DATABASE_NAME = "leaps_sup";
         int DATABASE_VERSION = 1;
-        String TABLE_FORMS = "forms1";
-        String TABLE_USERS = "users1";
+        String TABLE_FORMS = "forms";
+        String TABLE_USERS = "users";
     }
 }

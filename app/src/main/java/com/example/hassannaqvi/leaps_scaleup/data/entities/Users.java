@@ -2,6 +2,7 @@ package com.example.hassannaqvi.leaps_scaleup.data.entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
@@ -16,12 +17,13 @@ public class Users {
     private String ROW_USERNAME = "";
     private String ROW_PASSWORD = "";
 
-    public Users() {
-    }
-
+    @Ignore
     public Users(Users users) {
         this.ROW_USERNAME = users.ROW_USERNAME;
         this.ROW_PASSWORD = users.ROW_PASSWORD;
+    }
+
+    public Users() {
     }
 
     public int getId() {

@@ -179,10 +179,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
         if (sharedPref.getBoolean("flag", true)) {
 
-            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()).toString());
+            String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
 
-            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date()).toString()) {
-                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()).toString());
+            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date())) {
+                editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
 
                 editor.commit();
             }
@@ -475,6 +475,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
+
+//                AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
+
                 if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) || db.Login(mEmail, mPassword) ||
                         (mEmail.equals("test1234") && mPassword.equals("test1234"))
                         || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {

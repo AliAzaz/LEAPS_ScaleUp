@@ -13,7 +13,7 @@ import java.util.Collection;
  * Created by openm on 19-Jul-18.
  */
 
-public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
+public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
 
     AppDatabase db;
 
@@ -22,7 +22,7 @@ public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
     }
 
     @Override
-    protected Collection<?> doInBackground(String... fnNames) {
+    protected Collection<?> doInBackground(Object... fnNames) {
 
         Collection<?> curData = new ArrayList<>();
 
@@ -32,12 +32,31 @@ public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
             for (Method method : fn) {
                 if (method.getName().equals(fnNames[1])) {
 
-                    Class<?> fnClass = Class.forName(fnNames[0]);
+                    Class<?> fnClass = Class.forName(fnNames[0].toString());
 
                     for (Method method2 : fnClass.getDeclaredMethods()) {
-                        if (method2.getName().equals(fnNames[2])) {
+                        if (method2.getName().equals(fnNames[2].toString())) {
 
-                            curData = (Collection<?>) fnClass.getMethod(method2.getName()).invoke(db.getClass().getMethod(fnNames[1]).invoke(db));
+                            /*String arg = "";
+                            if (fnNames[3] != null) {
+
+                                for (byte i = 0; i < ((String[]) fnNames[3]).length; i++) {
+
+                                    arg += ((String[]) fnNames[3])[i];
+
+                                    if (i + 1 != ((String[]) fnNames[3]).length) {
+                                        arg += ",";
+                                    }
+                                }
+
+                                curData = (Collection<?>) fnClass.getMethod(method2.getName())
+                                        .invoke(db.getClass().getMethod(fnNames[1].toString()).invoke(db),arg.split(","));
+
+                                break;
+                            }*/
+
+                            curData = (Collection<?>) fnClass.getMethod(method2.getName())
+                                    .invoke(db.getClass().getMethod(fnNames[1].toString()).invoke(db));
 
                             break;
                         }
