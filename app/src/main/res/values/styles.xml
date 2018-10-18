@@ -101,10 +101,14 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:padding">2dp</item>
     </style>
 
-    <!--Edittext Start-->
+    <!--
+
+    Edittext Start
+
+    -->
 
     <!-- EditText Acept Characters Starts. -->
     <style name="EditText">
@@ -175,6 +179,12 @@
         <item name="cardElevation">3dp</item>
     </style>
     <!--Card View End-->
+
+    <!--
+
+    Edittext End
+
+    -->
 
     <!--Button View Start-->
     <style name="button">
