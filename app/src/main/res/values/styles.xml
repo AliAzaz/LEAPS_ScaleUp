@@ -8,15 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
     <style name="radiobutton" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">22sp</item>
         <item name="android:typeface">serif</item>
-        <item name="android:padding">16dp</item>
-        <item name="android:background">@color/white</item>
-        <item name="android:elevation">1dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
     </style>
 
     <style name="checkbox" parent="android:Widget.Material.Light.CompoundButton.CheckBox">
@@ -29,9 +28,8 @@
         <item name="android:drawableRight">?android:attr/listChoiceIndicatorMultiple</item>
         <item name="android:background">@color/white</item>
         <item name="android:padding">4dp</item>
-
-
     </style>
+
     <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
         <item name="sv_backgroundColor">#33b78ff7</item>
         <item name="sv_showcaseColor">@color/colorPrimaryDark</item>
@@ -39,12 +37,14 @@
         <item name="sv_titleTextAppearance">@style/CustomTitle</item>
         <item name="sv_detailTextAppearance">@style/CustomTitle</item>
     </style>
+
     <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
     </style>
+
     <style name="buttons" parent="android:Widget.Material.Light.Button">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">24sp</item>
@@ -55,6 +55,7 @@
         <item name="android:elevation">5dp</item>
         <item name="android:background">@drawable/background_grad</item>
     </style>
+
     <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
         <item name="android:textViewStyle">@style/labels</item>
@@ -91,6 +92,7 @@
 
 
     </style>
+
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
         <item name="android:textSize">20sp</item>
         <item name="android:background">@drawable/et_style</item>
@@ -104,8 +106,8 @@
         <item name="android:paddingRight">15dp</item>
     </style>
 
-    <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView" >
-        <item name="android:textSize" >17sp</item>
+    <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">17sp</item>
     </style>
 
     <style name="ActionBar">
@@ -186,13 +188,13 @@
 
     <!--Card View Start-->
     <style name="cardView">
-        <item name="android:background">@color/dullWhileOverlay</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <!--<item name="android:layout_marginRight">10dp</item>-->
-        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
         <item name="cardCornerRadius">7dp</item>
-        <item name="cardElevation">3dp</item>
+        <item name="cardElevation">4dp</item>
     </style>
     <!--Card View End-->
 

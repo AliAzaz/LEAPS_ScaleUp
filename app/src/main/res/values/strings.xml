@@ -424,30 +424,30 @@
     <string name="ls07id16"> ضلعو </string>
 
     <!--Info-->
-    <string name="lsid1"> ID1: Child ID </string>
-    <string name="lsid2"> ID2: Cluster ID </string>
-    <string name="lsid3"> ID3: District Name </string>
-    <string name="lsid4"> ID4: Child\'s First Initial of First Name </string>
-    <string name="lsid5"> ID5: Date of Birth </string>
-    <string name="lsid6"> ID6: Date of Assessment (dd/mm/yyyy) </string>
-    <string name="lsid7"> ID7: Child’s Age (years and months) </string>
-    <string name="lsid8"> ID8: CCDA First Initial of First Name </string>
-    <string name="lsid9"> ID9: ID of CCDA </string>
-    <string name="lsid10"> ID10: Which survey round is this form for? (Please circle) </string>
-    <string name="lsid10a"> Baseline </string>
-    <string name="lsid10b"> Step 1 </string>
-    <string name="lsid10c"> Step 2 </string>
-    <string name="lsid10d"> Step 3 </string>
-    <string name="lsid11"> ID11: Type of survey that child is being assessed for (Please circle) </string>
-    <string name="lsid11a"> Population Survey </string>
-    <string name="lsid11b"> School Cohort </string>
-    <string name="lsid12"> ID12: If enrolled in the Population Survey, has the child been assessed at an earlier time point? (Please circle) </string>
-    <string name="lsid13"> ID13: If the child has been assessed before, in what survey round was the child assessed? (Please circle) </string>
-    <string name="lsid13a"> Baseline </string>
-    <string name="lsid13b"> After Step 1 </string>
-    <string name="lsid13c"> After Step 2 </string>
-    <string name="lsid13d"> After Step 3 </string>
-    <string name="lsid14"> ID14: Date of Child’s Enrollment in evaluation (dd/mm/yy) </string>
+    <string name="lsid1"> ٻار جي آڊي</string>
+    <string name="lsid2"> ڪلسٽر جي آڊي</string>
+    <string name="lsid3"> ضلعو</string>
+    <string name="lsid4"> ٻا ر جو نالو ءِ ذات</string>
+    <string name="lsid5"> ٽيسٽ جي تاريخ</string>
+    <string name="lsid6"> ٻار جي ڄمڻ جي تاريخ</string>
+    <string name="lsid7"> ٻار جي عمر</string>
+    <string name="lsid8"> ٽيسٽ ڪندڙ جو نالو</string>
+    <string name="lsid9"> ٽيسٽ ڪندڙ جي ID</string>
+    <string name="lsid10"> سروي رائونڊ نمبر</string>
+    <string name="lsid11"> سروي جو قسم</string>
+    <string name="lsid12"> جيڪڏهن ٻار پاپوليشن سروي ۾ آهي ته ڇا پهريان اسيس ٿيو آهي؟</string>
+    <string name="lsid13"> جيڪڏهن ٻار پهريان اسيس ٿيو آهي ته ڪهڙي رائونڊ ۾؟</string>
+    <string name="lsid14"> جائزي ۾ داخلا جي تاريخ</string>
+    <string name="lsid10a"> بيس لائين </string>
+    <string name="lsid10b"> اسٽيپ 1 </string>
+    <string name="lsid10c"> اسٽيپ 2 </string>
+    <string name="lsid10d"> اسٽيپ 3 </string>
+    <string name="lsid11a"> پاپوليشن سروي </string>
+    <string name="lsid11b"> اسڪول ڪوهارٽ </string>
+    <string name="lsid13a"> بيس لائين </string>
+    <string name="lsid13b"> اسٽيپ 1 </string>
+    <string name="lsid13c"> اسٽيپ 2 </string>
+    <string name="lsid13d"> اسٽيپ 3 </string>
 
 
 </resources>
