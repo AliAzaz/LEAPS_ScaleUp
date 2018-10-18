@@ -11,9 +11,14 @@
     <string name="error_incorrect_password">This password is incorrect</string>
 
 
-    <string name="yes"> ها </string>
+    <!--<string name="yes"> ها </string>
     <string name="no"> نه </string>
-    <string name="dkn"> خبر ناهي </string>
+    <string name="dkn"> خبر ناهي </string>-->
+
+    <string name="yes"> Yes </string>
+    <string name="no"> No </string>
+    <string name="dkn"> Don\'t know </string>
+
     <string name="other"> ٻيو ڪجھ </string>
     <string name="month"> مهينا </string>
     <string name="year"> سال </string>
@@ -411,6 +416,32 @@
     <string name="ls07id14a">    اسٽيپ 1 </string>
     <string name="ls07id14b">    اسٽيپ 2 </string>
     <string name="ls07id14c">      اسٽيپ 3 </string>
+
+    <!--Info-->
+    <string name="lsid1"> ID1: Child ID </string>
+    <string name="lsid2"> ID2: Cluster ID </string>
+    <string name="lsid3"> ID3: District Name </string>
+    <string name="lsid4"> ID4: Child\'s First Initial of First Name </string>
+    <string name="lsid5"> ID5: Date of Birth </string>
+    <string name="lsid6"> ID6: Date of Assessment (dd/mm/yyyy) </string>
+    <string name="lsid7"> ID7: Child’s Age (years and months) </string>
+    <string name="lsid8"> ID8: CCDA First Initial of First Name </string>
+    <string name="lsid9"> ID9: ID of CCDA </string>
+    <string name="lsid10"> ID10: Which survey round is this form for? (Please circle) </string>
+    <string name="lsid10a"> Baseline </string>
+    <string name="lsid10b"> Step 1 </string>
+    <string name="lsid10c"> Step 2 </string>
+    <string name="lsid10d"> Step 3 </string>
+    <string name="lsid11"> ID11: Type of survey that child is being assessed for (Please circle) </string>
+    <string name="lsid11a"> Population Survey </string>
+    <string name="lsid11b"> School Cohort </string>
+    <string name="lsid12"> ID12: If enrolled in the Population Survey, has the child been assessed at an earlier time point? (Please circle) </string>
+    <string name="lsid13"> ID13: If the child has been assessed before, in what survey round was the child assessed? (Please circle) </string>
+    <string name="lsid13a"> Baseline </string>
+    <string name="lsid13b"> After Step 1 </string>
+    <string name="lsid13c"> After Step 2 </string>
+    <string name="lsid13d"> After Step 3 </string>
+    <string name="lsid14"> ID14: Date of Child’s Enrollment in evaluation (dd/mm/yy) </string>
 
 
 </resources>

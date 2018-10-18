@@ -29,9 +29,8 @@
         <item name="android:drawableRight">?android:attr/listChoiceIndicatorMultiple</item>
         <item name="android:background">@color/white</item>
         <item name="android:padding">4dp</item>
-
-
     </style>
+
     <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
         <item name="sv_backgroundColor">#33b78ff7</item>
         <item name="sv_showcaseColor">@color/colorPrimaryDark</item>
@@ -39,12 +38,14 @@
         <item name="sv_titleTextAppearance">@style/CustomTitle</item>
         <item name="sv_detailTextAppearance">@style/CustomTitle</item>
     </style>
+
     <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">30sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
     </style>
+
     <style name="buttons" parent="android:Widget.Material.Light.Button">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">24sp</item>
@@ -55,8 +56,9 @@
         <item name="android:elevation">5dp</item>
         <item name="android:background">@drawable/background_grad</item>
     </style>
+
     <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="android:scrollViewStyle">@style/BackgroundStyle</item>
+        <!--<item name="android:scrollViewStyle">@style/BackgroundStyle</item>-->
         <item name="android:textViewStyle">@style/labels</item>
         <item name="android:editTextStyle">@style/textInput</item>
         <item name="android:buttonStyle">@style/buttons</item>
@@ -65,10 +67,12 @@
         <item name="editTextStyle">@style/textInput</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="BackgroundStyle" parent="android:Widget.Material.Light.ScrollView">
-    <item name="android:background">@drawable/bg</item>
-    <item name="android:padding">10dp</item>
-</style>
+        <item name="android:background">@drawable/bg</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
     <style name="labels" parent="android:Widget.Material.Light.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -82,9 +86,8 @@
         <item name="android:typeface">serif</item>
         <item name="android:paddingTop">22dp</item>
         <item name="android:elevation">1dp</item>
-
-
     </style>
+
     <style name="textInput" parent="android:Widget.Material.Light.EditText">
         <item name="android:textSize">20sp</item>
         <item name="android:background">@drawable/et_style</item>
@@ -92,5 +95,96 @@
         <item name="android:padding">10dp</item>
 
     </style>
+
+    <style name="linerlayout_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <!--Edittext Start-->
+
+    <!-- EditText Acept Characters Starts. -->
+    <style name="EditText">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:digits">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+    <!-- EditText Acept Number  Ends. -->
+
+    <!-- EditText Acept Number  Starts. -->
+    <style name="EditText_number">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:inputType">number</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+    <!-- EditText Acept Number  Ends. -->
+
+    <!-- EditText Acept Number Decimal  Starts. -->
+    <style name="EditText_number_de">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+
+    <!-- EditText Acept Date Black Box.-->
+    <style name="EditText_number_b_box">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+    </style>
+    <!-- EditText Acept Number  Ends. -->
+
+    <!--Card View Start-->
+    <style name="cardView">
+        <item name="android:background">@color/dullWhileOverlay</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="cardCornerRadius">7dp</item>
+        <item name="cardElevation">3dp</item>
+    </style>
+    <!--Card View End-->
+
+    <!--Button View Start-->
+    <style name="button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:background">@color/grayOverlay</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+    <!--Button View End-->
 
 </resources>
