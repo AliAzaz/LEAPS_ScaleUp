@@ -15,9 +15,9 @@
     <string name="no"> نه </string>
     <string name="dkn"> خبر ناهي </string>-->
 
-    <string name="yes"> Yes </string>
-    <string name="no"> No </string>
-    <string name="dkn"> Don\'t know </string>
+    <string name="yes"> ھاں </string>
+    <string name="no"> نہ </string>
+    <string name="dkn"> خبر نه آھي </string>
 
     <string name="other"> ٻيو ڪجھ </string>
     <string name="month"> مهينا </string>

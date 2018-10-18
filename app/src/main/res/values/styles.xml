@@ -64,11 +64,14 @@
         <item name="android:radioButtonStyle">@style/radiobutton</item>
         <item name="spinnerStyle">@style/spinner</item>
         <item name="editTextStyle">@style/textInput</item>
+        <item name="toolbarStyle">@style/ActionBar</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
         <!-- Customize your theme here. -->
     </style>
 
     <style name="BackgroundStyle" parent="android:Widget.Material.Light.ScrollView">
-        <item name="android:background">@drawable/bg</item>
+        <item name="android:background">@color/white</item>
         <item name="android:padding">10dp</item>
     </style>
 
@@ -103,6 +106,10 @@
 
     <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView" >
         <item name="android:textSize" >17sp</item>
+    </style>
+
+    <style name="ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
     <style name="linerlayout_view">
