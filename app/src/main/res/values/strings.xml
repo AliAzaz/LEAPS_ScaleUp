@@ -392,9 +392,13 @@
 
 
     <!--Form 7-->
+    <string name="ls07idinstruction"> هي فارم CCDA هر يوٿ جو ڀريندي چاهي اهو پريجيڪٽ ۾ يوٿليڊر سليڪٽ ٿئي يا نه.
+هي فارم تڏهن ئي مڪمل ڪريو جڏهن اجازت ملي ۽ راضي نامي تي صحيح ٿيل هجي.
+پراجيڪٽ ڊيويئشن ارم مڪمل ڪريو جيڪڏهن فارم پرٽوڪول کان هٽي ڪري مڪمل ڪيو ويو هجي.
+ </string>
     <string name="ls07id01"> اسيسر جي ID </string>
     <string name="ls07id02"> فيميل يوٿ جو نالو ۽ ذات </string>
-    <string name="ls07id03"> یوتھ IID </string>
+    <string name="ls07id03"> یوتھ ID </string>
     <string name="ls07id04"> ضلعو </string>
     <string name="ls07id05"> فيميل يوٿ جوگروپ </string>
     <string name="ls07id05a"> انٽروينشن </string>
@@ -406,16 +410,18 @@
     <string name="ls07id10"> فيميل يوٿ شادي شده آهي؟ </string>
     <string name="ls07id11"> فيميل يوٿ کي ڪيترا ٻار آهن؟ </string>
     <string name="ls07id12"> فيميل يوٿ جي تعليم ڪيتري آهي؟ </string>
-    <string name="ls07id12a">    ميٽرڪ </string>
-    <string name="ls07id12b">       11 درجا </string>
-    <string name="ls07id12c">     12 درجا </string>
-    <string name="ls07id12d">       يونيورسٽي </string>
+    <string name="ls07id12a">ميٽرڪ </string>
+    <string name="ls07id12b">11 درجا </string>
+    <string name="ls07id12c"> 12 درجا </string>
+    <string name="ls07id12d">يونيورسٽي </string>
     <string name="ls07id12e"> ٻيو ڪجھ </string>
     <string name="ls07id13"> انٽرويو جي تاريخ </string>
     <string name="ls07id14"> فيميل يوٿ ڪهڙي رائونڊ ۾ داخل ٿي؟ </string>
-    <string name="ls07id14a">    اسٽيپ 1 </string>
-    <string name="ls07id14b">    اسٽيپ 2 </string>
-    <string name="ls07id14c">      اسٽيپ 3 </string>
+    <string name="ls07id14a">اسٽيپ 1 </string>
+    <string name="ls07id14b">اسٽيپ 2 </string>
+    <string name="ls07id14c">اسٽيپ 3 </string>
+    <string name="ls07id15"> ڳوٺ جي ID </string>
+    <string name="ls07id16"> ضلعو </string>
 
     <!--Info-->
     <string name="lsid1"> ID1: Child ID </string>

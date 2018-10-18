@@ -24,11 +24,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme1">
         <activity
-            android:name=".ui.activities.SplashscreenActivity"
+            android:name=".ui.activities.Form07Activity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ui.activities.EndInterview" />
         <activity
@@ -78,14 +82,9 @@
             android:name=".ui.activities.Form5IDELAActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
-        <activity android:name=".ui.activities.Form07Activity" />
-        <activity android:name=".ui.activities.InfoActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <!--<activity android:name=".ui.activities.Form07Activity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/AppTheme1"></activity>-->
     </application>
 
 </manifest>
