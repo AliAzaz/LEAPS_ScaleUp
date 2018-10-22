@@ -57,12 +57,14 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:textColor="@color/white"
                     android:id="@+id/lblMainMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:text="Main Menu"
+                    android:background="@color/colorPrimary"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textStyle="bold" />
@@ -120,7 +122,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
                     android:onClick="@{() -> callback.openForm01a()}"
-                    android:text="Enrolment - Population Survey"
+                    android:text="Enrolment and Household SES - Population Survey"
                     android:textColor="@color/white" />
 
                 <Button
@@ -131,9 +133,8 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
                     android:onClick="@{() -> callback.openForm01b()}"
-                    android:text="Enrolment - School Cohort"
+                    android:text="Enrolment and Household SES - School Cohort"
                     android:textColor="@color/white" />
-
                 <Button
                     android:id="@+id/openAnthro"
                     android:layout_width="match_parent"
@@ -142,7 +143,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
                     android:onClick="@{() -> callback.openAnthro()}"
-                    android:text="Anthropometry"
+                    android:text="Child Anthropometry"
                     android:textColor="@color/white" />
                 <Button
                     android:id="@+id/openEF"
@@ -152,8 +153,29 @@
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
                     android:onClick="@{() -> callback.openEF()}"
-                    android:text="EF Record Booklet"
+                    android:text="Executive Function Skills - Child"
                     android:textColor="@color/white" />
+                <Button
+                    android:id="@+id/openYouthEnrol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:onClick="@{() -> callback.openYouthEnrol()}"
+                    android:text="Enrolment and Questionare - Youth"
+                    android:textColor="@color/white" />
+                <Button
+                    android:id="@+id/openYouthEF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/colorPrimary"
+                    android:onClick="@{() -> callback.openYouthEF()}"
+                    android:text="Executive Function Skills - Youth"
+                    android:textColor="@color/white" />
+
 
 
                 <Button
@@ -295,6 +317,8 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:onClick="openDB"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary"
                     android:text="Open Database Manager" />
 
 
@@ -327,14 +351,15 @@
                         android:visibility="gone" />
 
                     <Button
+                        android:textColor="@color/white"
                         android:id="@+id/updateApp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
                         android:layout_marginTop="16dp"
-                        android:background="#D60000"
                         android:onClick="updateApp"
                         android:text="Update App"
+                        android:background="@color/colorPrimary"
                         android:visibility="gone" />
 
                     <!--<Button
