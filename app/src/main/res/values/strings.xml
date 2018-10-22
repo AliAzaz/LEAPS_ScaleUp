@@ -19,6 +19,11 @@
     <string name="no"> نہ </string>
     <string name="dkn"> خبر نه آھي </string>
 
+    <string name="correct"> صحيح </string>
+    <string name="incorrect"> غلط </string>
+    <string name="nores"> جواب نه ڏنو </string>
+    <string name="skp"> ڇڏي ڏنو </string>
+
     <string name="other"> ٻيو ڪجھ </string>
     <string name="month"> مهينا </string>
     <string name="year"> سال </string>
@@ -28,7 +33,7 @@
     <string name="istatusb">نا مکمل</string>
     <string name="istatusc">انکار کردیا</string>
     <string name="istatusd">گھر بند ہے</string>
-    <string name="nextSection">اگلا سیکشن</string>
+    <string name="nextSection">ايندڙ سيڪشن</string>
     <string name="end_interview">ختم ڪيو</string>
     <string name="addMember">افراد کا اندراج</string>
 
@@ -448,6 +453,36 @@
     <string name="lsid13b"> اسٽيپ 1 </string>
     <string name="lsid13c"> اسٽيپ 2 </string>
     <string name="lsid13d"> اسٽيپ 3 </string>
+
+    <!--Form 5-->
+    <string name="ls05b01ha">1. PERSONAL AWARENESS (SOCIO – EMOTIONAL) </string>
+    <string name="ls05b01hb"> ڪجھ به نه </string>
+    <string name="ls05b01a"> توهان پنهنجو نالو ۽ ذات ٻڌايو؟</string>
+    <string name="ls05b01b"> توهان ٻڌائيندو ته توهان جي عمر ڪيتري آهي؟</string>
+    <string name="ls05b01c"> توهان ڇوڪرا آهيو يا ڇوڪري؟</string>
+    <string name="ls05b01d"> مهرباني ڪري مونکي ان ماڻهونءَ جو نالو ٻڌاءِ جيڪو توهان جو خيال رکندو آهي؟</string>
+    <string name="ls05b01e"> ڇا توهان جنهن ڳوٺ ۾ رهو ٿا مونکي ان جو نالو ٻڌائيندو؟ </string>
+    <string name="ls05b01f"> ڇا توهان مونکي ملڪ جو نالو ٻڌائيندو جنهن ۾ توهان رهو ٿا. </string>
+
+    <string name="ls05b02ha">2. COMPARISON BY SIZE AND LENGTH (EMERGENT MATHS) </string>
+    <string name="ls05b02hb"> گولن ۽ ڪاٺين وارا تصويري ڪارڊ </string>
+    <string name="ls05b02a"> ٻار وڏي گو ل کي سڃاتو</string>
+    <string name="ls05b02b"> ٻار ننڍي گول کي سڃاتو</string>
+    <string name="ls05b02c"> ٻار ڊگهي ڪاٺي کي سڃاتو</string>
+    <string name="ls05b02d"> ٻار ننڍي ڪاٺي کي سڃاتو</string>
+
+    <string name="ls05b03ha">3.	SORTING AND CLASSIFICATION (EMERGENT MATH) </string>
+    <string name="ls05b03hb"> تارن ۽ گولن وارا تصويري ڪارڊ 2 ڳاڙها تارا 1 پيلو تارو 2 پيلا گول 1 ڳاڙهو گول </string>
+    <string name="ls05b03a"> ٻار ڪارڊ پهرين طريقي سان الڳ الڳ ڪيا (هڪجهڙائي)</string>
+    <string name="ls05b03b"> ٻار ڪارڊ ٻئي طريقي سان الڳ الڳ ڪيا (مختلف)</string>
+
+    <string name="ls05b04ha">4.	SHAPE IDENTIFICATION (EMERGENT MATHS) </string>
+    <string name="ls05b04hb"> 6 شڪلين وارو پيج </string>
+    <string name="ls05b04a"> ٻار گول سڃاڻي ٿو؟</string>
+    <string name="ls05b04b"> ٻار مستطيل سڃاڻي ٿو؟</string>
+    <string name="ls05b04c"> ٻار ٽڪنڊو سڃاڻي ٿو؟</string>
+    <string name="ls05b04d"> ٻار چوڪنڊو سڃاڻي ٿو؟</string>
+    <string name="ls05b04e"> ٻار ماحول ۾ گول سڃاڻي ٿو؟ </string>
 
 
 </resources>
