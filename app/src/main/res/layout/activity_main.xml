@@ -57,12 +57,14 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:textColor="@color/white"
                     android:id="@+id/lblMainMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:text="Main Menu"
+                    android:background="@color/colorPrimary"
                     android:textAlignment="center"
                     android:textAllCaps="true"
                     android:textStyle="bold" />
@@ -315,6 +317,8 @@
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:onClick="openDB"
+                    android:textColor="@color/white"
+                    android:background="@color/colorPrimary"
                     android:text="Open Database Manager" />
 
 
@@ -347,14 +351,15 @@
                         android:visibility="gone" />
 
                     <Button
+                        android:textColor="@color/white"
                         android:id="@+id/updateApp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="8dp"
                         android:layout_marginTop="16dp"
-                        android:background="#D60000"
                         android:onClick="updateApp"
                         android:text="Update App"
+                        android:background="@color/colorPrimary"
                         android:visibility="gone" />
 
                     <!--<Button

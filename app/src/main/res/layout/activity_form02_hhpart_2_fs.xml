@@ -25,19 +25,11 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
         android:animateLayoutChanges="true"
         android:layoutDirection="rtl"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:background="@color/colorPrimaryDark"
-            android:gravity="center"
-            android:text="@string/ls02fsheading"
-            android:textColor="@android:color/white"
-            android:textSize="35sp" />
+
 
         <!--fs01a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -88,7 +80,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs01b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs01"
+            android:id="@+id/fldgrpfs02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -139,6 +131,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs02a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -189,7 +182,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs02b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs02"
+            android:id="@+id/fldgrpfs04"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -240,6 +233,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs03a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs05"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -290,7 +284,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs03b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs03"
+            android:id="@+id/fldgrpfs06"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -341,6 +335,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs04a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs07"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -391,7 +386,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs04b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs04"
+            android:id="@+id/fldgrpfs08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -442,6 +437,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs05a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs09"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -492,7 +488,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs05b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs05"
+            android:id="@+id/fldgrpfs10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -543,6 +539,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs06a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -593,7 +590,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs06b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs06"
+            android:id="@+id/fldgrpfs12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -644,6 +641,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs07a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -694,7 +692,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs07b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs07"
+            android:id="@+id/fldgrpfs14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -745,6 +743,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs08a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -795,7 +794,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs08b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs08"
+            android:id="@+id/fldgrpfs16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -846,6 +845,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs09a-->
         <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpfs17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -896,7 +896,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs09b-->
         <android.support.v7.widget.CardView
-            android:id="@+id/grpls02fs09"
+            android:id="@+id/fldgrpfs18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -947,6 +947,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
         <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
 
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
@@ -959,7 +960,8 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
                 android:layout_weight="1"
                 android:onClick="@{() -> callback.BtnContinue()}"
                 android:text="@string/nextSection"
-                android:textColor="#1ed61e" />
+                android:background="@color/green"
+                android:textColor="@color/white" />
             <!--'onClick' for btn_Continue will call next section form e.g.: openSection2-->
 
             <Button
@@ -969,7 +971,8 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
                 android:layout_weight="1"
                 android:onClick="@{() -> callback.BtnEnd()}"
                 android:text="@string/end_interview"
-                android:textColor="#ff1e1e" />
+                android:background="@color/red"
+                android:textColor="@color/white" />
 
             <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
         </LinearLayout>
