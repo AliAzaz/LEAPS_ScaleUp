@@ -14,7 +14,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
         <item name="android:typeface">serif</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:padding">10dp</item>
         <item name="android:background">@color/white</item>
         <item name="android:elevation">1dp</item>
     </style>
@@ -65,7 +65,6 @@
         <item name="spinnerStyle">@style/spinner</item>
         <item name="editTextStyle">@style/textInput</item>
         <item name="toolbarStyle">@style/ActionBar</item>
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
 
         <!-- Customize your theme here. -->
     </style>

@@ -29,25 +29,26 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorPrimaryAlpha"
+                android:layout_marginBottom="16dp"
+                android:background="@color/colorPrimaryDark"
                 android:text="@string/ls02instruction"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@color/colorPrimaryDark"
-                android:gravity="center"
-                android:text="@string/ls02pe01heading"
-                android:textColor="@android:color/white"
-                android:textSize="35sp" />
+            <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:background="@color/colorPrimaryDark"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/ls02pe01heading"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="35sp" />-->
 
             <!--01-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -63,7 +64,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/ls02pe01a"
+                        android:text= "@string/ls02pe01a"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
@@ -99,6 +100,7 @@
 
             <!--02-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -135,6 +137,7 @@
 
             <!--03-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -164,42 +167,49 @@
                             android:id="@+id/ls02pe01c01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe01c01" />
 
                         <RadioButton
                             android:id="@+id/ls02pe01c02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe01c02" />
 
                         <RadioButton
                             android:id="@+id/ls02pe01c03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe01c03" />
 
                         <RadioButton
                             android:id="@+id/ls02pe01c04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe01c04" />
 
                         <RadioButton
                             android:id="@+id/ls02pe01c05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe01c05" />
 
                         <RadioButton
                             android:id="@+id/ls02pe01c96"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/other" />
 
                         <RadioButton
                             android:id="@+id/ls02pe01c98"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/dkn" />
 
                     </RadioGroup>
@@ -212,14 +222,15 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
                         android:inputType="text"
-                        android:text='@{ls02pe01c96.checked ? ls02pe01c96x.getText.toString : "" }'
-                        android:visibility='@{ls02pe01c96.checked ? View.VISIBLE : View.GONE }' />
+                        android:text='@{ls02pe01c96.checked? ls02pe01c96x.getText.toString : ""}'
+                        android:visibility='@{ls02pe01c96.checked? View.VISIBLE : View.GONE}' />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
 
             <!--04-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -235,7 +246,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/ls02pe01b"
+                        android:text="@string/ls02pe01d"
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
 
@@ -256,6 +267,7 @@
 
             <!--05-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe05"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -271,7 +283,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:background="@color/colorPrimary"
-                        android:text="@string/ls02pe01b"
+                        android:text="@string/ls02pe01e"
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
 
@@ -292,6 +304,7 @@
 
             <!--06-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -328,6 +341,7 @@
 
             <!--07-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -364,6 +378,7 @@
 
             <!--08-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe08"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -401,6 +416,7 @@
 
             <!--09-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -431,6 +447,7 @@
                             android:id="@+id/ls02pe02a01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:layout_weight="1"
                             android:text="@string/yes" />
 
@@ -438,6 +455,7 @@
                             android:id="@+id/ls02pe02a02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:layout_weight="1"
                             android:text="@string/no" />
 
@@ -449,6 +467,7 @@
 
             <!--10-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe10"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -485,6 +504,7 @@
 
             <!--11-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -520,36 +540,43 @@
                             android:id="@+id/ls02pe02c02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02c02" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02c03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02c03" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02c04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02c04" />
+
 
                         <RadioButton
                             android:id="@+id/ls02pe02c05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02c05" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02c96"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/other" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02c98"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/dkn" />
 
                     </RadioGroup>
@@ -570,6 +597,7 @@
 
             <!--12-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -607,6 +635,7 @@
 
             <!--13-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe13"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -643,6 +672,7 @@
 
             <!--14-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -679,6 +709,7 @@
 
             <!--15-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -716,6 +747,7 @@
 
             <!--16-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -745,48 +777,56 @@
                             android:id="@+id/ls02pe02h01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02h01" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02h02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02h02" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02h03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02h03" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02h04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02h04" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02h05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02h05" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02h06"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02h06" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02h96"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/other" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02h98"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/dkn" />
 
                     </RadioGroup>
@@ -807,6 +847,7 @@
 
             <!--17-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -858,6 +899,7 @@
 
             <!--18-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe18"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -909,6 +951,7 @@
 
             <!--19-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe19"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -946,6 +989,7 @@
 
             <!--20-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrplspe20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -975,36 +1019,42 @@
                             android:id="@+id/ls02pe03d01"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe03d01" />
 
                         <RadioButton
                             android:id="@+id/ls02pe03d02"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe03d02" />
 
                         <RadioButton
                             android:id="@+id/ls02pe03d03"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe03d03" />
 
                         <RadioButton
                             android:id="@+id/ls02pe03d04"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe03d04" />
 
                         <RadioButton
                             android:id="@+id/ls02pe03d96"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/other" />
 
                         <RadioButton
                             android:id="@+id/ls02pe03d98"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
                             android:text="@string/dkn" />
 
                     </RadioGroup>
@@ -1029,6 +1079,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
+                android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
                 <Button
@@ -1036,9 +1087,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/green"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="@string/nextSection"
-                    android:textColor="#1ed61e" />
+                    android:textColor="@color/white" />
                 <!--'onClick' for btn_Continue will call next section form e.g.: openSection2-->
 
                 <Button
@@ -1046,9 +1098,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:background="@color/red"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview"
-                    android:textColor="#ff1e1e" />
+                    android:textColor="@color/white" />
 
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>

@@ -1,5 +1,6 @@
 package com.example.hassannaqvi.leaps_scaleup.validation;
 
+import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -66,6 +67,37 @@ public class ClearClass {
     }
 
     public static void ClearAllFields(LinearLayout container, Boolean flag) {
+        for (int i = 0; i < container.getChildCount(); i++) {
+            View v = container.getChildAt(i);
+            if (v instanceof CheckBox) {
+                ((CheckBox) v).setChecked(false);
+                ((CheckBox) v).setError(null);
+                v.setEnabled(flag);
+            } else if (v instanceof RadioGroup) {
+                if (!flag) {
+                    ((RadioGroup) v).clearCheck();
+                }
+                for (int j = 0; j < ((RadioGroup) v).getChildCount(); j++) {
+                    ((RadioGroup) v).getChildAt(j).setEnabled(flag);
+                }
+            } else if (v instanceof EditText) {
+                ((EditText) v).setText(null);
+                ((EditText) v).setError(null);
+                v.setEnabled(flag);
+                v.clearFocus();
+
+            } else if (v instanceof io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) {
+                ((io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) v).setText(null);
+                v.setEnabled(flag);
+            } else if (v instanceof CardView) {
+                ClearAllCardFields((CardView) v, true);
+            } else if (v instanceof LinearLayout) {
+                ClearAllFields((LinearLayout) v, flag);
+            }
+        }
+    }
+
+    public static void ClearAllCardFields(CardView container, Boolean flag) {
         for (int i = 0; i < container.getChildCount(); i++) {
             View v = container.getChildAt(i);
             if (v instanceof CheckBox) {
