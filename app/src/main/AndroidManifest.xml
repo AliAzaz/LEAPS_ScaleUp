@@ -82,9 +82,11 @@
             android:name=".ui.activities.Form5IDELAActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
-        <activity android:name=".ui.activities.Form07Activity"
+        <activity
+            android:name=".ui.activities.Form07Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
+        <activity android:name=".ui.activities.Form04ChildEF"></activity>
     </application>
 
 </manifest>
