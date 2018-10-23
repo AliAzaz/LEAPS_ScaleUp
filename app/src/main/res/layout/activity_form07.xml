@@ -55,6 +55,7 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls07id01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -91,6 +92,7 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls07id02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -128,6 +130,8 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        android:digits="0123456789"
+                        style="@style/textInput"
                         android:id="@+id/ls07id03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -236,10 +240,8 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls07id04"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:layout_marginBottom="1dp"
                         android:hint="@string/ls07id04"
                         android:inputType="number" />
@@ -323,10 +325,8 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls07id06"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:layout_marginBottom="1dp"
                         android:hint="@string/ls07id06"
                         android:inputType="number" />
@@ -359,10 +359,8 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls07id07"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:layout_marginBottom="1dp"
                         android:hint="@string/ls07id07"
                         android:inputType="number" />
@@ -555,6 +553,7 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls07id11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -638,6 +637,7 @@
 
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls07id1296x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -678,6 +678,7 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls07id13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
