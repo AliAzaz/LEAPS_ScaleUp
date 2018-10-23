@@ -26,7 +26,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme1">
         <activity
-            android:name=".ui.activities.SplashscreenActivity"
+            android:name=".ui.activities.Form05IdBAActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -38,6 +38,7 @@
         <activity
             android:name=".ui.activities.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+
         <activity android:name="im.dino.dbinspector.activities.DbInspectorActivity">
             <intent-filter tools:node="removeAll">
                 <action android:name="android.intent.action.MAIN" />
@@ -45,6 +46,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".core.AndroidDatabaseManager"
             android:screenOrientation="portrait" />
@@ -78,13 +80,13 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity android:name=".ui.activities.AnthroActivity" />
-        <activity
-            android:name=".ui.activities.Form5IDELAActivity"
+        <!--<activity
+            android:name=".ui.activities.Form05IdBAActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1" />-->
         <activity android:name=".ui.activities.Form07Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
     </application>
 
 </manifest>

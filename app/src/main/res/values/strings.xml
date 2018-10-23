@@ -24,6 +24,11 @@
     <string name="nores"> جواب نه ڏنو </string>
     <string name="skp"> ڇڏي ڏنو </string>
 
+    <item name="almostN">Almost never</item>
+    <item name="some">Some times</item>
+    <item name="often">Often</item>
+    <item name="almostA">Almost always</item>
+
     <string name="other"> ٻيو ڪجھ </string>
     <string name="month"> مهينا </string>
     <string name="year"> سال </string>
@@ -454,7 +459,7 @@
     <string name="lsid13c"> اسٽيپ 2 </string>
     <string name="lsid13d"> اسٽيپ 3 </string>
 
-    <!--Form 5-->
+    <!--Form 5 (B)-->
     <string name="ls05b01ha">1. PERSONAL AWARENESS (SOCIO – EMOTIONAL) </string>
     <string name="ls05b01hb"> ڪجھ به نه </string>
     <string name="ls05b01a"> توهان پنهنجو نالو ۽ ذات ٻڌايو؟</string>
@@ -484,5 +489,52 @@
     <string name="ls05b04d"> ٻار چوڪنڊو سڃاڻي ٿو؟</string>
     <string name="ls05b04e"> ٻار ماحول ۾ گول سڃاڻي ٿو؟ </string>
 
+    <string name="ls05b05ha">5.	NUMBER IDENTIFICATION EMERGENT MATHS) </string>
+    <string name="ls05b05hb"> 1 کان 20 نمبرن وارو چارٽ </string>
+    <string name="ls05b05a">1 ۽ 2 قطار ۾ صحيح نمبرن جو تعداد</string>
+    <string name="ls05b05b"> 4 ۽ 3 قطار ۾ صحيح نمبرن جو تعداد</string>
+
+    <string name="ls05b06ha">6.	NUMBER SENSE – ONE TO ONE  (EMERGENT MATHS) </string>
+    <string name="ls05b06hb"> 20 ننڍڙيون شيون (مثال پٿر/بلاڪس / موتي وغيره) </string>
+    <string name="ls05b06hc"> Engagement in Items </string>
+    <string name="ls05b06a"> ٻار 3 (ٽي) شيون سڃاڻي ٿو</string>
+    <string name="ls05b06b"> ٻار 8 (اٺ) شيون سڃاڻي ٿو.</string>
+    <string name="ls05b06c"> ٻار 15 (پنڌرنهن) شيون سڃاڻي ٿو.</string>
+    <string name="ls05b06d"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو.</string>
+    <string name="ls05b06e"> ٻار ٽاسڪ کي احتياط ۽ درستگي سان پورو ڪري ٿو. </string>
+    <string name="ls05b06f"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
+
+    <string name="ls05b07ha">7.	ADDITION AND SUBTRACTION (EMERGENT MATH) </string>
+    <string name="ls05b07hb"> پٿر/بلاڪس پهرين  item  ۾استعمال ڪيا.  صوفن ۽ سائيڪلن جي تصويرين وارا  ڪارڊ </string>
+    <string name="ls05b07a"> ٻار 3 ۽ 2 جوڙ ڪري ٿو.</string>
+    <string name="ls05b07b"> ٻار 2 ۽ 2 جوڙ ڪري ٿو.</string>
+    <string name="ls05b07c"> ٻار 3 مان 1 ڪٽ ڪري ٿو.</string>
+
+    <string name="ls05b08ha">8. PUZZLE COMPLETION (EMERGENT MATH) </string>
+    <string name="ls05b08hb"> 4 يا 5 ٽڪڙن وارو پزل </string>
+    <string name="ls05b08hc"> Engagement in item </string>
+    <string name="ls05b08a"> پزل جي جوڙيل ٽڪرن جو تعداد (ٽائيم 2 منٽ)</string>
+    <string name="ls05b08b"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو.</string>
+    <string name="ls05b08c"> ٻار ٽاسڪ کي احتياط ۽ درستگي سان پورو ڪري ٿو.</string>
+    <string name="ls05b08d"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي.</string>
+
+    <string name="ls05b09ha">9.	FRIENDS </string>
+    <string name="ls05b09a"> ٻڌايل دوست جو تعداد </string>
+
+    <string name="ls05b10ha">10. EMOTIONAL AWARENESS/ REGULATION (SOCIO – EMOTIONAL) </string>
+    <string name="ls05b10hb"> ڪجھ به نه </string>
+    <string name="ls05b10a"> ٻار اهڙو ڪجھ ٻڌائي ٿو جيڪو هن کي ڏکائي</string>
+    <string name="ls05b10b"> ٻار ڪو به هڪ جواب ٻڌايو جنهن سان ڏک گھٽ ٿئي.</string>
+    <string name="ls05b10c"> ٻار ٻيو به جواب ٻڌائي ٿو جنهن سان ڏک گھٽ ٿئي.</string>
+    <string name="ls05b10d"> ٻار اهڙو ڪجھ ٻڌائي ٿو جنهن سان هن کي خوشي ملي ٿي.</string>
+
+    <!--Form 5 (C)-->
+    <string name="ls05c01"> ڇا ٻار سڄي اسيسمنٽ جي دوران هدايتن ۽ مظاهرن تي ڌيان ڏنو؟</string>
+    <string name="ls05c02"> ڇا ٻار ٽاسڪ ڪرڻ مهل پر اعتماد هو ۽ گهبراهٽ نه ڏيکاري (گهبرائجي نه ويو)؟</string>
+    <string name="ls05c03"> ڇا ٻار جو سڄي اسيسمنٽ جي دوران ڌيان برقرار هيو. (۽ آساني سان ٻئي طرف ڌيان نه ڏنو)؟</string>
+    <string name="ls05c04"> ٻار ڌيان سان ٽاسڪ مڪمل ڪرڻ ۾ احتياط ڪري پيو ۽ صحيح طرح سان ڪرڻ ۾ دلچسپي ورتي؟</string>
+    <string name="ls05c05"> ڇا ٻار ڪنهن به ٽاسڪ کي مڪمل ڪرڻ تي خوشي ظاهر ڪئي؟ </string>
+    <string name="ls05c06"> ڇا ٽاسڪ کي مڪمل ڪرڻ لاءِ راضي هو ؟ جلدي ۾ نه ڇڏي ڏنو ۽ ٽاسڪ کي روڪڻ نه ٿئي چاهيو؟ </string>
+    <string name="ls05c07"> ڇا ٻار اسيسمنٽ دوران تجسس ۽ دلچسپي ڏيکاري؟ </string>
 
 </resources>

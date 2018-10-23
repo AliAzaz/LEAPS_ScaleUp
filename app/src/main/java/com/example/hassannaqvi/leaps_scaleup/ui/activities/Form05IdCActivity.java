@@ -6,23 +6,23 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm05IdBCBinding;
+import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm05IdCBinding;
 
-public class Form05IdBCActivity extends AppCompatActivity {
+public class Form05IdCActivity extends AppCompatActivity {
 
-    ActivityForm05IdBCBinding bi;
+    ActivityForm05IdCBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_form05_id_b_c);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form05_id_c);
         bi.setCallback(this);
 
     }
 
     public void BtnContinue() {
-        startActivity(new Intent(this, Form05IdBDActivity.class));
+        startActivity(new Intent(this, Form02HHPart_2_HI_SE.class));
       /*  if (formValidation()) {
         try {
             SaveDraft();
