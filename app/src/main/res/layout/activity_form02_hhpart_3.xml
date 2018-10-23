@@ -211,16 +211,7 @@
                         android:inputType="text"
                         android:text='@{ls02ee01c96.checked? ls02ee01c96x.getText.toString : ""}'
                         android:visibility='@{ls02ee01c96.checked? View.VISIBLE : View.GONE}' />
-                    <!-- <EditText
-                        android:id="@+id/ls02ee01c96x"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                        android:hint="@string/other"
-                        android:inputType="text"
-                        android:text='@{ls02ee01c96.checked ? ls02ee01c96x.getText.toString : "" }'
-                        android:visibility='@{ls02ee01c96.checked ? View.VISIBLE : View.GONE }' />-->
+
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>

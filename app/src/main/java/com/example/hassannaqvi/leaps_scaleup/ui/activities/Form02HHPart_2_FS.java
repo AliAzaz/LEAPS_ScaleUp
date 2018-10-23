@@ -14,6 +14,7 @@ import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 public class Form02HHPart_2_FS extends AppCompatActivity {
 
@@ -125,7 +126,7 @@ public class Form02HHPart_2_FS extends AppCompatActivity {
                 if (i == R.id.ls02fs07a02) {
                     bi.fldgrpfs14.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpfs14, false);
-                }else{
+                } else {
                     bi.fldgrpfs14.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpfs14, true);
                 }
@@ -136,10 +137,10 @@ public class Form02HHPart_2_FS extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if(i == R.id.ls02fs08a02){
+                if (i == R.id.ls02fs08a02) {
                     bi.fldgrpfs16.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpfs16, false);
-                }else{
+                } else {
                     bi.fldgrpfs16.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpfs16, true);
                 }
@@ -150,17 +151,15 @@ public class Form02HHPart_2_FS extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if(i == R.id.ls02fs09a02){
+                if (i == R.id.ls02fs09a02) {
                     bi.fldgrpfs18.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpfs18, false);
-                }else{
+                } else {
                     bi.fldgrpfs18.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpfs18, true);
                 }
             }
         });
-
-
 
 
     }
@@ -188,87 +187,151 @@ public class Form02HHPart_2_FS extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
+
+        JSONObject sFs = new JSONObject();
+
+        sFs.put("ls02fs01", bi.ls02fs01a01.isChecked() ? "1" : bi.ls02fs01a02.isChecked() ? "2" : "0");
+        sFs.put("ls02fs02", bi.ls02fs01b01.isChecked() ? "1"
+                : bi.ls02fs01b02.isChecked() ? "2"
+                : bi.ls02fs01b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs03", bi.ls02fs02a01.isChecked() ? "1" : bi.ls02fs02a02.isChecked() ? "2" : "0");
+
+        sFs.put("ls02fs04", bi.ls02fs02b01.isChecked() ? "1"
+                : bi.ls02fs02b02.isChecked() ? "2"
+                : bi.ls02fs02b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs05", bi.ls02fs03a01.isChecked() ? "1" : bi.ls02fs03a02.isChecked() ? "2" : "0");
+
+        sFs.put("ls02fs06", bi.ls02fs03b01.isChecked() ? "1"
+                : bi.ls02fs03b02.isChecked() ? "2"
+                : bi.ls02fs03b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs07", bi.ls02fs04a01.isChecked() ? "1" : bi.ls02fs04a02.isChecked() ? "2" : "0");
+        sFs.put("ls02fs08", bi.ls02fs04b01.isChecked() ? "1"
+                : bi.ls02fs04b02.isChecked() ? "2"
+                : bi.ls02fs04b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs09", bi.ls02fs05a01.isChecked() ? "1" : bi.ls02fs05a02.isChecked() ? "2" : "0");
+
+        sFs.put("ls02fs10", bi.ls02fs05b01.isChecked() ? "1"
+                : bi.ls02fs05b02.isChecked() ? "2"
+                : bi.ls02fs05b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs11", bi.ls02fs06a01.isChecked() ? "1" : bi.ls02fs06a02.isChecked() ? "2" : "0");
+
+        sFs.put("ls02fs12", bi.ls02fs06b01.isChecked() ? "1"
+                : bi.ls02fs06b02.isChecked() ? "2"
+                : bi.ls02fs06b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs13", bi.ls02fs07a01.isChecked() ? "1" : bi.ls02fs07a02.isChecked() ? "2" : "0");
+
+        sFs.put("ls02fs14", bi.ls02fs07b01.isChecked() ? "1"
+                : bi.ls02fs07b02.isChecked() ? "2"
+                : bi.ls02fs07b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs15", bi.ls02fs08a01.isChecked() ? "1" : bi.ls02fs08a02.isChecked() ? "2" : "0");
+
+        sFs.put("ls02fs16", bi.ls02fs08b01.isChecked() ? "1"
+                : bi.ls02fs08b02.isChecked() ? "2"
+                : bi.ls02fs08b03.isChecked() ? "3"
+                : "0");
+
+        sFs.put("ls02fs17", bi.ls02fs09a01.isChecked() ? "1" : bi.ls02fs09a02.isChecked() ? "2" : "0");
+
+        sFs.put("ls02fs18", bi.ls02fs09b01.isChecked() ? "1"
+                : bi.ls02fs09b02.isChecked() ? "2"
+                : bi.ls02fs09b03.isChecked() ? "3"
+                : "0");
+
     }
 
     private boolean formValidation() {
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs01a,bi.ls02fs01a01,getString(R.string.ls02fs01a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs01a, bi.ls02fs01a01, getString(R.string.ls02fs01a))) {
             return false;
         }
-        if(bi.ls02fs01a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs01b,bi.ls02fs01b01,getString(R.string.ls02fs01b))){
+        if (bi.ls02fs01a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs01b, bi.ls02fs01b01, getString(R.string.ls02fs01b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs02a,bi.ls02fs02a01,getString(R.string.ls02fs02a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs02a, bi.ls02fs02a01, getString(R.string.ls02fs02a))) {
             return false;
         }
-        if(bi.ls02fs02a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs02b,bi.ls02fs02b01,getString(R.string.ls02fs02b))){
+        if (bi.ls02fs02a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs02b, bi.ls02fs02b01, getString(R.string.ls02fs02b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs03a,bi.ls02fs03a01,getString(R.string.ls02fs03a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs03a, bi.ls02fs03a01, getString(R.string.ls02fs03a))) {
             return false;
         }
-        if(bi.ls02fs03a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs03b,bi.ls02fs03b01,getString(R.string.ls02fs03b))){
+        if (bi.ls02fs03a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs03b, bi.ls02fs03b01, getString(R.string.ls02fs03b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs04a,bi.ls02fs04a01,getString(R.string.ls02fs04a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs04a, bi.ls02fs04a01, getString(R.string.ls02fs04a))) {
             return false;
         }
-        if(bi.ls02fs04a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs04b,bi.ls02fs04b01,getString(R.string.ls02fs04b))){
+        if (bi.ls02fs04a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs04b, bi.ls02fs04b01, getString(R.string.ls02fs04b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs05a,bi.ls02fs05a01,getString(R.string.ls02fs05a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs05a, bi.ls02fs05a01, getString(R.string.ls02fs05a))) {
             return false;
         }
-        if(bi.ls02fs05a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs05b,bi.ls02fs05b01,getString(R.string.ls02fs05b))){
+        if (bi.ls02fs05a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs05b, bi.ls02fs05b01, getString(R.string.ls02fs05b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs06a,bi.ls02fs06a01,getString(R.string.ls02fs06a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs06a, bi.ls02fs06a01, getString(R.string.ls02fs06a))) {
             return false;
         }
-        if(bi.ls02fs06a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs06b,bi.ls02fs06b01,getString(R.string.ls02fs06b))){
+        if (bi.ls02fs06a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs06b, bi.ls02fs06b01, getString(R.string.ls02fs06b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs07a,bi.ls02fs07a01,getString(R.string.ls02fs07a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs07a, bi.ls02fs07a01, getString(R.string.ls02fs07a))) {
             return false;
         }
-        if(bi.ls02fs07a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs07b,bi.ls02fs07b01,getString(R.string.ls02fs07b))){
+        if (bi.ls02fs07a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs07b, bi.ls02fs07b01, getString(R.string.ls02fs07b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs08a,bi.ls02fs08a01,getString(R.string.ls02fs08a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs08a, bi.ls02fs08a01, getString(R.string.ls02fs08a))) {
             return false;
         }
-        if(bi.ls02fs08a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs08b,bi.ls02fs08b01,getString(R.string.ls02fs08b))){
+        if (bi.ls02fs08a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs08b, bi.ls02fs08b01, getString(R.string.ls02fs08b))) {
                 return false;
             }
         }
 
-        if(!validatorClass.EmptyRadioButton(this,bi.ls02fs09a,bi.ls02fs09a01,getString(R.string.ls02fs09a))){
+        if (!validatorClass.EmptyRadioButton(this, bi.ls02fs09a, bi.ls02fs09a01, getString(R.string.ls02fs09a))) {
             return false;
         }
-        if(bi.ls02fs09a01.isChecked()){
-            if(!validatorClass.EmptyRadioButton(this,bi.ls02fs09b,bi.ls02fs09b01,getString(R.string.ls02fs09b))){
+        if (bi.ls02fs09a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02fs09b, bi.ls02fs09b01, getString(R.string.ls02fs09b))) {
                 return false;
             }
         }
