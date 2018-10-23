@@ -113,6 +113,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02hi02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -200,6 +201,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se01a96x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -273,6 +275,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se01b96x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -346,6 +349,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se01c96x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -426,6 +430,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se0296x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -462,6 +467,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -506,6 +512,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -657,6 +664,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se0596x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -693,6 +701,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se06"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -825,6 +834,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se0896x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -897,6 +907,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se0996x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -933,6 +944,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1020,6 +1032,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se1196x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1056,6 +1069,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1100,6 +1114,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1194,6 +1209,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se14a0196x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1266,6 +1282,7 @@
                     </RadioGroup>
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/ls02se14b0196x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1316,6 +1333,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1353,6 +1371,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1390,6 +1409,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1427,6 +1447,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1464,6 +1485,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1501,6 +1523,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15f"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1538,6 +1561,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15g"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1575,6 +1599,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15h"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1612,6 +1637,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15i"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1686,6 +1712,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15k"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1723,6 +1750,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15l"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1760,6 +1788,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15m"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1797,6 +1826,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15n"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1834,6 +1864,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15o"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1871,6 +1902,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15p"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1908,6 +1940,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15q"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1945,6 +1978,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15r"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
