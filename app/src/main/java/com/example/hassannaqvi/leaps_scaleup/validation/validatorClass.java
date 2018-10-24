@@ -17,6 +17,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.shashank.sony.fancytoastlib.FancyToast;
+
 /**
  * Created by ali.azaz on 12/04/17.
  * modified by ramsha.seed on 7/8/2018
@@ -26,7 +28,7 @@ public abstract class validatorClass {
 
     public static boolean EmptyTextBox(Context context, EditText txt, String msg) {
         if (TextUtils.isEmpty(txt.getText().toString())) {
-            Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_SHORT).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
             txt.setError("This data is Required! ");    // Set Error on last radio button
             txt.setFocusableInTouchMode(true);
             txt.requestFocus();
@@ -59,7 +61,7 @@ public abstract class validatorClass {
     public static boolean RangeTextBox(Context context, EditText txt, double min, double max, String msg, String type) {
 
         if (Double.valueOf(txt.getText().toString()) < min || Double.valueOf(txt.getText().toString()) > max) {
-            Toast.makeText(context, "ERROR(invalid): " + msg, Toast.LENGTH_SHORT).show();
+            FancyToast.makeText(context, "ERROR(invalid): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
             txt.setError("Range is " + min + " to " + max + type + " ... ");    // Set Error on last radio button
             txt.setFocusableInTouchMode(true);
             txt.requestFocus();
@@ -74,7 +76,7 @@ public abstract class validatorClass {
 
     public static boolean EmptySpinner(Context context, Spinner spin, String msg) {
         if (spin.getSelectedItem() == "....") {
-            Toast.makeText(context, "ERROR(Empty)" + msg, Toast.LENGTH_SHORT).show();
+            FancyToast.makeText(context, "ERROR(Empty)" + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
             ((TextView) spin.getSelectedView()).setText("This Data is Required");
             ((TextView) spin.getSelectedView()).setTextColor(Color.RED);
             spin.setFocusableInTouchMode(true);
@@ -89,7 +91,7 @@ public abstract class validatorClass {
 
     public static boolean EmptyRadioButton(Context context, RadioGroup rdGrp, RadioButton rdBtn, String msg) {
         if (rdGrp.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_SHORT).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
             rdBtn.setError("This data is Required!");    // Set Error on last radio button
             rdBtn.setFocusable(true);
             rdBtn.setFocusableInTouchMode(true);
@@ -105,7 +107,7 @@ public abstract class validatorClass {
 
     public static boolean EmptyRadioButton(Context context, RadioGroup rdGrp, RadioButton rdBtn, EditText txt, String msg) {
         if (rdGrp.getCheckedRadioButtonId() == -1) {
-            Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_SHORT).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
             rdBtn.setError("This data is Required!");    // Set Error on last radio button
             rdBtn.setFocusable(true);
             rdBtn.setFocusableInTouchMode(true);
@@ -141,7 +143,7 @@ public abstract class validatorClass {
         if (flag) {
             return true;
         } else {
-            Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_LONG).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
             cbx.setError("This data is Required!");    // Set Error on last radio button
 
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
@@ -167,7 +169,7 @@ public abstract class validatorClass {
             //Changed According to J2ME Lint
             return !cbx.isChecked()|| EmptyTextBox(context,txt,msg);
         } else {
-            Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_LONG).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
             cbx.setError("This data is Required!");    // Set Error on last radio button
 
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");

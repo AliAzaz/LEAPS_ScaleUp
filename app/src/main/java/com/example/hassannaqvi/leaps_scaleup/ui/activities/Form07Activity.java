@@ -10,9 +10,11 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm07Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -110,7 +112,7 @@ public class Form07Activity extends AppCompatActivity {
                 if (UpdateDB()) {
                     startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
                 } else {
-                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                    FancyToast.makeText(this, "Error in updating db!!", FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -215,6 +217,8 @@ public class Form07Activity extends AppCompatActivity {
             return false;
         }
 
+        FancyToast.makeText(this, "Section Validated", FancyToast.LENGTH_SHORT,FancyToast.SUCCESS,false).show();
+
         return true;
     }
 
@@ -274,7 +278,10 @@ public class Form07Activity extends AppCompatActivity {
                 : bi.ls07id14c.isChecked() ? "3"
                 : "0");
 
+
+
 //        f07.put("ls0715",bi.ls07id15.getSelectedItem().toString());
+
 
     }
 
