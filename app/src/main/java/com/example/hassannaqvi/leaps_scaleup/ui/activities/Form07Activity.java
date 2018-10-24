@@ -82,10 +82,6 @@ public class Form07Activity extends AppCompatActivity {
             return false;
         }
 
-        if(!validatorClass.EmptyTextBox(this,bi.ls07id04,getString(R.string.ls07id04))){
-            return false;
-        }
-
         if(!validatorClass.EmptyRadioButton(this,bi.ls07id05,bi.ls07id05a,getString(R.string.ls07id05))){
             return false;
         }
