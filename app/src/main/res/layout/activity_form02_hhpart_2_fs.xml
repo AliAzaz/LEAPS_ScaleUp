@@ -29,6 +29,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs01a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,6 +81,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs01b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs02"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -131,6 +133,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs02a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -182,6 +185,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs02b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs04"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -233,6 +237,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs03a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs05"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -285,6 +290,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
         <!--fs03b-->
         <android.support.v7.widget.CardView
             android:id="@+id/fldgrpfs06"
+            style="@style/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -335,6 +341,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs04a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs07"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -386,6 +393,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs04b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs08"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -437,6 +445,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs05a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs09"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -488,6 +497,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs05b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -539,6 +549,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs06a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -590,6 +601,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs06b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -641,6 +653,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs07a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs13"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -692,6 +705,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs07b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -743,6 +757,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs08a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -794,6 +809,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs08b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -845,6 +861,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs09a-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -896,6 +913,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_
 
         <!--fs09b-->
         <android.support.v7.widget.CardView
+            style="@style/cardView"
             android:id="@+id/fldgrpfs18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

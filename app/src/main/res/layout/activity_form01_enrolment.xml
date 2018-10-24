@@ -49,6 +49,7 @@
 
             <!--Q01-->
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
@@ -88,6 +89,7 @@
 
             <!--Q02-->
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
@@ -156,6 +158,7 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
+                    style="@style/cardView"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -224,6 +227,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    style="@style/cardView"
                     android:elevation="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
@@ -285,6 +289,7 @@
 
 
                 <android.support.v7.widget.CardView
+                    style="@style/cardView"
                     android:elevation="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
@@ -324,6 +329,7 @@
             </LinearLayout>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
@@ -362,6 +368,7 @@
 
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
@@ -472,6 +479,7 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -522,6 +530,7 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -561,6 +570,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -612,6 +622,7 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -650,6 +661,7 @@
 
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -688,6 +700,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -724,6 +737,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -774,6 +788,7 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -811,6 +826,7 @@
 
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -861,6 +877,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -895,6 +912,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -946,6 +964,7 @@
 
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -984,6 +1003,7 @@
 
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1034,6 +1054,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1074,6 +1095,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1129,6 +1151,7 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
+                    style="@style/cardView"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
@@ -1211,6 +1234,7 @@
             </LinearLayout>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1246,6 +1270,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1331,6 +1356,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1437,6 +1463,7 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1473,6 +1500,7 @@
 
 
             <android.support.v7.widget.CardView
+                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1531,6 +1559,7 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
+                    style="@style/cardView"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
@@ -1597,6 +1626,7 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
+                    style="@style/cardView"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
