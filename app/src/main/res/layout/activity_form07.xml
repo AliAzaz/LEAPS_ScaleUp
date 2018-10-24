@@ -181,7 +181,7 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q16-->
+            <!--Q04-->
             <android.support.v7.widget.CardView
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -216,41 +216,6 @@
 
             </android.support.v7.widget.CardView>
 
-
-            <!--Q04-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/ls07id04"
-                        android:textColor="@android:color/white" />
-
-                    <EditText
-                        style="@style/textInput"
-                        android:id="@+id/ls07id04"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/ls07id04"
-                        android:inputType="number" />
-
-                </LinearLayout>
-
-
-            </android.support.v7.widget.CardView>
-
             <!--Q5-->
             <android.support.v7.widget.CardView
                 style="@style/cardView"
@@ -277,7 +242,7 @@
                         android:id="@+id/ls07id05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical">
 
 
                         <RadioButton
@@ -295,6 +260,14 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/ls07id05b" />
+
+                        <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:id="@+id/ls07id05c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/ls07id05c" />
 
                     </RadioGroup>
 
@@ -565,6 +538,68 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+
+
+            <!--Q17-->
+            <android.support.v7.widget.CardView
+                style="@style/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/ls07id17"
+                        android:textColor="@android:color/white" />
+
+                    <RadioGroup
+                        android:id="@+id/ls07id17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:id="@+id/ls07id17a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:id="@+id/ls07id17b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
+                        <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:id="@+id/ls07id17c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/not_applicable" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
 
             <!--Q12-->
             <android.support.v7.widget.CardView

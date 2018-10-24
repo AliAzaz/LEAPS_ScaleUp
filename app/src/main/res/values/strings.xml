@@ -18,6 +18,7 @@
     <string name="yes"> ھاں </string>
     <string name="no"> نہ </string>
     <string name="dkn"> خبر نه آھي </string>
+    <string name="not_applicable">	غير موضوع</string>
 
     <string name="correct"> صحيح </string>
     <string name="incorrect"> غلط </string>
@@ -413,6 +414,7 @@
     <string name="ls07id05"> فيميل يوٿ جوگروپ </string>
     <string name="ls07id05a"> انٽروينشن </string>
     <string name="ls07id05b"> ڪنٽرول </string>
+    <string name="ls07id05c"> گروپ نه ڏنو آهي </string>
     <string name="ls07id06"> فيميل يوٿ جي پيدائش جي تاريخ </string>
     <string name="ls07id07"> فيميل يوٿ جي عمر </string>
     <string name="ls07id08"> فيميل يوٿ جو نادرا شناختي ڪارڊ آهي؟ </string>
@@ -432,6 +434,7 @@
     <string name="ls07id14c">اسٽيپ 3 </string>
     <string name="ls07id15"> ڳوٺ جي ID </string>
     <string name="ls07id16"> ضلعو </string>
+    <string name="ls07id17"> فيميل يوٿ جي منڱڻي ٿيل آهي؟ </string>
 
     <!--Info-->
     <string name="lsid1"> ٻار جي آڊي</string>
