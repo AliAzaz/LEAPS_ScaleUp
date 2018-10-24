@@ -528,6 +528,30 @@
     <string name="ls05b10c"> ٻار ٻيو به جواب ٻڌائي ٿو جنهن سان ڏک گھٽ ٿئي.</string>
     <string name="ls05b10d"> ٻار اهڙو ڪجھ ٻڌائي ٿو جنهن سان هن کي خوشي ملي ٿي.</string>
 
+    <string name="ls05b11ha">11. EMPATHY / PERSPECTIVE (SOCIO – EMOTIONAL)</string>
+    <string name="ls05b11hb"> روئيندڙ ڇوڪري ءَ  وارو تصويري ڪارڊ </string>
+    <string name="ls05b11a"> ٻار اهو سڃاڻي ٿو ته هن جو دوست ڏکايل، اداس يا مايوس آهي.</string>
+    <string name="ls05b11b"> ٻار ڪو به هڪ جواب ٻڌايو جنهن سان دوست جو ڏک گھٽ ٿئي.</string>
+    <string name="ls05b11c"> ٻار ٻيو به جواب ٻڌايو جنهن سان دوست جو ڏک گھٽ ٿئي.</string>
+
+    <string name="ls05b12ha">12. SHARING / SOLVING CONCEITS (SOCIO- EMOTIONAL)   </string>
+    <string name="ls05b12hb"> ڪجھ به نه </string>
+    <string name="ls05b12a"> ٻار هڪ شي ٻڌائي جنهن سان مسئلو حل ٿئي</string>
+    <string name="ls05b12b"> ٻار ٻي به شي ٻڌائي جنهن سان مسئلو حل ٿئي</string>
+    <string name="ls05b12c"> ٻار ٽين به شي ٻڌائي جنهن سان مسئلو حل ٿئي</string>
+
+    <string name="ls05b13ha">13. SHORT TERM MEMORY (SELF REGULATION) </string>
+    <string name="ls05b13hb"> ڪجھ به نه </string>
+    <string name="ls05b13hc"> Practice\n
+(5...................................2)\n
+3..................1.................6\n
+ </string>
+    <string name="ls05b13a"> 1.....6</string>
+    <string name="ls05b13b"> 5…2…9</string>
+    <string name="ls05b13c"> 8…3…1…4</string>
+    <string name="ls05b13d"> 1…2…4…7…3</string>
+
+
     <!--Form 5 (C)-->
     <string name="ls05c01"> ڇا ٻار سڄي اسيسمنٽ جي دوران هدايتن ۽ مظاهرن تي ڌيان ڏنو؟</string>
     <string name="ls05c02"> ڇا ٻار ٽاسڪ ڪرڻ مهل پر اعتماد هو ۽ گهبراهٽ نه ڏيکاري (گهبرائجي نه ويو)؟</string>
