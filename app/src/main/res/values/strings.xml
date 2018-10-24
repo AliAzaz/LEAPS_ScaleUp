@@ -551,6 +551,46 @@
     <string name="ls05b13c"> 8…3…1…4</string>
     <string name="ls05b13d"> 1…2…4…7…3</string>
 
+    <string name="ls05b14ha">14. ORAL VOCABULARY (EMERGENT LITERACY)</string>
+    <string name="ls05b14hb"> ڪجھ به نه </string>
+    <string name="ls05b14a"> مارڪيٽ جي ٻڌايل شين جو تعداد</string>
+    <string name="ls05b14b"> ٻڌايل جانورن جو تعداد</string>
+
+    <string name="ls05b15ha">15. PRINT AWARENESS (EMERGENT LITERACY)</string>
+    <string name="ls05b15hb"> 3 سالن کان 5 سالن واري عمر جي مطابق  ڪتاب </string>
+    <string name="ls05b15a"> ٻار صحيح طريقي سان ڪتاب کولي ٿو (ڪتاب اهڙي طرح سان کولي جو اکر ابتا نه ٿين)</string>
+    <string name="ls05b15b"> ٻار ڪتاب جي صفحي تي موجود اکرن تي آڱر رکي ٿو (سڄي جملي تي، پهرين لفظ تي يا سڄي اکرن تي آڱر رکي ٿو)</string>
+    <string name="ls05b15c"> ٻار اکرن جو صحيح طرف ڏيکاري ٿو.</string>
+
+    <string name="ls05b16ha">16.  LETTER IDENTIFICATION (EMERGENT LITERACY)</string>
+    <string name="ls05b16hb"> اکرن وارو چارٽ (سنڌي ۽ انگلش)</string>
+    <string name="ls05b16a"> قطار ۾ 1 ۽ 2 صحيح اکرن جو تعداد (سنڌي)</string>
+    <string name="ls05b16b"> قطار ۾ 4 ۽ 3 صحيح اکرن جو تعداد (سنڌي)</string>
+    <string name="ls05b16c"> قطار ۾ 1 ۽ 2 صحيح اکرن جو تعداد (انگلش)</string>
+    <string name="ls05b16d"> قطار ۾ 4 ۽ 3 صحيح اکرن جو تعداد (انگلش)</string>
+
+    <string name="ls05b17ha">17.  FIRST LETTER SOUNDS (EMERGENT LITERACY)</string>
+    <string name="ls05b17hb"> ڪجھ به نه </string>
+    <string name="ls05b17a"> ٻار (س) واري آواز وارو لفظ سڃاتو (مڇي ، سج ، ڳئون)</string>
+    <string name="ls05b17b"> ٻار (ٽ) واري آواز وارو لفظ سڃاتو (رانديڪو، ٽوپلو، ماني)</string>
+    <string name="ls05b17c"> ٻار (ڪ) واري آواز وارو لفظ سڃاتو (ڪار ، بال، مزو)</string>
+
+    <string name="ls05b18ha">18.  EMERGENT WRITING (EMERGENT LITERACY)</string>
+    <string name="ls05b18hb"> هڪ خالي پنو ، پينسل / پين ، اسٽاپ واچ </string>
+    <string name="ls05b18a">  ٻار جي رائٽينگ ليول </string>
+
+    <string name="ls05b19ha">19. ORAL COMPREHENSION (EMERGENT LITERACY)</string>
+    <string name="ls05b19hb"> ڪهاڻي </string>
+    <string name="ls05b19hc"> Engagement with task </string>
+    <string name="ls05b19a"> ٻلي ءَ جي ٽوپي ڪنهن چورائي؟ (ڪئي)</string>
+    <string name="ls05b19b"> ڇا توهان مونکي ٽوپيءَ جو رنگ ٻڏائي سگهندو؟ (ڳاڙهو)</string>
+    <string name="ls05b19c"> ٻلي ءَ ڪئي جو پيڇو ڇو ڪيو؟ (ڇو ته ڪئي ٻلي جي ٽوپي چورائي)</string>
+    <string name="ls05b19d"> ڪئي کي ڪٿي ڦاسي ويو؟ (ٽيبل جي هيٺان)</string>
+    <string name="ls05b19e"> ٻلي ءَ ڪئي جو پيڇو ڇو ڪيو؟ (ڇو ته ڪئي ٻلي جي ٽوپي چورائي) </string>
+    <string name="ls05b05f"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو. </string>
+    <string name="ls05b05g"> ٻار ٽاسڪ کي احتياط ۽ درستگي سان پورو ڪري ٿو. </string>
+    <string name="ls05b05h"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
+
 
     <!--Form 5 (C)-->
     <string name="ls05c01"> ڇا ٻار سڄي اسيسمنٽ جي دوران هدايتن ۽ مظاهرن تي ڌيان ڏنو؟</string>

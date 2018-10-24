@@ -23,7 +23,7 @@ public class Form05IdBAActivity extends AppCompatActivity {
 
     public void BtnContinue() {
         startActivity(new Intent(this, Form05IdBAActivity.class));
-        if (formValidation()) {
+      /*  if (formValidation()) {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
@@ -34,7 +34,7 @@ public class Form05IdBAActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }
+        }*/
     }
 
     public void BtnEnd() {

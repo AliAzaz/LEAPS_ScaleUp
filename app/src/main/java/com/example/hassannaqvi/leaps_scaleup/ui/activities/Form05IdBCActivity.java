@@ -4,12 +4,9 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm05IdBCBinding;
-
-import org.json.JSONException;
 
 public class Form05IdBCActivity extends AppCompatActivity {
 
@@ -25,7 +22,7 @@ public class Form05IdBCActivity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        startActivity(new Intent(this, Form05IdBDActivity.class));
+        /*startActivity(new Intent(this, Form05IdBDActivity.class));
         if (formValidation()) {
             try {
                 SaveDraft();
@@ -37,7 +34,7 @@ public class Form05IdBCActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }
+        }*/
     }
 
     public void BtnEnd() {
