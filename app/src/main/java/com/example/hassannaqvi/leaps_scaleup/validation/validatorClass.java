@@ -2,6 +2,7 @@ package com.example.hassannaqvi.leaps_scaleup.validation;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -16,6 +17,10 @@ import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.hassannaqvi.leaps_scaleup.R;
+
+import java.lang.reflect.Field;
 
 /**
  * Created by ali.azaz on 12/04/17.
@@ -165,7 +170,7 @@ public abstract class validatorClass {
         if (flag) {
             cbx.setError(null);
             //Changed According to J2ME Lint
-            return !cbx.isChecked()|| EmptyTextBox(context,txt,msg);
+            return !cbx.isChecked() || EmptyTextBox(context, txt, msg);
         } else {
             Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_LONG).show();
             cbx.setError("This data is Required!");    // Set Error on last radio button
@@ -174,7 +179,8 @@ public abstract class validatorClass {
             return false;
         }
     }
-    public static void setScrollViewFocus(ScrollView scrollView){
+
+    public static void setScrollViewFocus(ScrollView scrollView) {
         scrollView.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
         scrollView.setFocusable(true);
         scrollView.setFocusableInTouchMode(true);
@@ -187,5 +193,60 @@ public abstract class validatorClass {
         });
 
     }
+
+    public static boolean EmptyCheckingContainer(Context context, LinearLayout lv) {
+
+        for (int i = 0, count = lv.getChildCount(); i < count; ++i) {
+            View view = lv.getChildAt(i);
+
+            if (view.getVisibility() == View.VISIBLE) {
+
+                if (view instanceof CardView) {
+                    for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
+                        View view1 = ((CardView) view).getChildAt(j);
+                        if (view1 instanceof LinearLayout) {
+                            if (!EmptyCheckingContainer(context, (LinearLayout) view1)) {
+                                return false;
+                            }
+                        }
+                    }
+                } else if (view instanceof RadioGroup) {
+
+                    View v = ((RadioGroup) view).getChildAt(0);
+                    if (v != null) {
+
+                        String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
+
+                        String asNamed = "";
+                        Field[] fields = R.string.class.getFields();
+                        for (final Field field : fields) {
+
+                            if (field.getName().split("R$string.")[0].equals(idName[1])) {
+                                try {
+                                    int id = field.getInt(R.string.class); //id of string
+
+                                    asNamed = context.getString(id);
+                                    break;
+
+                                } catch (IllegalAccessException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                        }
+
+                        if (!EmptyRadioButton(context, (RadioGroup) view, (RadioButton) v, asNamed)) {
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
+/*    private String getString(){
+
+    }*/
 
 }

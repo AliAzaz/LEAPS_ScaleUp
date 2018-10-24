@@ -24,9 +24,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme1">
         <activity
-            android:name=".ui.activities.SplashscreenActivity"
+            android:name=".ui.activities.Form05IdBAActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.EndInterview" />
+        <activity
+            android:name=".ui.activities.EndInterview"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
@@ -63,30 +65,41 @@
             android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form02HHPart_1"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.Form02HHPart_2_HI_SE"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.Form02HHPart_2_FS"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.Form02HHPart_3"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:screenOrientation="portrait" />
         <activity android:name=".ui.activities.AnthroActivity" />
-        <!--<activity-->
-            <!--android:name=".ui.activities.Form5IDELAActivity"-->
-            <!--android:screenOrientation="portrait"-->
-            <!--android:theme="@style/AppTheme1" />-->
+        <activity
+            android:name=".ui.activities.SplashscreenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.Form05IdBBActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.Form05IdBCActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.Form05IdBDActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.Form05IdBEActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.Form05IdCActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.activities.Form07Activity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
-        <activity android:name=".ui.activities.Form04ChildEF"></activity>
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.Form04ChildEF"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
