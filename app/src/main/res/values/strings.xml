@@ -564,6 +564,7 @@
 
     <string name="ls05b16ha">16.  LETTER IDENTIFICATION (EMERGENT LITERACY)</string>
     <string name="ls05b16hb"> اکرن وارو چارٽ (سنڌي ۽ انگلش)</string>
+    <string name="ls05b16hc"> Engagement with task </string>
     <string name="ls05b16a"> قطار ۾ 1 ۽ 2 صحيح اکرن جو تعداد (سنڌي)</string>
     <string name="ls05b16b"> قطار ۾ 4 ۽ 3 صحيح اکرن جو تعداد (سنڌي)</string>
     <string name="ls05b16c"> قطار ۾ 1 ۽ 2 صحيح اکرن جو تعداد (انگلش)</string>
@@ -593,6 +594,7 @@
 
     <string name="ls05b20ha">20. COPING A SHAPE (FINE MOTOR)</string>
     <string name="ls05b20hb"> پينسل ، ڪاغذ، هڪ ٽڪنڊي تصوير وارا ڪارڊ </string>
+    <string name="ls05b20c"> Engagement with task </string>
     <string name="ls05b20a"> بند ڪنڊن جو تعداد جنهن ۾ ڪابه وٿي نه هجي. (0،1،2،3)</string>
     <string name="ls05b20b"> تصوير نئين طرح سان ٺاهي ٿو (پاسيري، سڌين لڪيرين سان)</string>
 
