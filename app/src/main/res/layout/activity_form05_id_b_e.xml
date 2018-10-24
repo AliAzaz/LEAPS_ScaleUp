@@ -476,7 +476,7 @@
 
                     <TextView
                         style="@style/textView2"
-                        android:text="@string/ls05b16hc" />
+                        android:text="@string/ls05b21hc" />
 
                 </LinearLayout>
 
@@ -782,10 +782,6 @@
                     <TextView
                         style="@style/textView"
                         android:text="@string/ls05b23ha" />
-
-                    <TextView
-                        style="@style/textView2"
-                        android:text="@string/ls05b23hb" />
 
                 </LinearLayout>
 

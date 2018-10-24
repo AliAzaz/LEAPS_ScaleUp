@@ -587,10 +587,40 @@
     <string name="ls05b19c"> ٻلي ءَ ڪئي جو پيڇو ڇو ڪيو؟ (ڇو ته ڪئي ٻلي جي ٽوپي چورائي)</string>
     <string name="ls05b19d"> ڪئي کي ڪٿي ڦاسي ويو؟ (ٽيبل جي هيٺان)</string>
     <string name="ls05b19e"> ٻلي ءَ ڪئي جو پيڇو ڇو ڪيو؟ (ڇو ته ڪئي ٻلي جي ٽوپي چورائي) </string>
-    <string name="ls05b05f"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو. </string>
-    <string name="ls05b05g"> ٻار ٽاسڪ کي احتياط ۽ درستگي سان پورو ڪري ٿو. </string>
-    <string name="ls05b05h"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
+    <string name="ls05b19f"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو. </string>
+    <string name="ls05b19g"> ٻار ٽاسڪ کي احتياط ۽ درستگي سان پورو ڪري ٿو. </string>
+    <string name="ls05b19h"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
 
+    <string name="ls05b20ha">20. COPING A SHAPE (FINE MOTOR)</string>
+    <string name="ls05b20hb"> پينسل ، ڪاغذ، هڪ ٽڪنڊي تصوير وارا ڪارڊ </string>
+    <string name="ls05b20a"> بند ڪنڊن جو تعداد جنهن ۾ ڪابه وٿي نه هجي. (0،1،2،3)</string>
+    <string name="ls05b20b"> تصوير نئين طرح سان ٺاهي ٿو (پاسيري، سڌين لڪيرين سان)</string>
+
+    <string name="ls05b21ha">21. DRAWING PERSON (FINE MOTOR)</string>
+    <string name="ls05b21hb"> پينسل ، ڪاغذ ، اسٽاپ واچ (ٽائيم 2 منٽ)</string>
+    <string name="ls05b21hc"> Engagement with task </string>
+    <string name="ls05b21a"> ٻار هڪ مٿو ٺاهيو</string>
+    <string name="ls05b21b"> ٻار هڪ جسم ٺاهيو</string>
+    <string name="ls05b21c"> ٻار ٻانهون ٺاهيون.</string>
+    <string name="ls05b21d"> ٻار ٽنگون ٺاهيون</string>
+    <string name="ls05b21e"> ٻار ٻانهون ٺاهيون. </string>
+    <string name="ls05b21f"> ٻار منهن جو ٻيو حصو ٺاهيو </string>
+    <string name="ls05b21g"> ٻار هٿ ٺاهيا </string>
+    <string name="ls05b21h"> ٻار پير ٺاهيا. </string>
+    <string name="ls05b21i"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو. </string>
+    <string name="ls05b21j"> ٻار ٽاسڪ کي احتياط ۽ درستگي سان پورو ڪري ٿو. </string>
+    <string name="ls05b21k"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
+
+    <string name="ls05b22ha">22. FOLDING PAPER (FINE MOTOR) </string>
+    <string name="ls05b22hb"> A 20 x 20 cm پيپر جا ٽڪر </string>
+    <string name="ls05b22hc"> Engagement with task </string>
+    <string name="ls05b22a"> صحيح طرح ٺاهيل سٽيپس جو تعداد</string>
+    <string name="ls05b22b"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو.</string>
+    <string name="ls05b22c"> ٻار ٽاسڪ کي احتياط ۽ درستگي سان پورو ڪري ٿو.</string>
+    <string name="ls05b22d"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي.</string>
+
+    <string name="ls05b23ha">23.HOPPING (GROSS MOTOR) </string>
+    <string name="ls05b23a"> هڪ ٽنگ تي  ڏنل ٽپن جو تعداد </string>
 
     <!--Form 5 (C)-->
     <string name="ls05c01"> ڇا ٻار سڄي اسيسمنٽ جي دوران هدايتن ۽ مظاهرن تي ڌيان ڏنو؟</string>
