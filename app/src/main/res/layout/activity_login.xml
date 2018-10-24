@@ -92,13 +92,14 @@
                     android:orientation="vertical">
 
                     <EditText
+                        style="@style/textInput"
                         android:id="@+id/email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_weight="0.99"
                         android:layoutDirection="ltr"
-                        android:drawableStart="@drawable/ic_assignment_ind_black_24dp"
+                        android:drawableStart="@drawable/ic_person"
                         android:drawablePadding="8dp"
                         android:hint="Username/Code"
                         android:imeActionId="6"
@@ -109,21 +110,22 @@
                         android:paddingEnd="4dp"
                         android:paddingStart="4dp"
                         android:singleLine="true"
-                        android:textColor="@color/white"
+                        android:textColor="@color/black"
                         android:textSize="18sp">
 
                         <requestFocus />
 
                     </EditText>
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="30dp"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="5dp"
+                       >
 
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/password"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -131,8 +133,7 @@
                             android:layout_alignParentTop="true"
                             android:layout_weight="0.99"
                             android:layoutDirection="ltr"
-
-                            android:drawableStart="@drawable/ic_lock_black_24dp"
+                            android:drawableStart="@drawable/ic_lock_close"
                             android:drawablePadding="2dp"
                             android:hint="@string/prompt_password"
                             android:imeActionId="7"
@@ -143,10 +144,13 @@
                             android:paddingEnd="4dp"
                             android:paddingStart="4dp"
                             android:singleLine="true"
-                            android:textColor="@color/white"
+                            android:textColor="@color/black"
                             android:textSize="18sp" />
 
                         <Button
+                            android:layout_marginEnd="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
                             android:id="@+id/showPassword"
                             style="?android:attr/borderlessButtonStyle"
                             android:layout_width="30dp"
@@ -158,7 +162,7 @@
                             android:onClick="@{() -> callback.onShowPasswordClick()}"
                             android:padding="3dp" />
 
-                    </LinearLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 

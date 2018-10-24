@@ -57,6 +57,8 @@
                     android:textStyle="bold" />
 
                 <TextView
+                    android:textSize="20sp"
+                    android:padding="10dp"
                     android:textColor="@color/white"
                     android:id="@+id/lblMainMenu"
                     android:layout_width="match_parent"
@@ -113,66 +115,398 @@
                 </LinearLayout>
 
 
-                <Button
+                <LinearLayout
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/layout1"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
 
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="@{() -> callback.openForm01a()}"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="Enrolment and Household SES - Population Survey"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/house"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="@{() -> callback.openForm01b()}"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="Enrolment and Household SES - School Cohort"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/school"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
+
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="@{() -> callback.openAnthro()}"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_marginStart="50dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Child Anthropometry"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/baby"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="@{() -> callback.openEF()}"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="Executive Function Skills - Child"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/solution"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
+
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="@{() -> callback.openYouthEnrol()}"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Enrolment and Questionare - Youth"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/youth"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <android.support.v7.widget.CardView
+                        android:onClick="@{() -> callback.openYouthEF()}"
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="Executive Function Skills - Youth"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/skills"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/adminsec"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp">
+
+
+                    <android.support.v7.widget.CardView
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_marginStart="80dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Upload Data"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:src="@drawable/uploading"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <View
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"/>
+
+                    <android.support.v7.widget.CardView
+                        android:layout_margin="@dimen/cardview_compat_inset_shadow"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="60dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="Database Manager"
+                                android:textColor="@color/colorPrimaryDark" />
+
+                            <ImageView
+                                android:layout_marginTop="5dp"
+                                android:layout_gravity="center"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:src="@drawable/database"/>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:visibility="gone"
                     android:id="@+id/openForm01a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:onClick="@{() -> callback.openForm01a()}"
+
                     android:text="Enrolment and Household SES - Population Survey"
                     android:textColor="@color/white" />
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/openForm01b"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:onClick="@{() -> callback.openForm01b()}"
+
                     android:text="Enrolment and Household SES - School Cohort"
                     android:textColor="@color/white" />
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/openAnthro"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:onClick="@{() -> callback.openAnthro()}"
+
                     android:text="Child Anthropometry"
                     android:textColor="@color/white" />
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/openEF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:onClick="@{() -> callback.openEF()}"
+
                     android:text="Executive Function Skills - Child"
                     android:textColor="@color/white" />
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/openYouthEnrol"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:onClick="@{() -> callback.openYouthEnrol()}"
+
                     android:text="Enrolment and Questionare - Youth"
                     android:textColor="@color/white" />
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/openYouthEF"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="16dp"
                     android:background="@color/colorPrimary"
-                    android:onClick="@{() -> callback.openYouthEF()}"
+
                     android:text="Executive Function Skills - Youth"
                     android:textColor="@color/white" />
 
@@ -300,6 +634,7 @@
 
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/syncServer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -311,6 +646,7 @@
                     android:textColor="@color/white" />
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/openDB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -323,7 +659,7 @@
 
 
                 <LinearLayout
-                    android:id="@+id/adminsec"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
