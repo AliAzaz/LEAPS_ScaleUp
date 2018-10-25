@@ -19,10 +19,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.shashank.sony.fancytoastlib.FancyToast;
 
 import java.lang.reflect.Field;
-
-import com.shashank.sony.fancytoastlib.FancyToast;
 
 /**
  * Created by ali.azaz on 12/04/17.
@@ -33,7 +32,7 @@ public abstract class validatorClass {
 
     public static boolean EmptyTextBox(Context context, EditText txt, String msg) {
         if (TextUtils.isEmpty(txt.getText().toString())) {
-            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             txt.setError("This data is Required! ");    // Set Error on last radio button
             txt.setFocusableInTouchMode(true);
             txt.requestFocus();
@@ -67,7 +66,7 @@ public abstract class validatorClass {
     public static boolean RangeTextBox(Context context, EditText txt, double min, double max, String msg, String type) {
 
         if (Double.valueOf(txt.getText().toString()) < min || Double.valueOf(txt.getText().toString()) > max) {
-            FancyToast.makeText(context, "ERROR(invalid): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
+            FancyToast.makeText(context, "ERROR(invalid): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             txt.setError("Range is " + min + " to " + max + type + " ... ");    // Set Error on last radio button
             txt.setFocusableInTouchMode(true);
             txt.requestFocus();
@@ -82,7 +81,7 @@ public abstract class validatorClass {
 
     public static boolean EmptySpinner(Context context, Spinner spin, String msg) {
         if (spin.getSelectedItem() == "....") {
-            FancyToast.makeText(context, "ERROR(Empty)" + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
+            FancyToast.makeText(context, "ERROR(Empty)" + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             ((TextView) spin.getSelectedView()).setText("This Data is Required");
             ((TextView) spin.getSelectedView()).setTextColor(Color.RED);
             spin.setFocusableInTouchMode(true);
@@ -97,7 +96,7 @@ public abstract class validatorClass {
 
     public static boolean EmptyRadioButton(Context context, RadioGroup rdGrp, RadioButton rdBtn, String msg) {
         if (rdGrp.getCheckedRadioButtonId() == -1) {
-            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             rdBtn.setError("This data is Required!");    // Set Error on last radio button
             rdBtn.setFocusable(true);
             rdBtn.setFocusableInTouchMode(true);
@@ -113,7 +112,7 @@ public abstract class validatorClass {
 
     public static boolean EmptyRadioButton(Context context, RadioGroup rdGrp, RadioButton rdBtn, EditText txt, String msg) {
         if (rdGrp.getCheckedRadioButtonId() == -1) {
-            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
             rdBtn.setError("This data is Required!");    // Set Error on last radio button
             rdBtn.setFocusable(true);
             rdBtn.setFocusableInTouchMode(true);
@@ -149,7 +148,7 @@ public abstract class validatorClass {
         if (flag) {
             return true;
         } else {
-            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
             cbx.setError("This data is Required!");    // Set Error on last radio button
 
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
@@ -175,7 +174,7 @@ public abstract class validatorClass {
             //Changed According to J2ME Lint
             return !cbx.isChecked() || EmptyTextBox(context, txt, msg);
         } else {
-            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG,FancyToast.ERROR,false).show();
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
             cbx.setError("This data is Required!");    // Set Error on last radio button
 
             Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
@@ -194,7 +193,6 @@ public abstract class validatorClass {
                 return false;
             }
         });
-
     }
 
     public static boolean EmptyCheckingContainer(Context context, LinearLayout lv) {
@@ -220,23 +218,7 @@ public abstract class validatorClass {
 
                         String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
 
-                        String asNamed = "";
-                        Field[] fields = R.string.class.getFields();
-                        for (final Field field : fields) {
-
-                            if (field.getName().split("R$string.")[0].equals(idName[1])) {
-                                try {
-                                    int id = field.getInt(R.string.class); //id of string
-
-                                    asNamed = context.getString(id);
-                                    break;
-
-                                } catch (IllegalAccessException e) {
-                                    e.printStackTrace();
-                                }
-                            }
-
-                        }
+                        String asNamed = getString(context, idName[1]);
 
                         if (!EmptyRadioButton(context, (RadioGroup) view, (RadioButton) v, asNamed)) {
                             return false;
@@ -248,8 +230,23 @@ public abstract class validatorClass {
         return true;
     }
 
-/*    private String getString(){
+    private static String getString(Context context, String idName) {
 
-    }*/
+        Field[] fields = R.string.class.getFields();
+        for (final Field field : fields) {
+
+            if (field.getName().split("R$string.")[0].equals(idName)) {
+                try {
+                    int id = field.getInt(R.string.class); //id of string
+
+                    return context.getString(id);
+
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return "";
+    }
 
 }
