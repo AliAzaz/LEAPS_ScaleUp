@@ -53,8 +53,7 @@
         <activity
             android:name=".ui.activities.EndingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.MainActivity"
             android:screenOrientation="portrait"
@@ -63,66 +62,54 @@
         <activity
             android:name=".ui.activities.StartActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form01Enrolment"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form02HHPart_1"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form02HHPart_2_HI_SE"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form02HHPart_2_FS"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form02HHPart_3"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
-        <activity android:name=".ui.activities.AnthroActivity"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".ui.activities.AnthroActivity"
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form05IdBBActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form05IdBCActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form05IdBDActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form05IdBEActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form05IdCActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form07Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"
-            />
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form04_EF_A"
             android:screenOrientation="portrait"
