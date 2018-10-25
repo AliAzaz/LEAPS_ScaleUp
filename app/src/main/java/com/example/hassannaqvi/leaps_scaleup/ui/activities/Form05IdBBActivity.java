@@ -59,7 +59,7 @@ public class Form05IdBBActivity extends AppCompatActivity {
             return false;
         }
 
-        if (!bi.ls05b0899.isChecked()) {
+        if (!bi.ls05b08a99.isChecked()) {
             if (!validatorClass.EmptySpinner(this, bi.ls05b08a, getString(R.string.ls05b08a))) {
                 return false;
             }

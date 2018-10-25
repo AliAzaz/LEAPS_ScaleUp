@@ -216,18 +216,27 @@ public abstract class validatorClass {
                     View v = ((RadioGroup) view).getChildAt(0);
                     if (v != null) {
 
-                        String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
-
-                        String asNamed = getString(context, idName[1]);
+                        String asNamed = getString(context, getIDComponent(view));
 
                         if (!EmptyRadioButton(context, (RadioGroup) view, (RadioButton) v, asNamed)) {
                             return false;
                         }
                     }
+                } else if (view instanceof Spinner) {
+
+                    if (!EmptySpinner(context, (Spinner) view, getString(context, getIDComponent(view)))) {
+                        return false;
+                    }
                 }
             }
         }
         return true;
+    }
+
+    private static String getIDComponent(View view) {
+        String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
+
+        return idName[1];
     }
 
     private static String getString(Context context, String idName) {

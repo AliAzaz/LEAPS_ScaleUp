@@ -540,7 +540,7 @@
                         android:text="@string/ls05b08a" />
 
                     <CheckBox
-                        android:id="@+id/ls05b0899"
+                        android:id="@+id/ls05b08a99"
                         style="@style/checkbox"
                         android:hint="@string/nores" />
 
@@ -549,8 +549,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
-                        android:enabled="@{ls05b0899.checked ? false : true}"
-                        android:selectedItemPosition="@{ls05b0899.checked ? 0 : 0}" />
+                        android:enabled="@{ls05b08a99.checked ? false : true}"
+                        android:selectedItemPosition="@{ls05b08a99.checked ? 0 : 0}" />
 
                 </LinearLayout>
 
