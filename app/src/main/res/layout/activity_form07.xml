@@ -34,6 +34,7 @@
 
             <!--Q01-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0701"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -71,6 +72,7 @@
 
             <!--Q02-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0702"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,6 +111,7 @@
 
             <!--Q03-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0703"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -145,9 +148,10 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Questions added after layout completion thats why i am putting here with question no. after 14-->
-            <!--Q15-->
+
+            <!--Q04-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0704"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -181,8 +185,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q04-->
+            <!--Q05-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0705"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -216,8 +221,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q5-->
+            <!--Q6-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0706"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -275,8 +281,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q06-->
+            <!--Q07-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0707"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -309,8 +316,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q07-->
+            <!--Q08-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0708"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -342,8 +350,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q8-->
+            <!--Q9-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0709"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -393,8 +402,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q9-->
+            <!--Q10-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0710"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -452,8 +462,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q10-->
+            <!--Q11-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0711"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -503,8 +514,61 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q11-->
+            <!--Q12-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0712"
+                style="@style/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/ls07id18"
+                        android:textColor="@android:color/white" />
+
+                    <RadioGroup
+                        android:id="@+id/ls07id18"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:id="@+id/ls07id18a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:id="@+id/ls07id18b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/no" />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q13-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0713"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -540,8 +604,9 @@
             </android.support.v7.widget.CardView>
 
 
-            <!--Q17-->
+            <!--Q14-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0714"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -601,8 +666,9 @@
             </android.support.v7.widget.CardView>
 
 
-            <!--Q12-->
+            <!--Q15-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0715"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -652,7 +718,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="@string/ls07id12b" />
+                            android:text="@string/ls07id12c" />
 
                         <RadioButton
                             android:layout_marginBottom="1dp"
@@ -690,8 +756,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q013-->
+            <!--Q16-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0716"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -726,8 +793,9 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--Q14-->
+            <!--Q17-->
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls0717"
                 style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
