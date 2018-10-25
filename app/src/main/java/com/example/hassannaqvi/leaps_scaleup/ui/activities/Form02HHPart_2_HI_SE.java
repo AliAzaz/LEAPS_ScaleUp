@@ -70,7 +70,7 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
     public void BtnContinue() {
         //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_FS.class));
 
-        /*if (formValidation()) {
+        if (formValidation()) {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
@@ -81,7 +81,7 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-        }*/
+        }
     }
 
     private boolean UpdateDB() {

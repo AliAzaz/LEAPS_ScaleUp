@@ -34,11 +34,24 @@ public class Form01Enrolment extends AppCompatActivity {
         bi.setCallback(this);
         setupView();
         bi.ls01f03.setManager(getSupportFragmentManager());
-        bi.ls01f05.setManager(getSupportFragmentManager());
+//        bi.ls01f05.setManager(getSupportFragmentManager());
         bi.ls01a10.setManager(getSupportFragmentManager());
     }
 
     private void setupView() {
+        bi.ls01f04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.ls01f04a) {
+                    bi.fldgrpls01f03.setVisibility(VISIBLE);
+                    bi.fldgrpls01f05.setVisibility(GONE);
+                } else {
+                    bi.fldgrpls01f03.setVisibility(GONE);
+                    bi.fldgrpls01f05.setVisibility(VISIBLE);
+                    bi.ls01f03.setText(null);
+                }
+            }
+        });
         bi.ls01a07.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -76,6 +89,17 @@ public class Form01Enrolment extends AppCompatActivity {
                 }
             }
         });
+        bi.ls01f07b.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.ls01f07b06) {
+                    bi.fldgrpls01f07b.setVisibility(VISIBLE);
+                } else {
+                    bi.fldgrpls01f07b.setVisibility(GONE);
+                    bi.ls01f07c.setText(null);
+                }
+            }
+        });
         bi.ls01f10a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -91,18 +115,18 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-//        if (formValidation()) {
-        try {
-            SaveDraft();
+        if (formValidation()) {
+            try {
+                SaveDraft();
 //                if (UpdateDB()) {
-            startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
+                startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
 //                } else {
-            Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
 //                }
-        } catch (JSONException e) {
-            e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
-//        }
     }
 
     public boolean UpdateDB() {
@@ -200,6 +224,8 @@ public class Form01Enrolment extends AppCompatActivity {
                 : bi.ls01f07b02.isChecked() ? "2"
                 : bi.ls01f07b03.isChecked() ? "3"
                 : bi.ls01f07b04.isChecked() ? "4"
+                : bi.ls01f07b05.isChecked() ? "5"
+                : bi.ls01f07b06.isChecked() ? "6"
                 : bi.ls01f07b96.isChecked() ? "96"
                 : "0");
         f01.put("ls01f07c", bi.ls01f07c.getText().toString());
@@ -211,16 +237,16 @@ public class Form01Enrolment extends AppCompatActivity {
                 : bi.ls01f07d05.isChecked() ? "5"
                 : bi.ls01f07d96.isChecked() ? "96"
                 : "0");
-        f01.put("ls01f08", bi.ls01f08a.isChecked() ? "1"
-                : bi.ls01f08b.isChecked() ? "2"
-                : bi.ls01f08c.isChecked() ? "3"
-                : bi.ls01f08d.isChecked() ? "4"
-                : bi.ls01f08e.isChecked() ? "5"
-                : bi.ls01f08f.isChecked() ? "6"
-                : bi.ls01f08g.isChecked() ? "7"
-                : bi.ls01f08h.isChecked() ? "8"
-                : bi.ls01f0896.isChecked() ? "96"
-                : "0");
+        f01.put("ls01f08a", bi.ls01f08a.isChecked() ? "1" : "0");
+        f01.put("ls01f08b", bi.ls01f08b.isChecked() ? "2" : "0");
+        f01.put("ls01f08c", bi.ls01f08c.isChecked() ? "3" : "0");
+        f01.put("ls01f08d", bi.ls01f08d.isChecked() ? "4" : "0");
+        f01.put("ls01f08e", bi.ls01f08e.isChecked() ? "5" : "0");
+        f01.put("ls01f08f", bi.ls01f08f.isChecked() ? "6" : "0");
+        f01.put("ls01f08g", bi.ls01f08g.isChecked() ? "7" : "0");
+        f01.put("ls01f08h", bi.ls01f08h.isChecked() ? "8" : "0");
+        f01.put("ls01f0896", bi.ls01f0896.isChecked() ? "96" : "0");
+
         f01.put("ls01f0896", bi.ls01f0896x.getText().toString());
         f01.put("ls01f09", bi.ls01f09.getText().toString());
         f01.put("ls01f10a", bi.ls01f10a01.isChecked() ? "1"
@@ -247,6 +273,7 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public boolean formValidation() {
+
         if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
             return false;
         }
@@ -302,16 +329,21 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls01f02, bi.ls01f02a, getString(R.string.ls01f02))) {
             return false;
         }
-        if (!validatorClass.EmptyTextBox(this, bi.ls01f03, getString(R.string.ls01f03))) {
-            return false;
-        }
+
 
         if (!validatorClass.EmptyRadioButton(this, bi.ls01f04, bi.ls01f04a, getString(R.string.ls01f04))) {
             return false;
         }
-        if (!validatorClass.EmptyTextBox(this, bi.ls01f05, getString(R.string.ls01f05))) {
-            return false;
+        if (bi.ls01f04a.isChecked()) {
+            if (!validatorClass.EmptyTextBox(this, bi.ls01f03, getString(R.string.ls01f03))) {
+                return false;
+            }
+        } else {
+            if (!validatorClass.EmptyTextBox(this, bi.ls01f05, getString(R.string.ls01f05))) {
+                return false;
+            }
         }
+
 
         if (!validatorClass.EmptyRadioButton(this, bi.ls01f06a, bi.ls01f06a01, getString(R.string.ls01f06a))) {
             return false;
@@ -324,17 +356,22 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls01f07a, bi.ls01f07a01, getString(R.string.ls01f07a))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls01f07b, bi.ls01f07b96, bi.ls01f07b96x, getString(R.string.ls01f07b))) {
-            return false;
-        }
-        if (!validatorClass.EmptyTextBox(this, bi.ls01f07c, getString(R.string.ls01f07c))) {
-            return false;
+        if (!bi.ls01f07a01.isChecked()) {
+
+            if (!validatorClass.EmptyRadioButton(this, bi.ls01f07b, bi.ls01f07b96, bi.ls01f07b96x, getString(R.string.ls01f07b))) {
+                return false;
+            }
+            if (bi.ls01f07b06.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.ls01f07c, getString(R.string.ls01f07c))) {
+                    return false;
+                }
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.ls01f07d, bi.ls01f07d96, bi.ls01f07d96x, getString(R.string.ls01f07d))) {
+                return false;
+            }
         }
 
-        if (!validatorClass.EmptyRadioButton(this, bi.ls01f07d, bi.ls01f07d96, bi.ls01f07d96x, getString(R.string.ls01f07d))) {
-            return false;
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls01f08, bi.ls01f0896, bi.ls01f0896x, getString(R.string.ls01f08))) {
+        if (!validatorClass.EmptyCheckBox(this, bi.ls01f08, bi.ls01f0896, bi.ls01f0896x, getString(R.string.ls01f08))) {
             return false;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls01f09, getString(R.string.ls01f09))) {

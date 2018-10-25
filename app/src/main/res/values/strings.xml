@@ -15,7 +15,7 @@
     <string name="no"> نه </string>
     <string name="dkn"> خبر ناهي </string>-->
 
-    <string name="yes"> ھاں </string>
+    <string name="yes"> ھا </string>
     <string name="no"> نہ </string>
     <string name="dkn"> خبر نه آھي </string>
     <string name="not_applicable">	غير موضوع</string>
@@ -61,13 +61,13 @@
     <string name="ls01a07b"> اسٽيپ 1 </string>
     <string name="ls01a07c"> اسٽيپ 2 </string>
     <string name="ls01a07d"> اسٽيپ 3 </string>
-    <string name="ls01a08"> چا ٻار اڳ ۾ اسيس ٿيو آهي؟ </string>
+    <string name="ls01a08"> چا ٻار جواڳ  ۾ ٽيسٽ  ٿيو آهي؟ </string>
     <string name="ls01a09"> جيڪڏهن ٻار پهريان اسيس ٿيو آهي ته ڪهڙي رائونڊ ۾؟ </string>
     <string name="ls01a09a"> بيس لائين </string>
     <string name="ls01a09b"> اسٽيپ 1 </string>
     <string name="ls01a09c"> اسٽيپ 2 </string>
     <string name="ls01a09d"> اسٽيپ 3 </string>
-    <string name="ls01a10"> ٻار جي داخلا جي تاريخ </string>
+    <string name="ls01a10"> پراجيڪٽ ۾ انرولمينٽ جي تاريخ </string>
     <string name="ls01a11"> انٽرويو ڏيندڙ جو نالو ۽ ذات </string>
     <string name="ls01a12"> ٻار سان رشتو </string>
     <string name="ls01a12a"> ماءَ </string>
@@ -104,8 +104,10 @@
     <string name="ls01f07b"> جيڪڏهن ماءَ نه آهي ته سنڀاليندڙ جو ٻار سان رشتو </string>
     <string name="ls01f07b01"> ويڳي ماءَ </string>
     <string name="ls01f07b02"> ناني </string>
-    <string name="ls01f07b03"> ماسي </string>
-    <string name="ls01f07b04"> وڏي ڀيڻ </string>
+    <string name="ls01f07b03"> ڏاڏي </string>
+    <string name="ls01f07b04"> ماسي </string>
+    <string name="ls01f07b05"> ڦڦي </string>
+    <string name="ls01f07b06"> وڏي ڀيڻ </string>
     <string name="ls01f07c"> جيڪڏهن سارسنڀال ڪندڙَ وڏا ڀاءُ ڀيڻ آهن ته اُن جي عمر ڇا آهي؟ </string>
     <string name="ls01f07d"> جيڪڏهن ماءَ نه آهي ته ان جو سبب ڇا آهي؟ </string>
     <string name="ls01f07d01"> ماءَ گذاري وئي آهي </string>
@@ -636,5 +638,16 @@
     <string name="ls05c05"> ڇا ٻار ڪنهن به ٽاسڪ کي مڪمل ڪرڻ تي خوشي ظاهر ڪئي؟ </string>
     <string name="ls05c06"> ڇا ٽاسڪ کي مڪمل ڪرڻ لاءِ راضي هو ؟ جلدي ۾ نه ڇڏي ڏنو ۽ ٽاسڪ کي روڪڻ نه ٿئي چاهيو؟ </string>
     <string name="ls05c07"> ڇا ٻار اسيسمنٽ دوران تجسس ۽ دلچسپي ڏيکاري؟ </string>
+
+
+    <!-- Form 4 (EF) -->
+    <string name="ls04a">CORSI BLOCK TAPPING GAME SCORING SHEET</string>
+    <string name="ls04asub1">Practice Trial</string>
+    <string name="ls04aainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
+    <string name="ls04asub2">Test Trial</string>
+    <string name="ls04abinstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
+    <string name="ls04ignore">Ignore</string>
+
+    <string name="ls04b">DCCS SCORING SHEET</string>
 
 </resources>
