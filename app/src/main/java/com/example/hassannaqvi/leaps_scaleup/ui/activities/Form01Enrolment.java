@@ -42,10 +42,10 @@ public class Form01Enrolment extends AppCompatActivity {
         bi.ls01f04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId == R.id.ls01f04a){
+                if (checkedId == R.id.ls01f04a) {
                     bi.fldgrpls01f03.setVisibility(VISIBLE);
                     bi.fldgrpls01f05.setVisibility(GONE);
-                }else{
+                } else {
                     bi.fldgrpls01f03.setVisibility(GONE);
                     bi.fldgrpls01f05.setVisibility(VISIBLE);
                     bi.ls01f03.setText(null);
@@ -92,9 +92,9 @@ public class Form01Enrolment extends AppCompatActivity {
         bi.ls01f07b.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                if(checkedId == R.id.ls01f07b06){
+                if (checkedId == R.id.ls01f07b06) {
                     bi.fldgrpls01f07b.setVisibility(VISIBLE);
-                }else{
+                } else {
                     bi.fldgrpls01f07b.setVisibility(GONE);
                     bi.ls01f07c.setText(null);
                 }
@@ -116,16 +116,16 @@ public class Form01Enrolment extends AppCompatActivity {
 
     public void BtnContinue() {
         if (formValidation()) {
-        try {
-            SaveDraft();
+            try {
+                SaveDraft();
 //                if (UpdateDB()) {
-            startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
+                startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
 //                } else {
-            Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
 //                }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -237,15 +237,15 @@ public class Form01Enrolment extends AppCompatActivity {
                 : bi.ls01f07d05.isChecked() ? "5"
                 : bi.ls01f07d96.isChecked() ? "96"
                 : "0");
-        f01.put("ls01f08a", bi.ls01f08a.isChecked() ? "1":"0");
-        f01.put("ls01f08b", bi.ls01f08b.isChecked() ? "2":"0");
-        f01.put("ls01f08c", bi.ls01f08c.isChecked() ? "3":"0");
-        f01.put("ls01f08d", bi.ls01f08d.isChecked() ? "4":"0");
-        f01.put("ls01f08e", bi.ls01f08e.isChecked() ? "5":"0");
-        f01.put("ls01f08f", bi.ls01f08f.isChecked() ? "6":"0");
-        f01.put("ls01f08g", bi.ls01f08g.isChecked() ? "7":"0");
-        f01.put("ls01f08h", bi.ls01f08h.isChecked() ? "8":"0");
-        f01.put("ls01f0896", bi.ls01f0896.isChecked() ? "96":"0");
+        f01.put("ls01f08a", bi.ls01f08a.isChecked() ? "1" : "0");
+        f01.put("ls01f08b", bi.ls01f08b.isChecked() ? "2" : "0");
+        f01.put("ls01f08c", bi.ls01f08c.isChecked() ? "3" : "0");
+        f01.put("ls01f08d", bi.ls01f08d.isChecked() ? "4" : "0");
+        f01.put("ls01f08e", bi.ls01f08e.isChecked() ? "5" : "0");
+        f01.put("ls01f08f", bi.ls01f08f.isChecked() ? "6" : "0");
+        f01.put("ls01f08g", bi.ls01f08g.isChecked() ? "7" : "0");
+        f01.put("ls01f08h", bi.ls01f08h.isChecked() ? "8" : "0");
+        f01.put("ls01f0896", bi.ls01f0896.isChecked() ? "96" : "0");
 
         f01.put("ls01f0896", bi.ls01f0896x.getText().toString());
         f01.put("ls01f09", bi.ls01f09.getText().toString());
@@ -334,16 +334,15 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls01f04, bi.ls01f04a, getString(R.string.ls01f04))) {
             return false;
         }
-        if(bi.ls01f04a.isChecked()){
+        if (bi.ls01f04a.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.ls01f03, getString(R.string.ls01f03))) {
                 return false;
             }
-        }else{
+        } else {
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05, getString(R.string.ls01f05))) {
                 return false;
             }
         }
-
 
 
         if (!validatorClass.EmptyRadioButton(this, bi.ls01f06a, bi.ls01f06a01, getString(R.string.ls01f06a))) {
@@ -357,19 +356,21 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls01f07a, bi.ls01f07a01, getString(R.string.ls01f07a))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls01f07b, bi.ls01f07b96, bi.ls01f07b96x, getString(R.string.ls01f07b))) {
-            return false;
-        }
-        if(bi.ls01f07b06.isChecked()){
-            if (!validatorClass.EmptyTextBox(this, bi.ls01f07c, getString(R.string.ls01f07c))) {
+        if (!bi.ls01f07a01.isChecked()) {
+
+            if (!validatorClass.EmptyRadioButton(this, bi.ls01f07b, bi.ls01f07b96, bi.ls01f07b96x, getString(R.string.ls01f07b))) {
+                return false;
+            }
+            if (bi.ls01f07b06.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.ls01f07c, getString(R.string.ls01f07c))) {
+                    return false;
+                }
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.ls01f07d, bi.ls01f07d96, bi.ls01f07d96x, getString(R.string.ls01f07d))) {
                 return false;
             }
         }
 
-
-        if (!validatorClass.EmptyRadioButton(this, bi.ls01f07d, bi.ls01f07d96, bi.ls01f07d96x, getString(R.string.ls01f07d))) {
-            return false;
-        }
         if (!validatorClass.EmptyCheckBox(this, bi.ls01f08, bi.ls01f0896, bi.ls01f0896x, getString(R.string.ls01f08))) {
             return false;
         }

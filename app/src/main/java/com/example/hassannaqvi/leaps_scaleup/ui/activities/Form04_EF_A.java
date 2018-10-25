@@ -8,7 +8,11 @@ import android.view.View;
 import android.widget.CompoundButton;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfABinding;
+
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
 
 public class Form04_EF_A extends AppCompatActivity {
 ActivityForm04EfABinding bi;
@@ -22,23 +26,38 @@ String ls04aa01a = "" ;
         bi.ls04aa01a1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ls04aa01a =ls04aa01a+"\t"+ "3";
+                ls04aa01a =ls04aa01a+ "3";
                 bi.ls04aa01a.setText(ls04aa01a);
+                if(bi.ls04aa01a.getText().toString().equals("37")){
+                    bi.fldgrpls04aa01b.setVisibility(GONE);
+                }else{
+                    bi.fldgrpls04aa01b.setVisibility(VISIBLE);
+                }
             }
         });
         bi.ls04aa01a2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ls04aa01a =ls04aa01a+"\t"+ "7";
+                ls04aa01a =ls04aa01a+ "7";
                 bi.ls04aa01a.setText(ls04aa01a);
+                if(bi.ls04aa01a.getText().toString().equals("37")){
+                    bi.fldgrpls04aa01b.setVisibility(GONE);
+                }else{
+                    bi.fldgrpls04aa01b.setVisibility(VISIBLE);
+                }
             }
         });
         bi.ls04aa01a3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                ls04aa01a =ls04aa01a+"\t"+ "7";
-                ls04aa01a = ls04aa01a+"\t"+ "X";
+                ls04aa01a = ls04aa01a+ "X";
                 bi.ls04aa01a.setText(ls04aa01a);
+                if(bi.ls04aa01a.getText().toString().equals("37")){
+                    bi.fldgrpls04aa01b.setVisibility(GONE);
+                }else{
+                    bi.fldgrpls04aa01b.setVisibility(VISIBLE);
+                }
             }
         });
 

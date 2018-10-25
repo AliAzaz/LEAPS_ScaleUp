@@ -283,6 +283,7 @@
 
                 </android.support.v7.widget.CardView>
 
+            </LinearLayout>
 
                 <android.support.v7.widget.CardView
                     android:elevation="10dp"
@@ -321,8 +322,7 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-            </LinearLayout>
-
+<!--ls01a11-->
             <android.support.v7.widget.CardView
                 android:elevation="10dp"
                 android:layout_margin="10dp"
@@ -860,39 +860,6 @@
 
             </android.support.v7.widget.CardView>
 
-            <android.support.v7.widget.CardView
-                android:layout_marginTop="10dp"
-                android:elevation="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/ls01f03"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
-
-                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
-                        android:id="@+id/ls01f03"
-                        android:layout_width="match_parent"
-                        android:layout_margin="10dp"
-                        android:layout_height="wrap_content"
-                        android:focusable="false"
-                        android:hint="DD/MM/YYYY"
-                        android:textColor="@android:color/black"
-                        app:dateFormat="dd-MM-yyyy" />
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 style="@style/cardView"
@@ -943,9 +910,44 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls01f03"
+                android:layout_marginTop="10dp"
+                android:elevation="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/colorPrimary"
+                        android:text="@string/ls01f03"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp" />
+
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                        android:id="@+id/ls01f03"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:hint="DD/MM/YYYY"
+                        android:textColor="@android:color/black"
+                        app:dateFormat="dd-MM-yyyy" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
 
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls01f05"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -966,17 +968,18 @@
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
-
-                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
+                    <EditText
                         android:id="@+id/ls01f05"
                         style="@style/textInput"
                         android:layout_margin="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:focusable="false"
-                        android:hint="DD/MM/YYYY"
-                        android:textColor="@android:color/black"
-                        app:dateFormat="dd-MM-yyyy" />
+                        android:layout_marginBottom="1dp"
+                        android:digits="0123456789"
+                        android:hint="@string/ls01f05"
+                        android:maxLength="2"
+                        android:inputType="number" />
+
 
                 </LinearLayout>
 
@@ -1220,9 +1223,9 @@
                 </android.support.v7.widget.CardView>
 
 
-            </LinearLayout>
 
             <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls01f07b"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1341,6 +1344,7 @@
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
+            </LinearLayout>
 
             <android.support.v7.widget.CardView
                 android:layout_marginTop="10dp"
