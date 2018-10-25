@@ -39,6 +39,7 @@ public abstract class validatorClass {
             txt.clearFocus();
             return true;
         }
+
     }
 
     public static boolean RangeTextBox(Context context, EditText txt, int min, int max, String msg, String type) {

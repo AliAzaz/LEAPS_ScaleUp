@@ -49,7 +49,6 @@
 
             <!--Q01-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
@@ -89,7 +88,6 @@
 
             <!--Q02-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
@@ -158,7 +156,6 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
@@ -227,7 +224,6 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
                     android:elevation="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
@@ -289,7 +285,6 @@
 
 
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
                     android:elevation="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
@@ -329,7 +324,6 @@
             </LinearLayout>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
@@ -368,7 +362,6 @@
 
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:elevation="10dp"
                 android:layout_margin="10dp"
                 android:layout_width="match_parent"
@@ -479,7 +472,6 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -530,7 +522,6 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -570,7 +561,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -622,7 +612,6 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -661,7 +650,6 @@
 
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -700,7 +688,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -737,7 +724,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -788,7 +774,6 @@
                 android:textSize="35sp" />
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -826,7 +811,6 @@
 
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -877,7 +861,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -962,9 +945,7 @@
             </android.support.v7.widget.CardView>
 
 
-
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1003,7 +984,6 @@
 
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1054,7 +1034,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1095,7 +1074,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1151,7 +1129,6 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
@@ -1204,6 +1181,18 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="1dp"
                                 android:text="@string/ls01f07b04" />
+                            <RadioButton
+                                android:id="@+id/ls01f07b05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/ls01f07b05" />
+                            <RadioButton
+                                android:id="@+id/ls01f07b06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:text="@string/ls01f07b06" />
 
                             <RadioButton
                                 android:id="@+id/ls01f07b96"
@@ -1234,7 +1223,6 @@
             </LinearLayout>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1270,7 +1258,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1356,7 +1343,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1377,74 +1363,75 @@
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
 
-                    <RadioGroup
+                    <LinearLayout
                         android:id="@+id/ls01f08"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08a" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08b" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08c" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08d" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08e"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08e" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08f"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08f" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08g"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08g" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f08h"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls01f08h" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/ls01f0896"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/other" />
-                    </RadioGroup>
+                    </LinearLayout>
 
                     <EditText
                         style="@style/textInput"
@@ -1463,7 +1450,6 @@
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1500,7 +1486,6 @@
 
 
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:layout_marginTop="10dp"
                 android:elevation="10dp"
                 android:layout_width="match_parent"
@@ -1559,7 +1544,6 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
@@ -1626,7 +1610,6 @@
                 </android.support.v7.widget.CardView>
 
                 <android.support.v7.widget.CardView
-                    style="@style/cardView"
                     android:layout_marginTop="10dp"
                     android:elevation="10dp"
                     android:layout_width="match_parent"
