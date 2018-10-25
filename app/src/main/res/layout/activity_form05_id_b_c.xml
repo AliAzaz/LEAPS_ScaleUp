@@ -49,7 +49,9 @@
                         android:id="@+id/ls05b09a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp" />
+                        android:layout_marginTop="10dp"
+                        android:enabled="@{ls05b09a99.checked ? false : true}"
+                        android:selectedItemPosition="@{ls05b09a99.checked ? 0 : 0}" />
 
                 </LinearLayout>
 
