@@ -13,6 +13,7 @@
 
     <!-- To auto-complete the email text field in the login form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -26,7 +27,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.SplashscreenActivity"
+            android:name=".ui.activities.Form05IdBBActivity"
+            android:theme="@style/AppTheme1"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -87,7 +89,7 @@
             android:name=".ui.activities.AnthroActivity"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".ui.activities.Form05IdBBActivity"
+            android:name=".ui.activities.SplashscreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
@@ -113,9 +115,7 @@
         <activity
             android:name=".ui.activities.Form04_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1">
-
-        </activity>
+            android:theme="@style/AppTheme1" />
     </application>
 
 </manifest>

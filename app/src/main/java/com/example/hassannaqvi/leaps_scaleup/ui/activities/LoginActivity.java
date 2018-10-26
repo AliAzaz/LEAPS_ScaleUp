@@ -48,7 +48,6 @@ import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityLoginBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.GetAllData;
-import com.example.hassannaqvi.leaps_scaleup.services.LocationService;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
@@ -96,6 +95,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
     private static final int TWO_MINUTES = 1000 * 60 * 2;
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -192,6 +192,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             bi.testing.setVisibility(View.VISIBLE);
         }
     }
+
     public void loadIMEI() {
         // Check if the READ_PHONE_STATE permission is already available.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -199,7 +200,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                     != PackageManager.PERMISSION_GRANTED) {
                 // READ_PHONE_STATE permission has not been granted.
                 requestReadPhoneStatePermission();
-            }else {
+            } else {
                 doPermissionGrantedStuffs();
             }
         } else {
@@ -232,6 +233,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                     MY_PERMISSIONS_REQUEST_READ_PHONE_STATE);
         }
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -258,6 +260,16 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             } else if (permissions[i].equals(Manifest.permission.ACCESS_FINE_LOCATION)) {
                 if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
                     locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        //    ActivityCompat#requestPermissions
+                        // here to request the missing permissions, and then overriding
+                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                        //                                          int[] grantResults)
+                        // to handle the case where the user grants the permission. See the documentation
+                        // for ActivityCompat#requestPermissions for more details.
+                        return;
+                    }
                     locationManager.requestLocationUpdates(
                             LocationManager.GPS_PROVIDER,
                             MINIMUM_TIME_BETWEEN_UPDATES,
@@ -277,7 +289,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             }
         }
     }
+
     protected void showCurrentLocation() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         if (location != null) {
@@ -290,6 +313,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         }
 
     }
+
     protected boolean isBetterLocation(Location location, Location currentBestLocation) {
         if (currentBestLocation == null) {
             // A new location is always better than no location
@@ -384,7 +408,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
         }
     }
+
     private void doPermissionGrantedStuffs() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
         MainApp.IMEI = ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
 
     }
