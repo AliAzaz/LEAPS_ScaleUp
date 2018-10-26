@@ -28,7 +28,6 @@
 
 
             <TextView
-
                 android:textSize="25sp"
                 android:gravity="center"
                 android:layout_width="match_parent"
@@ -1216,6 +1215,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/ls02se14a05" />
+
+                        <RadioButton
+                            android:layout_marginBottom="1dp"
+                            android:id="@+id/ls02se14a06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ls02se14a06" />
 
                         <RadioButton
                             android:layout_marginBottom="1dp"

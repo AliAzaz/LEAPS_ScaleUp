@@ -28,8 +28,8 @@
 
             <!--ee01a-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee01"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -80,8 +80,8 @@
 
             <!--ee01b-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee02"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -132,8 +132,8 @@
 
             <!--ee01c-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee03"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -221,8 +221,8 @@
 
             <!--ee02-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee04"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -243,8 +243,8 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls02ee02"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -313,8 +313,8 @@
 
             <!--ee03b-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee06"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -387,8 +387,8 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls02ee04"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -405,8 +405,8 @@
 
             <!--ee05-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee08"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -518,9 +518,10 @@
                             android:text="@string/ls02ee05l" />
 
                     </RadioGroup>
+
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls02ee0596x"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -535,8 +536,8 @@
 
             <!--ee06-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee09"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -639,8 +640,8 @@
 
             <!--ee08-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee11"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -661,8 +662,8 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls02ee08"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -679,8 +680,8 @@
 
             <!--ee09-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee12"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -829,8 +830,8 @@
                     </RadioGroup>
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls02ee0996x"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -848,8 +849,8 @@
 
             <!--ee10-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee13"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -900,8 +901,8 @@
 
             <!--ee11-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee14"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -952,8 +953,8 @@
 
             <!--ee12-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee15"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1061,8 +1062,8 @@
 
             <!--ee14-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee17"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1083,8 +1084,8 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls02ee14"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -1101,8 +1102,8 @@
 
             <!--ee15-->
             <android.support.v7.widget.CardView
-                style="@style/cardView"
                 android:id="@+id/fldgrpee18"
+                style="@style/cardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -1123,8 +1124,8 @@
                         android:textSize="20sp" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls02ee15"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
@@ -1140,6 +1141,7 @@
             </android.support.v7.widget.CardView>
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"

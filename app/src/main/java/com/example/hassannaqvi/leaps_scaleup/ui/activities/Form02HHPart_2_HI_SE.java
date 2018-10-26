@@ -192,6 +192,7 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
                 : bi.ls02se14a03.isChecked()? "3"
                 : bi.ls02se14a04.isChecked()? "4"
                 : bi.ls02se14a05.isChecked()? "5"
+                : bi.ls02se14a06.isChecked()? "6"
                 : bi.ls02se14a0196.isChecked()? "96"
                 : "0");
 

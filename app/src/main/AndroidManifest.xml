@@ -27,8 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.Form05IdBAActivity"
-            android:theme="@style/AppTheme1"
+            android:name=".ui.activities.SplashscreenActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -89,10 +88,6 @@
             android:name=".ui.activities.AnthroActivity"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".ui.activities.SplashscreenActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
-        <activity
             android:name=".ui.activities.Form05IdBBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
@@ -117,9 +112,16 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".ui.activities.Form04_EF_A"
+            android:name=".ui.activities.Form6AnthroActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".ui.activities.Form04_EF_A"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"></activity>
+        <activity android:name=".ui.activities.Form14Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"></activity>
     </application>
 
 </manifest>

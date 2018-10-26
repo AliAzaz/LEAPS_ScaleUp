@@ -26,6 +26,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:lineSpacingExtra="10dp"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -36,15 +37,6 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@color/colorPrimaryDark"
-                android:gravity="center"
-                android:text="@string/ls01aheading"
-                android:textColor="@android:color/white"
-                android:textSize="35sp" />
 
 
             <!--Q01-->

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -22,6 +23,7 @@
 
 
             <TextView
+                android:lineSpacingExtra="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -304,12 +306,13 @@
                         android:text="@string/ls07id06"
                         android:textColor="@android:color/white" />
 
-                    <EditText
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         style="@style/textInput"
                         android:id="@+id/ls07id06"
                         android:layout_marginBottom="1dp"
                         android:hint="@string/ls07id06"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:dateFormat="yyyy-MM-dd"/>
 
                 </LinearLayout>
 
@@ -344,7 +347,8 @@
                         android:id="@+id/ls07id07"
                         android:layout_marginBottom="1dp"
                         android:hint="@string/ls07id07"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        />
 
                 </LinearLayout>
 
