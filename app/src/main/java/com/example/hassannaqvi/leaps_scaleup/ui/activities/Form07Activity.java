@@ -34,6 +34,8 @@ public class Form07Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form07);
         bi.setCallback(this);
 
+        bi.ls07id06.setManager(getSupportFragmentManager());
+
         district.add("....");
         district.add("N/A");
 
@@ -159,6 +161,10 @@ public class Form07Activity extends AppCompatActivity {
         }
         //8
         if (!validatorClass.EmptyTextBox(this, bi.ls07id07, getString(R.string.ls07id07))) {
+            return false;
+        }
+
+        if (!validatorClass.RangeTextBox(this, bi.ls07id07, 18, 24, getString(R.string.ls07id07), "Age")) {
             return false;
         }
         //9

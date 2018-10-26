@@ -238,7 +238,7 @@
                                 android:layout_gravity="center"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:src="@drawable/baby"/>
+                                android:src="@drawable/boy"/>
 
                         </LinearLayout>
 
@@ -323,7 +323,7 @@
                                 android:layout_gravity="center"
                                 android:layout_width="60dp"
                                 android:layout_height="60dp"
-                                android:src="@drawable/youth"/>
+                                android:src="@drawable/girl"/>
 
                         </LinearLayout>
 
@@ -363,7 +363,7 @@
                                 android:layout_height="70dp"
                                 android:layout_gravity="center"
                                 android:layout_marginTop="5dp"
-                                android:src="@drawable/skills" />
+                                android:src="@drawable/graduate" />
 
                         </LinearLayout>
 

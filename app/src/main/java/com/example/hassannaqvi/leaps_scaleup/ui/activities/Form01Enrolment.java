@@ -32,6 +32,8 @@ public class Form01Enrolment extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form01_enrolment);
         bi.setCallback(this);
+        this.setTitle(R.string.ls01aheading);
+
         setupView();
         bi.ls01f03.setManager(getSupportFragmentManager());
 //        bi.ls01f05.setManager(getSupportFragmentManager());
