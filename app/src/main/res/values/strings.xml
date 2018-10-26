@@ -404,6 +404,15 @@
     <string name="ls02ee15a"> نمبر </string>
 
 
+    <!--Form 6-->
+
+    <string name="ls06Heading">اينتهرو پوميٽري</string>
+    <string name="ls0601">قد</string>
+    <string name="ls0602">وزن </string>
+    <string name="ls0603">ٻانهن جي گولائي </string>
+    <string name="ls0604">مٿي جي گولائي  </string>
+
+
     <!--Form 7-->
     <string name="ls07idinstruction"> هي فارم CCDA هر يوٿ جو ڀريندي چاهي اهو پريجيڪٽ ۾ يوٿليڊر سليڪٽ ٿئي يا نه.
 هي فارم تڏهن ئي مڪمل ڪريو جڏهن اجازت ملي ۽ راضي نامي تي صحيح ٿيل هجي.
