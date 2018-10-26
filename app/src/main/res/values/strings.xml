@@ -654,8 +654,16 @@
     <string name="ls04asub1">Practice Trial</string>
     <string name="ls04aainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
     <string name="ls04asub2">Test Trial</string>
-    <string name="ls04abinstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
+    <string name="ls04abinstruction">empty</string>
     <string name="ls04ignore">Ignore</string>
+    <string name="level0ne">Level 1</string>
+    <string name="levelTwo">Level 2</string>
+    <string name="levelThree">Level 3</string>
+    <string name="levelFour">Level 4</string>
+    <string name="levelFive">Level 5</string>
+    <string name="levelSix">Level 6</string>
+    <string name="levelSeven">Level 7</string>
+    <string name="levelEight">Level 8</string>
 
     <string name="ls04b">DCCS SCORING SHEET</string>
 
