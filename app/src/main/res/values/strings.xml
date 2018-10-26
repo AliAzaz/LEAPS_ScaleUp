@@ -25,10 +25,10 @@
     <string name="nores"> جواب نه ڏنو </string>
     <string name="skp"> ڇڏي ڏنو </string>
 
-    <string name="almostN">Almost never</string>
-    <string name="some">Some times</string>
-    <string name="often">Often</string>
-    <string name="almostA">Almost always</string>
+    <string name="almostN">ڪڏهن به نه</string>
+    <string name="some">ڪڏهن ڪڏهن</string>
+    <string name="often">اڪثر ڪري</string>
+    <string name="almostA">هميشه</string>
 
     <string name="other"> ٻيو ڪجھ </string>
     <string name="month"> مهينا </string>

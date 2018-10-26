@@ -8,6 +8,7 @@ import android.arch.persistence.room.Update;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase.Sub_DBConnection;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 
 import java.util.List;
 
@@ -23,16 +24,25 @@ public interface FormsDAO {
     @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORMS + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
 
+    @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORMS_04_05 + " WHERE synced = ''")
+    List<Forms_04_05> getUnSyncedForms_04_05();
+
     @Query("SELECT * FROM " + Sub_DBConnection.TABLE_FORMS + " WHERE formDate LIKE :date")
     List<Forms> getTodaysForms(String date);
 
     @Insert
     Long insertForm(Forms forms);
 
+    @Insert
+    Long insertForm_04_05(Forms_04_05 forms);
+
     @Delete
     void delete(Forms forms);
 
     @Update
     int updateForm(Forms forms);
+
+    @Update
+    int updateForm_04_05(Forms_04_05 forms);
 
 }

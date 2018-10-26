@@ -27,7 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.Form05IdBBActivity"
+            android:name=".ui.activities.Form05IdBAActivity"
             android:theme="@style/AppTheme1"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -90,6 +90,10 @@
             android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.SplashscreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".ui.activities.Form05IdBBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity

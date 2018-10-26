@@ -7,27 +7,32 @@ import android.arch.persistence.room.PrimaryKey;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 
-@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS)
-public class Forms {
+@Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05)
+public class Forms_04_05 {
 
     @Ignore
     private final String _projectName = "National Nutrition Survey 2018";
-    @Ignore
-    private final String _surveyType = "";
 
     @PrimaryKey(autoGenerate = true)
     private int id;
 
     @ColumnInfo
+    private String uuid = "";
+    private String formType = "";
     private String uid = "";
     private String formDate = ""; // Date
     private String username = ""; // Interviewer
-    private String istatus = ""; // Interview Status
-    private String istatus88x = ""; // Interview Status
-    private String sa1 = "";     // Info Section
+    private String ch_ID = ""; // Child ID
+    private String ch_name = ""; // Child Name
+    private String sa1 = "";     // Section 1
+    private String sa2 = "";     // Section 2
+    private String sa3 = "";     // Section 3
+    private String sa4 = "";     // Section 4
+    private String sa5 = "";     // Section 5
+    private String sa6 = "";     // Section 6
     private String endtime = "";
     private String clustercode = "";
-    private String hhno = "";
+    private String districtname = "";
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsDT = "";
@@ -39,18 +44,26 @@ public class Forms {
     private String synced_date = "";
     private String appversion = "";
 
-    @Ignore
-    public Forms(Forms forms) {
 
+    @Ignore
+    public Forms_04_05(Forms_04_05 forms) {
+
+        this.uuid = forms.uuid;
+        this.formType = forms.formType;
         this.uid = forms.uid;
         this.formDate = forms.formDate;
         this.username = forms.username;
-        this.istatus = forms.istatus;
-        this.istatus88x = forms.istatus88x;
+        this.ch_ID = forms.ch_ID;
+        this.ch_name = forms.ch_name;
         this.sa1 = forms.sa1;
+        this.sa2 = forms.sa2;
+        this.sa3 = forms.sa3;
+        this.sa4 = forms.sa4;
+        this.sa5 = forms.sa5;
+        this.sa6 = forms.sa6;
         this.endtime = forms.endtime;
         this.clustercode = forms.clustercode;
-        this.hhno = forms.hhno;
+        this.districtname = forms.districtname;
         this.gpsLat = forms.gpsLat;
         this.gpsLng = forms.gpsLng;
         this.gpsDT = forms.gpsDT;
@@ -64,7 +77,15 @@ public class Forms {
 
     }
 
-    public Forms() {
+    public Forms_04_05() {
+    }
+
+    public String getFormType() {
+        return formType;
+    }
+
+    public void setFormType(String formType) {
+        this.formType = formType;
     }
 
     public int getId() {
@@ -73,6 +94,14 @@ public class Forms {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public String getUid() {
@@ -99,20 +128,20 @@ public class Forms {
         this.username = username;
     }
 
-    public String getIstatus() {
-        return istatus;
+    public String getCh_ID() {
+        return ch_ID;
     }
 
-    public void setIstatus(String istatus) {
-        this.istatus = istatus;
+    public void setCh_ID(String ch_ID) {
+        this.ch_ID = ch_ID;
     }
 
-    public String getIstatus88x() {
-        return istatus88x;
+    public String getCh_name() {
+        return ch_name;
     }
 
-    public void setIstatus88x(String istatus88x) {
-        this.istatus88x = istatus88x;
+    public void setCh_name(String ch_name) {
+        this.ch_name = ch_name;
     }
 
     public String getSa1() {
@@ -121,6 +150,46 @@ public class Forms {
 
     public void setSa1(String sa1) {
         this.sa1 = sa1;
+    }
+
+    public String getSa2() {
+        return sa2;
+    }
+
+    public void setSa2(String sa2) {
+        this.sa2 = sa2;
+    }
+
+    public String getSa3() {
+        return sa3;
+    }
+
+    public void setSa3(String sa3) {
+        this.sa3 = sa3;
+    }
+
+    public String getSa4() {
+        return sa4;
+    }
+
+    public void setSa4(String sa4) {
+        this.sa4 = sa4;
+    }
+
+    public String getSa5() {
+        return sa5;
+    }
+
+    public void setSa5(String sa5) {
+        this.sa5 = sa5;
+    }
+
+    public String getSa6() {
+        return sa6;
+    }
+
+    public void setSa6(String sa6) {
+        this.sa6 = sa6;
     }
 
     public String getEndtime() {
@@ -139,12 +208,12 @@ public class Forms {
         this.clustercode = clustercode;
     }
 
-    public String getHhno() {
-        return hhno;
+    public String getDistrictname() {
+        return districtname;
     }
 
-    public void setHhno(String hhno) {
-        this.hhno = hhno;
+    public void setDistrictname(String districtname) {
+        this.districtname = districtname;
     }
 
     public String getGpsLat() {
