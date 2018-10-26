@@ -90,6 +90,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
+            android:name=".ui.activities.Form05IdBAActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+        <activity
             android:name=".ui.activities.Form05IdBCActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />

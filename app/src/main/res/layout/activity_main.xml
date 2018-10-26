@@ -355,7 +355,7 @@
                                 android:layout_marginStart="20dp"
                                 android:layout_marginTop="5dp"
                                 android:gravity="center"
-                                android:text="Executive Function Skills - Youth"
+                                android:text="IDELA Scoring sheet - Child"
                                 android:textColor="@color/colorPrimaryDark" />
 
                             <ImageView

@@ -60,7 +60,7 @@ public class EndingActivity extends AppCompatActivity {
     public void BtnEnd() {
         if (formValidation()) {
 
-            SaveDraft();
+//            SaveDraft();
 //            if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
 //            } else {
