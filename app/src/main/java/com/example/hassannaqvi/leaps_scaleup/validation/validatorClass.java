@@ -200,35 +200,35 @@ public abstract class validatorClass {
         for (int i = 0, count = lv.getChildCount(); i < count; ++i) {
             View view = lv.getChildAt(i);
 
-            if (view.getVisibility() == View.VISIBLE) {
+            if (view.getVisibility() == View.GONE || !view.isEnabled())
+                break;
 
-                if (view instanceof CardView) {
-                    for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
-                        View view1 = ((CardView) view).getChildAt(j);
-                        if (view1 instanceof LinearLayout) {
-                            if (!EmptyCheckingContainer(context, (LinearLayout) view1)) {
-                                return false;
-                            }
-                        }
-                    }
-                } else if (view instanceof RadioGroup) {
-
-                    View v = ((RadioGroup) view).getChildAt(0);
-                    if (v != null) {
-
-                        String asNamed = getString(context, getIDComponent(view));
-
-                        if (!EmptyRadioButton(context, (RadioGroup) view, (RadioButton) v, asNamed)) {
+            if (view instanceof CardView) {
+                for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
+                    View view1 = ((CardView) view).getChildAt(j);
+                    if (view1 instanceof LinearLayout) {
+                        if (!EmptyCheckingContainer(context, (LinearLayout) view1)) {
                             return false;
                         }
                     }
-                } else if (view instanceof Spinner) {
+                }
+            } else if (view instanceof RadioGroup) {
 
-                    if (!EmptySpinner(context, (Spinner) view, getString(context, getIDComponent(view)))) {
+                View v = ((RadioGroup) view).getChildAt(0);
+                if (v != null) {
+
+                    String asNamed = getString(context, getIDComponent(view));
+
+                    if (!EmptyRadioButton(context, (RadioGroup) view, (RadioButton) v, asNamed)) {
                         return false;
                     }
                 }
+            } else if (view instanceof Spinner) {
+                if (!EmptySpinner(context, (Spinner) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
             }
+
         }
         return true;
     }

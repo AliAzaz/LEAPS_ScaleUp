@@ -55,17 +55,7 @@ public class Form05IdBBActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        if (!validatorClass.EmptyCheckingContainer(this, bi.flgGrpf05BB01)) {
-            return false;
-        }
-
-        if (!bi.ls05b08a99.isChecked()) {
-            if (!validatorClass.EmptySpinner(this, bi.ls05b08a, getString(R.string.ls05b08a))) {
-                return false;
-            }
-        }
-
-        return validatorClass.EmptyCheckingContainer(this, bi.flgGrpf05BB02);
+        return validatorClass.EmptyCheckingContainer(this, bi.flgGrpf05BB01);
     }
 
     public void BtnEnd() {

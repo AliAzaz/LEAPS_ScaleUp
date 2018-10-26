@@ -33,35 +33,35 @@
             </android.support.v7.widget.CardView>
 
             <!--09 - 01-->
-            <android.support.v7.widget.CardView style="@style/cardView">
-
-                <LinearLayout style="@style/linerlayout_view">
-
-                    <TextView
-                        style="@style/textView"
-                        android:text="@string/ls05b09a" />
-
-                    <CheckBox
-                        android:id="@+id/ls05b09a99"
-                        style="@style/checkbox" />
-
-                    <Spinner
-                        android:id="@+id/ls05b09a"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:enabled="@{ls05b09a99.checked ? false : true}"
-                        android:selectedItemPosition="@{ls05b09a99.checked ? 0 : 0}" />
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--10 HH-->
             <LinearLayout
                 android:id="@+id/flgGrpf05BC01"
                 style="@style/linerlayout_view_wt_bound">
 
+                <android.support.v7.widget.CardView style="@style/cardView">
+
+                    <LinearLayout style="@style/linerlayout_view">
+
+                        <TextView
+                            style="@style/textView"
+                            android:text="@string/ls05b09a" />
+
+                        <CheckBox
+                            android:id="@+id/ls05b09a99"
+                            style="@style/checkbox" />
+
+                        <Spinner
+                            android:id="@+id/ls05b09a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:enabled="@{ls05b09a99.checked ? false : true}"
+                            android:selectedItemPosition="@{ls05b09a99.checked ? 0 : 0}" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--10 HH-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout style="@style/linerlayout_view">
