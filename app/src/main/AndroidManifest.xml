@@ -119,7 +119,9 @@
             android:theme="@style/AppTheme">
 
         </activity>
-        <activity android:name=".ui.activities.Form04_EF_B"></activity>
+        <activity android:name=".ui.activities.Form04_EF_B"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
