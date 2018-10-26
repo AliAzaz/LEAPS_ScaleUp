@@ -40,22 +40,24 @@ public class Form02HHPart_1 extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i != R.id.ls02pe01a01) {
-                    bi.fldgrplspe02.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe02, false);
-                    bi.fldgrplspe03.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe03, false);
-                    bi.fldgrplspe04.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe04, false);
-                    bi.fldgrplspe05.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe05, false);
-                    bi.fldgrplspe06.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe06, false);
-                    bi.fldgrplspe07.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe07, false);
-                    bi.fldgrplspe08.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe08, false);
-                } else {
+                if (i == R.id.ls02pe01a01) {
+                    bi.fldgrplspe09.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe09, false);
+                    bi.fldgrplspe10.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe10, false);
+                    bi.fldgrplspe11.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe11, false);
+                    bi.fldgrplspe12.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, false);
+                    bi.fldgrplspe13.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, false);
+                    bi.fldgrplspe14.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, false);
+                    bi.fldgrplspe15.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe15, false);
+                    bi.fldgrplspe16.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe16, false);
+
                     bi.fldgrplspe02.setVisibility(View.VISIBLE);
                     bi.fldgrplspe03.setVisibility(View.VISIBLE);
                     bi.fldgrplspe04.setVisibility(View.VISIBLE);
@@ -70,6 +72,38 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     ClearClass.ClearAllCardFields(bi.fldgrplspe06, true);
                     ClearClass.ClearAllCardFields(bi.fldgrplspe07, true);
                     ClearClass.ClearAllCardFields(bi.fldgrplspe08, true);
+                } else {
+                    bi.fldgrplspe02.setVisibility(View.GONE);
+                    bi.fldgrplspe03.setVisibility(View.GONE);
+                    bi.fldgrplspe04.setVisibility(View.GONE);
+                    bi.fldgrplspe05.setVisibility(View.GONE);
+                    bi.fldgrplspe06.setVisibility(View.GONE);
+                    bi.fldgrplspe07.setVisibility(View.GONE);
+                    bi.fldgrplspe08.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe02, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe03, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe04, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe05, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe06, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe07, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe08, false);
+
+                    bi.fldgrplspe09.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe09, true);
+                    bi.fldgrplspe10.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe10, true);
+                    bi.fldgrplspe11.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe11, true);
+                    bi.fldgrplspe12.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, true);
+                    bi.fldgrplspe13.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, true);
+                    bi.fldgrplspe14.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, true);
+                    bi.fldgrplspe15.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe15, true);
+                    bi.fldgrplspe16.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe16, true);
                 }
             }
         });
@@ -272,6 +306,8 @@ public class Form02HHPart_1 extends AppCompatActivity {
                 : bi.ls02pe03d96.isChecked() ? "96"
                 : bi.ls02pe03d98.isChecked() ? "98"
                 : "0");
+
+
         sHH01.put("ls02pe2096x", bi.ls02pe03d96x.getText().toString());
 
 
@@ -282,7 +318,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls02pe01a, bi.ls02pe01a01, getString(R.string.ls02pe01a))) {
             return false;
         }
-        if (!bi.ls02pe01a02.isChecked()) {
+        if (bi.ls02pe01a01.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.ls02pe01b, getString(R.string.ls02pe01b))) {
                 return false;
             }
@@ -312,67 +348,111 @@ public class Form02HHPart_1 extends AppCompatActivity {
                 return false;
             }
 
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls02pe02a, bi.ls02pe02a01, getString(R.string.ls02pe02a))) {
-            return false;
-        }
-        if (!bi.ls02pe02a02.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.ls02pe02b, getString(R.string.ls02pe02b))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.ls02pe02c, bi.ls02pe02c01, getString(R.string.ls02pe02c))) {
-                return false;
-            }
-            if (bi.ls02pe02c96.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.ls02pe02c96x, getString(R.string.ls02pe02c))) {
-                    return false;
-                }
-            }
-            if (bi.ls02pe02c05.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.ls02pe02d, getString(R.string.ls02pe02d))) {
-                    return false;
-                }
-                if (!validatorClass.EmptyTextBox(this, bi.ls02pe02e, getString(R.string.ls02pe02e))) {
-                    return false;
-                }
-                if (!validatorClass.EmptyTextBox(this, bi.ls02pe02f, getString(R.string.ls02pe02f))) {
-                    return false;
-                }
-            }
-            if (!validatorClass.EmptyTextBox(this, bi.ls02pe02g, getString(R.string.ls02pe02g))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.ls02pe02h, bi.ls02pe02h01, getString(R.string.ls02pe02h))) {
-                return false;
-            }
-            if (bi.ls02pe02h96.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.ls02pe02h96x, getString(R.string.ls02pe02h))) {
-                    return false;
-                }
-            }
             if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03a, bi.ls02pe03a01, getString(R.string.ls02pe03a))) {
                 return false;
             }
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03a, bi.ls02pe03a01, getString(R.string.ls02pe03a))) {
-            return false;
-        }
-        if (bi.ls02pe03a01.isChecked()) {
-            if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03b, bi.ls02pe03b01, getString(R.string.ls02pe03b))) {
-                return false;
-            }
-            if (!validatorClass.EmptyTextBox(this, bi.ls02pe03c, getString(R.string.ls02pe03c))) {
-                return false;
-            }
-            if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03d, bi.ls02pe03d01, getString(R.string.ls02pe03d))) {
-                return false;
-            }
-
-            if (bi.ls02pe03d96.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d))) {
+            if (bi.ls02pe03a01.isChecked()) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03b, bi.ls02pe03b01, getString(R.string.ls02pe03b))) {
                     return false;
                 }
+                if (!validatorClass.EmptyTextBox(this, bi.ls02pe03c, getString(R.string.ls02pe03c))) {
+                    return false;
+                }
+                if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03d, bi.ls02pe03d01, getString(R.string.ls02pe03d))) {
+                    return false;
+                }
+
+                if (bi.ls02pe03d96.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d))) {
+                        return false;
+                    }
+                }
             }
+
+        } else {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02pe02a, bi.ls02pe02a01, getString(R.string.ls02pe02a))) {
+                return false;
+            }
+            if (!bi.ls02pe02a02.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.ls02pe02b, getString(R.string.ls02pe02b))) {
+                    return false;
+                }
+                if (!validatorClass.EmptyRadioButton(this, bi.ls02pe02c, bi.ls02pe02c01, getString(R.string.ls02pe02c))) {
+                    return false;
+                }
+                if (bi.ls02pe02c96.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe02c96x, getString(R.string.ls02pe02c))) {
+                        return false;
+                    }
+                }
+                if (bi.ls02pe02c05.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe02d, getString(R.string.ls02pe02d))) {
+                        return false;
+                    }
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe02e, getString(R.string.ls02pe02e))) {
+                        return false;
+                    }
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe02f, getString(R.string.ls02pe02f))) {
+                        return false;
+                    }
+                }
+                if (!validatorClass.EmptyTextBox(this, bi.ls02pe02g, getString(R.string.ls02pe02g))) {
+                    return false;
+                }
+                if (!validatorClass.EmptyRadioButton(this, bi.ls02pe02h, bi.ls02pe02h01, getString(R.string.ls02pe02h))) {
+                    return false;
+                }
+                if (bi.ls02pe02h96.isChecked()) {
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe02h96x, getString(R.string.ls02pe02h))) {
+                        return false;
+                    }
+                }
+                if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03a, bi.ls02pe03a01, getString(R.string.ls02pe03a))) {
+                    return false;
+                }
+                if (bi.ls02pe03a01.isChecked()) {
+                    if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03b, bi.ls02pe03b01, getString(R.string.ls02pe03b))) {
+                        return false;
+                    }
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe03c, getString(R.string.ls02pe03c))) {
+                        return false;
+                    }
+                    if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03d, bi.ls02pe03d01, getString(R.string.ls02pe03d))) {
+                        return false;
+                    }
+
+                    if (bi.ls02pe03d96.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d))) {
+                            return false;
+                        }
+                    }
+                }
+            } else {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03a, bi.ls02pe03a01, getString(R.string.ls02pe03a))) {
+                    return false;
+                }
+                if (bi.ls02pe03a01.isChecked()) {
+                    if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03b, bi.ls02pe03b01, getString(R.string.ls02pe03b))) {
+                        return false;
+                    }
+                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe03c, getString(R.string.ls02pe03c))) {
+                        return false;
+                    }
+                    if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03d, bi.ls02pe03d01, getString(R.string.ls02pe03d))) {
+                        return false;
+                    }
+
+                    if (bi.ls02pe03d96.isChecked()) {
+                        if (!validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d))) {
+                            return false;
+                        }
+                    }
+                }
+
+
+            }
+
+
         }
 
 

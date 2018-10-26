@@ -227,13 +227,17 @@ public abstract class validatorClass {
                 if (!EmptySpinner(context, (Spinner) view, getString(context, getIDComponent(view)))) {
                     return false;
                 }
+            } else if (view instanceof EditText) {
+                if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
             }
 
         }
         return true;
     }
 
-    private static String getIDComponent(View view) {
+    public static String getIDComponent(View view) {
         String[] idName = (view).getResources().getResourceName((view).getId()).split("id/");
 
         return idName[1];

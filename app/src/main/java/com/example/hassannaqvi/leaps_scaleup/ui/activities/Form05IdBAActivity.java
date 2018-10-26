@@ -4,15 +4,26 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Toast;
 
+import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm05IdBABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+
+import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
 
 public class Form05IdBAActivity extends AppCompatActivity {
 
     ActivityForm05IdBABinding bi;
+
+    public static Forms_04_05 fc_4_5;
+    String fTYPE = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +32,22 @@ public class Form05IdBAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form05_id_b_a);
         bi.setCallback(this);
 
+        setContent();
+    }
+
+    private void setContent() {
+
+        fTYPE = getIntent().getStringExtra("fTYPE");
+
     }
 
     public void BtnContinue() {
 
         if (formValidation()) {
             SaveDraft();
-            if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), Form05IdBBActivity.class));
+//            if (UpdateDB()) {
+            if (true) {
+                startActivity(new Intent(getApplicationContext(), Form05IdCActivity.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -36,11 +55,39 @@ public class Form05IdBAActivity extends AppCompatActivity {
 
     }
 
-    private boolean UpdateDB() {
-        return true;
+    public boolean UpdateDB() {
+        try {
+
+            Long longID = new crudOperations(MainActivity.db, fc_4_5).execute().get();
+
+            if (longID != 0) {
+                fc_4_5.setId(longID.intValue());
+                return true;
+            } else {
+                return false;
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     private void SaveDraft() {
+
+        fc_4_5 = new Forms_04_05();
+
+        fc_4_5.setFormType(fTYPE);
+
+        JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpf05BA01, true);
+
+        fc_4_5.setSa1(String.valueOf(Json));
+
+        Log.d("F5-BA", String.valueOf(Json));
+
     }
 
     private boolean formValidation() {

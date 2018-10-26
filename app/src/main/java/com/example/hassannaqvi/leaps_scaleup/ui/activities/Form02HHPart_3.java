@@ -63,6 +63,37 @@ public class Form02HHPart_3 extends AppCompatActivity {
                 }
             }
         });
+
+        bi.ls02ee06.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.ls02ee06b) {
+
+                    bi.fldgrpee10.setVisibility(View.GONE);
+                    bi.fldgrpee11.setVisibility(View.GONE);
+                    bi.fldgrpee12.setVisibility(View.GONE);
+                    bi.fldgrpee13.setVisibility(View.GONE);
+                    bi.fldgrpee14.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee10, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee11, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee12, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee13, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee14, false);
+                } else {
+                    bi.fldgrpee10.setVisibility(View.VISIBLE);
+                    bi.fldgrpee11.setVisibility(View.VISIBLE);
+                    bi.fldgrpee12.setVisibility(View.VISIBLE);
+                    bi.fldgrpee13.setVisibility(View.VISIBLE);
+                    bi.fldgrpee14.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee10, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee11, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee12, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee13, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee14, true);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
@@ -174,14 +205,14 @@ public class Form02HHPart_3 extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls02ee01b, bi.ls02ee01b01, getString(R.string.ls02ee01b))) {
             return false;
         }
-        if (bi.ls02ee01b02.isChecked()) {
+        if (bi.ls02ee01b01.isChecked()) {
             if (!validatorClass.EmptyRadioButton(this, bi.ls02ee01c, bi.ls02ee01c01, getString(R.string.ls02ee01c))) {
                 return false;
             }
-        }
-        if (bi.ls02ee01c96.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.ls02ee01c96x, getString(R.string.ls02ee01c))) {
-                return false;
+            if (bi.ls02ee01c96.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.ls02ee01c96x, getString(R.string.ls02ee01c))) {
+                    return false;
+                }
             }
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls02ee02, getString(R.string.ls02ee02))) {
@@ -209,25 +240,27 @@ public class Form02HHPart_3 extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls02ee06, bi.ls02ee06a, getString(R.string.ls02ee06))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls02ee07, bi.ls02ee07a, getString(R.string.ls02ee07))) {
-            return false;
-        }
-        if (!validatorClass.EmptyTextBox(this, bi.ls02ee08, getString(R.string.ls02ee08))) {
-            return false;
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls02ee09, bi.ls02ee09a, getString(R.string.ls02ee09))) {
-            return false;
-        }
-        if (bi.ls02ee0996.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.ls02ee0996x, getString(R.string.ls02ee09))) {
+        if (bi.ls02ee06a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02ee07, bi.ls02ee07a, getString(R.string.ls02ee07))) {
                 return false;
             }
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls02ee10, bi.ls02ee10a, getString(R.string.ls02ee10))) {
-            return false;
-        }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls02ee11, bi.ls02ee11a, getString(R.string.ls02ee11))) {
-            return false;
+            if (!validatorClass.EmptyTextBox(this, bi.ls02ee08, getString(R.string.ls02ee08))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02ee09, bi.ls02ee09a, getString(R.string.ls02ee09))) {
+                return false;
+            }
+            if (bi.ls02ee0996.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.ls02ee0996x, getString(R.string.ls02ee09))) {
+                    return false;
+                }
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02ee10, bi.ls02ee10a, getString(R.string.ls02ee10))) {
+                return false;
+            }
+            if (!validatorClass.EmptyRadioButton(this, bi.ls02ee11, bi.ls02ee11a, getString(R.string.ls02ee11))) {
+                return false;
+            }
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls02ee12, bi.ls02ee12a, getString(R.string.ls02ee12))) {
             return false;
@@ -243,7 +276,6 @@ public class Form02HHPart_3 extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls02ee15, getString(R.string.ls02ee15))) {
             return false;
         }
-
 
         return true;
     }
