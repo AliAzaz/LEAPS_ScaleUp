@@ -112,7 +112,7 @@ public class Form07Activity extends AppCompatActivity {
                 if (UpdateDB()) {
                     startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
                 } else {
-                    FancyToast.makeText(this, "Error in updating db!!", FancyToast.LENGTH_SHORT,FancyToast.ERROR,false).show();
+                    FancyToast.makeText(this, "Error in updating db!!", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -217,7 +217,7 @@ public class Form07Activity extends AppCompatActivity {
             return false;
         }
 
-        FancyToast.makeText(this, "Section Validated", FancyToast.LENGTH_SHORT,FancyToast.SUCCESS,false).show();
+        FancyToast.makeText(this, "Section Validated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show();
 
         return true;
     }
@@ -277,7 +277,6 @@ public class Form07Activity extends AppCompatActivity {
                 : bi.ls07id14b.isChecked() ? "2"
                 : bi.ls07id14c.isChecked() ? "3"
                 : "0");
-
 
 
 //        f07.put("ls0715",bi.ls07id15.getSelectedItem().toString());

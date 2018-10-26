@@ -370,7 +370,7 @@ public class MainActivity extends Activity {
         }
     }
     public void openAnthro() {
-        Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this,Form6AnthroActivity.class));
     }
     public void openYouthEnrol() {
         startActivity(new Intent(MainActivity.this,Form07Activity.class));

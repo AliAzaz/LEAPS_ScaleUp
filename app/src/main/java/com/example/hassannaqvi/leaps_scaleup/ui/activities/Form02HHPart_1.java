@@ -190,11 +190,11 @@ public class Form02HHPart_1 extends AppCompatActivity {
             Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
 //            try {
 //                SaveDraft();
-                if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
-                } else {
-                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
-                }
+            if (UpdateDB()) {
+                startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
+            } else {
+                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+            }
            /* } catch (JSONException e) {
                 e.printStackTrace();
             }*/
