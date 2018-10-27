@@ -664,6 +664,22 @@
     <string name="levelSix">Level 6</string>
     <string name="levelSeven">Level 7</string>
     <string name="levelEight">Level 8</string>
+    <string name="ls04aa01pattern">37</string>
+    <string name="ls04aa02pattern">64</string>
+    <string name="ls04aa03pattern">37</string>
+    <string name="ls04aa04pattern">64</string>
+    <string name="ls04ab01pattern">57</string>
+    <string name="ls04ab02pattern">21</string>
+    <string name="ls04ab03pattern">82</string>
+    <string name="ls04ab04pattern">436</string>
+    <string name="ls04ab05pattern">381</string>
+    <string name="ls04ab06pattern">527</string>
+    <string name="ls04ab07pattern">3249</string>
+    <string name="ls04ab08pattern">1765</string>
+    <string name="ls04ab09pattern">3571</string>
+    <string name="ls04ab10pattern">34875</string>
+    <string name="ls04ab11pattern">81536</string>
+    <string name="ls04ab12pattern">64529</string>
 
     <!-- Form 4 (EF) B-->
     <string name="ls04b">DCCS SCORING SHEET</string>
