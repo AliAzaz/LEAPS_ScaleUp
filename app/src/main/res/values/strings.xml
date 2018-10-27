@@ -666,7 +666,17 @@
     <string name="levelEight">Level 8</string>
 
     <string name="ls04b">DCCS SCORING SHEET</string>
-    
+    <string name="ls04bsub1">SEPARATED DCCS</string>
+    <string name="ls04ba">SEPARATED PRACTICE TRIALS</string>
+    <string name="ls04bb">SEPARATED TEST TRIALS- COLOR</string>
+    <string name="ls04bc">SEPARATED TEST TRIALS-SHAPE</string>
+    <string name="ls04bsub2">INTEGRATED DCCS</string>
+    <string name="ls04bd">INTEGRATED PRACTICE TRIALS</string>
+    <string name="ls04be">INTEGRATED TEST TRIALS- SHAPE</string>
+    <string name="ls04bf">INTEGRATED TEST TRIALS- COLOR</string>
+    <string name="ls04bg">BORDER VERSION TEST TRIALS </string>
+    <string name="ls04ba01">(ڳاڙهو تارو) هاڻي هي ڳاڙهو آهي، هي </string>
+
     
     
     <!--Form 14-->
