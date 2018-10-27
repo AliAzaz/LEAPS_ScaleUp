@@ -934,4 +934,25 @@ public class Form04_EF_A extends AppCompatActivity {
         }
 
     }
+   /* public void processButton(View v) {
+
+       android.widget.Button b = (android.widget.Button) v;
+       // Check question
+       String qID = getResources().getResourceEntryName(v.getId());
+       qID = qID.substring(0, qID.length() - 1);
+
+       TextView tv = (TextView)findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
+       String btnPressed = b.getText().toString();
+       switch (btnPressed){
+
+           case "3":
+
+               ls04aa01a = ls04aa01a + btnPressed;
+               skipPractice(bi.ls04aa01a, ls04aa01a, bi.fldgrpls04aa01b, aa01pattern,bi.ls04aa01b);
+
+
+       }
+
+
+   }*/
 }

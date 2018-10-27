@@ -649,7 +649,7 @@
     <string name="ls05c07"> ڇا ٻار اسيسمنٽ دوران تجسس ۽ دلچسپي ڏيکاري؟ </string>
 
 
-    <!-- Form 4 (EF) -->
+    <!-- Form 4 (EF) A-->
     <string name="ls04a">CORSI BLOCK TAPPING GAME SCORING SHEET</string>
     <string name="ls04asub1">Practice Trial</string>
     <string name="ls04aainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
@@ -665,20 +665,48 @@
     <string name="levelSeven">Level 7</string>
     <string name="levelEight">Level 8</string>
 
+    <!-- Form 4 (EF) B-->
     <string name="ls04b">DCCS SCORING SHEET</string>
     <string name="ls04bsub1">SEPARATED DCCS</string>
     <string name="ls04ba">SEPARATED PRACTICE TRIALS</string>
+    <string name="ls04baredstar"> (ڳاڙهو تارو) هاڻي هي ڳاڙهو آهي، هي ڪيڏانهن ويندو؟ </string>
+    <string name="ls04babluetruck"> (نيري ٽرڪ) هڪ نيرو آهي هي ڪيڏانهن ويندي؟ </string>
+
     <string name="ls04bb">SEPARATED TEST TRIALS- COLOR</string>
+    <string name="ls04bbredstar"> (ڳاڙهو تارو) هي ڳاڙهو آهي </string>
+    <string name="ls04bbbluetruck"> (نيري ٽرڪ) هي نيرو آهي </string>
+
     <string name="ls04bc">SEPARATED TEST TRIALS-SHAPE</string>
+    <string name="ls04bcbluetruck"> (نيري ٽرڪ) هي ٽرڪ آهي </string>
+    <string name="ls04bcredstar"> (ڳاڙهو تارو) هي تارو آهي </string>
+
     <string name="ls04bsub2">INTEGRATED DCCS</string>
     <string name="ls04bd">INTEGRATED PRACTICE TRIALS</string>
-    <string name="ls04be">INTEGRATED TEST TRIALS- SHAPE</string>
-    <string name="ls04bf">INTEGRATED TEST TRIALS- COLOR</string>
-    <string name="ls04bg">BORDER VERSION TEST TRIALS </string>
-    <string name="ls04ba01">(ڳاڙهو تارو) هاڻي هي ڳاڙهو آهي، هي </string>
+    <string name="ls04bdbluetruck"> (نيري ٽرڪ) هڪ ٽرڪ آهي هي ڪيڏانهن ويندي؟ </string>
+    <string name="ls04bdredstar"> (ڳاڙهو تارو) هاڻي هي تارو آهي، هي ڪيڏانهن ويندو؟ </string>
 
-    
-    
+    <string name="ls04be">INTEGRATED TEST TRIALS- SHAPE</string>
+    <string name="ls04bestar"> (ڳاڙهو تارو) هي تارو آهي </string>
+    <string name="ls04betruck"> (نيري ٽرڪ) هي ٽرڪ آهي </string>
+
+    <string name="ls04bf">INTEGRATED TEST TRIALS- COLOR</string>
+    <string name="ls04bfbluetruck"> (نيري ٽرڪ) هي نيرو آهي </string>
+    <string name="ls04bfredstar"> (ڳاڙهو تارو) هي ڳاڙهو آهي </string>
+
+    <string name="ls04bg">BORDER VERSION TEST TRIALS </string>
+    <string name="ls04bgnoredborder"> بغير بارڊر وارو ڳاڙهو تارو </string>
+    <string name="ls04bgnoblueborder"> بغير بارڊر واروي نيري ٽرڪ </string>
+    <string name="ls04bgredborder"> بارڊر وارو ڳاڙهو تارو </string>
+    <string name="ls04bgblueborder"> بارڊر واروي نيري ٽرڪ </string>
+    <string name="blue">نيرو</string>
+    <string name="red">ڳاڙهو</string>
+    <string name="star"> تارو</string>
+    <string name="truck"> ٽرڪ</string>
+    <string name="bluestar">نيرو تارو</string>
+    <string name="redtruck">ڳاڙهي ٽرڪ </string>
+
+
+
     <!--Form 14-->
     <string name="ls14Heading">Protocol Deviation</string>
     <string name="ls14instruction">باني ڪري اڀياس جي دوران جيڪڏهن ڪو پروٽوڪول  ڊيويشن ٿئي ٿو ته هن فارم ۾ نوٽ ڪريو. پروٽوڪول جو مطلب ته ا اها اسسيسمينٽ جيڪا ڏنل خاص هدايتن موجب نه ڪئي وئي هجي</string>
