@@ -681,6 +681,9 @@
     <string name="ls04ab11pattern">81536</string>
     <string name="ls04ab12pattern">64529</string>
 
+
+
+
     <!-- Form 4 (EF) B-->
     <string name="ls04b">DCCS SCORING SHEET</string>
     <string name="ls04bsub1">SEPARATED DCCS</string>
@@ -720,6 +723,62 @@
     <string name="truck"> ٽرڪ</string>
     <string name="bluestar">نيرو تارو</string>
     <string name="redtruck">ڳاڙهي ٽرڪ </string>
+
+    <!--ls04ba answers-->
+    <string name="ls04ba01pattern">@string/red</string>
+    <string name="ls04ba02pattern">@string/blue</string>
+
+    <!--ls04bb answers-->
+    <string name="ls04bb01pattern">@string/red</string>
+    <string name="ls04bb02pattern">@string/blue</string>
+    <string name="ls04bb03pattern">@string/blue</string>
+    <string name="ls04bb04pattern">@string/red</string>
+    <string name="ls04bb05pattern">@string/red</string>
+    <string name="ls04bb06pattern">@string/blue</string>
+
+    <!--ls04bc answers-->
+    <string name="ls04bc01pattern">@string/truck</string>
+    <string name="ls04bc02pattern">@string/star</string>
+    <string name="ls04bc03pattern">@string/truck</string>
+    <string name="ls04bc04pattern">@string/truck</string>
+    <string name="ls04bc05pattern">@string/star</string>
+    <string name="ls04bc06pattern">@string/star</string>
+
+
+    <!--ls04bd answers-->
+    <string name="ls04bd01pattern">@string/truck</string>
+    <string name="ls04bd02pattern">@string/star</string>
+
+    <!--ls04be answers-->
+    <string name="ls04be01pattern">@string/star</string>
+    <string name="ls04be02pattern">@string/truck</string>
+    <string name="ls04be03pattern">@string/truck</string>
+    <string name="ls04be04pattern">@string/star</string>
+    <string name="ls04be05pattern">@string/truck</string>
+    <string name="ls04be06pattern">@string/star</string>
+
+
+    <!--ls04bf answers-->
+    <string name="ls04bf01pattern">@string/blue</string>
+    <string name="ls04bf02pattern">@string/red</string>
+    <string name="ls04bf03pattern">@string/blue</string>
+    <string name="ls04bf04pattern">@string/red</string>
+    <string name="ls04bf05pattern">@string/red</string>
+    <string name="ls04bf06pattern">@string/blue</string>
+
+    <!--ls04bg answers-->
+    <string name="ls04bg01pattern">@string/bluestar</string>
+    <string name="ls04bg02pattern">@string/redtruck</string>
+    <string name="ls04bg03pattern">@string/redtruck</string>
+    <string name="ls04bg04pattern">@string/bluestar</string>
+    <string name="ls04bg05pattern">@string/redtruck</string>
+    <string name="ls04bg06pattern">@string/bluestar</string>
+    <string name="ls04bg07pattern">@string/bluestar</string>
+    <string name="ls04bg08pattern">@string/redtruck</string>
+    <string name="ls04bg09pattern">@string/bluestar</string>
+    <string name="ls04bg10pattern">@string/redtruck</string>
+    <string name="ls04bg11pattern">@string/bluestar</string>
+    <string name="ls04bg12pattern">@string/bluestar</string>
 
 
 

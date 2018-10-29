@@ -116,6 +116,7 @@
                         android:paddingEnd="20dp"
                         android:paddingStart="20dp"
                         android:text=""
+                        android:letterSpacing="50"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         tools:text="37" />

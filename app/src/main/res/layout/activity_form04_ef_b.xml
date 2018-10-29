@@ -23,7 +23,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_B">
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:animateLayoutChanges="true"
-        android:layoutDirection="rtl"
+        android:layoutDirection="ltr"
         android:orientation="vertical">
 
         <TextView
@@ -48,7 +48,175 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_B">
             android:text="@string/ls04ba"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@android:color/white" />
+        <!-- ls04ba01-->
+        <android.support.v7.widget.CardView
+            style="@style/cardView">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:text="@string/ls04baredstar"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="25dp">
+                    <Button
+                        android:id="@+id/ls04ba01a96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/other"
+                        android:onClick="processButton"/>
+                    <Button
+                        android:id="@+id/ls04ba01a01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/red"
+                        android:onClick="processButton"/>
+                    <Button
+                        android:id="@+id/ls04ba01a02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/blue"
+                        android:onClick="processButton" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/ls04ba01a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:text=""
+                    android:enabled="false"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="@string/red" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="25dp">
+
+                    <Button
+                        android:id="@+id/ls04ba01a99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        android:text="@string/ls04ignore"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <!-- ls04ba01b-->
+
+        <android.support.v7.widget.CardView
+            style="@style/cardView"
+            android:id="@+id/fldgrpls04ba01a">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:padding="5dp"
+                    android:text="@string/ls04baredstar"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="25dp">
+                    <Button
+                        android:id="@+id/ls04ba01b96"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/other"
+                        android:onClick="processButton"/>
+                    <Button
+                        android:id="@+id/ls04ba01b01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/red"
+                        android:onClick="processButton"/>
+                    <Button
+                        android:id="@+id/ls04ba01b02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:text="@string/blue"
+                        android:onClick="processButton" />
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/ls04ba01b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingEnd="20dp"
+                    android:paddingStart="20dp"
+                    android:text=""
+                    android:enabled="false"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="@string/red" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="25dp">
+
+                    <Button
+                        android:id="@+id/ls04ba01b99"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        android:text="@string/ls04ignore"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
 
         <TextView
             android:layout_width="match_parent"
