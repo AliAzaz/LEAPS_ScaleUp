@@ -121,7 +121,13 @@ public class Form01Enrolment extends AppCompatActivity {
         });
     }
 
-    public boolean checkingID(EditText idTXT, String sType) {
+    public void BtnIDValid() {
+
+//        checkingID(bi.ls01a04.getText().toString(),)
+
+    }
+
+    private boolean checkingID(EditText idTXT, String sType) {
         String txt = idTXT.getText().toString();
 
         try {
