@@ -121,7 +121,7 @@ public class Form01Enrolment extends AppCompatActivity {
         });
     }
 
-    public boolean checkingID(String idType, EditText idTXT, String sType) {
+    public boolean checkingID(EditText idTXT, String sType) {
         String txt = idTXT.getText().toString();
 
         try {
@@ -129,8 +129,8 @@ public class Form01Enrolment extends AppCompatActivity {
                 Toast.makeText(this, "Invalid Length!!", Toast.LENGTH_SHORT).show();
                 idTXT.setError("Invalid Length!!");
                 return false;
-            } else if (Integer.valueOf(txt) < 10100 || Integer.valueOf(txt) > 89903) {
-                Toast.makeText(this, "ID range must be 10100 - 89903!!", Toast.LENGTH_SHORT).show();
+            } else if (Integer.valueOf(txt) <= 10100 || Integer.valueOf(txt) > 89903) {
+                Toast.makeText(this, "ID range must be 10101 - 89903!!", Toast.LENGTH_SHORT).show();
                 idTXT.setError("ID range must be 10100 - 89903!!");
                 return false;
             } else if (!String.valueOf(txt.charAt(0)).equals(sType)) {
@@ -148,6 +148,38 @@ public class Form01Enrolment extends AppCompatActivity {
                 return false;
             }
 
+            String lstDigits = txt.substring(txt.length() - 2, txt.length());
+
+            if (lstDigits.equals("00")) {
+                Toast.makeText(this, "Last digits can't be 00!!", Toast.LENGTH_SHORT).show();
+                idTXT.setError("Invalid Cluster!!");
+                return false;
+            }
+
+            switch (Integer.valueOf(sType)) {
+                case 4:
+                    if (validateID(Integer.valueOf(sType), 11)) {
+                        Toast.makeText(this, "Last digits range must be > 00 && <= 11 !!", Toast.LENGTH_SHORT).show();
+                        idTXT.setError("Invalid last Digits!!");
+                        return false;
+                    }
+                case 6:
+                    if (validateID(Integer.valueOf(sType), 8)) {
+                        Toast.makeText(this, "Last digits range must be > 00 && <= 08 !!", Toast.LENGTH_SHORT).show();
+                        idTXT.setError("Invalid last Digits!!");
+                        return false;
+                    }
+                case 8:
+                    if (validateID(Integer.valueOf(sType), 3)) {
+                        Toast.makeText(this, "Last digits range must be > 00 && <= 03 !!", Toast.LENGTH_SHORT).show();
+                        idTXT.setError("Invalid last Digits!!");
+                        return false;
+                    }
+            }
+
+
+            return true;
+
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -155,8 +187,11 @@ public class Form01Enrolment extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        return false;
+    }
 
-        return true;
+    private boolean validateID(int digits, int max) {
+        return digits <= max;
     }
 
 
