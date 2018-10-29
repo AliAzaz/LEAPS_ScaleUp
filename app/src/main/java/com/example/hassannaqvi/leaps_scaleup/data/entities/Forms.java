@@ -139,11 +139,11 @@ public class Forms {
         this.clustercode = clustercode;
     }
 
-    public String getchildID() {
+    public String getChildID() {
         return childID;
     }
 
-    public void setchildID(String childID) {
+    public void setChildID(String childID) {
         this.childID = childID;
     }
 

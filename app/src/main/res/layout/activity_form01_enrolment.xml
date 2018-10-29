@@ -201,7 +201,6 @@
 
                 </android.support.v7.widget.CardView>
 
-
                 <LinearLayout
                     android:id="@+id/fldgrpls01a07"
                     android:layout_width="match_parent"
