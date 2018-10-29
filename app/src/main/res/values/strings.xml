@@ -649,7 +649,7 @@
     <string name="ls05c07"> ڇا ٻار اسيسمنٽ دوران تجسس ۽ دلچسپي ڏيکاري؟ </string>
 
 
-    <!-- Form 4 (EF) -->
+    <!-- Form 4 (EF) A-->
     <string name="ls04a">CORSI BLOCK TAPPING GAME SCORING SHEET</string>
     <string name="ls04asub1">Practice Trial</string>
     <string name="ls04aainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
@@ -664,11 +664,127 @@
     <string name="levelSix">Level 6</string>
     <string name="levelSeven">Level 7</string>
     <string name="levelEight">Level 8</string>
+    <string name="ls04aa01pattern">37</string>
+    <string name="ls04aa02pattern">64</string>
+    <string name="ls04aa03pattern">37</string>
+    <string name="ls04aa04pattern">64</string>
+    <string name="ls04ab01pattern">57</string>
+    <string name="ls04ab02pattern">21</string>
+    <string name="ls04ab03pattern">82</string>
+    <string name="ls04ab04pattern">436</string>
+    <string name="ls04ab05pattern">381</string>
+    <string name="ls04ab06pattern">527</string>
+    <string name="ls04ab07pattern">3249</string>
+    <string name="ls04ab08pattern">1765</string>
+    <string name="ls04ab09pattern">3571</string>
+    <string name="ls04ab10pattern">34875</string>
+    <string name="ls04ab11pattern">81536</string>
+    <string name="ls04ab12pattern">64529</string>
 
+
+    <!-- Form 4 (EF) B-->
     <string name="ls04b">DCCS SCORING SHEET</string>
-    
-    
-    
+    <string name="ls04bsub1">SEPARATED DCCS</string>
+    <string name="ls04ba">SEPARATED PRACTICE TRIALS</string>
+    <string name="ls04baredstar"> (ڳاڙهو تارو) هاڻي هي ڳاڙهو آهي، هي ڪيڏانهن ويندو؟ </string>
+    <string name="ls04babluetruck"> (نيري ٽرڪ) هڪ نيرو آهي هي ڪيڏانهن ويندي؟ </string>
+
+    <string name="ls04bb">SEPARATED TEST TRIALS- COLOR</string>
+    <string name="ls04bbredstar"> (ڳاڙهو تارو) هي ڳاڙهو آهي </string>
+    <string name="ls04bbbluetruck"> (نيري ٽرڪ) هي نيرو آهي </string>
+
+    <string name="ls04bc">SEPARATED TEST TRIALS-SHAPE</string>
+    <string name="ls04bcbluetruck"> (نيري ٽرڪ) هي ٽرڪ آهي </string>
+    <string name="ls04bcredstar"> (ڳاڙهو تارو) هي تارو آهي </string>
+
+    <string name="ls04bsub2">INTEGRATED DCCS</string>
+    <string name="ls04bd">INTEGRATED PRACTICE TRIALS</string>
+    <string name="ls04bdbluetruck"> (نيري ٽرڪ) هڪ ٽرڪ آهي هي ڪيڏانهن ويندي؟ </string>
+    <string name="ls04bdredstar"> (ڳاڙهو تارو) هاڻي هي تارو آهي، هي ڪيڏانهن ويندو؟ </string>
+
+    <string name="ls04be">INTEGRATED TEST TRIALS- SHAPE</string>
+    <string name="ls04bestar"> (ڳاڙهو تارو) هي تارو آهي </string>
+    <string name="ls04betruck"> (نيري ٽرڪ) هي ٽرڪ آهي </string>
+
+    <string name="ls04bf">INTEGRATED TEST TRIALS- COLOR</string>
+    <string name="ls04bfbluetruck"> (نيري ٽرڪ) هي نيرو آهي </string>
+    <string name="ls04bfredstar"> (ڳاڙهو تارو) هي ڳاڙهو آهي </string>
+
+    <string name="ls04bg">BORDER VERSION TEST TRIALS </string>
+    <string name="ls04bgnoredborder"> بغير بارڊر وارو ڳاڙهو تارو </string>
+    <string name="ls04bgnoblueborder"> بغير بارڊر واروي نيري ٽرڪ </string>
+    <string name="ls04bgredborder"> بارڊر وارو ڳاڙهو تارو </string>
+    <string name="ls04bgblueborder"> بارڊر واروي نيري ٽرڪ </string>
+    <string name="blue">نيرو</string>
+    <string name="red">ڳاڙهو</string>
+    <string name="star"> تارو</string>
+    <string name="truck"> ٽرڪ</string>
+    <string name="bluestar">نيرو تارو</string>
+    <string name="redtruck">ڳاڙهي ٽرڪ </string>
+
+    <!--ls04ba answers-->
+    <string name="ls04ba01pattern">@string/red</string>
+    <string name="ls04ba02pattern">@string/blue</string>
+
+    <!--ls04bb answers-->
+    <string name="ls04bb01pattern">@string/red</string>
+    <string name="ls04bb02pattern">@string/blue</string>
+    <string name="ls04bb03pattern">@string/blue</string>
+    <string name="ls04bb04pattern">@string/red</string>
+    <string name="ls04bb05pattern">@string/red</string>
+    <string name="ls04bb06pattern">@string/blue</string>
+
+    <!--ls04bc answers-->
+    <string name="ls04bc01pattern">@string/truck</string>
+    <string name="ls04bc02pattern">@string/star</string>
+    <string name="ls04bc03pattern">@string/truck</string>
+    <string name="ls04bc04pattern">@string/truck</string>
+    <string name="ls04bc05pattern">@string/star</string>
+    <string name="ls04bc06pattern">@string/star</string>
+
+
+    <!--ls04bd answers-->
+    <string name="ls04bd01pattern">@string/truck</string>
+    <string name="ls04bd02pattern">@string/star</string>
+
+    <!--ls04be answers-->
+    <string name="ls04be01pattern">@string/star</string>
+    <string name="ls04be02pattern">@string/truck</string>
+    <string name="ls04be03pattern">@string/truck</string>
+    <string name="ls04be04pattern">@string/star</string>
+    <string name="ls04be05pattern">@string/truck</string>
+    <string name="ls04be06pattern">@string/star</string>
+
+
+    <!--ls04bf answers-->
+    <string name="ls04bf01pattern">@string/blue</string>
+    <string name="ls04bf02pattern">@string/red</string>
+    <string name="ls04bf03pattern">@string/blue</string>
+    <string name="ls04bf04pattern">@string/red</string>
+    <string name="ls04bf05pattern">@string/red</string>
+    <string name="ls04bf06pattern">@string/blue</string>
+
+    <!--ls04bg answers-->
+    <string name="ls04bg01pattern">@string/bluestar</string>
+    <string name="ls04bg02pattern">@string/redtruck</string>
+    <string name="ls04bg03pattern">@string/redtruck</string>
+    <string name="ls04bg04pattern">@string/bluestar</string>
+    <string name="ls04bg05pattern">@string/redtruck</string>
+    <string name="ls04bg06pattern">@string/bluestar</string>
+    <string name="ls04bg07pattern">@string/bluestar</string>
+    <string name="ls04bg08pattern">@string/redtruck</string>
+    <string name="ls04bg09pattern">@string/bluestar</string>
+    <string name="ls04bg10pattern">@string/redtruck</string>
+    <string name="ls04bg11pattern">@string/bluestar</string>
+    <string name="ls04bg12pattern">@string/bluestar</string>
+
+
+    <!--Form 04 EF (D)-->
+    <string name="ls04dsub1">Practice Trial</string>
+    <string name="ls04dainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
+    <string name="ls04dsub2">Test Trial</string>
+    <string name="ls04dbinstruction">empty</string>
+
     <!--Form 14-->
     <string name="ls14Heading">Protocol Deviation</string>
     <string name="ls14instruction">باني ڪري اڀياس جي دوران جيڪڏهن ڪو پروٽوڪول  ڊيويشن ٿئي ٿو ته هن فارم ۾ نوٽ ڪريو. پروٽوڪول جو مطلب ته ا اها اسسيسمينٽ جيڪا ڏنل خاص هدايتن موجب نه ڪئي وئي هجي</string>
@@ -686,3 +802,6 @@
 
 
 </resources>
+
+
+

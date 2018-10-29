@@ -61,10 +61,7 @@
             <!--1-->
             <!--ls04aa01a-->
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -84,8 +81,7 @@
                             android:layout_margin="3dp"
                             android:layout_weight="1"
                             android:text="3"
-                            android:textOff="3"
-                            android:textOn="3" />
+                            android:onClick="processButton" />
 
                         <Button
                             android:id="@+id/ls04aa01a2"
@@ -94,17 +90,19 @@
                             android:layout_margin="3dp"
                             android:layout_weight="1"
                             android:text="7"
-                            android:textOff="7"
-                            android:textOn="7" />
+                            android:onClick="processButton"/>
 
-                        <ImageButton
+                        <Button
                             android:id="@+id/ls04aa01ax"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel"
-                            android:tint="@color/red" />
+                            android:text="X"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:onClick="processButton" />
                     </LinearLayout>
 
 
@@ -118,6 +116,7 @@
                         android:paddingEnd="20dp"
                         android:paddingStart="20dp"
                         android:text=""
+                        android:letterSpacing="50"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         tools:text="37" />
@@ -144,11 +143,8 @@
             </android.support.v7.widget.CardView>
             <!--ls04aa01b-->
             <android.support.v7.widget.CardView
-                android:id="@+id/fldgrpls04aa01b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:id="@+id/fldgrpls04aa01a"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -168,8 +164,7 @@
                             android:layout_margin="3dp"
                             android:layout_weight="1"
                             android:text="3"
-                            android:textOff="3"
-                            android:textOn="3" />
+                            android:onClick="processButton"/>
 
                         <Button
                             android:id="@+id/ls04aa01b2"
@@ -178,17 +173,19 @@
                             android:layout_margin="3dp"
                             android:layout_weight="1"
                             android:text="7"
-                            android:textOff="7"
-                            android:textOn="7" />
-
-                        <ImageButton
+                            android:onClick="processButton"/>
+                        <Button
                             android:id="@+id/ls04aa01bx"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel"
-                            android:tint="@color/red" />
+                            android:text="X"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:onClick="processButton" />
+
                     </LinearLayout>
 
 
@@ -230,10 +227,7 @@
             <!--2-->
             <!--ls04aa02a-->
             <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -252,6 +246,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="processButton"
                             android:text="6" />
 
                         <Button
@@ -259,17 +254,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
+                            android:onClick="processButton"
                             android:layout_weight="1"
                             android:text="4" />
-
-                        <ImageButton
+                        <Button
                             android:id="@+id/ls04aa02ax"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel"
-                            android:tint="@color/red" />
+                            android:text="X"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:onClick="processButton" />
+
                     </LinearLayout>
 
 
@@ -309,11 +308,8 @@
             </android.support.v7.widget.CardView>
             <!--ls04aa02b-->
             <android.support.v7.widget.CardView
-                android:id="@+id/fldgrpls04aa02b"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:id="@+id/fldgrpls04aa02a"
+                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -332,6 +328,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="processButton"
                             android:text="6" />
 
                         <Button
@@ -339,17 +336,21 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
+                            android:onClick="processButton"
                             android:layout_weight="1"
                             android:text="4" />
-
-                        <ImageButton
+                        <Button
                             android:id="@+id/ls04aa02bx"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel"
-                            android:tint="@color/red" />
+                            android:text="X"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:onClick="processButton" />
+
                     </LinearLayout>
 
 
@@ -396,11 +397,7 @@
 
                 <!--3-->
                 <!--ls04aa03a-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -419,6 +416,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="3" />
 
                             <Button
@@ -427,16 +425,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="7" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04aa03ax"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="processButton" />
+
                         </LinearLayout>
 
 
@@ -476,11 +478,8 @@
                 </android.support.v7.widget.CardView>
                 <!--ls04aa03b-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/fldgrpls04aa03b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:id="@+id/fldgrpls04aa03a"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -498,6 +497,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
+                                android:onClick="processButton"
                                 android:layout_weight="1"
                                 android:text="3" />
 
@@ -507,16 +507,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="7" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04aa03bx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="processButton" />
+
                         </LinearLayout>
 
 
@@ -557,11 +561,7 @@
 
                 <!--4-->
                 <!--ls04aa04a-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -579,6 +579,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
+                                android:onClick="processButton"
                                 android:layout_weight="1"
                                 android:text="6" />
 
@@ -587,17 +588,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
+                                android:onClick="processButton"
                                 android:layout_weight="1"
                                 android:text="4" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04aa04ax"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="processButton" />
+
                         </LinearLayout>
 
 
@@ -637,11 +642,8 @@
                 </android.support.v7.widget.CardView>
                 <!--ls04aa04b-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/fldgrpls04aa04b"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:id="@+id/fldgrpls04aa04a"
+                    style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -660,6 +662,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="6" />
 
                             <Button
@@ -668,16 +671,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="4" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04aa04bx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="processButton" />
+
                         </LinearLayout>
 
 
@@ -778,6 +785,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="levelBasedProcess"
                             android:text="5" />
 
                         <Button
@@ -786,16 +794,20 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="levelBasedProcess"
                             android:text="7" />
-
-                        <ImageButton
+                        <Button
                             android:id="@+id/ls04ab01x"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel"
-                            android:tint="@color/red" />
+                            android:text="X"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:onClick="levelBasedProcess" />
+
                     </LinearLayout>
 
 
@@ -857,6 +869,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="levelBasedProcess"
                             android:text="2" />
 
                         <Button
@@ -865,16 +878,20 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="levelBasedProcess"
                             android:text="1" />
-
-                        <ImageButton
+                        <Button
                             android:id="@+id/ls04ab02x"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel"
-                            android:tint="@color/red" />
+                            android:text="X"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:onClick="levelBasedProcess" />
+
                     </LinearLayout>
 
 
@@ -936,6 +953,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="levelBasedProcess"
                             android:text="8" />
 
                         <Button
@@ -944,16 +962,21 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
+                            android:onClick="levelBasedProcess"
                             android:text="2" />
-
-                        <ImageButton
+                        <Button
                             android:id="@+id/ls04ab03x"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:src="@android:drawable/ic_menu_close_clear_cancel"
-                            android:tint="@color/red" />
+                            android:text="X"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:onClick="levelBasedProcess" />
+
+
                     </LinearLayout>
 
 
@@ -1012,11 +1035,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
                 <!--ls04ab04-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1035,6 +1054,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="4" />
 
                             <Button
@@ -1043,6 +1063,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="3" />
 
                             <Button
@@ -1051,16 +1072,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="6" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab04x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1099,11 +1124,7 @@
 
                 </android.support.v7.widget.CardView>
                 <!--ls04ab05-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1122,6 +1143,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="3" />
 
                             <Button
@@ -1130,6 +1152,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="8" />
 
                             <Button
@@ -1137,17 +1160,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
+                                android:onClick="levelBasedProcess"
                                 android:layout_weight="1"
                                 android:text="1" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab05x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1186,11 +1213,7 @@
 
                 </android.support.v7.widget.CardView>
                 <!--ls04ab06-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1209,6 +1232,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="5" />
 
                             <Button
@@ -1217,6 +1241,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="2" />
 
                             <Button
@@ -1225,16 +1250,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="7" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab06x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1294,11 +1323,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
                 <!--ls04ab07-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1317,6 +1342,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="3" />
 
                             <Button
@@ -1325,6 +1351,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="2" />
 
                             <Button
@@ -1333,6 +1360,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="4" />
 
                             <Button
@@ -1341,16 +1369,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="9" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab07x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1389,11 +1421,7 @@
 
                 </android.support.v7.widget.CardView>
                 <!--ls04ab08-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1412,6 +1440,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="1" />
 
                             <Button
@@ -1420,6 +1449,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="7" />
 
                             <Button
@@ -1428,6 +1458,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="6" />
 
                             <Button
@@ -1436,16 +1467,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="5" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab08x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1484,11 +1519,7 @@
 
                 </android.support.v7.widget.CardView>
                 <!--ls04ab09-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1507,6 +1538,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="3" />
 
                             <Button
@@ -1515,6 +1547,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="5" />
 
                             <Button
@@ -1523,6 +1556,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="7" />
 
                             <Button
@@ -1531,16 +1565,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="1" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab09x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1600,11 +1638,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
                 <!--ls04ab10-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1623,6 +1657,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="3" />
 
                             <Button
@@ -1631,6 +1666,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="4" />
 
                             <Button
@@ -1639,6 +1675,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="8" />
 
                             <Button
@@ -1647,6 +1684,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="7" />
 
                             <Button
@@ -1654,17 +1692,21 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
+                                android:onClick="levelBasedProcess"
                                 android:layout_weight="1"
                                 android:text="5" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab10x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1703,11 +1745,7 @@
 
                 </android.support.v7.widget.CardView>
                 <!--ls04ab11-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+               <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1726,6 +1764,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="8" />
 
                             <Button
@@ -1734,6 +1773,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="1" />
 
                             <Button
@@ -1742,6 +1782,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="5" />
 
                             <Button
@@ -1750,6 +1791,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="3" />
 
                             <Button
@@ -1758,16 +1800,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="6" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab11x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
@@ -1806,11 +1852,7 @@
 
                 </android.support.v7.widget.CardView>
                 <!--ls04ab12-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1829,6 +1871,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="6" />
 
                             <Button
@@ -1837,6 +1880,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="4" />
 
                             <Button
@@ -1845,6 +1889,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="5" />
 
                             <Button
@@ -1853,6 +1898,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="2" />
 
                             <Button
@@ -1861,16 +1907,20 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
                                 android:text="9" />
-
-                            <ImageButton
+                            <Button
                                 android:id="@+id/ls04ab12x"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:src="@android:drawable/ic_menu_close_clear_cancel"
-                                android:tint="@color/red" />
+                                android:text="X"
+                                android:textSize="20dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/red"
+                                android:onClick="levelBasedProcess" />
+
                         </LinearLayout>
 
 
