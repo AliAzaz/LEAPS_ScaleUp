@@ -420,6 +420,7 @@
                     <android.support.v7.widget.CardView
                         android:layout_margin="@dimen/cardview_compat_inset_shadow"
                         android:layout_weight="1"
+                        android:onClick="@{() -> callback.openDB()}"
                         android:layout_width="0dp"
                         android:layout_height="120dp">
 

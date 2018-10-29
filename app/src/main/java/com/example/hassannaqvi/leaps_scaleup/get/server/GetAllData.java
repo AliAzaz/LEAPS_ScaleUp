@@ -1,17 +1,9 @@
-package com.example.hassannaqvi.leaps_scaleup.get;
+package com.example.hassannaqvi.leaps_scaleup.get.server;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
-
-import com.example.hassannaqvi.leaps_scaleup.contracts.LHWsContract;
-import com.example.hassannaqvi.leaps_scaleup.contracts.TehsilContract;
-import com.example.hassannaqvi.leaps_scaleup.contracts.UCsContract;
-import com.example.hassannaqvi.leaps_scaleup.contracts.UsersContract;
-import com.example.hassannaqvi.leaps_scaleup.contracts.VillagesContract;
-import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
-import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,13 +22,13 @@ public class GetAllData extends AsyncTask<String, String, String> {
     private String TAG = "";
     private Context mContext;
     private ProgressDialog pd;
+    private String syncClass, URL;
 
-    private String syncClass;
 
-
-    public GetAllData(Context context, String syncClass) {
+    public GetAllData(Context context, String syncClass, String url) {
         mContext = context;
         this.syncClass = syncClass;
+        this.URL = url;
 
         TAG = "Get" + syncClass;
     }
@@ -58,28 +50,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
         URL url = null;
         try {
-            switch (syncClass) {
-                case "EnumBlock":
-                    // url = new URL(MainApp._HOST_URL + EnumBlockTable._URI);
-                    break;
-                case "User":
-                    url = new URL(MainApp._HOST_URL + UsersContract.UsersTable._URI);
-                    break;
-                case "LHW":
-                    url = new URL(MainApp._HOST_URL + LHWsContract.singleLHWs._URI);
-                    break;
-                case "Tehsil":
-                    url = new URL(MainApp._HOST_URL + TehsilContract.singleTehsil._URI);
-                    break;
-                case "UCs":
-                    url = new URL(MainApp._HOST_URL + UCsContract.singleUCs._URI);
-                    break;
-                case "Villages":
-                    url = new URL(MainApp._HOST_URL + VillagesContract.singleVillages._URI);
-                    break;
-
-            }
-
+            url = new URL(URL);
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setReadTimeout(10000 /* milliseconds */);
             urlConnection.setConnectTimeout(15000 /* milliseconds */);
@@ -114,28 +85,15 @@ public class GetAllData extends AsyncTask<String, String, String> {
         if (result != null) {
             String json = result;
             if (json.length() > 0) {
-                DatabaseHelper db = new DatabaseHelper(mContext);
                 try {
                     JSONArray jsonArray = new JSONArray(json);
 
                     switch (syncClass) {
-                        case "EnumBlock":
-                            //     db.syncEnumBlocks(jsonArray);
-                            break;
                         case "User":
-                            db.syncUsers(jsonArray);
+                            GetSyncFncs.syncUsers(jsonArray);
                             break;
-                        case "LHW":
-                            db.syncLHWs(jsonArray);
-                            break;
-                        case "Tehsil":
-                            db.syncTehsil(jsonArray);
-                            break;
-                        case "UCs":
-                            db.syncUCs(jsonArray);
-                            break;
-                        case "Villages":
-                            db.syncVillages(jsonArray);
+                        case "Clusters":
+                            GetSyncFncs.syncClusters(jsonArray);
                             break;
                     }
 

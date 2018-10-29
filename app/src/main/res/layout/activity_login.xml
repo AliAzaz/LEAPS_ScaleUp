@@ -16,6 +16,7 @@
         android:background="@drawable/background"
         android:fitsSystemWindows="true"
         android:gravity="center_horizontal"
+        android:layoutDirection="rtl"
         android:orientation="vertical"
         tools:context=".ui.activities.LoginActivity">
 
@@ -37,10 +38,10 @@
                 android:id="@+id/email_login_form"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="72dp"
                 android:layout_marginLeft="72dp"
-                android:layout_marginRight="72dp"
                 android:layout_marginTop="50dp"
+                android:layout_marginRight="72dp"
+                android:layout_marginBottom="72dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -92,13 +93,12 @@
                     android:orientation="vertical">
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/email"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_weight="0.99"
-                        android:layoutDirection="ltr"
                         android:drawableStart="@drawable/ic_person"
                         android:drawablePadding="8dp"
                         android:hint="Username/Code"
@@ -106,9 +106,10 @@
                         android:imeActionLabel="@string/action_sign_in_short"
                         android:imeOptions="actionUnspecified"
                         android:inputType="textEmailAddress"
+                        android:layoutDirection="ltr"
                         android:maxLines="1"
-                        android:paddingEnd="4dp"
                         android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
                         android:singleLine="true"
                         android:textColor="@color/black"
                         android:textSize="18sp">
@@ -120,19 +121,17 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                       >
+                        android:layout_marginTop="5dp">
 
 
                         <EditText
-                            style="@style/textInput"
                             android:id="@+id/password"
+                            style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentStart="true"
                             android:layout_alignParentTop="true"
                             android:layout_weight="0.99"
-                            android:layoutDirection="ltr"
                             android:drawableStart="@drawable/ic_lock_close"
                             android:drawablePadding="2dp"
                             android:hint="@string/prompt_password"
@@ -140,22 +139,23 @@
                             android:imeActionLabel="@string/action_sign_in_short"
                             android:imeOptions="actionUnspecified"
                             android:inputType="textPassword"
+                            android:layoutDirection="ltr"
                             android:maxLines="1"
-                            android:paddingEnd="4dp"
                             android:paddingStart="4dp"
+                            android:paddingEnd="4dp"
                             android:singleLine="true"
                             android:textColor="@color/black"
                             android:textSize="18sp" />
 
                         <Button
-                            android:layout_marginEnd="20dp"
-                            android:layout_alignParentRight="true"
-                            android:layout_centerVertical="true"
                             android:id="@+id/showPassword"
                             style="?android:attr/borderlessButtonStyle"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
                             android:layout_marginTop="3dp"
+                            android:layout_marginRight="15dp"
                             android:background="@drawable/round_button"
                             android:drawableStart="@drawable/ic_remove_red_eye_black_24dp"
                             android:gravity="center"

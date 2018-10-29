@@ -25,16 +25,11 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.contracts.FamilyMembersContract;
-import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
-import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
-import com.example.hassannaqvi.leaps_scaleup.core.GetAllDBData;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
-import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
-import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityMainBinding;
-import com.example.hassannaqvi.leaps_scaleup.sync.SyncAllData;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetAllDBData;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -49,6 +44,8 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
 import im.dino.dbinspector.activities.DbInspectorActivity;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 
 public class MainActivity extends Activity {
@@ -67,8 +64,6 @@ public class MainActivity extends Activity {
     private String rSumText = "";
     ActivityMainBinding mainBinding;
     public static String[] usersArray;
-
-    public static AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,9 +130,6 @@ public class MainActivity extends Activity {
 //        Binding setting
 //        DatabaseHelper db = new DatabaseHelper(this);
 
-//        Room DB instantiate
-        db = AppDatabase.getDatabase(getApplicationContext());
-
 //        Admin checking
         if (MainApp.admin) {
             mainBinding.adminsec.setVisibility(View.VISIBLE);
@@ -145,8 +137,8 @@ public class MainActivity extends Activity {
             Collection<Forms> todaysForms = null;
             Collection<Forms> unsyncedForms = null;
             try {
-                todaysForms = (Collection<Forms>) new GetAllDBData(db).execute(FormsDAO.class.getName(), "formsDao", "getUnSyncedForms").get();
-                unsyncedForms = (Collection<Forms>) new GetAllDBData(db).execute(FormsDAO.class.getName(), "formsDao", "getUnSyncedForms").get();
+                unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms", 0).execute().get();
+                todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms", 1).execute(dtToday).get();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -227,7 +219,7 @@ public class MainActivity extends Activity {
 
 
         try {
-            Collection<?> data = new GetAllDBData(db).execute(FormsDAO.class.getName(), "formsDao", "getUnSyncedForms").get();
+            Collection<?> data = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms", 0).execute().get();
             if (data != null) {
                 Toast.makeText(this, "" + data.size(), Toast.LENGTH_SHORT).show();
             }
@@ -284,6 +276,7 @@ public class MainActivity extends Activity {
             builder.show();
         }
     }
+
     public void openForm01b() {
 //        final Intent oF = new Intent(MainActivity.this, StartActivity.class);
         final Intent oF = new Intent(MainActivity.this, Form01Enrolment.class);
@@ -326,7 +319,9 @@ public class MainActivity extends Activity {
 
             builder.show();
         }
-    }public void openForm02() {
+    }
+
+    public void openForm02() {
 //        final Intent oF = new Intent(MainActivity.this, StartActivity.class);
         final Intent oF = new Intent(MainActivity.this, Form01Enrolment.class);
 
@@ -369,19 +364,28 @@ public class MainActivity extends Activity {
             builder.show();
         }
     }
+
     public void openAnthro() {
-        startActivity(new Intent(this,Form6AnthroActivity.class));
+        startActivity(new Intent(this, Form6AnthroActivity.class));
     }
+
     public void openYouthEnrol() {
-        startActivity(new Intent(MainActivity.this,Form07Activity.class));
+        startActivity(new Intent(MainActivity.this, Form07Activity.class));
     }
+
     public void openEF() {
         Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
     }
+
     public void openYouthEF() {
-        startActivity(new Intent(MainActivity.this,Form05IdBAActivity.class));
+        startActivity(new Intent(MainActivity.this, Form05IdBAActivity.class));
 
 //        Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
+    }
+
+    public void openDB() {
+        Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
+        startActivity(dbmanager);
     }
 
     public void testGPS(View v) {
@@ -468,7 +472,7 @@ public class MainActivity extends Activity {
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
-            DatabaseHelper db = new DatabaseHelper(this);
+//            DatabaseHelper db = new DatabaseHelper(this);
 
             Toast.makeText(getApplicationContext(), "Under Construction", Toast.LENGTH_SHORT).show();
         /*    Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
@@ -513,7 +517,7 @@ public class MainActivity extends Activity {
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            Toast.makeText(this,"Under Development",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Under Development", Toast.LENGTH_SHORT).show();
 
             // Sync Random
             /*new GetBLRandom(this).execute();*/

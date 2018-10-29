@@ -1,4 +1,4 @@
-package com.example.hassannaqvi.leaps_scaleup.core;
+package com.example.hassannaqvi.leaps_scaleup.RMOperations;
 
 import android.os.AsyncTask;
 
@@ -6,25 +6,25 @@ import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collection;
 
 /**
  * Created by openm on 19-Jul-18.
  */
 
-public class GetIndDBData extends AsyncTask<String, Void, Collection<?>> {
+public class crudOperations extends AsyncTask<String, Void, Long> {
 
     AppDatabase db;
+    Object forms;
 
-    public GetIndDBData(AppDatabase db) {
+    public crudOperations(AppDatabase db, Object forms) {
         this.db = db;
+        this.forms = forms;
     }
 
     @Override
-    protected Collection<?> doInBackground(String... fnNames) {
+    protected Long doInBackground(String... fnNames) {
 
-        Collection<?> curData = new ArrayList<>();
+        Long longID = new Long(0);
 
         try {
 
@@ -37,7 +37,8 @@ public class GetIndDBData extends AsyncTask<String, Void, Collection<?>> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(fnNames[2])) {
 
-                            curData = (Collection<?>) fnClass.getMethod(method2.getName()).invoke(db.getClass().getMethod(fnNames[1]).invoke(db));
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
+                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), forms)));
 
                             break;
                         }
@@ -46,6 +47,7 @@ public class GetIndDBData extends AsyncTask<String, Void, Collection<?>> {
                     break;
                 }
             }
+
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {
@@ -56,6 +58,7 @@ public class GetIndDBData extends AsyncTask<String, Void, Collection<?>> {
             e.printStackTrace();
         }
 
-        return curData;
+
+        return longID;
     }
 }

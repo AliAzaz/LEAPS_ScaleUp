@@ -63,6 +63,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
+            android:name=".ui.activities.InfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+        <activity
             android:name=".ui.activities.Form01Enrolment"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
@@ -123,7 +127,8 @@
             android:theme="@style/AppTheme">
 
         </activity>
-        <activity android:name=".ui.activities.Form04_EF_B"
+        <activity
+            android:name=".ui.activities.Form04_EF_B"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"></activity>
     </application>

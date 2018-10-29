@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm05IdBABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -17,6 +17,8 @@ import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form05IdBAActivity extends AppCompatActivity {
 
@@ -58,7 +60,7 @@ public class Form05IdBAActivity extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(MainActivity.db, fc_4_5).execute().get();
+            Long longID = new crudOperations(db, fc_4_5).execute().get();
 
             if (longID != 0) {
                 fc_4_5.setId(longID.intValue());

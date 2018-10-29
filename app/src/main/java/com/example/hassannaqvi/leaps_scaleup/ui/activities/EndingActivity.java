@@ -7,13 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityEndingBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 
 public class EndingActivity extends AppCompatActivity {
@@ -80,8 +82,8 @@ public class EndingActivity extends AppCompatActivity {
     private boolean UpdateDB() {
         try {
 
-//            Long longID = new crudOperations(MainActivity.db, StartActivity.fc).execute().get();
-            Long longID = new crudOperations(MainActivity.db, Form01Enrolment.fc).execute().get();
+//            Long longID = new crudOperations(db, StartActivity.fc).execute().get();
+            Long longID = new crudOperations(db, Form01Enrolment.fc).execute().get();
             return longID == 1;
 
         } catch (InterruptedException e) {

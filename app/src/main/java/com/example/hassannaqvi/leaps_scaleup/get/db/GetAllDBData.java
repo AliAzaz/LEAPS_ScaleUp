@@ -1,4 +1,4 @@
-package com.example.hassannaqvi.leaps_scaleup.core;
+package com.example.hassannaqvi.leaps_scaleup.get.db;
 
 import android.os.AsyncTask;
 
@@ -13,16 +13,22 @@ import java.util.Collection;
  * Created by openm on 19-Jul-18.
  */
 
-public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
+public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
 
     AppDatabase db;
+    String DAOclsName, DAOAbsClsFnc, DAOFnc;
+    int typeData;
 
-    public GetAllDBData(AppDatabase db) {
+    public GetAllDBData(AppDatabase db, String DAOclsName, String DAOAbsClsFnc, String DAOFnc, int typeData) {
         this.db = db;
+        this.DAOclsName = DAOclsName;
+        this.DAOAbsClsFnc = DAOAbsClsFnc;
+        this.DAOFnc = DAOFnc;
+        this.typeData = typeData;
     }
 
     @Override
-    protected Collection<?> doInBackground(Object... fnNames) {
+    protected Collection<?> doInBackground(String... fnNames) {
 
         Collection<?> curData = new ArrayList<>();
 
@@ -30,12 +36,12 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
 
             Method[] fn = db.getClass().getDeclaredMethods();
             for (Method method : fn) {
-                if (method.getName().equals(fnNames[1])) {
+                if (method.getName().equals(DAOAbsClsFnc)) {
 
-                    Class<?> fnClass = Class.forName(fnNames[0].toString());
+                    Class<?> fnClass = Class.forName(DAOclsName);
 
                     for (Method method2 : fnClass.getDeclaredMethods()) {
-                        if (method2.getName().equals(fnNames[2].toString())) {
+                        if (method2.getName().equals(DAOFnc)) {
 
                             /*String arg = "";
                             if (fnNames[3] != null) {
@@ -55,8 +61,16 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
                                 break;
                             }*/
 
-                            curData = (Collection<?>) fnClass.getMethod(method2.getName())
-                                    .invoke(db.getClass().getMethod(fnNames[1].toString()).invoke(db));
+                            switch (typeData) {
+                                case 1:
+                                    curData = (Collection<?>) fnClass.getMethod(method2.getName())
+                                            .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db), fnNames[0]);
+                                    break;
+                                default:
+                                    curData = (Collection<?>) fnClass.getMethod(method2.getName())
+                                            .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db));
+                                    break;
+                            }
 
                             break;
                         }

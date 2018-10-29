@@ -378,11 +378,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } catch (Exception e) {
         }
     }
-    public void syncLHWs(JSONArray LHWslist) {
+
+    public void syncClusters(JSONArray Clusterslist) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(LHWsContract.singleLHWs.TABLE_NAME, null, null);
         try {
-            JSONArray jsonArray = LHWslist;
+            JSONArray jsonArray = Clusterslist;
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject jsonObjectCC = jsonArray.getJSONObject(i);
 

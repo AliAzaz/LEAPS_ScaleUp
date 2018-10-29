@@ -33,10 +33,11 @@ import java.util.Date;
 public class MainApp extends Application {
 
 
-    public static final String _IP = "43.245.131.159"; // Test PHP server
+    //    public static final String _IP = "43.245.131.159"; // Test PHP server
+    public static final String _IP = "f49461"; // Test PHP server
     public static final Integer _PORT = 8080; // Port - with colon (:)
-    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp-pishin/api/";
-    // public static final String TEST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp-pishin/api/";
+    public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/api/";
+    // public static final String TEST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/api/";
 
     public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp_recruit_form/app/app-debug.apk";
 
@@ -74,7 +75,7 @@ public class MainApp extends Application {
     public static String versionName;
     public static String[] loginMem;
     public static String userName2 = "0000";
-    public static int ucCode = 0;
+    public static int round = 1;
     public static int tehsilCode = 0;
     public static int villageCode = 0;
     public static int lhwCode = 0;

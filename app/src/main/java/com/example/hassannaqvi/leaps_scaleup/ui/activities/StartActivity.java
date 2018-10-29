@@ -9,11 +9,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 
 import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -119,7 +121,7 @@ public class StartActivity extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(MainActivity.db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
+            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
 
             if (longID != 0) {
                 fc.setId(longID.intValue());

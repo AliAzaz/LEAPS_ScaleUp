@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm05IdBBBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -19,6 +19,8 @@ import org.json.JSONObject;
 
 import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form05IdBBActivity extends AppCompatActivity {
 
@@ -56,7 +58,7 @@ public class Form05IdBBActivity extends AppCompatActivity {
     private boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(MainActivity.db, Form05IdBAActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, Form05IdBAActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
 
         } catch (InterruptedException e) {

@@ -1,4 +1,4 @@
-package com.example.hassannaqvi.leaps_scaleup.core;
+package com.example.hassannaqvi.leaps_scaleup.RMOperations;
 
 import android.os.AsyncTask;
 
@@ -11,14 +11,12 @@ import java.lang.reflect.Method;
  * Created by openm on 19-Jul-18.
  */
 
-public class crudOperations extends AsyncTask<String, Void, Long> {
+public class syncOperations extends AsyncTask<String, Void, Long> {
 
     AppDatabase db;
-    Object forms;
 
-    public crudOperations(AppDatabase db, Object forms) {
+    public syncOperations(AppDatabase db) {
         this.db = db;
-        this.forms = forms;
     }
 
     @Override
@@ -37,8 +35,8 @@ public class crudOperations extends AsyncTask<String, Void, Long> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(fnNames[2])) {
 
-                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
-                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), forms)));
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName())
+                                    .invoke(db.getClass().getMethod(fnNames[1]).invoke(db))));
 
                             break;
                         }

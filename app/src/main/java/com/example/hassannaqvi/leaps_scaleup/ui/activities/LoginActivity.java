@@ -43,11 +43,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
+import com.example.hassannaqvi.leaps_scaleup.core.CONSTANTS;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityLoginBinding;
-import com.example.hassannaqvi.leaps_scaleup.get.GetAllData;
+import com.example.hassannaqvi.leaps_scaleup.get.server.GetAllData;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
 import com.github.amlcurran.showcaseview.targets.ViewTarget;
@@ -95,6 +95,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
     private static final int TWO_MINUTES = 1000 * 60 * 2;
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
+
+    public static AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,8 +184,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
 
 //        DB backup
-
         dbBackup();
+
+//        Room DB instantiate
+        db = AppDatabase.getDatabase(getApplicationContext());
 
 //        Testing visibility
         if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
@@ -354,14 +358,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         } else return isNewer && !isSignificantlyLessAccurate && isFromSameProvider;
     }
 
-
     private boolean isSameProvider(String provider1, String provider2) {
         if (provider1 == null) {
             return provider2 == null;
         }
         return provider1.equals(provider2);
     }
-
 
     public class GPSLocationListener implements LocationListener {
         public void onLocationChanged(Location location) {
@@ -423,6 +425,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         MainApp.IMEI = ((TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE)).getDeviceId();
 
     }
+
     public void dbBackup() {
 
         sharedPref = getSharedPreferences("leapsScaleUp", MODE_PRIVATE);
@@ -507,9 +510,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-//            new syncData(this).execute();
-            Toast.makeText(this, "Under Development", Toast.LENGTH_SHORT).show();
-
+            new syncData(this).execute();
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }
@@ -530,6 +531,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
         }
     }
+
     private boolean checkAndRequestPermissions() {
         int permissionContact = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_CONTACTS);
@@ -575,7 +577,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
         return true;
     }
-
 
     /**
      * Attempts to sign in or register the account specified by the login form.
@@ -632,7 +633,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         //TODO: Replace this with your own logic
         return email.contains("@");
     }
-
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
@@ -782,11 +782,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-                DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
+//                DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
 
-//                AppDatabase db = AppDatabase.getDatabase(getApplicationContext());
-
-                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) || db.Login(mEmail, mPassword) ||
+//                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) || db.Login(mEmail, mPassword) ||
+                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
                         (mEmail.equals("test1234") && mPassword.equals("test1234"))
                         || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {
                     MainApp.userName = mEmail;
@@ -838,7 +837,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         }
     }
 
-
     public class syncData extends AsyncTask<String, String, String> {
 
         private Context mContext;
@@ -855,15 +853,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 public void run() {
 
                     Toast.makeText(LoginActivity.this, "Sync Users", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "User").execute();
-                    Toast.makeText(LoginActivity.this, "Sync UC's", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "UCs").execute();
-                    Toast.makeText(LoginActivity.this, "Sync Villages", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "Villages").execute();
-                    Toast.makeText(LoginActivity.this, "Sync LHWs", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "LHW").execute();
-                    Toast.makeText(LoginActivity.this, "Sync Tehsil", Toast.LENGTH_LONG).show();
-                    new GetAllData(mContext, "Tehsil").execute();
+                    new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
+                    Toast.makeText(LoginActivity.this, "Sync Clusters", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "Clusters", MainApp._HOST_URL + CONSTANTS.URL_CLUSTERS).execute();
                 }
             });
 

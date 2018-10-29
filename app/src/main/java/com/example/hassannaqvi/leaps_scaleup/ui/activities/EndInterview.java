@@ -9,10 +9,12 @@ import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 
 import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class EndInterview extends AppCompatActivity {
 
@@ -57,7 +59,7 @@ public class EndInterview extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(MainActivity.db, StartActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+            Long longID = new crudOperations(db, StartActivity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {

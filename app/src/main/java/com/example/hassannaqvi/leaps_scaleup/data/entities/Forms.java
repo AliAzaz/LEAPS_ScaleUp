@@ -27,7 +27,7 @@ public class Forms {
     private String sa1 = "";     // Info Section
     private String endtime = "";
     private String clustercode = "";
-    private String hhno = "";
+    private String childID = "";
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsDT = "";
@@ -50,7 +50,7 @@ public class Forms {
         this.sa1 = forms.sa1;
         this.endtime = forms.endtime;
         this.clustercode = forms.clustercode;
-        this.hhno = forms.hhno;
+        this.childID = forms.childID;
         this.gpsLat = forms.gpsLat;
         this.gpsLng = forms.gpsLng;
         this.gpsDT = forms.gpsDT;
@@ -139,12 +139,12 @@ public class Forms {
         this.clustercode = clustercode;
     }
 
-    public String getHhno() {
-        return hhno;
+    public String getchildID() {
+        return childID;
     }
 
-    public void setHhno(String hhno) {
-        this.hhno = hhno;
+    public void setchildID(String childID) {
+        this.childID = childID;
     }
 
     public String getGpsLat() {

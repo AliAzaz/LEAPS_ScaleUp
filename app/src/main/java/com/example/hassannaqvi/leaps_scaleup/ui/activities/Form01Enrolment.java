@@ -5,13 +5,17 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm01EnrolmentBinding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -22,6 +26,7 @@ import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form01Enrolment extends AppCompatActivity {
     ActivityForm01EnrolmentBinding bi;
@@ -116,6 +121,45 @@ public class Form01Enrolment extends AppCompatActivity {
         });
     }
 
+    public boolean checkingID(String idType, EditText idTXT, String sType) {
+        String txt = idTXT.getText().toString();
+
+        try {
+            if (txt.length() != 5) {
+                Toast.makeText(this, "Invalid Length!!", Toast.LENGTH_SHORT).show();
+                idTXT.setError("Invalid Length!!");
+                return false;
+            } else if (Integer.valueOf(txt) < 10100 || Integer.valueOf(txt) > 89903) {
+                Toast.makeText(this, "ID range must be 10100 - 89903!!", Toast.LENGTH_SHORT).show();
+                idTXT.setError("ID range must be 10100 - 89903!!");
+                return false;
+            } else if (!String.valueOf(txt.charAt(0)).equals(sType)) {
+                Toast.makeText(this, "Invalid Survey Digit!!", Toast.LENGTH_SHORT).show();
+                idTXT.setError("Invalid Survey Digit!!");
+                return false;
+            }
+
+            String clsID = txt.substring(1, 3);
+            Class<Clusters> cluster = (Class<Clusters>) new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord", 1).execute(clsID).get();
+
+            if (cluster == null) {
+                Toast.makeText(this, "Invalid Cluster!!", Toast.LENGTH_SHORT).show();
+                idTXT.setError("Invalid Cluster!!");
+                return false;
+            }
+
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+        return true;
+    }
+
+
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -134,7 +178,7 @@ public class Form01Enrolment extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(MainActivity.db, fc).execute().get();
+            Long longID = new crudOperations(db, fc).execute().get();
 
             if (longID != 0) {
                 fc.setId(longID.intValue());
@@ -153,13 +197,20 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public void BtnEnd() {
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
+            return;
+        }
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
+            return;
+        }
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
 
     private void SaveDraft() throws JSONException {
 
-        Toast.makeText(this, "Saving Draft for this Section", Toast.LENGTH_SHORT).show();
         fc = new Forms();
+
+        fc.setchildID(bi.ls01a04.getText().toString());
 
         JSONObject f01 = new JSONObject();
         f01.put("ls01a01", "");
@@ -277,6 +328,9 @@ public class Form01Enrolment extends AppCompatActivity {
     public boolean formValidation() {
 
         if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
+            return false;
+        }
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
             return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls01a07, bi.ls01a07a, getString(R.string.ls01a07))) {

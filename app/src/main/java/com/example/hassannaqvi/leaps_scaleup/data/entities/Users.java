@@ -23,6 +23,12 @@ public class Users {
         this.ROW_PASSWORD = users.ROW_PASSWORD;
     }
 
+    @Ignore
+    public Users(String ROW_USERNAME, String ROW_PASSWORD) {
+        this.ROW_USERNAME = ROW_USERNAME;
+        this.ROW_PASSWORD = ROW_PASSWORD;
+    }
+
     public Users() {
     }
 
