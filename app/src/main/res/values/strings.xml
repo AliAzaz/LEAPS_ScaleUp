@@ -682,8 +682,6 @@
     <string name="ls04ab12pattern">64529</string>
 
 
-
-
     <!-- Form 4 (EF) B-->
     <string name="ls04b">DCCS SCORING SHEET</string>
     <string name="ls04bsub1">SEPARATED DCCS</string>
@@ -781,6 +779,11 @@
     <string name="ls04bg12pattern">@string/bluestar</string>
 
 
+    <!--Form 04 EF (D)-->
+    <string name="ls04dsub1">Practice Trial</string>
+    <string name="ls04dainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
+    <string name="ls04dsub2">Test Trial</string>
+    <string name="ls04dbinstruction">empty</string>
 
     <!--Form 14-->
     <string name="ls14Heading">Protocol Deviation</string>
@@ -799,3 +802,6 @@
 
 
 </resources>
+
+
+
