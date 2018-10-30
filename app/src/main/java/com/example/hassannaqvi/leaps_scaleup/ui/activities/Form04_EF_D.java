@@ -1,6 +1,7 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,11 +52,16 @@ public class Form04_EF_D extends AppCompatActivity {
                 nextTxtView.setText(null);
             } else {
                 fldGrp.setVisibility(View.VISIBLE);
-
             }
         }
-
-
+    }
+    public void BtnContinue() {
 
     }
+
+    public void BtnEnd() {
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+
+    }
+
 }

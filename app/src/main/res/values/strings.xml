@@ -34,6 +34,10 @@
     <string name="month"> مهينا </string>
     <string name="year"> سال </string>
 
+    <string name="tap">ڌڪ</string>
+    <string name="knock">کڙڪائڻ</string>
+    <string name="ignore">Ignore/Reject</string>
+
     <string name="istatus">انٹروہو کا نتیجہ</string>
     <string name="istatusa">مکمل</string>
     <string name="istatusb">نا مکمل</string>
@@ -779,11 +783,67 @@
     <string name="ls04bg12pattern">@string/bluestar</string>
 
 
+    <string name="ls04ca01">جڏهن مان هئين کڙڪايان (هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+</string><string name="ls04ca01pattern">جڏهن مان هئين کڙڪايان (هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+</string>
+    <string name="ls04ca02">جڏهن مان هئين کڙڪايان ( هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+
+</string> <string name="ls04ca02pattern">جڏهن مان هئين کڙڪايان ( هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+
+</string>
+    <string name="ls04ca03">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟  ؟
+
+</string>  <string name="ls04ca03pattern">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟  ؟
+
+</string>
+    <string name="ls04ca04">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟
+
+</string> <string name="ls04ca04pattern">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟
+
+</string>
+    <string name="ls04ca05">جڏهن مان هئين کڙڪايان ( هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+
+</string> <string name="ls04ca05pattern">جڏهن مان هئين کڙڪايان ( هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+
+</string>
+    <string name="ls04ca06">جڏهن مان هئين کڙڪايان ( هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+
+</string> <string name="ls04ca06pattern">جڏهن مان هئين کڙڪايان ( هڪ دفعو کڙڪايو)
+ته توهان ڪيئن ڪندو؟
+
+</string>
+    <string name="ls04ca07">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟
+</string><string name="ls04ca07pattern">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟
+</string>
+    <string name="ls04ca08">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟
+</string><string name="ls04ca08pattern">جڏهن مان هئين ڌڪ هڻان ( هڪ دفعو ڌڪ هڻو)
+ته توهان ڪيئن ڪندو؟
+</string>
+
+
     <!--Form 04 EF (D)-->
     <string name="ls04dsub1">Practice Trial</string>
     <string name="ls04dainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
     <string name="ls04dsub2">Test Trial</string>
     <string name="ls04dbinstruction">empty</string>
+    <string name="ls04da01">جڏهن مان هئين هڪ دفعو وڄايان ته توهان ڪيئن ڪندو؟ </string>
+    <string name="ls04dtwice">ٻه دفعا</string>
+    <string name="ls04donce">هڪ دفعو</string>
+    <string name="ls04da02">جڏهن مان هئين ٻه دفعا وڄايان ته توهان ڪيئن ڪندو؟</string>
 
     <!--Form 14-->
     <string name="ls14Heading">Protocol Deviation</string>

@@ -977,6 +977,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:focusable="false"
+                            style="@style/textInput"
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"
                             app:dateFormat="dd-MM-yyyy" />
