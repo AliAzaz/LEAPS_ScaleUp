@@ -38,7 +38,7 @@ public class Form02HHPart_3 extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i != R.id.ls02ee01b01) {
+                if (i == R.id.ls02ee01b01) {
                     bi.fldgrpee03.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpee03, false);
                 } else {
@@ -205,7 +205,7 @@ public class Form02HHPart_3 extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls02ee01b, bi.ls02ee01b01, getString(R.string.ls02ee01b))) {
             return false;
         }
-        if (bi.ls02ee01b01.isChecked()) {
+        if (bi.ls02ee01b02.isChecked()) {
             if (!validatorClass.EmptyRadioButton(this, bi.ls02ee01c, bi.ls02ee01c01, getString(R.string.ls02ee01c))) {
                 return false;
             }

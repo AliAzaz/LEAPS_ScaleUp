@@ -22,16 +22,7 @@
             android:orientation="vertical">
 
 
-            <TextView
-                android:lineSpacingExtra="10dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="@string/ls07idinstruction"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/white" />
+           8
 
 
             <!--Q01-->

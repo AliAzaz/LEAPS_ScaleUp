@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="callback"
+            type="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_C" />
+    </data>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layoutDirection="rtl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--Q01-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls04c01"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca01"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca01a01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca01b01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca01c01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca01d01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04c01"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q02-->
+            <android.support.v7.widget.CardView
+                android:id="@+id/fldgrpls04c02"
+                style="@style/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca02"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca02a02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca02b02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca02c02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca02d02"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04c02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q03-->
+            <android.support.v7.widget.CardView style="@style/cardView"
+                android:id="@+id/fldgrpls04c03">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca03"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca03a03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca03b03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca03c03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca03d03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04c03"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q04-->
+            <android.support.v7.widget.CardView style="@style/cardView"
+                android:id="@+id/fldgrpls04c04">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca04"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca04a04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca04b04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca04c04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca04d04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04c04"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q05-->
+            <android.support.v7.widget.CardView style="@style/cardView"
+                android:id="@+id/fldgrpls04c05">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca05"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca05a05"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca05b05"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca05c05"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca05d05"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04ca05"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q06-->
+            <android.support.v7.widget.CardView style="@style/cardView"
+                android:id="@+id/fldgrpls04c06">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca06"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca06a06"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca06b06"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca06c06"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca06d06"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04c06"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q07-->
+            <android.support.v7.widget.CardView style="@style/cardView"
+                android:id="@+id/fldgrpls04c07">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca07"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca07a07"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca07b07"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca07c07"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca07d07"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04c07"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!--Q08-->
+            <android.support.v7.widget.CardView style="@style/cardView"
+                android:id="@+id/fldgrpls04c08">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/colorPrimaryDark"
+                        android:lineSpacingExtra="10dp"
+                        android:text="@string/ls04ca08"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca08a08"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/tap"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca08b08"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/knock"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/ls04ca08c08"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/ignore"
+                            android:textColor="@color/white" />
+
+                        <Button
+                            android:id="@+id/ls04ca08d08"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="3dp"
+                            android:layout_weight="0.5"
+                            android:onClick="procesButton"
+                            android:text="@string/other"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:textColor="@color/black"
+                            android:id="@+id/ls04c08"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+
+                            />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_Continue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection"
+                    android:textColor="@color/white" />
+                <!--'onClick' for btn_Continue will call next section form e.g.: openSection2-->
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="@string/end_interview"
+                    android:textColor="@color/white" />
+
+                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</layout>
