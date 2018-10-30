@@ -11,24 +11,22 @@ import java.lang.reflect.Method;
  * Created by openm on 19-Jul-18.
  */
 
-public class GetIndDBData extends AsyncTask<String, Void, Class<?>> {
+public class GetIndDBData extends AsyncTask<Object, Void, Object> {
 
     AppDatabase db;
     String DAOclsName, DAOAbsClsFnc, DAOFnc;
-    int typeData;
 
-    public GetIndDBData(AppDatabase db, String DAOclsName, String DAOAbsClsFnc, String DAOFnc, int typeData) {
+    public GetIndDBData(AppDatabase db, String DAOclsName, String DAOAbsClsFnc, String DAOFnc) {
         this.db = db;
         this.DAOclsName = DAOclsName;
         this.DAOAbsClsFnc = DAOAbsClsFnc;
         this.DAOFnc = DAOFnc;
-        this.typeData = typeData;
     }
 
     @Override
-    protected Class<?> doInBackground(String... fnNames) {
+    protected Object doInBackground(Object... fnNames) {
 
-        Class<?> curData = null;
+        Object curData = null;
 
         try {
 
@@ -41,12 +39,18 @@ public class GetIndDBData extends AsyncTask<String, Void, Class<?>> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(DAOFnc)) {
 
-                            switch (typeData) {
-                                case 1:
-                                    curData = (Class<?>) fnClass.getMethod(method2.getName())
-                                            .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db), fnNames[0]);
-                                    break;
+                            Class<?> params[] = new Class[1];
+                            for (int i = 0; i < fnNames.length; i++) {
+                                if (fnNames[i] instanceof Integer) {
+                                    params[i] = Integer.TYPE;
+                                } else if (fnNames[i] instanceof String) {
+                                    params[i] = String.class;
+                                }
                             }
+
+                            curData = fnClass.getDeclaredMethod(method2.getName(), params)
+                                    .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db), fnNames);
+
 
                             break;
                         }

@@ -4,18 +4,17 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
-import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm01EnrolmentBinding;
-import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
+import com.example.hassannaqvi.leaps_scaleup.other.CheckingID;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -32,6 +31,8 @@ public class Form01Enrolment extends AppCompatActivity {
     ActivityForm01EnrolmentBinding bi;
     public static Forms fc;
 
+    String getFtype = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +44,10 @@ public class Form01Enrolment extends AppCompatActivity {
         bi.ls01f03.setManager(getSupportFragmentManager());
 //        bi.ls01f05.setManager(getSupportFragmentManager());
         bi.ls01a10.setManager(getSupportFragmentManager());
+
+
+        getFtype = getIntent().getStringExtra("fType");
+
     }
 
     private void setupView() {
@@ -119,87 +124,38 @@ public class Form01Enrolment extends AppCompatActivity {
                 }
             }
         });
+
+
+        bi.ls01a04.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                bi.fldgrpls01a01.setVisibility(GONE);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
     }
 
     public void BtnIDValid() {
-
-//        checkingID(bi.ls01a04.getText().toString(),)
-
-    }
-
-    private boolean checkingID(EditText idTXT, String sType) {
-        String txt = idTXT.getText().toString();
-
-        try {
-            if (txt.length() != 5) {
-                Toast.makeText(this, "Invalid Length!!", Toast.LENGTH_SHORT).show();
-                idTXT.setError("Invalid Length!!");
-                return false;
-            } else if (Integer.valueOf(txt) <= 10100 || Integer.valueOf(txt) > 89903) {
-                Toast.makeText(this, "ID range must be 10101 - 89903!!", Toast.LENGTH_SHORT).show();
-                idTXT.setError("ID range must be 10100 - 89903!!");
-                return false;
-            } else if (!String.valueOf(txt.charAt(0)).equals(sType)) {
-                Toast.makeText(this, "Invalid Survey Digit!!", Toast.LENGTH_SHORT).show();
-                idTXT.setError("Invalid Survey Digit!!");
-                return false;
-            }
-
-            String clsID = txt.substring(1, 3);
-            Class<Clusters> cluster = (Class<Clusters>) new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord", 1).execute(clsID).get();
-
-            if (cluster == null) {
-                Toast.makeText(this, "Invalid Cluster!!", Toast.LENGTH_SHORT).show();
-                idTXT.setError("Invalid Cluster!!");
-                return false;
-            }
-
-            String lstDigits = txt.substring(txt.length() - 2, txt.length());
-
-            if (lstDigits.equals("00")) {
-                Toast.makeText(this, "Last digits can't be 00!!", Toast.LENGTH_SHORT).show();
-                idTXT.setError("Invalid Cluster!!");
-                return false;
-            }
-
-            switch (Integer.valueOf(sType)) {
-                case 4:
-                    if (validateID(Integer.valueOf(sType), 11)) {
-                        Toast.makeText(this, "Last digits range must be > 00 && <= 11 !!", Toast.LENGTH_SHORT).show();
-                        idTXT.setError("Invalid last Digits!!");
-                        return false;
-                    }
-                case 6:
-                    if (validateID(Integer.valueOf(sType), 8)) {
-                        Toast.makeText(this, "Last digits range must be > 00 && <= 08 !!", Toast.LENGTH_SHORT).show();
-                        idTXT.setError("Invalid last Digits!!");
-                        return false;
-                    }
-                case 8:
-                    if (validateID(Integer.valueOf(sType), 3)) {
-                        Toast.makeText(this, "Last digits range must be > 00 && <= 03 !!", Toast.LENGTH_SHORT).show();
-                        idTXT.setError("Invalid last Digits!!");
-                        return false;
-                    }
-            }
-
-
-            return true;
-
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
+            return;
         }
 
-        return false;
+        if (CheckingID.getIDValidation(db, this, bi.ls01a04, getFtype)) {
+            bi.fldgrpls01a01.setVisibility(VISIBLE);
+        }
     }
-
-    private boolean validateID(int digits, int max) {
-        return digits <= max;
-    }
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -238,10 +194,10 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
             return;
         }
-        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
             return;
         }
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
