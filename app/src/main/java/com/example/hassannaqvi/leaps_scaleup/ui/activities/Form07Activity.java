@@ -35,6 +35,7 @@ public class Form07Activity extends AppCompatActivity {
         bi.setCallback(this);
 
         bi.ls07id06.setManager(getSupportFragmentManager());
+        bi.ls07id13.setManager(getSupportFragmentManager());
 
         district.add("....");
         district.add("N/A");
@@ -71,16 +72,19 @@ public class Form07Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if (i == R.id.ls07id10b) {
-
                     bi.fldgrpls0712.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0712, false);
                     bi.fldgrpls0713.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0713, false);
+                    bi.fldgrpls0714.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0714, true);
                 } else {
                     bi.fldgrpls0712.setVisibility(View.VISIBLE);
                     bi.fldgrpls0713.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0712, true);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0713, true);
+                    bi.fldgrpls0714.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0714, false);
                 }
             }
         });
@@ -91,13 +95,13 @@ public class Form07Activity extends AppCompatActivity {
                 if (i == R.id.ls07id18b) {
                     bi.fldgrpls0713.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0713, false);
-                    bi.fldgrpls0714.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0714, false);
+                    //bi.fldgrpls0714.setVisibility(View.GONE);
+                   // ClearClass.ClearAllCardFields(bi.fldgrpls0714, false);
                 } else {
                     bi.fldgrpls0713.setVisibility(View.VISIBLE);
-                    bi.fldgrpls0714.setVisibility(View.VISIBLE);
+                    //bi.fldgrpls0714.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0713, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0714, true);
+                    //ClearClass.ClearAllCardFields(bi.fldgrpls0714, true);
                 }
             }
         });
@@ -193,9 +197,9 @@ public class Form07Activity extends AppCompatActivity {
                     return false;
                 }
                 //14
-                if (!validatorClass.EmptyRadioButton(this, bi.ls07id17, bi.ls07id17a, getString(R.string.ls07id17))) {
-                    return false;
-                }
+//                if (!validatorClass.EmptyRadioButton(this, bi.ls07id17, bi.ls07id17a, getString(R.string.ls07id17))) {
+//                    return false;
+//                }
             }
 
         } else {
