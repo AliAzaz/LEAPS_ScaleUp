@@ -24,7 +24,7 @@
 
             <!--Q01-->
             <android.support.v7.widget.CardView
-                android:id="@+id/fldgrpls04c01"
+                android:id="@+id/fldgrpls04ca01"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -49,7 +49,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca01a01"
+                            android:id="@+id/ls04ca01a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -59,7 +59,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca01b01"
+                            android:id="@+id/ls04ca01b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -76,7 +76,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca01c01"
+                            android:id="@+id/ls04ca01c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -86,7 +86,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca01d01"
+                            android:id="@+id/ls04ca01d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -127,7 +127,7 @@
 
             <!--Q02-->
             <android.support.v7.widget.CardView
-                android:id="@+id/fldgrpls04c02"
+                android:id="@+id/fldgrpls04ca02"
                 style="@style/cardView">
 
                 <LinearLayout
@@ -152,7 +152,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca02a02"
+                            android:id="@+id/ls04ca02a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -162,7 +162,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca02b02"
+                            android:id="@+id/ls04ca02b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -179,7 +179,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca02c02"
+                            android:id="@+id/ls04ca02c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -189,7 +189,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca02d02"
+                            android:id="@+id/ls04ca02d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -229,7 +229,7 @@
 
             <!--Q03-->
             <android.support.v7.widget.CardView style="@style/cardView"
-                android:id="@+id/fldgrpls04c03">
+                android:id="@+id/fldgrpls04ca03">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -253,7 +253,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca03a03"
+                            android:id="@+id/ls04ca03a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -263,7 +263,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca03b03"
+                            android:id="@+id/ls04ca03b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -280,7 +280,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca03c03"
+                            android:id="@+id/ls04ca03c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -290,7 +290,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca03d03"
+                            android:id="@+id/ls04ca03d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -310,7 +310,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:id="@+id/ls04c03"
+                            android:id="@+id/ls04ca03"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
@@ -327,7 +327,7 @@
 
             <!--Q04-->
             <android.support.v7.widget.CardView style="@style/cardView"
-                android:id="@+id/fldgrpls04c04">
+                android:id="@+id/fldgrpls04ca04">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -351,7 +351,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca04a04"
+                            android:id="@+id/ls04ca04a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -361,7 +361,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca04b04"
+                            android:id="@+id/ls04ca04b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -378,7 +378,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca04c04"
+                            android:id="@+id/ls04ca04c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -388,7 +388,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca04d04"
+                            android:id="@+id/ls04ca04d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -408,7 +408,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:id="@+id/ls04c04"
+                            android:id="@+id/ls04ca04"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
@@ -424,7 +424,7 @@
 
             <!--Q05-->
             <android.support.v7.widget.CardView style="@style/cardView"
-                android:id="@+id/fldgrpls04c05">
+                android:id="@+id/fldgrpls04ca05">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -448,7 +448,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca05a05"
+                            android:id="@+id/ls04ca05a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -458,7 +458,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca05b05"
+                            android:id="@+id/ls04ca05b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -475,7 +475,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca05c05"
+                            android:id="@+id/ls04ca05c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -485,7 +485,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca05d05"
+                            android:id="@+id/ls04ca05d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -521,7 +521,7 @@
 
             <!--Q06-->
             <android.support.v7.widget.CardView style="@style/cardView"
-                android:id="@+id/fldgrpls04c06">
+                android:id="@+id/fldgrpls04ca06">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -545,7 +545,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca06a06"
+                            android:id="@+id/ls04ca06a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -555,7 +555,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca06b06"
+                            android:id="@+id/ls04ca06b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -572,7 +572,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca06c06"
+                            android:id="@+id/ls04ca06c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -582,7 +582,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca06d06"
+                            android:id="@+id/ls04ca06d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -602,7 +602,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:id="@+id/ls04c06"
+                            android:id="@+id/ls04ca06"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
@@ -618,7 +618,7 @@
 
             <!--Q07-->
             <android.support.v7.widget.CardView style="@style/cardView"
-                android:id="@+id/fldgrpls04c07">
+                android:id="@+id/fldgrpls04ca07">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -642,7 +642,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca07a07"
+                            android:id="@+id/ls04ca07a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -652,7 +652,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca07b07"
+                            android:id="@+id/ls04ca07b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -669,7 +669,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca07c07"
+                            android:id="@+id/ls04ca07c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -679,7 +679,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca07d07"
+                            android:id="@+id/ls04ca07d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -699,7 +699,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:id="@+id/ls04c07"
+                            android:id="@+id/ls04ca07"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"
@@ -716,7 +716,7 @@
 
             <!--Q08-->
             <android.support.v7.widget.CardView style="@style/cardView"
-                android:id="@+id/fldgrpls04c08">
+                android:id="@+id/fldgrpls04ca08">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -740,7 +740,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca08a08"
+                            android:id="@+id/ls04ca08a"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -750,7 +750,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca08b08"
+                            android:id="@+id/ls04ca08b"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -767,7 +767,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/ls04ca08c08"
+                            android:id="@+id/ls04ca08c"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -777,7 +777,7 @@
                             android:textColor="@color/white" />
 
                         <Button
-                            android:id="@+id/ls04ca08d08"
+                            android:id="@+id/ls04ca08d"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_margin="3dp"
@@ -797,7 +797,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:id="@+id/ls04c08"
+                            android:id="@+id/ls04ca08"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textSize="20sp"

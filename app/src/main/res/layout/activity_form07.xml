@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
 
-           8
+
 
 
             <!--Q01-->
@@ -774,15 +774,13 @@
                         android:text="@string/ls07id13"
                         android:textColor="@android:color/white" />
 
-                    <EditText
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                         style="@style/textInput"
                         android:id="@+id/ls07id13"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
                         android:layout_marginBottom="1dp"
                         android:hint="@string/ls07id13"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:dateFormat="yyyy-MM-dd"/>
 
                 </LinearLayout>
 

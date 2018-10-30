@@ -29,7 +29,7 @@ public class Form04_EF_C extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this,R.layout.activity_form04__ef__c);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form04__ef__c);
         bi.setCallback(this);
 
     }
@@ -39,17 +39,17 @@ public class Form04_EF_C extends AppCompatActivity {
         Button b = (Button) v;
         // Get question ID
         String qID = getResources().getResourceEntryName(v.getId());
-        qID = qID.substring(0, qID.length() - 1); // this is question id
+        String _qID = qID.substring(0, qID.length() - 1); // this is question id
 
-        TextView tv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
-        CardView fldgrp = findViewById(getResources().getIdentifier("fldgrp" + qID, "id", getPackageName()));
-        String nextqID = qID + "a";
-        TextView nexttv = findViewById(getResources().getIdentifier(nextqID, "id", getPackageName()));
+        TextView tv = findViewById(getResources().getIdentifier(_qID, "id", getPackageName()));
+        CardView fldgrp = findViewById(getResources().getIdentifier("fldgrp" + _qID, "id", getPackageName()));
+        //String nextqID = qID + "a";
+        TextView nexttv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
         // Get Text on button
         Boolean skipnext = qID.charAt(qID.length() - 1) == 'a';
         String btnPressed = b.getText().toString();
         skipPractice(tv, String.format("%s%s", tv.getText().toString(), btnPressed), fldgrp,
-                getStringbyIdName(this, qID + "pattern"), nexttv, skipnext);
+                getStringbyIdName(this, _qID + "pattern"), nexttv, skipnext);
 
     }
 
@@ -64,7 +64,7 @@ public class Form04_EF_C extends AppCompatActivity {
                 fldgrp.setVisibility(View.VISIBLE);
 
             }
-        }else{
+        } else {
             tv.setText(null);
         }
 
@@ -79,6 +79,7 @@ public class Form04_EF_C extends AppCompatActivity {
     public void BtnContinue() {
 
     }
+
     public void BtnEnd() {
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
