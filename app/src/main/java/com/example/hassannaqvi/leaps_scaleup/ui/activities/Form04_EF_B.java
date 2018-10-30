@@ -1,6 +1,7 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfBBinding;
@@ -32,6 +34,36 @@ int ls04bf01,ls04bf02,ls04bf03,ls04bf04,ls04bf05,ls04bf06;
         bi = DataBindingUtil.setContentView(this,R.layout.activity_form04_ef_b);
         bi.setCallback(this);
     }
+
+    public void BtnContinue() {
+        if (formValidation()) {
+            SaveDraft();
+//            if (UpdateDB()) {
+            if (true) {
+//                startActivity(new Intent(getApplicationContext(), Form04_EF_C.class));
+                startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete",false));
+            } else {
+                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void SaveDraft() {
+/*
+        JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpf05BE01, true);
+        Form05IdBAActivity.fc_4_5.setSa5(String.valueOf(Json));
+
+        Log.d("F4-EF-A", String.valueOf(Json));*/
+    }
+    private boolean formValidation() {
+
+        /*  return validatorClass.EmptyCheckingContainer(this, bi.flgGrpf05BE01);*/
+        return true;
+    }
+    public void BtnEnd() {
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+
+    }
     public void processButton(View v) {
 
         Button b = (Button) v;
@@ -48,7 +80,6 @@ int ls04bf01,ls04bf02,ls04bf03,ls04bf04,ls04bf05,ls04bf06;
         String btnPressed = b.getText().toString();
         skipPractice(tv,btnPressed, fldgrp, getStringbyIdName(this, ques + "pattern"), nexttv, skipnext);
     }
-
     public void levelBasedProcess(View v) {
         Button b = (Button) v;
         // Get question ID
