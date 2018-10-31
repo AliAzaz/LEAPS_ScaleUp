@@ -57,7 +57,6 @@ public abstract class CheckingID {
             }
 
             String clsID = txt.substring(1, 3);
-//            Class<Clusters> cluster = (Class<Clusters>) new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord", 1).execute(clsID).get();
             Object cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(clsID).get();
 
             if (cluster == null) {

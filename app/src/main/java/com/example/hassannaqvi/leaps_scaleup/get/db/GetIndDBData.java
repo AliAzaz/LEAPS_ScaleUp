@@ -39,7 +39,7 @@ public class GetIndDBData extends AsyncTask<Object, Void, Object> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(DAOFnc)) {
 
-                            Class<?> params[] = new Class[1];
+                            Class<?> params[] = new Class[fnNames.length];
                             for (int i = 0; i < fnNames.length; i++) {
                                 if (fnNames[i] instanceof Integer) {
                                     params[i] = Integer.TYPE;

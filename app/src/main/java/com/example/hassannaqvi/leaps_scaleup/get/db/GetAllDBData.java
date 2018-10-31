@@ -13,22 +13,20 @@ import java.util.Collection;
  * Created by openm on 19-Jul-18.
  */
 
-public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
+public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
 
     AppDatabase db;
     String DAOclsName, DAOAbsClsFnc, DAOFnc;
-    int typeData;
 
-    public GetAllDBData(AppDatabase db, String DAOclsName, String DAOAbsClsFnc, String DAOFnc, int typeData) {
+    public GetAllDBData(AppDatabase db, String DAOclsName, String DAOAbsClsFnc, String DAOFnc) {
         this.db = db;
         this.DAOclsName = DAOclsName;
         this.DAOAbsClsFnc = DAOAbsClsFnc;
         this.DAOFnc = DAOFnc;
-        this.typeData = typeData;
     }
 
     @Override
-    protected Collection<?> doInBackground(String... fnNames) {
+    protected Collection<?> doInBackground(Object... fnNames) {
 
         Collection<?> curData = new ArrayList<>();
 
@@ -61,16 +59,18 @@ public class GetAllDBData extends AsyncTask<String, Void, Collection<?>> {
                                 break;
                             }*/
 
-                            switch (typeData) {
-                                case 1:
-                                    curData = (Collection<?>) fnClass.getMethod(method2.getName())
-                                            .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db), fnNames[0]);
-                                    break;
-                                default:
-                                    curData = (Collection<?>) fnClass.getMethod(method2.getName())
-                                            .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db));
-                                    break;
+                            Class<?> params[] = new Class[fnNames.length];
+                            for (int i = 0; i < fnNames.length; i++) {
+                                if (fnNames[i] instanceof Integer) {
+                                    params[i] = Integer.TYPE;
+                                } else if (fnNames[i] instanceof String) {
+                                    params[i] = String.class;
+                                }
                             }
+
+                            curData = (Collection<?>) fnClass.getDeclaredMethod(method2.getName(), params)
+                                    .invoke(db.getClass().getMethod(DAOAbsClsFnc).invoke(db), fnNames);
+
 
                             break;
                         }

@@ -46,7 +46,9 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.core.CONSTANTS;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityLoginBinding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.get.server.GetAllData;
 import com.github.amlcurran.showcaseview.ShowcaseView;
 import com.github.amlcurran.showcaseview.targets.Target;
@@ -64,6 +66,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
@@ -781,50 +784,59 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             showProgress(false);
 
             LocationManager mlocManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-            if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+
+            try {
+
+                if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 //                DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
 
-//                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) || db.Login(mEmail, mPassword) ||
-                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
-                        (mEmail.equals("test1234") && mPassword.equals("test1234"))
-                        || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {
-                    MainApp.userName = mEmail;
-                    MainApp.admin = mEmail.contains("@");
+                    if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
+                            (new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "login").execute(mEmail, mPassword).get() != null) ||
+                            (mEmail.equals("test1234") && mPassword.equals("test1234"))
+                            || (mEmail.equals("test12345") && mPassword.equals("test12345"))) {
+                        MainApp.userName = mEmail;
+                        MainApp.admin = mEmail.contains("@");
 
-                    finish();
+                        finish();
 
-                    Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
-                    startActivity(iLogin);
+                        Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+                        startActivity(iLogin);
 
+                    } else {
+                        bi.password.setError(getString(R.string.error_incorrect_password));
+                        bi.password.requestFocus();
+                        Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
+                    }
                 } else {
-                    bi.password.setError(getString(R.string.error_incorrect_password));
-                    bi.password.requestFocus();
-                    Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
-                }
-            } else {
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                        LoginActivity.this);
-                alertDialogBuilder
-                        .setMessage("GPS is disabled in your device. Enable it?")
-                        .setCancelable(false)
-                        .setPositiveButton("Enable GPS",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,
-                                                        int id) {
-                                        Intent callGPSSettingIntent = new Intent(
-                                                android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
-                                        startActivity(callGPSSettingIntent);
-                                    }
-                                });
-                alertDialogBuilder.setNegativeButton("Cancel",
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                dialog.cancel();
-                            }
-                        });
-                AlertDialog alert = alertDialogBuilder.create();
-                alert.show();
+                    AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
+                            LoginActivity.this);
+                    alertDialogBuilder
+                            .setMessage("GPS is disabled in your device. Enable it?")
+                            .setCancelable(false)
+                            .setPositiveButton("Enable GPS",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog,
+                                                            int id) {
+                                            Intent callGPSSettingIntent = new Intent(
+                                                    android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+                                            startActivity(callGPSSettingIntent);
+                                        }
+                                    });
+                    alertDialogBuilder.setNegativeButton("Cancel",
+                            new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int id) {
+                                    dialog.cancel();
+                                }
+                            });
+                    AlertDialog alert = alertDialogBuilder.create();
+                    alert.show();
 
+                }
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
             }
 
         }

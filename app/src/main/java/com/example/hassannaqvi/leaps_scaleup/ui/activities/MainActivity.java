@@ -137,8 +137,8 @@ public class MainActivity extends Activity {
             Collection<Forms> todaysForms = null;
             Collection<Forms> unsyncedForms = null;
             try {
-                unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms", 0).execute().get();
-                todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms", 0).execute(dtToday).get();
+                unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
+                todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute(dtToday).get();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -219,7 +219,7 @@ public class MainActivity extends Activity {
 
 
         try {
-            Collection<?> data = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05", 0).execute().get();
+            Collection<?> data = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute().get();
 //            Object data = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord", 1).execute("67").get();
 
             if (data != null) {
@@ -332,9 +332,7 @@ public class MainActivity extends Activity {
     }
 
     public void openEF() {
-//        Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(MainActivity.this, Form04_EF_A.class));
-
+        Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
     }
 
     public void openYouthEF() {
