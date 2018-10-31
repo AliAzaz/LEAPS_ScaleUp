@@ -24,6 +24,7 @@ public class Forms_04_05 {
     private String username = ""; // Interviewer
     private String ch_ID = ""; // Child ID
     private String ch_name = ""; // Child Name
+    private String sInfo = "";   // Section Info
     private String sa1 = "";     // Section 1
     private String sa2 = "";     // Section 2
     private String sa3 = "";     // Section 3
@@ -55,6 +56,7 @@ public class Forms_04_05 {
         this.username = forms.username;
         this.ch_ID = forms.ch_ID;
         this.ch_name = forms.ch_name;
+        this.sInfo = forms.sInfo;
         this.sa1 = forms.sa1;
         this.sa2 = forms.sa2;
         this.sa3 = forms.sa3;
@@ -80,14 +82,6 @@ public class Forms_04_05 {
     public Forms_04_05() {
     }
 
-    public String getFormType() {
-        return formType;
-    }
-
-    public void setFormType(String formType) {
-        this.formType = formType;
-    }
-
     public int getId() {
         return id;
     }
@@ -102,6 +96,14 @@ public class Forms_04_05 {
 
     public void setUuid(String uuid) {
         this.uuid = uuid;
+    }
+
+    public String getFormType() {
+        return formType;
+    }
+
+    public void setFormType(String formType) {
+        this.formType = formType;
     }
 
     public String getUid() {
@@ -142,6 +144,14 @@ public class Forms_04_05 {
 
     public void setCh_name(String ch_name) {
         this.ch_name = ch_name;
+    }
+
+    public String getSInfo() {
+        return sInfo;
+    }
+
+    public void setSInfo(String sInfo) {
+        this.sInfo = sInfo;
     }
 
     public String getSa1() {

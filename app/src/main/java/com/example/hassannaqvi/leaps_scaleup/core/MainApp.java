@@ -118,6 +118,11 @@ public class MainApp extends Application {
 
     }
 
+    public static String getTagName(Context mContext) {
+        SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
+        return sharedPref.getString("tagName", null);
+    }
+
     public static Calendar getCalendarDate(String value) {
         SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         Calendar calendar = Calendar.getInstance();

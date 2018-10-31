@@ -61,7 +61,7 @@ public class Form05IdBEActivity extends AppCompatActivity {
     private boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(db, Form05IdBAActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
 
         } catch (InterruptedException e) {
@@ -76,7 +76,7 @@ public class Form05IdBEActivity extends AppCompatActivity {
     private void SaveDraft() {
 
         JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpf05BE01, true);
-        Form05IdBAActivity.fc_4_5.setSa5(String.valueOf(Json));
+        InfoActivity.fc_4_5.setSa5(String.valueOf(Json));
 
         Log.d("F5-B-E", String.valueOf(Json));
     }

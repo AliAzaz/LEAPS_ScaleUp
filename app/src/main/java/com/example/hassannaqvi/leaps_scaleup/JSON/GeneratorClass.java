@@ -58,6 +58,9 @@ public abstract class GeneratorClass {
                     } else {
                         formJSON.put(rdpID, "0");
                     }
+                } else if (view instanceof io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText) {
+                    String edtID = validatorClass.getIDComponent(view);
+                    formJSON.put(edtID, getValues(edtID));
                 } else if (view instanceof EditText) {
                     String edtID = validatorClass.getIDComponent(view);
                     formJSON.put(edtID, getValues(edtID));

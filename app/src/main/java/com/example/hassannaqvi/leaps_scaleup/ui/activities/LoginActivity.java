@@ -788,8 +788,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             try {
 
                 if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-//                DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
-
                     if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
                             (new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "login").execute(mEmail, mPassword).get() != null) ||
                             (mEmail.equals("test1234") && mPassword.equals("test1234"))

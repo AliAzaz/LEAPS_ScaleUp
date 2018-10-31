@@ -12,15 +12,18 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm01EnrolmentBinding;
-import com.example.hassannaqvi.leaps_scaleup.other.CheckingID;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
@@ -42,8 +45,9 @@ public class Form01Enrolment extends AppCompatActivity {
 
         setupView();
         bi.ls01f03.setManager(getSupportFragmentManager());
-//        bi.ls01f05.setManager(getSupportFragmentManager());
+        bi.ls01f03.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         bi.ls01a10.setManager(getSupportFragmentManager());
+        bi.ls01a10.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
 
         getFtype = getIntent().getStringExtra("fType");
@@ -126,7 +130,7 @@ public class Form01Enrolment extends AppCompatActivity {
         });
 
 
-        bi.ls01a04.addTextChangedListener(new TextWatcher() {
+        bi.ls01a05.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -147,25 +151,47 @@ public class Form01Enrolment extends AppCompatActivity {
 
     }
 
-    public void BtnIDValid() {
-        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
+    public void BtnClusterIDValid() {
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
             return;
         }
 
-        if (CheckingID.getIDValidation(db, this, bi.ls01a04, getFtype)) {
-            bi.fldgrpls01a01.setVisibility(VISIBLE);
+        Object cluster = null;
+        try {
+            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(bi.ls01a05.getText().toString()).get();
+
+            if (cluster != null) {
+                Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
+                String[] cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
+                bi.ls01aDis.setText(cluster_name[0]);
+                bi.ls01aTeh.setText(cluster_name[1]);
+                bi.ls01aUC.setText(cluster_name[2]);
+                bi.ls01aVil.setText(cluster_name[3]);
+
+                bi.fldgrpls01a01.setVisibility(VISIBLE);
+
+            } else {
+                Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
         }
+
+
     }
 
     public void BtnContinue() {
         if (formValidation()) {
             try {
                 SaveDraft();
-//                if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
-//                } else {
-                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
-//                }
+                if (UpdateDB()) {
+                    startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
+                } else {
+                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -194,7 +220,7 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
             return;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
@@ -207,7 +233,7 @@ public class Form01Enrolment extends AppCompatActivity {
 
         fc = new Forms();
 
-        fc.setChildID(bi.ls01a04.getText().toString());
+        fc.setChildID(bi.ls01a05.getText().toString());
 
         JSONObject f01 = new JSONObject();
         f01.put("ls01a01", "");
@@ -327,7 +353,7 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
             return false;
         }
-        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
             return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls01a07, bi.ls01a07a, getString(R.string.ls01a07))) {

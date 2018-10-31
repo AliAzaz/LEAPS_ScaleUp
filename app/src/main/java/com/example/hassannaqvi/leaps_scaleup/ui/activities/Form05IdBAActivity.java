@@ -11,7 +11,6 @@ import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm05IdBABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -25,9 +24,6 @@ public class Form05IdBAActivity extends AppCompatActivity {
 
     ActivityForm05IdBABinding bi;
 
-    public static Forms_04_05 fc_4_5;
-    String fTYPE = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,15 +36,12 @@ public class Form05IdBAActivity extends AppCompatActivity {
 
     private void setContent() {
 
-        fTYPE = getIntent().getStringExtra("fTYPE");
-
     }
 
     public void BtnContinue() {
 
         if (formValidation()) {
             SaveDraft();
-//            if (UpdateDB()) {
             if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), Form05IdBBActivity.class));
             } else {
@@ -61,14 +54,8 @@ public class Form05IdBAActivity extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(db, fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "insertForm_04_05").get();
-
-            if (longID != 0) {
-                fc_4_5.setId(longID.intValue());
-                return true;
-            } else {
-                return false;
-            }
+            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
 
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -81,13 +68,9 @@ public class Form05IdBAActivity extends AppCompatActivity {
 
     private void SaveDraft() {
 
-        fc_4_5 = new Forms_04_05();
-
-        fc_4_5.setFormType(fTYPE);
-
         JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpf05BA01, true);
 
-        fc_4_5.setSa1(String.valueOf(Json));
+        InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
 
         Log.d("F5-BA", String.valueOf(Json));
 

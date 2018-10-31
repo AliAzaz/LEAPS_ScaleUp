@@ -45,8 +45,7 @@ public class Form05IdBBActivity extends AppCompatActivity {
 
         if (formValidation()) {
             SaveDraft();
-//            if (UpdateDB()) {
-            if (true) {
+            if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), Form05IdBCActivity.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
@@ -58,7 +57,7 @@ public class Form05IdBBActivity extends AppCompatActivity {
     private boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(db, Form05IdBAActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
 
         } catch (InterruptedException e) {
@@ -73,7 +72,7 @@ public class Form05IdBBActivity extends AppCompatActivity {
     private void SaveDraft() {
 
         JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpf05BB01, true);
-        Form05IdBAActivity.fc_4_5.setSa2(String.valueOf(Json));
+        InfoActivity.fc_4_5.setSa2(String.valueOf(Json));
 
         Log.d("F5-BB", String.valueOf(Json));
     }
