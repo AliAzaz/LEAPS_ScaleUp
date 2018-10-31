@@ -217,11 +217,8 @@ public class MainActivity extends Activity {
 //        Logins manage
         usersArray = new String[]{"....", MainApp.userName, MainApp.userName2};
 
-
         try {
             Collection<?> data = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute().get();
-//            Object data = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord", 1).execute("67").get();
-
             if (data != null) {
                 Toast.makeText(this, "" + data.size(), Toast.LENGTH_SHORT).show();
             }
@@ -238,50 +235,6 @@ public class MainActivity extends Activity {
     public void openForm01(String fType) {
         final Intent oF = new Intent(MainActivity.this, Form01Enrolment.class)
                 .putExtra("fType", fType);
-
-        if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
-            startActivity(oF);
-        } else {
-
-            builder = new AlertDialog.Builder(MainActivity.this);
-            ImageView img = new ImageView(getApplicationContext());
-            img.setImageResource(R.drawable.tagimg);
-            img.setPadding(0, 15, 0, 15);
-            builder.setCustomTitle(img);
-
-            final EditText input = new EditText(MainActivity.this);
-            input.setInputType(InputType.TYPE_CLASS_TEXT);
-            builder.setView(input);
-
-
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    m_Text = input.getText().toString();
-                    if (!m_Text.equals("")) {
-                        editor.putString("tagName", m_Text);
-                        editor.commit();
-
-                        if (!MainApp.userName.equals("0000")) {
-                            startActivity(oF);
-                        }
-                    }
-                }
-            });
-            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.cancel();
-                }
-            });
-
-            builder.show();
-        }
-    }
-
-    public void openForm02() {
-//        final Intent oF = new Intent(MainActivity.this, StartActivity.class);
-        final Intent oF = new Intent(MainActivity.this, Form01Enrolment.class);
 
         if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
             startActivity(oF);
