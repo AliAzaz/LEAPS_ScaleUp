@@ -22,8 +22,8 @@ public class Forms_04_05 {
     private String uid = "";
     private String formDate = ""; // Date
     private String username = ""; // Interviewer
-    private String ch_ID = ""; // Child ID
-    private String ch_name = ""; // Child Name
+    private String childID = ""; // Child ID
+    private String childName = ""; // Child Name
     private String sInfo = "";   // Section Info
     private String sa1 = "";     // Section 1
     private String sa2 = "";     // Section 2
@@ -34,6 +34,7 @@ public class Forms_04_05 {
     private String endtime = "";
     private String clustercode = "";
     private String districtname = "";
+    private String studyID = "";
     private String gpsLat = "";
     private String gpsLng = "";
     private String gpsDT = "";
@@ -54,8 +55,9 @@ public class Forms_04_05 {
         this.uid = forms.uid;
         this.formDate = forms.formDate;
         this.username = forms.username;
-        this.ch_ID = forms.ch_ID;
-        this.ch_name = forms.ch_name;
+        this.childID = forms.childID;
+        this.childName = forms.childName;
+        this.studyID = forms.studyID;
         this.sInfo = forms.sInfo;
         this.sa1 = forms.sa1;
         this.sa2 = forms.sa2;
@@ -130,20 +132,28 @@ public class Forms_04_05 {
         this.username = username;
     }
 
-    public String getCh_ID() {
-        return ch_ID;
+    public String getChildID() {
+        return childID;
     }
 
-    public void setCh_ID(String ch_ID) {
-        this.ch_ID = ch_ID;
+    public void setChildID(String childID) {
+        this.childID = childID;
     }
 
-    public String getCh_name() {
-        return ch_name;
+    public String getChildName() {
+        return childName;
     }
 
-    public void setCh_name(String ch_name) {
-        this.ch_name = ch_name;
+    public void setChildName(String childName) {
+        this.childName = childName;
+    }
+
+    public String getStudyID() {
+        return studyID;
+    }
+
+    public void setStudyID(String studyID) {
+        this.studyID = studyID;
     }
 
     public String getSInfo() {

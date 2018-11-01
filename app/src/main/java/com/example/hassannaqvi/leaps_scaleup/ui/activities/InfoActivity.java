@@ -29,6 +29,7 @@ import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class InfoActivity extends AppCompatActivity {
@@ -56,6 +57,8 @@ public class InfoActivity extends AppCompatActivity {
         /*Setting BlackBox date picker*/
         bi.lsid5.setManager(getSupportFragmentManager());
         bi.lsid5.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
+        bi.lsid14.setManager(getSupportFragmentManager());
+        bi.lsid14.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
         /*Setting listeners*/
         bi.lsid1.addTextChangedListener(new TextWatcher() {
@@ -79,11 +82,10 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class));
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+                startActivity(new Intent(getApplicationContext(), fTYPE.equals("5") ? Form05IdBAActivity.class : Form04_EF_A.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -99,6 +101,8 @@ public class InfoActivity extends AppCompatActivity {
             Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
             bi.fldgrpls01.setVisibility(VISIBLE);
         }*/
+
+        bi.fldgrpls01.setVisibility(VISIBLE);
     }
 
     private boolean UpdateDB() {
@@ -134,7 +138,7 @@ public class InfoActivity extends AppCompatActivity {
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         fc_4_5.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID));
-        fc_4_5.setCh_ID(bi.lsid1.getText().toString());
+        fc_4_5.setChildID(bi.lsid1.getText().toString());
 
         setGPS(fc_4_5); // Set GPS
 

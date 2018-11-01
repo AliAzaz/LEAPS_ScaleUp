@@ -132,7 +132,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{(v) -> callback.openForm01("1a")}'>
+                        android:onClick='@{(v) -> callback.openForm("1a")}'>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -170,7 +170,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{(v) -> callback.openForm01("1b")}'>
+                        android:onClick='@{(v) -> callback.openForm("1b")}'>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -340,7 +340,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{() -> callback.openYouthEF()}">
+                        android:onClick='@{(v) -> callback.openForm("5")}'>
 
                         <LinearLayout
                             android:layout_width="match_parent"

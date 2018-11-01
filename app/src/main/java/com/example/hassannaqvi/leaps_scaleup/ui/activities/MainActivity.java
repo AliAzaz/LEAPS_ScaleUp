@@ -232,8 +232,8 @@ public class MainActivity extends Activity {
 
     }
 
-    public void openForm01(String fType) {
-        final Intent oF = new Intent(MainActivity.this, Form01Enrolment.class)
+    public void openForm(String fType) {
+        final Intent oF = new Intent(MainActivity.this, selectedForm(fType))
                 .putExtra("fType", fType);
 
         if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
@@ -274,6 +274,22 @@ public class MainActivity extends Activity {
 
             builder.show();
         }
+    }
+
+    private Class<?> selectedForm(String fType) {
+
+        Class retClass = null;
+
+        switch (fType) {
+            case "1a":
+            case "1b":
+                retClass = Form01Enrolment.class;
+            case "4":
+            case "5":
+                retClass = InfoActivity.class;
+        }
+
+        return retClass;
     }
 
     public void openAnthro() {

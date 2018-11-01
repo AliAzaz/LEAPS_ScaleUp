@@ -246,8 +246,9 @@ public class Form01Enrolment extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         fc = new Forms();
-
-        fc.setChildID(bi.ls01a05.getText().toString());
+        fc.setClustercode(bi.ls01a05.getText().toString());
+        fc.setChildID(bi.ls01a04.getText().toString());
+        fc.setStudyID(MainApp.round + "" + bi.ls01a05.getText().toString() + bi.ls01a04.getText().toString());
 
         JSONObject f01 = new JSONObject();
         f01.put("ls01a01", "");
