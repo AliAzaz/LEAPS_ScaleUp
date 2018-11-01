@@ -20,7 +20,6 @@ import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityInfoBinding;
-import com.example.hassannaqvi.leaps_scaleup.other.CheckingID;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONObject;
@@ -30,7 +29,6 @@ import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class InfoActivity extends AppCompatActivity {
@@ -97,10 +95,10 @@ public class InfoActivity extends AppCompatActivity {
             return;
         }
 
-        if (CheckingID.getIDValidation(db, this, bi.lsid1, fTYPE)) {
+        /*if (CheckingID.getIDValidation( this, bi.lsid1, fTYPE)) {
             Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
             bi.fldgrpls01.setVisibility(VISIBLE);
-        }
+        }*/
     }
 
     private boolean UpdateDB() {
