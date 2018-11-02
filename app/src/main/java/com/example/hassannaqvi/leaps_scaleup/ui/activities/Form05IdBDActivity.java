@@ -48,8 +48,7 @@ public class Form05IdBDActivity extends AppCompatActivity {
 
         if (formValidation()) {
             SaveDraft();
-//            if (UpdateDB()) {
-            if (true) {
+            if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), Form05IdBEActivity.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();

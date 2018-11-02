@@ -284,9 +284,12 @@ public class MainActivity extends Activity {
             case "1a":
             case "1b":
                 retClass = Form01Enrolment.class;
+                break;
             case "4":
             case "5":
+            case "6":
                 retClass = InfoActivity.class;
+                break;
         }
 
         return retClass;

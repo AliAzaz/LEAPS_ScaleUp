@@ -11,6 +11,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
@@ -37,7 +38,8 @@ public class InfoActivity extends AppCompatActivity {
     private static final String TAG = InfoActivity.class.getName();
     ActivityInfoBinding bi;
     public static Forms_04_05 fc_4_5;
-    String fTYPE = "";
+    String fTYPE = "", fExt = "";
+    Class<?> routeClass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,13 +81,58 @@ public class InfoActivity extends AppCompatActivity {
 
             }
         });
+
+        bi.lsid11.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.lsid11b.getId()) {
+                    bi.lsid12.clearCheck();
+                    bi.lsid13.clearCheck();
+                }
+            }
+        });
+
+        bi.lsid12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i != bi.lsid12a.getId()) {
+                    bi.lsid13.clearCheck();
+                }
+            }
+        });
+
+        /*Calling fnc*/
+        routeClass = selectedForm(fTYPE);
+
+    }
+
+    private Class<?> selectedForm(String fType) {
+
+        Class retClass = null;
+
+        switch (fType) {
+            case "4":
+                fExt = "f4_";
+                retClass = Form04_EF_A.class;
+                break;
+            case "5":
+                fExt = "f5_";
+                retClass = Form05IdBAActivity.class;
+                break;
+            case "6":
+                fExt = "f6_";
+                retClass = AnthroActivity.class;
+                break;
+        }
+
+        return retClass;
     }
 
     public void BtnContinue() {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), fTYPE.equals("5") ? Form05IdBAActivity.class : Form04_EF_A.class));
+                startActivity(new Intent(getApplicationContext(), routeClass));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -142,7 +189,7 @@ public class InfoActivity extends AppCompatActivity {
 
         setGPS(fc_4_5); // Set GPS
 
-        JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpls01, true);
+        JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpls01, true, fExt);
         fc_4_5.setSInfo(String.valueOf(Json));
 
     }
@@ -179,7 +226,7 @@ public class InfoActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.fldgrpls01);
     }
 
     public void BtnEnd() {

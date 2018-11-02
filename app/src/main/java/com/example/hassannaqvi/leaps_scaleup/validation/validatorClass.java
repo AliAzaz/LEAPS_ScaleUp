@@ -197,11 +197,11 @@ public abstract class validatorClass {
 
     public static boolean EmptyCheckingContainer(Context context, LinearLayout lv) {
 
-        for (int i = 0, count = lv.getChildCount(); i < count; ++i) {
+        for (int i = 0; i < lv.getChildCount(); i++) {
             View view = lv.getChildAt(i);
 
             if (view.getVisibility() == View.GONE || !view.isEnabled())
-                break;
+                continue;
 
             if (view instanceof CardView) {
                 for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
@@ -229,6 +229,10 @@ public abstract class validatorClass {
                 }
             } else if (view instanceof EditText) {
                 if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
+            } else if (view instanceof LinearLayout) {
+                if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
                     return false;
                 }
             }

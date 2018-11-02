@@ -38,8 +38,7 @@ public class Form05IdCActivity extends AppCompatActivity {
 
         if (formValidation()) {
             SaveDraft();
-//            if (UpdateDB()) {
-            if (true) {
+            if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), EndingActivity.class)
                         .putExtra("complete", true));
             } else {
