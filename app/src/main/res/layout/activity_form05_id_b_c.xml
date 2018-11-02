@@ -46,6 +46,7 @@
                             android:text="@string/ls05b09a" />
 
                         <CheckBox
+                            android:text="@string/nores"
                             android:id="@+id/ls05b09a99"
                             style="@style/checkbox" />
 
