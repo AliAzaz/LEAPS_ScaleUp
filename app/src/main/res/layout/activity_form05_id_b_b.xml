@@ -586,19 +586,14 @@
                                 android:id="@+id/ls05b08b01"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/correct" />
+                                android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/ls05b08b02"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/incorrect" />
+                                android:text="@string/no" />
 
-                            <RadioButton
-                                android:id="@+id/ls05b08b99"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/nores" />
                         </RadioGroup>
 
                     </LinearLayout>
@@ -624,19 +619,14 @@
                                 android:id="@+id/ls05b08c01"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/correct" />
+                                android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/ls05b08c02"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/incorrect" />
+                                android:text="@string/no" />
 
-                            <RadioButton
-                                android:id="@+id/ls05b08c99"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/nores" />
                         </RadioGroup>
 
                     </LinearLayout>
@@ -662,19 +652,14 @@
                                 android:id="@+id/ls05b08d01"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/correct" />
+                                android:text="@string/yes" />
 
                             <RadioButton
                                 android:id="@+id/ls05b08d02"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/incorrect" />
+                                android:text="@string/no" />
 
-                            <RadioButton
-                                android:id="@+id/ls05b08d99"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/nores" />
                         </RadioGroup>
 
                     </LinearLayout>

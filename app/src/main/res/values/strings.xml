@@ -480,7 +480,7 @@
 
     <!--Form 5 (B)-->
     <string name="ls05b01ha">1. PERSONAL AWARENESS (SOCIO – EMOTIONAL) </string>
-    <string name="ls05b01hb"> ڪجھ به نه </string>
+    <string name="ls05b01hb"> مواد:ڪجھ به نه </string>
     <string name="ls05b01a"> توهان پنهنجو نالو ۽ ذات ٻڌايو؟</string>
     <string name="ls05b01b"> توهان ٻڌائيندو ته توهان جي عمر ڪيتري آهي؟</string>
     <string name="ls05b01c"> توهان ڇوڪرا آهيو يا ڇوڪري؟</string>
@@ -489,19 +489,19 @@
     <string name="ls05b01f"> ڇا توهان مونکي ملڪ جو نالو ٻڌائيندو جنهن ۾ توهان رهو ٿا. </string>
 
     <string name="ls05b02ha">2. COMPARISON BY SIZE AND LENGTH (EMERGENT MATHS) </string>
-    <string name="ls05b02hb"> گولن ۽ ڪاٺين وارا تصويري ڪارڊ </string>
+    <string name="ls05b02hb">مواد: گولن ۽ ڪاٺين وارا تصويري ڪارڊ </string>
     <string name="ls05b02a"> ٻار وڏي گو ل کي سڃاتو</string>
     <string name="ls05b02b"> ٻار ننڍي گول کي سڃاتو</string>
     <string name="ls05b02c"> ٻار ڊگهي ڪاٺي کي سڃاتو</string>
     <string name="ls05b02d"> ٻار ننڍي ڪاٺي کي سڃاتو</string>
 
     <string name="ls05b03ha">3.	SORTING AND CLASSIFICATION (EMERGENT MATH) </string>
-    <string name="ls05b03hb"> تارن ۽ گولن وارا تصويري ڪارڊ 2 ڳاڙها تارا 1 پيلو تارو 2 پيلا گول 1 ڳاڙهو گول </string>
+    <string name="ls05b03hb">  مواد:تارن ۽ گولن وارا تصويري ڪارڊ 2 ڳاڙها تارا 1 پيلو تارو 2 پيلا گول 1 ڳاڙهو گول </string>
     <string name="ls05b03a"> ٻار ڪارڊ پهرين طريقي سان الڳ الڳ ڪيا (هڪجهڙائي)</string>
     <string name="ls05b03b"> ٻار ڪارڊ ٻئي طريقي سان الڳ الڳ ڪيا (مختلف)</string>
 
     <string name="ls05b04ha">4.	SHAPE IDENTIFICATION (EMERGENT MATHS) </string>
-    <string name="ls05b04hb"> 6 شڪلين وارو پيج </string>
+    <string name="ls05b04hb">  مواد:6 شڪلين وارو پيج </string>
     <string name="ls05b04a"> ٻار گول سڃاڻي ٿو؟</string>
     <string name="ls05b04b"> ٻار مستطيل سڃاڻي ٿو؟</string>
     <string name="ls05b04c"> ٻار ٽڪنڊو سڃاڻي ٿو؟</string>
@@ -509,12 +509,12 @@
     <string name="ls05b04e"> ٻار ماحول ۾ گول سڃاڻي ٿو؟ </string>
 
     <string name="ls05b05ha">5.	NUMBER IDENTIFICATION EMERGENT MATHS) </string>
-    <string name="ls05b05hb"> 1 کان 20 نمبرن وارو چارٽ </string>
+    <string name="ls05b05hb">مواد: 0 کان 20 نمبرن وارو چارٽ </string>
     <string name="ls05b05a">1 ۽ 2 قطار ۾ صحيح نمبرن جو تعداد</string>
     <string name="ls05b05b"> 4 ۽ 3 قطار ۾ صحيح نمبرن جو تعداد</string>
 
     <string name="ls05b06ha">6.	NUMBER SENSE – ONE TO ONE  (EMERGENT MATHS) </string>
-    <string name="ls05b06hb"> 20 ننڍڙيون شيون (مثال پٿر/بلاڪس / موتي وغيره) </string>
+    <string name="ls05b06hb">مواد: 20 ننڍڙيون شيون (مثال پٿر/بلاڪس / موتي وغيره) </string>
     <string name="ls05b06hc"> Engagement in Items </string>
     <string name="ls05b06a"> ٻار 3 (ٽي) شيون سڃاڻي ٿو</string>
     <string name="ls05b06b"> ٻار 8 (اٺ) شيون سڃاڻي ٿو.</string>
@@ -524,13 +524,13 @@
     <string name="ls05b06f"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
 
     <string name="ls05b07ha">7.	ADDITION AND SUBTRACTION (EMERGENT MATH) </string>
-    <string name="ls05b07hb"> پٿر/بلاڪس پهرين  item  ۾استعمال ڪيا.  صوفن ۽ سائيڪلن جي تصويرين وارا  ڪارڊ </string>
+    <string name="ls05b07hb">  مواد: پٿر/بلاڪس پهرين  item  ۾استعمال ڪيا.  صوفن ۽ سائيڪلن جي تصويرين وارا  ڪارڊ </string>
     <string name="ls05b07a"> ٻار 3 ۽ 2 جوڙ ڪري ٿو.</string>
     <string name="ls05b07b"> ٻار 2 ۽ 2 جوڙ ڪري ٿو.</string>
     <string name="ls05b07c"> ٻار 3 مان 1 ڪٽ ڪري ٿو.</string>
 
     <string name="ls05b08ha">8. PUZZLE COMPLETION (EMERGENT MATH) </string>
-    <string name="ls05b08hb"> 4 يا 5 ٽڪڙن وارو پزل </string>
+    <string name="ls05b08hb">  مواد:4 يا 5 ٽڪڙن وارو پزل </string>
     <string name="ls05b08hc"> Engagement in item </string>
     <string name="ls05b08a"> پزل جي جوڙيل ٽڪرن جو تعداد (ٽائيم 2 منٽ)</string>
     <string name="ls05b08b"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو.</string>
@@ -541,26 +541,26 @@
     <string name="ls05b09a"> ٻڌايل دوست جو تعداد </string>
 
     <string name="ls05b10ha">10. EMOTIONAL AWARENESS/ REGULATION (SOCIO – EMOTIONAL) </string>
-    <string name="ls05b10hb"> ڪجھ به نه </string>
+    <string name="ls05b10hb">  مواد:ڪجھ به نه </string>
     <string name="ls05b10a"> ٻار اهڙو ڪجھ ٻڌائي ٿو جيڪو هن کي ڏکائي</string>
     <string name="ls05b10b"> ٻار ڪو به هڪ جواب ٻڌايو جنهن سان ڏک گھٽ ٿئي.</string>
     <string name="ls05b10c"> ٻار ٻيو به جواب ٻڌائي ٿو جنهن سان ڏک گھٽ ٿئي.</string>
     <string name="ls05b10d"> ٻار اهڙو ڪجھ ٻڌائي ٿو جنهن سان هن کي خوشي ملي ٿي.</string>
 
     <string name="ls05b11ha">11. EMPATHY / PERSPECTIVE (SOCIO – EMOTIONAL)</string>
-    <string name="ls05b11hb"> روئيندڙ ڇوڪري ءَ  وارو تصويري ڪارڊ </string>
+    <string name="ls05b11hb">  مواد:روئيندڙ ڇوڪري ءَ  وارو تصويري ڪارڊ </string>
     <string name="ls05b11a"> ٻار اهو سڃاڻي ٿو ته هن جو دوست ڏکايل، اداس يا مايوس آهي.</string>
     <string name="ls05b11b"> ٻار ڪو به هڪ جواب ٻڌايو جنهن سان دوست جو ڏک گھٽ ٿئي.</string>
     <string name="ls05b11c"> ٻار ٻيو به جواب ٻڌايو جنهن سان دوست جو ڏک گھٽ ٿئي.</string>
 
     <string name="ls05b12ha">12. SHARING / SOLVING CONCEITS (SOCIO- EMOTIONAL)   </string>
-    <string name="ls05b12hb"> ڪجھ به نه </string>
+    <string name="ls05b12hb">  مواد:ڪجھ به نه </string>
     <string name="ls05b12a"> ٻار هڪ شي ٻڌائي جنهن سان مسئلو حل ٿئي</string>
     <string name="ls05b12b"> ٻار ٻي به شي ٻڌائي جنهن سان مسئلو حل ٿئي</string>
     <string name="ls05b12c"> ٻار ٽين به شي ٻڌائي جنهن سان مسئلو حل ٿئي</string>
 
     <string name="ls05b13ha">13. SHORT TERM MEMORY (SELF REGULATION) </string>
-    <string name="ls05b13hb"> ڪجھ به نه </string>
+    <string name="ls05b13hb">  مواد:ڪجھ به نه </string>
     <string name="ls05b13hc"> Practice\n
 (5...................................2)\n
 3..................1.................6\n
@@ -571,18 +571,18 @@
     <string name="ls05b13d"> 1…2…4…7…3</string>
 
     <string name="ls05b14ha">14. ORAL VOCABULARY (EMERGENT LITERACY)</string>
-    <string name="ls05b14hb"> ڪجھ به نه </string>
+    <string name="ls05b14hb">  مواد:ڪجھ به نه </string>
     <string name="ls05b14a"> مارڪيٽ جي ٻڌايل شين جو تعداد</string>
     <string name="ls05b14b"> ٻڌايل جانورن جو تعداد</string>
 
     <string name="ls05b15ha">15. PRINT AWARENESS (EMERGENT LITERACY)</string>
-    <string name="ls05b15hb"> 3 سالن کان 5 سالن واري عمر جي مطابق  ڪتاب </string>
+    <string name="ls05b15hb"> مواد:  3 سالن کان 5 سالن واري عمر جي مطابق  ڪتاب  </string>
     <string name="ls05b15a"> ٻار صحيح طريقي سان ڪتاب کولي ٿو (ڪتاب اهڙي طرح سان کولي جو اکر ابتا نه ٿين)</string>
     <string name="ls05b15b"> ٻار ڪتاب جي صفحي تي موجود اکرن تي آڱر رکي ٿو (سڄي جملي تي، پهرين لفظ تي يا سڄي اکرن تي آڱر رکي ٿو)</string>
     <string name="ls05b15c"> ٻار اکرن جو صحيح طرف ڏيکاري ٿو.</string>
 
     <string name="ls05b16ha">16.  LETTER IDENTIFICATION (EMERGENT LITERACY)</string>
-    <string name="ls05b16hb"> اکرن وارو چارٽ (سنڌي ۽ انگلش)</string>
+    <string name="ls05b16hb">  مواد:اکرن وارو چارٽ (سنڌي ۽ انگلش)</string>
     <string name="ls05b16hc"> Engagement with task </string>
     <string name="ls05b16a"> قطار ۾ 1 ۽ 2 صحيح اکرن جو تعداد (سنڌي)</string>
     <string name="ls05b16b"> قطار ۾ 4 ۽ 3 صحيح اکرن جو تعداد (سنڌي)</string>
@@ -590,17 +590,17 @@
     <string name="ls05b16d"> قطار ۾ 4 ۽ 3 صحيح اکرن جو تعداد (انگلش)</string>
 
     <string name="ls05b17ha">17.  FIRST LETTER SOUNDS (EMERGENT LITERACY)</string>
-    <string name="ls05b17hb"> ڪجھ به نه </string>
+    <string name="ls05b17hb">مواد: ڪجھ به نه </string>
     <string name="ls05b17a"> ٻار (س) واري آواز وارو لفظ سڃاتو (مڇي ، سج ، ڳئون)</string>
     <string name="ls05b17b"> ٻار (ٽ) واري آواز وارو لفظ سڃاتو (رانديڪو، ٽوپلو، ماني)</string>
     <string name="ls05b17c"> ٻار (ڪ) واري آواز وارو لفظ سڃاتو (ڪار ، بال، مزو)</string>
 
     <string name="ls05b18ha">18.  EMERGENT WRITING (EMERGENT LITERACY)</string>
-    <string name="ls05b18hb"> هڪ خالي پنو ، پينسل / پين ، اسٽاپ واچ </string>
+    <string name="ls05b18hb">  مواد:هڪ خالي پنو ، پينسل / پين ، اسٽاپ واچ </string>
     <string name="ls05b18a">  ٻار جي رائٽينگ ليول </string>
 
     <string name="ls05b19ha">19. ORAL COMPREHENSION (EMERGENT LITERACY)</string>
-    <string name="ls05b19hb"> ڪهاڻي </string>
+    <string name="ls05b19hb">  مواد:ڪهاڻي </string>
     <string name="ls05b19hc"> Engagement with task </string>
     <string name="ls05b19a"> ٻلي ءَ جي ٽوپي ڪنهن چورائي؟ (ڪئي)</string>
     <string name="ls05b19b"> ڇا توهان مونکي ٽوپيءَ جو رنگ ٻڏائي سگهندو؟ (ڳاڙهو)</string>
@@ -612,13 +612,13 @@
     <string name="ls05b19h"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
 
     <string name="ls05b20ha">20. COPING A SHAPE (FINE MOTOR)</string>
-    <string name="ls05b20hb"> پينسل ، ڪاغذ، هڪ ٽڪنڊي تصوير وارا ڪارڊ </string>
+    <string name="ls05b20hb">مواد: پينسل ، ڪاغذ، هڪ ٽڪنڊي تصوير وارا ڪارڊ </string>
     <string name="ls05b20c"> Engagement with task </string>
     <string name="ls05b20a"> بند ڪنڊن جو تعداد جنهن ۾ ڪابه وٿي نه هجي. (0،1،2،3)</string>
     <string name="ls05b20b"> تصوير نئين طرح سان ٺاهي ٿو (پاسيري، سڌين لڪيرين سان)</string>
 
     <string name="ls05b21ha">21. DRAWING PERSON (FINE MOTOR)</string>
-    <string name="ls05b21hb"> پينسل ، ڪاغذ ، اسٽاپ واچ (ٽائيم 2 منٽ)</string>
+    <string name="ls05b21hb">مواد: پينسل ، ڪاغذ ، اسٽاپ واچ (ٽائيم 2 منٽ)</string>
     <string name="ls05b21hc"> Engagement with task </string>
     <string name="ls05b21a"> ٻار هڪ مٿو ٺاهيو</string>
     <string name="ls05b21b"> ٻار هڪ جسم ٺاهيو</string>
@@ -633,7 +633,7 @@
     <string name="ls05b21k"> ٽاسڪ کي پورو ڪرڻ ۾ دلچسپي وٺي ٿو ۽ ٽاسڪ کي مڪمل ڪرڻ کانسواءِ روڪڻ نه ٿو چاهي. </string>
 
     <string name="ls05b22ha">22. FOLDING PAPER (FINE MOTOR) </string>
-    <string name="ls05b22hb"> A 20 x 20 cm پيپر جا ٽڪر </string>
+    <string name="ls05b22hb">مواد: A 20 x 20 cm  پيپر جا ٽڪر </string>
     <string name="ls05b22hc"> Engagement with task </string>
     <string name="ls05b22a"> صحيح طرح ٺاهيل سٽيپس جو تعداد</string>
     <string name="ls05b22b"> ٻار توجه ڏئي ٽاسڪ ڪري رهيو هيو ۽ ٻي هنڌ ڌيان نه ڏئي رهيو هو.</string>
