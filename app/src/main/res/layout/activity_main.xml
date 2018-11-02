@@ -216,7 +216,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick='@{() -> callback.openForm("6")}'>
+                        android:onClick='@{(v) -> callback.openForm("6")}'>
 
                         <LinearLayout
                             android:layout_width="match_parent"

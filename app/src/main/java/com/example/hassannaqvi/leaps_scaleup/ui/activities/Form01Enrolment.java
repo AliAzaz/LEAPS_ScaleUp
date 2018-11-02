@@ -375,7 +375,7 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
             return false;
         }
-        if (!CheckingID.getIDValidation(this, bi.ls01a04, MainApp.round + "" + bi.ls01a05.getText().toString(), getFtype)) {
+        if (!CheckingID.getIDValidation(this, bi.ls01a04, (getFtype.equals("1a") ? MainApp.round : "6") + "" + bi.ls01a05.getText().toString(), getFtype)) {
             return false;
         }
 

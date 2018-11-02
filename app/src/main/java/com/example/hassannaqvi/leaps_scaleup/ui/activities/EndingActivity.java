@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
@@ -66,7 +65,7 @@ public class EndingActivity extends AppCompatActivity {
 //            if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
 //            } else {
-                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
 //            }
 
         }
