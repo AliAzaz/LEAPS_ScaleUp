@@ -1710,6 +1710,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            style="@style/textInput"
                             android:id="@+id/ls02se15j"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
