@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
@@ -215,7 +216,7 @@ public class Form01Enrolment extends AppCompatActivity {
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(db, fc).execute().get();
+            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
 
             if (longID != 0) {
                 fc.setId(longID.intValue());
@@ -288,7 +289,7 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01d01", bi.ls01d01.getText().toString());
         f01.put("ls01d02", bi.ls01d02.getText().toString());
         f01.put("ls01e01", bi.ls01e01.getText().toString());
-        f01.put("ls01e02", bi.ls01e02.getText().toString());
+//        f01.put("ls01e02", bi.ls01e02.getText().toString());
         f01.put("ls01e03", bi.ls01e03.getText().toString());
         f01.put("ls01e04", bi.ls01e04.getText().toString());
         f01.put("ls01f01", bi.ls01f01.getText().toString());
@@ -411,12 +412,12 @@ public class Form01Enrolment extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls01d02, getString(R.string.ls01d02))) {
             return false;
         }
-        /*if (!validatorClass.EmptyTextBox(this, bi.ls01e01, getString(R.string.ls01e01))) {
-            return false;
-        }*/
-        if (!validatorClass.EmptyTextBox(this, bi.ls01e02, getString(R.string.ls01e02))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls01e01, getString(R.string.ls01e01))) {
             return false;
         }
+        /*if (!validatorClass.EmptyTextBox(this, bi.ls01e02, getString(R.string.ls01e02))) {
+            return false;
+        }*/
         if (!validatorClass.EmptyTextBox(this, bi.ls01e03, getString(R.string.ls01e03))) {
             return false;
         }
