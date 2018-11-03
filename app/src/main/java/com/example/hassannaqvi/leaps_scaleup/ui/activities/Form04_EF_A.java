@@ -18,7 +18,9 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -26,16 +28,17 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Field;
 import java.util.Objects;
+import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form04_EF_A extends AppCompatActivity {
     ActivityForm04EfABinding bi;
 
 
     int ls04ab01, ls04ab02, ls04ab03, ls04ab04, ls04ab05, ls04ab06, ls04ab07, ls04ab08, ls04ab09, ls04ab10, ls04ab11, ls04ab12;
-
 
 
     @Override
@@ -68,8 +71,7 @@ public class Form04_EF_A extends AppCompatActivity {
     public void BtnContinue() {
         if (formValidation()) {
             SaveDraft();
-//            if (UpdateDB()) {
-            if (true) {
+            if (UpdateDB()) {
                 startActivity(new Intent(getApplicationContext(), Form04_EF_B.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
@@ -77,18 +79,50 @@ public class Form04_EF_A extends AppCompatActivity {
         }
     }
 
+    private boolean UpdateDB() {
+       /* try {
+            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return false;*/
+       return true;
+    }
+
     private void SaveDraft() {
-/*
-        JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpf05BE01, true);
-        Form05IdBAActivity.fc_4_5.setSa5(String.valueOf(Json));
+      /*  JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpls04a01, true);
+        Json = Json. GeneratorClass.getContainerJSON(this,bi.fldgrpls04a02, false, Json);
+        Json = Json + GeneratorClass.getContainerJSON(this,bi.fldgrpls04a03,  false, Json);
+        Json = Json + GeneratorClass.getContainerJSON(this,bi.fldgrpls04a04,  false, Json);
+        Json = Json + GeneratorClass.getContainerJSON(this,bi.fldgrpls04a05, false, Json);
+        InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
 
         Log.d("F4-EF-A", String.valueOf(Json));*/
     }
+
     private boolean formValidation() {
 
-      /*  return validatorClass.EmptyCheckingContainer(this, bi.flgGrpf05BE01);*/
-      return true;
+        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a01)) {
+            return false;
+        }
+        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a02)) {
+            return false;
+        }
+        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a03)) {
+            return false;
+        }
+        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a04)) {
+            return false;
+        }
+        return validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a05);
+//      return true;
     }
+
     public void BtnEnd() {
         startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
 
@@ -171,9 +205,9 @@ public class Form04_EF_A extends AppCompatActivity {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
-        checkLevelSkip(ls04ab01,ls04ab02,ls04ab03,bi.level3);
-        checkLevelSkip(ls04ab04,ls04ab05,ls04ab06,bi.level4);
-        checkLevelSkip(ls04ab07,ls04ab08,ls04ab09,bi.level5);
+        checkLevelSkip(ls04ab01, ls04ab02, ls04ab03, bi.level3);
+        checkLevelSkip(ls04ab04, ls04ab05, ls04ab06, bi.level4);
+        checkLevelSkip(ls04ab07, ls04ab08, ls04ab09, bi.level5);
     }
 
     private void checkLevelSkip(int a, int b, int c, LinearLayout levelName) {

@@ -726,6 +726,30 @@
     <string name="bluestar">نيرو تارو</string>
     <string name="redtruck">ڳاڙهي ٽرڪ </string>
 
+
+    <!-- Form 4 (EF) E-->
+    <string name="ls04esec1">SECTION I</string>
+    <string name="ls04esec2">SECTION II</string>
+    <string name="ls04esub1">INTRODUCTION</string>
+    <string name="ls04esub2">PRACTICE TRIALS</string>
+    <string name="ls04esub3">TEST TRIALS</string>
+    <!--head and toe-->
+    <string name="ls04eheadq">پنهنجي مٿي کي هٿ لڳا.</string>
+    <string name="head">مٿي</string>
+    <string name="ls04etoeq">پنهنجي پير کي هٿ لڳا.</string>
+    <string name="toe">پير</string>
+    <string name="selfcorrect">پاڻ صحيح </string>
+    <string name="ls04e1b01a">جيڪڏهن مان چوان پنهنجي مٿي تي هٿ لڳا ته تون ڇا کي هٿ لڳائيندي.</string>
+    <string name="ls04e1b01b">جيڪڏهن مان چوان پنهنجي پيرکي هٿ لڳا ته تون ڇا کي هٿ لڳائيندي.</string>
+    <!--shoulder and knees-->
+    <string name="ls04eshoulderq">پنهنجي ڪلهي کي هٿ لڳا</string>
+    <string name="shoulder">ڪلهو</string>
+    <string name="ls04ekneesq">پنهنجي گوڏي کي هٿ لڳا</string>
+    <string name="knees">گوڏو</string>
+    <string name="ls04e2b01a">جيڪڏهن مان چوان پنهنجي ڪلهي تي هٿ لڳا تون ڇا کي هٿ لڳائيندي. </string>
+    <string name="ls04e2b01b">جيڪڏهن مان چوان پنهنجي گوڏي تي هٿ لڳا تون ڇا کي هٿ لڳائيندي.</string>
+
+
     <!--ls04ba answers-->
     <string name="ls04ba01pattern">@string/red</string>
     <string name="ls04ba02pattern">@string/blue</string>
@@ -783,6 +807,29 @@
     <string name="ls04bg12pattern">@string/bluestar</string>
 
     <string name="ls04caHeading">KNOCK / TAP GAME SCORING SHEET</string>
+    <!--ls04d answers-->
+    <string name="ls04da01pattern">@string/ls04dtwice</string>
+    <string name="ls04da02pattern">@string/ls04donce</string>
+    <string name="ls04da03pattern">@string/ls04dtwice</string>
+    <string name="ls04da04pattern">@string/ls04donce</string>
+
+    <string name="ls04db01pattern">@string/ls04donce</string>
+    <string name="ls04db02pattern">@string/ls04dtwice</string>
+    <string name="ls04db03pattern">@string/ls04dtwice</string>
+    <string name="ls04db04pattern">@string/ls04donce</string>
+    <string name="ls04db05pattern">@string/ls04dtwice</string>
+    <string name="ls04db06pattern">@string/ls04dtwice</string>
+    <string name="ls04db07pattern">@string/ls04donce</string>
+    <string name="ls04db08pattern">@string/ls04donce</string>
+    <string name="ls04db09pattern">@string/ls04donce</string>
+    <string name="ls04db10pattern">@string/ls04dtwice</string>
+    <string name="ls04db11pattern">@string/ls04donce</string>
+    <string name="ls04db12pattern">@string/ls04dtwice</string>
+    <string name="ls04db13pattern">@string/ls04dtwice</string>
+    <string name="ls04db14pattern">@string/ls04donce</string>
+    <string name="ls04db15pattern">@string/ls04donce</string>
+    <string name="ls04db16pattern">@string/ls04dtwice</string>
+
 
     <string name="ls04ca01">جڏهن مان هئين کڙڪايان (هڪ دفعو کڙڪايو)
 ته توهان ڪيئن ڪندو؟

@@ -46,6 +46,22 @@ public abstract class validatorClass {
 
     }
 
+    public static boolean EmptyTextBox(Context context, TextView txt, String msg) {
+        if (TextUtils.isEmpty(txt.getText().toString())) {
+            FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+            txt.setError("This data is Required! ");    // Set Error on last radio button
+            txt.setFocusableInTouchMode(true);
+            txt.requestFocus();
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(txt.getId()) + ": This data is Required!");
+            return false;
+        } else {
+            txt.setError(null);
+            txt.clearFocus();
+            return true;
+        }
+
+    }
+
     public static boolean RangeTextBox(Context context, EditText txt, int min, int max, String msg, String type) {
 
         if (Integer.valueOf(txt.getText().toString()) < min || Integer.valueOf(txt.getText().toString()) > max) {
@@ -229,6 +245,55 @@ public abstract class validatorClass {
                 }
             } else if (view instanceof EditText) {
                 if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
+            } else if (view instanceof LinearLayout) {
+                if (!EmptyCheckingContainer(context, (LinearLayout) view)) {
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+    public static boolean tempEmptyCheckingContainer(Context context, LinearLayout lv) {
+
+        for (int i = 0; i < lv.getChildCount(); i++) {
+            View view = lv.getChildAt(i);
+
+            if (view.getVisibility() == View.GONE || !view.isEnabled())
+                continue;
+
+            if (view instanceof CardView) {
+                for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
+                    View view1 = ((CardView) view).getChildAt(j);
+                    if (view1 instanceof LinearLayout) {
+                        if (!EmptyCheckingContainer(context, (LinearLayout) view1)) {
+                            return false;
+                        }
+                    }
+                }
+            } else if (view instanceof RadioGroup) {
+
+                View v = ((RadioGroup) view).getChildAt(0);
+                if (v != null) {
+
+                    String asNamed = getString(context, getIDComponent(view));
+
+                    if (!EmptyRadioButton(context, (RadioGroup) view, (RadioButton) v, asNamed)) {
+                        return false;
+                    }
+                }
+            } else if (view instanceof Spinner) {
+                if (!EmptySpinner(context, (Spinner) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
+            } else if (view instanceof EditText) {
+                if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
+            } else if (view instanceof TextView) {
+                if (!EmptyTextBox(context, (TextView) view, getString(context, getIDComponent(view)))) {
                     return false;
                 }
             } else if (view instanceof LinearLayout) {

@@ -16,6 +16,8 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfCBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -23,9 +25,12 @@ import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.concurrent.ExecutionException;
+
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_A.getStringbyIdName;
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form04_EF_C extends AppCompatActivity {
 
@@ -128,7 +133,8 @@ public class Form04_EF_C extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+//                    startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+                    startActivity(new Intent(getApplicationContext(), Form04_EF_D.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }
@@ -139,15 +145,24 @@ public class Form04_EF_C extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
+        try {
+            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
 
-        return true;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     private void SaveDraft() throws JSONException {
 
         JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpf04EFC, true);
 
-        InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
+        InfoActivity.fc_4_5.setSa3(String.valueOf(Json));
 
         Log.d("F5-BA", String.valueOf(Json));
 

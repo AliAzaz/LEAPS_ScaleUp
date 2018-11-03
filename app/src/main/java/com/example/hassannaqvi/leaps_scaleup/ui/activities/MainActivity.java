@@ -307,7 +307,8 @@ public class MainActivity extends Activity {
     }
 
     public void openEF() {
-        Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(MainActivity.this, Form05IdBAActivity.class));
     }
 
     public void openYouthEF() {

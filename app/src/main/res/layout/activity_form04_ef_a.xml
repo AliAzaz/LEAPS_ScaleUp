@@ -57,346 +57,15 @@
             <!--android:text="@string/ls02pe01heading"-->
             <!--android:textColor="@android:color/white"-->
             <!--android:textSize="35sp" />-->
-
-            <!--1-->
-            <!--ls04aa01a-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa01a1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="3"
-                            android:onClick="processButton" />
-
-                        <Button
-                            android:id="@+id/ls04aa01a2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="7"
-                            android:onClick="processButton"/>
-
-                        <Button
-                            android:id="@+id/ls04aa01ax"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="X"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/red"
-                            android:onClick="processButton" />
-                    </LinearLayout>
-
-
-                    <TextView
-                        android:id="@+id/ls04aa01a"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:maxLength="2"
-                        android:paddingEnd="20dp"
-                        android:paddingStart="20dp"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:text="37" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa01a99"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/gray"
-                            android:text="@string/ls04ignore"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-            <!--ls04aa01b-->
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldgrpls04aa01a"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa01b1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="3"
-                            android:onClick="processButton"/>
-
-                        <Button
-                            android:id="@+id/ls04aa01b2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="7"
-                            android:onClick="processButton"/>
-                        <Button
-                            android:id="@+id/ls04aa01bx"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="X"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/red"
-                            android:onClick="processButton" />
-
-                    </LinearLayout>
-
-
-                    <TextView
-                        android:id="@+id/ls04aa01b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:maxLength="2"
-                        android:paddingEnd="20dp"
-                        android:paddingStart="20dp"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:text="37" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa01b99"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/gray"
-                            android:text="@string/ls04ignore"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--2-->
-            <!--ls04aa02a-->
-            <android.support.v7.widget.CardView
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa02a1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:onClick="processButton"
-                            android:text="6" />
-
-                        <Button
-                            android:id="@+id/ls04aa02a2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:onClick="processButton"
-                            android:layout_weight="1"
-                            android:text="4" />
-                        <Button
-                            android:id="@+id/ls04aa02ax"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="X"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/red"
-                            android:onClick="processButton" />
-
-                    </LinearLayout>
-
-
-                    <TextView
-                        android:id="@+id/ls04aa02a"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:maxLength="2"
-                        android:paddingEnd="20dp"
-                        android:paddingStart="20dp"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:text="64" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa02a99"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/gray"
-                            android:text="@string/ls04ignore"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-            <!--ls04aa02b-->
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldgrpls04aa02a"
-                style="@style/cardView">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa02b1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:onClick="processButton"
-                            android:text="6" />
-
-                        <Button
-                            android:id="@+id/ls04aa02b2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:onClick="processButton"
-                            android:layout_weight="1"
-                            android:text="4" />
-                        <Button
-                            android:id="@+id/ls04aa02bx"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="X"
-                            android:textSize="20dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/red"
-                            android:onClick="processButton" />
-
-                    </LinearLayout>
-
-
-                    <TextView
-                        android:id="@+id/ls04aa02b"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:maxLength="2"
-                        android:paddingEnd="20dp"
-                        android:paddingStart="20dp"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:text="64" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04aa02b99"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/gray"
-                            android:text="@string/ls04ignore"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
             <LinearLayout
-                android:id="@+id/fldgrpll01"
+                android:id="@+id/fldgrpls04a01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!--3-->
-                <!--ls04aa03a-->
-               <android.support.v7.widget.CardView style="@style/cardView">
+                <!--1-->
+                <!--ls04aa01a-->
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -410,7 +79,7 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa03a1"
+                                android:id="@+id/ls04aa01a1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
@@ -419,30 +88,30 @@
                                 android:text="3" />
 
                             <Button
-                                android:id="@+id/ls04aa03a2"
+                                android:id="@+id/ls04aa01a2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
                                 android:text="7" />
+
                             <Button
-                                android:id="@+id/ls04aa03ax"
+                                android:id="@+id/ls04aa01ax"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="X"
-                                android:textSize="20dp"
-                                android:textStyle="bold"
                                 android:textColor="@color/red"
-                                android:onClick="processButton" />
-
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
                         </LinearLayout>
 
 
                         <TextView
-                            android:id="@+id/ls04aa03a"
+                            android:id="@+id/ls04aa01a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -463,7 +132,7 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa03a99"
+                                android:id="@+id/ls04aa01a99"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
@@ -475,9 +144,9 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-                <!--ls04aa03b-->
+                <!--ls04aa01b-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/fldgrpls04aa03a"
+                    android:id="@+id/fldgrpls04aa01a"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -492,39 +161,40 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa03b1"
+                                android:id="@+id/ls04aa01b1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
-                                android:onClick="processButton"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="3" />
 
                             <Button
-                                android:id="@+id/ls04aa03b2"
+                                android:id="@+id/ls04aa01b2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
                                 android:text="7" />
+
                             <Button
-                                android:id="@+id/ls04aa03bx"
+                                android:id="@+id/ls04aa01bx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="X"
-                                android:textSize="20dp"
-                                android:textStyle="bold"
                                 android:textColor="@color/red"
-                                android:onClick="processButton" />
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
 
                         <TextView
-                            android:id="@+id/ls04aa03b"
+                            android:id="@+id/ls04aa01b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -545,7 +215,7 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa03b99"
+                                android:id="@+id/ls04aa01b99"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
@@ -558,9 +228,9 @@
 
                 </android.support.v7.widget.CardView>
 
-                <!--4-->
-                <!--ls04aa04a-->
-               <android.support.v7.widget.CardView style="@style/cardView">
+                <!--2-->
+                <!--ls04aa02a-->
+                <android.support.v7.widget.CardView style="@style/cardView">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -574,39 +244,40 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa04a1"
+                                android:id="@+id/ls04aa02a1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
-                                android:onClick="processButton"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="6" />
 
                             <Button
-                                android:id="@+id/ls04aa04a2"
+                                android:id="@+id/ls04aa02a2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
+                                android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:layout_weight="1"
                                 android:text="4" />
+
                             <Button
-                                android:id="@+id/ls04aa04ax"
+                                android:id="@+id/ls04aa02ax"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="X"
-                                android:textSize="20dp"
-                                android:textStyle="bold"
                                 android:textColor="@color/red"
-                                android:onClick="processButton" />
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
 
                         <TextView
-                            android:id="@+id/ls04aa04a"
+                            android:id="@+id/ls04aa02a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -627,7 +298,7 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa04a99"
+                                android:id="@+id/ls04aa02a99"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
@@ -639,9 +310,9 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-                <!--ls04aa04b-->
+                <!--ls04aa02b-->
                 <android.support.v7.widget.CardView
-                    android:id="@+id/fldgrpls04aa04a"
+                    android:id="@+id/fldgrpls04aa02a"
                     style="@style/cardView">
 
                     <LinearLayout
@@ -656,7 +327,7 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa04b1"
+                                android:id="@+id/ls04aa02b1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
@@ -665,30 +336,31 @@
                                 android:text="6" />
 
                             <Button
-                                android:id="@+id/ls04aa04b2"
+                                android:id="@+id/ls04aa02b2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
                                 android:text="4" />
+
                             <Button
-                                android:id="@+id/ls04aa04bx"
+                                android:id="@+id/ls04aa02bx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
+                                android:onClick="processButton"
                                 android:text="X"
-                                android:textSize="20dp"
-                                android:textStyle="bold"
                                 android:textColor="@color/red"
-                                android:onClick="processButton" />
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
 
                         <TextView
-                            android:id="@+id/ls04aa04b"
+                            android:id="@+id/ls04aa02b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -709,7 +381,7 @@
                             android:padding="25dp">
 
                             <Button
-                                android:id="@+id/ls04aa04b99"
+                                android:id="@+id/ls04aa02b99"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
@@ -721,8 +393,346 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/fldgrpll01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--3-->
+                    <!--ls04aa03a-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa03a1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="3" />
+
+                                <Button
+                                    android:id="@+id/ls04aa03a2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="7" />
+
+                                <Button
+                                    android:id="@+id/ls04aa03ax"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04aa03a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:maxLength="2"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="37" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa03a99"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                    <!--ls04aa03b-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/fldgrpls04aa03a"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa03b1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="3" />
+
+                                <Button
+                                    android:id="@+id/ls04aa03b2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="7" />
+
+                                <Button
+                                    android:id="@+id/ls04aa03bx"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04aa03b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:maxLength="2"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="37" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa03b99"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!--4-->
+                    <!--ls04aa04a-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa04a1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="6" />
+
+                                <Button
+                                    android:id="@+id/ls04aa04a2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="4" />
+
+                                <Button
+                                    android:id="@+id/ls04aa04ax"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04aa04a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:maxLength="2"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="64" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa04a99"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                    <!--ls04aa04b-->
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/fldgrpls04aa04a"
+                        style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa04b1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="6" />
+
+                                <Button
+                                    android:id="@+id/ls04aa04b2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="4" />
+
+                                <Button
+                                    android:id="@+id/ls04aa04bx"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="processButton"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04aa04b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:maxLength="2"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="64" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04aa04b99"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
             </LinearLayout>
-
             <!--Test Trial-->
             <TextView
                 android:layout_width="match_parent"
@@ -760,259 +770,268 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white" />
 
-            <!--ls04ab01-->
-            <android.support.v7.widget.CardView
+            <LinearLayout
+                android:id="@+id/fldgrpls04a02"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
-
-                <LinearLayout
+                android:orientation="vertical">
+                <!--ls04ab01-->
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
+                        android:orientation="vertical">
 
-                        <Button
-                            android:id="@+id/ls04ab01a"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:onClick="levelBasedProcess"
-                            android:text="5" />
+                            android:orientation="horizontal"
+                            android:padding="25dp">
 
-                        <Button
-                            android:id="@+id/ls04ab01b"
-                            android:layout_width="wrap_content"
+                            <Button
+                                android:id="@+id/ls04ab01a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="5" />
+
+                            <Button
+                                android:id="@+id/ls04ab01b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="7" />
+
+                            <Button
+                                android:id="@+id/ls04ab01x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="X"
+                                android:textColor="@color/red"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/ls04ab01"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:onClick="levelBasedProcess"
-                            android:text="7" />
-                        <Button
-                            android:id="@+id/ls04ab01x"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="X"
-                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:maxLength="2"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:text=""
+                            android:textSize="20sp"
                             android:textStyle="bold"
-                            android:textColor="@color/red"
-                            android:onClick="levelBasedProcess" />
-
-                    </LinearLayout>
+                            tools:text="57" />
 
 
-                    <TextView
-                        android:id="@+id/ls04ab01"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:maxLength="2"
-                        android:paddingEnd="20dp"
-                        android:paddingStart="20dp"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:text="57" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04ab0199"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/gray"
-                            android:text="@string/ls04ignore"
-                            android:textColor="@color/white" />
+                            android:orientation="horizontal"
+                            android:padding="25dp">
+
+                            <Button
+                                android:id="@+id/ls04ab0199"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:background="@color/gray"
+                                android:text="@string/ls04ignore"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
 
-            </android.support.v7.widget.CardView>
-            <!--ls04ab02-->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
-
-                <LinearLayout
+                </android.support.v7.widget.CardView>
+                <!--ls04ab02-->
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
+                        android:orientation="vertical">
 
-                        <Button
-                            android:id="@+id/ls04ab02a"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:onClick="levelBasedProcess"
-                            android:text="2" />
+                            android:orientation="horizontal"
+                            android:padding="25dp">
 
-                        <Button
-                            android:id="@+id/ls04ab02b"
-                            android:layout_width="wrap_content"
+                            <Button
+                                android:id="@+id/ls04ab02a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="2" />
+
+                            <Button
+                                android:id="@+id/ls04ab02b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/ls04ab02x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="X"
+                                android:textColor="@color/red"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/ls04ab02"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:onClick="levelBasedProcess"
-                            android:text="1" />
-                        <Button
-                            android:id="@+id/ls04ab02x"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="X"
-                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:maxLength="2"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:text=""
+                            android:textSize="20sp"
                             android:textStyle="bold"
-                            android:textColor="@color/red"
-                            android:onClick="levelBasedProcess" />
-
-                    </LinearLayout>
+                            tools:text="21" />
 
 
-                    <TextView
-                        android:id="@+id/ls04ab02"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:maxLength="2"
-                        android:paddingEnd="20dp"
-                        android:paddingStart="20dp"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:text="21" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04ab0299"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/gray"
-                            android:text="@string/ls04ignore"
-                            android:textColor="@color/white" />
+                            android:orientation="horizontal"
+                            android:padding="25dp">
+
+                            <Button
+                                android:id="@+id/ls04ab0299"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:background="@color/gray"
+                                android:text="@string/ls04ignore"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
                     </LinearLayout>
-                </LinearLayout>
 
-            </android.support.v7.widget.CardView>
-            <!--ls04ab03-->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
-
-                <LinearLayout
+                </android.support.v7.widget.CardView>
+                <!--ls04ab03-->
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
+                        android:orientation="vertical">
 
-                        <Button
-                            android:id="@+id/ls04ab03a"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:onClick="levelBasedProcess"
-                            android:text="8" />
+                            android:orientation="horizontal"
+                            android:padding="25dp">
 
-                        <Button
-                            android:id="@+id/ls04ab03b"
-                            android:layout_width="wrap_content"
+                            <Button
+                                android:id="@+id/ls04ab03a"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="8" />
+
+                            <Button
+                                android:id="@+id/ls04ab03b"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="2" />
+
+                            <Button
+                                android:id="@+id/ls04ab03x"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:onClick="levelBasedProcess"
+                                android:text="X"
+                                android:textColor="@color/red"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/ls04ab03"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
                             android:layout_weight="1"
-                            android:onClick="levelBasedProcess"
-                            android:text="2" />
-                        <Button
-                            android:id="@+id/ls04ab03x"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:text="X"
-                            android:textSize="20dp"
+                            android:gravity="center"
+                            android:maxLength="2"
+                            android:paddingEnd="20dp"
+                            android:paddingStart="20dp"
+                            android:text=""
+                            android:textSize="20sp"
                             android:textStyle="bold"
-                            android:textColor="@color/red"
-                            android:onClick="levelBasedProcess" />
+                            tools:text="82" />
 
 
-                    </LinearLayout>
-
-
-                    <TextView
-                        android:id="@+id/ls04ab03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:maxLength="2"
-                        android:paddingEnd="20dp"
-                        android:paddingStart="20dp"
-                        android:text=""
-                        android:textSize="20sp"
-                        android:textStyle="bold"
-                        tools:text="82" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:padding="25dp">
-
-                        <Button
-                            android:id="@+id/ls04ab0399"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="1"
-                            android:background="@color/gray"
-                            android:text="@string/ls04ignore"
-                            android:textColor="@color/white" />
-                    </LinearLayout>
-                </LinearLayout>
+                            android:orientation="horizontal"
+                            android:padding="25dp">
 
-            </android.support.v7.widget.CardView>
+                            <Button
+                                android:id="@+id/ls04ab0399"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:layout_weight="1"
+                                android:background="@color/gray"
+                                android:text="@string/ls04ignore"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
 
             <!--level 3-->
             <LinearLayout
@@ -1033,273 +1052,283 @@
                     android:text="@string/levelThree"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
-                <!--ls04ab04-->
-               <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/fldgrpls04a03"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--ls04ab04-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab04a"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="4" />
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                            <Button
-                                android:id="@+id/ls04ab04b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="3" />
+                                <Button
+                                    android:id="@+id/ls04ab04a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="4" />
 
-                            <Button
-                                android:id="@+id/ls04ab04c"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab04b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="3" />
+
+                                <Button
+                                    android:id="@+id/ls04ab04c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="6" />
+
+                                <Button
+                                    android:id="@+id/ls04ab04x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab04"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="6" />
-                            <Button
-                                android:id="@+id/ls04ab04x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="3"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
+                                tools:text="436" />
 
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04ab0499"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                         </LinearLayout>
 
-
-                        <TextView
-                            android:id="@+id/ls04ab04"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="3"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="436" />
-
+                    </android.support.v7.widget.CardView>
+                    <!--ls04ab05-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab0499"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
-                <!--ls04ab05-->
-               <android.support.v7.widget.CardView style="@style/cardView">
+                                <Button
+                                    android:id="@+id/ls04ab05a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="3" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/ls04ab05b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="8" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                                <Button
+                                    android:id="@+id/ls04ab05c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="1" />
 
-                            <Button
-                                android:id="@+id/ls04ab05a"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab05x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab05"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="3" />
-
-                            <Button
-                                android:id="@+id/ls04ab05b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="8" />
-
-                            <Button
-                                android:id="@+id/ls04ab05c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:onClick="levelBasedProcess"
-                                android:layout_weight="1"
-                                android:text="1" />
-                            <Button
-                                android:id="@+id/ls04ab05x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="3"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
+                                tools:text="381" />
 
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04ab0599"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                         </LinearLayout>
 
-
-                        <TextView
-                            android:id="@+id/ls04ab05"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="3"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="381" />
-
+                    </android.support.v7.widget.CardView>
+                    <!--ls04ab06-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab0599"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
-                <!--ls04ab06-->
-               <android.support.v7.widget.CardView style="@style/cardView">
+                                <Button
+                                    android:id="@+id/ls04ab06a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="5" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/ls04ab06b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="2" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                                <Button
+                                    android:id="@+id/ls04ab06c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="7" />
 
-                            <Button
-                                android:id="@+id/ls04ab06a"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab06x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab06"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="5" />
-
-                            <Button
-                                android:id="@+id/ls04ab06b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="2" />
-
-                            <Button
-                                android:id="@+id/ls04ab06c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="7" />
-                            <Button
-                                android:id="@+id/ls04ab06x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="3"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
-
-                        </LinearLayout>
+                                tools:text="527" />
 
 
-                        <TextView
-                            android:id="@+id/ls04ab06"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="3"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="527" />
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
-
-                            <Button
-                                android:id="@+id/ls04ab0699"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
+                                <Button
+                                    android:id="@+id/ls04ab0699"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
             </LinearLayout>
 
             <!--level 4-->
@@ -1321,300 +1350,310 @@
                     android:text="@string/levelFour"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
-                <!--ls04ab07-->
-               <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/fldgrpls04a04"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--ls04ab07-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab07a"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="3" />
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                            <Button
-                                android:id="@+id/ls04ab07b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="2" />
+                                <Button
+                                    android:id="@+id/ls04ab07a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="3" />
 
-                            <Button
-                                android:id="@+id/ls04ab07c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="4" />
+                                <Button
+                                    android:id="@+id/ls04ab07b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="2" />
 
-                            <Button
-                                android:id="@+id/ls04ab07d"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab07c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="4" />
+
+                                <Button
+                                    android:id="@+id/ls04ab07d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="9" />
+
+                                <Button
+                                    android:id="@+id/ls04ab07x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab07"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="9" />
-                            <Button
-                                android:id="@+id/ls04ab07x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="4"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
+                                tools:text="3249" />
 
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04ab0799"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                         </LinearLayout>
 
-
-                        <TextView
-                            android:id="@+id/ls04ab07"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="4"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="3249" />
-
+                    </android.support.v7.widget.CardView>
+                    <!--ls04ab08-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab0799"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
-                <!--ls04ab08-->
-               <android.support.v7.widget.CardView style="@style/cardView">
+                                <Button
+                                    android:id="@+id/ls04ab08a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="1" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/ls04ab08b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="7" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                                <Button
+                                    android:id="@+id/ls04ab08c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="6" />
 
-                            <Button
-                                android:id="@+id/ls04ab08a"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab08d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="5" />
+
+                                <Button
+                                    android:id="@+id/ls04ab08x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab08"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="1" />
-
-                            <Button
-                                android:id="@+id/ls04ab08b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="7" />
-
-                            <Button
-                                android:id="@+id/ls04ab08c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="6" />
-
-                            <Button
-                                android:id="@+id/ls04ab08d"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="5" />
-                            <Button
-                                android:id="@+id/ls04ab08x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="4"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
+                                tools:text="1765" />
 
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04ab0899"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                         </LinearLayout>
 
-
-                        <TextView
-                            android:id="@+id/ls04ab08"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="4"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="1765" />
-
+                    </android.support.v7.widget.CardView>
+                    <!--ls04ab09-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab0899"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
-                <!--ls04ab09-->
-               <android.support.v7.widget.CardView style="@style/cardView">
+                                <Button
+                                    android:id="@+id/ls04ab09a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="3" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/ls04ab09b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="5" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                                <Button
+                                    android:id="@+id/ls04ab09c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="7" />
 
-                            <Button
-                                android:id="@+id/ls04ab09a"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab09d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="1" />
+
+                                <Button
+                                    android:id="@+id/ls04ab09x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab09"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="3" />
-
-                            <Button
-                                android:id="@+id/ls04ab09b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="5" />
-
-                            <Button
-                                android:id="@+id/ls04ab09c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="7" />
-
-                            <Button
-                                android:id="@+id/ls04ab09d"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="1" />
-                            <Button
-                                android:id="@+id/ls04ab09x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="4"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
-
-                        </LinearLayout>
+                                tools:text="3571" />
 
 
-                        <TextView
-                            android:id="@+id/ls04ab09"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="4"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="3571" />
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
-
-                            <Button
-                                android:id="@+id/ls04ab0999"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
+                                <Button
+                                    android:id="@+id/ls04ab0999"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
 
             </LinearLayout>
             <!--level 5-->
@@ -1636,328 +1675,337 @@
                     android:text="@string/levelFive"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/white" />
-                <!--ls04ab10-->
-               <android.support.v7.widget.CardView style="@style/cardView">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/fldgrpls04a05"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--ls04ab10-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab10a"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="3" />
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                            <Button
-                                android:id="@+id/ls04ab10b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="4" />
+                                <Button
+                                    android:id="@+id/ls04ab10a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="3" />
 
-                            <Button
-                                android:id="@+id/ls04ab10c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="8" />
+                                <Button
+                                    android:id="@+id/ls04ab10b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="4" />
 
-                            <Button
-                                android:id="@+id/ls04ab10d"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="7" />
+                                <Button
+                                    android:id="@+id/ls04ab10c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="8" />
 
-                            <Button
-                                android:id="@+id/ls04ab10e"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab10d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="7" />
+
+                                <Button
+                                    android:id="@+id/ls04ab10e"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="5" />
+
+                                <Button
+                                    android:id="@+id/ls04ab10x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab10"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:onClick="levelBasedProcess"
                                 android:layout_weight="1"
-                                android:text="5" />
-                            <Button
-                                android:id="@+id/ls04ab10x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="5"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
+                                tools:text="34875" />
 
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04ab1099"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                         </LinearLayout>
 
-
-                        <TextView
-                            android:id="@+id/ls04ab10"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="5"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="34875" />
-
+                    </android.support.v7.widget.CardView>
+                    <!--ls04ab11-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab1099"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
-                <!--ls04ab11-->
-               <android.support.v7.widget.CardView style="@style/cardView">
+                                <Button
+                                    android:id="@+id/ls04ab11a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="8" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/ls04ab11b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="1" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                                <Button
+                                    android:id="@+id/ls04ab11c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="5" />
 
-                            <Button
-                                android:id="@+id/ls04ab11a"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab11d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="3" />
+
+                                <Button
+                                    android:id="@+id/ls04ab11e"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="6" />
+
+                                <Button
+                                    android:id="@+id/ls04ab11x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab11"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="8" />
-
-                            <Button
-                                android:id="@+id/ls04ab11b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="1" />
-
-                            <Button
-                                android:id="@+id/ls04ab11c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="5" />
-
-                            <Button
-                                android:id="@+id/ls04ab11d"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="3" />
-
-                            <Button
-                                android:id="@+id/ls04ab11e"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="6" />
-                            <Button
-                                android:id="@+id/ls04ab11x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="5"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
+                                tools:text="81536" />
 
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04ab1199"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                         </LinearLayout>
 
-
-                        <TextView
-                            android:id="@+id/ls04ab11"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="5"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="81536" />
-
+                    </android.support.v7.widget.CardView>
+                    <!--ls04ab12-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                            android:orientation="vertical">
 
-                            <Button
-                                android:id="@+id/ls04ab1199"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                </android.support.v7.widget.CardView>
-                <!--ls04ab12-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                                <Button
+                                    android:id="@+id/ls04ab12a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="6" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                                <Button
+                                    android:id="@+id/ls04ab12b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="4" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
+                                <Button
+                                    android:id="@+id/ls04ab12c"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="5" />
 
-                            <Button
-                                android:id="@+id/ls04ab12a"
-                                android:layout_width="wrap_content"
+                                <Button
+                                    android:id="@+id/ls04ab12d"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="2" />
+
+                                <Button
+                                    android:id="@+id/ls04ab12e"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="9" />
+
+                                <Button
+                                    android:id="@+id/ls04ab12x"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="X"
+                                    android:textColor="@color/red"
+                                    android:textSize="20dp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/ls04ab12"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
                                 android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="6" />
-
-                            <Button
-                                android:id="@+id/ls04ab12b"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="4" />
-
-                            <Button
-                                android:id="@+id/ls04ab12c"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="5" />
-
-                            <Button
-                                android:id="@+id/ls04ab12d"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="2" />
-
-                            <Button
-                                android:id="@+id/ls04ab12e"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:onClick="levelBasedProcess"
-                                android:text="9" />
-                            <Button
-                                android:id="@+id/ls04ab12x"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:text="X"
-                                android:textSize="20dp"
+                                android:gravity="center"
+                                android:maxLength="5"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/red"
-                                android:onClick="levelBasedProcess" />
-
-                        </LinearLayout>
+                                tools:text="64529" />
 
 
-                        <TextView
-                            android:id="@+id/ls04ab12"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:maxLength="5"
-                            android:paddingEnd="20dp"
-                            android:paddingStart="20dp"
-                            android:text=""
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            tools:text="64529" />
-
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:padding="25dp">
-
-                            <Button
-                                android:id="@+id/ls04ab1299"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_margin="3dp"
-                                android:layout_weight="1"
-                                android:background="@color/gray"
-                                android:text="@string/ls04ignore"
-                                android:textColor="@color/white" />
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04ab1299"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
 
-                </android.support.v7.widget.CardView>
-
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
             </LinearLayout>
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
 
