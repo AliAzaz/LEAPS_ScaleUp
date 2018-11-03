@@ -190,6 +190,54 @@ public class Form04_EF_C extends AppCompatActivity {
                 }
             }
         }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb01, bi.ls04cb01a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb02, bi.ls04cb02a, getString(R.string.tap))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb03, bi.ls04cb03a, getString(R.string.tap))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb04, bi.ls04cb04a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb05, bi.ls04cb05a, getString(R.string.tap))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb06, bi.ls04cb06a, getString(R.string.tap))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb07, bi.ls04cb07a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb08, bi.ls04cb08a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb09, bi.ls04cb09a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb10, bi.ls04cb10a, getString(R.string.tap))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb11, bi.ls04cb11a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb12, bi.ls04cb12a, getString(R.string.tap))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb13, bi.ls04cb13a, getString(R.string.tap))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb14, bi.ls04cb14a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb15, bi.ls04cb15a, getString(R.string.knock))) {
+            return false;
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb16, bi.ls04cb16a, getString(R.string.tap))) {
+            return false;
+        }
 
         return true;
     }
