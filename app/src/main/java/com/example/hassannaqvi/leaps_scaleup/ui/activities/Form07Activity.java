@@ -2,16 +2,20 @@ package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm07Binding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
+import com.example.hassannaqvi.leaps_scaleup.other.CheckingID;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 import com.shashank.sony.fancytoastlib.FancyToast;
@@ -19,13 +23,17 @@ import com.shashank.sony.fancytoastlib.FancyToast;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form07Activity extends AppCompatActivity {
 
-
     ActivityForm07Binding bi;
-    ArrayList<String> district = new ArrayList<>();
+
+    String getFtype = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +45,9 @@ public class Form07Activity extends AppCompatActivity {
         bi.ls07id06.setManager(getSupportFragmentManager());
         bi.ls07id13.setManager(getSupportFragmentManager());
 
-        district.add("....");
-        district.add("N/A");
-
-        //setting spinners
-        bi.ls07id15.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, district));
-        bi.ls07id16.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, district));
-
+        getFtype = getIntent().getStringExtra("fType");
 
         setupViews();
-
 
     }
 
@@ -107,6 +108,26 @@ public class Form07Activity extends AppCompatActivity {
         });
 
 
+        bi.ls07id15.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                bi.fldgrpls07a01.setVisibility(GONE);
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+
     }
 
     public void BtnContinue() {
@@ -131,30 +152,52 @@ public class Form07Activity extends AppCompatActivity {
         return true;
     }
 
+
+    public void BtnClusterIDValid() {
+        if (!validatorClass.EmptyTextBox(this, bi.ls07id15, getString(R.string.ls07id15))) {
+            return;
+        }
+
+        Object cluster = null;
+        try {
+            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(bi.ls07id15.getText().toString()).get();
+
+            if (cluster != null) {
+                Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
+                String[] cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
+                bi.ls01aDis.setText(cluster_name[0]);
+                bi.ls01aTeh.setText(cluster_name[1]);
+                bi.ls01aUC.setText(cluster_name[2]);
+                bi.ls01aVil.setText(cluster_name[3]);
+
+                bi.fldgrpls07a01.setVisibility(VISIBLE);
+
+            } else {
+                Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
     public boolean formValidation() {
 
-        //1
-        if (!validatorClass.EmptyTextBox(this, bi.ls07id01, getString(R.string.ls07id01))) {
-            return false;
-        }
         //2
         if (!validatorClass.EmptyTextBox(this, bi.ls07id02, getString(R.string.ls07id02))) {
             return false;
         }
-
         //3
         if (!validatorClass.EmptyTextBox(this, bi.ls07id03, getString(R.string.ls07id03))) {
             return false;
         }
-        //4
-        if (!validatorClass.EmptySpinner(this, bi.ls07id15, getString(R.string.ls07id15))) {
+        if (!CheckingID.getIDValidation(this, bi.ls07id03, "8" + bi.ls07id03.getText().toString(), getFtype)) {
             return false;
         }
-        //5
-        if (!validatorClass.EmptySpinner(this, bi.ls07id16, getString(R.string.ls07id16))) {
-            return false;
-        }
-
         //6
         if (!validatorClass.EmptyRadioButton(this, bi.ls07id05, bi.ls07id05a, getString(R.string.ls07id05))) {
             return false;
@@ -181,7 +224,6 @@ public class Form07Activity extends AppCompatActivity {
                 return false;
             }
         }
-
         //11
         if (!validatorClass.EmptyRadioButton(this, bi.ls07id10, bi.ls07id10a, getString(R.string.ls07id10))) {
             return false;
@@ -236,11 +278,8 @@ public class Form07Activity extends AppCompatActivity {
 
         JSONObject f07 = new JSONObject();
 
-        f07.put("ls0701", bi.ls07id01.getText().toString());
         f07.put("ls0702", bi.ls07id02.getText().toString());
         f07.put("ls0703", bi.ls07id03.getText().toString());
-        f07.put("ls0704", bi.ls07id15.getSelectedItem().toString());
-        f07.put("ls0705", bi.ls07id16.getSelectedItem().toString());
         f07.put("ls0706", bi.ls07id05a.isChecked() ? "1"
                 : bi.ls07id05b.isChecked() ? "2"
                 : bi.ls07id05c.isChecked() ? "3"

@@ -103,7 +103,8 @@
             <LinearLayout
                 android:id="@+id/fldgrpls01a01"
                 style="@style/linerlayout_view_wt_bound"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <!--Info-->
                 <android.support.v7.widget.CardView

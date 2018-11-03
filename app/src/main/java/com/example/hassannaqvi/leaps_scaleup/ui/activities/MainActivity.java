@@ -290,6 +290,9 @@ public class MainActivity extends Activity {
             case "6":
                 retClass = InfoActivity.class;
                 break;
+            case "7":
+                retClass = Form07Activity.class;
+                break;
         }
 
         return retClass;

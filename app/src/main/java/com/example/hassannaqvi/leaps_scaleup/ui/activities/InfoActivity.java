@@ -121,7 +121,7 @@ public class InfoActivity extends AppCompatActivity {
                 break;
             case "6":
                 fExt = "f6_";
-                retClass = AnthroActivity.class;
+                retClass = Form6AnthroActivity.class;
                 break;
         }
 
