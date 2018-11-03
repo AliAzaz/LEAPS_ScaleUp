@@ -16,6 +16,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/fldgrpf04EFC"
             android:layoutDirection="rtl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,85 +38,42 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca01"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
-                        <Button
-                            android:id="@+id/ls04ca01a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca01b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca01c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca01d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:id="@+id/ls04ca01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04c01"
-                            android:layout_width="0dp"
+                        <RadioButton
+                            android:id="@+id/ls04ca01a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                            />
+                        <RadioButton
+                            android:id="@+id/ls04ca01b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca01c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
+
 
 
 
@@ -140,85 +98,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca02"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca02a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca02b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca02c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca02d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="vertical"
+                    <RadioGroup
+                        android:id="@+id/ls04ca02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-
-                        <TextView
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04c02"
+                        <RadioButton
+                            android:id="@+id/ls04ca02a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            />
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca02b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
+                        <RadioButton
+                            android:id="@+id/ls04ca02c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
 
 
 
@@ -241,84 +154,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca03"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca03a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca03b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca03c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca03d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:id="@+id/ls04ca03"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04ca03"
-                            android:layout_width="0dp"
+                        <RadioButton
+                            android:id="@+id/ls04ca03a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                            />
+                        <RadioButton
+                            android:id="@+id/ls04ca03b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca03c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
 
 
                 </LinearLayout>
@@ -339,84 +208,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca04"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca04a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca04b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca04c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca04d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:id="@+id/ls04ca04"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04ca04"
-                            android:layout_width="0dp"
+                        <RadioButton
+                            android:id="@+id/ls04ca04a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                            />
+                        <RadioButton
+                            android:id="@+id/ls04ca04b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca04c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -436,85 +261,42 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca05"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca05a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca05b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca05c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca05d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:id="@+id/ls04ca05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04ca05"
-                            android:layout_width="0dp"
+                        <RadioButton
+                            android:id="@+id/ls04ca05a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                            />
+                        <RadioButton
+                            android:id="@+id/ls04ca05b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca05c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
+
+
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>
@@ -533,84 +315,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca06"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca06a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca06b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca06c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca06d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:id="@+id/ls04ca06"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04ca06"
-                            android:layout_width="0dp"
+                        <RadioButton
+                            android:id="@+id/ls04ca06a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                            />
+                        <RadioButton
+                            android:id="@+id/ls04ca06b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca06c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
 
                 </LinearLayout>
 
@@ -630,84 +368,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca07"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca07a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca07b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca07c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca07d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:id="@+id/ls04ca07"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04ca07"
-                            android:layout_width="0dp"
+                        <RadioButton
+                            android:id="@+id/ls04ca07a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                            />
+                        <RadioButton
+                            android:id="@+id/ls04ca07b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca07c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
 
 
                 </LinearLayout>
@@ -728,84 +422,40 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:lineSpacingExtra="10dp"
                         android:text="@string/ls04ca08"
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca08a"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/tap"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca08b"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/knock"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls04ca08c"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/ignore"
-                            android:textColor="@color/white" />
-
-                        <Button
-                            android:id="@+id/ls04ca08d"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="3dp"
-                            android:layout_weight="0.5"
-                            android:onClick="procesButton"
-                            android:text="@string/other"
-                            android:textColor="@color/white" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
+                    <RadioGroup
+                        android:id="@+id/ls04ca08"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <TextView
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            android:id="@+id/ls04ca08"
-                            android:layout_width="0dp"
+                        <RadioButton
+                            android:id="@+id/ls04ca08a"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/tap" />
 
-                            />
+                        <RadioButton
+                            android:id="@+id/ls04ca08b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/knock" />
 
-                    </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ls04ca08c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ignore" />
+
+
+                    </RadioGroup>
 
 
                 </LinearLayout>

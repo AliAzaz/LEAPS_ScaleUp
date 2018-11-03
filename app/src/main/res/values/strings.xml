@@ -36,7 +36,7 @@
 
     <string name="tap">ڌڪ</string>
     <string name="knock">کڙڪائڻ</string>
-    <string name="ignore">Ignore/Reject</string>
+    <string name="ignore">نظر انداز / انڪار</string>
 
     <string name="istatus">انٹروہو کا نتیجہ</string>
     <string name="istatusa">مکمل</string>
@@ -782,6 +782,7 @@
     <string name="ls04bg11pattern">@string/bluestar</string>
     <string name="ls04bg12pattern">@string/bluestar</string>
 
+    <string name="ls04caHeading">KNOCK / TAP GAME SCORING SHEET</string>
 
     <string name="ls04ca01">جڏهن مان هئين کڙڪايان (هڪ دفعو کڙڪايو)
 ته توهان ڪيئن ڪندو؟
