@@ -40,15 +40,16 @@
                 android:textColor="@android:color/white" />
 
             <TextView
+                style="@style/textView2"
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorPrimaryAlpha"
                 android:padding="20dp"
                 android:text="@string/ls04esub1"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/black" />
 
             <LinearLayout
                 android:id="@+id/flgGrpls04e"
@@ -125,15 +126,15 @@
                 </android.support.v7.widget.CardView>
                 <!--Practice Trial-->
                 <TextView
+                    style="@style/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/colorPrimaryAlpha"
                     android:padding="20dp"
                     android:text="@string/ls04esub2"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
                 <!--1b1a-->
                 <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -803,15 +804,15 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
                     <TextView
+                        style="@style/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginTop="16dp"
-                        android:background="@color/colorPrimaryAlpha"
                         android:padding="20dp"
                         android:text="@string/ls04esub1"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/black" />
 
 
                     <android.support.v7.widget.CardView style="@style/cardView">
@@ -889,11 +890,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginTop="16dp"
-                        android:background="@color/colorPrimaryAlpha"
                         android:padding="20dp"
                         android:text="@string/ls04esub2"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/black"
+                        style="@style/textView2"/>
                     <!--2b1a-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 

@@ -49,6 +49,8 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         setContentView(R.layout.activity_form04_ef_a);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form04_ef_a);
         bi.setCallback(this);
+
+
         validatorClass.setScrollViewFocus(bi.efAScrollview);
         attachingListeners();
 
