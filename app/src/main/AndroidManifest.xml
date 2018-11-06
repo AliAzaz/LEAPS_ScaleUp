@@ -124,7 +124,7 @@
         <activity
             android:name=".ui.activities.Form04_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme1"></activity>
         <activity
             android:name=".ui.activities.Form04_EF_B"
             android:screenOrientation="portrait"
@@ -135,7 +135,7 @@
             android:theme="@style/AppTheme1"></activity>
         <activity android:name=".ui.activities.Form04_EF_D"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme1"></activity>
     </application>
 
 </manifest>

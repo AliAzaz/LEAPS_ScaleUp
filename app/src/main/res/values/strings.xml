@@ -668,10 +668,32 @@
     <string name="levelSix">Level 6</string>
     <string name="levelSeven">Level 7</string>
     <string name="levelEight">Level 8</string>
+
+
+
+    <string name="ls04aa01">3   7</string>
+    <string name="ls04aa02">6   4</string>
+    <string name="ls04aa03">3   7</string>
+    <string name="ls04aa04">6   4</string>
+
+    <string name="ls04ab01">5   7</string>
+    <string name="ls04ab02">2   1</string>
+    <string name="ls04ab03">8   2</string>
+    <string name="ls04ab04">4   3   6</string>
+    <string name="ls04ab05">3   8   1</string>
+    <string name="ls04ab06">5   2   7</string>
+    <string name="ls04ab07">3   2   4   9</string>
+    <string name="ls04ab08">1   7   6   5</string>
+    <string name="ls04ab09">3   5   7   1</string>
+    <string name="ls04ab10">3   4   8   7   5</string>
+    <string name="ls04ab11">8   1   5   3   6</string>
+    <string name="ls04ab12">6   4   5   2   9</string>
+
     <string name="ls04aa01pattern">37</string>
     <string name="ls04aa02pattern">64</string>
     <string name="ls04aa03pattern">37</string>
     <string name="ls04aa04pattern">64</string>
+
     <string name="ls04ab01pattern">57</string>
     <string name="ls04ab02pattern">21</string>
     <string name="ls04ab03pattern">82</string>
@@ -733,6 +755,7 @@
     <string name="ls04esub1">INTRODUCTION</string>
     <string name="ls04esub2">PRACTICE TRIALS</string>
     <string name="ls04esub3">TEST TRIALS</string>
+
     <!--head and toe-->
     <string name="ls04eheadq">پنهنجي مٿي کي هٿ لڳا.</string>
     <string name="head">مٿي</string>
@@ -741,6 +764,7 @@
     <string name="selfcorrect">پاڻ صحيح </string>
     <string name="ls04e1b01a">جيڪڏهن مان چوان پنهنجي مٿي تي هٿ لڳا ته تون ڇا کي هٿ لڳائيندي.</string>
     <string name="ls04e1b01b">جيڪڏهن مان چوان پنهنجي پيرکي هٿ لڳا ته تون ڇا کي هٿ لڳائيندي.</string>
+
     <!--shoulder and knees-->
     <string name="ls04eshoulderq">پنهنجي ڪلهي کي هٿ لڳا</string>
     <string name="shoulder">ڪلهو</string>
