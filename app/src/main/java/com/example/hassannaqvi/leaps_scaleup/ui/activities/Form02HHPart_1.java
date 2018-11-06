@@ -463,4 +463,10 @@ public class Form02HHPart_1 extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
 
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
+
 }

@@ -23,6 +23,8 @@ public class Form14Activity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form14);
         bi.setCallback(this);
+
+        this.setTitle(R.string.ls14Heading);
     }
 
     public void BtnContinue() {
@@ -60,4 +62,11 @@ public class Form14Activity extends AppCompatActivity {
 
         return true;
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
 }
+

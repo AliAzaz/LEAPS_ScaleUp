@@ -87,9 +87,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
-            android:name=".ui.activities.AnthroActivity"
-            android:theme="@style/AppTheme1" />
-        <activity
             android:name=".ui.activities.Form05IdBBActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />

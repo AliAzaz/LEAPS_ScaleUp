@@ -187,28 +187,12 @@
                             style="@style/textView"
                             android:text="@string/ls05b16a" />
 
-                        <RadioGroup
+                        <EditText
                             android:id="@+id/ls05b16a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16a01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/yes" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16a02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-
-
-                        </RadioGroup>
+                            android:hint="@string/ls05b16a"
+                            android:maxLength="2"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
 
                     </LinearLayout>
 
@@ -223,28 +207,12 @@
                             style="@style/textView"
                             android:text="@string/ls05b16b" />
 
-                        <RadioGroup
+                        <EditText
                             android:id="@+id/ls05b16b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16b01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/yes" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16b02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-
-                        </RadioGroup>
-
+                            android:hint="@string/ls05b16b"
+                            android:maxLength="2"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
@@ -271,27 +239,12 @@
                             style="@style/textView"
                             android:text="@string/ls05b16c" />
 
-                        <RadioGroup
+                        <EditText
                             android:id="@+id/ls05b16c"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16c01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/yes" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16c02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-
-                        </RadioGroup>
+                            android:hint="@string/ls05b16c"
+                            android:maxLength="2"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
 
                     </LinearLayout>
 
@@ -306,27 +259,12 @@
                             style="@style/textView"
                             android:text="@string/ls05b16d" />
 
-                        <RadioGroup
+                        <EditText
                             android:id="@+id/ls05b16d"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16d01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/yes" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b16d02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/no" />
-
-                        </RadioGroup>
+                            android:hint="@string/ls05b16d"
+                            android:maxLength="2"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
 
                     </LinearLayout>
 

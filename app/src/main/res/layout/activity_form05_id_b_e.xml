@@ -47,33 +47,13 @@
                             style="@style/textView"
                             android:text="@string/ls05b20a" />
 
-                        <RadioGroup
+                        <EditText
                             android:id="@+id/ls05b20a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:hint="@string/ls05b23a"
+                            android:maxLength="1"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
 
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b20a01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/correct" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b20a02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/incorrect" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b20a99"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/nores" />
-                        </RadioGroup>
 
                     </LinearLayout>
 
@@ -776,33 +756,12 @@
                             style="@style/textView"
                             android:text="@string/ls05b23a" />
 
-                        <RadioGroup
+                        <EditText
                             android:id="@+id/ls05b23a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b23a01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/correct" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b23a02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/incorrect" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b23a99"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/nores" />
-                        </RadioGroup>
+                            android:hint="@string/ls05b23a"
+                            android:maxLength="2"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
 
                     </LinearLayout>
 

@@ -236,4 +236,9 @@ public class Form04_EF_B extends AppCompatActivity {
         return res.getString(res.getIdentifier(name, "string", context.getPackageName()));
     }
 
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
 }

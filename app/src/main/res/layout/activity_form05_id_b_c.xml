@@ -51,6 +51,8 @@
                             style="@style/checkbox" />
 
                         <Spinner
+
+                            android:layout_margin="10dp"
                             android:id="@+id/ls05b09a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

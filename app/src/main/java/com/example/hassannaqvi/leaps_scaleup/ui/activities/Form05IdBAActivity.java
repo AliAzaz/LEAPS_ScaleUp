@@ -31,6 +31,8 @@ public class Form05IdBAActivity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form05_id_b_a);
         bi.setCallback(this);
 
+
+
         setContent();
     }
 
@@ -83,5 +85,11 @@ public class Form05IdBAActivity extends AppCompatActivity {
 
     public void BtnEnd() {
         startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 }
