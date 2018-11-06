@@ -39,6 +39,7 @@
                 android:textColor="@android:color/white" />
 
             <TextView
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -79,6 +80,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01a96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -88,6 +90,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01a01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -97,6 +100,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01a02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -168,6 +172,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01b96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -177,6 +182,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01b01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -186,6 +192,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01b02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -255,6 +262,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02a96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -264,6 +272,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02a01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -273,6 +282,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02a02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -344,6 +354,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02b96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -353,6 +364,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02b01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -362,6 +374,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02b02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -408,6 +421,7 @@
                 </android.support.v7.widget.CardView>
 
                 <TextView
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -442,6 +456,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0196"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -451,6 +466,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb01a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -460,6 +476,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb01b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -529,6 +546,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0296"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -538,6 +556,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb02a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -547,6 +566,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb02b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -616,6 +636,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0396"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -625,6 +646,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb03a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -634,6 +656,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb03b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -703,6 +726,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0496"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -712,6 +736,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb04a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -721,6 +746,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb04b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -790,6 +816,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0596"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -799,6 +826,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb05a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -808,6 +836,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb05b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -876,6 +905,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0696"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -885,6 +915,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb06a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -894,6 +925,7 @@
                                 android:text="@string/red" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb06b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -941,6 +973,7 @@
 
 
                 <TextView
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -975,6 +1008,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0196"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -984,6 +1018,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc01a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -993,6 +1028,7 @@
                                 android:text="@string/star" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc01b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1061,6 +1097,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0296"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1070,6 +1107,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc02a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1079,6 +1117,7 @@
                                 android:text="@string/star" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc02b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1147,6 +1186,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0396"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1156,6 +1196,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc03a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1165,6 +1206,7 @@
                                 android:text="@string/star" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc03b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1233,6 +1275,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0496"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1242,6 +1285,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc04a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1251,6 +1295,7 @@
                                 android:text="@string/star" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc04b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1319,6 +1364,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0596"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1328,6 +1374,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc05a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1337,6 +1384,7 @@
                                 android:text="@string/star" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc05b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1405,6 +1453,7 @@
                             android:padding="25dp">
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0696"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1414,6 +1463,7 @@
                                 android:text="@string/other" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc06a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1423,6 +1473,7 @@
                                 android:text="@string/star" />
 
                             <Button
+                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc06b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -1524,6 +1575,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01a96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1533,6 +1585,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01a01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1542,6 +1595,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01a02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1612,6 +1666,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01b96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1621,6 +1676,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01b01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1630,6 +1686,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01b02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1698,6 +1755,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02a96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1707,6 +1765,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02a01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1716,6 +1775,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02a02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1786,6 +1846,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02b96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1795,6 +1856,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02b01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1804,6 +1866,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02b02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1884,6 +1947,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0196"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1893,6 +1957,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be01a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1902,6 +1967,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be01b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1969,6 +2035,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0296"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1978,6 +2045,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be02a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -1987,6 +2055,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be02b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2054,6 +2123,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0396"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2063,6 +2133,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be03a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2072,6 +2143,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be03b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2139,6 +2211,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0496"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2148,6 +2221,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be04a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2157,6 +2231,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be04b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2224,6 +2299,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0596"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2233,6 +2309,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be05a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2242,6 +2319,7 @@
                                     android:text="@string/star" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be05b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2321,6 +2399,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0196"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2330,6 +2409,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf01a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2339,6 +2419,7 @@
                                     android:text="@string/red" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf01b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2406,6 +2487,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0296"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2415,6 +2497,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf02a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2424,6 +2507,7 @@
                                     android:text="@string/red" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf02b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2491,6 +2575,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0396"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2500,6 +2585,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf03a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2509,6 +2595,7 @@
                                     android:text="@string/red" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf03b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2576,6 +2663,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0496"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2585,6 +2673,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf04a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2594,6 +2683,7 @@
                                     android:text="@string/red" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf04b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2661,6 +2751,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0596"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2670,6 +2761,7 @@
                                     android:text="@string/other" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf05a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2679,6 +2771,7 @@
                                     android:text="@string/red" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf05b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2746,6 +2839,7 @@
                                 android:padding="25dp">
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0696"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2754,7 +2848,10 @@
                                     android:onClick="levelBasedProcess"
                                     android:text="@string/other" />
 
+
+
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf06a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2764,6 +2861,7 @@
                                     android:text="@string/red" />
 
                                 <Button
+                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf06b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
@@ -2851,6 +2949,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0196"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -2860,6 +2959,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg01a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -2869,6 +2969,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg01b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -2936,6 +3037,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0296"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -2945,6 +3047,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg02a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -2954,6 +3057,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg02b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3021,6 +3125,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0396"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3030,6 +3135,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg03a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3039,6 +3145,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg03b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3106,6 +3213,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0496"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3115,6 +3223,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg04a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3124,6 +3233,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg04b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3191,6 +3301,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0596"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3200,6 +3311,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg05a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3209,6 +3321,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg05b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3276,6 +3389,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0696"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3285,6 +3399,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg06a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3294,6 +3409,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg06b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3362,6 +3478,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0796"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3371,6 +3488,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg07a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3380,6 +3498,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg07b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3447,6 +3566,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0896"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3456,6 +3576,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg08a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3465,6 +3586,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg08b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3532,6 +3654,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0996"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3541,6 +3664,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg09a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3550,6 +3674,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg09b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3617,6 +3742,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg1096"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3626,6 +3752,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg10a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3635,6 +3762,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg10b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3702,6 +3830,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg1196"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3711,6 +3840,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg11a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3720,6 +3850,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg11b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3787,6 +3918,7 @@
                                     android:padding="25dp">
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg1296"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3796,6 +3928,7 @@
                                         android:text="@string/other" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg12a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
@@ -3805,6 +3938,7 @@
                                         android:text="@string/redtruck" />
 
                                     <Button
+                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg12b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
