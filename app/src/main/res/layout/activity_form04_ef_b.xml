@@ -3861,11 +3861,7 @@
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/btn_Continue"
-                    style="@style/button"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection" />
+
 
                 <Button
                     android:id="@+id/btn_End"
@@ -3873,6 +3869,11 @@
                     android:layout_marginRight="10dp"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview" />
+                <Button
+                    android:id="@+id/btn_Continue"
+                    style="@style/button"
+                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:text="@string/nextSection" />
 
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
