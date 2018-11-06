@@ -49,34 +49,12 @@
                             style="@style/textView"
                             android:text="@string/ls05b05a" />
 
-                        <RadioGroup
-                            android:layout_marginBottom="1dp"
+                        <EditText
                             android:id="@+id/ls05b05a"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b05a01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/correct" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b05a02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/incorrect" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b05a99"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/nores" />
-                        </RadioGroup>
+                            android:hint="@string/ls05b05a"
+                            android:maxLength="2"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
 
                     </LinearLayout>
 
@@ -91,40 +69,12 @@
                             style="@style/textView"
                             android:text="@string/ls05b05b" />
 
-                        <RadioGroup
+                        <EditText
                             android:id="@+id/ls05b05b"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b05b01"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/correct" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b05b02"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/incorrect" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b05b99"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/nores" />
-
-                            <RadioButton
-                                android:layout_marginBottom="1dp"
-                                android:id="@+id/ls05b05b88"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/skp" />
-                        </RadioGroup>
+                            android:hint="@string/ls05b05b"
+                            android:maxLength="2"
+                            android:background="@drawable/et_style"
+                            style="@style/textInput" />
 
                     </LinearLayout>
 

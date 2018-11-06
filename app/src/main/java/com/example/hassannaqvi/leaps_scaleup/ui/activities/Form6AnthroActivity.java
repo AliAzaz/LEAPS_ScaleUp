@@ -5,6 +5,7 @@ import android.database.DatabaseUtils;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm6AnthroBinding;
@@ -86,5 +87,11 @@ public class Form6AnthroActivity extends AppCompatActivity {
 
     public void BtnEnd() {
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+    }
+
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 }

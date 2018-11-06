@@ -414,4 +414,9 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
     public void BtnEnd() {
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
 }

@@ -232,4 +232,6 @@ public class InfoActivity extends AppCompatActivity {
     public void BtnEnd() {
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
+
+
 }

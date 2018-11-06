@@ -80,4 +80,9 @@ ActivityForm04EfEBinding bi;
         return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls04e);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
 }

@@ -11,9 +11,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -139,10 +137,6 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     private void SaveDraft() {
-        JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls04a, true);
-        InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
-
-        Log.d("F4-D", String.valueOf(Json));
       /*  JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpls04a01, true);
         Json = Json. GeneratorClass.getContainerJSON(this,bi.fldgrpls04a02, false, Json);
         Json = Json + GeneratorClass.getContainerJSON(this,bi.fldgrpls04a03,  false, Json);
@@ -375,7 +369,6 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         } else {
             fldGrp.setVisibility(View.VISIBLE);
         }
-
         if (bi.ls04aa01a01.isChecked() && bi.ls04aa02a01.isChecked()) {
             bi.fldgrpadmin.setVisibility(GONE);
             bi.ls04aa03a.clearCheck();
@@ -386,4 +379,9 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
 
+    @Override
+    public void onBackPressed() {
+
+        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+    }
 }
