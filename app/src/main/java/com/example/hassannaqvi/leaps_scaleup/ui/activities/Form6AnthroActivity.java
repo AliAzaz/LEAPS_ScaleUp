@@ -29,6 +29,8 @@ public class Form6AnthroActivity extends AppCompatActivity {
         bi.setCallback(this);
 
         this.setTitle(R.string.ls06Heading);
+
+        this.setTitle(R.string.ls06Heading);
     }
 
     public void BtnContinue() {

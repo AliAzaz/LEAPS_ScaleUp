@@ -28,15 +28,15 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/textView2"
                 android:textSize="25sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorPrimaryDark"
                 android:gravity="center"
                 android:text="@string/ls04asub1"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/black" />
 
 
             <LinearLayout
@@ -341,16 +341,16 @@
                 </LinearLayout>
 
                 <TextView
-                    android:textSize="25sp"
+                    style="@style/textView2"
+                    android:textSize="30sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/colorPrimaryDark"
                     android:gravity="center"
                     android:text="@string/ls04asub2"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
                 <LinearLayout
                     android:id="@+id/level2"

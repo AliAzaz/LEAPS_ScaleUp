@@ -42,6 +42,8 @@ public class Form07Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form07);
         bi.setCallback(this);
 
+        this.setTitle(R.string.ls07Heading);
+
         bi.ls07id06.setManager(getSupportFragmentManager());
         bi.ls07id13.setManager(getSupportFragmentManager());
 

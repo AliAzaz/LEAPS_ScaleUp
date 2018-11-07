@@ -28,15 +28,15 @@
 
 
             <TextView
+                style="@style/textView2"
                 android:textSize="25sp"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorPrimaryDark"
                 android:text="@string/ls01seheading"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/black" />
 
 
             <!--hi1-->
@@ -131,16 +131,16 @@
             </android.support.v7.widget.CardView>
 
             <TextView
+                style="@style/textView2"
                 android:textSize="25sp"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorPrimaryDark"
                 android:text="@string/ls02seheading"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/black" />
 
             <!--se1a-->
             <android.support.v7.widget.CardView
@@ -1328,12 +1328,12 @@
                 android:padding="2dp"
                 android:orientation="vertical">
                 <TextView
+                    style="@style/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:background="@color/colorPrimaryDark"
                     android:text="@string/ls02se15"
-                    android:textColor="@android:color/white"
+                    android:textColor="@android:color/black"
                     android:textSize="20sp" />
 
                 <!--se15a-->
