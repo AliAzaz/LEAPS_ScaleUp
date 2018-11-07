@@ -29,11 +29,7 @@
         <activity
             android:name=".ui.activities.SplashscreenActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.activities.EndInterview"
@@ -121,21 +117,33 @@
         <activity
             android:name=".ui.activities.Form04_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1">
+
+        </activity>
         <activity
             android:name=".ui.activities.Form04_EF_B"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1">
+
         </activity>
         <activity android:name=".ui.activities.Form04_EF_C"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1">
+
+        </activity>
         <activity android:name=".ui.activities.Form04_EF_D"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1">
+
+        </activity>
         <activity android:name=".ui.activities.Form04_EF_E"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

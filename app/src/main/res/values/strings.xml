@@ -831,6 +831,7 @@
     <string name="ls04bg12pattern">@string/bluestar</string>
 
     <string name="ls04caHeading">KNOCK / TAP GAME SCORING SHEET</string>
+
     <!--ls04d answers-->
     <string name="ls04da01pattern">@string/ls04dtwice</string>
     <string name="ls04da02pattern">@string/ls04donce</string>
@@ -853,6 +854,17 @@
     <string name="ls04db14pattern">@string/ls04donce</string>
     <string name="ls04db15pattern">@string/ls04donce</string>
     <string name="ls04db16pattern">@string/ls04dtwice</string>
+
+    <string name="ls04e1c01pattern">@string/toe</string>
+    <string name="ls04e1c02pattern">@string/head</string>
+    <string name="ls04e1c03pattern">@string/head</string>
+    <string name="ls04e1c04pattern">@string/toe</string>
+    <string name="ls04e1c05pattern">@string/head</string>
+    <string name="ls04e1c06pattern">@string/toe</string>
+    <string name="ls04e1c07pattern">@string/toe</string>
+    <string name="ls04e1c08pattern">@string/head</string>
+    <string name="ls04e1c09pattern">@string/toe</string>
+    <string name="ls04e1c10pattern">@string/head</string>
 
 
     <string name="ls04ca01">جڏهن مان هئين کڙڪايان (هڪ دفعو کڙڪايو)
