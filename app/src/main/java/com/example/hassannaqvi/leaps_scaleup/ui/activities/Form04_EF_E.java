@@ -37,6 +37,7 @@ public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheck
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form04_ef_e);
         bi.setCallback(this);
+        this.setTitle(R.string.ls04e);
         validatorClass.setScrollViewFocus(bi.efEScrollview);
         attachingListners();
     }

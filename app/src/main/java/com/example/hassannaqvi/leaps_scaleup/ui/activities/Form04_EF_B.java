@@ -43,6 +43,8 @@ public class Form04_EF_B extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form04_ef_b);
         bi.setCallback(this);
+
+        this.setTitle(R.string.ls04b);
     }
 
     public void BtnContinue() {

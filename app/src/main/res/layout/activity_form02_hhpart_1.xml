@@ -27,15 +27,15 @@
             android:orientation="vertical">
 
             <TextView
+                style="@style/textView2"
                 android:lineSpacingExtra="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:background="@color/colorPrimaryDark"
                 android:text="@string/ls02instruction"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/black" />
 
             <!--<TextView-->
             <!--android:layout_width="match_parent"-->
@@ -1123,7 +1123,7 @@
                 <Button
                     android:id="@+id/btn_Continue"
                     style="@style/button"
-                    android:onClick="@{() -> callback.BtnContinue()}"
+                    android:onClick="@{() -> callback.BtnCo ntinue()}"
                     android:text="@string/nextSection" />
 
                 <Button

@@ -24,6 +24,8 @@ public class Form14Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form14);
         bi.setCallback(this);
 
+
+
         this.setTitle(R.string.ls14Heading);
     }
 

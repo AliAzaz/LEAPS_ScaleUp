@@ -42,6 +42,8 @@ public class Form07Activity extends AppCompatActivity {
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form07);
         bi.setCallback(this);
 
+        this.setTitle(R.string.ls07Heading);
+
         bi.ls07id06.setManager(getSupportFragmentManager());
         bi.ls07id13.setManager(getSupportFragmentManager());
 
@@ -337,9 +339,5 @@ public class Form07Activity extends AppCompatActivity {
         startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
 
-    @Override
-    public void onBackPressed() {
 
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
 }

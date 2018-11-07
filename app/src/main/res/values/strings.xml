@@ -418,6 +418,7 @@
 
 
     <!--Form 7-->
+    <string name="ls07Heading">Youth Enrolment Form</string>
     <string name="ls07idinstruction"> هي فارم CCDA هر يوٿ جو ڀريندي چاهي اهو پريجيڪٽ ۾ يوٿليڊر سليڪٽ ٿئي يا نه.
 هي فارم تڏهن ئي مڪمل ڪريو جڏهن اجازت ملي ۽ راضي نامي تي صحيح ٿيل هجي.
 پراجيڪٽ ڊيويئشن ارم مڪمل ڪريو جيڪڏهن فارم پرٽوڪول کان هٽي ڪري مڪمل ڪيو ويو هجي.
@@ -757,6 +758,7 @@
     <string name="ls04esub3">TEST TRIALS</string>
 
     <!--head and toe-->
+    <string name="ls04e">HEAD TOE KNEES SHOULDER SCORING SHEET</string>
     <string name="ls04eheadq">پنهنجي مٿي کي هٿ لڳا.</string>
     <string name="head">مٿي</string>
     <string name="ls04etoeq">پنهنجي پير کي هٿ لڳا.</string>
@@ -920,6 +922,7 @@
 
 
     <!--Form 04 EF (D)-->
+    <string name="ls04d">TAPPING GAME SCORING SHEET</string>
     <string name="ls04dsub1">Practice Trial</string>
     <string name="ls04dainstruction">صحيح بلاڪ تي دائرو لڳايو ۽ غلط بلاڪ تي ڪراس لڳايو</string>
     <string name="ls04dsub2">Test Trial</string>

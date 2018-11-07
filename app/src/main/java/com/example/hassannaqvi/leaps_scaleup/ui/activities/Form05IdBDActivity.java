@@ -32,6 +32,7 @@ public class Form05IdBDActivity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form05_id_b_d);
         bi.setCallback(this);
+        this.setTitle("IDELA");
 
         setContentUI();
 
