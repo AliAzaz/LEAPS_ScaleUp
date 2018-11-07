@@ -62,6 +62,9 @@ public class InfoActivity extends AppCompatActivity {
         bi.lsid14.setManager(getSupportFragmentManager());
         bi.lsid14.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
+        /*Setting edittext*/
+        bi.lsid7m.setManager(this, "Month");
+
         /*Setting listeners*/
         bi.lsid1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -137,6 +140,7 @@ public class InfoActivity extends AppCompatActivity {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
         }
+
     }
 
     public void BtnIDValid() {

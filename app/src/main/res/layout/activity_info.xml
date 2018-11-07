@@ -162,12 +162,15 @@
                             android:inputType="number"
                             android:maxLength="1" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.textpicker.TextPicker
                             android:id="@+id/lsid7m"
                             style="@style/textInput"
                             android:hint="@string/month"
+                            android:maxLength="2"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            app:maxValue="11"
+                            app:minValue="0"
+                            app:type="range" />
 
                     </LinearLayout>
 

@@ -18,6 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.edittextpicker.aliazaz.textpicker.TextPicker;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
@@ -244,7 +245,20 @@ public abstract class validatorClass {
                     return false;
                 }
             } else if (view instanceof EditText) {
-                if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+
+                if (view instanceof TextPicker) {
+
+                    if (((TextPicker) view).getType() == 1) {
+                        if (!((TextPicker) view).isEmptyTextBox()) {
+                            return false;
+                        }
+                    } else {
+                        if (!((TextPicker) view).isRangePickerValidate()) {
+                            return false;
+                        }
+                    }
+
+                } else if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
                     return false;
                 }
             } else if (view instanceof LinearLayout) {
@@ -256,6 +270,7 @@ public abstract class validatorClass {
         }
         return true;
     }
+
     public static boolean tempEmptyCheckingContainer(Context context, LinearLayout lv) {
 
         for (int i = 0; i < lv.getChildCount(); i++) {
