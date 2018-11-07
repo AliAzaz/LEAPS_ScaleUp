@@ -500,7 +500,43 @@
 
                         <!--04-->
                         <android.support.v7.widget.CardView style="@style/cardView">
+                          <!--  <android.support.constraint.ConstraintLayout
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+                                <TextView
+                                    style="@style/textViewCenterGravity"
+                                    android:text="@string/ls04ab04"
+                                    android:id="@+id/lbl01"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"/>
 
+                                <RadioGroup
+                                    android:id="@+id/ls04ab04"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    app:layout_constraintTop_toBottomOf="@+id/lbl01">
+
+                                    <RadioButton
+                                        android:id="@+id/ls04ab04a"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/yes" />
+
+                                    <RadioButton
+                                        android:id="@+id/ls04ab04b"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/no" />
+
+                                    <RadioButton
+                                        android:id="@+id/ls04ab0499"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/nores" />
+                                </RadioGroup>
+                            </android.support.constraint.ConstraintLayout>-->
                             <LinearLayout style="@style/linerlayout_view">
 
                                 <TextView
@@ -614,6 +650,7 @@
                             android:visibility="gone">
 
                             <TextView
+                                android:id="@+id/lbllevel4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="8dp"
@@ -625,7 +662,8 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="@android:color/white" />
                             <!--07-->
-                            <android.support.v7.widget.CardView style="@style/cardView">
+                            <android.support.v7.widget.CardView style="@style/cardView"
+                               >
 
                                 <LinearLayout style="@style/linerlayout_view">
 
@@ -732,11 +770,10 @@
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
 
-                            <LinearLayout
+                            <RelativeLayout
                                 android:id="@+id/level5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical"
                                 android:visibility="gone">
 
                                 <TextView
@@ -857,7 +894,7 @@
                                         </RadioGroup>
                                     </LinearLayout>
                                 </android.support.v7.widget.CardView>
-                            </LinearLayout>
+                            </RelativeLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

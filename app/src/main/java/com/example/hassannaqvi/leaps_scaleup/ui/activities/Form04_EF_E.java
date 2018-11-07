@@ -28,21 +28,24 @@ import java.util.concurrent.ExecutionException;
 
 import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
-public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener{
-ActivityForm04EfEBinding bi;
+public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+    ActivityForm04EfEBinding bi;
     int ls04e1c01, ls04e1c02, ls04e1c03, ls04e1c04, ls04e1c05, ls04e1c06, ls04e1c07, ls04e1c08, ls04e1c09, ls04e1c10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this,R.layout.activity_form04_ef_e);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form04_ef_e);
         bi.setCallback(this);
         validatorClass.setScrollViewFocus(bi.efEScrollview);
         attachingListners();
     }
+
     public void BtnEnd() {
         startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
     }
-    public void attachingListners(){
+
+    public void attachingListners() {
         bi.ls04e1c01.setOnCheckedChangeListener(this);
         bi.ls04e1c02.setOnCheckedChangeListener(this);
         bi.ls04e1c03.setOnCheckedChangeListener(this);
@@ -94,6 +97,7 @@ ActivityForm04EfEBinding bi;
 
         Log.d("F4-D", String.valueOf(Json));
     }
+
     private boolean formValidation() {
 
         return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls04e);
@@ -101,7 +105,6 @@ ActivityForm04EfEBinding bi;
 
     @Override
     public void onBackPressed() {
-
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
@@ -109,34 +112,18 @@ ActivityForm04EfEBinding bi;
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         RadioButton radioButton = findViewById(group.getCheckedRadioButtonId());
         String radiogrpID = getResources().getResourceEntryName(group.getId());
-        if(radioButton.getText().toString().equals(getResources().getIdentifier(radiogrpID + "pattern", "id", getPackageName()))){
-            try {
-                setVariable(radiogrpID,2);
-                showHideLevel2();
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
+        if (radioButton.getText().toString().equals(getResources().getIdentifier(radiogrpID + "pattern", "id", getPackageName()))) {
 
-        }else if(radioButton.getText().toString().equals(getString(R.string.selfcorrect))){
-            try {
-                setVariable(radiogrpID,1);
-                showHideLevel2();
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        }else {
-            try {
-                setVariable(radiogrpID,0);
-                showHideLevel2();
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
+            showHideLevel2(radiogrpID, 2);
+
+        } else if (radioButton.getText().toString().equals(getString(R.string.selfcorrect))) {
+
+            showHideLevel2(radiogrpID, 1);
+
+        } else {
+
+            showHideLevel2(radiogrpID, 0);
+
         }
     }
 
@@ -146,13 +133,21 @@ ActivityForm04EfEBinding bi;
         field.setAccessible(true);
         field.set(this, value);
     }
-    public void showHideLevel2(){
-        int total = ls04e1c01+ ls04e1c02+ ls04e1c03+ ls04e1c04+ ls04e1c05+ ls04e1c06+ ls04e1c07+ ls04e1c08+ ls04e1c09+ ls04e1c10;
-        if(total >= 5){
+
+    public void showHideLevel2(String radiogrpID, int value) {
+        try {
+            setVariable(radiogrpID, value);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        int total = ls04e1c01 + ls04e1c02 + ls04e1c03 + ls04e1c04 + ls04e1c05 + ls04e1c06 + ls04e1c07 + ls04e1c08 + ls04e1c09 + ls04e1c10;
+        if (total >= 5) {
             bi.level2.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             bi.level2.setVisibility(View.GONE);
-            ClearClass.ClearAllFields(bi.level2,false);
+            ClearClass.ClearAllFields(bi.level2, false);
         }
     }
 
