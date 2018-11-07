@@ -30,6 +30,7 @@ ActivityForm04EfEBinding bi;
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this,R.layout.activity_form04_ef_e);
         bi.setCallback(this);
+        this.setTitle(R.string.ls04e);
         validatorClass.setScrollViewFocus(bi.efEScrollview);
     }
     public void BtnEnd() {

@@ -29,26 +29,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp"
                 android:background="@color/colorPrimaryDark"
                 android:gravity="center"
-                android:padding="5dp"
                 android:text="@string/ls04bsub1"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/white" />
 
             <TextView
+                style="@style/textView2"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
-                android:background="@color/colorPrimaryAlpha"
                 android:padding="20dp"
                 android:text="@string/ls04ba"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/black" />
 
             <LinearLayout
                 android:id="@+id/fldgrpls04b"
@@ -67,7 +63,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04baredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -159,7 +155,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04baredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -249,7 +245,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04babluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -341,7 +337,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04babluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -421,16 +417,16 @@
                 </android.support.v7.widget.CardView>
 
                 <TextView
+                    style="@style/textView2"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/colorPrimaryAlpha"
                     android:padding="20dp"
                     android:text="@string/ls04bb"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
                 <!-- ls04bb01-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -443,7 +439,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bbredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -533,7 +529,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bbbluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -623,7 +619,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bbbluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -713,7 +709,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bbredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -803,7 +799,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bbredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -892,7 +888,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bbbluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -973,16 +969,16 @@
 
 
                 <TextView
+                    style="@style/textView2"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/colorPrimaryAlpha"
                     android:padding="20dp"
                     android:text="@string/ls04bc"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
                 <!-- ls04bc01-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -995,7 +991,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bcbluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1084,7 +1080,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bcredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1173,7 +1169,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bcbluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1262,7 +1258,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bcbluetruck"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1351,7 +1347,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bcredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1440,7 +1436,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@color/colorPrimaryDark"
+                            android:background="@color/colorPrimary"
                             android:padding="5dp"
                             android:text="@string/ls04bcredstar"
                             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1531,7 +1527,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginTop="16dp"
-                        android:background="@color/colorPrimaryDark"
+                        android:background="@color/colorPrimary"
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="@string/ls04bsub2"
@@ -1562,7 +1558,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bdbluetruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1653,7 +1649,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bdbluetruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1742,7 +1738,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bdredstar"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1833,7 +1829,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bdredstar"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1913,15 +1909,15 @@
 
 
                     <TextView
+                        style="@style/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginTop="16dp"
-                        android:background="@color/colorPrimaryAlpha"
                         android:padding="20dp"
                         android:text="@string/ls04be"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/black" />
 
                     <!-- ls04be01-->
                     <android.support.v7.widget.CardView style="@style/cardView">
@@ -1934,7 +1930,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bestar"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2022,7 +2018,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04betruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2110,7 +2106,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04betruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2198,7 +2194,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bestar"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2286,7 +2282,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04betruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2365,15 +2361,15 @@
                     </android.support.v7.widget.CardView>
 
                     <TextView
+                        style="@style/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginTop="16dp"
-                        android:background="@color/colorPrimaryAlpha"
                         android:padding="20dp"
                         android:text="@string/ls04bf"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/black" />
 
                     <!-- ls04bf01-->
                     <android.support.v7.widget.CardView style="@style/cardView">
@@ -2386,7 +2382,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bfbluetruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2474,7 +2470,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bfredstar"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2562,7 +2558,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bfbluetruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2650,7 +2646,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bfredstar"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2738,7 +2734,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bfredstar"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2826,7 +2822,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/colorPrimaryDark"
+                                android:background="@color/colorPrimary"
                                 android:padding="5dp"
                                 android:text="@string/ls04bfbluetruck"
                                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -2914,16 +2910,16 @@
                         android:visibility="gone">
 
                         <TextView
+                            style="@style/textView2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="16dp"
                             android:layout_marginTop="16dp"
-                            android:background="@color/colorPrimaryDark"
                             android:gravity="center"
                             android:padding="5dp"
                             android:text="@string/ls04bg"
                             android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/black" />
 
                         <!-- ls04bg01-->
                         <android.support.v7.widget.CardView style="@style/cardView">
@@ -2936,7 +2932,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgnoredborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3024,7 +3020,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgnoblueborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3112,7 +3108,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgredborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3200,7 +3196,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgnoredborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3288,7 +3284,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgnoblueborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3376,7 +3372,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgblueborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3465,7 +3461,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgnoredborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3553,7 +3549,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgredborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3641,7 +3637,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgblueborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3729,7 +3725,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgnoblueborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3817,7 +3813,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgnoblueborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3905,7 +3901,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimaryDark"
+                                    android:background="@color/colorPrimary"
                                     android:padding="5dp"
                                     android:text="@string/ls04bgredborder"
                                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -3994,8 +3990,6 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="20dp"
                 android:orientation="horizontal">
-
-
 
                 <Button
                     android:id="@+id/btn_End"

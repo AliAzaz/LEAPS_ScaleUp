@@ -494,9 +494,5 @@ public class Form01Enrolment extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public void onBackPressed() {
 
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
-    }
 }

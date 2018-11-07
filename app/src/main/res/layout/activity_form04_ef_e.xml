@@ -352,15 +352,16 @@
                 </android.support.v7.widget.CardView>
                 <!--Test Trial-->
                 <TextView
+                    style="@style/textView2"
+                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
-                    android:background="@color/colorPrimaryAlpha"
                     android:padding="20dp"
                     android:text="@string/ls04esub3"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
                 <!--1c01-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -886,6 +887,7 @@
                     </android.support.v7.widget.CardView>
                     <!--Practice Trial-->
                     <TextView
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
@@ -1113,15 +1115,16 @@
 
                     <!--Test Trial-->
                     <TextView
+                        style="@style/textView2"
+                        android:gravity="center"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="16dp"
                         android:layout_marginTop="16dp"
-                        android:background="@color/colorPrimaryAlpha"
                         android:padding="20dp"
                         android:text="@string/ls04esub3"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/black" />
 
 
                     <!--2c01-->
