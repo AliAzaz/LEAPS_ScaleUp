@@ -207,7 +207,8 @@
                 <!--16 - 02-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/llgrpls05b16b"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{ls05b16a99.checked ? View.VISIBLE : View.VISIBLE}">
 
                     <LinearLayout style="@style/linerlayout_view">
 
@@ -229,9 +230,7 @@
                             android:id="@+id/ls05b16b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:enabled="@{ls05b16b99.checked || ls05b16b88.checked ? false : true}"
-                            android:selectedItemPosition="@{ls05b16b99.checked || ls05b16b88.checked ? 0 : 0}" />
+                            android:layout_marginTop="10dp" />
 
                     </LinearLayout>
 
@@ -266,7 +265,8 @@
                 <!--16 - 04-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/llgrpls05b16d"
-                    style="@style/cardView">
+                    style="@style/cardView"
+                    android:visibility="@{ls05b16c99.checked ? View.VISIBLE : View.VISIBLE}">
 
                     <LinearLayout style="@style/linerlayout_view">
 
@@ -288,9 +288,7 @@
                             android:id="@+id/ls05b16d"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:enabled="@{ls05b16d99.checked || ls05b16d88.checked ? false : true}"
-                            android:selectedItemPosition="@{ls05b16d99.checked || ls05b16d88.checked ? 0 : 0}" />
+                            android:layout_marginTop="10dp" />
 
                     </LinearLayout>
 

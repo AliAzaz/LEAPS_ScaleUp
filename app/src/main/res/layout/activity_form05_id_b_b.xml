@@ -69,6 +69,7 @@
                 <!--05 - 02-->
                 <android.support.v7.widget.CardView
                     android:id="@+id/llgrpls05b05b"
+                    android:visibility="@{ls05b05a99.checked ? View.VISIBLE : View.VISIBLE}"
                     style="@style/cardView">
 
                     <LinearLayout style="@style/linerlayout_view">
@@ -91,9 +92,7 @@
                             android:id="@+id/ls05b05b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:enabled="@{ls05b05b99.checked || ls05b05b88.checked ? false : true}"
-                            android:selectedItemPosition="@{ls05b05b99.checked || ls05b05b88.checked ? 0 : 0}" />
+                            android:layout_marginTop="10dp" />
 
                     </LinearLayout>
 

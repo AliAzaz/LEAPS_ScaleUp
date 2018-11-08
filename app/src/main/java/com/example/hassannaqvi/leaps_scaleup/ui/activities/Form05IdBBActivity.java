@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -62,28 +61,44 @@ public class Form05IdBBActivity extends AppCompatActivity {
             }
         });
 
-        CheckBox.OnCheckedChangeListener chbx = new CompoundButton.OnCheckedChangeListener() {
+        bi.ls05b05b99.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
-                if (bi.ls05b05b99.isChecked()) {
+                if (b) {
                     bi.ls05b05b88.setChecked(false);
                     bi.ls05b05b88.setEnabled(false);
+
+                    bi.ls05b05b.setSelection(0);
+                    bi.ls05b05b.setEnabled(false);
+
                 } else {
                     bi.ls05b05b88.setEnabled(true);
-                }
 
-                if (bi.ls05b05b88.isChecked()) {
-                    bi.ls05b05b99.setChecked(false);
-                    bi.ls05b05b99.setEnabled(false);
-                } else {
-                    bi.ls05b05b99.setEnabled(true);
+                    bi.ls05b05b.setEnabled(true);
                 }
 
             }
-        };
-        bi.ls05b05b99.setOnCheckedChangeListener(chbx);
-        bi.ls05b05b88.setOnCheckedChangeListener(chbx);
+        });
+
+        bi.ls05b05b88.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b) {
+                    bi.ls05b05b99.setChecked(false);
+                    bi.ls05b05b99.setEnabled(false);
+
+                    bi.ls05b05b.setSelection(0);
+                    bi.ls05b05b.setEnabled(false);
+                } else {
+                    bi.ls05b05b99.setEnabled(true);
+
+                    bi.ls05b05b.setEnabled(true);
+                }
+
+            }
+        });
 
         bi.ls05b06a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override

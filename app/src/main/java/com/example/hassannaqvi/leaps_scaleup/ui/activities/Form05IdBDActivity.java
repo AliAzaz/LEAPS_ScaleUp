@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Toast;
 
@@ -74,28 +73,44 @@ public class Form05IdBDActivity extends AppCompatActivity {
             }
         });
 
-        CheckBox.OnCheckedChangeListener chbx = new CompoundButton.OnCheckedChangeListener() {
+        bi.ls05b16b99.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
-                if (bi.ls05b16b99.isChecked()) {
+                if (b) {
                     bi.ls05b16b88.setChecked(false);
                     bi.ls05b16b88.setEnabled(false);
+
+                    bi.ls05b16b.setSelection(0);
+                    bi.ls05b16b.setEnabled(false);
                 } else {
                     bi.ls05b16b88.setEnabled(true);
-                }
 
-                if (bi.ls05b16b88.isChecked()) {
-                    bi.ls05b16b99.setChecked(false);
-                    bi.ls05b16b99.setEnabled(false);
-                } else {
-                    bi.ls05b16b99.setEnabled(true);
+                    bi.ls05b16b.setEnabled(true);
                 }
 
             }
-        };
-        bi.ls05b16b99.setOnCheckedChangeListener(chbx);
-        bi.ls05b16b88.setOnCheckedChangeListener(chbx);
+        });
+
+        bi.ls05b16b88.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b) {
+                    bi.ls05b16b99.setChecked(false);
+                    bi.ls05b16b99.setEnabled(false);
+
+
+                    bi.ls05b16b.setSelection(0);
+                    bi.ls05b16b.setEnabled(false);
+                } else {
+                    bi.ls05b16b99.setEnabled(true);
+
+                    bi.ls05b16b.setEnabled(true);
+                }
+
+            }
+        });
 
         bi.ls05b16c.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -113,28 +128,43 @@ public class Form05IdBDActivity extends AppCompatActivity {
             }
         });
 
-        CheckBox.OnCheckedChangeListener chbx1 = new CompoundButton.OnCheckedChangeListener() {
+        bi.ls05b16d99.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
-                if (bi.ls05b16d99.isChecked()) {
+                if (b) {
                     bi.ls05b16d88.setChecked(false);
                     bi.ls05b16d88.setEnabled(false);
+
+                    bi.ls05b16d.setSelection(0);
+                    bi.ls05b16d.setEnabled(false);
                 } else {
                     bi.ls05b16d88.setEnabled(true);
-                }
 
-                if (bi.ls05b16d88.isChecked()) {
-                    bi.ls05b16d99.setChecked(false);
-                    bi.ls05b16d99.setEnabled(false);
-                } else {
-                    bi.ls05b16d99.setEnabled(true);
+                    bi.ls05b16d.setEnabled(true);
                 }
 
             }
-        };
-        bi.ls05b16d99.setOnCheckedChangeListener(chbx1);
-        bi.ls05b16d88.setOnCheckedChangeListener(chbx1);
+        });
+
+        bi.ls05b16d88.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b) {
+                    bi.ls05b16d99.setChecked(false);
+                    bi.ls05b16d99.setEnabled(false);
+
+                    bi.ls05b16d.setSelection(0);
+                    bi.ls05b16d.setEnabled(false);
+                } else {
+                    bi.ls05b16d99.setEnabled(true);
+
+                    bi.ls05b16d.setEnabled(true);
+                }
+
+            }
+        });
 
     }
 
