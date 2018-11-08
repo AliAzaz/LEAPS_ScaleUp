@@ -5,7 +5,11 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
@@ -34,15 +38,104 @@ public class Form05IdBDActivity extends AppCompatActivity {
         bi.setCallback(this);
         this.setTitle("IDELA");
 
+        setListeners();
         setContentUI();
 
     }
 
-    public void setContentUI() {
+    private void setContentUI() {
 
-        String[] numFormat = {"....", "0", "1", "2", "3", "4"};
+        String[] numFormat = {"....", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
+        String[] numFormat1 = {"....", "0", "1", "2", "3", "4"};
 
-        bi.ls05b18a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(numFormat)));
+        bi.ls05b16a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(numFormat)));
+        bi.ls05b16b.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(numFormat)));
+        bi.ls05b16c.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(numFormat)));
+        bi.ls05b16d.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(numFormat)));
+
+        bi.ls05b18a.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(numFormat1)));
+    }
+
+    private void setListeners() {
+
+        bi.ls05b16a.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i != 0) {
+                    bi.llgrpls05b16b.setVisibility(Integer.valueOf(bi.ls05b16a.getSelectedItem().toString()) < 4 ? View.GONE : View.VISIBLE);
+                    bi.ls05b16b99.setChecked(false);
+                    bi.ls05b16b.setSelection(0);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        CheckBox.OnCheckedChangeListener chbx = new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (bi.ls05b16b99.isChecked()) {
+                    bi.ls05b16b88.setChecked(false);
+                    bi.ls05b16b88.setEnabled(false);
+                } else {
+                    bi.ls05b16b88.setEnabled(true);
+                }
+
+                if (bi.ls05b16b88.isChecked()) {
+                    bi.ls05b16b99.setChecked(false);
+                    bi.ls05b16b99.setEnabled(false);
+                } else {
+                    bi.ls05b16b99.setEnabled(true);
+                }
+
+            }
+        };
+        bi.ls05b16b99.setOnCheckedChangeListener(chbx);
+        bi.ls05b16b88.setOnCheckedChangeListener(chbx);
+
+        bi.ls05b16c.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i != 0) {
+                    bi.llgrpls05b16d.setVisibility(Integer.valueOf(bi.ls05b16c.getSelectedItem().toString()) < 4 ? View.GONE : View.VISIBLE);
+                    bi.ls05b16d99.setChecked(false);
+                    bi.ls05b16d.setSelection(0);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+        CheckBox.OnCheckedChangeListener chbx1 = new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (bi.ls05b16d99.isChecked()) {
+                    bi.ls05b16d88.setChecked(false);
+                    bi.ls05b16d88.setEnabled(false);
+                } else {
+                    bi.ls05b16d88.setEnabled(true);
+                }
+
+                if (bi.ls05b16d88.isChecked()) {
+                    bi.ls05b16d99.setChecked(false);
+                    bi.ls05b16d99.setEnabled(false);
+                } else {
+                    bi.ls05b16d99.setEnabled(true);
+                }
+
+            }
+        };
+        bi.ls05b16d99.setOnCheckedChangeListener(chbx1);
+        bi.ls05b16d88.setOnCheckedChangeListener(chbx1);
+
     }
 
     public void BtnContinue() {

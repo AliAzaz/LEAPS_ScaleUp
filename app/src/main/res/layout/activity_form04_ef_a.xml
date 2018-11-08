@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_A">
 
@@ -29,14 +28,14 @@
 
             <TextView
                 style="@style/textView2"
-                android:textSize="25sp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
                 android:gravity="center"
                 android:text="@string/ls04asub1"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
 
 
             <LinearLayout
@@ -230,6 +229,7 @@
                             </RadioGroup>
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
+
                     <android.support.v7.widget.CardView
                         android:id="@+id/fldgrpls04aa03a"
                         style="@style/cardView">
@@ -302,6 +302,7 @@
                             </RadioGroup>
                         </LinearLayout>
                     </android.support.v7.widget.CardView>
+
                     <android.support.v7.widget.CardView
                         android:id="@+id/fldgrpls04aa04a"
                         style="@style/cardView">
@@ -342,15 +343,15 @@
 
                 <TextView
                     style="@style/textView2"
-                    android:textSize="30sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:text="@string/ls04asub2"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/black" />
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp" />
 
                 <LinearLayout
                     android:id="@+id/level2"
@@ -359,16 +360,16 @@
                     android:orientation="vertical">
 
                     <TextView
+                        style="@style/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
                         android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:gravity="center"
                         android:padding="20dp"
                         android:text="@string/levelTwo"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="@android:color/black"
-                        style="@style/textView2"/>
+                        android:textColor="@android:color/black" />
                     <!--01-->
                     <android.support.v7.widget.CardView style="@style/cardView">
 
@@ -487,8 +488,8 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="8dp"
                             android:layout_marginTop="8dp"
+                            android:layout_marginBottom="8dp"
                             android:background="@color/colorPrimaryBeta"
                             android:gravity="center"
                             android:padding="20dp"
@@ -498,43 +499,43 @@
 
                         <!--04-->
                         <android.support.v7.widget.CardView style="@style/cardView">
-                          <!--  <android.support.constraint.ConstraintLayout
-                                xmlns:app="http://schemas.android.com/apk/res-auto"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" >
-                                <TextView
-                                    style="@style/textViewCenterGravity"
-                                    android:text="@string/ls04ab04"
-                                    android:id="@+id/lbl01"
-                                    app:layout_constraintTop_toTopOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"/>
+                            <!--  <android.support.constraint.ConstraintLayout
+                                  xmlns:app="http://schemas.android.com/apk/res-auto"
+                                  android:layout_width="match_parent"
+                                  android:layout_height="wrap_content" >
+                                  <TextView
+                                      style="@style/textViewCenterGravity"
+                                      android:text="@string/ls04ab04"
+                                      android:id="@+id/lbl01"
+                                      app:layout_constraintTop_toTopOf="parent"
+                                      app:layout_constraintStart_toStartOf="parent"/>
 
-                                <RadioGroup
-                                    android:id="@+id/ls04ab04"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical"
-                                    app:layout_constraintTop_toBottomOf="@+id/lbl01">
+                                  <RadioGroup
+                                      android:id="@+id/ls04ab04"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:orientation="vertical"
+                                      app:layout_constraintTop_toBottomOf="@+id/lbl01">
 
-                                    <RadioButton
-                                        android:id="@+id/ls04ab04a"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/yes" />
+                                      <RadioButton
+                                          android:id="@+id/ls04ab04a"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:text="@string/yes" />
 
-                                    <RadioButton
-                                        android:id="@+id/ls04ab04b"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/no" />
+                                      <RadioButton
+                                          android:id="@+id/ls04ab04b"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:text="@string/no" />
 
-                                    <RadioButton
-                                        android:id="@+id/ls04ab0499"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/nores" />
-                                </RadioGroup>
-                            </android.support.constraint.ConstraintLayout>-->
+                                      <RadioButton
+                                          android:id="@+id/ls04ab0499"
+                                          android:layout_width="match_parent"
+                                          android:layout_height="wrap_content"
+                                          android:text="@string/nores" />
+                                  </RadioGroup>
+                              </android.support.constraint.ConstraintLayout>-->
                             <LinearLayout style="@style/linerlayout_view">
 
                                 <TextView
@@ -651,8 +652,8 @@
                                 android:id="@+id/lbllevel4"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="8dp"
                                 android:layout_marginTop="8dp"
+                                android:layout_marginBottom="8dp"
                                 android:background="@color/colorPrimaryBeta"
                                 android:gravity="center"
                                 android:padding="20dp"
@@ -660,8 +661,7 @@
                                 android:textAppearance="?android:attr/textAppearanceMedium"
                                 android:textColor="@android:color/white" />
                             <!--07-->
-                            <android.support.v7.widget.CardView style="@style/cardView"
-                               >
+                            <android.support.v7.widget.CardView style="@style/cardView">
 
                                 <LinearLayout style="@style/linerlayout_view">
 
@@ -768,17 +768,18 @@
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
 
-                            <RelativeLayout
+                            <LinearLayout
                                 android:id="@+id/level5"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:orientation="vertical"
                                 android:visibility="gone">
 
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginBottom="8dp"
                                     android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="8dp"
                                     android:background="@color/colorPrimaryBeta"
                                     android:gravity="center"
                                     android:padding="20dp"
@@ -892,7 +893,7 @@
                                         </RadioGroup>
                                     </LinearLayout>
                                 </android.support.v7.widget.CardView>
-                            </RelativeLayout>
+                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
