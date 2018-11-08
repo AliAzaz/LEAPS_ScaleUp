@@ -48,6 +48,7 @@
                             android:text="@string/ls05b20a" />
 
                         <EditText
+                            android:inputType="number"
                             android:id="@+id/ls05b20a"
                             android:hint="@string/ls05b23a"
                             android:maxLength="1"
@@ -757,6 +758,7 @@
                             android:text="@string/ls05b23a" />
 
                         <EditText
+                            android:inputType="number"
                             android:id="@+id/ls05b23a"
                             android:hint="@string/ls05b23a"
                             android:maxLength="2"

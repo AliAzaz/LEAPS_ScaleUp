@@ -360,7 +360,7 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01f10c96x", bi.ls01f10c96x.getText().toString());
         fc.setSa1(String.valueOf(f01));
 //        MainApp.fc.setF16(String.valueOf(f16));
-        Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
 
     }
 
