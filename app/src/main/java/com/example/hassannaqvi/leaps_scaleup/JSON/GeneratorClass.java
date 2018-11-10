@@ -111,7 +111,14 @@ public abstract class GeneratorClass {
                     for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
                         View view1 = ((CardView) view).getChildAt(j);
                         if (view1 instanceof LinearLayout) {
-                            getContainerJSON((LinearLayout) view1, false, assig_id);
+                            getContainerJSON(context,(LinearLayout) view1, false,formJSON, assig_id);
+                        }
+                    }
+                }else if (view instanceof LinearLayout) {
+                    for (int j = 0; j < ((LinearLayout) view).getChildCount(); j++) {
+                        View view1 = ((LinearLayout) view).getChildAt(j);
+                        if (view1 instanceof LinearLayout) {
+                            getContainerJSON(context,(LinearLayout) view1, false,formJSON, assig_id);
                         }
                     }
                 } else if (view instanceof RadioGroup) {
@@ -164,9 +171,6 @@ public abstract class GeneratorClass {
                         formJSON.put(assig_id, "0");
                     }
 
-                } else if (view instanceof TextView) {
-                    assig_id += validatorClass.getIDComponent(view);
-                    formJSON.put(assig_id, ((TextView) view).getText().toString());
                 } else if (view instanceof CheckBox) {
                     assig_id += validatorClass.getIDComponent(view);
                     if (((CheckBox) view).isChecked()) {

@@ -22,9 +22,11 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfBBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
+import java.util.Iterator;
 import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
@@ -73,13 +75,31 @@ public class Form04_EF_B extends AppCompatActivity {
         return false;*/
        return true;
     }
-
+    public static JSONObject mergeJSONObjects(JSONObject Obj1, JSONObject Obj2) {
+        JSONObject merged = new JSONObject();
+        JSONObject[] objs = new JSONObject[] { Obj1, Obj2 };
+        for (JSONObject obj : objs) {
+            Iterator it = obj.keys();
+            while (it.hasNext()) {
+                String key = (String)it.next();
+                try {
+                    merged.put(key, obj.get(key));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return merged;
+    }
     private void SaveDraft() {
-     /*   JSONObject Json = GeneratorClass.getContainerJSON(this,bi.fldgrpls04b, false,new JSONObject());
+        JSONObject localJson;
+        JSONObject Json1 = GeneratorClass.getContainerJSON(this,bi.fldgrpls04b, false,new JSONObject());
+        /*JSONObject Json2 = GeneratorClass.getContainerJSON(this,bi.level2, false,new JSONObject());
+        localJson = mergeJSONObjects(Json1,Json2);*/
 
-        InfoActivity.fc_4_5.setSa2(String.valueOf(Json));
+        InfoActivity.fc_4_5.setSa2(String.valueOf(Json1));
 
-        Log.d("F4-EF-B", String.valueOf(Json));*/
+        Log.d("F4-EF-B", String.valueOf(Json1));
     }
 
     private boolean formValidation() {

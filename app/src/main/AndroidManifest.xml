@@ -31,7 +31,6 @@
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -121,11 +120,15 @@
         <activity
             android:name=".ui.activities.Form04_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1">
+
+        </activity>
         <activity
             android:name=".ui.activities.Form04_EF_B"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1" >
+
+        </activity>
         <activity
             android:name=".ui.activities.Form04_EF_C"
             android:screenOrientation="portrait"
@@ -138,7 +141,8 @@
             android:name=".ui.activities.Form04_EF_E"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
-        <activity android:name=".ui.activities.Form09_part_1_Activity"></activity>
+        <activity android:name=".ui.activities.Form09_part_1_Activity" />
+
     </application>
 
 </manifest>
