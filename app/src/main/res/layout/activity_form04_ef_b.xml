@@ -36,11 +36,11 @@
 
             <TextView
                 style="@style/textView2"
-                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
+                android:gravity="center"
                 android:padding="20dp"
                 android:text="@string/ls04ba"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -76,34 +76,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01a96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01a01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01a02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -112,11 +112,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
-                            android:enabled="false"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             tools:text="@string/red" />
@@ -168,34 +168,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01b96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01b01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba01b02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -204,11 +204,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
-                            android:enabled="false"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             tools:text="@string/red" />
@@ -258,34 +258,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02a96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02a01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02a02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -294,11 +294,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
-                            android:enabled="false"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             tools:text="@string/blue" />
@@ -350,34 +350,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02b96"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02b01"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04ba02b02"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="processButton"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -386,12 +386,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/blue" />
 
@@ -418,11 +418,11 @@
 
                 <TextView
                     style="@style/textView2"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
+                    android:gravity="center"
                     android:padding="20dp"
                     android:text="@string/ls04bb"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -452,34 +452,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0196"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb01a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb01b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -488,12 +488,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/red" />
 
@@ -542,34 +542,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0296"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb02a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb02b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -578,12 +578,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/blue" />
 
@@ -632,34 +632,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0396"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb03a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb03b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -668,12 +668,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/blue" />
 
@@ -722,34 +722,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0496"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb04a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb04b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -758,12 +758,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/red" />
 
@@ -812,34 +812,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0596"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb05a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb05b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -848,13 +848,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
                             android:textStyle="bold"
-                            android:enabled="false"
                             tools:text="@string/red" />
 
 
@@ -901,34 +901,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb0696"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb06a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/red" />
+                                android:text="@string/red"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bb06b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/blue" />
+                                android:text="@string/blue"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -937,11 +937,11 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
-                            android:enabled="false"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             tools:text="@string/red" />
@@ -970,11 +970,11 @@
 
                 <TextView
                     style="@style/textView2"
-                    android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:layout_marginTop="16dp"
+                    android:gravity="center"
                     android:padding="20dp"
                     android:text="@string/ls04bc"
                     android:textAppearance="?android:attr/textAppearanceMedium"
@@ -1004,34 +1004,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0196"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc01a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/star" />
+                                android:text="@string/star"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc01b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/truck" />
+                                android:text="@string/truck"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -1040,12 +1040,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/star" />
 
@@ -1093,34 +1093,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0296"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc02a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/star" />
+                                android:text="@string/star"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc02b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/truck" />
+                                android:text="@string/truck"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -1129,12 +1129,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/star" />
 
@@ -1182,34 +1182,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0396"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc03a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/star" />
+                                android:text="@string/star"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc03b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/truck" />
+                                android:text="@string/truck"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -1218,12 +1218,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/star" />
 
@@ -1271,34 +1271,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0496"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc04a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/star" />
+                                android:text="@string/star"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc04b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/truck" />
+                                android:text="@string/truck"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -1307,12 +1307,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/star" />
 
@@ -1360,34 +1360,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0596"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc05a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/star" />
+                                android:text="@string/star"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc05b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/truck" />
+                                android:text="@string/truck"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -1396,12 +1396,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/star" />
 
@@ -1449,34 +1449,34 @@
                             android:padding="25dp">
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc0696"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/other" />
+                                android:text="@string/other"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc06a"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/star" />
+                                android:text="@string/star"
+                                android:textColor="@color/white" />
 
                             <Button
-                                android:textColor="@color/white"
                                 android:id="@+id/ls04bc06b"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_margin="3dp"
                                 android:layout_weight="1"
                                 android:onClick="levelBasedProcess"
-                                android:text="@string/truck" />
+                                android:text="@string/truck"
+                                android:textColor="@color/white" />
                         </LinearLayout>
 
 
@@ -1485,12 +1485,12 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
+                            android:enabled="false"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
                             android:textSize="20sp"
-                            android:enabled="false"
                             android:textStyle="bold"
                             tools:text="@string/star" />
 
@@ -1571,42 +1571,42 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01a96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01a01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01a02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bd01a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -1662,42 +1662,42 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01b96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01b01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd01b02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bd01b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -1751,49 +1751,49 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02a96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02a01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02a02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bd02a"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
                                 android:text=""
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                tools:text="@string/truck" />
+                                tools:text="@string/star" />
 
 
                             <LinearLayout
@@ -1842,49 +1842,49 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02b96"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02b01"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bd02b02"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="processButton"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bd02b"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
                                 android:text=""
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                tools:text="@string/truck" />
+                                tools:text="@string/star" />
 
 
                             <LinearLayout
@@ -1943,42 +1943,42 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0196"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be01a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be01b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04be01"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2031,42 +2031,42 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0296"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be02a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be02b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04be02"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2119,42 +2119,43 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0396"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be03a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be03b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04be03"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2207,42 +2208,42 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0496"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be04a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be04b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04be04"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2250,7 +2251,6 @@
                                 android:textSize="20sp"
                                 android:textStyle="bold"
                                 tools:text="@string/star" />
-
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -2295,42 +2295,43 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be0596"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be05a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/star" />
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04be05b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/truck" />
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04be05"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2348,6 +2349,95 @@
 
                                 <Button
                                     android:id="@+id/ls04be0599"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                    <!-- ls04be06-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bestar"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04be0696"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04be06a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/star"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04be06b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/truck"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+
+                            <EditText
+                                android:id="@+id/ls04be06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/star" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04be0699"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
@@ -2395,49 +2485,50 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0196"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf01a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/red" />
+                                    android:text="@string/red"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf01b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/blue" />
+                                    android:text="@string/blue"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bf01"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
                                 android:text=""
                                 android:textSize="20sp"
                                 android:textStyle="bold"
-                                tools:text="@string/red" />
+                                tools:text="@string/star" />
 
 
                             <LinearLayout
@@ -2483,42 +2574,43 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0296"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf02a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/red" />
+                                    android:text="@string/red"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf02b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/blue" />
+                                    android:text="@string/blue"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bf02"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2571,42 +2663,42 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0396"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf03a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/red" />
+                                    android:text="@string/red"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf03b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/blue" />
+                                    android:text="@string/blue"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bf03"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2659,42 +2751,43 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0496"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf04a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/red" />
+                                    android:text="@string/red"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf04b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/blue" />
+                                    android:text="@string/blue"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bf04"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2747,42 +2840,42 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0596"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf05a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/red" />
+                                    android:text="@string/red"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf05b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/blue" />
+                                    android:text="@string/blue"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bf05"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2835,44 +2928,44 @@
                                 android:padding="25dp">
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf0696"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/other" />
-
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf06a"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/red" />
+                                    android:text="@string/red"
+                                    android:textColor="@color/white" />
 
                                 <Button
-                                    android:textColor="@color/white"
                                     android:id="@+id/ls04bf06b"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_margin="3dp"
                                     android:layout_weight="1"
                                     android:onClick="levelBasedProcess"
-                                    android:text="@string/blue" />
+                                    android:text="@string/blue"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/ls04bf06"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:enabled="false"
                                 android:gravity="center"
                                 android:paddingEnd="20dp"
                                 android:paddingStart="20dp"
@@ -2945,49 +3038,50 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0196"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg01a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg01b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg01"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
                                     android:text=""
                                     android:textSize="20sp"
                                     android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
+                                    tools:text="@string/red" />
 
 
                                 <LinearLayout
@@ -3033,42 +3127,43 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0296"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg02a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg02b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg02"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3121,42 +3216,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0396"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg03a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg03b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg03"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3209,42 +3304,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0496"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg04a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg04b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg04"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3297,42 +3392,43 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0596"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg05a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg05b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg05"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3385,42 +3481,43 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0696"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg06a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg06b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
 
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg06"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3474,42 +3571,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0796"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg07a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg07b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg07"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3562,42 +3659,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0896"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg08a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg08b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg08"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3650,42 +3747,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg0996"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg09a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg09b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg09"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3738,42 +3835,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg1096"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg10a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg10b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg10"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3781,7 +3878,6 @@
                                     android:textSize="20sp"
                                     android:textStyle="bold"
                                     tools:text="@string/redtruck" />
-
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -3826,42 +3922,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg1196"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg11a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg11b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg11"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3914,42 +4010,42 @@
                                     android:padding="25dp">
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg1296"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/other" />
+                                        android:text="@string/other"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg12a"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck" />
+                                        android:text="@string/redtruck"
+                                        android:textColor="@color/white" />
 
                                     <Button
-                                        android:textColor="@color/white"
                                         android:id="@+id/ls04bg12b"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_margin="3dp"
                                         android:layout_weight="1"
                                         android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar" />
+                                        android:text="@string/bluestar"
+                                        android:textColor="@color/white" />
                                 </LinearLayout>
 
-
-                                <TextView
+                                <EditText
                                     android:id="@+id/ls04bg12"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:enabled="false"
                                     android:gravity="center"
                                     android:paddingEnd="20dp"
                                     android:paddingStart="20dp"
@@ -3997,6 +4093,7 @@
                     android:layout_marginRight="10dp"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="@string/end_interview" />
+
                 <Button
                     android:id="@+id/btn_Continue"
                     style="@style/button"

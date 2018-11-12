@@ -39,6 +39,7 @@ public class Form04_EF_B extends AppCompatActivity {
     int ls04bc01, ls04bc02, ls04bc03, ls04bc04, ls04bc05, ls04bc06;
     int ls04be01, ls04be02, ls04be03, ls04be04, ls04be05, ls04be06;
     int ls04bf01, ls04bf02, ls04bf03, ls04bf04, ls04bf05, ls04bf06;
+    int ls04bg01, ls04bg02, ls04bg03, ls04bg04, ls04bg05, ls04bg06, ls04bg07, ls04bg08, ls04bg09, ls04bg10, ls04bg11, ls04bg12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,7 +140,7 @@ public class Form04_EF_B extends AppCompatActivity {
         } else {
             qID = qID.substring(0, qID.length() - 2); // this is question id
         }
-        TextView tv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
+        EditText tv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
         String btnPressed = b.getText().toString();
         try {
             setVariable(qID, settingAnswers(tv, btnPressed, getVariable(qID), getStringbyIdName(this, qID + "pattern")));
@@ -204,7 +205,7 @@ public class Form04_EF_B extends AppCompatActivity {
 
     }
 
-    int settingAnswers(TextView txtview, String txtValue, int answer, String pattern) {
+    int settingAnswers(EditText txtview, String txtValue, int answer, String pattern) {
 
         txtview.setText(txtValue);
         if (!TextUtils.isEmpty(txtview.getText().toString())) {
