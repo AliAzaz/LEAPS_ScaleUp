@@ -201,8 +201,6 @@ public class Form04_EF_B extends AppCompatActivity {
             bi.ls04bg11.setText(null);
             bi.ls04bg12.setText(null);
         }
-
-
     }
 
     int settingAnswers(EditText txtview, String txtValue, int answer, String pattern) {

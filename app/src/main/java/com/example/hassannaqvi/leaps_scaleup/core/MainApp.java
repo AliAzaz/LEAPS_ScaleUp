@@ -81,6 +81,10 @@ public class MainApp extends Application {
     public static int lhwCode = 0;
     public static String HHno;
     public static String IMEI;
+    public static final String FORM01A = "01a";
+    public static final String FORM01B = "01b";
+    public static final String FORM04 = "4";
+    public static final String FORM05 = "5";
 
     protected static LocationManager locationManager;
 

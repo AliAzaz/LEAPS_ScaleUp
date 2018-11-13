@@ -25,11 +25,15 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
+import com.example.hassannaqvi.leaps_scaleup.core.CONSTANTS;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityMainBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetAllDBData;
+import com.example.hassannaqvi.leaps_scaleup.sync.server.SyncAllData;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -390,6 +394,45 @@ public class MainActivity extends Activity {
     public void openDB(View v) {
         Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
         startActivity(dbmanager);
+    }
+    public void uploadData() {
+
+        // Require permissions INTERNET & ACCESS_NETWORK_STATE
+        ConnectivityManager connMgr = (ConnectivityManager)
+                getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+
+//            new SyncDevice(this).execute();
+            Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
+            Collection collection = null;
+            try {
+                collection = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM04).get();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+                new SyncAllData(
+                        this,
+                        "Forms",
+                        "updateSyncedForms_04_05",
+                        Forms_04_05.class,
+                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php",MainApp.FORM04+".php"),collection
+                ).execute();
+
+
+
+            SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = syncPref.edit();
+
+            editor.putString("LastUpSyncServer", dtToday);
+
+            editor.apply();
+
+        } else {
+            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void CheckCluster(View v) {

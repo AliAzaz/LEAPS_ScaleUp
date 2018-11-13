@@ -5,7 +5,11 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
+import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 @Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05)
 public class Forms_04_05 {
@@ -80,6 +84,61 @@ public class Forms_04_05 {
         this.appversion = forms.appversion;
 
     }
+
+    @Ignore
+    public JSONObject toJSONObject() throws JSONException {
+
+        JSONObject json = new JSONObject();
+
+        json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
+        json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
+        json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
+        json.put("username", this.username == null ? JSONObject.NULL : this.username);
+        json.put("childID", this.childID == null ? JSONObject.NULL : this.childID);
+        json.put("childName", this.childName == null ? JSONObject.NULL : this.childName);
+
+        json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
+        json.put("clustercode", this.clustercode == null ? JSONObject.NULL : this.clustercode);
+        json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
+        json.put("districtname", this.districtname == null ? JSONObject.NULL : this.districtname);
+        json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
+        json.put("gpsLng", this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
+        json.put("gpsDT", this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
+        json.put("gpsAcc", this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
+        json.put("deviceID", this.deviceID == null ? JSONObject.NULL : this.deviceID);
+        json.put("gpsElev", this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
+        json.put("devicetagID", this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
+        json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);
+        json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
+
+        if (!this.sInfo.equals("")) {
+            json.put("sInfo", this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
+        }
+        if (!this.sa1.equals("")) {
+            json.put("sa1", this.sa1.equals("") ? JSONObject.NULL : new JSONObject(this.sa1));
+        }
+        if (!this.sa2.equals("")) {
+            json.put("sa2", this.sa2.equals("") ? JSONObject.NULL : new JSONObject(this.sa2));
+        }
+        if (!this.sa3.equals("")) {
+            json.put("sa3", this.sa3.equals("") ? JSONObject.NULL : new JSONObject(this.sa3));
+        }
+        if (!this.sa4.equals("")) {
+            json.put("sa4", this.sa4.equals("") ? JSONObject.NULL : new JSONObject(this.sa4));
+        }
+        if (!this.sa5.equals("")) {
+            json.put("sa5", this.sa5.equals("") ? JSONObject.NULL : new JSONObject(this.sa5));
+        }
+        if (!this.sa6.equals("")) {
+            json.put("sa6", this.sa6.equals("") ? JSONObject.NULL : new JSONObject(this.sa6));
+        }
+
+
+
+        return json;
+    }
+
 
     public Forms_04_05() {
     }

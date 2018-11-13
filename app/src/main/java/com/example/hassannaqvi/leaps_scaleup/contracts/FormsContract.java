@@ -58,6 +58,10 @@ public class FormsContract {
     }
 
 
+    public String setAndGetSyncedDate(){
+        Boolean syncstatus = true;
+        return syncstatus.toString();
+    }
     public FormsContract Sync(JSONObject jsonObject) throws JSONException {
         this.projectName = jsonObject.getString(FormsTable.COLUMN_PROJECTNAME);
         this.surveyType = jsonObject.getString(FormsTable.COLUMN_SURVEYTYPE);
