@@ -149,7 +149,7 @@ public class Form07Activity extends AppCompatActivity {
 
     public void BtnContinue() {
 
-        if (formValidation()) {
+        if (formValidation(true)) {
             try {
                 SaveDraft();
 
@@ -219,7 +219,7 @@ public class Form07Activity extends AppCompatActivity {
 
     }
 
-    public boolean formValidation() {
+    public boolean formValidation(boolean flag) {
 
         //2
         if (!validatorClass.EmptyTextBox(this, bi.ls07id02, getString(R.string.ls07id02))) {
@@ -232,74 +232,80 @@ public class Form07Activity extends AppCompatActivity {
         if (!CheckingID.getIDValidation(this, bi.ls07id03, "8" + bi.ls07id03.getText().toString(), getFtype)) {
             return false;
         }
-        //6
-        if (!validatorClass.EmptyRadioButton(this, bi.ls07id05, bi.ls07id05a, getString(R.string.ls07id05))) {
-            return false;
-        }
-        //7
-        if (!validatorClass.EmptyTextBox(this, bi.ls07id06, getString(R.string.ls07id06))) {
-            return false;
-        }
-        //8
-        if (!validatorClass.EmptyTextBox(this, bi.ls07id07, getString(R.string.ls07id07))) {
-            return false;
-        }
 
-        if (!validatorClass.RangeTextBox(this, bi.ls07id07, 18, 24, getString(R.string.ls07id07), "Age")) {
-            return false;
-        }
-        //9
-        if (!validatorClass.EmptyRadioButton(this, bi.ls07id08, bi.ls07id08a, getString(R.string.ls07id08))) {
-            return false;
-        }
-        if (bi.ls07id08a.isChecked()) {
-            //10
-            if (!validatorClass.EmptyRadioButton(this, bi.ls07id09, bi.ls07id09a, getString(R.string.ls07id09))) {
+        if (flag) {
+
+            //6
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07id05, bi.ls07id05a, getString(R.string.ls07id05))) {
                 return false;
             }
-        }
-        //11
-        if (!validatorClass.EmptyRadioButton(this, bi.ls07id10, bi.ls07id10a, getString(R.string.ls07id10))) {
-            return false;
-        }
-        if (bi.ls07id10a.isChecked()) {
-            //12
-            if (!validatorClass.EmptyRadioButton(this, bi.ls07id18, bi.ls07id18a, getString(R.string.ls07id18))) {
+            //7
+            if (!validatorClass.EmptyTextBox(this, bi.ls07id06, getString(R.string.ls07id06))) {
                 return false;
             }
-            if (bi.ls07id18a.isChecked()) {
-                //13
-                if (!validatorClass.EmptyTextBox(this, bi.ls07id11, getString(R.string.ls07id11))) {
+            //8
+            if (!validatorClass.EmptyTextBox(this, bi.ls07id07, getString(R.string.ls07id07))) {
+                return false;
+            }
+
+            if (!validatorClass.RangeTextBox(this, bi.ls07id07, 18, 24, getString(R.string.ls07id07), "Age")) {
+                return false;
+            }
+            //9
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07id08, bi.ls07id08a, getString(R.string.ls07id08))) {
+                return false;
+            }
+            if (bi.ls07id08a.isChecked()) {
+                //10
+                if (!validatorClass.EmptyRadioButton(this, bi.ls07id09, bi.ls07id09a, getString(R.string.ls07id09))) {
                     return false;
                 }
-                //14
+            }
+            //11
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07id10, bi.ls07id10a, getString(R.string.ls07id10))) {
+                return false;
+            }
+            if (bi.ls07id10a.isChecked()) {
+                //12
+                if (!validatorClass.EmptyRadioButton(this, bi.ls07id18, bi.ls07id18a, getString(R.string.ls07id18))) {
+                    return false;
+                }
+                if (bi.ls07id18a.isChecked()) {
+                    //13
+                    if (!validatorClass.EmptyTextBox(this, bi.ls07id11, getString(R.string.ls07id11))) {
+                        return false;
+                    }
+                    //14
 //                if (!validatorClass.EmptyRadioButton(this, bi.ls07id17, bi.ls07id17a, getString(R.string.ls07id17))) {
 //                    return false;
 //                }
-            }
+                }
 
-        } else {
-            //14
-            if (!validatorClass.EmptyRadioButton(this, bi.ls07id17, bi.ls07id17a, getString(R.string.ls07id17))) {
+            } else {
+                //14
+                if (!validatorClass.EmptyRadioButton(this, bi.ls07id17, bi.ls07id17a, getString(R.string.ls07id17))) {
+                    return false;
+                }
+            }
+            //15
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07id12, bi.ls07id12a, getString(R.string.ls07id12))) {
                 return false;
             }
-        }
-        //15
-        if (!validatorClass.EmptyRadioButton(this, bi.ls07id12, bi.ls07id12a, getString(R.string.ls07id12))) {
-            return false;
-        }
-        if (bi.ls07id1296.isChecked()) {
-            if (!validatorClass.EmptyTextBox(this, bi.ls07id1296x, getString(R.string.ls07id12))) {
+            if (bi.ls07id1296.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.ls07id1296x, getString(R.string.ls07id12))) {
+                    return false;
+                }
+            }
+
+            //16
+            if (!validatorClass.EmptyTextBox(this, bi.ls07id13, getString(R.string.ls07id13))) {
                 return false;
             }
+            //17
+            return validatorClass.EmptyRadioButton(this, bi.ls07id14, bi.ls07id14a, getString(R.string.ls07id14));
         }
 
-        //16
-        if (!validatorClass.EmptyTextBox(this, bi.ls07id13, getString(R.string.ls07id13))) {
-            return false;
-        }
-        //17
-        return validatorClass.EmptyRadioButton(this, bi.ls07id14, bi.ls07id14a, getString(R.string.ls07id14));
+        return true;
     }
 
     private void SaveDraft() throws JSONException {
@@ -375,7 +381,21 @@ public class Form07Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+
+        if (formValidation(false)) {
+            try {
+                SaveDraft();
+
+                if (UpdateDB()) {
+                    startActivity(new Intent(getApplicationContext(), EndingActivityYouth.class).putExtra("complete", true));
+                } else {
+                    FancyToast.makeText(this, "Error in updating db!!", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
+                }
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     public void setGPS(Forms fc) {
