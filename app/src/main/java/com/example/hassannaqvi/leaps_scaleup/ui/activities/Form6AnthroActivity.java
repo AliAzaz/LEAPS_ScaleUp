@@ -1,19 +1,24 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Intent;
-import android.database.DatabaseUtils;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm6AnthroBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 import com.shashank.sony.fancytoastlib.FancyToast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form6AnthroActivity extends AppCompatActivity {
 
@@ -50,9 +55,19 @@ public class Form6AnthroActivity extends AppCompatActivity {
         }
     }
 
-    private boolean UpdateDB() {
+    public boolean UpdateDB() {
+        try {
 
-        return true;
+            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     private void SaveDraft() throws JSONException {
@@ -64,6 +79,7 @@ public class Form6AnthroActivity extends AppCompatActivity {
         sF6.put("ls0603", bi.ls0603.getText().toString());
         sF6.put("ls0604", bi.ls0604.getText().toString());
 
+        InfoActivity.fc_4_5.setSa1(String.valueOf(sF6));
 
     }
 

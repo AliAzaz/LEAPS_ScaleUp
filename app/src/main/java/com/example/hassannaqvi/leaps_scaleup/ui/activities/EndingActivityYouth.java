@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
-import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityEndingBinding;
+import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityEndingYouthBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import java.text.SimpleDateFormat;
@@ -19,18 +19,18 @@ import java.util.concurrent.ExecutionException;
 import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 
-public class EndingActivity extends AppCompatActivity {
+public class EndingActivityYouth extends AppCompatActivity {
 
-    private static final String TAG = EndingActivity.class.getSimpleName();
+    private static final String TAG = EndingActivityYouth.class.getSimpleName();
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
-    ActivityEndingBinding bi;
+    ActivityEndingYouthBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_ending);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_ending_youth);
         bi.setCallback(this);
 
         this.setTitle("End Interview");
@@ -49,6 +49,19 @@ public class EndingActivity extends AppCompatActivity {
             bi.istatusd.setEnabled(true);
         }
 
+/*        istatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
+                if (istatus88.isChecked()) {
+                    istatus88x.setVisibility(View.VISIBLE);
+                    //istatus88x.requestFocus();
+                } else {
+                    istatus88x.setText(null);
+                    istatus88x.setVisibility(View.GONE);
+                }
+            }
+        });*/
+
     }
 
     public void BtnEnd() {
@@ -63,14 +76,14 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() {
-        Form01Enrolment.fc_4_5.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
-        Form01Enrolment.fc_4_5.setEndtime(dtToday);
+        Form07Activity.fc.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
+        Form07Activity.fc.setEndtime(dtToday);
     }
 
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(db, Form01Enrolment.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, Form07Activity.fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
             return longID == 1;
 
         } catch (InterruptedException e) {

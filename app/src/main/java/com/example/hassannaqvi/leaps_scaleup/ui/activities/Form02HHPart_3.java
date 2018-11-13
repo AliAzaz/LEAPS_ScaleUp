@@ -2,19 +2,25 @@ package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm02Hhpart3Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form02HHPart_3 extends AppCompatActivity {
 
@@ -97,13 +103,12 @@ public class Form02HHPart_3 extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        //startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
-
         if (formValidation()) {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+                    startActivity(new Intent(getApplicationContext(), EndingActivity.class)
+                            .putExtra("complete", true));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }
@@ -113,9 +118,19 @@ public class Form02HHPart_3 extends AppCompatActivity {
         }
     }
 
-    private boolean UpdateDB() {
+    public boolean UpdateDB() {
+        try {
 
-        return true;
+            Long longID = new crudOperations(db, Form01Enrolment.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     private void SaveDraft() throws JSONException {
@@ -195,6 +210,8 @@ public class Form02HHPart_3 extends AppCompatActivity {
 
         sH3.put("lsee17", bi.ls02ee14.getText().toString());
         sH3.put("lsee18", bi.ls02ee15.getText().toString());
+
+        Form01Enrolment.fc_4_5.setSa4(String.valueOf(sH3));
     }
 
     private boolean formValidation() {
@@ -273,11 +290,7 @@ public class Form02HHPart_3 extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls02ee14, getString(R.string.ls02ee14))) {
             return false;
         }
-        if (!validatorClass.EmptyTextBox(this, bi.ls02ee15, getString(R.string.ls02ee15))) {
-            return false;
-        }
-
-        return true;
+        return validatorClass.EmptyTextBox(this, bi.ls02ee15, getString(R.string.ls02ee15));
     }
 
     public void BtnEnd() {

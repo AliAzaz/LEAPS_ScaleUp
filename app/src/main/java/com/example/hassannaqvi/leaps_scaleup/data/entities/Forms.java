@@ -20,6 +20,7 @@ public class Forms {
 
     @ColumnInfo
     private String uid = "";
+    private String formType = "";
     private String formDate = ""; // Date
     private String username = ""; // Interviewer
     private String istatus = ""; // Interview Status
@@ -27,7 +28,7 @@ public class Forms {
     private String sa1 = "";     // Info Section
     private String endtime = "";
     private String clustercode = "";
-    private String childID = "";
+    private String youthID = "";
     private String studyID = "";
     private String gpsLat = "";
     private String gpsLng = "";
@@ -45,13 +46,14 @@ public class Forms {
 
         this.uid = forms.uid;
         this.formDate = forms.formDate;
+        this.formType = forms.formType;
         this.username = forms.username;
         this.istatus = forms.istatus;
         this.istatus88x = forms.istatus88x;
         this.sa1 = forms.sa1;
         this.endtime = forms.endtime;
         this.clustercode = forms.clustercode;
-        this.childID = forms.childID;
+        this.youthID = forms.youthID;
         this.studyID = forms.studyID;
         this.gpsLat = forms.gpsLat;
         this.gpsLng = forms.gpsLng;
@@ -91,6 +93,14 @@ public class Forms {
 
     public void setFormDate(String formDate) {
         this.formDate = formDate;
+    }
+
+    public String getFormType() {
+        return formType;
+    }
+
+    public void setFormType(String formType) {
+        this.formType = formType;
     }
 
     public String getUsername() {
@@ -141,12 +151,12 @@ public class Forms {
         this.clustercode = clustercode;
     }
 
-    public String getChildID() {
-        return childID;
+    public String getYouthID() {
+        return youthID;
     }
 
-    public void setChildID(String childID) {
-        this.childID = childID;
+    public void setYouthID(String youthID) {
+        this.youthID = youthID;
     }
 
     public String getStudyID() {

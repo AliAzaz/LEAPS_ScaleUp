@@ -5,7 +5,6 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
-import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 
 import org.json.JSONException;
@@ -35,6 +34,7 @@ public class Forms_04_05 {
     private String sa4 = "";     // Section 4
     private String sa5 = "";     // Section 5
     private String sa6 = "";     // Section 6
+    private String istatus = "";
     private String endtime = "";
     private String clustercode = "";
     private String districtname = "";
@@ -69,6 +69,7 @@ public class Forms_04_05 {
         this.sa4 = forms.sa4;
         this.sa5 = forms.sa5;
         this.sa6 = forms.sa6;
+        this.istatus = forms.istatus;
         this.endtime = forms.endtime;
         this.clustercode = forms.clustercode;
         this.districtname = forms.districtname;
@@ -111,6 +112,7 @@ public class Forms_04_05 {
         json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
         json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);
         json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
+        json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
 
         if (!this.sInfo.equals("")) {
             json.put("sInfo", this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
@@ -141,6 +143,14 @@ public class Forms_04_05 {
 
 
     public Forms_04_05() {
+    }
+
+    public String getIstatus() {
+        return istatus;
+    }
+
+    public void setIstatus(String istatus) {
+        this.istatus = istatus;
     }
 
     public int getId() {

@@ -56,6 +56,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
         <activity
+            android:name=".ui.activities.EndingActivityYouth"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+        <activity
             android:name=".ui.activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
@@ -149,11 +153,11 @@
         <activity
             android:name=".ui.activities.Form09_part_3_4_5_Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.activities.Form08_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
     </application>
 
 </manifest>

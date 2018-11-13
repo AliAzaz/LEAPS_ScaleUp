@@ -1,11 +1,16 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -16,7 +21,7 @@ import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm01EnrolmentBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.other.CheckingID;
@@ -27,6 +32,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
@@ -34,8 +40,9 @@ import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form01Enrolment extends AppCompatActivity {
+    private static final String TAG = Form01Enrolment.class.getName();
     ActivityForm01EnrolmentBinding bi;
-    public static Forms fc;
+    public static Forms_04_05 fc_4_5;
 
     String getFtype = "";
 
@@ -213,13 +220,14 @@ public class Form01Enrolment extends AppCompatActivity {
         }
     }
 
-    public boolean UpdateDB() {
+    private boolean UpdateDB() {
+
         try {
 
-            Long longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "insertForm").get();
+            Long longID = new crudOperations(db, fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "insertForm_04_05").get();
 
             if (longID != 0) {
-                fc.setId(longID.intValue());
+                fc_4_5.setId(longID.intValue());
                 return true;
             } else {
                 return false;
@@ -232,6 +240,7 @@ public class Form01Enrolment extends AppCompatActivity {
         }
 
         return false;
+
     }
 
     public void BtnEnd() {
@@ -246,10 +255,20 @@ public class Form01Enrolment extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        fc = new Forms();
-        fc.setClustercode(bi.ls01a05.getText().toString());
-        fc.setChildID(bi.ls01a04.getText().toString());
-        fc.setStudyID(MainApp.round + "" + bi.ls01a05.getText().toString() + bi.ls01a04.getText().toString());
+        fc_4_5 = new Forms_04_05();
+
+        fc_4_5.setDevicetagID(MainApp.getTagName(this));
+        fc_4_5.setFormType(getIntent().getStringExtra("fType"));
+        fc_4_5.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        fc_4_5.setUsername(MainApp.userName);
+        fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        fc_4_5.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
+                Settings.Secure.ANDROID_ID));
+        setGPS(fc_4_5); // Set GPS
+
+        fc_4_5.setClustercode(bi.ls01a05.getText().toString());
+        fc_4_5.setChildID(bi.ls01a04.getText().toString());
+        fc_4_5.setStudyID(MainApp.round + "" + bi.ls01a05.getText().toString() + bi.ls01a04.getText().toString());
 
         JSONObject f01 = new JSONObject();
         f01.put("ls01a01", "");
@@ -358,9 +377,8 @@ public class Form01Enrolment extends AppCompatActivity {
                 : bi.ls01f10c96.isChecked() ? "96"
                 : "0");
         f01.put("ls01f10c96x", bi.ls01f10c96x.getText().toString());
-        fc.setSa1(String.valueOf(f01));
-//        MainApp.fc.setF16(String.valueOf(f16));
-       // Toast.makeText(this, "Validation Successful! - Saving Draft...", Toast.LENGTH_SHORT).show();
+
+        fc_4_5.setSInfo(String.valueOf(f01));
 
     }
 
@@ -494,5 +512,34 @@ public class Form01Enrolment extends AppCompatActivity {
         return true;
     }
 
+    public void setGPS(Forms_04_05 fc) {
+        SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
+        try {
+            String lat = GPSPref.getString("Latitude", "0");
+            String lang = GPSPref.getString("Longitude", "0");
+            String acc = GPSPref.getString("Accuracy", "0");
+            String elevation = GPSPref.getString("Elevation", "0");
+
+            if (lat == "0" && lang == "0") {
+                Toast.makeText(this, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();
+            }
+
+            String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
+
+            fc.setGpsLat(lat);
+            fc.setGpsLng(lang);
+            fc.setGpsAcc(acc);
+            fc.setGpsDT(date); // Timestamp is converted to date above
+            fc.setGpsElev(elevation);
+
+            Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();
+
+        } catch (Exception e) {
+            Log.e(TAG, "setGPS: " + e.getMessage());
+        }
+
+    }
 
 }

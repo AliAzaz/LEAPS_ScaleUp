@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
 
     <data>
@@ -1461,14 +1459,12 @@
                     <Button
                         android:id="@+id/btn_Continue"
                         style="@style/button"
-                        android:onClick="@{() -> callback.BtnContinue()}"
                         android:text="@string/nextSection" />
 
                     <Button
                         android:id="@+id/btn_End"
                         style="@style/button"
                         android:layout_marginRight="10dp"
-                        android:onClick="@{() -> callback.BtnEnd()}"
                         android:text="@string/end_interview" />
 
                 </LinearLayout>

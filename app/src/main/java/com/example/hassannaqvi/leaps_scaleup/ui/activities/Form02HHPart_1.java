@@ -2,20 +2,25 @@ package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm02Hhpart1Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form02HHPart_1 extends AppCompatActivity {
 
@@ -219,25 +224,33 @@ public class Form02HHPart_1 extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
         if (formValidation()) {
-            Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
-//            try {
-//                SaveDraft();
-            if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
-            } else {
-                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
-            }
-           /* } catch (JSONException e) {
+            try {
+                SaveDraft();
+                if (UpdateDB()) {
+                    startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class));
+                } else {
+                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                }
+            } catch (JSONException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
     }
 
     public boolean UpdateDB() {
+        try {
 
-        return true;
+            Long longID = new crudOperations(db, Form01Enrolment.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
     private void SaveDraft() throws JSONException {
@@ -310,6 +323,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
 
         sHH01.put("ls02pe2096x", bi.ls02pe03d96x.getText().toString());
 
+        Form01Enrolment.fc_4_5.setSa1(String.valueOf(sHH01));
 
     }
 
@@ -363,9 +377,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
                 }
 
                 if (bi.ls02pe03d96.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d))) {
-                        return false;
-                    }
+                    return validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d));
                 }
             }
 
@@ -422,9 +434,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     }
 
                     if (bi.ls02pe03d96.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d))) {
-                            return false;
-                        }
+                        return validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d));
                     }
                 }
             } else {
@@ -443,9 +453,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     }
 
                     if (bi.ls02pe03d96.isChecked()) {
-                        if (!validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d))) {
-                            return false;
-                        }
+                        return validatorClass.EmptyTextBox(this, bi.ls02pe03d96x, getString(R.string.ls02pe03d));
                     }
                 }
 
