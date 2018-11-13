@@ -47,6 +47,36 @@ public abstract class validatorClass {
 
     }
 
+    public static boolean EmptyCardCheckBox(Context context, CardView container, CheckBox cbx, String msg) {
+
+        Boolean flag = false;
+        for (int i = 0; i < container.getChildCount(); i++) {
+            View v = container.getChildAt(i);
+            if (v instanceof LinearLayout) {
+                for (int j = 0; j < ((LinearLayout) v).getChildCount(); j++) {
+                    View view = ((LinearLayout) v).getChildAt(j);
+                    if (view instanceof CheckBox) {
+                        CheckBox cb = (CheckBox) view;
+                        if (cb.isChecked()) {
+                            flag = true;
+                            break;
+                        }
+                    }
+
+                }
+            }
+        }
+        if (flag) {
+            return true;
+        } else {
+            Toast.makeText(context, "ERROR(empty): " + msg, Toast.LENGTH_LONG).show();
+            cbx.setError("This data is Required!");    // Set Error on last radio button
+
+            Log.i(context.getClass().getName(), context.getResources().getResourceEntryName(cbx.getId()) + ": This data is Required!");
+            return false;
+        }
+    }
+
     public static boolean EmptyTextBox(Context context, TextView txt, String msg) {
         if (TextUtils.isEmpty(txt.getText().toString())) {
             FancyToast.makeText(context, "ERROR(empty): " + msg, FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
