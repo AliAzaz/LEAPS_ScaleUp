@@ -28,7 +28,9 @@ public abstract class UpdateFncs {
             e.printStackTrace();
         }
 
-    }  public static void updateSyncedForms(int _id) {
+    }
+
+    public static void updateSyncedForms(int _id) {
 
 //        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_04_05");
         try {
@@ -40,25 +42,4 @@ public abstract class UpdateFncs {
         }
 
     }
-
-    public static void syncClusters(JSONArray clusterList) {
-
-        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteClusters");
-
-        try {
-            JSONArray jsonArray = clusterList;
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
-
-                Clusters clusters = new Clusters();
-                clusters.Sync(jsonObjectUser);
-
-                new crudOperations(db, clusters).execute(FormsDAO.class.getName(), "formsDao", "insertClusters").get();
-            }
-            db.close();
-
-        } catch (Exception e) {
-        }
-    }
-
 }

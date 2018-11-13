@@ -7,6 +7,9 @@ import android.arch.persistence.room.PrimaryKey;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 @Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS)
 public class Forms {
 
@@ -69,6 +72,40 @@ public class Forms {
     }
 
     public Forms() {
+    }
+    @Ignore
+    public JSONObject toJSONObject() throws JSONException {
+
+        JSONObject json = new JSONObject();
+
+        json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
+        json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
+        json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
+        json.put("username", this.username == null ? JSONObject.NULL : this.username);
+        json.put("youthID", this.youthID == null ? JSONObject.NULL : this.youthID);
+
+        json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
+        json.put("clustercode", this.clustercode == null ? JSONObject.NULL : this.clustercode);
+        json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
+        json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
+        json.put("gpsLng", this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
+        json.put("gpsDT", this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
+        json.put("gpsAcc", this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
+        json.put("deviceID", this.deviceID == null ? JSONObject.NULL : this.deviceID);
+        json.put("gpsElev", this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
+        json.put("devicetagID", this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
+        json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);
+        json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
+
+
+        if (!this.sa1.equals("")) {
+            json.put("sa1", this.sa1.equals("") ? JSONObject.NULL : new JSONObject(this.sa1));
+        }
+
+
+        return json;
     }
 
     public int getId() {

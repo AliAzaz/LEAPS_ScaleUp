@@ -91,8 +91,10 @@ public class Forms_04_05 {
 
         JSONObject json = new JSONObject();
 
+        json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
         json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
+        json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("childID", this.childID == null ? JSONObject.NULL : this.childID);

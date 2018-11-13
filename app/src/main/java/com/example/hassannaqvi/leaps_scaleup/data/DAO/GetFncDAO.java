@@ -24,7 +24,7 @@ public interface GetFncDAO {
     List<Forms_04_05> getUnSyncedForms_04_05();
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05 + " WHERE synced = '' AND formType = :formType")
-    List<Forms_04_05> getUnSyncedForms_04_05( String formType);
+    List<Forms_04_05> getUnSyncedForms_04_05(String formType);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE formDate LIKE :date")
     List<Forms> getTodaysForms(String date);
@@ -32,8 +32,8 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
 /*
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '' AND  = :_formType")
-    List<Forms> getUnSyncedForms(String _formType);*/
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '' AND  = :formType")
+    List<Forms> getUnSyncedForms(String formType);*/
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_USERS + " where ROW_USERNAME=:username AND ROW_PASSWORD=:password")
     Users login(String username, String password);

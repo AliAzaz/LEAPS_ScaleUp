@@ -85,6 +85,10 @@ public class MainApp extends Application {
     public static final String FORM01B = "01b";
     public static final String FORM04 = "4";
     public static final String FORM05 = "5";
+    public static final String FORM06 = "6";
+    public static final String FORM07 = "7";
+    public static final String FORM08 = "8";
+    public static final String FORM09 = "9";
 
     protected static LocationManager locationManager;
 

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
+import com.example.hassannaqvi.leaps_scaleup.get.server.GetSyncFncs;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -200,33 +201,33 @@ public class SyncAllData extends AsyncTask<String, String, String> {
 
 //                    DatabaseHelper db = new DatabaseHelper(mContext); // Database Helper
 
-                    Method method = null;
-                    for (Method method1 : updateSyncClass.getClass().getDeclaredMethods()) {
-                        if (method1.getName().equals(updateSyncClass)) {
-                            method = method1;
-                            break;
-                        }
-
-                    }
-
                     for (int i = 0; i < json.length(); i++) {
+                        int id  = 0;
                         JSONObject jsonObject = new JSONObject(json.getString(i));
 
                         if (jsonObject.getString("status").equals("1") && jsonObject.getString("error").equals("0")) {
 
                             //  db.updateSyncedChildForm(jsonObject.getString("id"));  // UPDATE SYNCED
 
-                            method.invoke(Integer.parseInt(jsonObject.getString("id")));
+                            id = Integer.parseInt(jsonObject.getString("id"));
 
                             sSynced++;
                         } else if (jsonObject.getString("status").equals("2") && jsonObject.getString("error").equals("0")) {
                             //db.updateSyncedChildForm(jsonObject.getString("id")); // UPDATE DUPLICATES
 
-                            method.invoke(Integer.parseInt(jsonObject.getString("id")));
+                            id = Integer.parseInt(jsonObject.getString("id"));
 
                             sDuplicate++;
                         } else {
                             sSyncedError += "\nError: " + jsonObject.getString("message");
+                        }
+                        switch (updateSyncClass) {
+                            case "updateSyncedForms_04_05":
+                                UpdateFncs.updateSyncedForms_04_05(id);
+                                break;
+                            case "updateSyncedForms":
+                                UpdateFncs.updateSyncedForms(id);
+                                break;
                         }
                     }
                     Toast.makeText(mContext, syncClass + " synced: " + sSynced + "\r\n\r\n Errors: " + sSyncedError, Toast.LENGTH_SHORT).show();
@@ -245,10 +246,6 @@ public class SyncAllData extends AsyncTask<String, String, String> {
                     pd.setTitle(syncClass + " Sync Failed");
                     pd.show();
                     //syncStatus.setText(syncStatus.getText() + "\r\n" + syncClass + " Sync Failed");
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                } catch (InvocationTargetException e) {
-                    e.printStackTrace();
                 }
 
             } else {
