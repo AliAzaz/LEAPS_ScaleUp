@@ -321,20 +321,20 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
 
         } else {
             levelName.setVisibility(GONE);
-            /*if (levelName.getId() == R.id.level3) {
+           if (levelName.getId() == R.id.level3) {
                 RadioGroup rd01 = findViewById(R.id.ls04ab04);
                 rd01.clearCheck();
-                *//*bi.ls04ab04.clearCheck();
+              //*bi.ls04ab04.clearCheck();
                 bi.ls04ab05.clearCheck();
                 bi.ls04ab06.clearCheck();
                 bi.ls04ab07.clearCheck();
                 bi.ls04ab08.clearCheck();
-                bi.ls04ab09.clearCheck();*//*
+                bi.ls04ab09.clearCheck();
             } else if (levelName.getId() == R.id.level4) {
                 bi.ls04ab07.clearCheck();
                 bi.ls04ab08.clearCheck();
                 bi.ls04ab09.clearCheck();
-            }*/
+            }
         }
     }
 
