@@ -26,9 +26,11 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
@@ -59,6 +61,65 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
 
     }
 
+
+    RadioGroup.OnCheckedChangeListener level3 = new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            if (isConditionSatisfied(bi.ls04ab01a.isChecked(), bi.ls04ab02a.isChecked(), bi.ls04ab03a.isChecked())) {
+                bi.level3.setVisibility(VISIBLE);
+                bi.level4.setVisibility(VISIBLE);
+                bi.level5.setVisibility(VISIBLE);
+
+            } else {
+                bi.level3.setVisibility(GONE);
+                bi.level4.setVisibility(GONE);
+                bi.level5.setVisibility(GONE);
+                bi.ls04ab04.clearCheck();
+                bi.ls04ab05.clearCheck();
+                bi.ls04ab06.clearCheck();
+                bi.ls04ab07.clearCheck();
+                bi.ls04ab08.clearCheck();
+                bi.ls04ab09.clearCheck();
+                bi.ls04ab10.clearCheck();
+                bi.ls04ab11.clearCheck();
+                bi.ls04ab12.clearCheck();
+            }
+        }
+    };
+    RadioGroup.OnCheckedChangeListener level4 = new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            if (isConditionSatisfied(bi.ls04ab04a.isChecked(), bi.ls04ab05a.isChecked(), bi.ls04ab06a.isChecked())) {
+
+                bi.level4.setVisibility(VISIBLE);
+                bi.level5.setVisibility(VISIBLE);
+
+            } else {
+                bi.level4.setVisibility(GONE);
+                bi.level5.setVisibility(GONE);
+                bi.ls04ab07.clearCheck();
+                bi.ls04ab08.clearCheck();
+                bi.ls04ab09.clearCheck();
+                bi.ls04ab10.clearCheck();
+                bi.ls04ab11.clearCheck();
+                bi.ls04ab12.clearCheck();
+            }
+        }
+    };
+    RadioGroup.OnCheckedChangeListener level5 = new RadioGroup.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            if (isConditionSatisfied(bi.ls04ab07a.isChecked(), bi.ls04ab08a.isChecked(), bi.ls04ab09a.isChecked())) {
+                bi.level5.setVisibility(VISIBLE);
+            } else {
+                bi.level5.setVisibility(GONE);
+                bi.ls04ab10.clearCheck();
+                bi.ls04ab11.clearCheck();
+                bi.ls04ab12.clearCheck();
+            }
+        }
+    };
+
     private void attachingListeners() {
         bi.ls04aa01a.setOnCheckedChangeListener(this);
         bi.ls04aa01b.setOnCheckedChangeListener(this);
@@ -69,39 +130,17 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         bi.ls04aa04a.setOnCheckedChangeListener(this);
         bi.ls04aa04b.setOnCheckedChangeListener(this);
 
-        bi.ls04ab01.setOnCheckedChangeListener(this);
-        bi.ls04ab02.setOnCheckedChangeListener(this);
-        bi.ls04ab03.setOnCheckedChangeListener(this);
-        bi.ls04ab04.setOnCheckedChangeListener(this);
-        bi.ls04ab05.setOnCheckedChangeListener(this);
-        bi.ls04ab06.setOnCheckedChangeListener(this);
-        bi.ls04ab07.setOnCheckedChangeListener(this);
-        bi.ls04ab08.setOnCheckedChangeListener(this);
-        bi.ls04ab09.setOnCheckedChangeListener(this);
-        bi.ls04ab10.setOnCheckedChangeListener(this);
-        bi.ls04ab11.setOnCheckedChangeListener(this);
-        bi.ls04ab12.setOnCheckedChangeListener(this);
+        bi.ls04ab01.setOnCheckedChangeListener(level3);
+        bi.ls04ab02.setOnCheckedChangeListener(level3);
+        bi.ls04ab03.setOnCheckedChangeListener(level3);
+        bi.ls04ab04.setOnCheckedChangeListener(level4);
+        bi.ls04ab05.setOnCheckedChangeListener(level4);
+        bi.ls04ab06.setOnCheckedChangeListener(level4);
+        bi.ls04ab07.setOnCheckedChangeListener(level5);
+        bi.ls04ab08.setOnCheckedChangeListener(level5);
+        bi.ls04ab09.setOnCheckedChangeListener(level5);
 
     }
-
-
-    int settingAnswers(TextView txtview, String txtValue, int answer, String pattern) {
-
-        txtview.setText(txtValue);
-        if (!TextUtils.isEmpty(txtview.getText().toString())) {
-            if (txtview.getText().toString().equals(pattern)) {
-                answer = 1;
-            } else {
-                answer = 2;
-            }
-        } else {
-            answer = 0;
-
-        }
-        return answer;
-    }
-
-
     public void BtnContinue() {
         if (formValidation()) {
             SaveDraft();
@@ -124,54 +163,43 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         }
 
         return false;
-
-
-       /* try {
-            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
-            return longID == 1;
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
-
-        return false;*/
-//       return true;
     }
 
     private void SaveDraft() {
-      /*  JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpls04a01, true);
-        Json = Json. GeneratorClass.getContainerJSON(this,bi.fldgrpls04a02, false, Json);
-        Json = Json + GeneratorClass.getContainerJSON(this,bi.fldgrpls04a03,  false, Json);
-        Json = Json + GeneratorClass.getContainerJSON(this,bi.fldgrpls04a04,  false, Json);
-        Json = Json + GeneratorClass.getContainerJSON(this,bi.fldgrpls04a05, false, Json);
-        InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
+        JSONObject localJson;
+        JSONObject Json1 = GeneratorClass.getContainerJSON(bi.flgGrpls04a, true);
+        JSONObject Json2 = GeneratorClass.getContainerJSON(bi.level2, true);
+        localJson = mergeJSONObjects(Json1,Json2);
+        JSONObject Json3 = GeneratorClass.getContainerJSON(bi.level3, true);
+        localJson = mergeJSONObjects(localJson,Json3);
+        JSONObject Json4 = GeneratorClass.getContainerJSON(bi.level4, true);
+        localJson = mergeJSONObjects(localJson,Json4);
+        JSONObject Json5 = GeneratorClass.getContainerJSON(bi.level5, true);
+        localJson = mergeJSONObjects(localJson,Json5);
 
-        Log.d("F4-EF-A", String.valueOf(Json));*/
+        InfoActivity.fc_4_5.setSa1(String.valueOf(localJson));
+        Log.d("F4-EF-A", String.valueOf(localJson));
+    }
+    public static JSONObject mergeJSONObjects(JSONObject Obj1, JSONObject Obj2) {
+        JSONObject merged = new JSONObject();
+        JSONObject[] objs = new JSONObject[] { Obj1, Obj2 };
+        for (JSONObject obj : objs) {
+            Iterator it = obj.keys();
+            while (it.hasNext()) {
+                String key = (String)it.next();
+                try {
+                    merged.put(key, obj.get(key));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return merged;
     }
 
     private boolean formValidation() {
-
         return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls04a);
 
-
-
-/*
-        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a01)) {
-            return false;
-        }
-        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a02)) {
-            return false;
-        }
-        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a03)) {
-            return false;
-        }
-        if (!validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a04)) {
-            return false;
-        }
-        return validatorClass.tempEmptyCheckingContainer(this, bi.fldgrpls04a05);*/
-//      return true;
     }
 
     public void BtnEnd() {
@@ -179,111 +207,7 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
 
     }
 
-    /*
-        public boolean isConditionSatisfied(int a, int b, int c) {
-            if (Objects.equals(a, 1) && Objects.equals(b, 1)) {
-                return true;
-            } else if (Objects.equals(b, 1) && Objects.equals(c, 1)) {
-                return true;
-            } else if (Objects.equals(a, 1) && Objects.equals(c, 1)) {
-                return true;
-            } else {
-                return false;
-            }
-        }
 
-
-        public void skipPractice(TextView txtview, String response, android.support.v7.widget.CardView fldGrp, String pattern, TextView nextTxtView, Boolean skipNext) {
-            txtview.setText(response);
-            if (skipNext) {
-                if (txtview.getText().toString().equals(pattern)) {
-                    fldGrp.setVisibility(View.GONE);
-                    nextTxtView.setText(null);
-                } else {
-                    fldGrp.setVisibility(View.VISIBLE);
-
-                }
-            }
-            if (bi.ls04aa01a.getText().toString().equals(getResources().getString(R.string.ls04aa01pattern)) && bi.ls04aa02a.getText().toString().equals(getResources().getString(R.string.ls04aa02pattern))) {
-                bi.fldgrpll01.setVisibility(GONE);
-                bi.ls04aa03a.setText(null);
-                bi.ls04aa04a.setText(null);
-            } else {
-                bi.fldgrpll01.setVisibility(VISIBLE);
-            }
-
-
-        }
-
-
-        public static String getStringbyIdName(Context context, String name) {
-            Resources res = context.getResources();
-            return res.getString(res.getIdentifier(name, "string", context.getPackageName()));
-        }
-
-        public void processButton(View v) {
-
-            Button b = (Button) v;
-            // Get question ID
-            String qID = getResources().getResourceEntryName(v.getId());
-            qID = qID.substring(0, qID.length() - 1); // this is question id
-
-            TextView tv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
-            CardView fldgrp = findViewById(getResources().getIdentifier("fldgrp" + qID, "id", getPackageName()));
-            String ques = qID.substring(0, qID.length() - 1);
-            String nextqID = ques + "b";
-            TextView nexttv = findViewById(getResources().getIdentifier(nextqID, "id", getPackageName()));
-            // Get Text on button
-            Boolean skipnext = qID.charAt(qID.length() - 1) == 'a';
-            String btnPressed = b.getText().toString();
-            skipPractice(tv, String.format("%s%s", tv.getText().toString(), btnPressed), fldgrp, getStringbyIdName(this, ques + "pattern"), nexttv, skipnext);
-
-        }
-
-        public void levelBasedProcess(View v) {
-
-
-            Button b = (Button) v;
-            // Get question ID
-            String qID = getResources().getResourceEntryName(v.getId());
-            qID = qID.substring(0, qID.length() - 1); // this is question id
-
-            TextView tv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
-            String btnPressed = b.getText().toString();
-            try {
-                setVariable(qID, settingAnswers(tv, String.format("%s%s", tv.getText().toString(), btnPressed), getVariable(qID), getStringbyIdName(this, qID + "pattern")));
-            } catch (NoSuchFieldException e) {
-                e.printStackTrace();
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-            checkLevelSkip(ls04ab01, ls04ab02, ls04ab03, bi.level3);
-            checkLevelSkip(ls04ab04, ls04ab05, ls04ab06, bi.level4);
-            checkLevelSkip(ls04ab07, ls04ab08, ls04ab09, bi.level5);
-        }
-
-        private void checkLevelSkip(int a, int b, int c, LinearLayout levelName) {
-            if (isConditionSatisfied(a, b, c)) {
-                levelName.setVisibility(VISIBLE);
-            } else {
-                levelName.setVisibility(GONE);
-            }
-        }
-
-        public int getVariable(String c)
-                throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-            Field field = this.getClass().getDeclaredField(c);
-            field.setAccessible(true);
-            Object value = field.get(this);
-            return (int) value;
-        }
-
-        public void setVariable(String variableName, int value)
-                throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-            Field field = this.getClass().getDeclaredField(variableName);
-            field.setAccessible(true);
-            field.set(this, value);
-        }*/
     char getlastCharacter(String value) {
         return value.charAt(value.length() - 1);
     }
@@ -308,50 +232,11 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
                     skipPractice(selectedbtn.getText().toString(), fldgrp, nextRadio);
                 }
             }
-        } else if (getsixthCharacter(qID) == 'b') {
-            checkLevelSkip(bi.ls04ab01a.isChecked(), bi.ls04ab02a.isChecked(), bi.ls04ab03a.isChecked(), bi.level3);
-            checkLevelSkip(bi.ls04ab04a.isChecked(), bi.ls04ab05a.isChecked(), bi.ls04ab06a.isChecked(), bi.level4);
-            checkLevelSkip(bi.ls04ab07a.isChecked(), bi.ls04ab08a.isChecked(), bi.ls04ab09a.isChecked(), bi.level5);
         }
     }
 
-    private void checkLevelSkip(Boolean a, Boolean b, Boolean c, LinearLayout levelName) {
-        if (isConditionSatisfied(a, b, c)) {
-            levelName.setVisibility(VISIBLE);
-
-        } else {
-            levelName.setVisibility(GONE);
-           if (levelName.getId() == R.id.level3) {
-                RadioGroup rd01 = findViewById(R.id.ls04ab04);
-                rd01.clearCheck();
-              //*bi.ls04ab04.clearCheck();
-                bi.ls04ab05.clearCheck();
-                bi.ls04ab06.clearCheck();
-                bi.ls04ab07.clearCheck();
-                bi.ls04ab08.clearCheck();
-                bi.ls04ab09.clearCheck();
-            } else if (levelName.getId() == R.id.level4) {
-                bi.ls04ab07.clearCheck();
-                bi.ls04ab08.clearCheck();
-                bi.ls04ab09.clearCheck();
-            }
-        }
-    }
 
     public boolean isConditionSatisfied(Boolean a, Boolean b, Boolean c) {
-/*
-
-        if (a == b ) {
-            return true;
-        } else if ( b == c) {
-            return true;
-        } else if (a == c) {
-            return true;
-        } else {
-            return false;
-        }
-*/
-
         if (Objects.equals(a, true) && Objects.equals(b, true)) {
             return true;
         } else if (Objects.equals(b, true) && Objects.equals(c, true)) {

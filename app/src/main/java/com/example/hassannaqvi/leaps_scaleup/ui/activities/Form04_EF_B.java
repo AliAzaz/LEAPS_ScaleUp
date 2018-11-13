@@ -22,9 +22,11 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfBBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
+import java.util.Iterator;
 import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
@@ -37,6 +39,7 @@ public class Form04_EF_B extends AppCompatActivity {
     int ls04bc01, ls04bc02, ls04bc03, ls04bc04, ls04bc05, ls04bc06;
     int ls04be01, ls04be02, ls04be03, ls04be04, ls04be05, ls04be06;
     int ls04bf01, ls04bf02, ls04bf03, ls04bf04, ls04bf05, ls04bf06;
+    int ls04bg01, ls04bg02, ls04bg03, ls04bg04, ls04bg05, ls04bg06, ls04bg07, ls04bg08, ls04bg09, ls04bg10, ls04bg11, ls04bg12;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,13 +76,31 @@ public class Form04_EF_B extends AppCompatActivity {
         return false;*/
        return true;
     }
-
+    public static JSONObject mergeJSONObjects(JSONObject Obj1, JSONObject Obj2) {
+        JSONObject merged = new JSONObject();
+        JSONObject[] objs = new JSONObject[] { Obj1, Obj2 };
+        for (JSONObject obj : objs) {
+            Iterator it = obj.keys();
+            while (it.hasNext()) {
+                String key = (String)it.next();
+                try {
+                    merged.put(key, obj.get(key));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return merged;
+    }
     private void SaveDraft() {
-     /*   JSONObject Json = GeneratorClass.getContainerJSON(this,bi.fldgrpls04b, false,new JSONObject());
+        JSONObject localJson;
+        JSONObject Json1 = GeneratorClass.getContainerJSON(this,bi.fldgrpls04b, false,new JSONObject());
+        /*JSONObject Json2 = GeneratorClass.getContainerJSON(this,bi.level2, false,new JSONObject());
+        localJson = mergeJSONObjects(Json1,Json2);*/
 
-        InfoActivity.fc_4_5.setSa2(String.valueOf(Json));
+        InfoActivity.fc_4_5.setSa2(String.valueOf(Json1));
 
-        Log.d("F4-EF-B", String.valueOf(Json));*/
+        Log.d("F4-EF-B", String.valueOf(Json1));
     }
 
     private boolean formValidation() {
@@ -119,7 +140,7 @@ public class Form04_EF_B extends AppCompatActivity {
         } else {
             qID = qID.substring(0, qID.length() - 2); // this is question id
         }
-        TextView tv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
+        EditText tv = findViewById(getResources().getIdentifier(qID, "id", getPackageName()));
         String btnPressed = b.getText().toString();
         try {
             setVariable(qID, settingAnswers(tv, btnPressed, getVariable(qID), getStringbyIdName(this, qID + "pattern")));
@@ -184,7 +205,7 @@ public class Form04_EF_B extends AppCompatActivity {
 
     }
 
-    int settingAnswers(TextView txtview, String txtValue, int answer, String pattern) {
+    int settingAnswers(EditText txtview, String txtValue, int answer, String pattern) {
 
         txtview.setText(txtValue);
         if (!TextUtils.isEmpty(txtview.getText().toString())) {
