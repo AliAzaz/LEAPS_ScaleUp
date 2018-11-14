@@ -55,10 +55,10 @@ public interface FormsDAO {
      * By order id
      */
     @Query("UPDATE Forms SET synced = :synced, synced_date= :date WHERE id =:id")
-    void updateSyncedForms(String synced, String date, int id);
+    int updateSyncedForms(String synced, String date, int id);
 
     @Query("UPDATE Forms_04_05 SET synced = '1' , synced_date= :synced_date WHERE id =:id")
-    void updateSyncedForms_04_05( String synced_date, int id);
+    int updateSyncedForms_04_05( String synced_date, int id);
 
 
 }
