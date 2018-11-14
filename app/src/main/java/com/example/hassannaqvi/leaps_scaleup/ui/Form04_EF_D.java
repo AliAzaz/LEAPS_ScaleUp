@@ -176,4 +176,12 @@ public class Form04_EF_D extends AppCompatActivity implements RadioGroup.OnCheck
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
+    public static class Form08_EF_D extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_form08__ef__d);
+        }
+    }
 }

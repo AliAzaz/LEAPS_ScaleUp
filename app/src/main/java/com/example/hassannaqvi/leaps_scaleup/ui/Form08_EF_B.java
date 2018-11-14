@@ -9,12 +9,12 @@ import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfABindin
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfBBinding;
 
 public class Form08_EF_B extends AppCompatActivity {
-ActivityForm08EfBBinding bi;
+    ActivityForm08EfBBinding bi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this,R.layout.activity_form08_ef_b);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_b);
         bi.setCallback(this);
-
     }
 }
