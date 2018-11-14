@@ -1,13 +1,10 @@
-package com.example.hassannaqvi.leaps_scaleup.sync.server;
+package com.example.hassannaqvi.leaps_scaleup.sync;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
-
-import com.example.hassannaqvi.leaps_scaleup.core.DatabaseHelper;
-import com.example.hassannaqvi.leaps_scaleup.get.server.GetSyncFncs;
 
 import org.json.JSONArray;
 import org.json.JSONException;

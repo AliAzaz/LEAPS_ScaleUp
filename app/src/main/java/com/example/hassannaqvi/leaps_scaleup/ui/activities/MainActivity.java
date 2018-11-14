@@ -25,7 +25,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
 import com.example.hassannaqvi.leaps_scaleup.core.CONSTANTS;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
@@ -33,7 +32,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityMainBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetAllDBData;
-import com.example.hassannaqvi.leaps_scaleup.sync.server.SyncAllData;
+import com.example.hassannaqvi.leaps_scaleup.sync.SyncAllData;
 
 import java.io.File;
 import java.io.FileOutputStream;

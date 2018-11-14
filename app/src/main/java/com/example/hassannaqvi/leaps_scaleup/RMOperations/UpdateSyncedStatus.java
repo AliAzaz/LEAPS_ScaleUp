@@ -27,7 +27,6 @@ public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
     protected Long doInBackground(String... fnNames) {
 
         Long longID = new Long(0);
-
         try {
 
             Method[] fn = db.getClass().getDeclaredMethods();
@@ -39,12 +38,12 @@ public class UpdateSyncedStatus extends AsyncTask<String, Void, Long> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(fnNames[2])) {
 
-                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(),this._date.getClass())
+                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(),String.class,int.class)
                                     .invoke(db.getClass().getMethod(fnNames[1]).invoke(db),this._date, this._id)));
+
                             break;
                         }
                     }
-
                     break;
                 }
             }

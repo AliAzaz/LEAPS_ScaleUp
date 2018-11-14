@@ -1,4 +1,4 @@
-package com.example.hassannaqvi.leaps_scaleup.sync.server;
+package com.example.hassannaqvi.leaps_scaleup.sync;
 
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.UpdateSyncedStatus;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;

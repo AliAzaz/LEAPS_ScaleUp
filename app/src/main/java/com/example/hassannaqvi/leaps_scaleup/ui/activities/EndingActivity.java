@@ -69,7 +69,6 @@ public class EndingActivity extends AppCompatActivity {
 
     public boolean UpdateDB() {
         try {
-
             Long longID = new crudOperations(db, Form01Enrolment.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
 
