@@ -1,11 +1,8 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.provider.ContactsContract;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
@@ -15,8 +12,8 @@ import android.widget.Toast;
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
-import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfABinding;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfEBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -43,7 +40,7 @@ public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        MainApp.endActivity(this, this, EndingActivity.class, false, InfoActivity.fc_4_5);
     }
 
     public void attachingListners() {
@@ -63,7 +60,7 @@ public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheck
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+                MainApp.endActivity(this, this, EndingActivity.class, true, InfoActivity.fc_4_5);
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }

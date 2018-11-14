@@ -1,7 +1,6 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -45,7 +44,7 @@ public class Form07Activity extends AppCompatActivity {
     private static final String TAG = Form07Activity.class.getName();
     ActivityForm07Binding bi;
 
-    String getFtype = "";
+    String getFtype = "", deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
     public static Forms fc;
 
@@ -154,7 +153,7 @@ public class Form07Activity extends AppCompatActivity {
                 SaveDraft();
 
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), EndingActivityYouth.class).putExtra("complete", true));
+                    MainApp.endActivity(this, this, EndingActivity.class, true, fc);
                 } else {
                     FancyToast.makeText(this, "Error in updating db!!", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
                 }
@@ -172,7 +171,12 @@ public class Form07Activity extends AppCompatActivity {
 
             if (longID != 0) {
                 fc.setId(longID.intValue());
-                return true;
+
+                fc.setUid(deviceID + fc.getId());
+
+                longID = new crudOperations(db, fc).execute(FormsDAO.class.getName(), "formsDao", "updateForm").get();
+                return longID == 1;
+
             } else {
                 return false;
             }
@@ -317,8 +321,7 @@ public class Form07Activity extends AppCompatActivity {
         fc.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         fc.setUsername(MainApp.userName);
         fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        fc.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID));
+        fc.setDeviceID(deviceID);
         setGPS(fc); // Set GPS
 
         fc.setClustercode(bi.ls07id15.getText().toString());
@@ -387,7 +390,7 @@ public class Form07Activity extends AppCompatActivity {
                 SaveDraft();
 
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), EndingActivityYouth.class).putExtra("complete", true));
+                    MainApp.endActivity(this, this, EndingActivity.class, false, fc);
                 } else {
                     FancyToast.makeText(this, "Error in updating db!!", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
                 }

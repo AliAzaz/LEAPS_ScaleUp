@@ -38,7 +38,7 @@ public class InfoActivity extends AppCompatActivity {
     private static final String TAG = InfoActivity.class.getName();
     ActivityInfoBinding bi;
     public static Forms_04_05 fc_4_5;
-    String fTYPE = "", fExt = "";
+    String fTYPE = "", fExt = "", deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
     Class<?> routeClass;
 
     @Override
@@ -164,7 +164,12 @@ public class InfoActivity extends AppCompatActivity {
 
             if (longID != 0) {
                 fc_4_5.setId(longID.intValue());
-                return true;
+
+                fc_4_5.setUid(deviceID + fc_4_5.getId());
+
+                longID = new crudOperations(db, fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+                return longID == 1;
+
             } else {
                 return false;
             }
@@ -187,8 +192,7 @@ public class InfoActivity extends AppCompatActivity {
         fc_4_5.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         fc_4_5.setUsername(MainApp.userName);
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        fc_4_5.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID));
+        fc_4_5.setDeviceID(deviceID);
         fc_4_5.setChildID(bi.lsid1.getText().toString());
 
         setGPS(fc_4_5); // Set GPS
@@ -234,7 +238,13 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+
+        SaveDraft();
+        if (UpdateDB()) {
+            MainApp.endActivity(this, this, EndingActivity.class, false, fc_4_5);
+        } else {
+            Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+        }
     }
 
 

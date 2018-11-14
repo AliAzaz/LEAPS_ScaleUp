@@ -4,21 +4,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
-import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfBBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -27,11 +25,9 @@ import org.json.JSONObject;
 
 import java.lang.reflect.Field;
 import java.util.Iterator;
-import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form04_EF_B extends AppCompatActivity {
     ActivityForm04EfBBinding bi;
@@ -110,7 +106,7 @@ public class Form04_EF_B extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        MainApp.endActivity(this, this, EndingActivity.class, false, InfoActivity.fc_4_5);
 
     }
 

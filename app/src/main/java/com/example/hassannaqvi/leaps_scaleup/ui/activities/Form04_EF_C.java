@@ -1,22 +1,17 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfCBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
@@ -29,7 +24,6 @@ import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
-import static com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_A.getStringbyIdName;
 import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
 
 public class Form04_EF_C extends AppCompatActivity {
@@ -158,7 +152,7 @@ public class Form04_EF_C extends AppCompatActivity {
         return false;
     }
 
-    private void SaveDraft() throws JSONException {
+    private void SaveDraft() {
 
         JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpf04EFC, true);
 
@@ -250,16 +244,12 @@ public class Form04_EF_C extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls04cb15, bi.ls04cb15a, getString(R.string.knock))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls04cb16, bi.ls04cb16a, getString(R.string.tap))) {
-            return false;
-        }
-
-        return true;
+        return validatorClass.EmptyRadioButton(this, bi.ls04cb16, bi.ls04cb16a, getString(R.string.tap));
     }
 
 
     public void BtnEnd() {
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+        MainApp.endActivity(this, this, EndingActivity.class, false, InfoActivity.fc_4_5);
     }
 
     @Override

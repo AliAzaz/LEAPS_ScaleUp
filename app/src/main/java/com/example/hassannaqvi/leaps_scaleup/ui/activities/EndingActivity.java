@@ -9,6 +9,8 @@ import android.widget.Toast;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityEndingBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -25,6 +27,9 @@ public class EndingActivity extends AppCompatActivity {
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
 
     ActivityEndingBinding bi;
+    Forms_04_05 fc04_05;
+    Forms fc_;
+    boolean flag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +54,12 @@ public class EndingActivity extends AppCompatActivity {
             bi.istatusd.setEnabled(true);
         }
 
+        flag = getIntent().getBooleanExtra("typeFlag", false);
+        if (flag)
+            fc_ = (Forms) getIntent().getSerializableExtra("fc_data");
+        else
+            fc04_05 = (Forms_04_05) getIntent().getSerializableExtra("fc_data");
+
     }
 
     public void BtnEnd() {
@@ -63,14 +74,19 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() {
-        Form01Enrolment.fc_4_5.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
-        Form01Enrolment.fc_4_5.setEndtime(dtToday);
+        if (flag) {
+            fc_.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
+            fc_.setEndtime(dtToday);
+        } else {
+            fc04_05.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
+            fc04_05.setEndtime(dtToday);
+        }
     }
 
     public boolean UpdateDB() {
         try {
 
-            Long longID = new crudOperations(db, Form01Enrolment.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, flag ? fc_ : fc04_05).execute(FormsDAO.class.getName(), "formsDao", flag ? "updateForm" : "updateForm_04_05").get();
             return longID == 1;
 
         } catch (InterruptedException e) {

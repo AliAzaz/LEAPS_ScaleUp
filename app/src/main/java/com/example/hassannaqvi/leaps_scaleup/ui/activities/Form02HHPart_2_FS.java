@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm02Hhpart2FsBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
@@ -354,7 +355,7 @@ public class Form02HHPart_2_FS extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+        MainApp.endActivity(this, this, EndingActivity.class, false, Form01Enrolment.fc_4_5);
     }
 
     @Override

@@ -43,8 +43,7 @@ public class Form01Enrolment extends AppCompatActivity {
     private static final String TAG = Form01Enrolment.class.getName();
     ActivityForm01EnrolmentBinding bi;
     public static Forms_04_05 fc_4_5;
-
-    String getFtype = "";
+    String getFtype = "", deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -228,7 +227,11 @@ public class Form01Enrolment extends AppCompatActivity {
 
             if (longID != 0) {
                 fc_4_5.setId(longID.intValue());
-                return true;
+                fc_4_5.setUid(deviceID + fc_4_5.getId());
+
+                longID = new crudOperations(db, fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+                return longID == 1;
+
             } else {
                 return false;
             }
@@ -244,13 +247,31 @@ public class Form01Enrolment extends AppCompatActivity {
     }
 
     public void BtnEnd() {
+
         if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
             return;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls01a02, getString(R.string.ls01a02))) {
             return;
         }
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+        if (!validatorClass.EmptyTextBox(this, bi.ls01a04, getString(R.string.ls01a04))) {
+            return;
+        }
+        if (!CheckingID.getIDValidation(this, bi.ls01a04, (getFtype.equals("1a") ? MainApp.round : "6") + "" + bi.ls01a05.getText().toString(), getFtype)) {
+            return;
+        }
+
+        try {
+            SaveDraft();
+            if (UpdateDB()) {
+                MainApp.endActivity(this, this, EndingActivity.class, false, fc_4_5);
+            } else {
+                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
     }
 
     private void SaveDraft() throws JSONException {
@@ -262,8 +283,8 @@ public class Form01Enrolment extends AppCompatActivity {
         fc_4_5.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
         fc_4_5.setUsername(MainApp.userName);
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        fc_4_5.setDeviceID(Settings.Secure.getString(getApplicationContext().getContentResolver(),
-                Settings.Secure.ANDROID_ID));
+        fc_4_5.setDeviceID(deviceID);
+
         setGPS(fc_4_5); // Set GPS
 
         fc_4_5.setClustercode(bi.ls01a05.getText().toString());

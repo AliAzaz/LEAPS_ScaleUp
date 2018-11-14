@@ -1,6 +1,5 @@
 package com.example.hassannaqvi.leaps_scaleup.ui.activities;
 
-import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +7,7 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm6AnthroBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -45,7 +45,7 @@ public class Form6AnthroActivity extends AppCompatActivity {
                 SaveDraft();
 
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+                    MainApp.endActivity(this, this, EndingActivity.class, true, InfoActivity.fc_4_5);
                 } else {
                     FancyToast.makeText(this, "Error in updating db!!", FancyToast.LENGTH_SHORT, FancyToast.ERROR, false).show();
                 }
@@ -104,7 +104,7 @@ public class Form6AnthroActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+        MainApp.endActivity(this, this, EndingActivity.class, false, InfoActivity.fc_4_5);
     }
 
     @Override

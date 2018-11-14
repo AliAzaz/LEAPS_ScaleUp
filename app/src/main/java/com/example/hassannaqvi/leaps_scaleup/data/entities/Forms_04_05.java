@@ -10,8 +10,10 @@ import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
+
 @Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05)
-public class Forms_04_05 {
+public class Forms_04_05 implements Serializable {
 
     @Ignore
     private final String _projectName = "National Nutrition Survey 2018";
@@ -49,7 +51,6 @@ public class Forms_04_05 {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
-
 
     @Ignore
     public Forms_04_05(Forms_04_05 forms) {
