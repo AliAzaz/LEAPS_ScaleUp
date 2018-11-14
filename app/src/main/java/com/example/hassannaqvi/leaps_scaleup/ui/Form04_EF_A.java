@@ -31,6 +31,7 @@ import java.util.concurrent.ExecutionException;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
+import static com.example.hassannaqvi.leaps_scaleup.utils.JsonUtils.mergeJSONObjects;
 
 public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
     ActivityForm04EfABinding bi;
@@ -174,23 +175,6 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         InfoActivity.fc_4_5.setSa1(String.valueOf(localJson));
         Log.d("F4-EF-A", String.valueOf(localJson));
     }
-    public static JSONObject mergeJSONObjects(JSONObject Obj1, JSONObject Obj2) {
-        JSONObject merged = new JSONObject();
-        JSONObject[] objs = new JSONObject[] { Obj1, Obj2 };
-        for (JSONObject obj : objs) {
-            Iterator it = obj.keys();
-            while (it.hasNext()) {
-                String key = (String)it.next();
-                try {
-                    merged.put(key, obj.get(key));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return merged;
-    }
-
     private boolean formValidation() {
         return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls04a);
 

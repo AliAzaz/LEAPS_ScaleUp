@@ -10,8 +10,10 @@ import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
+
 @Entity(tableName = AppDatabase.Sub_DBConnection.TABLE_FORMS)
-public class Forms {
+public class Forms implements Serializable {
 
     @Ignore
     private final String _projectName = "National Nutrition Survey 2018";
@@ -73,6 +75,7 @@ public class Forms {
 
     public Forms() {
     }
+
     @Ignore
     public JSONObject toJSONObject() throws JSONException {
 
@@ -95,8 +98,8 @@ public class Forms {
         json.put("deviceID", this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put("gpsElev", this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
         json.put("devicetagID", this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
-        json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
-        json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);
+        /*json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
+        json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);*/
         json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
 
 

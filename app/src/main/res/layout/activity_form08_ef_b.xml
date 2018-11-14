@@ -1,111 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools">
+<data>
+    <import type="android.view.View" />
+    <variable
+        name="callback"
+        type="com.example.hassannaqvi.leaps_scaleup.ui.Form08_EF_B" />
+</data>
 
-    <data>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-        <import type="android.view.View" />
 
-        <variable
-            name="callback"
-            type="com.example.hassannaqvi.leaps_scaleup.ui.Form08_EF_B" />
-    </data>
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layoutDirection="rtl"
+        android:orientation="vertical">
 
 
-        <LinearLayout
+        <TextView
+            style="@style/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:animateLayoutChanges="true"
-            android:layoutDirection="rtl"
-            android:orientation="vertical">
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="10dp"
+            android:text="@string/ls08bsub"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
 
+        <TextView
+            style="@style/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="10dp"
+            android:text="@string/ls08ba"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
 
-            <TextView
-                style="@style/textView2"
+        <!--Q01a-->
+        <android.support.v7.widget.CardView
+            android:id="@+id/fldgrpls08b01a"
+            style="@style/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:elevation="10dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:lineSpacingExtra="10dp"
-                android:text="@string/ls08bsub"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black" />
+                android:orientation="vertical">
 
-            <TextView
-                style="@style/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:lineSpacingExtra="10dp"
-                android:text="@string/ls08ba"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="@android:color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/ls08ba01"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
-            <!--Q01a-->
-            <android.support.v7.widget.CardView
-                android:id="@+id/fldgrplsef09bp01a"
-                style="@style/cardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
-
-                <LinearLayout
+                <RadioGroup
+                    android:id="@+id/ls08b01a"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <RadioButton
+                        android:id="@+id/ls08b01a01"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/ls08ba01"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/yes" />
 
-                    <RadioGroup
-                        android:id="@+id/ls08bp01a"
+                    <RadioButton
+                        android:id="@+id/ls08b01a02"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/no" />
 
-                        <RadioButton
-                            android:id="@+id/ls08bp01a01"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/yes" />
-
-                        <RadioButton
-                            android:id="@+id/ls08bp01a02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/no" />
-
-                        <RadioButton
-                            android:id="@+id/ls08bp01a03"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="1dp"
-                            android:layout_weight="1"
-                            android:text="@string/ignore" />
+                    <RadioButton
+                        android:id="@+id/ls08b01a03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="1"
+                        android:text="@string/ignore" />
 
 
-                    </RadioGroup>
-                </LinearLayout>
+                </RadioGroup>
+            </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.CardView>
+
+
+        <TextView
+            style="@style/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="10dp"
+            android:text="@string/ls08bb"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Continue"
+                style="@style/button"
+                android:onClick="@{() -> callback.BtnContinue()}"
+                android:text="@string/nextSection" />
+
+            <Button
+                android:id="@+id/btn_End"
+                style="@style/button"
+                android:layout_marginRight="10dp"
+                android:onClick="@{() -> callback.BtnEnd()}"
+                android:text="@string/end_interview" />
+
+            <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>
 </layout>

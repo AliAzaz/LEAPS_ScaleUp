@@ -21,6 +21,7 @@ import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityInfoBinding;
+import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONObject;
@@ -76,7 +77,7 @@ public class InfoActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrpls01.setVisibility(GONE);
-
+                ClearClass.ClearAllFields(bi.fldgrpls01,false);
             }
 
             @Override

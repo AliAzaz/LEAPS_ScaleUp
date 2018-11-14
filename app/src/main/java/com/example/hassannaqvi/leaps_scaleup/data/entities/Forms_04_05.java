@@ -93,7 +93,7 @@ public class Forms_04_05 implements Serializable {
         JSONObject json = new JSONObject();
 
         json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
-        json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
+//        json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
@@ -112,8 +112,8 @@ public class Forms_04_05 implements Serializable {
         json.put("deviceID", this.deviceID == null ? JSONObject.NULL : this.deviceID);
         json.put("gpsElev", this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
         json.put("devicetagID", this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
-        json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
-        json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);
+        /*json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
+        json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);*/
         json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
 
