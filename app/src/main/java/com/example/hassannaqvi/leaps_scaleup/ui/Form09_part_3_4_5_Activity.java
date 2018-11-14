@@ -36,7 +36,7 @@ public class Form09_part_3_4_5_Activity extends AppCompatActivity {
          try {
                SaveDraft();
             if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
+                startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
