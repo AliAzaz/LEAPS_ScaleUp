@@ -1191,17 +1191,58 @@
     <string name="ls08bsub">FORWARD CORSI BLOCK</string>
     <string name="ls08ba">FCB PRACTICE TRIALS</string>
     <string name="ls08bb">FCB TEST TRIALS</string>
-    <string name="ls08ba01">7………3</string>
-    <string name="ls08bb01">5………8</string>
-    <string name="ls08bb02">4………6</string>
-    <string name="ls08bb03">3………5</string>
-    <string name="ls08bb04">7………3</string>
-    <string name="ls08bb05">7………3</string>
-    <string name="ls08bb06">7………3</string>
-    <string name="ls08bb07">7………3</string>
-    <string name="ls08bb08">7………3</string>
-    <string name="ls08bb09">7………3</string>
-    <string name="ls08bb10">7………3</string>
+    <string name="ls08ba01">3………7</string>
+    <string name="ls08bb01">8………5</string>
+    <string name="ls08bb02">6………4</string>
+    <string name="ls08bb03">5………3</string>
+    <string name="ls08bb04">4………7………2</string>
+    <string name="ls08bb05">8………1………5</string>
+    <string name="ls08bb06">3………5………8</string>
+    <string name="ls08bb07">3………4………1………7</string>
+    <string name="ls08bb08">6………1………5………8</string>
+    <string name="ls08bb09">2………6………8………1</string>
+    <string name="ls08bb10">5………2………1………8………6</string>
+    <string name="ls08bb11">4………2………7………3………1</string>
+    <string name="ls08bb12">9………2………6………4………7</string>
+    <string name="ls08bb13">3………9………2………4………8………7</string>
+    <string name="ls08bb14">3………7………8………2………9………4</string>
+    <string name="ls08bb15">5………9………1………7………4………2</string>
+    <string name="ls08bb16">5………7………9………2………8………4………6</string>
+    <string name="ls08bb17">8………7………1………2………4………6………9</string>
+    <string name="ls08bb18">6………1………9………4………7………3………8</string>
+    <string name="ls08bb19">5………8………1………9………2………6………4………7</string>
+    <string name="ls08bb20">4………2………6………8………1………7………9………3</string>
+    <string name="ls08bb21">5………9………3………6………7………2………4………3</string>
+
+    <string name="ls08csub">BACKWARD CORSI BLOCK</string>
+    <string name="ls08ca">BCB PRACTICE TRIALS</string>
+    <string name="ls08cb">BCB TEST TRIALS</string>
+
+
+    <string name="ls08ca01">8………2</string>
+    <string name="ls08ca02">5………6</string>
+    <string name="ls08cb01">4………7</string>
+    <string name="ls08cb02">2………9</string>
+    <string name="ls08cb03">3………6</string>
+    <string name="ls08cb04">9………3………4</string>
+    <string name="ls08cb05">6………3………7</string>
+    <string name="ls08cb06">1………4………8</string>
+    <string name="ls08cb07">1………5………2………8</string>
+    <string name="ls08cb08">7………4………3………9</string>
+    <string name="ls08cb09">6………2………5………4</string>
+    <string name="ls08cb10">3………1………8………6………5</string>
+    <string name="ls08cb11">9………3………1………4………7</string>
+    <string name="ls08cb12">7………6………2………5………1</string>
+    <string name="ls08cb13">2………8………3………5………6………4</string>
+    <string name="ls08cb14">5………3………1………2………8………9</string>
+    <string name="ls08cb15">4………3………7………6………2………5</string>
+    <string name="ls08cb16">7………3………2………9………1………8………6</string>
+    <string name="ls08cb17">3………8………2………9………5………1………7</string>
+    <string name="ls08cb18">2………6………5………7………9………3………4</string>
+    <string name="ls08cb19">1………9………6………3………5………4………2………8</string>
+    <string name="ls08cb20">2………9………4………6………1………7………3………4</string>
+    <string name="ls08cb21">4………3………1………8………7………5………6………2</string>
+
 
 
 </resources>

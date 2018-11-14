@@ -163,6 +163,7 @@ public class Form01Enrolment extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrpls01a01.setVisibility(GONE);
+                ClearClass.ClearAllFields(bi.fldgrpls01a01,false);
 
             }
 
@@ -195,6 +196,9 @@ public class Form01Enrolment extends AppCompatActivity {
 
             } else {
                 Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
+              /*  bi.fldgrpls01a01.setVisibility(GONE);
+                ClearClass.ClearAllFields(bi.fldgrpls01a01,false);*/
+
             }
 
         } catch (InterruptedException e) {
