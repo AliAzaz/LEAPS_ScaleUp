@@ -1,19 +1,12 @@
 package com.example.hassannaqvi.leaps_scaleup.sync;
 
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.UpdateSyncedStatus;
-import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
-import com.example.hassannaqvi.leaps_scaleup.RMOperations.syncOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
-import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
+import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public abstract class UpdateFncs {
 

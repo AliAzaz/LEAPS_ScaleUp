@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.MainActivity">
+    tools:context="com.example.hassannaqvi.leaps_scaleup.ui.MainActivity">
 
     <data>
 
         <variable
             name="callback"
-            type="com.example.hassannaqvi.leaps_scaleup.ui.activities.MainActivity" />
+            type="com.example.hassannaqvi.leaps_scaleup.ui.MainActivity" />
     </data>
 
     <LinearLayout

@@ -8,7 +8,7 @@
 
         <variable
             name="callback"
-            type="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form09_part_1_Activity" />
+            type="com.example.hassannaqvi.leaps_scaleup.ui.Form09_part_1_Activity" />
     </data>
 
 

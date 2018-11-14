@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_D">
+    tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form04_EF_D">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form04_EF_D" />
+            type="com.example.hassannaqvi.leaps_scaleup.ui.Form04_EF_D" />
     </data>
 
     <ScrollView

@@ -10,7 +10,7 @@
 
         <variable
             name="callback"
-            type="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form02HHPart_2_HI_SE" />
+            type="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_HI_SE" />
     </data>
 
     <ScrollView

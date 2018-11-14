@@ -662,33 +662,33 @@
     <string name="ls04asub2">Test Trial</string>
     <string name="ls04abinstruction">empty</string>
     <string name="ls04ignore">Ignore</string>
-    <string name="level0ne">Level 1</string>
-    <string name="levelTwo">Level 2</string>
-    <string name="levelThree">Level 3</string>
-    <string name="levelFour">Level 4</string>
-    <string name="levelFive">Level 5</string>
-    <string name="levelSix">Level 6</string>
-    <string name="levelSeven">Level 7</string>
-    <string name="levelEight">Level 8</string>
+    <string name="level0ne">ليول 1</string>
+    <string name="levelTwo">ليول 2</string>
+    <string name="levelThree">ليول 3</string>
+    <string name="levelFour">ليول 4</string>
+    <string name="levelFive">ليول 5</string>
+    <string name="levelSix">ليول 6</string>
+    <string name="levelSeven">ليول 7</string>
+    <string name="levelEight">ليول 8</string>
 
 
-    <string name="ls04aa01">3   7</string>
-    <string name="ls04aa02">6   4</string>
-    <string name="ls04aa03">3   7</string>
-    <string name="ls04aa04">6   4</string>
+    <string name="ls04aa01">7………3</string>
+    <string name="ls04aa02">4………6</string>
+    <string name="ls04aa03">7………3</string>
+    <string name="ls04aa04">4………6</string>
 
-    <string name="ls04ab01">5   7</string>
-    <string name="ls04ab02">2   1</string>
-    <string name="ls04ab03">8   2</string>
-    <string name="ls04ab04">4   3   6</string>
-    <string name="ls04ab05">3   8   1</string>
-    <string name="ls04ab06">5   2   7</string>
-    <string name="ls04ab07">3   2   4   9</string>
-    <string name="ls04ab08">1   7   6   5</string>
-    <string name="ls04ab09">3   5   7   1</string>
-    <string name="ls04ab10">3   4   8   7   5</string>
-    <string name="ls04ab11">8   1   5   3   6</string>
-    <string name="ls04ab12">6   4   5   2   9</string>
+    <string name="ls04ab01">7………5</string>
+    <string name="ls04ab02">1………2</string>
+    <string name="ls04ab03">2………8</string>
+    <string name="ls04ab04">6………3………4</string>
+    <string name="ls04ab05">1………8………3</string>
+    <string name="ls04ab06">7………2………5</string>
+    <string name="ls04ab07">9………4………2………3</string>
+    <string name="ls04ab08">5………6………7………1</string>
+    <string name="ls04ab09">1………7………5………3</string>
+    <string name="ls04ab10">5………7………8………4………3</string>
+    <string name="ls04ab11">6………3………5………1………8</string>
+    <string name="ls04ab12">9………2………5………4………6</string>
 
     <string name="ls04aa01pattern">37</string>
     <string name="ls04aa02pattern">64</string>
@@ -990,9 +990,9 @@
     <string name="ls09j02d">       خبر ناهي </string>
     <string name="ls09j0299"> غير موضوع </string>
     <string name="ls09j03a"> ڇا توهان پنهنجي خاندان ۾ ٻين ڇوڪرين کي نوڪري لاءِ راضي ڪيو آهي؟ </string>
-    "<string name="ls09j03b">ڇا توهان پنهنجي خاندان ۾ پوئين 6 مهينن ۾ ڪنهن کي نوڪري لاءِ راضي ڪيو آهي؟
+    <string name="ls09j03b">ڇا توهان پنهنجي خاندان ۾ پوئين 6 مهينن ۾ ڪنهن کي نوڪري لاءِ راضي ڪيو آهي؟
     نالا ءِ فيميل يوڀ سان رستو لکو.
-</string>"
+</string>
     <string name="ls09j04"> ڇا توهان جي خيال ۾ نوڪري ۽ ڪمائي هڪ عورت کي بهتر زال ۽ ماءُ بنائي ٿي </string>
 
     <string name="ls09c01a"> ڇا توهان اهيو مڃو ٿا ته ڳوٺ جي ڀلائي ۾ عورتون پڻ حصو وٺي سگهن ٿيون؟ </string>
@@ -1184,8 +1184,24 @@
     <string name="ls09bt15">گھوڙو   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  چانور   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  مٽي       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; در     &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  اُن       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   هٿ  </string>
     <string name="ls09bt16">رنگ   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  ٻني  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  ڀت   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;    پير &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;    انب    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ڀاڄي    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ٽي وي </string>
     <string name="ls09bt17">هاٿي    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  دل   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; مڇر   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  رات   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  بتي    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  ڪٻٽ    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  راند </string>
-    <string name="ls09bt18">ڪوِل  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   بٽڻ   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   جوُر  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; هيرو  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   ٽيبل   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; راڻي   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   مگ    </string>
+    <string name="ls09bt18">ڪوِل  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   بٽڻ   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   جوُر  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; هيرو  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   ٽيبل   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; راڻي   &#160;&#160;&#160;&#160;&#160;&#160;&#160;   مگ    </string>
 
+
+    <string name="ls08b">CORSI BLOCK TAPPING GAME SCORING SHEET</string>
+    <string name="ls08bsub">FORWARD CORSI BLOCK</string>
+    <string name="ls08ba">FCB PRACTICE TRIALS</string>
+    <string name="ls08bb">FCB TEST TRIALS</string>
+    <string name="ls08ba01">7………3</string>
+    <string name="ls08bb01">5………8</string>
+    <string name="ls08bb02">4………6</string>
+    <string name="ls08bb03">3………5</string>
+    <string name="ls08bb04">7………3</string>
+    <string name="ls08bb05">7………3</string>
+    <string name="ls08bb06">7………3</string>
+    <string name="ls08bb07">7………3</string>
+    <string name="ls08bb08">7………3</string>
+    <string name="ls08bb09">7………3</string>
+    <string name="ls08bb10">7………3</string>
 
 
 </resources>

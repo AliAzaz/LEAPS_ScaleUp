@@ -9,7 +9,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import static com.example.hassannaqvi.leaps_scaleup.ui.activities.LoginActivity.db;
+import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public abstract class GetSyncFncs {
 

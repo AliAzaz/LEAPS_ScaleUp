@@ -7,7 +7,7 @@
 
         <variable
             name="callback"
-            type="com.example.hassannaqvi.leaps_scaleup.ui.activities.Form05IdBEActivity" />
+            type="com.example.hassannaqvi.leaps_scaleup.ui.Form05IdBEActivity" />
     </data>
 
     <ScrollView

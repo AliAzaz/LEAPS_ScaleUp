@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="20dp"
-    tools:context=".ui.activities.StartActivity">
+    tools:context=".ui.StartActivity">
 
     <EditText
         android:id="@+id/txt_name"
