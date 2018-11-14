@@ -44,7 +44,7 @@ public class Form07Activity extends AppCompatActivity {
     private static final String TAG = Form07Activity.class.getName();
     ActivityForm07Binding bi;
 
-    String getFtype = "", deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+    String getFtype = "", deviceID;
 
     public static Forms fc;
 
@@ -62,8 +62,9 @@ public class Form07Activity extends AppCompatActivity {
 
         getFtype = getIntent().getStringExtra("fType");
 
-        setupViews();
+        deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
+        setupViews();
 
     }
 

@@ -43,7 +43,7 @@ public class Form01Enrolment extends AppCompatActivity {
     private static final String TAG = Form01Enrolment.class.getName();
     ActivityForm01EnrolmentBinding bi;
     public static Forms_04_05 fc_4_5;
-    String getFtype = "", deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+    String getFtype = "", deviceID;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,8 @@ public class Form01Enrolment extends AppCompatActivity {
         this.setTitle(R.string.ls01aheading);
 
         getFtype = getIntent().getStringExtra("fType");
+
+        deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
         setupView();
 
