@@ -153,14 +153,13 @@
         <activity
             android:name=".ui.Form08_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1">
-
-        </activity>
-        <activity android:name=".ui.Form08_EF_B"
+            android:theme="@style/AppTheme1" />
+        <activity
+            android:name=".ui.Form08_EF_B"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1">
-
-        </activity>
+            android:theme="@style/AppTheme1" />
+        <activity android:name=".ui.Form04_EF_D$Form08_EF_D" />
+        <activity android:name=".ui.Form08_EF_D"></activity>
     </application>
 
 </manifest>

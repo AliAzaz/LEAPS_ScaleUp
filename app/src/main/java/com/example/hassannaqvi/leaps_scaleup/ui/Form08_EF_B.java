@@ -31,7 +31,6 @@ public class Form08_EF_B extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_b);
         bi.setCallback(this);
-
     }
 
     public void BtnContinue() {
