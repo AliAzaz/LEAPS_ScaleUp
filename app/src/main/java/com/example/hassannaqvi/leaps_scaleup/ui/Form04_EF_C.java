@@ -134,7 +134,7 @@ public class Form04_EF_C extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.ls04ca07a) {
+                if (i == R.id.ls04ca07b) {
                     bi.fldgrpls04ca08.setVisibility(GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
                 } else {
@@ -224,7 +224,7 @@ public class Form04_EF_C extends AppCompatActivity {
             if (!validatorClass.EmptyRadioButton(this, bi.ls04ca07, bi.ls04ca07a, getString(R.string.ls04ca07))) {
                 return false;
             }
-            if (!bi.ls04ca07a.isChecked()) {
+            if (!bi.ls04ca07b.isChecked()) {
                 if (!validatorClass.EmptyRadioButton(this, bi.ls04ca08, bi.ls04ca08a, getString(R.string.ls04ca08))) {
                     return false;
                 }
