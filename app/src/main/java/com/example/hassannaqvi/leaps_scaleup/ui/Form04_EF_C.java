@@ -57,16 +57,8 @@ public class Form04_EF_C extends AppCompatActivity {
                     bi.fldgrpls04ca02.setVisibility(VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca02, true);
                 }
-            }
-        });
 
-        bi.ls04ca03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-                if (i == R.id.ls04ca03a) {
-                    bi.fldgrpls04ca04.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, false);
+                if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
                     bi.fldgrpls04ca05.setVisibility(GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, false);
                     bi.fldgrpls04ca06.setVisibility(GONE);
@@ -76,8 +68,42 @@ public class Form04_EF_C extends AppCompatActivity {
                     bi.fldgrpls04ca08.setVisibility(GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
                 } else {
+                    bi.fldgrpls04ca05.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, true);
+                    bi.fldgrpls04ca06.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, true);
+                    bi.fldgrpls04ca07.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, true);
+                    bi.fldgrpls04ca08.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, true);
+                }
+            }
+        });
+
+        bi.ls04ca03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.ls04ca03b) {
+                    bi.fldgrpls04ca04.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, false);
+
+
+                } else {
                     bi.fldgrpls04ca04.setVisibility(VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, true);
+
+                }
+                if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
+                    bi.fldgrpls04ca05.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, false);
+                    bi.fldgrpls04ca06.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, false);
+                    bi.fldgrpls04ca07.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, false);
+                    bi.fldgrpls04ca08.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
+                } else {
                     bi.fldgrpls04ca05.setVisibility(VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, true);
                     bi.fldgrpls04ca06.setVisibility(VISIBLE);
