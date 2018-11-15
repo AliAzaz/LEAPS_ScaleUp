@@ -1,8 +1,8 @@
 package com.example.hassannaqvi.leaps_scaleup.ui;
 
-import android.content.Intent;
+import android.content.Context;
+import android.content.res.Resources;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -108,11 +108,17 @@ public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheck
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
 
+    public static String getStringbyIdName(Context context, String name) {
+        Resources res = context.getResources();
+        return res.getString(res.getIdentifier(name, "string", context.getPackageName()));
+    }
+
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         RadioButton radioButton = findViewById(group.getCheckedRadioButtonId());
         String radiogrpID = getResources().getResourceEntryName(group.getId());
-        if (radioButton.getText().toString().equals(getResources().getIdentifier(radiogrpID + "pattern", "id", getPackageName()))) {
+//        if (radioButton.getText().toString().matches("(?i).*"+getResources().getIdentifier(radiogrpID + "pattern", "string", getPackageName())+"*")) {
+        if (radioButton.getText().toString().matches(getStringbyIdName(this, radiogrpID + "pattern"))) {
 
             showHideLevel2(radiogrpID, 2);
 
