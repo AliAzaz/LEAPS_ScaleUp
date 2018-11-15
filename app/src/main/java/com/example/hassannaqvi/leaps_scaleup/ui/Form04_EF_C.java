@@ -57,16 +57,8 @@ public class Form04_EF_C extends AppCompatActivity {
                     bi.fldgrpls04ca02.setVisibility(VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca02, true);
                 }
-            }
-        });
 
-        bi.ls04ca03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-                if (i == R.id.ls04ca03a) {
-                    bi.fldgrpls04ca04.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, false);
+                if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
                     bi.fldgrpls04ca05.setVisibility(GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, false);
                     bi.fldgrpls04ca06.setVisibility(GONE);
@@ -76,8 +68,42 @@ public class Form04_EF_C extends AppCompatActivity {
                     bi.fldgrpls04ca08.setVisibility(GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
                 } else {
+                    bi.fldgrpls04ca05.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, true);
+                    bi.fldgrpls04ca06.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, true);
+                    bi.fldgrpls04ca07.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, true);
+                    bi.fldgrpls04ca08.setVisibility(VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, true);
+                }
+            }
+        });
+
+        bi.ls04ca03.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.ls04ca03b) {
+                    bi.fldgrpls04ca04.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, false);
+
+
+                } else {
                     bi.fldgrpls04ca04.setVisibility(VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, true);
+
+                }
+                if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
+                    bi.fldgrpls04ca05.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, false);
+                    bi.fldgrpls04ca06.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, false);
+                    bi.fldgrpls04ca07.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, false);
+                    bi.fldgrpls04ca08.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
+                } else {
                     bi.fldgrpls04ca05.setVisibility(VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, true);
                     bi.fldgrpls04ca06.setVisibility(VISIBLE);
@@ -108,7 +134,7 @@ public class Form04_EF_C extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.ls04ca07a) {
+                if (i == R.id.ls04ca07b) {
                     bi.fldgrpls04ca08.setVisibility(GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
                 } else {
@@ -177,10 +203,15 @@ public class Form04_EF_C extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls04ca03, bi.ls04ca03a, getString(R.string.ls04ca03))) {
             return false;
         }
-        if (!bi.ls04ca03a.isChecked()) {
+        if (!bi.ls04ca03b.isChecked()) {
             if (!validatorClass.EmptyRadioButton(this, bi.ls04ca04, bi.ls04ca04a, getString(R.string.ls04ca04))) {
                 return false;
             }
+
+        }
+        if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
+
+        } else {
             if (!validatorClass.EmptyRadioButton(this, bi.ls04ca05, bi.ls04ca05a, getString(R.string.ls04ca05))) {
                 return false;
             }
@@ -193,7 +224,7 @@ public class Form04_EF_C extends AppCompatActivity {
             if (!validatorClass.EmptyRadioButton(this, bi.ls04ca07, bi.ls04ca07a, getString(R.string.ls04ca07))) {
                 return false;
             }
-            if (!bi.ls04ca07a.isChecked()) {
+            if (!bi.ls04ca07b.isChecked()) {
                 if (!validatorClass.EmptyRadioButton(this, bi.ls04ca08, bi.ls04ca08a, getString(R.string.ls04ca08))) {
                     return false;
                 }

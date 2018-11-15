@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm09Part1Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -18,6 +21,7 @@ import org.json.JSONObject;
 public class Form09_part_1_Activity extends AppCompatActivity {
 
     ActivityForm09Part1Binding bi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +55,21 @@ public class Form09_part_1_Activity extends AppCompatActivity {
                     ClearClass.ClearAllFields(bi.fldgrpls09j02a, false);
                 } else {
                     ClearClass.ClearAllFields(bi.fldgrpls09j02a, true);
+                }
+            }
+        });
+
+        bi.ls09j01.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if(i == bi.ls09j01b.getId()){
+                    ClearClass.ClearAllFields(bi.fldgrpls09j02a,false);
+                    bi.ls09j0299.setChecked(false);
+
+                }else{
+                    ClearClass.ClearAllFields(bi.fldgrpls09j02a,true);
+
                 }
             }
         });
@@ -300,7 +319,9 @@ public class Form09_part_1_Activity extends AppCompatActivity {
 
     private boolean UpdateDB() {
 
-        return false;
+
+
+        return true;
     }
 
     private boolean formValidation() {
@@ -341,11 +362,14 @@ public class Form09_part_1_Activity extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls09j01, bi.ls09j01a, getString(R.string.ls09j01))) {
             return false;
         }
-        if (!bi.ls09j0299.isChecked()) {
-            if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrplspl08, bi.ls09j02a, getString(R.string.ls09j02))) {
-                return false;
+        if(!bi.ls09j01b.isChecked()){
+            if (!bi.ls09j0299.isChecked()) {
+                if (!validatorClass.EmptyCheckBox(this, bi.fldgrpls09j02a, bi.ls09j02a, getString(R.string.ls09j02))) {
+                    return false;
+                }
             }
         }
+
         if (!validatorClass.EmptyRadioButton(this, bi.ls09j03a, bi.ls09j03a01, getString(R.string.ls09j03a))) {
             return false;
         }
@@ -439,7 +463,7 @@ public class Form09_part_1_Activity extends AppCompatActivity {
                 return false;
             }
             if (!bi.ls09pa0598.isChecked()) {
-                if (!validatorClass.EmptyCardCheckBox(this, bi.fldgrplspl34, bi.ls09pa05a, getString(R.string.ls09pa05))) {
+                if (!validatorClass.EmptyCheckBox(this, bi.fldgrpls09pa05a, bi.ls09pa05a, getString(R.string.ls09pa05))) {
                     return false;
                 }
                 if (bi.ls09pa0596.isChecked()) {
@@ -452,7 +476,7 @@ public class Form09_part_1_Activity extends AppCompatActivity {
         }
 
 
-        return false;
+        return true;
     }
 
     public void BtnEnd() {
