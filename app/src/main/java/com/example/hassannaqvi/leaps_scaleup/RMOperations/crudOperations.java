@@ -58,7 +58,6 @@ public class crudOperations extends AsyncTask<String, Void, Long> {
             e.printStackTrace();
         }
 
-
         return longID;
     }
 }
