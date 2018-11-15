@@ -296,6 +296,9 @@ public class MainActivity extends Activity {
             case "7":
                 retClass = Form07Activity.class;
                 break;
+            case "8":
+                retClass = Form08_EF_D.class;
+                break;
             case "9":
                 retClass = Form09_part_1_Activity.class;
                 break;
@@ -313,7 +316,7 @@ public class MainActivity extends Activity {
     }
 
     public void openEF() {
-    Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "This form is under construction", Toast.LENGTH_SHORT).show();
 //        startActivity(new Intent(MainActivity.this, Form05IdBAActivity.class));
     }
 
@@ -397,6 +400,7 @@ public class MainActivity extends Activity {
         Intent dbmanager = new Intent(getApplicationContext(), DbInspectorActivity.class);
         startActivity(dbmanager);
     }
+
     public void uploadData() {
 
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
@@ -417,13 +421,13 @@ public class MainActivity extends Activity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-                new SyncAllData(
-                        this,
-                        "Forms01a",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php",MainApp.FORM01A+".php"),collection1
-                ).execute();
+            new SyncAllData(
+                    this,
+                    "Forms01a",
+                    "updateSyncedForms_04_05",
+                    Forms_04_05.class,
+                    MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01A + ".php"), collection1
+            ).execute();
             /*Upload Form 01b*/
             Collection collection2 = null;
             try {
@@ -433,13 +437,13 @@ public class MainActivity extends Activity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-                new SyncAllData(
-                        this,
-                        "Forms01b",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php",MainApp.FORM01B+".php"),collection2
-                ).execute();
+            new SyncAllData(
+                    this,
+                    "Forms01b",
+                    "updateSyncedForms_04_05",
+                    Forms_04_05.class,
+                    MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01B + ".php"), collection2
+            ).execute();
 
 
             /*Upload Form 04*/
@@ -451,13 +455,13 @@ public class MainActivity extends Activity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-                new SyncAllData(
-                        this,
-                        "Forms04",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php",MainApp.FORM04+".php"),collection4
-                ).execute();
+            new SyncAllData(
+                    this,
+                    "Forms04",
+                    "updateSyncedForms_04_05",
+                    Forms_04_05.class,
+                    MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM04 + ".php"), collection4
+            ).execute();
 
 
             /*Upload Form 05*/
@@ -469,13 +473,13 @@ public class MainActivity extends Activity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-                new SyncAllData(
-                        this,
-                        "Forms05",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php",MainApp.FORM05+".php"),collection5
-                ).execute();
+            new SyncAllData(
+                    this,
+                    "Forms05",
+                    "updateSyncedForms_04_05",
+                    Forms_04_05.class,
+                    MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM05 + ".php"), collection5
+            ).execute();
 
             /*Upload Form 06*/
             Collection collection6 = null;
@@ -486,13 +490,13 @@ public class MainActivity extends Activity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-                new SyncAllData(
-                        this,
-                        "Forms06",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php",MainApp.FORM06+".php"),collection6
-                ).execute();
+            new SyncAllData(
+                    this,
+                    "Forms06",
+                    "updateSyncedForms_04_05",
+                    Forms_04_05.class,
+                    MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM06 + ".php"), collection6
+            ).execute();
 
             /*Upload Form 07*/
             Collection collection7 = null;
@@ -503,14 +507,14 @@ public class MainActivity extends Activity {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-                new SyncAllData(
-                        this,
-                        "Forms07",
-                        "updateSyncedForms",
-                        Forms.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php",MainApp.FORM07+".php"),collection7
-                ).execute();/*
-            *//*Upload Form 08*//*
+            new SyncAllData(
+                    this,
+                    "Forms07",
+                    "updateSyncedForms",
+                    Forms.class,
+                    MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM07 + ".php"), collection7
+            ).execute();/*
+             *//*Upload Form 08*//*
             Collection collection8 = null;
             try {
                 collection8 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM08).get();
