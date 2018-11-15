@@ -158,7 +158,8 @@
             android:name=".ui.Form08_EF_B"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
-        <activity android:name=".ui.Form08_EF_D"></activity>
+        <activity android:name=".ui.Form08_EF_D" />
+        <activity android:name=".ui.Form08_EF_E"></activity>
     </application>
 
 </manifest>
