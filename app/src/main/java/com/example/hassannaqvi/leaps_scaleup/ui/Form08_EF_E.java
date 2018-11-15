@@ -11,7 +11,7 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
-import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfDBinding;
+import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfEBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONObject;
@@ -20,17 +20,16 @@ import java.util.concurrent.ExecutionException;
 
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
-public class Form08_EF_D extends AppCompatActivity {
+public class Form08_EF_E extends AppCompatActivity {
 
-    ActivityForm08EfDBinding bi;
+    ActivityForm08EfEBinding bi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08__ef__d);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08__ef__e);
         bi.setCallback(this);
     }
-
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -45,7 +44,7 @@ public class Form08_EF_D extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls08d);
+        return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls08e);
         //return true;
     }
 
@@ -67,7 +66,7 @@ public class Form08_EF_D extends AppCompatActivity {
     }
 
     private void SaveDraft() {
-        JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls08d, true);
+        JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls08e, true);
         InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
         Log.d("F8-EA_D", String.valueOf(Json));
     }
