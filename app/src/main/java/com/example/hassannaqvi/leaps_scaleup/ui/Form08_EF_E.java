@@ -4,6 +4,8 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
@@ -29,6 +31,31 @@ public class Form08_EF_E extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form08__ef__e);
         bi.setCallback(this);
+
+
+        bi.ls08eap101.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.fldgrpls08eap2.setVisibility(View.GONE);
+                } else {
+                    bi.fldgrpls08eap2.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+
+        bi.ls08ebp101.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.fldgrpls08ebp2.setVisibility(View.GONE);
+                } else {
+                    bi.fldgrpls08ebp2.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
     }
 
     public void BtnContinue() {
