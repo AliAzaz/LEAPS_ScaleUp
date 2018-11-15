@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm09Part345Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -36,7 +37,8 @@ public class Form09_part_3_4_5_Activity extends AppCompatActivity {
          try {
                SaveDraft();
             if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", true));
+               // MainApp.endActivity(this, this, MainActivity.class, true, InfoActivity.fc_4_5);
+                startActivity(new Intent(getApplicationContext(), MainActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
