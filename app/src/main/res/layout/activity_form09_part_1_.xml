@@ -528,6 +528,7 @@
 
             <!--Q08-->
             <android.support.v7.widget.CardView
+                android:visibility='@{ls09j01b.checked? View.GONE : View.VISIBLE}'
                 android:id="@+id/fldgrplspl08"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -906,6 +907,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:lineSpacingExtra="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -1770,6 +1772,7 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:lineSpacingExtra="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
