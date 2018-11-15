@@ -203,10 +203,15 @@ public class Form04_EF_C extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls04ca03, bi.ls04ca03a, getString(R.string.ls04ca03))) {
             return false;
         }
-        if (!bi.ls04ca03a.isChecked()) {
+        if (!bi.ls04ca03b.isChecked()) {
             if (!validatorClass.EmptyRadioButton(this, bi.ls04ca04, bi.ls04ca04a, getString(R.string.ls04ca04))) {
                 return false;
             }
+
+        }
+        if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
+
+        } else {
             if (!validatorClass.EmptyRadioButton(this, bi.ls04ca05, bi.ls04ca05a, getString(R.string.ls04ca05))) {
                 return false;
             }
