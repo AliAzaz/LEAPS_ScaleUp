@@ -5,11 +5,13 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm09Part2Binding;
+import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
@@ -25,19 +27,32 @@ public class Form09_part_2_Activity extends AppCompatActivity {
 
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form09_part_2_);
         bi.setCallback(this);
+
+
+        bi.ls09efaa05a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if(i == bi.ls09efaa05a01.getId()){
+                    ClearClass.ClearAllCardFields(bi.fldgrplspl05b,true);
+                }else{
+                    ClearClass.ClearAllCardFields(bi.fldgrplspl05b,false);
+                }
+            }
+        });
     }
 
     public void BtnContinue() {
         //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
         if (formValidation()) {
             Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
-         try {
+            try {
                 SaveDraft();
-            if (UpdateDB()) {
-              startActivity(new Intent(getApplicationContext(), Form09_part_3_4_5_Activity.class).putExtra("complete", true));
-            } else {
-                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
-            }
+                if (UpdateDB()) {
+                    startActivity(new Intent(getApplicationContext(), Form09_part_3_4_5_Activity.class).putExtra("complete", true));
+                } else {
+                    Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
+                }
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -73,8 +88,14 @@ public class Form09_part_2_Activity extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls09efaa04, bi.ls09efaa04a, getString(R.string.ls09efaa04))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls09efaa05, bi.ls09efaa05a, getString(R.string.ls09efaa05))) {
+
+        if (!validatorClass.EmptyRadioButton(this, bi.ls09efaa05a, bi.ls09efaa05a01, getString(R.string.ls09efaa05a))) {
             return false;
+        }
+        if (bi.ls09efaa05a01.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls09efaa05b, bi.ls09efaa05b01, getString(R.string.ls09efaa05b))) {
+                return false;
+            }
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls09efaa06, bi.ls09efaa06a, getString(R.string.ls09efaa06))) {
             return false;
