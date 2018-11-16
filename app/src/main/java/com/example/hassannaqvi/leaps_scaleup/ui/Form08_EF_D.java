@@ -1,8 +1,9 @@
 package com.example.hassannaqvi.leaps_scaleup.ui;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -27,7 +28,7 @@ public class Form08_EF_D extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08__ef__d);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_d);
         bi.setCallback(this);
     }
 
@@ -36,7 +37,7 @@ public class Form08_EF_D extends AppCompatActivity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-//                startActivity(new Intent(getApplicationContext(), Form08_EF_C.class));
+                startActivity(new Intent(getApplicationContext(), Form08_EF_E.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }

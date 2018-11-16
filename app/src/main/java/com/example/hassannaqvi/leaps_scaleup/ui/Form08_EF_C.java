@@ -16,7 +16,7 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
-import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfBBinding;
+import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfCBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONObject;
@@ -29,13 +29,12 @@ import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 import static com.example.hassannaqvi.leaps_scaleup.utils.JsonUtils.mergeJSONObjects;
 
-public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
-    ActivityForm08EfBBinding bi;
-
+public class Form08_EF_C extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+    ActivityForm08EfCBinding bi;
     RadioGroup.OnCheckedChangeListener level3 = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-            if (isConditionSatisfied(bi.ls08bb01a.isChecked(), bi.ls08bb02a.isChecked(), bi.ls08bb03a.isChecked())) {
+            if (isConditionSatisfied(bi.ls08cb01a.isChecked(), bi.ls08cb02a.isChecked(), bi.ls08cb03a.isChecked())) {
                 bi.level3.setVisibility(VISIBLE);
                 bi.level4.setVisibility(VISIBLE);
                 bi.level5.setVisibility(VISIBLE);
@@ -50,31 +49,31 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
                 bi.level6.setVisibility(GONE);
                 bi.level7.setVisibility(GONE);
                 bi.level8.setVisibility(GONE);
-                bi.ls08bb04.clearCheck();
-                bi.ls08bb05.clearCheck();
-                bi.ls08bb06.clearCheck();
-                bi.ls08bb07.clearCheck();
-                bi.ls08bb08.clearCheck();
-                bi.ls08bb09.clearCheck();
-                bi.ls08bb10.clearCheck();
-                bi.ls08bb11.clearCheck();
-                bi.ls08bb12.clearCheck();
-                bi.ls08bb13.clearCheck();
-                bi.ls08bb14.clearCheck();
-                bi.ls08bb15.clearCheck();
-                bi.ls08bb16.clearCheck();
-                bi.ls08bb17.clearCheck();
-                bi.ls08bb18.clearCheck();
-                bi.ls08bb19.clearCheck();
-                bi.ls08bb20.clearCheck();
-                bi.ls08bb21.clearCheck();
+                bi.ls08cb04.clearCheck();
+                bi.ls08cb05.clearCheck();
+                bi.ls08cb06.clearCheck();
+                bi.ls08cb07.clearCheck();
+                bi.ls08cb08.clearCheck();
+                bi.ls08cb09.clearCheck();
+                bi.ls08cb10.clearCheck();
+                bi.ls08cb11.clearCheck();
+                bi.ls08cb12.clearCheck();
+                bi.ls08cb13.clearCheck();
+                bi.ls08cb14.clearCheck();
+                bi.ls08cb15.clearCheck();
+                bi.ls08cb16.clearCheck();
+                bi.ls08cb17.clearCheck();
+                bi.ls08cb18.clearCheck();
+                bi.ls08cb19.clearCheck();
+                bi.ls08cb20.clearCheck();
+                bi.ls08cb21.clearCheck();
             }
         }
     };
     RadioGroup.OnCheckedChangeListener level4 = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-            if (isConditionSatisfied(bi.ls08bb04a.isChecked(), bi.ls08bb05a.isChecked(), bi.ls08bb06a.isChecked())) {
+            if (isConditionSatisfied(bi.ls08cb04a.isChecked(), bi.ls08cb05a.isChecked(), bi.ls08cb06a.isChecked())) {
 
                 bi.level4.setVisibility(VISIBLE);
                 bi.level5.setVisibility(VISIBLE);
@@ -88,28 +87,28 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
                 bi.level6.setVisibility(GONE);
                 bi.level7.setVisibility(GONE);
                 bi.level8.setVisibility(GONE);
-                bi.ls08bb07.clearCheck();
-                bi.ls08bb08.clearCheck();
-                bi.ls08bb09.clearCheck();
-                bi.ls08bb10.clearCheck();
-                bi.ls08bb11.clearCheck();
-                bi.ls08bb12.clearCheck();
-                bi.ls08bb13.clearCheck();
-                bi.ls08bb14.clearCheck();
-                bi.ls08bb15.clearCheck();
-                bi.ls08bb16.clearCheck();
-                bi.ls08bb17.clearCheck();
-                bi.ls08bb18.clearCheck();
-                bi.ls08bb19.clearCheck();
-                bi.ls08bb20.clearCheck();
-                bi.ls08bb21.clearCheck();
+                bi.ls08cb07.clearCheck();
+                bi.ls08cb08.clearCheck();
+                bi.ls08cb09.clearCheck();
+                bi.ls08cb10.clearCheck();
+                bi.ls08cb11.clearCheck();
+                bi.ls08cb12.clearCheck();
+                bi.ls08cb13.clearCheck();
+                bi.ls08cb14.clearCheck();
+                bi.ls08cb15.clearCheck();
+                bi.ls08cb16.clearCheck();
+                bi.ls08cb17.clearCheck();
+                bi.ls08cb18.clearCheck();
+                bi.ls08cb19.clearCheck();
+                bi.ls08cb20.clearCheck();
+                bi.ls08cb21.clearCheck();
             }
         }
     };
     RadioGroup.OnCheckedChangeListener level5 = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-            if (isConditionSatisfied(bi.ls08bb07a.isChecked(), bi.ls08bb08a.isChecked(), bi.ls08bb09a.isChecked())) {
+            if (isConditionSatisfied(bi.ls08cb07a.isChecked(), bi.ls08cb08a.isChecked(), bi.ls08cb09a.isChecked())) {
 
                 bi.level5.setVisibility(VISIBLE);
                 bi.level6.setVisibility(VISIBLE);
@@ -121,25 +120,25 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
                 bi.level6.setVisibility(GONE);
                 bi.level7.setVisibility(GONE);
                 bi.level8.setVisibility(GONE);
-                bi.ls08bb10.clearCheck();
-                bi.ls08bb11.clearCheck();
-                bi.ls08bb12.clearCheck();
-                bi.ls08bb13.clearCheck();
-                bi.ls08bb14.clearCheck();
-                bi.ls08bb15.clearCheck();
-                bi.ls08bb16.clearCheck();
-                bi.ls08bb17.clearCheck();
-                bi.ls08bb18.clearCheck();
-                bi.ls08bb19.clearCheck();
-                bi.ls08bb20.clearCheck();
-                bi.ls08bb21.clearCheck();
+                bi.ls08cb10.clearCheck();
+                bi.ls08cb11.clearCheck();
+                bi.ls08cb12.clearCheck();
+                bi.ls08cb13.clearCheck();
+                bi.ls08cb14.clearCheck();
+                bi.ls08cb15.clearCheck();
+                bi.ls08cb16.clearCheck();
+                bi.ls08cb17.clearCheck();
+                bi.ls08cb18.clearCheck();
+                bi.ls08cb19.clearCheck();
+                bi.ls08cb20.clearCheck();
+                bi.ls08cb21.clearCheck();
             }
         }
     };
     RadioGroup.OnCheckedChangeListener level6 = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-            if (isConditionSatisfied(bi.ls08bb10a.isChecked(), bi.ls08bb11a.isChecked(), bi.ls08bb12a.isChecked())) {
+            if (isConditionSatisfied(bi.ls08cb10a.isChecked(), bi.ls08cb11a.isChecked(), bi.ls08cb12a.isChecked())) {
 
                 bi.level6.setVisibility(VISIBLE);
                 bi.level7.setVisibility(VISIBLE);
@@ -149,46 +148,46 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
                 bi.level6.setVisibility(GONE);
                 bi.level7.setVisibility(GONE);
                 bi.level8.setVisibility(GONE);
-                bi.ls08bb13.clearCheck();
-                bi.ls08bb14.clearCheck();
-                bi.ls08bb15.clearCheck();
-                bi.ls08bb16.clearCheck();
-                bi.ls08bb17.clearCheck();
-                bi.ls08bb18.clearCheck();
-                bi.ls08bb19.clearCheck();
-                bi.ls08bb20.clearCheck();
-                bi.ls08bb21.clearCheck();
+                bi.ls08cb13.clearCheck();
+                bi.ls08cb14.clearCheck();
+                bi.ls08cb15.clearCheck();
+                bi.ls08cb16.clearCheck();
+                bi.ls08cb17.clearCheck();
+                bi.ls08cb18.clearCheck();
+                bi.ls08cb19.clearCheck();
+                bi.ls08cb20.clearCheck();
+                bi.ls08cb21.clearCheck();
             }
         }
     };
     RadioGroup.OnCheckedChangeListener level7 = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-            if (isConditionSatisfied(bi.ls08bb13a.isChecked(), bi.ls08bb14a.isChecked(), bi.ls08bb15a.isChecked())) {
+            if (isConditionSatisfied(bi.ls08cb13a.isChecked(), bi.ls08cb14a.isChecked(), bi.ls08cb15a.isChecked())) {
                 bi.level7.setVisibility(VISIBLE);
                 bi.level8.setVisibility(VISIBLE);
             } else {
                 bi.level7.setVisibility(GONE);
                 bi.level8.setVisibility(GONE);
-                bi.ls08bb16.clearCheck();
-                bi.ls08bb17.clearCheck();
-                bi.ls08bb18.clearCheck();
-                bi.ls08bb19.clearCheck();
-                bi.ls08bb20.clearCheck();
-                bi.ls08bb21.clearCheck();
+                bi.ls08cb16.clearCheck();
+                bi.ls08cb17.clearCheck();
+                bi.ls08cb18.clearCheck();
+                bi.ls08cb19.clearCheck();
+                bi.ls08cb20.clearCheck();
+                bi.ls08cb21.clearCheck();
             }
         }
     };
     RadioGroup.OnCheckedChangeListener level8 = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {
-            if (isConditionSatisfied(bi.ls08bb16a.isChecked(), bi.ls08bb17a.isChecked(), bi.ls08bb18a.isChecked())) {
+            if (isConditionSatisfied(bi.ls08cb16a.isChecked(), bi.ls08cb17a.isChecked(), bi.ls08cb18a.isChecked())) {
                 bi.level8.setVisibility(VISIBLE);
             } else {
                 bi.level8.setVisibility(GONE);
-                bi.ls08bb19.clearCheck();
-                bi.ls08bb20.clearCheck();
-                bi.ls08bb21.clearCheck();
+                bi.ls08cb19.clearCheck();
+                bi.ls08cb20.clearCheck();
+                bi.ls08cb21.clearCheck();
             }
         }
     };
@@ -196,38 +195,37 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_b);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_c);
         bi.setCallback(this);
-        this.setTitle(R.string.ls08b);
-        validatorClass.setScrollViewFocus(bi.ef08BScrollview);
+        this.setTitle(R.string.ls08c);
+        validatorClass.setScrollViewFocus(bi.ef08CScrollview);
 
         attachingListeners();
 
     }
 
     private void attachingListeners() {
-        bi.ls08ba01a.setOnCheckedChangeListener(this);
-        bi.ls08ba01b.setOnCheckedChangeListener(this);
+        bi.ls08ca01a.setOnCheckedChangeListener(this);
+        bi.ls08ca01b.setOnCheckedChangeListener(this);
 
-        bi.ls08bb01.setOnCheckedChangeListener(level3);
-        bi.ls08bb02.setOnCheckedChangeListener(level3);
-        bi.ls08bb03.setOnCheckedChangeListener(level3);
-        bi.ls08bb04.setOnCheckedChangeListener(level4);
-        bi.ls08bb05.setOnCheckedChangeListener(level4);
-        bi.ls08bb06.setOnCheckedChangeListener(level4);
-        bi.ls08bb07.setOnCheckedChangeListener(level5);
-        bi.ls08bb08.setOnCheckedChangeListener(level5);
-        bi.ls08bb09.setOnCheckedChangeListener(level5);
-        bi.ls08bb10.setOnCheckedChangeListener(level6);
-        bi.ls08bb11.setOnCheckedChangeListener(level6);
-        bi.ls08bb12.setOnCheckedChangeListener(level6);
-        bi.ls08bb13.setOnCheckedChangeListener(level7);
-        bi.ls08bb14.setOnCheckedChangeListener(level7);
-        bi.ls08bb15.setOnCheckedChangeListener(level7);
-        bi.ls08bb16.setOnCheckedChangeListener(level8);
-        bi.ls08bb17.setOnCheckedChangeListener(level8);
-        bi.ls08bb18.setOnCheckedChangeListener(level8);
-
+        bi.ls08cb01.setOnCheckedChangeListener(level3);
+        bi.ls08cb02.setOnCheckedChangeListener(level3);
+        bi.ls08cb03.setOnCheckedChangeListener(level3);
+        bi.ls08cb04.setOnCheckedChangeListener(level4);
+        bi.ls08cb05.setOnCheckedChangeListener(level4);
+        bi.ls08cb06.setOnCheckedChangeListener(level4);
+        bi.ls08cb07.setOnCheckedChangeListener(level5);
+        bi.ls08cb08.setOnCheckedChangeListener(level5);
+        bi.ls08cb09.setOnCheckedChangeListener(level5);
+        bi.ls08cb10.setOnCheckedChangeListener(level6);
+        bi.ls08cb11.setOnCheckedChangeListener(level6);
+        bi.ls08cb12.setOnCheckedChangeListener(level6);
+        bi.ls08cb13.setOnCheckedChangeListener(level7);
+        bi.ls08cb14.setOnCheckedChangeListener(level7);
+        bi.ls08cb15.setOnCheckedChangeListener(level7);
+        bi.ls08cb16.setOnCheckedChangeListener(level8);
+        bi.ls08cb17.setOnCheckedChangeListener(level8);
+        bi.ls08cb18.setOnCheckedChangeListener(level8);
 
     }
 
@@ -235,8 +233,8 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-//                startActivity(new Intent(getApplicationContext(), Form08_EF_C.class));
-                startActivity(new Intent(getApplicationContext(), Form08_EF_C.class));
+                startActivity(new Intent(getApplicationContext(), Form08_EF_D.class));
+
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -251,9 +249,10 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
             return true;
         } else return Objects.equals(a, true) && Objects.equals(c, true);
     }
-    private boolean formValidation() {
-        return validatorClass.EmptyCheckingContainer(this, bi.fldGrpls08b);
 
+    private boolean formValidation() {
+//        return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls08a);
+        return true;
     }
 
     public void BtnEnd() {
@@ -277,15 +276,15 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
     private void SaveDraft() {
 
         JSONObject localJson;
-        JSONObject Json1 = GeneratorClass.getContainerJSON(bi.fldGrpls08b, true);
+        JSONObject Json1 = GeneratorClass.getContainerJSON(bi.fldGrpls08c, true);
         JSONObject Json2 = GeneratorClass.getContainerJSON(bi.level2, true);
-        localJson = mergeJSONObjects(Json1,Json2);
+        localJson = mergeJSONObjects(Json1, Json2);
         JSONObject Json3 = GeneratorClass.getContainerJSON(bi.level3, true);
-        localJson = mergeJSONObjects(localJson,Json3);
+        localJson = mergeJSONObjects(localJson, Json3);
         JSONObject Json4 = GeneratorClass.getContainerJSON(bi.level4, true);
-        localJson = mergeJSONObjects(localJson,Json4);
+        localJson = mergeJSONObjects(localJson, Json4);
         JSONObject Json5 = GeneratorClass.getContainerJSON(bi.level5, true);
-        localJson = mergeJSONObjects(localJson,Json5);
+        localJson = mergeJSONObjects(localJson, Json5);
         JSONObject Json6 = GeneratorClass.getContainerJSON(bi.level6, true);
         localJson = mergeJSONObjects(localJson, Json6);
         JSONObject Json7 = GeneratorClass.getContainerJSON(bi.level7, true);
@@ -293,8 +292,8 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
         JSONObject Json8 = GeneratorClass.getContainerJSON(bi.level8, true);
         localJson = mergeJSONObjects(localJson, Json8);
 
-        InfoActivity.fc_4_5.setSa2(String.valueOf(localJson));
-        Log.d("F4-EF-B", String.valueOf(localJson));
+        InfoActivity.fc_4_5.setSa3(String.valueOf(localJson));
+        Log.d("F4-EF-C", String.valueOf(localJson));
     }
 
     @Override
@@ -319,6 +318,7 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
             fldGrp.setVisibility(View.VISIBLE);
         }
     }
+
 
     @Override
     public void onCheckedChanged(RadioGroup group, int i) {

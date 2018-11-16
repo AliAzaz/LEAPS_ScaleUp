@@ -21,10 +21,8 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.Iterator;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
@@ -46,10 +44,7 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         setContentView(R.layout.activity_form04_ef_a);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form04_ef_a);
         bi.setCallback(this);
-
         this.setTitle(R.string.ls04a);
-
-
         validatorClass.setScrollViewFocus(bi.efAScrollview);
         attachingListeners();
 

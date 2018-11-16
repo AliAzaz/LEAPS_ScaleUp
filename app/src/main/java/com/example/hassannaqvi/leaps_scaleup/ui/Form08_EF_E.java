@@ -1,8 +1,8 @@
 package com.example.hassannaqvi.leaps_scaleup.ui;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -29,7 +29,7 @@ public class Form08_EF_E extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08__ef__e);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_e);
         bi.setCallback(this);
 
 
