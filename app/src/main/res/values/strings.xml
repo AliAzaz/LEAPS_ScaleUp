@@ -1305,6 +1305,21 @@
     <string name="ls08ebp2">BP2</string>
     <string name="ls08ebt1">BT1</string>
 
+
+    <!--youth Info Activity-->
+    <string name="lsyid01">فيميل يوٿ  جي ID</string>
+    <string name="lsyid02">فيميل يوٿ جو نالو ۽ ذات</string>
+    <string name="lsyid03">انٽرويو جي تاريخ</string>
+    <string name="lsyid04">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي؟</string>
+    <string name="lsyid04a"> بيس لائين </string>
+    <string name="lsyid04b"> اسٽيپ 1 </string>
+    <string name="lsyid04c"> اسٽيپ 2 </string>
+    <string name="lsyid04d"> اسٽيپ 3 </string>
+    <string name="lsyid05">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي</string>
+    <string name="lsyid06">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي</string>
+    <string name="lsyid07">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي</string>
+
+
 </resources>
 
 
