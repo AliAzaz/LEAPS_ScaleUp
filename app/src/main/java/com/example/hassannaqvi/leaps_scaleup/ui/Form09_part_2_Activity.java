@@ -2,20 +2,27 @@ package com.example.hassannaqvi.leaps_scaleup.ui;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm09Part2Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public class Form09_part_2_Activity extends AppCompatActivity {
 
@@ -64,13 +71,22 @@ public class Form09_part_2_Activity extends AppCompatActivity {
         JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpform04part02, true);
 
         //InfoActivity.fc_4_5.setSa3(String.valueOf(Json));
+        YouthInfoActivity.fc_4_5.setSa2(String.valueOf(Json));
 
         Log.d("F5-BA", String.valueOf(Json));
     }
 
     private boolean UpdateDB() {
+        try {
+            Long longID = new crudOperations(db, YouthInfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-        return true;
+        return false;
     }
 
     private boolean formValidation() {
@@ -144,7 +160,7 @@ public class Form09_part_2_Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
+        MainApp.endActivity(this, this, EndingActivity.class, false, YouthInfoActivity.fc_4_5);
 
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
     }
 }

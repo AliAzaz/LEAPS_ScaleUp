@@ -30,6 +30,8 @@ public class Form08_EF_D extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_d);
         bi.setCallback(this);
+        this.setTitle(R.string.ls08d);
+
     }
 
 
@@ -51,12 +53,12 @@ public class Form08_EF_D extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, InfoActivity.fc_4_5);
+        MainApp.endActivity(this, this, EndingActivity.class, false, YouthInfoActivity.fc_4_5);
     }
 
     private boolean UpdateDB() {
         try {
-            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, YouthInfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -69,7 +71,7 @@ public class Form08_EF_D extends AppCompatActivity {
 
     private void SaveDraft() {
         JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls08d, true);
-        InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
+        YouthInfoActivity.fc_4_5.setSa1(String.valueOf(Json));
         Log.d("F8-EA_D", String.valueOf(Json));
     }
 

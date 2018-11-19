@@ -125,11 +125,11 @@
         <activity
             android:name=".ui.Form04_EF_B"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.Form04_EF_C"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.Form04_EF_D"
             android:screenOrientation="portrait"
@@ -137,7 +137,7 @@
         <activity
             android:name=".ui.Form04_EF_E"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
+            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.Form09_part_1_Activity"
             android:screenOrientation="portrait"
@@ -157,11 +157,27 @@
         <activity
             android:name=".ui.Form08_EF_B"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1"></activity>
-        <activity android:name=".ui.Form08_EF_D" />
-        <activity android:name=".ui.Form08_EF_E" />
-        <activity android:name=".ui.Form08_EF_C" />
-        <activity android:name=".ui.YouthInfoActivity"></activity>
+            android:theme="@style/AppTheme1" />
+
+        <activity
+            android:name=".ui.Form08_EF_D"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+
+        <activity
+            android:name=".ui.Form08_EF_E"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+
+        <activity
+            android:name=".ui.Form08_EF_C"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
+
+        <activity
+            android:name=".ui.YouthInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1" />
     </application>
 
 </manifest>

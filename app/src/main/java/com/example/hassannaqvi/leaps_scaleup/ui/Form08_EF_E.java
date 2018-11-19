@@ -31,6 +31,7 @@ public class Form08_EF_E extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form08_ef_e);
         bi.setCallback(this);
+        this.setTitle(R.string.ls08e);
 
 
         bi.ls08eap101.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -62,6 +63,7 @@ public class Form08_EF_E extends AppCompatActivity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
+                MainApp.endActivity(this, this, EndingActivity.class, true, YouthInfoActivity.fc_4_5);
 //                startActivity(new Intent(getApplicationContext(), Form08_EF_C.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
@@ -76,12 +78,12 @@ public class Form08_EF_E extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, InfoActivity.fc_4_5);
+        MainApp.endActivity(this, this, EndingActivity.class, false, YouthInfoActivity.fc_4_5);
     }
 
     private boolean UpdateDB() {
         try {
-            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, YouthInfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -94,7 +96,7 @@ public class Form08_EF_E extends AppCompatActivity {
 
     private void SaveDraft() {
         JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls08e, true);
-        InfoActivity.fc_4_5.setSa1(String.valueOf(Json));
+        YouthInfoActivity.fc_4_5.setSa1(String.valueOf(Json));
         Log.d("F8-EA_D", String.valueOf(Json));
     }
 

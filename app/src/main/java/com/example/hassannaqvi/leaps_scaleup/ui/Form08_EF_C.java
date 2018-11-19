@@ -256,13 +256,13 @@ public class Form08_EF_C extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     public void BtnEnd() {
-        MainApp.endActivity(this, this, EndingActivity.class, false, InfoActivity.fc_4_5);
+        MainApp.endActivity(this, this, EndingActivity.class, false, YouthInfoActivity.fc_4_5);
 
     }
 
     private boolean UpdateDB() {
         try {
-            Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            Long longID = new crudOperations(db, YouthInfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -292,7 +292,7 @@ public class Form08_EF_C extends AppCompatActivity implements RadioGroup.OnCheck
         JSONObject Json8 = GeneratorClass.getContainerJSON(bi.level8, true);
         localJson = mergeJSONObjects(localJson, Json8);
 
-        InfoActivity.fc_4_5.setSa3(String.valueOf(localJson));
+        YouthInfoActivity.fc_4_5.setSa3(String.valueOf(localJson));
         Log.d("F4-EF-C", String.valueOf(localJson));
     }
 

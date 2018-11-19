@@ -2,21 +2,26 @@ package com.example.hassannaqvi.leaps_scaleup.ui;
 
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
+import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm09Part1Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.concurrent.ExecutionException;
+
+import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public class Form09_part_1_Activity extends AppCompatActivity {
 
@@ -311,17 +316,21 @@ public class Form09_part_1_Activity extends AppCompatActivity {
         f09_1.put("ls09pa05f", bi.ls09pa05f.isChecked() ? "6" : "0");
         f09_1.put("ls09pa0596", bi.ls09pa0596.isChecked() ? "96" : "0");
         f09_1.put("ls09pa0598", bi.ls09pa0598.isChecked() ? "98" : "0");
-
         f09_1.put("ls09pa0596x", bi.ls09pa0596x.getText().toString());
-
-
+        YouthInfoActivity.fc_4_5.setSa1(String.valueOf(f09_1));
     }
 
     private boolean UpdateDB() {
+        try {
+            Long longID = new crudOperations(db, YouthInfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+            return longID == 1;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-
-
-        return true;
+        return false;
     }
 
     private boolean formValidation() {
@@ -480,6 +489,7 @@ public class Form09_part_1_Activity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(getApplicationContext(), EndingActivity.class).putExtra("complete", false));
+        MainApp.endActivity(this, this, EndingActivity.class, false, YouthInfoActivity.fc_4_5);
+
     }
 }

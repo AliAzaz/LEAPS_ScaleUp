@@ -1251,6 +1251,11 @@
 
     <!--Form 08 EF D-->
 
+    <string name="ls08d">NUMBER STROOP SCORING SHEET</string>
+    <string name="ls08dsub1">1. BASELINE TRIAL INTRODUCTION</string>
+    <string name="ls08dsub2">2. NON-IDENTICAL TRIAL INTRODUCTION</string>
+    <string name="ls08dsub3">3. NON-IDENTICAL PRACTICE TRIAL</string>
+    <string name="ls08dsub4">4. NON-IDENTICAL TEST TRIAL</string>
     <string name="ls08d1a">1</string>
     <string name="ls08d1b">2</string>
     <string name="ls08d1c">3</string>
@@ -1298,6 +1303,11 @@
 
     <!--Form 08 EF E-->
 
+    <string name="ls08e">TRAIL MAKING TEST</string>
+    <string name="ls08esub1">PART A - TMT PRACTICE TRIAL </string>
+    <string name="ls08esub2">PART A – TMT TEST TRIAL</string>
+    <string name="ls08esub3">PART B - TMT PRACTICE TRIAL </string>
+    <string name="ls08esub4">PART B – TMT TEST TRIAL</string>
     <string name="ls08eap1">AP1</string>
     <string name="ls08eap2">AP2</string>
     <string name="ls08eat1">AT1</string>
