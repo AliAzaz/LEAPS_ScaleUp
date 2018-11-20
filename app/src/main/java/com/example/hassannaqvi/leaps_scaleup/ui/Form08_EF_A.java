@@ -16,8 +16,11 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
@@ -246,6 +249,14 @@ ActivityForm08EfABinding bi;
         localJson = mergeJSONObjects(localJson, Json6);
         JSONObject Json7 = GeneratorClass.getContainerJSON(bi.level7, true);
         localJson = mergeJSONObjects(localJson, Json7);
+
+        JSONObject Json8 = new JSONObject();
+        try {
+            Json8.put("ls08at", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        localJson = mergeJSONObjects(localJson, Json8);
 
         YouthInfoActivity.fc_4_5.setSa1(String.valueOf(localJson));
         Log.d("F8-EF-A", String.valueOf(localJson));

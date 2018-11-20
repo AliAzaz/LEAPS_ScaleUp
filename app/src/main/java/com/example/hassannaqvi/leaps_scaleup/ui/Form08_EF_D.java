@@ -15,11 +15,15 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfDBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
+import static com.example.hassannaqvi.leaps_scaleup.utils.JsonUtils.mergeJSONObjects;
 
 public class Form08_EF_D extends AppCompatActivity {
 
@@ -70,9 +74,20 @@ public class Form08_EF_D extends AppCompatActivity {
     }
 
     private void SaveDraft() {
-        JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls08d, true);
-        YouthInfoActivity.fc_4_5.setSa1(String.valueOf(Json));
-        Log.d("F8-EA_D", String.valueOf(Json));
+        JSONObject localJson;
+
+        JSONObject Json1 = GeneratorClass.getContainerJSON(bi.flgGrpls08d, true);
+
+        JSONObject Json9 = new JSONObject();
+        try {
+            Json9.put("ls08dt", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        localJson = mergeJSONObjects(Json1, Json9);
+        YouthInfoActivity.fc_4_5.setSa4(String.valueOf(localJson));
+
+        Log.d("F8-EA_D", String.valueOf(localJson));
     }
 
     @Override

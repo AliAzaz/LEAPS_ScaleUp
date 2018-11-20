@@ -20,12 +20,16 @@ import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfEBindin
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
+import static com.example.hassannaqvi.leaps_scaleup.utils.JsonUtils.mergeJSONObjects;
 
 public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
     ActivityForm04EfEBinding bi;
@@ -88,14 +92,24 @@ public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     private void SaveDraft() {
+        JSONObject localJson;
+
         JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls04e, true);
-        InfoActivity.fc_4_5.setSa5(String.valueOf(Json));
+
+        JSONObject Json2 = new JSONObject();
+        try {
+            Json2.put("ls04et", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        localJson = mergeJSONObjects(Json, Json2);
+        InfoActivity.fc_4_5.setSa5(String.valueOf(localJson));
        /*
         For Testing purpose
         Forms_04_05 fc_4_5 = new Forms_04_05();
         fc_4_5.setSa5(String.valueOf(Json));*/
 
-        Log.d("F4-D", String.valueOf(Json));
+        Log.d("F4-E", String.valueOf(localJson));
     }
 
     private boolean formValidation() {

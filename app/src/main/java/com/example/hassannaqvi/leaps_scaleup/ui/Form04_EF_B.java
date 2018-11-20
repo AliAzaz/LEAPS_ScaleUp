@@ -16,7 +16,9 @@ import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
+import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfBBinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
@@ -24,10 +26,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Iterator;
+import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
+import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public class Form04_EF_B extends AppCompatActivity {
     ActivityForm04EfBBinding bi;
@@ -59,7 +65,7 @@ public class Form04_EF_B extends AppCompatActivity {
     }
 
     private boolean UpdateDB() {
-      /*  try {
+        try {
             Long longID = new crudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
 
@@ -69,8 +75,7 @@ public class Form04_EF_B extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        return false;*/
-       return true;
+        return false;
     }
     public static JSONObject mergeJSONObjects(JSONObject Obj1, JSONObject Obj2) {
         JSONObject merged = new JSONObject();
@@ -94,9 +99,16 @@ public class Form04_EF_B extends AppCompatActivity {
         /*JSONObject Json2 = GeneratorClass.getContainerJSON(this,bi.level2, false,new JSONObject());
         localJson = mergeJSONObjects(Json1,Json2);*/
 
-        InfoActivity.fc_4_5.setSa2(String.valueOf(Json1));
+        JSONObject Json2 = new JSONObject();
+        try {
+            Json2.put("ls04bt", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        localJson = mergeJSONObjects(Json1, Json2);
+        InfoActivity.fc_4_5.setSa2(String.valueOf(localJson));
 
-        Log.d("F4-EF-B", String.valueOf(Json1));
+        Log.d("F4-EF-B", String.valueOf(localJson));
     }
 
     private boolean formValidation() {

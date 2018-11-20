@@ -21,8 +21,11 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm04EfABinding;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
@@ -166,6 +169,14 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         localJson = mergeJSONObjects(localJson,Json4);
         JSONObject Json5 = GeneratorClass.getContainerJSON(bi.level5, true);
         localJson = mergeJSONObjects(localJson,Json5);
+        JSONObject Json6 = new JSONObject();
+        try {
+            Json6.put("ls04at", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        localJson = mergeJSONObjects(localJson, Json6);
+
 
         InfoActivity.fc_4_5.setSa1(String.valueOf(localJson));
         Log.d("F4-EF-A", String.valueOf(localJson));
