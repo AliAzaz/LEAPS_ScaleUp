@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
         }
-//        mainBinding.lblheader.setText("Welcome! You're assigned to block ' " + MainApp.userName);
+        // mainBinding.lblheader.setText("Welcome! You're assigned to block ' " + MainApp.userName);
         mainBinding.lblheader.setText("Welcome!");
 
         /*TagID Start*/
