@@ -210,6 +210,8 @@ public class Form08_EF_C extends AppCompatActivity implements RadioGroup.OnCheck
     private void attachingListeners() {
         bi.ls08ca01a.setOnCheckedChangeListener(this);
         bi.ls08ca01b.setOnCheckedChangeListener(this);
+        bi.ls08ca02a.setOnCheckedChangeListener(this);
+        bi.ls08ca02b.setOnCheckedChangeListener(this);
 
         bi.ls08cb01.setOnCheckedChangeListener(level3);
         bi.ls08cb02.setOnCheckedChangeListener(level3);
@@ -254,8 +256,8 @@ public class Form08_EF_C extends AppCompatActivity implements RadioGroup.OnCheck
     }
 
     private boolean formValidation() {
-//        return validatorClass.EmptyCheckingContainer(this, bi.flgGrpls08a);
-        return true;
+        return validatorClass.EmptyCheckingContainer(this, bi.fldGrpls08c);
+//        return true;
     }
 
     public void BtnEnd() {
@@ -302,7 +304,7 @@ public class Form08_EF_C extends AppCompatActivity implements RadioGroup.OnCheck
         }
         localJson = mergeJSONObjects(localJson, Json9);
         YouthInfoActivity.fc_4_5.setSa3(String.valueOf(localJson));
-        Log.d("F4-EF-C", String.valueOf(localJson));
+        Log.d("F8-EF-C", String.valueOf(localJson));
     }
 
     @Override

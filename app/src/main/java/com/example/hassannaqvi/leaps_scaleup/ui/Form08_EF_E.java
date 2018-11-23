@@ -110,8 +110,7 @@ public class Form08_EF_E extends AppCompatActivity {
             e.printStackTrace();
         }
         localJson = mergeJSONObjects(Json1, Json9);
-
-        YouthInfoActivity.fc_4_5.setSa1(String.valueOf(localJson));
+        YouthInfoActivity.fc_4_5.setSa5(String.valueOf(localJson));
         Log.d("F8-EA_E", String.valueOf(localJson));
     }
 
