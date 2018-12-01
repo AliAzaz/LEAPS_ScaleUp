@@ -303,7 +303,6 @@ public class Form08_EF_B extends AppCompatActivity implements RadioGroup.OnCheck
         }
         localJson = mergeJSONObjects(localJson, Json9);
 
-        YouthInfoActivity.fc_4_5.setSa1(String.valueOf(localJson));
         YouthInfoActivity.fc_4_5.setSa2(String.valueOf(localJson));
         Log.d("F4-EF-B", String.valueOf(localJson));
     }
