@@ -25,7 +25,7 @@ android {
 
 
             versionCode code
-            versionName "1.pilot"
+            versionName "1.rc"
             testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         }
     } else {
