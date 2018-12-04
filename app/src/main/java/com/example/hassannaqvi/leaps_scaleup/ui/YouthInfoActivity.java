@@ -69,7 +69,7 @@ public class YouthInfoActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrplsyid01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrplsyid01, false);
+                ClearClass.ClearAllFields(bi.fldgrplsyid01);
             }
 
             @Override

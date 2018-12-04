@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -48,10 +50,10 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
 
                 if (i != R.id.ls02se02b) {
                     bi.fldgrpls0207.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0207, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0207);
                 } else {
                     bi.fldgrpls0207.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0207, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0207);
                 }
 
             }
@@ -63,10 +65,10 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
 
                 if (i != R.id.ls02se09a) {
                     bi.fldgrpls0214.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0214, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0214);
                 } else {
                     bi.fldgrpls0214.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0214, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0214);
                 }
             }
         });
@@ -249,6 +251,9 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
             return false;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls02hi02, getString(R.string.ls02hi02))) {
+            return false;
+        }
+        if(!validatorClass.RangeTextBox(this,bi.ls02hi02,2,99,getString(R.string.ls02hi02),"Age")){
             return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls02se01a, bi.ls02se01a01, getString(R.string.ls02se01a))) {

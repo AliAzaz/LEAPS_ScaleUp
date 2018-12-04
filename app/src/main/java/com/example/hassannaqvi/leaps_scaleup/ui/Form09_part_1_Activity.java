@@ -45,9 +45,9 @@ public class Form09_part_1_Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                 if (b) {
-                    ClearClass.ClearAllFields(bi.fldgrpls09pa05a, false);
+                    ClearClass.ClearAllFields(bi.fldgrpls09pa05a);
                 } else {
-                    ClearClass.ClearAllFields(bi.fldgrpls09pa05a, true);
+                    ClearClass.ClearAllFields(bi.fldgrpls09pa05a);
                 }
             }
         });
@@ -57,9 +57,9 @@ public class Form09_part_1_Activity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
 
                 if (b) {
-                    ClearClass.ClearAllFields(bi.fldgrpls09j02a, false);
+                    ClearClass.ClearAllFields(bi.fldgrpls09j02a);
                 } else {
-                    ClearClass.ClearAllFields(bi.fldgrpls09j02a, true);
+                    ClearClass.ClearAllFields(bi.fldgrpls09j02a);
                 }
             }
         });
@@ -69,11 +69,11 @@ public class Form09_part_1_Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if(i == bi.ls09j01b.getId()){
-                    ClearClass.ClearAllFields(bi.fldgrpls09j02a,false);
+                    ClearClass.ClearAllFields(bi.fldgrpls09j02a);
                     bi.ls09j0299.setChecked(false);
 
                 }else{
-                    ClearClass.ClearAllFields(bi.fldgrpls09j02a,true);
+                    ClearClass.ClearAllFields(bi.fldgrpls09j02a);
 
                 }
             }
@@ -81,7 +81,7 @@ public class Form09_part_1_Activity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
+        //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete"));
         if (formValidation()) {
             Toast.makeText(this, "validated", Toast.LENGTH_SHORT).show();
             try {

@@ -36,6 +36,7 @@
     <string name="other"> ٻيو ڪجھ </string>
     <string name="month"> مهينا </string>
     <string name="year"> سال </string>
+    <string name="day"> دن </string>
 
     <string name="tap">ڌڪ</string>
     <string name="knock">کڙڪائڻ</string>
@@ -1165,17 +1166,17 @@
 
     <!--Form 08 EF A-->
 
-    <string name="ls09bp01"> ڪتو &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; ڪتاب</string>
-    <string name="ls09bp02"> پٻ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; پير</string>
+    <string name="ls09bp01"> ڪتو………ڪتاب</string>
+    <string name="ls09bp02"> پٻ………پير</string>
     <string name="ls08a">BACKWORD WORD SPAN</string>
     <string name="bws_practice">BWS PRACTICE TRIALS</string>
     <string name="bws_test">BWS TEST TRIALS</string>
 
 
-    <string name="ls08ab01"> گھر&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; چنڊ</string>
-    <string name="ls08ab02">ڌوڙ    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   ڪاٺ</string>
-    <string name="ls08ab03">ڦيٿو  &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;    بيڊ</string>
-    <string name="ls08ab04">پٿر       &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; کاڌو    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   ماڻهو</string>
+    <string name="ls08ab01"> گھر……… چنڊ</string>
+    <string name="ls08ab02">ڌوڙ ………ڪاٺ</string>
+    <string name="ls08ab03">ڦيٿو………بيڊ</string>
+    <string name="ls08ab04">پٿر        کاڌو    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   ماڻهو</string>
     <string name="ls08ab05">اک     &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   ڏينهن &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;     ڳئون</string>
     <string name="ls08ab06">ٻلي   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;     چولو    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   ڪن</string>
     <string name="ls08ab07">ڪمرو &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;    وڻ   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  ٻيڙي   &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;     ڀت</string>

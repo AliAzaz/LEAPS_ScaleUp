@@ -77,7 +77,7 @@ public class InfoActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrpls01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrpls01, false);
+                ClearClass.ClearAllFields(bi.fldgrpls01);
             }
 
             @Override

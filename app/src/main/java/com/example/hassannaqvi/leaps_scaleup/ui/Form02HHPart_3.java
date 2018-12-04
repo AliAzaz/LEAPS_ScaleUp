@@ -46,10 +46,10 @@ public class Form02HHPart_3 extends AppCompatActivity {
 
                 if (i == R.id.ls02ee01b01) {
                     bi.fldgrpee03.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee03, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee03);
                 } else {
                     bi.fldgrpee03.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee03, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee03);
                 }
             }
         });
@@ -61,11 +61,11 @@ public class Form02HHPart_3 extends AppCompatActivity {
                 if (i == R.id.ls02ee12b) {
 
                     bi.fldgrpee16.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee16, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee16);
 
                 } else {
                     bi.fldgrpee16.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee16, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee16);
                 }
             }
         });
@@ -81,22 +81,22 @@ public class Form02HHPart_3 extends AppCompatActivity {
                     bi.fldgrpee12.setVisibility(View.GONE);
                     bi.fldgrpee13.setVisibility(View.GONE);
                     bi.fldgrpee14.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee10, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee11, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee12, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee13, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee14, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee10);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee11);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee12);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee13);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee14);
                 } else {
                     bi.fldgrpee10.setVisibility(View.VISIBLE);
                     bi.fldgrpee11.setVisibility(View.VISIBLE);
                     bi.fldgrpee12.setVisibility(View.VISIBLE);
                     bi.fldgrpee13.setVisibility(View.VISIBLE);
                     bi.fldgrpee14.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee10, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee11, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee12, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee13, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrpee14, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee10);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee11);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee12);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee13);
+                    ClearClass.ClearAllCardFields(bi.fldgrpee14);
                 }
             }
         });

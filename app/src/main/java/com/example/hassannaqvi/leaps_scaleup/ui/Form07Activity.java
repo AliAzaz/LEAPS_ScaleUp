@@ -77,10 +77,10 @@ public class Form07Activity extends AppCompatActivity {
                 if (i == R.id.ls07id08b) {
 
                     bi.fldgrpls0710.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0710, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0710);
                 } else {
                     bi.fldgrpls0710.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0710, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0710);
                 }
             }
         });
@@ -91,18 +91,18 @@ public class Form07Activity extends AppCompatActivity {
 
                 if (i == R.id.ls07id10b) {
                     bi.fldgrpls0712.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0712, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0712);
                     bi.fldgrpls0713.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0713, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0713);
                     bi.fldgrpls0714.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0714, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0714);
                 } else {
                     bi.fldgrpls0712.setVisibility(View.VISIBLE);
                     bi.fldgrpls0713.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0712, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0713, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0712);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0713);
                     bi.fldgrpls0714.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0714, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0714);
                 }
             }
         });
@@ -112,14 +112,14 @@ public class Form07Activity extends AppCompatActivity {
 
                 if (i == R.id.ls07id18b) {
                     bi.fldgrpls0713.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0713, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0713);
                     //bi.fldgrpls0714.setVisibility(View.GONE);
-                    // ClearClass.ClearAllCardFields(bi.fldgrpls0714, false);
+                    // ClearClass.ClearAllCardFields(bi.fldgrpls0714);
                 } else {
                     bi.fldgrpls0713.setVisibility(View.VISIBLE);
                     //bi.fldgrpls0714.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0713, true);
-                    //ClearClass.ClearAllCardFields(bi.fldgrpls0714, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0713);
+                    //ClearClass.ClearAllCardFields(bi.fldgrpls0714);
                 }
             }
         });

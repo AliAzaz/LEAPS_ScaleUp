@@ -167,7 +167,7 @@ public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheck
             bi.level2.setVisibility(View.VISIBLE);
         } else {
             bi.level2.setVisibility(View.GONE);
-            ClearClass.ClearAllFields(bi.level2, false);
+            ClearClass.ClearAllFields(bi.level2);
         }
     }
 
