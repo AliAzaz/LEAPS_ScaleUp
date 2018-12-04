@@ -16,7 +16,7 @@ import java.io.Serializable;
 public class Forms_04_05 implements Serializable {
 
     @Ignore
-    private final String _projectName = "National Nutrition Survey 2018";
+    private final String _projectName = "Leaps-Sup";
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -92,6 +92,7 @@ public class Forms_04_05 implements Serializable {
 
         JSONObject json = new JSONObject();
 
+        json.put("projectName", this._projectName);
         json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
 //        json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
@@ -138,7 +139,6 @@ public class Forms_04_05 implements Serializable {
         if (!this.sa6.equals("")) {
             json.put("sa6", this.sa6.equals("") ? JSONObject.NULL : new JSONObject(this.sa6));
         }
-
 
 
         return json;
@@ -387,4 +387,47 @@ public class Forms_04_05 implements Serializable {
     public void setAppversion(String appversion) {
         this.appversion = appversion;
     }
+
+
+    public class Simple_Forms_04_05 {
+
+        String ls01a05, ls01a06, ls01a07, ls01a09, ls01f03, ls01f04, ls01f05d, ls01f05m, ls01f05y;
+
+        public String getLs01a05() {
+            return ls01a05;
+        }
+
+        public String getLs01a06() {
+            return ls01a06;
+        }
+
+        public String getLs01a07() {
+            return ls01a07;
+        }
+
+        public String getLs01a09() {
+            return ls01a09;
+        }
+
+        public String getLs01f03() {
+            return ls01f03;
+        }
+
+        public String getLs01f04() {
+            return ls01f04;
+        }
+
+        public String getLs01f05d() {
+            return ls01f05d;
+        }
+
+        public String getLs01f05m() {
+            return ls01f05m;
+        }
+
+        public String getLs01f05y() {
+            return ls01f05y;
+        }
+    }
+
 }
