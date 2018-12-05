@@ -103,6 +103,7 @@
                         <EditText
                             android:id="@+id/lsid4"
                             style="@style/textInput"
+                            android:enabled="false"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"

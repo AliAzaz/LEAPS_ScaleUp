@@ -110,12 +110,15 @@ public class MainApp extends Application {
         return calendar;
     }
 
-    public static long ageInYearByDOB(String dateStr) {
+    public static long ageInYear_MonthByDOB(String dateStr, char type) {
         Calendar cal = getCalendarDate(dateStr);
-        Date dob = cal.getTime();
-        Date today = new Date();
-        Long diff = today.getTime() - dob.getTime();
-        long ageInYears = (diff / (24 * 60 * 60 * 1000)) / 365;
+        long ageInYears;
+
+        if (type == 'y')
+            ageInYears = Calendar.getInstance().get(Calendar.YEAR) - cal.get(Calendar.YEAR);
+        else
+            ageInYears = Calendar.getInstance().get(Calendar.MONTH) - cal.get(Calendar.MONTH);
+
         return ageInYears;
     }
 

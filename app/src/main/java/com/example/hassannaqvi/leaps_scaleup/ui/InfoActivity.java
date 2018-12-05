@@ -112,24 +112,6 @@ public class InfoActivity extends AppCompatActivity {
             }
         });
 
-        bi.lsid1.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                bi.fldgrpls01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrpls01);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
         /*Calling fnc*/
         routeClass = selectedForm(fTYPE);
 
@@ -195,9 +177,8 @@ public class InfoActivity extends AppCompatActivity {
                     y = sInfo_parse.getLs01f05y();
                     m = sInfo_parse.getLs01f05m();
                 } else {
-                    y = String.valueOf(MainApp.ageInYearByDOB(sInfo_parse.getLs01f03()));
-
-
+                    y = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'y'));
+                    m = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'm'));
                 }
                 bi.lsid7y.setText(y);
                 bi.lsid7m.setText(m);
@@ -210,7 +191,7 @@ public class InfoActivity extends AppCompatActivity {
                                                 sInfo_parse.getLs01a07().equals("4") ? bi.lsid10d.getId() : bi.lsid10a.getId());
 
                 for (byte i = 0; i < bi.lsid10.getChildCount(); i++) {
-                    bi.lsid10.setEnabled(false);
+                    bi.lsid10.getChildAt(i).setEnabled(false);
                 }
 
                 // Enable view
