@@ -18,10 +18,13 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityYouthInfoBinding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.google.gson.Gson;
 
 import org.json.JSONObject;
 
@@ -39,6 +42,8 @@ public class YouthInfoActivity extends AppCompatActivity {
     ActivityYouthInfoBinding bi;
     String fTYPE = "", fExt = "", deviceID;
     Class<?> routeClass;
+    Forms_04_05 youthDT;
+    Forms_04_05.Simple_Forms_04_05 sInfo_parse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,8 +82,6 @@ public class YouthInfoActivity extends AppCompatActivity {
 
             }
         });
-
-
 
         /*Calling fnc*/
         routeClass = selectedForm(fTYPE);
@@ -121,12 +124,45 @@ public class YouthInfoActivity extends AppCompatActivity {
             return;
         }
 
-        /*if (CheckingID.getIDValidation( this, bi.lsid1, fTYPE)) {
-            Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
-            bi.fldgrpls01.setVisibility(VISIBLE);
-        }*/
+        try {
+            Object youthData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildYouthRecord").execute(bi.lsyid01.getText().toString()).get();
 
-        bi.fldgrplsyid01.setVisibility(VISIBLE);
+            if (youthData != null) {
+                Toast.makeText(this, "Youth ID validate..", Toast.LENGTH_SHORT).show();
+                youthDT = (Forms_04_05) youthData;
+
+                // Youth Name
+                bi.lsyid02.setText(youthDT.getChildName());
+                // Form date of enrollment
+                bi.lsyid03.setText(youthDT.getFormDate());
+
+                sInfo_parse = new Gson().fromJson(youthDT.getSInfo(), Forms_04_05.Simple_Forms_04_05.class);
+
+                // Round Setting
+                bi.lsyid04.check(
+                        sInfo_parse.getLs01a07().equals("1") ? bi.lsyid04a.getId() :
+                                sInfo_parse.getLs01a07().equals("2") ? bi.lsyid04b.getId() :
+                                        sInfo_parse.getLs01a07().equals("3") ? bi.lsyid04c.getId() :
+                                                sInfo_parse.getLs01a07().equals("4") ? bi.lsyid04d.getId() : bi.lsyid04a.getId());
+
+                for (byte i = 0; i < bi.lsyid04.getChildCount(); i++) {
+                    bi.lsyid04.getChildAt(i).setEnabled(false);
+                }
+
+                // Enable view
+                bi.fldgrplsyid01.setVisibility(VISIBLE);
+
+            } else {
+                Toast.makeText(this, "Youth ID not found!!", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     private boolean UpdateDB() {

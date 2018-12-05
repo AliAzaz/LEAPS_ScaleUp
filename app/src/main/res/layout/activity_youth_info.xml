@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.hassannaqvi.leaps_scaleup.ui.YouthInfoActivity">
+
     <data>
+
         <import type="android.view.View" />
+
         <variable
             name="callback"
             type="com.example.hassannaqvi.leaps_scaleup.ui.YouthInfoActivity" />
@@ -17,9 +20,10 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:layoutDirection="rtl"
-        android:paddingBottom="5sp"
         android:paddingLeft="5sp"
-        android:paddingRight="5sp">
+        android:paddingRight="5sp"
+        android:paddingBottom="5sp">
+
         <LinearLayout style="@style/linerlayout_view">
 
             <!--id1-->
@@ -74,7 +78,6 @@
 
             </android.support.v7.widget.CardView>
 
-
             <LinearLayout
                 android:id="@+id/fldgrplsyid01"
                 style="@style/linerlayout_view_wt_bound"
@@ -103,6 +106,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                            android:enabled="false"
                             android:hint="@string/lsyid02" />
 
                     </LinearLayout>
@@ -128,6 +132,7 @@
                             android:id="@+id/lsyid03"
                             style="@style/textInput"
                             android:layout_margin="10dp"
+                            android:enabled="false"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"
@@ -136,7 +141,6 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
                 <!--id04-->
                 <android.support.v7.widget.CardView style="@style/cardView">
@@ -187,7 +191,6 @@
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
-
 
                 <!--End-->
                 <android.support.v7.widget.CardView style="@style/cardView">

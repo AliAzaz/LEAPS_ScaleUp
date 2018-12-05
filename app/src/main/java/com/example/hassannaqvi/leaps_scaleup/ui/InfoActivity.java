@@ -158,7 +158,7 @@ public class InfoActivity extends AppCompatActivity {
         }
 
         try {
-            Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildRecord").execute(bi.lsid1.getText().toString()).get();
+            Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildYouthRecord").execute(bi.lsid1.getText().toString()).get();
 
             if (childData != null) {
                 Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
@@ -172,7 +172,7 @@ public class InfoActivity extends AppCompatActivity {
                 sInfo_parse = new Gson().fromJson(childDT.getSInfo(), Forms_04_05.Simple_Forms_04_05.class);
 
                 // Age setting
-                String y = "", m = "";
+                String y, m;
                 if (sInfo_parse.getLs01f04().equals("2")) {
                     y = sInfo_parse.getLs01f05y();
                     m = sInfo_parse.getLs01f05m();
