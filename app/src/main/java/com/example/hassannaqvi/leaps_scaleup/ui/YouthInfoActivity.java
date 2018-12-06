@@ -19,6 +19,7 @@ import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityYouthInfoBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
@@ -42,8 +43,8 @@ public class YouthInfoActivity extends AppCompatActivity {
     ActivityYouthInfoBinding bi;
     String fTYPE = "", fExt = "", deviceID;
     Class<?> routeClass;
-    Forms_04_05 youthDT;
-    Forms_04_05.Simple_Forms_04_05 sInfo_parse;
+    Forms youthDT;
+    Forms.Simple_Forms sInfo_parse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -125,18 +126,19 @@ public class YouthInfoActivity extends AppCompatActivity {
         }
 
         try {
-            Object youthData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildYouthRecord").execute(bi.lsyid01.getText().toString()).get();
+            Object youthData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getYouthRecord").execute(bi.lsyid01.getText().toString()).get();
 
             if (youthData != null) {
                 Toast.makeText(this, "Youth ID validate..", Toast.LENGTH_SHORT).show();
-                youthDT = (Forms_04_05) youthData;
+                youthDT = (Forms) youthData;
 
-                // Youth Name
-                bi.lsyid02.setText(youthDT.getChildName());
                 // Form date of enrollment
                 bi.lsyid03.setText(youthDT.getFormDate());
 
-                sInfo_parse = new Gson().fromJson(youthDT.getSInfo(), Forms_04_05.Simple_Forms_04_05.class);
+                sInfo_parse = new Gson().fromJson(youthDT.getSa1(), Forms.Simple_Forms.class);
+
+                // Youth Name
+                /*bi.lsyid02.setText(sInfo_parse.getyo());
 
                 // Round Setting
                 bi.lsyid04.check(
@@ -147,7 +149,7 @@ public class YouthInfoActivity extends AppCompatActivity {
 
                 for (byte i = 0; i < bi.lsyid04.getChildCount(); i++) {
                     bi.lsyid04.getChildAt(i).setEnabled(false);
-                }
+                }*/
 
                 // Enable view
                 bi.fldgrplsyid01.setVisibility(VISIBLE);

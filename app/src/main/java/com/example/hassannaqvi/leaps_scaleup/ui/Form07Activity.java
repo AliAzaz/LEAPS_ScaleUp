@@ -337,52 +337,51 @@ public class Form07Activity extends AppCompatActivity {
 
         JSONObject f07 = new JSONObject();
 
-        f07.put("round", MainApp.round);
-        f07.put("ls0702", bi.ls07id02.getText().toString()); //name
+        f07.put("ls07id02", bi.ls07id02.getText().toString()); //name
 //        f07.put("ls0703", bi.ls07id03.getText().toString()); //already saving in youthID
-        f07.put("ls0706", bi.ls07id05a.isChecked() ? "1"
+        f07.put("ls07id05", bi.ls07id05a.isChecked() ? "1"
                 : bi.ls07id05b.isChecked() ? "2"
                 : bi.ls07id05c.isChecked() ? "3"
                 : "0");
-        f07.put("ls0707", bi.ls07id06.getText().toString());
-        f07.put("ls0708", bi.ls07id07.getText().toString());
+        f07.put("ls07id06", bi.ls07id06.getText().toString());
+        f07.put("ls07id07", bi.ls07id07.getText().toString());
 
-        f07.put("ls0709", bi.ls07id08a.isChecked() ? "1"
+        f07.put("ls07id08", bi.ls07id08a.isChecked() ? "1"
                 : bi.ls07id08b.isChecked() ? "2"
                 : "0");
 
-        f07.put("ls0710", bi.ls07id09a.isChecked() ? "1"
+        f07.put("ls07id09", bi.ls07id09a.isChecked() ? "1"
                 : bi.ls07id09b.isChecked() ? "2"
                 : bi.ls07id0998.isChecked() ? "98"
                 : "0");
 
-        f07.put("ls0711", bi.ls07id10a.isChecked() ? "1"
+        f07.put("ls07id10", bi.ls07id10a.isChecked() ? "1"
                 : bi.ls07id10b.isChecked() ? "2"
                 : "0");
 
-        f07.put("ls0712", bi.ls07id18a.isChecked() ? "1"
+        f07.put("ls07id18", bi.ls07id18a.isChecked() ? "1"
                 : bi.ls07id18b.isChecked() ? "2"
                 : "0");
 
-        f07.put("ls0713", bi.ls07id11.getText().toString());
+        f07.put("ls07id11", bi.ls07id11.getText().toString());
 
-        f07.put("ls0714", bi.ls07id12a.isChecked() ? "1"
+        f07.put("ls07id17", bi.ls07id17a.isChecked() ? "1"
                 : bi.ls07id17a.isChecked() ? "2"
                 : bi.ls07id17b.isChecked() ? "3"
                 : bi.ls07id17c.isChecked() ? "97"
                 : "0");
 
-        f07.put("ls0715", bi.ls07id12a.isChecked() ? "1"
+        f07.put("ls07id12", bi.ls07id12a.isChecked() ? "1"
                 : bi.ls07id12b.isChecked() ? "2"
                 : bi.ls07id12c.isChecked() ? "3"
                 : bi.ls07id12d.isChecked() ? "4"
                 : bi.ls07id1296.isChecked() ? "96"
                 : "0");
-        f07.put("ls071596x", bi.ls07id1296x.getText().toString());
+        f07.put("ls07id12x", bi.ls07id1296x.getText().toString());
 
-        f07.put("ls0716", bi.ls07id13.getText().toString());
+        f07.put("ls07id13", bi.ls07id13.getText().toString());
 
-        f07.put("ls0717", bi.ls07id14a.isChecked() ? "1"
+        f07.put("ls07id14", bi.ls07id14a.isChecked() ? "1"
                 : bi.ls07id14b.isChecked() ? "2"
                 : bi.ls07id14c.isChecked() ? "3"
                 : "0");

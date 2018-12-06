@@ -287,4 +287,10 @@ public class Forms implements Serializable {
     public void setAppversion(String appversion) {
         this.appversion = appversion;
     }
+
+    public class Simple_Forms {
+
+        String ls07id02, ls07id14;
+    }
+
 }
