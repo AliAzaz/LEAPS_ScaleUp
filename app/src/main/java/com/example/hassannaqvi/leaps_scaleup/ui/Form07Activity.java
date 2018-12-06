@@ -57,8 +57,8 @@ public class Form07Activity extends AppCompatActivity {
 
         this.setTitle(R.string.ls07Heading);
 
-        bi.ls07id06.setManager(getSupportFragmentManager());
-        bi.ls07id13.setManager(getSupportFragmentManager());
+        bi.ls07y08.setManager(getSupportFragmentManager());
+        bi.ls07y17.setManager(getSupportFragmentManager());
 
         getFtype = getIntent().getStringExtra("fType");
 
@@ -70,62 +70,55 @@ public class Form07Activity extends AppCompatActivity {
 
     private void setupViews() {
 
-        bi.ls07id08.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.ls07y10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.ls07id08b) {
+                if (i == R.id.ls07y10b) {
 
-                    bi.fldgrpls0710.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0710);
+                    bi.fldgrpls0711.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0711);
                 } else {
-                    bi.fldgrpls0710.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0710);
+                    bi.fldgrpls0711.setVisibility(View.VISIBLE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0711);
                 }
             }
         });
 
-        bi.ls07id10.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        bi.ls07y12.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if (i == R.id.ls07id10b) {
-                    bi.fldgrpls0712.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0712);
+                if (i == R.id.ls07y12b) {
+                    bi.fldgrpls0715.setVisibility(View.VISIBLE);
                     bi.fldgrpls0713.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0713);
-                    bi.fldgrpls0714.setVisibility(View.VISIBLE);
+                    bi.fldgrpls0714.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0714);
                 } else {
-                    bi.fldgrpls0712.setVisibility(View.VISIBLE);
+                    bi.fldgrpls0715.setVisibility(View.GONE);
                     bi.fldgrpls0713.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0712);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0713);
+                    bi.fldgrpls0714.setVisibility(View.VISIBLE);
+
+                }
+            }
+        });
+        bi.ls07y13.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                if (i == R.id.ls07y13a) {
+                    bi.fldgrpls0714.setVisibility(View.VISIBLE);
+                } else {
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0715);
                     bi.fldgrpls0714.setVisibility(View.GONE);
                     ClearClass.ClearAllCardFields(bi.fldgrpls0714);
                 }
             }
         });
-        bi.ls07id18.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-
-                if (i == R.id.ls07id18b) {
-                    bi.fldgrpls0713.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0713);
-                    //bi.fldgrpls0714.setVisibility(View.GONE);
-                    // ClearClass.ClearAllCardFields(bi.fldgrpls0714);
-                } else {
-                    bi.fldgrpls0713.setVisibility(View.VISIBLE);
-                    //bi.fldgrpls0714.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0713);
-                    //ClearClass.ClearAllCardFields(bi.fldgrpls0714);
-                }
-            }
-        });
 
 
-        bi.ls07id15.addTextChangedListener(new TextWatcher() {
+        bi.ls07y05.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -145,7 +138,7 @@ public class Form07Activity extends AppCompatActivity {
         });
 
         if (MainApp.round == 1) {
-            bi.fldgrpls0717.setVisibility(GONE);
+            bi.fldgrpls0718.setVisibility(GONE);
         }
 
 
@@ -197,13 +190,13 @@ public class Form07Activity extends AppCompatActivity {
     }
 
     public void BtnClusterIDValid() {
-        if (!validatorClass.EmptyTextBox(this, bi.ls07id15, getString(R.string.ls07id15))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls07y05, getString(R.string.ls07y05))) {
             return;
         }
 
         Object cluster = null;
         try {
-            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(bi.ls07id15.getText().toString()).get();
+            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(bi.ls07y05.getText().toString()).get();
 
             if (cluster != null) {
                 Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
@@ -231,88 +224,86 @@ public class Form07Activity extends AppCompatActivity {
     public boolean formValidation(boolean flag) {
 
         //2
-        if (!validatorClass.EmptyTextBox(this, bi.ls07id02, getString(R.string.ls07id02))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls07y03, getString(R.string.ls07y03))) {
             return false;
         }
         //3
-        if (!validatorClass.EmptyTextBox(this, bi.ls07id03, getString(R.string.ls07id03))) {
+        if (!validatorClass.EmptyTextBox(this, bi.ls07y04, getString(R.string.ls07y04))) {
             return false;
         }
-        if (!CheckingID.getIDValidation(this, bi.ls07id03, "8" + bi.ls07id03.getText().toString(), getFtype)) {
+        if (!CheckingID.getIDValidation(this, bi.ls07y04, "8" + bi.ls07y04.getText().toString(), getFtype)) {
             return false;
         }
 
         if (flag) {
 
             //6
-            if (!validatorClass.EmptyRadioButton(this, bi.ls07id05, bi.ls07id05a, getString(R.string.ls07id05))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07y07, bi.ls07y07a, getString(R.string.ls07y07))) {
                 return false;
             }
             //7
-            if (!validatorClass.EmptyTextBox(this, bi.ls07id06, getString(R.string.ls07id06))) {
+            if (!validatorClass.EmptyTextBox(this, bi.ls07y08, getString(R.string.ls07y08))) {
                 return false;
             }
             //8
-            if (!validatorClass.EmptyTextBox(this, bi.ls07id07, getString(R.string.ls07id07))) {
+            if (!validatorClass.EmptyTextBox(this, bi.ls07y09, getString(R.string.ls07y09))) {
                 return false;
             }
 
-            if (!validatorClass.RangeTextBox(this, bi.ls07id07, 18, 24, getString(R.string.ls07id07), "Age")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls07y09, 18, 24, getString(R.string.ls07y09), "Age")) {
                 return false;
             }
             //9
-            if (!validatorClass.EmptyRadioButton(this, bi.ls07id08, bi.ls07id08a, getString(R.string.ls07id08))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07y10, bi.ls07y10a, getString(R.string.ls07y10))) {
                 return false;
             }
-            if (bi.ls07id08a.isChecked()) {
+            if (bi.ls07y10a.isChecked()) {
                 //10
-                if (!validatorClass.EmptyRadioButton(this, bi.ls07id09, bi.ls07id09a, getString(R.string.ls07id09))) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls07y11, bi.ls07y11a, getString(R.string.ls07y11))) {
                     return false;
                 }
             }
             //11
-            if (!validatorClass.EmptyRadioButton(this, bi.ls07id10, bi.ls07id10a, getString(R.string.ls07id10))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07y12, bi.ls07y12a, getString(R.string.ls07y12))) {
                 return false;
             }
-            if (bi.ls07id10a.isChecked()) {
+            if (bi.ls07y12a.isChecked()) {
                 //12
-                if (!validatorClass.EmptyRadioButton(this, bi.ls07id18, bi.ls07id18a, getString(R.string.ls07id18))) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls07y13, bi.ls07y13a, getString(R.string.ls07y13))) {
                     return false;
                 }
-                if (bi.ls07id18a.isChecked()) {
+                if (bi.ls07y13a.isChecked()) {
                     //13
-                    if (!validatorClass.EmptyTextBox(this, bi.ls07id11, getString(R.string.ls07id11))) {
+                    if (!validatorClass.EmptyTextBox(this, bi.ls07y14, getString(R.string.ls07y14))) {
                         return false;
                     }
                     //14
-//                if (!validatorClass.EmptyRadioButton(this, bi.ls07id17, bi.ls07id17a, getString(R.string.ls07id17))) {
-//                    return false;
-//                }
+
                 }
 
             } else {
-                //14
-                if (!validatorClass.EmptyRadioButton(this, bi.ls07id17, bi.ls07id17a, getString(R.string.ls07id17))) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls07y15, bi.ls07y15a, getString(R.string.ls07y15))) {
                     return false;
                 }
+
             }
             //15
-            if (!validatorClass.EmptyRadioButton(this, bi.ls07id12, bi.ls07id12a, getString(R.string.ls07id12))) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls07y16, bi.ls07y16a, getString(R.string.ls07y16))) {
                 return false;
             }
-            if (bi.ls07id1296.isChecked()) {
-                if (!validatorClass.EmptyTextBox(this, bi.ls07id1296x, getString(R.string.ls07id12))) {
+            if (bi.ls07y1696.isChecked()) {
+                if (!validatorClass.EmptyTextBox(this, bi.ls07y1696x, getString(R.string.ls07y16))) {
                     return false;
                 }
             }
 
             //16
-            if (!validatorClass.EmptyTextBox(this, bi.ls07id13, getString(R.string.ls07id13))) {
+            if (!validatorClass.EmptyTextBox(this, bi.ls07y17, getString(R.string.ls07y17))) {
                 return false;
             }
             //17
             if (MainApp.round != 1) {
-                return validatorClass.EmptyRadioButton(this, bi.ls07id14, bi.ls07id14a, getString(R.string.ls07id14));
+                return validatorClass.EmptyRadioButton(this, bi.ls07y18, bi.ls07y18a, getString(R.string.ls07y18));
             }
         }
 
@@ -331,59 +322,58 @@ public class Form07Activity extends AppCompatActivity {
         fc.setDeviceID(deviceID);
         setGPS(fc); // Set GPS
 
-        fc.setClustercode(bi.ls07id15.getText().toString());
-        fc.setYouthID(bi.ls07id03.getText().toString());
-        fc.setStudyID(MainApp.round + "" + bi.ls07id15.getText().toString() + bi.ls07id03.getText().toString());
+        fc.setClustercode(bi.ls07y05.getText().toString());
+        fc.setYouthID(bi.ls07y04.getText().toString());
+        fc.setStudyID(MainApp.round + "" + bi.ls07y05.getText().toString() + bi.ls07y04.getText().toString());
 
         JSONObject f07 = new JSONObject();
 
-        f07.put("ls07id02", bi.ls07id02.getText().toString()); //name
+        f07.put("ls07y03", bi.ls07y03.getText().toString()); //name
 //        f07.put("ls0703", bi.ls07id03.getText().toString()); //already saving in youthID
-        f07.put("ls07id05", bi.ls07id05a.isChecked() ? "1"
-                : bi.ls07id05b.isChecked() ? "2"
-                : bi.ls07id05c.isChecked() ? "3"
+        f07.put("ls07y07", bi.ls07y07a.isChecked() ? "1"
+                : bi.ls07y07b.isChecked() ? "2"
+                : bi.ls07y07c.isChecked() ? "3"
                 : "0");
-        f07.put("ls07id06", bi.ls07id06.getText().toString());
-        f07.put("ls07id07", bi.ls07id07.getText().toString());
+        f07.put("ls07y08", bi.ls07y08.getText().toString());
+        f07.put("ls07y09", bi.ls07y09.getText().toString());
 
-        f07.put("ls07id08", bi.ls07id08a.isChecked() ? "1"
-                : bi.ls07id08b.isChecked() ? "2"
-                : "0");
-
-        f07.put("ls07id09", bi.ls07id09a.isChecked() ? "1"
-                : bi.ls07id09b.isChecked() ? "2"
-                : bi.ls07id0998.isChecked() ? "98"
+        f07.put("ls07y10", bi.ls07y10a.isChecked() ? "1"
+                : bi.ls07y10b.isChecked() ? "2"
                 : "0");
 
-        f07.put("ls07id10", bi.ls07id10a.isChecked() ? "1"
-                : bi.ls07id10b.isChecked() ? "2"
+        f07.put("ls07y11", bi.ls07y11a.isChecked() ? "1"
+                : bi.ls07y11b.isChecked() ? "2"
+                : bi.ls07y1198.isChecked() ? "98"
                 : "0");
 
-        f07.put("ls07id18", bi.ls07id18a.isChecked() ? "1"
-                : bi.ls07id18b.isChecked() ? "2"
+        f07.put("ls07y12", bi.ls07y12a.isChecked() ? "1"
+                : bi.ls07y12b.isChecked() ? "2"
                 : "0");
 
-        f07.put("ls07id11", bi.ls07id11.getText().toString());
-
-        f07.put("ls07id17", bi.ls07id17a.isChecked() ? "1"
-                : bi.ls07id17a.isChecked() ? "2"
-                : bi.ls07id17b.isChecked() ? "3"
-                : bi.ls07id17c.isChecked() ? "97"
+        f07.put("ls07y13", bi.ls07y13a.isChecked() ? "1"
+                : bi.ls07y13b.isChecked() ? "2"
                 : "0");
 
-        f07.put("ls07id12", bi.ls07id12a.isChecked() ? "1"
-                : bi.ls07id12b.isChecked() ? "2"
-                : bi.ls07id12c.isChecked() ? "3"
-                : bi.ls07id12d.isChecked() ? "4"
-                : bi.ls07id1296.isChecked() ? "96"
+        f07.put("ls07y14", bi.ls07y14.getText().toString());
+
+        f07.put("ls07y15", bi.ls07y15a.isChecked() ? "1"
+                : bi.ls07y15b.isChecked() ? "2"
+                : bi.ls07y15c.isChecked() ? "3"
                 : "0");
-        f07.put("ls07id12x", bi.ls07id1296x.getText().toString());
 
-        f07.put("ls07id13", bi.ls07id13.getText().toString());
+        f07.put("ls07y16", bi.ls07y16a.isChecked() ? "1"
+                : bi.ls07y16b.isChecked() ? "2"
+                : bi.ls07y16c.isChecked() ? "3"
+                : bi.ls07y16d.isChecked() ? "4"
+                : bi.ls07y1696.isChecked() ? "96"
+                : "0");
+        f07.put("ls07y1696x", bi.ls07y1696x.getText().toString());
 
-        f07.put("ls07id14", bi.ls07id14a.isChecked() ? "1"
-                : bi.ls07id14b.isChecked() ? "2"
-                : bi.ls07id14c.isChecked() ? "3"
+        f07.put("ls07y17", bi.ls07y17.getText().toString());
+
+        f07.put("ls07y18", bi.ls07y18a.isChecked() ? "1"
+                : bi.ls07y18b.isChecked() ? "2"
+                : bi.ls07y18c.isChecked() ? "3"
                 : "0");
 
         fc.setSa1(String.valueOf(f07));

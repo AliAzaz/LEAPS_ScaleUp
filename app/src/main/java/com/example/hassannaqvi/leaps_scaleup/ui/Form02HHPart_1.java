@@ -132,7 +132,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     bi.fldgrplspe06.setVisibility(View.VISIBLE);
                     ClearClass.ClearAllCardFields(bi.fldgrplspe04);
                     ClearClass.ClearAllCardFields(bi.fldgrplspe05);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe06);
+
                 }
             }
         });
