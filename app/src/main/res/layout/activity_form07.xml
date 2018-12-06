@@ -46,8 +46,8 @@
                         android:textColor="@android:color/white" />
 
                     <EditText
-                        style="@style/textInput"
                         android:id="@+id/ls07id15"
+                        style="@style/textInput"
                         android:digits="0123456789"
                         android:hint="@string/ls07id15"
                         android:inputType="number"

@@ -144,6 +144,10 @@ public class Form07Activity extends AppCompatActivity {
             }
         });
 
+        if (MainApp.round == 1) {
+            bi.fldgrpls0717.setVisibility(GONE);
+        }
+
 
     }
 
@@ -307,7 +311,9 @@ public class Form07Activity extends AppCompatActivity {
                 return false;
             }
             //17
-            return validatorClass.EmptyRadioButton(this, bi.ls07id14, bi.ls07id14a, getString(R.string.ls07id14));
+            if (MainApp.round != 1) {
+                return validatorClass.EmptyRadioButton(this, bi.ls07id14, bi.ls07id14a, getString(R.string.ls07id14));
+            }
         }
 
         return true;
@@ -331,8 +337,9 @@ public class Form07Activity extends AppCompatActivity {
 
         JSONObject f07 = new JSONObject();
 
-        f07.put("ls0702", bi.ls07id02.getText().toString());
-        f07.put("ls0703", bi.ls07id03.getText().toString());
+        f07.put("round", MainApp.round);
+        f07.put("ls0702", bi.ls07id02.getText().toString()); //name
+//        f07.put("ls0703", bi.ls07id03.getText().toString()); //already saving in youthID
         f07.put("ls0706", bi.ls07id05a.isChecked() ? "1"
                 : bi.ls07id05b.isChecked() ? "2"
                 : bi.ls07id05c.isChecked() ? "3"
@@ -359,13 +366,13 @@ public class Form07Activity extends AppCompatActivity {
 
         f07.put("ls0713", bi.ls07id11.getText().toString());
 
-        f07.put("ls0714                                                                                                                                                                                          ", bi.ls07id12a.isChecked() ? "1"
+        f07.put("ls0714", bi.ls07id12a.isChecked() ? "1"
                 : bi.ls07id17a.isChecked() ? "2"
                 : bi.ls07id17b.isChecked() ? "3"
                 : bi.ls07id17c.isChecked() ? "97"
                 : "0");
 
-        f07.put("ls0715                                                                                                                                                                                          ", bi.ls07id12a.isChecked() ? "1"
+        f07.put("ls0715", bi.ls07id12a.isChecked() ? "1"
                 : bi.ls07id12b.isChecked() ? "2"
                 : bi.ls07id12c.isChecked() ? "3"
                 : bi.ls07id12d.isChecked() ? "4"

@@ -158,7 +158,7 @@ public class InfoActivity extends AppCompatActivity {
         }
 
         try {
-            Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildYouthRecord").execute(bi.lsid1.getText().toString()).get();
+            Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildRecord").execute(bi.lsid1.getText().toString()).get();
 
             if (childData != null) {
                 Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
