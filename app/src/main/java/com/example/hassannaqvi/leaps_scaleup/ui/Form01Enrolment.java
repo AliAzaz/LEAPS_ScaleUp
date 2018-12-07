@@ -313,9 +313,10 @@ public class Form01Enrolment extends AppCompatActivity {
         setGPS(fc_4_5); // Set GPS
 
         fc_4_5.setClustercode(bi.ls01a05.getText().toString());
-        fc_4_5.setChildID(bi.ls01a04.getText().toString());
-        fc_4_5.setChildName(bi.ls01f01.getText().toString());
+        fc_4_5.setParticipantID(bi.ls01a04.getText().toString());
+        fc_4_5.setParticipantName(bi.ls01f01.getText().toString());
         fc_4_5.setStudyID(MainApp.round + "" + bi.ls01a05.getText().toString() + bi.ls01a04.getText().toString());
+        fc_4_5.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();
 //        f01.put("ls01a01", "");

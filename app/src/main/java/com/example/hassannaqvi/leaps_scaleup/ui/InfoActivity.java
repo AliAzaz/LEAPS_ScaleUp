@@ -165,7 +165,7 @@ public class InfoActivity extends AppCompatActivity {
                 childDT = (Forms_04_05) childData;
 
                 // Child Name
-                bi.lsid4.setText(childDT.getChildName());
+                bi.lsid4.setText(childDT.getParticipantName());
                 // Form date of enrollment
                 bi.lsid5.setText(childDT.getFormDate());
 
@@ -247,7 +247,7 @@ public class InfoActivity extends AppCompatActivity {
         fc_4_5.setUsername(MainApp.userName);
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         fc_4_5.setDeviceID(deviceID);
-        fc_4_5.setChildID(bi.lsid1.getText().toString());
+        fc_4_5.setParticipantID(bi.lsid1.getText().toString());
         fc_4_5.setClustercode(childDT.getClustercode());
 
         setGPS(fc_4_5); // Set GPS

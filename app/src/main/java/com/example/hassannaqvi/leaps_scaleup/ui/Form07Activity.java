@@ -328,6 +328,8 @@ public class Form07Activity extends AppCompatActivity {
         fc.setStudyID(MainApp.round + "" + bi.ls07y05.getText().toString() + bi.ls07y04.getText().toString());
         fc.setYouthName(bi.ls07y03.getText().toString()); //Name
 
+        fc.setRound(String.valueOf(MainApp.round));
+
         JSONObject f07 = new JSONObject();
 
 //        f07.put("ls07y03", bi.ls07y03.getText().toString());

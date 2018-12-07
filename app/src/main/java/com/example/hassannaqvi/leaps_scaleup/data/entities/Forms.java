@@ -46,6 +46,8 @@ public class Forms implements Serializable {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
+    private String round = "";
+    private String pdeviation = "";
 
     @Ignore
     public Forms(Forms forms) {
@@ -72,6 +74,8 @@ public class Forms implements Serializable {
         this.synced = forms.synced;
         this.synced_date = forms.synced_date;
         this.appversion = forms.appversion;
+        this.round = forms.round;
+        this.pdeviation = forms.pdeviation;
 
     }
 
@@ -105,6 +109,8 @@ public class Forms implements Serializable {
         json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);*/
         json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
 
+        json.put("round", this.round == null ? JSONObject.NULL : this.round);
+        json.put("pdeviation", this.pdeviation == null ? JSONObject.NULL : this.pdeviation);
 
         if (!this.sa1.equals("")) {
             json.put("sa1", this.sa1.equals("") ? JSONObject.NULL : new JSONObject(this.sa1));
@@ -296,6 +302,22 @@ public class Forms implements Serializable {
 
     public void setYouthName(String youthName) {
         this.youthName = youthName;
+    }
+
+    public String getRound() {
+        return round;
+    }
+
+    public void setRound(String round) {
+        this.round = round;
+    }
+
+    public String getPdeviation() {
+        return pdeviation;
+    }
+
+    public void setPdeviation(String pdeviation) {
+        this.pdeviation = pdeviation;
     }
 
     public class Simple_Forms {

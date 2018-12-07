@@ -54,7 +54,7 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_CLUSTERS + " where cluster_code=:clusterCode")
     Clusters getClusterRecord(String clusterCode);
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05 + " where childID=:child_id and (formType = '1a' or formType = '1b') and istatus = '1' order by id DESC")
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05 + " where participantID=:child_id and (formType = '1a' or formType = '1b') and istatus = '1' order by id DESC")
     Forms_04_05 getChildRecord(String child_id);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where youthID=:youth_id and formType='7' and istatus = '1' order by id DESC")
