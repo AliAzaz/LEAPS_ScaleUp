@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -42,6 +41,8 @@ public abstract class GeneratorClass {
                             getContainerJSON((LinearLayout) view1, false, assig_id);
                         }
                     }
+                } else if (view instanceof LinearLayout) {
+                    getContainerJSON((LinearLayout) view, false, assig_id);
                 } else if (view instanceof RadioGroup) {
 
                     RadioGroup rdp = (RadioGroup) view;
@@ -95,6 +96,7 @@ public abstract class GeneratorClass {
 
         return formJSON;
     }
+
     public static JSONObject getContainerJSON(Context context, LinearLayout lv, boolean flag, JSONObject formJSON, String... convention) {
 
         if (flag)
@@ -111,14 +113,14 @@ public abstract class GeneratorClass {
                     for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
                         View view1 = ((CardView) view).getChildAt(j);
                         if (view1 instanceof LinearLayout) {
-                            getContainerJSON(context,(LinearLayout) view1, false,formJSON, assig_id);
+                            getContainerJSON(context, (LinearLayout) view1, false, formJSON, assig_id);
                         }
                     }
-                }else if (view instanceof LinearLayout) {
+                } else if (view instanceof LinearLayout) {
                     for (int j = 0; j < ((LinearLayout) view).getChildCount(); j++) {
                         View view1 = ((LinearLayout) view).getChildAt(j);
                         if (view1 instanceof LinearLayout) {
-                            getContainerJSON(context,(LinearLayout) view1, false,formJSON, assig_id);
+                            getContainerJSON(context, (LinearLayout) view1, false, formJSON, assig_id);
                         }
                     }
                 } else if (view instanceof RadioGroup) {
@@ -151,23 +153,23 @@ public abstract class GeneratorClass {
                     /*altering as per needed*/
                     assig_id += validatorClass.getIDComponent(view);
                     String edtxtValue = ((EditText) view).getText().toString();
-                    if(edtxtValue.equals(context.getResources().getString(R.string.blue))){
-                        formJSON.put(assig_id,"1");
-                    }else if(edtxtValue.equals(context.getResources().getString(R.string.star))){
-                        formJSON.put(assig_id,"1");
-                    }else if(edtxtValue.equals(context.getResources().getString(R.string.bluestar))){
-                        formJSON.put(assig_id,"1");
-                    }else if(edtxtValue.equals(context.getResources().getString(R.string.red))){
-                        formJSON.put(assig_id,"2");
-                    }else if(edtxtValue.equals(context.getResources().getString(R.string.truck))){
-                        formJSON.put(assig_id,"2");
-                    }else if(edtxtValue.equals(context.getResources().getString(R.string.redtruck))){
-                        formJSON.put(assig_id,"2");
-                    }else if(edtxtValue.equals(context.getResources().getString(R.string.other))){
-                        formJSON.put(assig_id,"96");
-                    }else if(edtxtValue.equals(context.getResources().getString(R.string.ls04ignore))){
-                        formJSON.put(assig_id,"99");
-                    }else {
+                    if (edtxtValue.equals(context.getResources().getString(R.string.blue))) {
+                        formJSON.put(assig_id, "1");
+                    } else if (edtxtValue.equals(context.getResources().getString(R.string.star))) {
+                        formJSON.put(assig_id, "1");
+                    } else if (edtxtValue.equals(context.getResources().getString(R.string.bluestar))) {
+                        formJSON.put(assig_id, "1");
+                    } else if (edtxtValue.equals(context.getResources().getString(R.string.red))) {
+                        formJSON.put(assig_id, "2");
+                    } else if (edtxtValue.equals(context.getResources().getString(R.string.truck))) {
+                        formJSON.put(assig_id, "2");
+                    } else if (edtxtValue.equals(context.getResources().getString(R.string.redtruck))) {
+                        formJSON.put(assig_id, "2");
+                    } else if (edtxtValue.equals(context.getResources().getString(R.string.other))) {
+                        formJSON.put(assig_id, "96");
+                    } else if (edtxtValue.equals(context.getResources().getString(R.string.ls04ignore))) {
+                        formJSON.put(assig_id, "99");
+                    } else {
                         formJSON.put(assig_id, "0");
                     }
 
