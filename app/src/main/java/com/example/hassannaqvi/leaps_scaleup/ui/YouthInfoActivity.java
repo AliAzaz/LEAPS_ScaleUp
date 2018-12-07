@@ -141,7 +141,7 @@ public class YouthInfoActivity extends AppCompatActivity {
 
                 sInfo_parse = new Gson().fromJson(youthDT.getSa1(), Forms.Simple_Forms.class);
                 // Intervention Setting
-                bi.lsyid05.check(
+                bi.lsyid04.check(
                         sInfo_parse.getLs07y07().equals("1") ? bi.lsyid04a.getId() :
                                 sInfo_parse.getLs07y07().equals("2") ? bi.lsyid04b.getId() :
                                         bi.lsyid04c.getId());

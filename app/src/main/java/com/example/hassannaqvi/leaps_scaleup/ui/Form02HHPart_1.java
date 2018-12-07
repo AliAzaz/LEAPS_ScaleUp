@@ -292,16 +292,16 @@ public class Form02HHPart_1 extends AppCompatActivity {
         sHH01.put("ls02pe14", bi.ls02pe02f.getText().toString());
         sHH01.put("ls02pe15", bi.ls02pe02g.getText().toString());
 
-        sHH01.put("ls02pe16", bi.ls02pe02c01.isChecked() ? "1"
-                : bi.ls02pe02h01.isChecked() ? "2"
-                : bi.ls02pe02h02.isChecked() ? "3"
-                : bi.ls02pe02h03.isChecked() ? "4"
-                : bi.ls02pe02h04.isChecked() ? "5"
-                : bi.ls02pe02h05.isChecked() ? "6"
-                : bi.ls02pe02h06.isChecked() ? "7"
-                : bi.ls02pe02h96.isChecked() ? "96"
-                : bi.ls02pe02h98.isChecked() ? "98"
-                : "0");
+        sHH01.put("ls02pe16",
+                bi.ls02pe02h01.isChecked() ? "1"
+                        : bi.ls02pe02h02.isChecked() ? "2"
+                        : bi.ls02pe02h03.isChecked() ? "3"
+                        : bi.ls02pe02h04.isChecked() ? "4"
+                        : bi.ls02pe02h05.isChecked() ? "5"
+                        : bi.ls02pe02h06.isChecked() ? "6"
+                        : bi.ls02pe02h96.isChecked() ? "96"
+                        : bi.ls02pe02h98.isChecked() ? "98"
+                        : "0");
         sHH01.put("ls02pe1696x", bi.ls02pe02h96x.getText().toString());
 
         sHH01.put("ls02pe17", bi.ls02pe03a01.isChecked() ? "1"

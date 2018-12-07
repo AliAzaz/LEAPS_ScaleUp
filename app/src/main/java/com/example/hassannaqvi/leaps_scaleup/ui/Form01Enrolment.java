@@ -323,8 +323,8 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01a02", bi.ls01a02.getText().toString());
 //        f01.put("ls01a03", "");
 //        f01.put("ls01a04", "");
-        f01.put("ls01a05", cluster_name[3]);
-        f01.put("ls01a06", cluster_name[0]);
+        f01.put("ls01a05", cluster_name[3]); //VILLAGE
+        f01.put("ls01a06", cluster_name[0]); //DISTRICT
         f01.put("ls01a07", bi.ls01a07a.isChecked() ? "1"
                 : bi.ls01a07b.isChecked() ? "2"
                 : bi.ls01a07c.isChecked() ? "3"

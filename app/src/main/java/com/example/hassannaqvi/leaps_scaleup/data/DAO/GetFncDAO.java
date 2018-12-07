@@ -58,6 +58,6 @@ public interface GetFncDAO {
     Forms_04_05 getChildRecord(String child_id);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where youthID=:youth_id and formType='7' and istatus = '1' order by id DESC")
-    Forms_04_05 getYouthRecord(String youth_id);
+    Forms getYouthRecord(String youth_id);
 
 }
