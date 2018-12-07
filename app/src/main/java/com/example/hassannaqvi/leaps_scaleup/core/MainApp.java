@@ -29,6 +29,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+
 public class MainApp extends Application {
 
 
@@ -38,7 +39,8 @@ public class MainApp extends Application {
     public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/api/";
     // public static final String TEST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/api/";
 
-    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp_recruit_form/app/app-debug.apk";
+    //    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp_recruit_form/app/app-debug.apk";
+    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/app/app-debug.apk";
 
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
@@ -88,6 +90,7 @@ public class MainApp extends Application {
     public static final String FORM07 = "7";
     public static final String FORM08 = "8";
     public static final String FORM09 = "9";
+    public static final String FORM14 = "14";
 
     protected static LocationManager locationManager;
 
