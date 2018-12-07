@@ -1321,14 +1321,15 @@
     <string name="lsyid01">فيميل يوٿ  جي ID</string>
     <string name="lsyid02">فيميل يوٿ جو نالو ۽ ذات</string>
     <string name="lsyid03">انٽرويو جي تاريخ</string>
-    <string name="lsyid04">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي؟</string>
-    <string name="lsyid04a"> بيس لائين </string>
-    <string name="lsyid04b"> اسٽيپ 1 </string>
-    <string name="lsyid04c"> اسٽيپ 2 </string>
-    <string name="lsyid04d"> اسٽيپ 3 </string>
-    <string name="lsyid05">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي</string>
-    <string name="lsyid06">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي</string>
-    <string name="lsyid07">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي</string>
+    <string name="lsyid04">فيميل يوٿ جوگروپ</string>
+    <string name="lsyid04a"> انٽروينشن </string>
+    <string name="lsyid04b"> ڪنٽرول </string>
+    <string name="lsyid04c"> گروپ نه ڏنو آهي </string>
+    <string name="lsyid05">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي؟</string>
+    <string name="lsyid05a"> بيس لائين </string>
+    <string name="lsyid05b"> اسٽيپ 1 </string>
+    <string name="lsyid05c"> اسٽيپ 2 </string>
+    <string name="lsyid05d"> اسٽيپ 3 </string>
 
 
 </resources>

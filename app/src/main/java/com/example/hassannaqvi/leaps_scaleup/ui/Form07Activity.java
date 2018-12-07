@@ -47,6 +47,7 @@ public class Form07Activity extends AppCompatActivity {
     String getFtype = "", deviceID;
 
     public static Forms fc;
+    String[] cluster_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -200,7 +201,7 @@ public class Form07Activity extends AppCompatActivity {
 
             if (cluster != null) {
                 Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
-                String[] cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
+                cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
                 bi.ls01aDis.setText(cluster_name[0]);
                 bi.ls01aTeh.setText(cluster_name[1]);
                 bi.ls01aUC.setText(cluster_name[2]);
@@ -325,11 +326,12 @@ public class Form07Activity extends AppCompatActivity {
         fc.setClustercode(bi.ls07y05.getText().toString());
         fc.setYouthID(bi.ls07y04.getText().toString());
         fc.setStudyID(MainApp.round + "" + bi.ls07y05.getText().toString() + bi.ls07y04.getText().toString());
+        fc.setYouthName(bi.ls07y03.getText().toString()); //Name
 
         JSONObject f07 = new JSONObject();
 
-        f07.put("ls07y03", bi.ls07y03.getText().toString()); //name
-//        f07.put("ls0703", bi.ls07id03.getText().toString()); //already saving in youthID
+//        f07.put("ls07y03", bi.ls07y03.getText().toString());
+        f07.put("ls01a06", cluster_name[0]); //District
         f07.put("ls07y07", bi.ls07y07a.isChecked() ? "1"
                 : bi.ls07y07b.isChecked() ? "2"
                 : bi.ls07y07c.isChecked() ? "3"

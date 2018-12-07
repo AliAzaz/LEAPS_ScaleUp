@@ -34,6 +34,7 @@ public class Forms implements Serializable {
     private String endtime = "";
     private String clustercode = "";
     private String youthID = "";
+    private String youthName = "";
     private String studyID = "";
     private String gpsLat = "";
     private String gpsLng = "";
@@ -59,6 +60,7 @@ public class Forms implements Serializable {
         this.endtime = forms.endtime;
         this.clustercode = forms.clustercode;
         this.youthID = forms.youthID;
+        this.youthName = forms.youthName;
         this.studyID = forms.studyID;
         this.gpsLat = forms.gpsLat;
         this.gpsLng = forms.gpsLng;
@@ -88,7 +90,7 @@ public class Forms implements Serializable {
         json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("youthID", this.youthID == null ? JSONObject.NULL : this.youthID);
-
+        json.put("youthName", this.youthName == null ? JSONObject.NULL : this.youthName);
         json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
         json.put("clustercode", this.clustercode == null ? JSONObject.NULL : this.clustercode);
         json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
@@ -288,9 +290,29 @@ public class Forms implements Serializable {
         this.appversion = appversion;
     }
 
+    public String getYouthName() {
+        return youthName;
+    }
+
+    public void setYouthName(String youthName) {
+        this.youthName = youthName;
+    }
+
     public class Simple_Forms {
 
-        String ls07id02, ls07id14;
+        String ls01a06, ls07y07, ls07y18;
+
+        public String getLs01a06() {
+            return ls01a06;
+        }
+
+        public String getLs07y07() {
+            return ls07y07;
+        }
+
+        public String getLs07y18() {
+            return ls07y18;
+        }
     }
 
 }
