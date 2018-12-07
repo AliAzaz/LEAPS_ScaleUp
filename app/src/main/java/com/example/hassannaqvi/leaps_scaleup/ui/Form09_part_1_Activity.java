@@ -68,11 +68,11 @@ public class Form09_part_1_Activity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                if(i == bi.ls09j01b.getId()){
+                if (i == bi.ls09j01b.getId()) {
                     ClearClass.ClearAllFields(bi.fldgrpls09j02a);
                     bi.ls09j0299.setChecked(false);
 
-                }else{
+                } else {
                     ClearClass.ClearAllFields(bi.fldgrpls09j02a);
 
                 }
@@ -148,7 +148,7 @@ public class Form09_part_1_Activity extends AppCompatActivity {
         f09_1.put("ls09j02a", bi.ls09j02a.isChecked() ? "1" : "0");
         f09_1.put("ls09j02b", bi.ls09j02b.isChecked() ? "2" : "0");
         f09_1.put("ls09j02c", bi.ls09j02c.isChecked() ? "3" : "0");
-        f09_1.put("ls09j02d", bi.ls09j02d.isChecked() ? "4" : "0");
+        f09_1.put("ls09j02d", bi.ls09j02d.isChecked() ? "98" : "0");
         f09_1.put("ls09j0299", bi.ls09j0299.isChecked() ? "99" : "0");
 
         f09_1.put("ls09j03a",
@@ -231,30 +231,35 @@ public class Form09_part_1_Activity extends AppCompatActivity {
                 bi.ls09fm01a.isChecked() ? "1"
                         : bi.ls09fm01b.isChecked() ? "2"
                         : bi.ls09fm01c.isChecked() ? "3"
+                        : bi.ls09fm01d.isChecked() ? "4"
                         : bi.ls09fm0199.isChecked() ? "99"
                         : "0");
         f09_1.put("ls09fm02",
                 bi.ls09fm02a.isChecked() ? "1"
                         : bi.ls09fm02b.isChecked() ? "2"
                         : bi.ls09fm02c.isChecked() ? "3"
+                        : bi.ls09fm02d.isChecked() ? "4"
                         : bi.ls09fm0299.isChecked() ? "99"
                         : "0");
         f09_1.put("ls09fm03",
                 bi.ls09fm03a.isChecked() ? "1"
                         : bi.ls09fm03b.isChecked() ? "2"
                         : bi.ls09fm03c.isChecked() ? "3"
+                        : bi.ls09fm03d.isChecked() ? "4"
                         : bi.ls09fm0399.isChecked() ? "99"
                         : "0");
         f09_1.put("ls09fm04",
                 bi.ls09fm04a.isChecked() ? "1"
                         : bi.ls09fm04b.isChecked() ? "2"
                         : bi.ls09fm04c.isChecked() ? "3"
+                        : bi.ls09fm04d.isChecked() ? "4"
                         : bi.ls09fm0499.isChecked() ? "99"
                         : "0");
         f09_1.put("ls09fm05",
                 bi.ls09fm05a.isChecked() ? "1"
                         : bi.ls09fm05b.isChecked() ? "2"
                         : bi.ls09fm05c.isChecked() ? "3"
+                        : bi.ls09fm05d.isChecked() ? "3"
                         : bi.ls09fm0599.isChecked() ? "99"
                         : "0");
 
@@ -371,7 +376,7 @@ public class Form09_part_1_Activity extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls09j01, bi.ls09j01a, getString(R.string.ls09j01))) {
             return false;
         }
-        if(!bi.ls09j01b.isChecked()){
+        if (!bi.ls09j01b.isChecked()) {
             if (!bi.ls09j0299.isChecked()) {
                 if (!validatorClass.EmptyCheckBox(this, bi.fldgrpls09j02a, bi.ls09j02a, getString(R.string.ls09j02))) {
                     return false;

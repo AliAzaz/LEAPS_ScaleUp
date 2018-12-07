@@ -1498,7 +1498,7 @@
                         <EditText
                             android:id="@+id/ls04bc06"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height=" "
                             android:layout_weight="1"
                             android:enabled="false"
                             android:gravity="center"

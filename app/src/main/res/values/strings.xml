@@ -226,7 +226,7 @@
     <string name="ls02se02c"> رھائش بغير ڪرائي جي (گڏيل گھر) ڪمپني / زميندار جي طرفان مليل گھر </string>
     <string name="ls02se02d"> گروي </string>
     <string name="ls02se02e"> ٻيو ڪو </string>
-    <string name="ls02se03"> جيڪڏھن گھر ڪرائي تي آھي ته ان جوماهوار ڪرايو ڪيترو آھي؟ </string>
+    <string name="xls02se03"> جيڪڏھن گھر ڪرائي تي آھي ته ان جوماهوار ڪرايو ڪيترو آھي؟ </string>
     <string name="ls02se03a"> روپيه </string>
     <string name="ls02se04"> ھن گھر ۾ ڪيترا ڪمرا صرف سمھڻ جي لاءِ استعمال ڪيا ويندا آھن؟ </string>
     <string name="ls02se04a"> ڪمرن جو تعداد </string>
@@ -427,10 +427,8 @@
 هي فارم تڏهن ئي مڪمل ڪريو جڏهن اجازت ملي ۽ راضي نامي تي صحيح ٿيل هجي.
 پراجيڪٽ ڊيويئشن ارم مڪمل ڪريو جيڪڏهن فارم پرٽوڪول کان هٽي ڪري مڪمل ڪيو ويو هجي.
  </string>
-    <string name="ls07id01"> اسيسر جي ID </string>
     <string name="ls07y03"> فيميل يوٿ جو نالو ۽ ذات </string>
     <string name="ls07y04"> یوتھ ID </string>
-    <string name="ls07id04"> ضلعو </string>
     <string name="ls07y07"> فيميل يوٿ جوگروپ </string>
     <string name="ls07y07a"> انٽروينشن </string>
     <string name="ls07y07b"> ڪنٽرول </string>
@@ -453,7 +451,6 @@
     <string name="ls07y18b">اسٽيپ 2 </string>
     <string name="ls07y18c">اسٽيپ 3 </string>
     <string name="ls07y05"> ڳوٺ جي ID </string>
-    <string name="ls07id16"> ضلعو </string>
     <string name="ls07y15"> فيميل يوٿ جي منڱڻي ٿيل آهي؟ </string>
     <string name="ls07y13"> فيميل يوٿ کي ٻار آهن؟ </string>
 
