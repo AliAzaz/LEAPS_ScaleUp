@@ -41,8 +41,6 @@ public abstract class GeneratorClass {
                             getContainerJSON((LinearLayout) view1, false, assig_id);
                         }
                     }
-                } else if (view instanceof LinearLayout) {
-                    getContainerJSON((LinearLayout) view, false, assig_id);
                 } else if (view instanceof RadioGroup) {
 
                     RadioGroup rdp = (RadioGroup) view;

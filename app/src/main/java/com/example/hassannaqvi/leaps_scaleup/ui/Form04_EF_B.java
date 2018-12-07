@@ -77,13 +77,14 @@ public class Form04_EF_B extends AppCompatActivity {
 
         return false;
     }
+
     public static JSONObject mergeJSONObjects(JSONObject Obj1, JSONObject Obj2) {
         JSONObject merged = new JSONObject();
-        JSONObject[] objs = new JSONObject[] { Obj1, Obj2 };
+        JSONObject[] objs = new JSONObject[]{Obj1, Obj2};
         for (JSONObject obj : objs) {
             Iterator it = obj.keys();
             while (it.hasNext()) {
-                String key = (String)it.next();
+                String key = (String) it.next();
                 try {
                     merged.put(key, obj.get(key));
                 } catch (JSONException e) {
@@ -93,9 +94,10 @@ public class Form04_EF_B extends AppCompatActivity {
         }
         return merged;
     }
+
     private void SaveDraft() {
         JSONObject localJson;
-        JSONObject Json1 = GeneratorClass.getContainerJSON(this,bi.fldgrpls04b, false,new JSONObject());
+        JSONObject Json1 = GeneratorClass.getContainerJSON(this, bi.fldgrpls04b, true, new JSONObject());
         /*JSONObject Json2 = GeneratorClass.getContainerJSON(this,bi.level2, false,new JSONObject());
         localJson = mergeJSONObjects(Json1,Json2);*/
 
@@ -113,7 +115,7 @@ public class Form04_EF_B extends AppCompatActivity {
 
     private boolean formValidation() {
 
-          return validatorClass.EmptyCheckingContainer(this, bi.fldgrpls04b);
+        return validatorClass.EmptyCheckingContainer(this, bi.fldgrpls04b);
 //        return true;
     }
 
