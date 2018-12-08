@@ -98,16 +98,19 @@ public class Form04_EF_B extends AppCompatActivity {
     private void SaveDraft() {
         JSONObject localJson;
         JSONObject Json1 = GeneratorClass.getContainerJSON(this, bi.fldgrpls04b, true, new JSONObject());
-        /*JSONObject Json2 = GeneratorClass.getContainerJSON(this,bi.level2, false,new JSONObject());
-        localJson = mergeJSONObjects(Json1,Json2);*/
+        JSONObject Json2 = GeneratorClass.getContainerJSON(this,bi.level2, true,new JSONObject());
+        localJson = mergeJSONObjects(Json1,Json2);
 
-        JSONObject Json2 = new JSONObject();
+        JSONObject Json3 = GeneratorClass.getContainerJSON(this,bi.level3, true,new JSONObject());
+        localJson = mergeJSONObjects(localJson,Json3);
+
+        JSONObject Json4 = new JSONObject();
         try {
-            Json2.put("ls04bt", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+            Json4.put("ls04bt", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        localJson = mergeJSONObjects(Json1, Json2);
+        localJson = mergeJSONObjects(localJson, Json4);
         InfoActivity.fc_4_5.setSa2(String.valueOf(localJson));
 
         Log.d("F4-EF-B", String.valueOf(localJson));
@@ -115,7 +118,7 @@ public class Form04_EF_B extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return validatorClass.EmptyCheckingContainer(this, bi.fldgrpls04b);
+        return validatorClass.EmptyCheckingContainerForButtons(this, bi.fldgrpls04b);
 //        return true;
     }
 
@@ -163,6 +166,7 @@ public class Form04_EF_B extends AppCompatActivity {
         int sumofF = ls04bf01 + ls04bf02 + ls04bf03 + ls04bf04 + ls04bf05 + ls04bf06;
         if (sumofC >= 5) {
             bi.level2.setVisibility(VISIBLE);
+
         } else {
             bi.level2.setVisibility(GONE);
             bi.ls04bd01a.setText(null);
@@ -180,6 +184,20 @@ public class Form04_EF_B extends AppCompatActivity {
             bi.ls04bf04.setText(null);
             bi.ls04bf05.setText(null);
             bi.ls04bf06.setText(null);
+            bi.ls04bg01.setText(null);
+            bi.ls04bg02.setText(null);
+            bi.ls04bg03.setText(null);
+            bi.ls04bg04.setText(null);
+            bi.ls04bg05.setText(null);
+            bi.ls04bg06.setText(null);
+            bi.ls04bg07.setText(null);
+            bi.ls04bg08.setText(null);
+            bi.ls04bg09.setText(null);
+            bi.ls04bg10.setText(null);
+            bi.ls04bg11.setText(null);
+            bi.ls04bg12.setText(null);
+
+            bi.level3.setVisibility(GONE);
             bi.ls04bg01.setText(null);
             bi.ls04bg02.setText(null);
             bi.ls04bg03.setText(null);

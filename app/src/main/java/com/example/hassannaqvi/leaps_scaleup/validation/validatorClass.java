@@ -300,6 +300,35 @@ public abstract class validatorClass {
         }
         return true;
     }
+    public static boolean EmptyCheckingContainerForButtons(Context context, LinearLayout lv) {
+
+
+        for (int i = 0; i < lv.getChildCount(); i++) {
+            View view = lv.getChildAt(i);
+
+          /*  if (view.getVisibility() == View.GONE || !view.isEnabled())
+                continue;*/
+            if (view.getVisibility() == View.GONE )
+                continue;
+
+            if (view instanceof CardView) {
+                for (int j = 0; j < ((CardView) view).getChildCount(); j++) {
+                    View view1 = ((CardView) view).getChildAt(j);
+                    if (view1 instanceof LinearLayout) {
+                        if (!EmptyCheckingContainerForButtons(context, (LinearLayout) view1)) {
+                            return false;
+                        }
+                    }
+                }
+            } else if (view instanceof EditText) {
+                if (!EmptyTextBox(context, (EditText) view, getString(context, getIDComponent(view)))) {
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
 
 
     public static String getIDComponent(View view) {
