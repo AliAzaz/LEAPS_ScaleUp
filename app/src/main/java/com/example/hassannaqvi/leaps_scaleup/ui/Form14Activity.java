@@ -17,9 +17,13 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm14Binding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,6 +32,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
+import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public class Form14Activity extends AppCompatActivity {
@@ -37,6 +42,9 @@ public class Form14Activity extends AppCompatActivity {
 
     public static Forms fc;
     String getFtype = "", deviceID;
+    Forms_04_05 participantDT;
+    Forms _participantDT;
+    Boolean isFormType7 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,9 +83,68 @@ public class Form14Activity extends AppCompatActivity {
     public void checkID() {
         //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
         if (validatorClass.EmptyRadioButton(this, bi.ls14a, bi.ls14a01, getString(R.string.ls14)) && !TextUtils.isEmpty(bi.ls14b.getText().toString())) {
-            bi.mainLayout1.setVisibility(View.VISIBLE);
+            /*bi.mainLayout1.setVisibility(View.VISIBLE);
             bi.ls14a01.setError(null);
-            bi.ls14b.setError(null);
+            bi.ls14b.setError(null);*/
+            try {
+                Object participantExists = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "checkParticipantExist").execute(bi.ls14b.getText().toString());
+
+                if (participantExists != null) {
+                    try {
+                        Object participantData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecord").execute(bi.ls14b.getText().toString()).get();
+
+                        if (participantData != null) {
+                            isFormType7 = false;
+                            participantDT = (Forms_04_05) participantData;
+                            // Enable view
+                            bi.mainLayout1.setVisibility(View.VISIBLE);
+                            bi.ls14a01.setError(null);
+                            bi.ls14b.setError(null);
+                        } else {
+                            Toast.makeText(this, "You are not allowed to enter deviation form for this participant!!", Toast.LENGTH_SHORT).show();
+                            bi.mainLayout1.setVisibility(View.GONE);
+                            bi.ls1403.setText("");
+                            bi.ls1404.setText("");
+                            bi.ls1405.setText("");
+                            bi.ls1406.clearCheck();
+                            bi.ls1407.clearCheck();
+                            bi.ls1408.setText("");
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+
+                        Object participantExistsinform7 = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordForm7").execute(bi.ls14b.getText().toString());
+
+                        if (participantExistsinform7 != null) {
+                            isFormType7 = true;
+                            _participantDT = (Forms) participantExistsinform7;
+                            // Enable view
+                            bi.mainLayout1.setVisibility(View.VISIBLE);
+                            bi.ls14a01.setError(null);
+                            bi.ls14b.setError(null);
+
+
+                        } else {
+                            Toast.makeText(this, "Participant ID not found!!!", Toast.LENGTH_SHORT).show();
+                            bi.mainLayout1.setVisibility(View.GONE);
+                            bi.ls1403.setText("");
+                            bi.ls1404.setText("");
+                            bi.ls1405.setText("");
+                            bi.ls1406.clearCheck();
+                            bi.ls1407.clearCheck();
+                            bi.ls1408.setText("");
+                        }
+
+
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         } else {
             Toast.makeText(this, "Please enter ID", Toast.LENGTH_SHORT).show();
             bi.ls14a01.setError("Please Enter participant ID");
@@ -90,6 +157,8 @@ public class Form14Activity extends AppCompatActivity {
             bi.ls1407.clearCheck();
             bi.ls1408.setText("");
         }
+
+
     }
 
     private void SaveDraft() throws JSONException {
@@ -103,11 +172,17 @@ public class Form14Activity extends AppCompatActivity {
         setGPS(fc); // Set GPS
 
         fc.setClustercode(bi.ls1404.getText().toString());
-//        fc.setparticipantID(bi.ls14b.getText().toString());
+        fc.setYouthID(bi.ls14b.getText().toString());
+        fc.setRound("1");
         fc.setStudyID(MainApp.round + "" + bi.ls1404.getText().toString() + bi.ls14b.getText().toString());
-
         JSONObject sF14 = new JSONObject();
-
+        if (!isFormType7) {
+            fc.setYouthName(participantDT.getParticipantName());
+            sF14.put("uuid", participantDT.getUid());
+        } else {
+            fc.setYouthName(_participantDT.getYouthName());
+            sF14.put("uuid", _participantDT.getUid());
+        }
         sF14.put("ls1403", bi.ls1403.getText().toString());
         sF14.put("ls1404", bi.ls1404.getText().toString());
         sF14.put("ls1405", bi.ls1405.getText().toString());
