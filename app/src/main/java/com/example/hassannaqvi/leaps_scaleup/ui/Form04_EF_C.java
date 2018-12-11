@@ -194,7 +194,7 @@ public class Form04_EF_C extends AppCompatActivity {
         }
         localJson = mergeJSONObjects(Json, Json2);
         InfoActivity.fc_4_5.setSa3(String.valueOf(localJson));
-        Log.d("F5-BA", String.valueOf(localJson));
+        Log.d("F4-EF-C", String.valueOf(localJson));
 
 
     }

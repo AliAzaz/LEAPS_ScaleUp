@@ -161,21 +161,23 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
     private void SaveDraft() {
         JSONObject localJson;
         JSONObject Json1 = GeneratorClass.getContainerJSON(bi.flgGrpls04a, true);
-        JSONObject Json2 = GeneratorClass.getContainerJSON(bi.level2, true);
+        JSONObject Json2 = GeneratorClass.getContainerJSON(bi.fldgrpadmin, true);
         localJson = mergeJSONObjects(Json1,Json2);
-        JSONObject Json3 = GeneratorClass.getContainerJSON(bi.level3, true);
+        JSONObject Json3 = GeneratorClass.getContainerJSON(bi.level2, true);
         localJson = mergeJSONObjects(localJson,Json3);
-        JSONObject Json4 = GeneratorClass.getContainerJSON(bi.level4, true);
+        JSONObject Json4 = GeneratorClass.getContainerJSON(bi.level3, true);
         localJson = mergeJSONObjects(localJson,Json4);
-        JSONObject Json5 = GeneratorClass.getContainerJSON(bi.level5, true);
+        JSONObject Json5 = GeneratorClass.getContainerJSON(bi.level4, true);
         localJson = mergeJSONObjects(localJson,Json5);
-        JSONObject Json6 = new JSONObject();
+        JSONObject Json6 = GeneratorClass.getContainerJSON(bi.level5, true);
+        localJson = mergeJSONObjects(localJson,Json6);
+        JSONObject Json7 = new JSONObject();
         try {
-            Json6.put("ls04at", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+            Json7.put("ls04at", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        localJson = mergeJSONObjects(localJson, Json6);
+        localJson = mergeJSONObjects(localJson, Json7);
 
 
         InfoActivity.fc_4_5.setSa1(String.valueOf(localJson));
