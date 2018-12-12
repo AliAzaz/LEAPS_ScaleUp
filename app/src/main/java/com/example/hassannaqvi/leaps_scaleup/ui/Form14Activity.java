@@ -117,27 +117,27 @@ public class Form14Activity extends AppCompatActivity {
                     }
                 } else {
 
-                        Object participantExistsinform7 = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordForm7").execute(bi.ls14b.getText().toString());
+                    Object participantExistsinform7 = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordForm7").execute(bi.ls14b.getText().toString());
 
-                        if (participantExistsinform7 != null) {
-                            isFormType7 = true;
-                            _participantDT = (Forms) participantExistsinform7;
-                            // Enable view
-                            bi.mainLayout1.setVisibility(View.VISIBLE);
-                            bi.ls14a01.setError(null);
-                            bi.ls14b.setError(null);
+                    if (participantExistsinform7 != null) {
+                        isFormType7 = true;
+                        _participantDT = (Forms) participantExistsinform7;
+                        // Enable view
+                        bi.mainLayout1.setVisibility(View.VISIBLE);
+                        bi.ls14a01.setError(null);
+                        bi.ls14b.setError(null);
 
 
-                        } else {
-                            Toast.makeText(this, "Participant ID not found!!!", Toast.LENGTH_SHORT).show();
-                            bi.mainLayout1.setVisibility(View.GONE);
-                            bi.ls1403.setText("");
-                            bi.ls1404.setText("");
-                            bi.ls1405.setText("");
-                            bi.ls1406.clearCheck();
-                            bi.ls1407.clearCheck();
-                            bi.ls1408.setText("");
-                        }
+                    } else {
+                        Toast.makeText(this, "Participant ID not found!!!", Toast.LENGTH_SHORT).show();
+                        bi.mainLayout1.setVisibility(View.GONE);
+                        bi.ls1403.setText("");
+                        bi.ls1404.setText("");
+                        bi.ls1405.setText("");
+                        bi.ls1406.clearCheck();
+                        bi.ls1407.clearCheck();
+                        bi.ls1408.setText("");
+                    }
 
 
                 }
