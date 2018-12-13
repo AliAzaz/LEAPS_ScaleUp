@@ -141,6 +141,7 @@
             android:name=".ui.Form04_EF_D"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" >
+
         </activity>
         <activity
             android:name=".ui.Form04_EF_E"
@@ -163,16 +164,23 @@
         <activity
             android:name=".ui.Form08_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1" >
+
+
+        </activity>
         <activity
             android:name=".ui.Form08_EF_B"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1" >
+
+        </activity>
 
         <activity
             android:name=".ui.Form08_EF_D"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1" >
+
+        </activity>
 
         <activity
             android:name=".ui.Form08_EF_E"
@@ -184,7 +192,9 @@
         <activity
             android:name=".ui.Form08_EF_C"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1" >
+
+        </activity>
         <activity
             android:name=".ui.Form14Activity"
             android:screenOrientation="portrait"
