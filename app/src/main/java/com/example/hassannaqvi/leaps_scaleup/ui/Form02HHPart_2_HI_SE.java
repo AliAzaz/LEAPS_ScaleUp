@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -48,10 +50,10 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
 
                 if (i != R.id.ls02se02b) {
                     bi.fldgrpls0207.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0207, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0207);
                 } else {
                     bi.fldgrpls0207.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0207, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0207);
                 }
 
             }
@@ -63,10 +65,10 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
 
                 if (i != R.id.ls02se09a) {
                     bi.fldgrpls0214.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0214, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0214);
                 } else {
                     bi.fldgrpls0214.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls0214, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls0214);
                 }
             }
         });
@@ -138,7 +140,7 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
         sHI_SE.put("ls02se0496x", bi.ls02se0296x.getText().toString());
 
         sHI_SE.put("ls02se0598", bi.ls02se0398.isChecked() ? "98" : "0");
-        sHI_SE.put("ls02se0598x", bi.ls02se03.getText().toString());
+        sHI_SE.put("ls02se05", bi.ls02se03.getText().toString());
 
         sHI_SE.put("ls02se06", bi.ls02se04.getText().toString());
 
@@ -163,7 +165,7 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
 
 
         sHI_SE.put("ls02se0898", bi.ls02se0698.isChecked() ? "98" : "0");
-        sHI_SE.put("ls02se0898x", bi.ls02se06.getText().toString());
+        sHI_SE.put("ls02se08", bi.ls02se06.getText().toString());
 
         sHI_SE.put("ls02se09", bi.ls02se07a.isChecked() ? "1"
                 : bi.ls02se07b.isChecked() ? "2"
@@ -185,7 +187,7 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
         sHI_SE.put("ls02se1196x", bi.ls02se0996x.getText().toString());
 
         sHI_SE.put("ls02se1298", bi.ls02se1098.isChecked() ? "98" : "0");
-        sHI_SE.put("ls02se1298x", bi.ls02se10.getText().toString());
+        sHI_SE.put("ls02se12", bi.ls02se10.getText().toString());
 
         sHI_SE.put("ls02se13", bi.ls02se11a.isChecked() ? "1"
                 : bi.ls02se11b.isChecked() ? "2"
@@ -197,10 +199,10 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
         sHI_SE.put("ls02se1396x", bi.ls02se1196x.getText().toString());
 
         sHI_SE.put("ls02se1498", bi.ls02se1298.isChecked() ? "98" : "0");
-        sHI_SE.put("ls02se1498x", bi.ls02se12.getText().toString());
+        sHI_SE.put("ls02se14", bi.ls02se12.getText().toString());
 
         sHI_SE.put("ls02se1598", bi.ls02se1398.isChecked() ? "98" : "0");
-        sHI_SE.put("ls02se1598x", bi.ls02se13.getText().toString());
+        sHI_SE.put("ls02se15", bi.ls02se13.getText().toString());
 
         sHI_SE.put("ls02se16", bi.ls02se14a01.isChecked() ? "1"
                 : bi.ls02se14a02.isChecked() ? "2"
@@ -249,6 +251,9 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
             return false;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls02hi02, getString(R.string.ls02hi02))) {
+            return false;
+        }
+        if(!validatorClass.RangeTextBox(this,bi.ls02hi02,2,99,getString(R.string.ls02hi02),"Age")){
             return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls02se01a, bi.ls02se01a01, getString(R.string.ls02se01a))) {

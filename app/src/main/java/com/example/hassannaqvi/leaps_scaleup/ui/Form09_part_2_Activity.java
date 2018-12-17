@@ -41,9 +41,9 @@ public class Form09_part_2_Activity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
                 if(i == bi.ls09efaa05a01.getId()){
-                    ClearClass.ClearAllCardFields(bi.fldgrplspl05b,true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspl05b);
                 }else{
-                    ClearClass.ClearAllCardFields(bi.fldgrplspl05b,false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspl05b);
                 }
             }
         });

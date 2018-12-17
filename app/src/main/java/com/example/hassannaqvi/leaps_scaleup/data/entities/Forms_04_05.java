@@ -16,7 +16,7 @@ import java.io.Serializable;
 public class Forms_04_05 implements Serializable {
 
     @Ignore
-    private final String _projectName = "National Nutrition Survey 2018";
+    private final String _projectName = "Leaps-Sup";
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -27,8 +27,8 @@ public class Forms_04_05 implements Serializable {
     private String uid = "";
     private String formDate = ""; // Date
     private String username = ""; // Interviewer
-    private String childID = ""; // Child ID
-    private String childName = ""; // Child Name
+    private String participantID = ""; // Child ID
+    private String participantName = ""; // Child Name
     private String sInfo = "";   // Section Info
     private String sa1 = "";     // Section 1
     private String sa2 = "";     // Section 2
@@ -51,6 +51,8 @@ public class Forms_04_05 implements Serializable {
     private String synced = "";
     private String synced_date = "";
     private String appversion = "";
+    private String round = "";
+    private String pdeviation = ""; // Protocol Deviation Form
 
     @Ignore
     public Forms_04_05(Forms_04_05 forms) {
@@ -60,8 +62,8 @@ public class Forms_04_05 implements Serializable {
         this.uid = forms.uid;
         this.formDate = forms.formDate;
         this.username = forms.username;
-        this.childID = forms.childID;
-        this.childName = forms.childName;
+        this.participantID = forms.participantID;
+        this.participantName = forms.participantName;
         this.studyID = forms.studyID;
         this.sInfo = forms.sInfo;
         this.sa1 = forms.sa1;
@@ -84,6 +86,8 @@ public class Forms_04_05 implements Serializable {
         this.synced = forms.synced;
         this.synced_date = forms.synced_date;
         this.appversion = forms.appversion;
+        this.round = forms.round;
+        this.pdeviation = forms.pdeviation;
 
     }
 
@@ -92,14 +96,15 @@ public class Forms_04_05 implements Serializable {
 
         JSONObject json = new JSONObject();
 
+        json.put("projectName", this._projectName);
         json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
 //        json.put("uuid", this.uuid == null ? JSONObject.NULL : this.uuid);
         json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
         json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
         json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
-        json.put("childID", this.childID == null ? JSONObject.NULL : this.childID);
-        json.put("childName", this.childName == null ? JSONObject.NULL : this.childName);
+        json.put("participantID", this.participantID == null ? JSONObject.NULL : this.participantID);
+        json.put("participantName", this.participantName == null ? JSONObject.NULL : this.participantName);
 
         json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
         json.put("clustercode", this.clustercode == null ? JSONObject.NULL : this.clustercode);
@@ -116,6 +121,9 @@ public class Forms_04_05 implements Serializable {
         json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);*/
         json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
+
+        json.put("round", this.round == null ? JSONObject.NULL : this.round);
+        json.put("pdeviation", this.pdeviation == null ? JSONObject.NULL : this.pdeviation);
 
         if (!this.sInfo.equals("")) {
             json.put("sInfo", this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
@@ -138,7 +146,6 @@ public class Forms_04_05 implements Serializable {
         if (!this.sa6.equals("")) {
             json.put("sa6", this.sa6.equals("") ? JSONObject.NULL : new JSONObject(this.sa6));
         }
-
 
 
         return json;
@@ -204,20 +211,20 @@ public class Forms_04_05 implements Serializable {
         this.username = username;
     }
 
-    public String getChildID() {
-        return childID;
+    public String getParticipantID() {
+        return participantID;
     }
 
-    public void setChildID(String childID) {
-        this.childID = childID;
+    public void setParticipantID(String participantID) {
+        this.participantID = participantID;
     }
 
-    public String getChildName() {
-        return childName;
+    public String getParticipantName() {
+        return participantName;
     }
 
-    public void setChildName(String childName) {
-        this.childName = childName;
+    public void setParticipantName(String participantName) {
+        this.participantName = participantName;
     }
 
     public String getStudyID() {
@@ -387,4 +394,62 @@ public class Forms_04_05 implements Serializable {
     public void setAppversion(String appversion) {
         this.appversion = appversion;
     }
+
+    public String getRound() {
+        return round;
+    }
+
+    public void setRound(String round) {
+        this.round = round;
+    }
+
+    public String getPdeviation() {
+        return pdeviation;
+    }
+
+    public void setPdeviation(String pdeviation) {
+        this.pdeviation = pdeviation;
+    }
+
+    public class Simple_Forms_04_05 {
+
+        String ls01a05, ls01a06, ls01a07, ls01a09, ls01f03, ls01f04, ls01f05d, ls01f05m, ls01f05y;
+
+        public String getLs01a05() {
+            return ls01a05;
+        }
+
+        public String getLs01a06() {
+            return ls01a06;
+        }
+
+        public String getLs01a07() {
+            return ls01a07;
+        }
+
+        public String getLs01a09() {
+            return ls01a09;
+        }
+
+        public String getLs01f03() {
+            return ls01f03;
+        }
+
+        public String getLs01f04() {
+            return ls01f04;
+        }
+
+        public String getLs01f05d() {
+            return ls01f05d;
+        }
+
+        public String getLs01f05m() {
+            return ls01f05m;
+        }
+
+        public String getLs01f05y() {
+            return ls01f05y;
+        }
+    }
+
 }

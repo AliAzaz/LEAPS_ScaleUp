@@ -17,12 +17,9 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.text.format.DateFormat;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.contracts.FamilyMembersContract;
 import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
-import com.example.hassannaqvi.leaps_scaleup.ui.EndingActivity;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.utils.TypefaceUtil;
 
@@ -31,6 +28,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
 
 public class MainApp extends Application {
 
@@ -41,7 +39,8 @@ public class MainApp extends Application {
     public static final String _HOST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/api/";
     // public static final String TEST_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/api/";
 
-    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp_recruit_form/app/app-debug.apk";
+    //    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/wfp_recruit_form/app/app-debug.apk";
+    public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/app/app-debug.apk";
 
     public static final Integer MONTHS_LIMIT = 11;
     public static final Integer DAYS_LIMIT = 29;
@@ -91,42 +90,9 @@ public class MainApp extends Application {
     public static final String FORM07 = "7";
     public static final String FORM08 = "8";
     public static final String FORM09 = "9";
+    public static final String FORM14 = "14";
 
     protected static LocationManager locationManager;
-
-    public static void setGPS(Activity activity) {
-        SharedPreferences GPSPref = activity.getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
-
-//        String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
-
-        try {
-            String lat = GPSPref.getString("Latitude", "0");
-            String lang = GPSPref.getString("Longitude", "0");
-            String acc = GPSPref.getString("Accuracy", "0");
-            String dt = GPSPref.getString("Time", "0");
-
-            if (lat == "0" && lang == "0") {
-                Toast.makeText(activity, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();
-            }
-
-            String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();
-
-            MainApp.fc.setGpsLat(GPSPref.getString("Latitude", "0"));
-            MainApp.fc.setGpsLng(GPSPref.getString("Longitude", "0"));
-            MainApp.fc.setGpsAcc(GPSPref.getString("Accuracy", "0"));
-//            AppMain.fc.setGpsTime(GPSPref.getString(date, "0")); // Timestamp is converted to date above
-            MainApp.fc.setGpsDT(date); // Timestamp is converted to date above
-
-            Toast.makeText(activity, "GPS set", Toast.LENGTH_SHORT).show();
-
-        } catch (Exception e) {
-            Log.e("GPS", "setGPS: " + e.getMessage());
-        }
-
-
-    }
 
     public static String getTagName(Context mContext) {
         SharedPreferences sharedPref = mContext.getSharedPreferences("tagName", MODE_PRIVATE);
@@ -145,6 +111,18 @@ public class MainApp extends Application {
             e.printStackTrace();
         }
         return calendar;
+    }
+
+    public static long ageInYear_MonthByDOB(String dateStr, char type) {
+        Calendar cal = getCalendarDate(dateStr);
+        long ageInYears;
+
+        if (type == 'y')
+            ageInYears = Calendar.getInstance().get(Calendar.YEAR) - cal.get(Calendar.YEAR);
+        else
+            ageInYears = Calendar.getInstance().get(Calendar.MONTH) - cal.get(Calendar.MONTH);
+
+        return ageInYears;
     }
 
     public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {

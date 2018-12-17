@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form04_EF_B">
 
@@ -113,6 +112,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:enabled="false"
+                            android:inputType="text"
                             android:gravity="center"
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
@@ -210,6 +210,7 @@
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
+                            android:inputType="text"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             tools:text="@string/red" />
@@ -588,6 +589,7 @@
                             android:paddingEnd="20dp"
                             android:paddingStart="20dp"
                             android:text=""
+                            android:inputType="text"
                             android:textSize="20sp"
                             android:textStyle="bold"
                             tools:text="@string/blue" />
@@ -3026,1099 +3028,1109 @@
                         </LinearLayout>
 
                     </android.support.v7.widget.CardView>
+                </LinearLayout>
 
-                    <LinearLayout
-                        android:id="@+id/level3"
+                <LinearLayout
+                    android:id="@+id/level3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:visibility="gone">
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/ls04bg"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@android:color/black" />
 
-                        <TextView
-                            style="@style/textView2"
+                    <!-- ls04bg01-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
-                            android:layout_marginTop="16dp"
-                            android:gravity="center"
-                            android:padding="5dp"
-                            android:text="@string/ls04bg"
-                            android:textAppearance="?android:attr/textAppearanceMedium"
-                            android:textColor="@android:color/black" />
+                            android:orientation="vertical">
 
-                        <!-- ls04bg01-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgnoredborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0196"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgnoredborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0196"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg01a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg01b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-
-                                <EditText
-                                    android:id="@+id/ls04bg01"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/red" />
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg01a"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
 
-                                    <Button
-                                        android:id="@+id/ls04bg0199"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/ls04bg01b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg02-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+
+                            <EditText
+                                android:id="@+id/ls04bg01"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/red" />
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0199"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgnoblueborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0296"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg02a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg02b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-
-                                <EditText
-                                    android:id="@+id/ls04bg02"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
-
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0299"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
+                        </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg03-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg02-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgnoblueborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0296"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgredborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0396"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg03a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg03b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg03"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg02a"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
 
-                                    <Button
-                                        android:id="@+id/ls04bg0399"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/ls04bg02b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg04-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+
+                            <EditText
+                                android:id="@+id/ls04bg02"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0299"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgnoredborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0496"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg04a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg04b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg04"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
-
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0499"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
+                        </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg05-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg03-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgredborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0396"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgnoblueborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0596"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg05a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg05b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-
-                                <EditText
-                                    android:id="@+id/ls04bg05"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg03a"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
 
-                                    <Button
-                                        android:id="@+id/ls04bg0599"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/ls04bg03b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg06-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                            <EditText
+                                android:id="@+id/ls04bg03"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0399"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgblueborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0696"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg06a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg06b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-
-                                <EditText
-                                    android:id="@+id/ls04bg06"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
-
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0699"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
+                        </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
-                        <!-- ls04bg07-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                    <!-- ls04bg04-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgnoredborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0496"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgnoredborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0796"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg07a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg07b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg07"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg04a"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
 
-                                    <Button
-                                        android:id="@+id/ls04bg0799"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/ls04bg04b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg08-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                            <EditText
+                                android:id="@+id/ls04bg04"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0499"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgredborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0896"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg08a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg08b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg08"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
-
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0899"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
+                        </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg09-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg05-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgnoblueborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0596"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgblueborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg0996"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg09a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg09b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg09"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg05a"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
 
-                                    <Button
-                                        android:id="@+id/ls04bg0999"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/ls04bg05b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg10-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+
+                            <EditText
+                                android:id="@+id/ls04bg05"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0599"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgnoblueborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg1096"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg10a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg10b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg10"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg1099"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
+                        </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg11-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg06-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgblueborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0696"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgnoblueborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg1196"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg11a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg11b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg11"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg06a"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
 
-                                    <Button
-                                        android:id="@+id/ls04bg1199"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/ls04bg06b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                        <!-- ls04bg12-->
-                        <android.support.v7.widget.CardView style="@style/cardView">
+
+                            <EditText
+                                android:id="@+id/ls04bg06"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:orientation="vertical">
+                                android:orientation="horizontal"
+                                android:padding="25dp">
 
-                                <TextView
-                                    android:layout_width="match_parent"
+                                <Button
+                                    android:id="@+id/ls04bg0699"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:background="@color/colorPrimary"
-                                    android:padding="5dp"
-                                    android:text="@string/ls04bgredborder"
-                                    android:textAppearance="?android:attr/textAppearanceMedium"
-                                    android:textColor="@android:color/white" />
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
-
-                                    <Button
-                                        android:id="@+id/ls04bg1296"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/other"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg12a"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/redtruck"
-                                        android:textColor="@color/white" />
-
-                                    <Button
-                                        android:id="@+id/ls04bg12b"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/bluestar"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
-
-                                <EditText
-                                    android:id="@+id/ls04bg12"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
                                     android:layout_weight="1"
-                                    android:enabled="false"
-                                    android:gravity="center"
-                                    android:paddingEnd="20dp"
-                                    android:paddingStart="20dp"
-                                    android:text=""
-                                    android:textSize="20sp"
-                                    android:textStyle="bold"
-                                    tools:text="@string/redtruck" />
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
 
+                    </android.support.v7.widget.CardView>
 
-                                <LinearLayout
-                                    android:layout_width="match_parent"
+                    <!-- ls04bg07-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgnoredborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg0796"
+                                    android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:padding="25dp">
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
 
-                                    <Button
-                                        android:id="@+id/ls04bg1299"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_margin="3dp"
-                                        android:layout_weight="1"
-                                        android:background="@color/gray"
-                                        android:onClick="levelBasedProcess"
-                                        android:text="@string/ls04ignore"
-                                        android:textColor="@color/white" />
-                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/ls04bg07a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg07b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
                             </LinearLayout>
 
-                        </android.support.v7.widget.CardView>
-                    </LinearLayout>
+                            <EditText
+                                android:id="@+id/ls04bg07"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg0799"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg08-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgredborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg0896"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg08a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg08b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/ls04bg08"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg0899"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg09-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgblueborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg0996"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg09a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg09b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/ls04bg09"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg0999"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg10-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgnoblueborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg1096"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg10a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg10b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/ls04bg10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg1099"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg11-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgnoblueborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg1196"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg11a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg11b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/ls04bg11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg1199"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <!-- ls04bg12-->
+                    <android.support.v7.widget.CardView style="@style/cardView">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorPrimary"
+                                android:padding="5dp"
+                                android:text="@string/ls04bgredborder"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@android:color/white" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg1296"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/other"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg12a"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/redtruck"
+                                    android:textColor="@color/white" />
+
+                                <Button
+                                    android:id="@+id/ls04bg12b"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/bluestar"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+
+                            <EditText
+                                android:id="@+id/ls04bg12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:enabled="false"
+                                android:gravity="center"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp"
+                                android:text=""
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="@string/redtruck" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="25dp">
+
+                                <Button
+                                    android:id="@+id/ls04bg1299"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="3dp"
+                                    android:layout_weight="1"
+                                    android:background="@color/gray"
+                                    android:onClick="levelBasedProcess"
+                                    android:text="@string/ls04ignore"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
                 </LinearLayout>
 
             </LinearLayout>

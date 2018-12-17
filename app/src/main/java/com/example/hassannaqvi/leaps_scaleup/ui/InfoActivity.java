@@ -19,11 +19,15 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityInfoBinding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.google.gson.Gson;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
@@ -33,6 +37,7 @@ import java.util.concurrent.ExecutionException;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
+import static com.example.hassannaqvi.leaps_scaleup.utils.JsonUtils.mergeJSONObjects;
 
 public class InfoActivity extends AppCompatActivity {
 
@@ -41,6 +46,8 @@ public class InfoActivity extends AppCompatActivity {
     public static Forms_04_05 fc_4_5;
     String fTYPE = "", fExt = "", deviceID;
     Class<?> routeClass;
+    Forms_04_05 childDT;
+    Forms_04_05.Simple_Forms_04_05 sInfo_parse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,7 +84,7 @@ public class InfoActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrpls01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrpls01, false);
+                ClearClass.ClearAllFields(bi.fldgrpls01);
             }
 
             @Override
@@ -146,16 +153,61 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     public void BtnIDValid() {
-        if (!validatorClass.EmptyTextBox(this, bi.lsid1, getString(R.string.ls01a04))) {
+        if (!validatorClass.EmptyTextBox(this, bi.lsid1, getString(R.string.ls01a01))) {
             return;
         }
 
-        /*if (CheckingID.getIDValidation( this, bi.lsid1, fTYPE)) {
-            Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
-            bi.fldgrpls01.setVisibility(VISIBLE);
-        }*/
+        try {
+            Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildRecord").execute(bi.lsid1.getText().toString()).get();
 
-        bi.fldgrpls01.setVisibility(VISIBLE);
+            if (childData != null) {
+                Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
+                childDT = (Forms_04_05) childData;
+
+                // Child Name
+                bi.lsid4.setText(childDT.getParticipantName());
+                // Form date of enrollment
+                bi.lsid5.setText(childDT.getFormDate());
+
+                sInfo_parse = new Gson().fromJson(childDT.getSInfo(), Forms_04_05.Simple_Forms_04_05.class);
+
+                // Age setting
+                String y, m;
+                if (sInfo_parse.getLs01f04().equals("2")) {
+                    y = sInfo_parse.getLs01f05y();
+                    m = sInfo_parse.getLs01f05m();
+                } else {
+                    y = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'y'));
+                    m = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'm'));
+                }
+                bi.lsid7y.setText(y);
+                bi.lsid7m.setText(m);
+
+                // Round Setting
+                bi.lsid10.check(
+                        sInfo_parse.getLs01a07().equals("1") ? bi.lsid10a.getId() :
+                                sInfo_parse.getLs01a07().equals("2") ? bi.lsid10b.getId() :
+                                        sInfo_parse.getLs01a07().equals("3") ? bi.lsid10c.getId() :
+                                                sInfo_parse.getLs01a07().equals("4") ? bi.lsid10d.getId() : bi.lsid10a.getId());
+
+                for (byte i = 0; i < bi.lsid10.getChildCount(); i++) {
+                    bi.lsid10.getChildAt(i).setEnabled(false);
+                }
+
+                // Enable view
+                bi.fldgrpls01.setVisibility(VISIBLE);
+
+            } else {
+                Toast.makeText(this, "Child ID not found!!", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     private boolean UpdateDB() {
@@ -195,12 +247,21 @@ public class InfoActivity extends AppCompatActivity {
         fc_4_5.setUsername(MainApp.userName);
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         fc_4_5.setDeviceID(deviceID);
-        fc_4_5.setChildID(bi.lsid1.getText().toString());
+        fc_4_5.setParticipantID(bi.lsid1.getText().toString());
+        fc_4_5.setClustercode(childDT.getClustercode());
 
         setGPS(fc_4_5); // Set GPS
 
+        JSONObject jsonInfo = new JSONObject();
+        try {
+            jsonInfo.put(fExt + "lsid3", sInfo_parse.getLs01a06());
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
         JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrpls01, true, fExt);
-        fc_4_5.setSInfo(String.valueOf(Json));
+        fc_4_5.setSInfo(String.valueOf(mergeJSONObjects(jsonInfo, Json)));
 
     }
 

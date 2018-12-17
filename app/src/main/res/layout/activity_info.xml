@@ -103,6 +103,7 @@
                         <EditText
                             android:id="@+id/lsid4"
                             style="@style/textInput"
+                            android:enabled="false"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
@@ -132,6 +133,7 @@
                             android:id="@+id/lsid5"
                             style="@style/textInput"
                             android:layout_margin="10dp"
+                            android:enabled="false"
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"
@@ -159,6 +161,7 @@
                         <EditText
                             android:id="@+id/lsid7y"
                             style="@style/textInput"
+                            android:enabled="false"
                             android:hint="@string/year"
                             android:inputType="number"
                             android:maxLength="1" />
@@ -166,9 +169,10 @@
                         <com.edittextpicker.aliazaz.textpicker.TextPicker
                             android:id="@+id/lsid7m"
                             style="@style/textInput"
+                            android:enabled="false"
                             android:hint="@string/month"
-                            android:maxLength="2"
                             android:inputType="number"
+                            android:maxLength="2"
                             app:maxValue="11"
                             app:minValue="0"
                             app:type="range" />

@@ -802,6 +802,7 @@
                             android:textSize="20sp" />
 
                         <EditText
+                            android:maxLength="11"
                             android:id="@+id/ls01d02"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -1182,16 +1183,44 @@
                             android:textSize="20sp" />
 
                         <EditText
-                            android:id="@+id/ls01f05"
+                            android:id="@+id/ls01f05d"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_marginBottom="1dp"
                             android:digits="0123456789"
-                            android:hint="@string/ls01f05"
+                            android:hint="@string/day"
                             android:inputType="number"
                             android:maxLength="2" />
+
+
+                        <EditText
+                            android:id="@+id/ls01f05m"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:digits="0123456789"
+                            android:hint="@string/month"
+                            android:inputType="number"
+                            android:maxLength="2" />
+
+
+
+                        <EditText
+                            android:id="@+id/ls01f05y"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:digits="0123456789"
+                            android:hint="@string/year"
+                            android:inputType="number"
+                            android:maxLength="2" />
+
 
 
                     </LinearLayout>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -23,15 +25,14 @@
 
             <TextView
                 style="@style/textView2"
-                android:lineSpacingExtra="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:gravity="center"
+                android:lineSpacingExtra="10dp"
                 android:text="@string/ls14instruction"
                 android:textColor="@android:color/black"
                 android:textSize="25sp" />
-
 
             <!--Q1-->
             <android.support.v7.widget.CardView
@@ -51,10 +52,37 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:background="@color/colorPrimary"
-                        android:text="@string/ls1401"
+                        android:text="@string/ls14"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:textColor="@android:color/white"
                         android:textSize="20sp" />
+
+
+                    <RadioGroup
+                        android:id="@+id/ls14a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RadioButton
+                            android:id="@+id/ls14a01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/ls1401" />
+
+                        <RadioButton
+                            android:id="@+id/ls14a02"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/ls1402" />
+
+                    </RadioGroup>
+
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -68,16 +96,17 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:layout_weight="0.2"
+                            android:onClick="@{() -> callback.checkID()}"
                             android:text="CHECK"
                             android:textColor="@color/white" />
 
                         <EditText
-                            android:id="@+id/ls1401"
+                            android:id="@+id/ls14b"
                             style="@style/textInput"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.5"
-                            android:hint="Child ID" />
+                            android:hint="XX" />
 
                     </LinearLayout>
 
@@ -86,55 +115,19 @@
 
             </android.support.v7.widget.CardView>
 
-            <!--below layout will be visible after checking child id-->
-
             <LinearLayout
                 android:id="@+id/mainLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
-                <!--Q02-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/ls1402"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white"
-                            android:textSize="20sp" />
-
-                        <EditText
-                            android:id="@+id/ls1402"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:enabled="false"
-                            android:hint="@string/ls1402" />
-
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <!--Q03-->
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:layout_height="wrap_content">
 
 
                     <LinearLayout
@@ -152,87 +145,30 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
+                        <io.blackbox_vision.datetimepickeredittext.view.DatePickerInputEditText
                             android:id="@+id/ls1403"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:enabled="false"
-                            android:hint="@string/ls1403" />
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginTop="2dp"
+                            android:focusable="false"
+                            android:hint="DD/MM/YYYY"
+                            android:textColor="@android:color/black"
+                            app:dateFormat="dd-MM-yyyy" />
 
 
                     </LinearLayout>
 
                 </android.support.v7.widget.CardView>
 
-
-            </LinearLayout>
-
-            <!--Q4-->
-            <android.support.v7.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/ls1404"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/ls1404check"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:layout_weight="0.2"
-                            android:text="CHECK"
-                            android:textColor="@color/white" />
-
-                        <EditText
-                            android:id="@+id/ls1404"
-                            style="@style/textInput"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="0.5"
-                            android:hint="Youth Participant ID" />
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-            <!--below layout will be visible after checking youth ID-->
-
-            <!--Q05-->
-            <LinearLayout
-                android:id="@+id/mainLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
+                <!--Q04-->
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
 
                     <LinearLayout
@@ -245,7 +181,44 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:background="@color/colorPrimary"
-                            android:text="@string/ls1402"
+                            android:text="@string/ls1404"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/ls1404"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/ls1404"
+                            android:inputType="number"
+                            android:maxLength="4" />
+
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <!--Q05-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/ls1405"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
@@ -253,10 +226,11 @@
                         <EditText
                             android:id="@+id/ls1405"
                             style="@style/textInput"
+                            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:enabled="false"
-                            android:hint="@string/ls1402" />
+                            android:hint="@string/ls1405"
+                            android:inputType="text" />
 
 
                     </LinearLayout>
@@ -281,18 +255,61 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
                             android:background="@color/colorPrimary"
-                            android:text="@string/ls1403"
+                            android:text="@string/ls1406"
                             android:textAppearance="?android:attr/textAppearanceLarge"
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
+                        <RadioGroup
                             android:id="@+id/ls1406"
-                            style="@style/textInput"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:enabled="false"
-                            android:hint="@string/ls1403" />
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/ls1406a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/ls1406a" />
+
+                            <RadioButton
+                                android:id="@+id/ls1406b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/ls1406b" />
+
+                            <RadioButton
+                                android:id="@+id/ls1406c"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/ls1406c" />
+
+                            <RadioButton
+                                android:id="@+id/ls140696"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/other" />
+
+                            <EditText
+                                android:id="@+id/ls140696x"
+                                style="@style/textInput"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                                android:hint="@string/other"
+                                android:inputType="text"
+                                android:text='@{ls140696.checked? ls140696x.getText.toString : ""}'
+                                android:visibility='@{ls140696.checked? View.VISIBLE : View.GONE}' />
+
+                        </RadioGroup>
 
 
                     </LinearLayout>
@@ -322,13 +339,27 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
+                        <RadioGroup
                             android:id="@+id/ls1407"
-                            style="@style/textInput"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:enabled="false"
-                            android:hint="@string/ls1407" />
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/ls1407a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/ls1407b"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/no" />
+                        </RadioGroup>
 
 
                     </LinearLayout>
@@ -358,146 +389,15 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <RadioGroup
-                            android:id="@+id/ls1408"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/ls1408a"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/ls1408a" />
-
-                            <RadioButton
-                                android:id="@+id/ls1408b"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/ls1408b" />
-
-                            <RadioButton
-                                android:id="@+id/ls1408c"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/ls1408c" />
-
-                            <RadioButton
-                                android:id="@+id/ls140896"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/other" />
-
-                            <EditText
-                                android:id="@+id/ls140896x"
-                                style="@style/textInput"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                android:hint="@string/other"
-                                android:inputType="text"
-                                android:text='@{ls140896.checked? ls140896x.getText.toString : ""}'
-                                android:visibility='@{ls140896.checked? View.VISIBLE : View.GONE}' />
-
-                        </RadioGroup>
-
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <!--Q09-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/ls1409"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white"
-                            android:textSize="20sp" />
-
-                        <RadioGroup
-                            android:id="@+id/ls1409"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                            <RadioButton
-                                android:id="@+id/ls1409a"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/yes" />
-
-                            <RadioButton
-                                android:id="@+id/ls1409b"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="1"
-                                android:text="@string/no" />
-                        </RadioGroup>
-
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <!--Q09-->
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:elevation="10dp">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            android:background="@color/colorPrimary"
-                            android:text="@string/ls1410"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white"
-                            android:textSize="20sp" />
-
                         <EditText
-                            android:id="@+id/ls1410"
+                            android:id="@+id/ls1408"
                             style="@style/textInput"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                             android:hint="مشاهدو/ نوٽيس"
-                            android:inputType="textMultiLine"
-                            />
-
+                            android:inputType="textMultiLine" />
 
 
                     </LinearLayout>
@@ -505,32 +405,31 @@
                 </android.support.v7.widget.CardView>
 
 
-            </LinearLayout>
+                <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
 
-            <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
 
-                <Button
-                    android:id="@+id/btn_Continue"
-                    style="@style/button"
-                    android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="@string/nextSection" />
+                    <Button
+                        android:id="@+id/btn_Continue"
+                        style="@style/button"
+                        android:onClick="@{() -> callback.BtnContinue()}"
+                        android:text="@string/nextSection" />
 
-                <Button
-                    android:id="@+id/btn_End"
-                    style="@style/button"
-                    android:layout_marginRight="10dp"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="@string/end_interview" />
+                    <Button
+                        android:id="@+id/btn_End"
+                        style="@style/button"
+                        android:layout_marginRight="10dp"
+                        android:onClick="@{() -> callback.BtnEnd()}"
+                        android:text="@string/end_interview" />
 
-                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+                    <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+                </LinearLayout>
             </LinearLayout>
 
         </LinearLayout>

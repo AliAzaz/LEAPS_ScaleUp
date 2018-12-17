@@ -18,11 +18,16 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityYouthInfoBinding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.google.gson.Gson;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
@@ -32,6 +37,7 @@ import java.util.concurrent.ExecutionException;
 import static android.view.View.GONE;
 import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
+import static com.example.hassannaqvi.leaps_scaleup.utils.JsonUtils.mergeJSONObjects;
 
 public class YouthInfoActivity extends AppCompatActivity {
     private static final String TAG = InfoActivity.class.getName();
@@ -39,6 +45,8 @@ public class YouthInfoActivity extends AppCompatActivity {
     ActivityYouthInfoBinding bi;
     String fTYPE = "", fExt = "", deviceID;
     Class<?> routeClass;
+    Forms youthDT;
+    Forms.Simple_Forms sInfo_parse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +77,7 @@ public class YouthInfoActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrplsyid01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrplsyid01, false);
+                ClearClass.ClearAllFields(bi.fldgrplsyid01);
             }
 
             @Override
@@ -77,8 +85,6 @@ public class YouthInfoActivity extends AppCompatActivity {
 
             }
         });
-
-
 
         /*Calling fnc*/
         routeClass = selectedForm(fTYPE);
@@ -121,12 +127,54 @@ public class YouthInfoActivity extends AppCompatActivity {
             return;
         }
 
-        /*if (CheckingID.getIDValidation( this, bi.lsid1, fTYPE)) {
-            Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
-            bi.fldgrpls01.setVisibility(VISIBLE);
-        }*/
+        try {
+            Object youthData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getYouthRecord").execute(bi.lsyid01.getText().toString()).get();
 
-        bi.fldgrplsyid01.setVisibility(VISIBLE);
+            if (youthData != null) {
+                Toast.makeText(this, "Youth ID validate..", Toast.LENGTH_SHORT).show();
+                youthDT = (Forms) youthData;
+
+                // Youth Name
+                bi.lsyid02.setText(youthDT.getYouthName());
+                // Form date of enrollment
+                bi.lsyid03.setText(youthDT.getFormDate());
+
+                sInfo_parse = new Gson().fromJson(youthDT.getSa1(), Forms.Simple_Forms.class);
+                // Intervention Setting
+                bi.lsyid04.check(
+                        sInfo_parse.getLs07y07().equals("1") ? bi.lsyid04a.getId() :
+                                sInfo_parse.getLs07y07().equals("2") ? bi.lsyid04b.getId() :
+                                        bi.lsyid04c.getId());
+
+                for (byte i = 0; i < bi.lsyid04.getChildCount(); i++) {
+                    bi.lsyid04.getChildAt(i).setEnabled(false);
+                }
+                // Round Setting
+                bi.lsyid05.check(
+                        sInfo_parse.getLs07y18().equals("1") ? bi.lsyid05a.getId() :
+                                sInfo_parse.getLs07y18().equals("2") ? bi.lsyid05b.getId() :
+                                        sInfo_parse.getLs07y18().equals("3") ? bi.lsyid05c.getId() :
+                                                sInfo_parse.getLs07y18().equals("4") ? bi.lsyid05d.getId()
+                                                        : bi.lsyid05a.getId());
+
+                for (byte i = 0; i < bi.lsyid05.getChildCount(); i++) {
+                    bi.lsyid05.getChildAt(i).setEnabled(false);
+                }
+
+                // Enable view
+                bi.fldgrplsyid01.setVisibility(VISIBLE);
+
+            } else {
+                Toast.makeText(this, "Youth ID not found!!", Toast.LENGTH_SHORT).show();
+            }
+
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     private boolean UpdateDB() {
@@ -166,13 +214,21 @@ public class YouthInfoActivity extends AppCompatActivity {
         fc_4_5.setUsername(MainApp.userName);
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         fc_4_5.setDeviceID(deviceID);
-        fc_4_5.setChildID(bi.lsyid01.getText().toString());
+        fc_4_5.setParticipantID(bi.lsyid01.getText().toString());
+        fc_4_5.setClustercode(youthDT.getClustercode());
 
         setGPS(fc_4_5); // Set GPS
 
-        JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrplsyid01, true, fExt);
-        fc_4_5.setSInfo(String.valueOf(Json));
+        JSONObject jsonInfo = new JSONObject();
+        try {
+            jsonInfo.put(fExt + "lsyid06", sInfo_parse.getLs01a06());
 
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        JSONObject Json = GeneratorClass.getContainerJSON(bi.fldgrplsyid01, true, fExt);
+        fc_4_5.setSInfo(String.valueOf(mergeJSONObjects(jsonInfo, Json)));
     }
 
     public void setGPS(Forms_04_05 fc_4_5) {

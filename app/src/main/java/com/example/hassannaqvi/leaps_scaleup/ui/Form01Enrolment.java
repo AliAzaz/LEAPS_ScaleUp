@@ -44,6 +44,7 @@ public class Form01Enrolment extends AppCompatActivity {
     ActivityForm01EnrolmentBinding bi;
     public static Forms_04_05 fc_4_5;
     String getFtype = "", deviceID;
+    String[] cluster_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +74,12 @@ public class Form01Enrolment extends AppCompatActivity {
 
         if (MainApp.round == 1) {
             bi.fldgrpls01a07.setVisibility(GONE);
-            ClearClass.ClearAllFields(bi.fldgrpls01a07, false);
+            ClearClass.ClearAllFields(bi.fldgrpls01a07);
         } else {
             bi.fldgrpls01a07.setVisibility(VISIBLE);
-            ClearClass.ClearAllFields(bi.fldgrpls01a07, true);
+            checkingRound(MainApp.round);
+            //ClearClass.ClearAllFields(bi.fldgrpls01a07, true);
+
         }
 
         bi.ls01f04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -85,8 +88,10 @@ public class Form01Enrolment extends AppCompatActivity {
                 if (checkedId == R.id.ls01f04a) {
                     bi.fldgrpls01f03.setVisibility(VISIBLE);
                     bi.fldgrpls01f05.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls01f05);
                 } else {
                     bi.fldgrpls01f03.setVisibility(GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls01f03);
                     bi.fldgrpls01f05.setVisibility(VISIBLE);
                     bi.ls01f03.setText(null);
                 }
@@ -97,7 +102,7 @@ public class Form01Enrolment extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId == R.id.ls01a07a) {
                     bi.fldgrpls01a07.setVisibility(GONE);
-                    ClearClass.ClearAllFields(bi.fldgrpls01a07, false);
+                    ClearClass.ClearAllFields(bi.fldgrpls01a07);
                 } else {
                     bi.fldgrpls01a07.setVisibility(VISIBLE);
                     ClearClass.ClearAllFields(bi.fldgrpls01a07, true);
@@ -109,10 +114,10 @@ public class Form01Enrolment extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId != R.id.ls01a08a) {
                     bi.grpls01a08.setVisibility(GONE);
-                    ClearClass.ClearAllFields(bi.grpls01a08, false);
+                    ClearClass.ClearAllFields(bi.grpls01a08);
                 } else {
                     bi.grpls01a08.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllFields(bi.grpls01a08, true);
+                    ClearClass.ClearAllFields(bi.grpls01a08);
                 }
             }
         });
@@ -121,11 +126,11 @@ public class Form01Enrolment extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId != R.id.ls01f07a02) {
                     bi.grpls01f07a.setVisibility(GONE);
-                    ClearClass.ClearAllFields(bi.grpls01f07a, false);
+                    ClearClass.ClearAllFields(bi.grpls01f07a);
 
                 } else {
                     bi.grpls01f07a.setVisibility(VISIBLE);
-                    ClearClass.ClearAllFields(bi.grpls01f07a, true);
+                    ClearClass.ClearAllFields(bi.grpls01f07a);
                 }
             }
         });
@@ -145,10 +150,10 @@ public class Form01Enrolment extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (checkedId != R.id.ls01f10a02) {
                     bi.grpls01f10a.setVisibility(GONE);
-                    ClearClass.ClearAllFields(bi.grpls01f10a, false);
+                    ClearClass.ClearAllFields(bi.grpls01f10a);
                 } else {
                     bi.grpls01f10a.setVisibility(VISIBLE);
-                    ClearClass.ClearAllFields(bi.grpls01f10a, true);
+                    ClearClass.ClearAllFields(bi.grpls01f10a);
                 }
             }
         });
@@ -163,7 +168,7 @@ public class Form01Enrolment extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrpls01a01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrpls01a01,false);
+                ClearClass.ClearAllFields(bi.fldgrpls01a01);
 
             }
 
@@ -173,6 +178,20 @@ public class Form01Enrolment extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void checkingRound(int round) {
+
+        switch (round) {
+            case 2:
+                bi.ls01a09c.setEnabled(false);
+                bi.ls01a09d.setEnabled(false);
+                break;
+            case 3:
+                bi.ls01a09d.setEnabled(false);
+                break;
+
+        }
     }
 
     public void BtnClusterIDValid() {
@@ -186,7 +205,7 @@ public class Form01Enrolment extends AppCompatActivity {
 
             if (cluster != null) {
                 Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
-                String[] cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
+                cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
                 bi.ls01aDis.setText(cluster_name[0]);
                 bi.ls01aTeh.setText(cluster_name[1]);
                 bi.ls01aUC.setText(cluster_name[2]);
@@ -294,16 +313,18 @@ public class Form01Enrolment extends AppCompatActivity {
         setGPS(fc_4_5); // Set GPS
 
         fc_4_5.setClustercode(bi.ls01a05.getText().toString());
-        fc_4_5.setChildID(bi.ls01a04.getText().toString());
+        fc_4_5.setParticipantID(bi.ls01a04.getText().toString());
+        fc_4_5.setParticipantName(bi.ls01f01.getText().toString());
         fc_4_5.setStudyID(MainApp.round + "" + bi.ls01a05.getText().toString() + bi.ls01a04.getText().toString());
+        fc_4_5.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();
-        f01.put("ls01a01", "");
+//        f01.put("ls01a01", "");
         f01.put("ls01a02", bi.ls01a02.getText().toString());
-        f01.put("ls01a03", "");
-        f01.put("ls01a04", "");
-        f01.put("ls01a05", "");
-        f01.put("ls01a06", "");
+//        f01.put("ls01a03", "");
+//        f01.put("ls01a04", "");
+        f01.put("ls01a05", cluster_name[3]); //VILLAGE
+        f01.put("ls01a06", cluster_name[0]); //DISTRICT
         f01.put("ls01a07", bi.ls01a07a.isChecked() ? "1"
                 : bi.ls01a07b.isChecked() ? "2"
                 : bi.ls01a07c.isChecked() ? "3"
@@ -346,9 +367,11 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01f03", bi.ls01f03.getText().toString());
 
         f01.put("ls01f04", bi.ls01f04a.isChecked() ? "1"
-                : bi.ls01f04a.isChecked() ? "2"
+                : bi.ls01f04b.isChecked() ? "2"
                 : "0");
-        f01.put("ls01f05", bi.ls01f05.getText().toString());
+        f01.put("ls01f05d", bi.ls01f05d.getText().toString());
+        f01.put("ls01f05m", bi.ls01f05m.getText().toString());
+        f01.put("ls01f05y", bi.ls01f05y.getText().toString());
 
         f01.put("ls01f06a", bi.ls01f06a01.isChecked() ? "1"
                 : bi.ls01f06a02.isChecked() ? "2"
@@ -427,13 +450,15 @@ public class Form01Enrolment extends AppCompatActivity {
         /*if (!validatorClass.EmptyRadioButton(this, bi.ls01a07, bi.ls01a07a, getString(R.string.ls01a07))) {
             return false;
         }*/
-        if (!bi.ls01a07a.isChecked()) {
-            if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0896, bi.ls01a0896x, getString(R.string.ls01a08))) {
-                return false;
-            }
-            if (bi.ls01a08a.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.ls01a09, bi.ls01a09a, getString(R.string.ls01a09))) {
+        if (MainApp.round != 1) {
+            if (!bi.ls01a07a.isChecked()) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0896, bi.ls01a0896x, getString(R.string.ls01a08))) {
                     return false;
+                }
+                if (bi.ls01a08a.isChecked()) {
+                    if (!validatorClass.EmptyRadioButton(this, bi.ls01a09, bi.ls01a09a, getString(R.string.ls01a09))) {
+                        return false;
+                    }
                 }
             }
         }
@@ -486,7 +511,13 @@ public class Form01Enrolment extends AppCompatActivity {
                 return false;
             }
         } else {
-            if (!validatorClass.EmptyTextBox(this, bi.ls01f05, getString(R.string.ls01f05))) {
+            if (!validatorClass.EmptyTextBox(this, bi.ls01f05d, getString(R.string.ls01f05))) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.ls01f05m, getString(R.string.ls01f05))) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.ls01f05y, getString(R.string.ls01f05))) {
                 return false;
             }
         }

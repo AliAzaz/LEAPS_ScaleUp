@@ -55,30 +55,30 @@ public class Form04_EF_C extends AppCompatActivity {
 
                 if (i == R.id.ls04ca01a) {
                     bi.fldgrpls04ca02.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca02, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca02);
                 } else {
                     bi.fldgrpls04ca02.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca02, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca02);
                 }
 
                 if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
                     bi.fldgrpls04ca05.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05);
                     bi.fldgrpls04ca06.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06);
                     bi.fldgrpls04ca07.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07);
                     bi.fldgrpls04ca08.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08);
                 } else {
                     bi.fldgrpls04ca05.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05);
                     bi.fldgrpls04ca06.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06);
                     bi.fldgrpls04ca07.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07);
                     bi.fldgrpls04ca08.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08);
                 }
             }
         });
@@ -89,32 +89,32 @@ public class Form04_EF_C extends AppCompatActivity {
 
                 if (i == R.id.ls04ca03b) {
                     bi.fldgrpls04ca04.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04);
 
 
                 } else {
                     bi.fldgrpls04ca04.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca04);
 
                 }
                 if (bi.ls04ca01a.isChecked() && bi.ls04ca03b.isChecked()) {
                     bi.fldgrpls04ca05.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05);
                     bi.fldgrpls04ca06.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06);
                     bi.fldgrpls04ca07.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07);
                     bi.fldgrpls04ca08.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08);
                 } else {
                     bi.fldgrpls04ca05.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca05);
                     bi.fldgrpls04ca06.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06);
                     bi.fldgrpls04ca07.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca07);
                     bi.fldgrpls04ca08.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08);
                 }
             }
         });
@@ -125,10 +125,10 @@ public class Form04_EF_C extends AppCompatActivity {
 
                 if (i == R.id.ls04ca05a) {
                     bi.fldgrpls04ca06.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06);
                 } else {
                     bi.fldgrpls04ca06.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca06);
                 }
             }
         });
@@ -139,10 +139,10 @@ public class Form04_EF_C extends AppCompatActivity {
 
                 if (i == R.id.ls04ca07b) {
                     bi.fldgrpls04ca08.setVisibility(GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08);
                 } else {
                     bi.fldgrpls04ca08.setVisibility(VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls04ca08);
                 }
             }
         });
@@ -194,7 +194,7 @@ public class Form04_EF_C extends AppCompatActivity {
         }
         localJson = mergeJSONObjects(Json, Json2);
         InfoActivity.fc_4_5.setSa3(String.valueOf(localJson));
-        Log.d("F5-BA", String.valueOf(localJson));
+        Log.d("F4-EF-C", String.valueOf(localJson));
 
 
     }

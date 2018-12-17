@@ -48,21 +48,21 @@ public class Form02HHPart_1 extends AppCompatActivity {
 
                 if (i == R.id.ls02pe01a01) {
                     bi.fldgrplspe09.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe09, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe09);
                     bi.fldgrplspe10.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe10, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe10);
                     bi.fldgrplspe11.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe11, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe11);
                     bi.fldgrplspe12.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12);
                     bi.fldgrplspe13.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13);
                     bi.fldgrplspe14.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14);
                     bi.fldgrplspe15.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe15, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe15);
                     bi.fldgrplspe16.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe16, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe16);
 
                     bi.fldgrplspe02.setVisibility(View.VISIBLE);
                     bi.fldgrplspe03.setVisibility(View.VISIBLE);
@@ -71,13 +71,13 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     bi.fldgrplspe06.setVisibility(View.VISIBLE);
                     bi.fldgrplspe07.setVisibility(View.VISIBLE);
                     bi.fldgrplspe08.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe02, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe03, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe04, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe05, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe06, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe07, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe08, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe02);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe03);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe04);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe05);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe06);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe07);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe08);
                 } else {
                     bi.fldgrplspe02.setVisibility(View.GONE);
                     bi.fldgrplspe03.setVisibility(View.GONE);
@@ -86,30 +86,30 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     bi.fldgrplspe06.setVisibility(View.GONE);
                     bi.fldgrplspe07.setVisibility(View.GONE);
                     bi.fldgrplspe08.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe02, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe03, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe04, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe05, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe06, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe07, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe08, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe02);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe03);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe04);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe05);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe06);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe07);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe08);
 
                     bi.fldgrplspe09.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe09, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe09);
                     bi.fldgrplspe10.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe10, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe10);
                     bi.fldgrplspe11.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe11, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe11);
                     bi.fldgrplspe12.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12);
                     bi.fldgrplspe13.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13);
                     bi.fldgrplspe14.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14);
                     bi.fldgrplspe15.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe15, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe15);
                     bi.fldgrplspe16.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe16, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe16);
                 }
             }
         });
@@ -120,19 +120,19 @@ public class Form02HHPart_1 extends AppCompatActivity {
 
                 if (i != R.id.ls02pe01c05) {
                     bi.fldgrplspe04.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe04, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe04);
                     bi.fldgrplspe05.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe05, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe05);
                     bi.fldgrplspe06.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe06, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe06);
 
                 } else {
                     bi.fldgrplspe04.setVisibility(View.VISIBLE);
                     bi.fldgrplspe05.setVisibility(View.VISIBLE);
                     bi.fldgrplspe06.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe04, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe05, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe06, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe04);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe05);
+
                 }
             }
         });
@@ -149,13 +149,13 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     bi.fldgrplspe14.setVisibility(View.GONE);
                     bi.fldgrplspe15.setVisibility(View.GONE);
                     bi.fldgrplspe16.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe10, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe11, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe15, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe16, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe10);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe11);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe15);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe16);
                 } else {
                     bi.fldgrplspe10.setVisibility(View.VISIBLE);
                     bi.fldgrplspe11.setVisibility(View.VISIBLE);
@@ -164,13 +164,13 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     bi.fldgrplspe14.setVisibility(View.VISIBLE);
                     bi.fldgrplspe15.setVisibility(View.VISIBLE);
                     bi.fldgrplspe16.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe10, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe11, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe15, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe16, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe10);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe11);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe15);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe16);
                 }
             }
         });
@@ -184,16 +184,16 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     bi.fldgrplspe12.setVisibility(View.GONE);
                     bi.fldgrplspe13.setVisibility(View.GONE);
                     bi.fldgrplspe14.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14);
                 } else {
                     bi.fldgrplspe12.setVisibility(View.VISIBLE);
                     bi.fldgrplspe13.setVisibility(View.VISIBLE);
                     bi.fldgrplspe14.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe12, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe13, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe14, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe12);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe13);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe14);
                 }
             }
         });
@@ -207,17 +207,17 @@ public class Form02HHPart_1 extends AppCompatActivity {
                     bi.fldgrplspe18.setVisibility(View.GONE);
                     bi.fldgrplspe19.setVisibility(View.GONE);
                     bi.fldgrplspe20.setVisibility(View.GONE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe18, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe19, false);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe20, false);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe18);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe19);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe20);
 
                 } else {
                     bi.fldgrplspe18.setVisibility(View.VISIBLE);
                     bi.fldgrplspe19.setVisibility(View.VISIBLE);
                     bi.fldgrplspe20.setVisibility(View.VISIBLE);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe18, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe19, true);
-                    ClearClass.ClearAllCardFields(bi.fldgrplspe20, true);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe18);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe19);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe20);
                 }
             }
         });
@@ -292,16 +292,16 @@ public class Form02HHPart_1 extends AppCompatActivity {
         sHH01.put("ls02pe14", bi.ls02pe02f.getText().toString());
         sHH01.put("ls02pe15", bi.ls02pe02g.getText().toString());
 
-        sHH01.put("ls02pe16", bi.ls02pe02c01.isChecked() ? "1"
-                : bi.ls02pe02h01.isChecked() ? "2"
-                : bi.ls02pe02h02.isChecked() ? "3"
-                : bi.ls02pe02h03.isChecked() ? "4"
-                : bi.ls02pe02h04.isChecked() ? "5"
-                : bi.ls02pe02h05.isChecked() ? "6"
-                : bi.ls02pe02h06.isChecked() ? "7"
-                : bi.ls02pe02h96.isChecked() ? "96"
-                : bi.ls02pe02h98.isChecked() ? "98"
-                : "0");
+        sHH01.put("ls02pe16",
+                bi.ls02pe02h01.isChecked() ? "1"
+                        : bi.ls02pe02h02.isChecked() ? "2"
+                        : bi.ls02pe02h03.isChecked() ? "3"
+                        : bi.ls02pe02h04.isChecked() ? "4"
+                        : bi.ls02pe02h05.isChecked() ? "5"
+                        : bi.ls02pe02h06.isChecked() ? "6"
+                        : bi.ls02pe02h96.isChecked() ? "96"
+                        : bi.ls02pe02h98.isChecked() ? "98"
+                        : "0");
         sHH01.put("ls02pe1696x", bi.ls02pe02h96x.getText().toString());
 
         sHH01.put("ls02pe17", bi.ls02pe03a01.isChecked() ? "1"
