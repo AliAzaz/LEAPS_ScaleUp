@@ -28,16 +28,17 @@ public class SyncAllData extends AsyncTask<String, String, String> {
     private String TAG = "";
     private Context mContext;
     private ProgressDialog pd;
-    private String syncClass, URL,updateSyncClass;
+    private String syncClass, updateSyncClass;
+    private URL url;
     private Collection dbData;
     private Class contractClass;
 
 
-    public SyncAllData(Context context, String syncClass,String updateSyncClass,Class contractClass, String url, Collection dbData) {
+    public SyncAllData(Context context, String syncClass, String updateSyncClass, Class contractClass, URL url, Collection dbData) {
         mContext = context;
         this.syncClass = syncClass;
         this.updateSyncClass = updateSyncClass;
-        this.URL = url;
+        this.url = url;
         this.contractClass = contractClass;
         this.dbData = dbData;
 
@@ -56,7 +57,7 @@ public class SyncAllData extends AsyncTask<String, String, String> {
 
     @Override
     protected String doInBackground(String... args) {
-        Log.d(TAG, "doInBackground: URL " + URL);
+        Log.d(TAG, "doInBackground: URL " + url);
         return downloadUrl(contractClass);
     }
         /*
@@ -102,9 +103,9 @@ public class SyncAllData extends AsyncTask<String, String, String> {
 
                 HttpURLConnection connection = null;
                 try {
-                    String request = URL;
+//                    String request = url;
 
-                    URL url = new URL(request);
+//                    URL url = new URL(request);
                     connection = (HttpURLConnection) url.openConnection();
                     connection.connect();
                     int HttpResult = connection.getResponseCode();

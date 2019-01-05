@@ -430,7 +430,8 @@ public class MainActivity extends Activity {
                         "Forms01a",
                         "updateSyncedForms_04_05",
                         Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01A + ".php"), collection1
+                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01A + ".php"))
+                        , collection1
                 ).execute();
                 /*Upload Form 01b*/
                 Collection collection2 = null;
@@ -446,7 +447,7 @@ public class MainActivity extends Activity {
                         "Forms01b",
                         "updateSyncedForms_04_05",
                         Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01B + ".php"), collection2
+                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01B + ".php")), collection2
                 ).execute();
 
 
@@ -464,7 +465,7 @@ public class MainActivity extends Activity {
                         "Forms04",
                         "updateSyncedForms_04_05",
                         Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM04 + ".php"), collection4
+                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM04 + ".php")), collection4
                 ).execute();
 
 
@@ -482,7 +483,7 @@ public class MainActivity extends Activity {
                         "Forms05",
                         "updateSyncedForms_04_05",
                         Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM05 + ".php"), collection5
+                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM05 + ".php")), collection5
                 ).execute();
 
                 /*Upload Form 06*/
@@ -499,7 +500,7 @@ public class MainActivity extends Activity {
                         "Forms06",
                         "updateSyncedForms_04_05",
                         Forms_04_05.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM06 + ".php"), collection6
+                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM06 + ".php")), collection6
                 ).execute();
 
                 /*Upload Form 07*/
@@ -516,8 +517,9 @@ public class MainActivity extends Activity {
                         "Forms07",
                         "updateSyncedForms",
                         Forms.class,
-                        MainApp._HOST_URL + CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM07 + ".php"), collection7
-                ).execute();/*
+                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM07 + ".php")), collection7
+                ).execute();
+                /*
                  *//*Upload Form 08*//*
             Collection collection8 = null;
             try {
