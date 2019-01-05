@@ -95,14 +95,16 @@ public class Form04_EF_E extends AppCompatActivity implements RadioGroup.OnCheck
         JSONObject localJson;
 
         JSONObject Json = GeneratorClass.getContainerJSON(bi.flgGrpls04e, true);
+        JSONObject Json2 = GeneratorClass.getContainerJSON(bi.level2, true);
+        localJson = mergeJSONObjects(Json, Json2);
 
-        JSONObject Json2 = new JSONObject();
+        JSONObject Json3 = new JSONObject();
         try {
-            Json2.put("ls04et", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+            Json3.put("ls04et", new SimpleDateFormat("HH:mm").format(new Date().getTime()));
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        localJson = mergeJSONObjects(Json, Json2);
+        localJson = mergeJSONObjects(localJson, Json3);
         InfoActivity.fc_4_5.setSa5(String.valueOf(localJson));
        /*
         For Testing purpose

@@ -86,16 +86,66 @@ public class Form6AnthroActivity extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls0601, getString(R.string.ls0601))) {
             return false;
         }
+        if (!bi.ls0601.getText().toString().matches("^(\\d{3,3}\\.\\d{1,1})$")) {
+            Toast.makeText(this, "ERROR(invalid): " + "Please type the correct format" + getString(R.string.ls0601), Toast.LENGTH_LONG).show();
+            bi.ls0601.setError("Please type correct format (XXX.X)");
+            return false;
+        } else {
+            bi.ls0601.setError(null);
+        }
+
+
+        if (!validatorClass.RangeTextBox(this, bi.ls0601, 10d, 140d, getString(R.string.ls0601), " height")) {
+            return false;
+        }
 
         if (!validatorClass.EmptyTextBox(this, bi.ls0602, getString(R.string.ls0602))) {
             return false;
         }
+        if (!bi.ls0602.getText().toString().matches("^(\\d{3,3}\\.\\d{2,2})$")) {
+            Toast.makeText(this, "ERROR(invalid): " + "Please type the correct format" + getString(R.string.ls0602), Toast.LENGTH_LONG).show();
+            bi.ls0602.setError("Please type correct format (XXX.XX)");
+            return false;
+        } else {
+            bi.ls0602.setError(null);
+        }
+
+
+        if (!validatorClass.RangeTextBox(this, bi.ls0602, 0.5d, 40d, getString(R.string.ls0602), " weight")) {
+            return false;
+        }
+
         if (!validatorClass.EmptyTextBox(this, bi.ls0603, getString(R.string.ls0603))) {
+            return false;
+        }
+        if (!bi.ls0603.getText().toString().matches("^(\\d{2,2}\\.\\d{1,1})$")) {
+            Toast.makeText(this, "ERROR(invalid): " + "Please type the correct format" + getString(R.string.ls0603), Toast.LENGTH_LONG).show();
+            bi.ls0603.setError("Please type correct format (XX.X)");
+            return false;
+        } else {
+            bi.ls0603.setError(null);
+        }
+
+
+        if (!validatorClass.RangeTextBox(this, bi.ls0603, 5d, 25d, getString(R.string.ls0603), " MAUC")) {
             return false;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls0604, getString(R.string.ls0604))) {
             return false;
         }
+        if (!bi.ls0604.getText().toString().matches("^(\\d{2,2}\\.\\d{1,1})$")) {
+            Toast.makeText(this, "ERROR(invalid): " + "Please type the correct format" + getString(R.string.ls0604), Toast.LENGTH_LONG).show();
+            bi.ls0604.setError("Please type correct format (XX.X)");
+            return false;
+        } else {
+            bi.ls0604.setError(null);
+        }
+
+
+        if (!validatorClass.RangeTextBox(this, bi.ls0604, 1d, 99d, getString(R.string.ls0604), " Head of circumference")) {
+            return false;
+        }
+
 
         FancyToast.makeText(this, "Section Validated", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, false).show();
         return true;

@@ -42,6 +42,7 @@
     <string name="knock">کڙڪائڻ</string>
     <string name="ignore">نظر انداز / انڪار</string>
 
+    <string name="pdeviation">ڇا پروجيڪٽ ڊيويشن فارم جي ضرورت آهي. </string>
     <string name="istatus">انٹروہو کا نتیجہ</string>
     <string name="istatusa">مکمل</string>
     <string name="istatusb">نا مکمل</string>
@@ -943,17 +944,19 @@
     <!--Form 14-->
     <string name="ls14Heading">Protocol Deviation</string>
     <string name="ls14instruction">باني ڪري اڀياس جي دوران جيڪڏهن ڪو پروٽوڪول  ڊيويشن ٿئي ٿو ته هن فارم ۾ نوٽ ڪريو. پروٽوڪول جو مطلب ته ا اها اسسيسمينٽ جيڪا ڏنل خاص هدايتن موجب نه ڪئي وئي هجي</string>
+    <string name="ls14">Enter participant ID</string>
     <string name="ls1401">Child ID (جيڪڏهن فارم ٻار جي ٽيسٽ ۾ ڀريو ويو آهي)</string>
-    <string name="ls1402">ضلعو</string>
-    <string name="ls1403">ڪلسٽر آڊي</string>
-    <string name="ls1404">CYL  ID(جيڪڏهن فارم CYL جي ٽيسٽ ۾ ڀريو ويو آهي)</string>
-    <string name="ls1407">فارم جو نمبرجنهن جي لاءِ PDF ڀريو ويو</string>
-    <string name="ls1408">ڊيويشن جو سبب </string>
-    <string name="ls1408a">	جيڪڏهن ٽيسٽ رڪجي وئي آهي ۽ فالو اپ وزٽ جي ضرورت آهي ته</string>
-    <string name="ls1408b">	جيڪڏهن ٽيسٽ نه ڪيو ويو آهي ته</string>
-    <string name="ls1408c">	جيڪڏهن خاص انسٽرومينٽ جي ٻڌايل هدايتن کان هٽي ڪري ٽيسٽ ڪيو ويو هجي ته</string>
-    <string name="ls1409">ڇا ان جي باري ۾ فيلڊ سپروائيزر سان رابطو ڪيو ويو آهي؟ </string>
-    <string name="ls1410">مشاهدو/ نوٽيس: پروٽوڪول ڊيويشن جا حالات بيان ڪريو ۽ ان کان بچڻ يا ان کي حل ڪرڻ لاءِ ڪهڙا اپاءُ ورتا ويا </string>
+    <string name="ls1402">CYL  ID(جيڪڏهن فارم CYL جي ٽيسٽ ۾ ڀريو ويو آهي)</string>
+    <string name="ls1403">ڊيويشن جي تاريخ </string>
+
+    <string name="ls1404">ڪلسٽر آڊي</string>
+    <string name="ls1405">ضلعو</string>
+    <string name="ls1406">ڊيويشن جو سبب </string>
+    <string name="ls1406a">	جيڪڏهن ٽيسٽ رڪجي وئي آهي ۽ فالو اپ وزٽ جي ضرورت آهي ته</string>
+    <string name="ls1406b">	جيڪڏهن ٽيسٽ نه ڪيو ويو آهي ته</string>
+    <string name="ls1406c">	جيڪڏهن خاص انسٽرومينٽ جي ٻڌايل هدايتن کان هٽي ڪري ٽيسٽ ڪيو ويو هجي ته</string>
+    <string name="ls1407">ڇا ان جي باري ۾ فيلڊ سپروائيزر سان رابطو ڪيو ويو آهي؟ </string>
+    <string name="ls1408">مشاهدو/ نوٽيس: پروٽوڪول ڊيويشن جا حالات بيان ڪريو ۽ ان کان بچڻ يا ان کي حل ڪرڻ لاءِ ڪهڙا اپاءُ ورتا ويا </string>
 
 
     <!--Form 09 part 1-->

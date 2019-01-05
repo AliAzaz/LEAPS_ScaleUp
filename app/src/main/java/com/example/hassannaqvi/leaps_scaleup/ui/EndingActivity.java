@@ -77,9 +77,12 @@ public class EndingActivity extends AppCompatActivity {
         if (flag) {
             fc_.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
             fc_.setEndtime(dtToday);
+            fc_.setPdeviation(bi.pdeviationa.isChecked() ? "1" : bi.pdeviationb.isChecked() ? "2" : bi.pdeviationc.isChecked() ? "3" : "0");
+
         } else {
             fc04_05.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
             fc04_05.setEndtime(dtToday);
+            fc04_05.setPdeviation(bi.pdeviationa.isChecked() ? "1" : bi.pdeviationb.isChecked() ? "2" : bi.pdeviationc.isChecked() ? "3" : "0");
         }
     }
 
@@ -98,7 +101,9 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-
+        if (!validatorClass.EmptyRadioButton(this, bi.pdeviation, bi.pdeviationc, getString(R.string.pdeviation))) {
+            return false;
+        }
         return validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusb, getString(R.string.istatus));
     }
 

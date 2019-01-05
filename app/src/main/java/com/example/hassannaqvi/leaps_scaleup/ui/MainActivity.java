@@ -280,6 +280,11 @@ public class MainActivity extends Activity {
         }
     }
 
+    public void openDeviation() {
+        final Intent oF = new Intent(MainActivity.this, Form14Activity.class);
+        startActivity(oF);
+    }
+
     private Class<?> selectedForm(String fType) {
 
         Class retClass = null;
