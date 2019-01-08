@@ -122,31 +122,31 @@
         <activity
             android:name=".ui.Form04_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
         <activity
             android:name=".ui.Form04_EF_B"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
         <activity
             android:name=".ui.Form04_EF_C"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
         <activity
             android:name=".ui.Form04_EF_D"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
         <activity
             android:name=".ui.Form04_EF_E"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
         <activity
@@ -164,35 +164,35 @@
         <activity
             android:name=".ui.Form08_EF_A"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
 
         </activity>
         <activity
             android:name=".ui.Form08_EF_B"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
 
         <activity
             android:name=".ui.Form08_EF_D"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
 
         <activity
             android:name=".ui.Form08_EF_E"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
 
         <activity
             android:name=".ui.Form08_EF_C"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" >
+            android:theme="@style/AppTheme1">
 
         </activity>
         <activity
@@ -204,6 +204,27 @@
             android:name=".ui.YouthInfoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme1" />
+
+
+        <!--        <service
+                    android:name=".scheduling.ScheduleService01a"
+                    android:permission="android.permission.BIND_JOB_SERVICE" />
+                <service
+                    android:name=".scheduling.ScheduleService01b"
+                    android:permission="android.permission.BIND_JOB_SERVICE" />
+                <service
+                    android:name=".scheduling.ScheduleService04"
+                    android:permission="android.permission.BIND_JOB_SERVICE" />
+                <service
+                    android:name=".scheduling.ScheduleService05"
+                    android:permission="android.permission.BIND_JOB_SERVICE" />
+                <service
+                    android:name=".scheduling.ScheduleService06"
+                    android:permission="android.permission.BIND_JOB_SERVICE" />
+                <service
+                    android:name=".scheduling.ScheduleService07"
+                    android:permission="android.permission.BIND_JOB_SERVICE" />-->
+
     </application>
 
 </manifest>
