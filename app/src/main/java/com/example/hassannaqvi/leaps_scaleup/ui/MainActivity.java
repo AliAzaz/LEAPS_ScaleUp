@@ -418,129 +418,126 @@ public class MainActivity extends Activity {
             NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
             if (networkInfo != null && networkInfo.isConnected()) {
 
-                Toast.makeText(getApplicationContext(), "Syncing Forms", Toast.LENGTH_SHORT).show();
-
-                /*new AsyncTask<Boolean, Void, Boolean>() {
-
+                new Handler().post(new Runnable() {
                     @Override
-                    protected Boolean doInBackground(Boolean... voids) {*/
+                    public void run() {
+                        Toast.makeText(MainActivity.this, "Syncing Start!!", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
-                //                 Upload Form 01a
-                Collection collection1 = null;
                 try {
-                    collection1 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM01A).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                new SyncAllData(
-                        MainActivity.this,
-                        "Forms01a",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01A + ".php"))
-                        , collection1
-                ).execute();
+//                 Upload Form 01a
+                    Collection collection1 = null;
+                    try {
+                        collection1 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM01A).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms01a",
+                            "updateSyncedForms_04_05",
+                            Forms_04_05.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01A + ".php"))
+                            , collection1
+                    ).execute();
 
 //                Upload Form 01b
-                Collection collection2 = null;
-                try {
-                    collection2 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM01B).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                new SyncAllData(
-                        MainActivity.this,
-                        "Forms01b",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01B + ".php")), collection2
-                ).execute();
+                    Collection collection2 = null;
+                    try {
+                        collection2 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM01B).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms01b",
+                            "updateSyncedForms_04_05",
+                            Forms_04_05.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM01B + ".php")), collection2
+                    ).execute();
 
 //                Upload Form 04
-                Collection collection4 = null;
-                try {
-                    collection4 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM04).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                new SyncAllData(
-                        MainActivity.this,
-                        "Forms04",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM04 + ".php")), collection4
-                ).execute();
+                    Collection collection4 = null;
+                    try {
+                        collection4 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM04).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms04",
+                            "updateSyncedForms_04_05",
+                            Forms_04_05.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM04 + ".php")), collection4
+                    ).execute();
 
 
 //                Upload Form 05
-                Collection collection5 = null;
-                try {
-                    collection5 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM05).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                new SyncAllData(
-                        MainActivity.this,
-                        "Forms05",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM05 + ".php")), collection5
-                ).execute();
+                    Collection collection5 = null;
+                    try {
+                        collection5 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM05).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms05",
+                            "updateSyncedForms_04_05",
+                            Forms_04_05.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM05 + ".php")), collection5
+                    ).execute();
 
 //                Upload Form 06
-                Collection collection6 = null;
-                try {
-                    collection6 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM06).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                new SyncAllData(
-                        MainActivity.this,
-                        "Forms06",
-                        "updateSyncedForms_04_05",
-                        Forms_04_05.class,
-                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM06 + ".php")), collection6
-                ).execute();
+                    Collection collection6 = null;
+                    try {
+                        collection6 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM06).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms06",
+                            "updateSyncedForms_04_05",
+                            Forms_04_05.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM06 + ".php")), collection6
+                    ).execute();
 
 //                Upload Form 07
-                Collection collection7 = null;
-                try {
-                    collection7 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.FORM07).get();
-                } catch (ExecutionException e) {
-                    e.printStackTrace();
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    Collection collection7 = null;
+                    try {
+                        collection7 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.FORM07).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms07",
+                            "updateSyncedForms",
+                            Forms.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM07 + ".php")), collection7
+                    ).execute();
+
+                } catch (final Exception e) {
+                    new Handler().post(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    });
                 }
-                new SyncAllData(
-                        MainActivity.this,
-                        "Forms07",
-                        "updateSyncedForms",
-                        Forms.class,
-                        MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM07 + ".php")), collection7
-                ).execute();
-
-
-                     /*   return true;
-                    }
-
-                    @Override
-                    protected void onPostExecute(Boolean aBoolean) {
-                        super.onPostExecute(aBoolean);
-
-                        Toast.makeText(MainActivity.this, "Syncing Finished!!", Toast.LENGTH_SHORT).show();
-
-                    }
-                }.execute();*/
 
                 /*JobScheduler jobScheduler = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
                 int result = jobScheduler.schedule(new JobInfo.Builder(1,
