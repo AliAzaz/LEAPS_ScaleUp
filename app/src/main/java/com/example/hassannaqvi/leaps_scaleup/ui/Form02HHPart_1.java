@@ -264,6 +264,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
                 : bi.ls02pe01c03.isChecked() ? "3"
                 : bi.ls02pe01c04.isChecked() ? "4"
                 : bi.ls02pe01c05.isChecked() ? "5"
+                : bi.ls02pe01c06.isChecked() ? "6"
                 : bi.ls02pe01c96.isChecked() ? "96"
                 : bi.ls02pe01c98.isChecked() ? "98"
                 : "0");
@@ -283,6 +284,7 @@ public class Form02HHPart_1 extends AppCompatActivity {
                 : bi.ls02pe02c03.isChecked() ? "3"
                 : bi.ls02pe02c04.isChecked() ? "4"
                 : bi.ls02pe02c05.isChecked() ? "5"
+                : bi.ls02pe02c06.isChecked() ? "6"
                 : bi.ls02pe02c96.isChecked() ? "96"
                 : bi.ls02pe02c98.isChecked() ? "98"
                 : "0");
@@ -359,7 +361,13 @@ public class Form02HHPart_1 extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.ls02pe01g, getString(R.string.ls02pe01g))) {
                 return false;
             }
+            if (!validatorClass.RangeTextBox(this, bi.ls02pe01g, 0, 24, getString(R.string.ls02pe01g), "Month(s)")) {
+                return false;
+            }
             if (!validatorClass.EmptyTextBox(this, bi.ls02pe01h, getString(R.string.ls02pe01h))) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.ls02pe01h, 0, 6, getString(R.string.ls02pe01h), "Day(s)")) {
                 return false;
             }
 
@@ -412,6 +420,9 @@ public class Form02HHPart_1 extends AppCompatActivity {
                 if (!validatorClass.EmptyTextBox(this, bi.ls02pe02g, getString(R.string.ls02pe02g))) {
                     return false;
                 }
+                if (!validatorClass.RangeTextBox(this, bi.ls02pe02g, 0,24,getString(R.string.ls02pe02g),"Month(s)")) {
+                    return false;
+                }
                 if (!validatorClass.EmptyRadioButton(this, bi.ls02pe02h, bi.ls02pe02h01, getString(R.string.ls02pe02h))) {
                     return false;
                 }
@@ -428,6 +439,8 @@ public class Form02HHPart_1 extends AppCompatActivity {
                         return false;
                     }
                     if (!validatorClass.EmptyTextBox(this, bi.ls02pe03c, getString(R.string.ls02pe03c))) {
+                        return false;
+                    }  if (!validatorClass.RangeTextBox(this, bi.ls02pe03c, 0,24,getString(R.string.ls02pe03c),"Month(s)")) {
                         return false;
                     }
                     if (!validatorClass.EmptyRadioButton(this, bi.ls02pe03d, bi.ls02pe03d01, getString(R.string.ls02pe03d))) {

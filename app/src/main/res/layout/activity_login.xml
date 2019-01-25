@@ -29,6 +29,7 @@
             android:layout_marginBottom="8dp"
             android:visibility="gone" />
 
+
         <ScrollView
             android:id="@+id/login_form"
             android:layout_width="match_parent"
@@ -37,7 +38,7 @@
             <LinearLayout
                 android:id="@+id/email_login_form"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginLeft="72dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="72dp"
@@ -216,6 +217,8 @@
                     android:textSize="12sp" />
 
             </LinearLayout>
+
+
         </ScrollView>
     </LinearLayout>
 </layout>

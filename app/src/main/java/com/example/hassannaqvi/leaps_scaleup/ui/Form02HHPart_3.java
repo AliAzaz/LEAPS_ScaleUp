@@ -234,6 +234,9 @@ public class Form02HHPart_3 extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls02ee02, getString(R.string.ls02ee02))) {
             return false;
         }
+        if (!validatorClass.RangeTextBox(this, bi.ls02ee02, 14, 60, getString(R.string.ls02ee02), "Age")) {
+            return false;
+        }
         if (!validatorClass.EmptyRadioButton(this, bi.ls02ee03a, bi.ls02ee03a01, getString(R.string.ls02ee03a))) {
             return false;
         }
@@ -241,6 +244,9 @@ public class Form02HHPart_3 extends AppCompatActivity {
             return false;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls02ee04, getString(R.string.ls02ee04))) {
+            return false;
+        }
+        if (!validatorClass.RangeTextBox(this, bi.ls02ee04, 0, 18, getString(R.string.ls02ee04), "Years")) {
             return false;
         }
 
@@ -261,6 +267,9 @@ public class Form02HHPart_3 extends AppCompatActivity {
                 return false;
             }
             if (!validatorClass.EmptyTextBox(this, bi.ls02ee08, getString(R.string.ls02ee08))) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.ls02ee08, 0, 18, getString(R.string.ls02ee08), "Years")) {
                 return false;
             }
             if (!validatorClass.EmptyRadioButton(this, bi.ls02ee09, bi.ls02ee09a, getString(R.string.ls02ee09))) {
@@ -289,7 +298,21 @@ public class Form02HHPart_3 extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls02ee14, getString(R.string.ls02ee14))) {
             return false;
         }
-        return validatorClass.EmptyTextBox(this, bi.ls02ee15, getString(R.string.ls02ee15));
+        if (!validatorClass.RangeTextBox(this, bi.ls02ee14, 1, 14, getString(R.string.ls02ee14), "Child(s)")) {
+            return false;
+        }
+        if (!validatorClass.EmptyTextBox(this, bi.ls02ee15, getString(R.string.ls02ee15))) {
+            return false;
+        }
+        if (Integer.parseInt(bi.ls02ee15.getText().toString()) > Integer.parseInt(bi.ls02ee14.getText().toString())) {
+            bi.ls02ee15.setError("Child Range could not be greater than " + Integer.parseInt(bi.ls02ee14.getText().toString()));
+            bi.ls02ee15.requestFocus();
+            return false;
+        } else {
+            bi.ls02ee15.setError(null);
+            bi.ls02ee15.clearFocus();
+        }
+        return true;
     }
 
     public void BtnEnd() {

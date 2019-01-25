@@ -201,6 +201,12 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe01c05" />
+                        <RadioButton
+                            android:id="@+id/ls02pe01c06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ls02pe01c06" />
 
                         <RadioButton
                             android:id="@+id/ls02pe01c96"
@@ -420,7 +426,7 @@
                         android:layout_margin="10dp"
                         android:layout_marginBottom="1dp"
                         android:digits="0123456789"
-                        android:hint="@string/month"
+                        android:hint="@string/day"
                         android:inputType="number"
                         android:maxLength="2" />
 
@@ -584,6 +590,13 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="1dp"
                             android:text="@string/ls02pe02c05" />
+
+                        <RadioButton
+                            android:id="@+id/ls02pe02c06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:text="@string/ls02pe02c06" />
 
                         <RadioButton
                             android:id="@+id/ls02pe02c96"
