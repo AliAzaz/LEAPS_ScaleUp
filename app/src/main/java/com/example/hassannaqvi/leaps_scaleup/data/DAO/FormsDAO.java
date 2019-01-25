@@ -6,14 +6,11 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
-import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase.Sub_DBConnection;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
-
-import java.util.Date;
 
 @Dao
 public interface FormsDAO {
@@ -54,11 +51,11 @@ public interface FormsDAO {
      * Updating only sync and syncDate
      * By order id
      */
-    @Query("UPDATE Forms SET synced = :synced, synced_date= :date WHERE id =:id")
-    int updateSyncedForms(String synced, String date, int id);
+    @Query("UPDATE Forms SET synced =  '1' , synced_date= :synced_date WHERE id =:id")
+    int updateSyncedForms(String synced_date, int id);
 
     @Query("UPDATE Forms_04_05 SET synced = '1' , synced_date= :synced_date WHERE id =:id")
-    int updateSyncedForms_04_05( String synced_date, int id);
+    int updateSyncedForms_04_05(String synced_date, int id);
 
 
 }

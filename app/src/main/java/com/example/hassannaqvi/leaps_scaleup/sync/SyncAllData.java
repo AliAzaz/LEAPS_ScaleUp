@@ -28,16 +28,17 @@ public class SyncAllData extends AsyncTask<String, String, String> {
     private String TAG = "";
     private Context mContext;
     private ProgressDialog pd;
-    private String syncClass, URL,updateSyncClass;
+    private String syncClass, updateSyncClass;
+    private URL url;
     private Collection dbData;
     private Class contractClass;
 
 
-    public SyncAllData(Context context, String syncClass,String updateSyncClass,Class contractClass, String url, Collection dbData) {
+    public SyncAllData(Context context, String syncClass, String updateSyncClass, Class contractClass, URL url, Collection dbData) {
         mContext = context;
         this.syncClass = syncClass;
         this.updateSyncClass = updateSyncClass;
-        this.URL = url;
+        this.url = url;
         this.contractClass = contractClass;
         this.dbData = dbData;
 
@@ -56,17 +57,18 @@ public class SyncAllData extends AsyncTask<String, String, String> {
 
     @Override
     protected String doInBackground(String... args) {
-        Log.d(TAG, "doInBackground: URL " + URL);
+        Log.d(TAG, "doInBackground: URL " + url);
         return downloadUrl(contractClass);
     }
-        /*
-        StringBuilder result = new StringBuilder();
 
-        URL url = null;
-        try {
-            url = new URL(URL);
-            urlConnection = (HttpURLConnection) url.openConnection();
-            urlConnection.setReadTimeout(10000 *//* milliseconds *//*);
+    /*
+    StringBuilder result = new StringBuilder();
+
+    URL url = null;
+    try {
+        url = new URL(URL);
+        urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setReadTimeout(10000 *//* milliseconds *//*);
             urlConnection.setConnectTimeout(15000 *//* milliseconds *//*);
             Log.d(TAG, "doInBackground: " + urlConnection.getResponseCode());
             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
@@ -91,96 +93,94 @@ public class SyncAllData extends AsyncTask<String, String, String> {
 
         return result.toString();
     }*/
-        private String downloadUrl(Class<?> contractClass) {
-            String line = "No Response";
+    private String downloadUrl(Class<?> contractClass) {
+        String line = "No Response";
 
-            Collection<?> DBData = dbData; // pass data that's coming from db
+        Collection<?> DBData = dbData; // pass data that's coming from db
 
-            Log.d(TAG, String.valueOf(DBData.size()));
+        Log.d(TAG, String.valueOf(DBData.size()));
 
-            if (DBData.size() > 0) {
+        if (DBData.size() > 0) {
 
-                HttpURLConnection connection = null;
-                try {
-                    String request = URL;
+            HttpURLConnection connection = null;
+            try {
+//                    String request = url;
 
-                    URL url = new URL(request);
+//                    URL url = new URL(request);
+                connection = (HttpURLConnection) url.openConnection();
+                connection.connect();
+                int HttpResult = connection.getResponseCode();
+                if (HttpResult == HttpURLConnection.HTTP_OK) {
+                    JSONArray jsonSync = new JSONArray();
                     connection = (HttpURLConnection) url.openConnection();
+
+                    connection.setDoOutput(true);
+                    connection.setDoInput(true);
+                    connection.setInstanceFollowRedirects(false);
+                    connection.setRequestMethod("POST");
+                    connection.setRequestProperty("Content-Type", "application/json");
+                    connection.setRequestProperty("charset", "utf-8");
+                    connection.setUseCaches(false);
                     connection.connect();
-                    int HttpResult = connection.getResponseCode();
-                    if (HttpResult == HttpURLConnection.HTTP_OK) {
-                        JSONArray jsonSync = new JSONArray();
-                        connection = (HttpURLConnection) url.openConnection();
 
-                        connection.setDoOutput(true);
-                        connection.setDoInput(true);
-                        connection.setInstanceFollowRedirects(false);
-                        connection.setRequestMethod("POST");
-                        connection.setRequestProperty("Content-Type", "application/json");
-                        connection.setRequestProperty("charset", "utf-8");
-                        connection.setUseCaches(false);
-                        connection.connect();
-
-                        DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
-                        try {
-                            while (contractClass != null) {
-                                for (Method method : contractClass.getDeclaredMethods()) {
-                                    String methodName = method.getName();
-                                    if (methodName.equals("toJSONObject")) {
-                                        for (Object fc : DBData) {
-                                            jsonSync.put(fc.getClass().getMethod(methodName).invoke(fc));
-                                        }
-                                        break;
+                    DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
+                    try {
+                        while (contractClass != null) {
+                            for (Method method : contractClass.getDeclaredMethods()) {
+                                String methodName = method.getName();
+                                if (methodName.equals("toJSONObject")) {
+                                    for (Object fc : DBData) {
+                                        jsonSync.put(fc.getClass().getMethod(methodName).invoke(fc));
                                     }
+                                    break;
                                 }
-                                break;
                             }
-
-                        } catch (NoSuchMethodException e) {
-                            e.printStackTrace();
-                        } catch (IllegalAccessException e) {
-                            e.printStackTrace();
-                        } catch (InvocationTargetException e) {
-                            e.printStackTrace();
+                            break;
                         }
 
-
-                        wr.writeBytes(jsonSync.toString().replace("\uFEFF", "") + "\n");
-                        wr.flush();
-
-
-                        BufferedReader br = new BufferedReader(new InputStreamReader(
-                                connection.getInputStream(), "utf-8"));
-                        StringBuffer sb = new StringBuffer();
-
-                        while ((line = br.readLine()) != null) {
-                            sb.append(line + "\n");
-                        }
-                        br.close();
-
-                        System.out.println("" + sb.toString());
-                        return sb.toString();
-                    } else {
-                        System.out.println(connection.getResponseMessage());
-                        return connection.getResponseMessage();
+                    } catch (NoSuchMethodException e) {
+                        e.printStackTrace();
+                    } catch (IllegalAccessException e) {
+                        e.printStackTrace();
+                    } catch (InvocationTargetException e) {
+                        e.printStackTrace();
                     }
-                } catch (MalformedURLException e) {
 
-                    e.printStackTrace();
-                } catch (IOException e) {
 
-                    e.printStackTrace();
-                } finally {
-                    if (connection != null)
-                        connection.disconnect();
+                    wr.writeBytes(jsonSync.toString().replace("\uFEFF", "") + "\n");
+                    wr.flush();
+
+
+                    BufferedReader br = new BufferedReader(new InputStreamReader(
+                            connection.getInputStream(), "utf-8"));
+                    StringBuffer sb = new StringBuffer();
+
+                    while ((line = br.readLine()) != null) {
+                        sb.append(line + "\n");
+                    }
+                    br.close();
+
+                    System.out.println("" + sb.toString());
+                    return sb.toString();
+                } else {
+                    System.out.println(connection.getResponseMessage());
+                    return connection.getResponseMessage();
                 }
-            } else
+            } catch (MalformedURLException e) {
 
-            {
-                return "No new records to sync";
+                e.printStackTrace();
+            } catch (IOException e) {
+
+                e.printStackTrace();
+            } finally {
+                if (connection != null)
+                    connection.disconnect();
             }
-            return line;
+        } else {
+            return "No new records to sync";
         }
+        return line;
+    }
 
     @Override
     protected void onPostExecute(String result) {
@@ -199,7 +199,7 @@ public class SyncAllData extends AsyncTask<String, String, String> {
 //                    DatabaseHelper db = new DatabaseHelper(mContext); // Database Helper
 
                     for (int i = 0; i < json.length(); i++) {
-                        int id  = 0;
+                        int id = 0;
                         JSONObject jsonObject = new JSONObject(json.getString(i));
 
                         if (jsonObject.getString("status").equals("1") && jsonObject.getString("error").equals("0")) {
@@ -233,7 +233,7 @@ public class SyncAllData extends AsyncTask<String, String, String> {
                     pd.setMessage(syncClass + " synced: " + sSynced + "\r\n\r\n Duplicates: " + sDuplicate + "\r\n\r\n Errors: " + sSyncedError);
                     pd.setTitle("Done uploading +" + syncClass + " data");
                     pd.show();
-                    //syncStatus.setText(syncStatus.getText() + "\r\nDone uploading +" + syncClass + " data");
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -242,7 +242,7 @@ public class SyncAllData extends AsyncTask<String, String, String> {
                     pd.setMessage(result);
                     pd.setTitle(syncClass + " Sync Failed");
                     pd.show();
-                    //syncStatus.setText(syncStatus.getText() + "\r\n" + syncClass + " Sync Failed");
+
                 }
 
             } else {
