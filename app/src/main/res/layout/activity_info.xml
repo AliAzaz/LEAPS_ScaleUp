@@ -396,7 +396,7 @@
                             android:focusable="false"
                             android:hint="DD/MM/YYYY"
                             android:textColor="@android:color/black"
-                            app:dateFormat="dd-MM-yyyy" />
+                            app:dateFormat="dd/MM/yyyy" />
 
                     </LinearLayout>
 

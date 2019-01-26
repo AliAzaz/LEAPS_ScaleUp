@@ -413,7 +413,11 @@ public class Forms_04_05 implements Serializable {
 
     public class Simple_Forms_04_05 {
 
-        String ls01a05, ls01a06, ls01a07, ls01a09, ls01f03, ls01f04, ls01f05d, ls01f05m, ls01f05y;
+        String ls01a05, ls01a06, ls01a07, ls01a09, ls01f03, ls01f04, ls01f05d, ls01f05m, ls01f05y,ls01a10;
+
+        public String getLs01a10() {
+            return ls01a10;
+        }
 
         public String getLs01a05() {
             return ls01a05;
