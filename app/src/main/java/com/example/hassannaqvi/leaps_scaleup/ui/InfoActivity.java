@@ -30,6 +30,7 @@ import com.google.gson.Gson;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
@@ -48,6 +49,8 @@ public class InfoActivity extends AppCompatActivity {
     Class<?> routeClass;
     Forms_04_05 childDT;
     Forms_04_05.Simple_Forms_04_05 sInfo_parse;
+    Forms_04_05 sInfo;
+    Date date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +72,8 @@ public class InfoActivity extends AppCompatActivity {
         bi.lsid5.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         bi.lsid14.setManager(getSupportFragmentManager());
         bi.lsid14.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
+
+
 
         /*Setting edittext*/
         bi.lsid7m.setManager(this, "Month");
@@ -171,6 +176,7 @@ public class InfoActivity extends AppCompatActivity {
 
                 sInfo_parse = new Gson().fromJson(childDT.getSInfo(), Forms_04_05.Simple_Forms_04_05.class);
 
+
                 // Age setting
                 String y, m;
                 if (sInfo_parse.getLs01f04().equals("2")) {
@@ -182,6 +188,14 @@ public class InfoActivity extends AppCompatActivity {
                 }
                 bi.lsid7y.setText(y);
                 bi.lsid7m.setText(m);
+//                date = new SimpleDateFormat("dd/MM/yyyy").parse();
+//                bi.lsid14.setMinDate(sInfo_parse.getLs01a10());
+                try {
+                    bi.lsid14.setMinDate(new SimpleDateFormat("dd/MM/yyyy").format(new SimpleDateFormat("dd-mm-yyyy").parse(sInfo_parse.getLs01a10())));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
 
                 // Round Setting
                 bi.lsid10.check(

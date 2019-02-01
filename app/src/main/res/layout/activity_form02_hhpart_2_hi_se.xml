@@ -710,6 +710,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        android:maxLength="4"
                         style="@style/textInput"
                         android:id="@+id/ls02se06"
                         android:layout_width="match_parent"
@@ -957,6 +958,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        android:maxLength="5"
                         style="@style/textInput"
                         android:id="@+id/ls02se10"
                         android:layout_width="match_parent"
@@ -1084,6 +1086,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        android:maxLength="4"
                         style="@style/textInput"
                         android:id="@+id/ls02se12"
                         android:layout_width="match_parent"
@@ -1130,6 +1133,7 @@
                         android:textSize="20sp" />
 
                     <EditText
+                        android:maxLength="6"
                         style="@style/textInput"
                         android:id="@+id/ls02se13"
                         android:layout_width="match_parent"

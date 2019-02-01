@@ -31,9 +31,9 @@ public class Form09_part_2_Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_form09_part_2_);
         bi.setCallback(this);
+
 
 
         bi.ls09efaa05a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {

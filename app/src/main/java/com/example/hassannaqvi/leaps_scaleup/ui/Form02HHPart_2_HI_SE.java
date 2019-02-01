@@ -253,7 +253,7 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls02hi02, getString(R.string.ls02hi02))) {
             return false;
         }
-        if(!validatorClass.RangeTextBox(this,bi.ls02hi02,2,99,getString(R.string.ls02hi02),"Age")){
+        if (!validatorClass.RangeTextBox(this, bi.ls02hi02, 2, 99, getString(R.string.ls02hi02), "Age")) {
             return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls02se01a, bi.ls02se01a01, getString(R.string.ls02se01a))) {
@@ -300,6 +300,9 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls02se04, getString(R.string.ls02se04))) {
             return false;
         }
+        if (!validatorClass.RangeTextBox(this, bi.ls02se04, 1,15 ,getString(R.string.ls02se04),"Room(s)")) {
+            return false;
+        }
         if (!validatorClass.EmptyRadioButton(this, bi.ls02se05, bi.ls02se05a, getString(R.string.ls02se05))) {
             return false;
         }
@@ -310,6 +313,8 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
         }
         if (!bi.ls02se0698.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.ls02se06, getString(R.string.ls02se06))) {
+                return false;
+            } if (!validatorClass.RangeTextBox(this, bi.ls02se06, 0,6000,getString(R.string.ls02se06),"Rupees")) {
                 return false;
             }
         }
@@ -354,6 +359,9 @@ public class Form02HHPart_2_HI_SE extends AppCompatActivity {
         }
         if (!bi.ls02se1398.isChecked()) {
             if (!validatorClass.EmptyTextBox(this, bi.ls02se13, getString(R.string.ls02se13))) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.ls02se13,2000,500000 ,getString(R.string.ls02se13),"Rupees")) {
                 return false;
             }
         }

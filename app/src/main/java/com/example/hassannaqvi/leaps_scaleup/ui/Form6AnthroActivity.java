@@ -95,23 +95,23 @@ public class Form6AnthroActivity extends AppCompatActivity {
         }
 
 
-        if (!validatorClass.RangeTextBox(this, bi.ls0601, 10d, 140d, getString(R.string.ls0601), " height")) {
+        if (!validatorClass.RangeTextBox(this, bi.ls0601, 060.0, 130.0, getString(R.string.ls0601), " height")) {
             return false;
         }
 
         if (!validatorClass.EmptyTextBox(this, bi.ls0602, getString(R.string.ls0602))) {
             return false;
         }
-        if (!bi.ls0602.getText().toString().matches("^(\\d{3,3}\\.\\d{2,2})$")) {
+        if (!bi.ls0602.getText().toString().matches("^(\\d{2,2}\\.\\d{1,1})$")) {
             Toast.makeText(this, "ERROR(invalid): " + "Please type the correct format" + getString(R.string.ls0602), Toast.LENGTH_LONG).show();
-            bi.ls0602.setError("Please type correct format (XXX.XX)");
+            bi.ls0602.setError("Please type correct format (XX.X)");
             return false;
         } else {
             bi.ls0602.setError(null);
         }
 
 
-        if (!validatorClass.RangeTextBox(this, bi.ls0602, 0.5d, 40d, getString(R.string.ls0602), " weight")) {
+        if (!validatorClass.RangeTextBox(this, bi.ls0602, 10.0, 30.0, getString(R.string.ls0602), " weight")) {
             return false;
         }
 
@@ -127,7 +127,7 @@ public class Form6AnthroActivity extends AppCompatActivity {
         }
 
 
-        if (!validatorClass.RangeTextBox(this, bi.ls0603, 5d, 25d, getString(R.string.ls0603), " MAUC")) {
+        if (!validatorClass.RangeTextBox(this, bi.ls0603, 12.0, 22.0, getString(R.string.ls0603), " MAUC")) {
             return false;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls0604, getString(R.string.ls0604))) {
@@ -142,7 +142,7 @@ public class Form6AnthroActivity extends AppCompatActivity {
         }
 
 
-        if (!validatorClass.RangeTextBox(this, bi.ls0604, 1d, 99d, getString(R.string.ls0604), " Head of circumference")) {
+        if (!validatorClass.RangeTextBox(this, bi.ls0604, 30.0, 90.0, getString(R.string.ls0604), " Head of circumference")) {
             return false;
         }
 
