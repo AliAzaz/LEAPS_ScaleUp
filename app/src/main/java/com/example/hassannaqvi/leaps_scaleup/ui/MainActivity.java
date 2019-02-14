@@ -530,7 +530,6 @@ public class MainActivity extends Activity {
                             MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM07 + ".php")), collection7
                     ).execute();
 
-
 //                Upload Form 08
                     Collection collection8 = null;
                     try {
@@ -544,7 +543,7 @@ public class MainActivity extends Activity {
                             MainActivity.this,
                             "Forms08",
                             "updateSyncedForms_04_05",
-                            Forms_04_05.class,
+                            Forms.class,
                             MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM08 + ".php")), collection8
                     ).execute();
 
@@ -561,10 +560,9 @@ public class MainActivity extends Activity {
                             MainActivity.this,
                             "Forms09",
                             "updateSyncedForms_04_05",
-                            Forms_04_05.class,
-                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM08 + ".php")), collection9
+                            Forms.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM09 + ".php")), collection9
                     ).execute();
-
 
 //                Upload Form 14
                     Collection collection14 = null;
