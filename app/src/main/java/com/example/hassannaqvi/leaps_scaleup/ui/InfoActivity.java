@@ -269,6 +269,15 @@ public class InfoActivity extends AppCompatActivity {
         JSONObject jsonInfo = new JSONObject();
         try {
             jsonInfo.put(fExt + "lsid3", sInfo_parse.getLs01a06());
+            jsonInfo.put(fExt + "lsid12", bi.lsid12a.isChecked() ? "1"
+                    : bi.lsid12b.isChecked() ? "2"
+                    : bi.lsid1298.isChecked() ? "98"
+                    : "0");
+            jsonInfo.put(fExt + "lsid13", bi.lsid13a.isChecked() ? "1"
+                    : bi.lsid13b.isChecked() ? "2"
+                    : bi.lsid13c.isChecked() ? "3"
+                    : bi.lsid13d.isChecked() ? "4"
+                    : "0");
 
         } catch (JSONException e) {
             e.printStackTrace();

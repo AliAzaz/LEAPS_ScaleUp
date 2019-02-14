@@ -530,6 +530,59 @@ public class MainActivity extends Activity {
                             MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM07 + ".php")), collection7
                     ).execute();
 
+
+//                Upload Form 08
+                    Collection collection8 = null;
+                    try {
+                        collection8 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM08).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms08",
+                            "updateSyncedForms_04_05",
+                            Forms_04_05.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM08 + ".php")), collection8
+                    ).execute();
+
+//                Upload Form 09
+                    Collection collection9 = null;
+                    try {
+                        collection9 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM09).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms09",
+                            "updateSyncedForms_04_05",
+                            Forms_04_05.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM08 + ".php")), collection9
+                    ).execute();
+
+
+//                Upload Form 14
+                    Collection collection14 = null;
+                    try {
+                        collection14 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.FORM14).get();
+                    } catch (ExecutionException e) {
+                        e.printStackTrace();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms14",
+                            "updateSyncedForms",
+                            Forms.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM14 + ".php")), collection14
+                    ).execute();
+
                 } catch (final Exception e) {
                     new Handler().post(new Runnable() {
                         @Override

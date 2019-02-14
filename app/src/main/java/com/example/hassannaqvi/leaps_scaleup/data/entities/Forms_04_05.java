@@ -104,7 +104,6 @@ public class Forms_04_05 implements Serializable {
         json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("participantID", this.participantID == null ? JSONObject.NULL : this.participantID);
-        json.put("participantName", this.participantName == null ? JSONObject.NULL : this.participantName);
 
         json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
         json.put("clustercode", this.clustercode == null ? JSONObject.NULL : this.clustercode);
@@ -121,8 +120,11 @@ public class Forms_04_05 implements Serializable {
         json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);*/
         json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
+        if (this.formType.equals("1a")|| this.formType.equals("1b")) {
+            json.put("participantName", this.participantName == null ? JSONObject.NULL : this.participantName);
+            json.put("round", this.round == null ? JSONObject.NULL : this.round);
 
-        json.put("round", this.round == null ? JSONObject.NULL : this.round);
+        }
         json.put("pdeviation", this.pdeviation == null ? JSONObject.NULL : this.pdeviation);
 
         if (!this.sInfo.equals("")) {
@@ -413,7 +415,7 @@ public class Forms_04_05 implements Serializable {
 
     public class Simple_Forms_04_05 {
 
-        String ls01a05, ls01a06, ls01a07, ls01a09, ls01f03, ls01f04, ls01f05d, ls01f05m, ls01f05y,ls01a10;
+        String ls01a05, ls01a06, ls01a07, ls01a09, ls01f03, ls01f04, ls01f05d, ls01f05m, ls01f05y, ls01a10;
 
         public String getLs01a10() {
             return ls01a10;
