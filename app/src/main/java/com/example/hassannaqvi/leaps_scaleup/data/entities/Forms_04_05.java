@@ -105,10 +105,9 @@ public class Forms_04_05 implements Serializable {
         json.put("username", this.username == null ? JSONObject.NULL : this.username);
         json.put("participantID", this.participantID == null ? JSONObject.NULL : this.participantID);
 
-        json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
         json.put("clustercode", this.clustercode == null ? JSONObject.NULL : this.clustercode);
         json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
-        json.put("districtname", this.districtname == null ? JSONObject.NULL : this.districtname);
+//        json.put("districtname", this.districtname == null ? JSONObject.NULL : this.districtname);
         json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
         json.put("gpsLng", this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
         json.put("gpsDT", this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
@@ -123,6 +122,7 @@ public class Forms_04_05 implements Serializable {
         if (this.formType.equals("1a")|| this.formType.equals("1b")) {
             json.put("participantName", this.participantName == null ? JSONObject.NULL : this.participantName);
             json.put("round", this.round == null ? JSONObject.NULL : this.round);
+            json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
 
         }
         json.put("pdeviation", this.pdeviation == null ? JSONObject.NULL : this.pdeviation);

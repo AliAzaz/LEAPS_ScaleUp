@@ -360,9 +360,9 @@ public class Form01Enrolment extends AppCompatActivity {
                 : "0");
         f01.put("ls01a08", bi.ls01a08a.isChecked() ? "1"
                 : bi.ls01a08b.isChecked() ? "2"
-                : bi.ls01a0896.isChecked() ? "96"
+                : bi.ls01a0898.isChecked() ? "98"
                 : "0");
-        f01.put("ls01a0896x", bi.ls01a0896x.getText().toString());
+//        f01.put("ls01a0896x", bi.ls01a0896x.getText().toString());
         f01.put("ls01a09", bi.ls01a09a.isChecked() ? "1"
                 : bi.ls01a09b.isChecked() ? "2"
                 : bi.ls01a09c.isChecked() ? "3"
@@ -484,7 +484,7 @@ public class Form01Enrolment extends AppCompatActivity {
         }*/
         if (MainApp.round != 1) {
             if (!bi.ls01a07a.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0896, bi.ls01a0896x, getString(R.string.ls01a08))) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0898, getString(R.string.ls01a08))) {
                     return false;
                 }
                 if (bi.ls01a08a.isChecked()) {

@@ -58,8 +58,37 @@ public class Form09_part_1_Activity extends AppCompatActivity {
 
                 if (b) {
                     ClearClass.ClearAllFields(bi.fldgrpls09j02a);
+                    bi.ls09j02a.setEnabled(false);
+                    bi.ls09j02b.setEnabled(false);
+                    bi.ls09j02c.setEnabled(false);
+                    bi.ls09j02d.setEnabled(false);
                 } else {
                     ClearClass.ClearAllFields(bi.fldgrpls09j02a);
+                    bi.ls09j02a.setEnabled(true);
+                    bi.ls09j02b.setEnabled(true);
+                    bi.ls09j02c.setEnabled(true);
+                    bi.ls09j02d.setEnabled(true);
+                }
+            }
+        });
+        bi.ls09j02d.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+
+                if (b) {
+                    bi.ls09j02a.setChecked(false);
+                    bi.ls09j02b.setChecked(false);
+                    bi.ls09j02c.setChecked(false);
+                    bi.ls09j0299.setChecked(false);
+                    bi.ls09j02a.setEnabled(false);
+                    bi.ls09j02b.setEnabled(false);
+                    bi.ls09j02c.setEnabled(false);
+                    bi.ls09j0299.setEnabled(false);
+                } else {
+                    bi.ls09j02a.setEnabled(true);
+                    bi.ls09j02b.setEnabled(true);
+                    bi.ls09j02c.setEnabled(true);
+                    bi.ls09j0299.setEnabled(true);
                 }
             }
         });
@@ -481,9 +510,7 @@ public class Form09_part_1_Activity extends AppCompatActivity {
                     return false;
                 }
                 if (bi.ls09pa0596.isChecked()) {
-                    if (!validatorClass.EmptyTextBox(this, bi.ls09pa0596x, getString(R.string.ls09pa05))) {
-                        return false;
-                    }
+                    return validatorClass.EmptyTextBox(this, bi.ls09pa0596x, getString(R.string.ls09pa05));
                 }
             }
 

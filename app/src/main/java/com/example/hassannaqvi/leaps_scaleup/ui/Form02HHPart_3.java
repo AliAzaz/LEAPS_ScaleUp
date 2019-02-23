@@ -137,7 +137,7 @@ public class Form02HHPart_3 extends AppCompatActivity {
         JSONObject sH3 = new JSONObject();
 
         sH3.put("lsee01", bi.ls02ee01a01.isChecked() ? "1" : bi.ls02ee01a02.isChecked() ? "2" : "0");
-        sH3.put("lsee02", bi.ls02ee01b01.isChecked() ? "1" : bi.ls02ee01b02.isChecked() ? "1" : "0");
+        sH3.put("lsee02", bi.ls02ee01b01.isChecked() ? "1" : bi.ls02ee01b02.isChecked() ? "2" : "0");
 
         sH3.put("lsee03", bi.ls02ee01c01.isChecked() ? "1"
                 : bi.ls02ee01c02.isChecked() ? "2"

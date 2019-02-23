@@ -29,12 +29,12 @@
         <activity
             android:name=".ui.SplashscreenActivity"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".ui.EndInterview"
@@ -152,7 +152,10 @@
         <activity
             android:name=".ui.Form09_part_1_Activity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1">
+
+        </activity>
+
         <activity
             android:name=".ui.Form09_part_2_Activity"
             android:screenOrientation="portrait"
@@ -203,7 +206,7 @@
         <activity
             android:name=".ui.YouthInfoActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1"></activity>
 
 
         <!--        <service
