@@ -58,7 +58,7 @@ public class Form14Activity extends AppCompatActivity {
         getFtype = MainApp.FORM14;
         fc = new Forms();
         formTypes = new ArrayList<>();
-        formTypes.add("Select Sub Village..");
+        formTypes.add("....");
         formTypes.add("1a");
         formTypes.add("1b");
         formTypes.add("4");
@@ -93,8 +93,11 @@ public class Form14Activity extends AppCompatActivity {
     }
 
     public void checkID() {
+//        bi.mainLayout1.setVisibility(View.VISIBLE);
+
         //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
         if (validatorClass.EmptyRadioButton(this, bi.ls14a, bi.ls14a01, getString(R.string.ls14)) && !TextUtils.isEmpty(bi.ls14b.getText().toString())) {
+
             /*bi.mainLayout1.setVisibility(View.VISIBLE);
             bi.ls14a01.setError(null);
             bi.ls14b.setError(null);*/
@@ -115,6 +118,7 @@ public class Form14Activity extends AppCompatActivity {
                         } else {
                             Toast.makeText(this, "You are not allowed to enter deviation form for this participant!!", Toast.LENGTH_SHORT).show();
                             bi.mainLayout1.setVisibility(View.GONE);
+
                             bi.ls1403.setText("");
                             bi.ls1404.setText("");
                             bi.ls1405.setText("");
@@ -209,6 +213,7 @@ public class Form14Activity extends AppCompatActivity {
                 : bi.ls1407b.isChecked() ? "2"
                 : "0");
         sF14.put("ls1408", bi.ls1408.getText().toString());
+        sF14.put("ls1409", bi.spformType.getSelectedItem().toString());
         fc.setSa1(String.valueOf(sF14));
 
     }
@@ -291,6 +296,9 @@ public class Form14Activity extends AppCompatActivity {
             return false;
         }
         if (!validatorClass.EmptyTextBox(this, bi.ls1405, getString(R.string.ls1405))) {
+            return false;
+        }
+        if (!validatorClass.EmptySpinner(this, bi.spformType, getString(R.string.spformType))) {
             return false;
         }
         if (!validatorClass.EmptyRadioButton(this, bi.ls1406, bi.ls140696, bi.ls140696x, getString(R.string.ls1406))) {
