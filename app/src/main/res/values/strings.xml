@@ -41,6 +41,7 @@
     <string name="tap">ڌڪ</string>
     <string name="knock">کڙڪائڻ</string>
     <string name="ignore">نظر انداز / انڪار</string>
+    <string name="spformType">Please Select Form Type</string>
 
     <string name="pdeviation">ڇا پروجيڪٽ ڊيويشن فارم جي ضرورت آهي. </string>
     <string name="istatus">انٹروہو کا نتیجہ</string>

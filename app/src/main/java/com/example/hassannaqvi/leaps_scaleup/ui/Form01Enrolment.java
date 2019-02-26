@@ -60,22 +60,28 @@ public class Form01Enrolment extends AppCompatActivity {
         deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
         setupView();
+       /* if (MainApp.round == 1) {
+            bi.ls01a07a.setChecked(true);
+        } else if (MainApp.round == 2) {
+            bi.ls01a07b.setChecked(true);
+        } else if (MainApp.round == 3) {
+            bi.ls01a07c.setChecked(true);
+        } else {
+            bi.ls01a07d.setChecked(true);
+        }*/
+
 
     }
 
     private void setupView() {
 
         bi.ls01f03.setManager(getSupportFragmentManager());
-        bi.ls01f03.setMaxDate(DateUtils.getYearsBack("dd/MM/yyyy",-4));
+        bi.ls01f03.setMaxDate(DateUtils.getYearsBack("dd/MM/yyyy", -4));
         bi.ls01a10.setManager(getSupportFragmentManager());
         bi.ls01a10.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         bi.ls01a10.setMinDate("1/1/2019");
-        bi.ls01f03.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy",-6));
+        bi.ls01f03.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -6));
 
-
-        bi.ls01a07.check(MainApp.round == 1 ? bi.ls01a07a.getId() :
-                MainApp.round == 2 ? bi.ls01a07b.getId() :
-                        MainApp.round == 3 ? bi.ls01a07c.getId() : bi.ls01a07d.getId());
 
         if (MainApp.round == 1) {
             bi.fldgrpls01a07.setVisibility(GONE);
@@ -86,6 +92,10 @@ public class Form01Enrolment extends AppCompatActivity {
             //ClearClass.ClearAllFields(bi.fldgrpls01a07, true);
 
         }
+
+        bi.ls01a07.check(MainApp.round == 1 ? bi.ls01a07a.getId() :
+                MainApp.round == 2 ? bi.ls01a07b.getId() :
+                        MainApp.round == 3 ? bi.ls01a07c.getId() : bi.ls01a07d.getId());
 
         bi.ls01f04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -187,7 +197,7 @@ public class Form01Enrolment extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if(isChecked){
+                if (isChecked) {
                     ClearClass.ClearAllFields(bi.ls01f08);
                 }
             }
@@ -228,13 +238,16 @@ public class Form01Enrolment extends AppCompatActivity {
 
                 bi.fldgrpls01a01.setVisibility(VISIBLE);
 
+
             } else {
                 Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
               /*  bi.fldgrpls01a01.setVisibility(GONE);
                 ClearClass.ClearAllFields(bi.fldgrpls01a01,false);*/
 
             }
-
+            bi.ls01a07.check(MainApp.round == 1 ? bi.ls01a07a.getId() :
+                    MainApp.round == 2 ? bi.ls01a07b.getId() :
+                            MainApp.round == 3 ? bi.ls01a07c.getId() : bi.ls01a07d.getId());
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -347,9 +360,9 @@ public class Form01Enrolment extends AppCompatActivity {
                 : "0");
         f01.put("ls01a08", bi.ls01a08a.isChecked() ? "1"
                 : bi.ls01a08b.isChecked() ? "2"
-                : bi.ls01a0896.isChecked() ? "96"
+                : bi.ls01a0898.isChecked() ? "98"
                 : "0");
-        f01.put("ls01a0896x", bi.ls01a0896x.getText().toString());
+//        f01.put("ls01a0896x", bi.ls01a0896x.getText().toString());
         f01.put("ls01a09", bi.ls01a09a.isChecked() ? "1"
                 : bi.ls01a09b.isChecked() ? "2"
                 : bi.ls01a09c.isChecked() ? "3"
@@ -377,7 +390,7 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01f01", bi.ls01f01.getText().toString());
 
         f01.put("ls01f02", bi.ls01f02a.isChecked() ? "1"
-                : bi.ls01f02a.isChecked() ? "2"
+                : bi.ls01f02b.isChecked() ? "2"
                 : "0");
         f01.put("ls01f03", bi.ls01f03.getText().toString());
 
@@ -387,7 +400,6 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01f05d", bi.ls01f05d.getText().toString());
         f01.put("ls01f05m", bi.ls01f05m.getText().toString());
         f01.put("ls01f05y", bi.ls01f05y.getText().toString());
-
         f01.put("ls01f06a", bi.ls01f06a01.isChecked() ? "1"
                 : bi.ls01f06a02.isChecked() ? "2"
                 : "0");
@@ -404,6 +416,9 @@ public class Form01Enrolment extends AppCompatActivity {
                 : bi.ls01f07b06.isChecked() ? "6"
                 : bi.ls01f07b96.isChecked() ? "96"
                 : "0");
+        f01.put("ls01f07b96x", bi.ls01f07b96x.getText().toString());
+
+
         f01.put("ls01f07c", bi.ls01f07c.getText().toString());
 
         f01.put("ls01f07d", bi.ls01f07d01.isChecked() ? "1"
@@ -413,6 +428,8 @@ public class Form01Enrolment extends AppCompatActivity {
                 : bi.ls01f07d05.isChecked() ? "5"
                 : bi.ls01f07d96.isChecked() ? "96"
                 : "0");
+        f01.put("ls01f07d96x", bi.ls01f07d96x.getText().toString());
+
         f01.put("ls01f08a", bi.ls01f08a.isChecked() ? "1" : "0");
         f01.put("ls01f08b", bi.ls01f08b.isChecked() ? "2" : "0");
         f01.put("ls01f08c", bi.ls01f08c.isChecked() ? "3" : "0");
@@ -423,7 +440,7 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01f08h", bi.ls01f08h.isChecked() ? "8" : "0");
         f01.put("ls01f0896", bi.ls01f0896.isChecked() ? "96" : "0");
 
-        f01.put("ls01f0896", bi.ls01f0896x.getText().toString());
+        f01.put("ls01f0896x", bi.ls01f0896x.getText().toString());
         f01.put("ls01f09", bi.ls01f09.getText().toString());
         f01.put("ls01f10a", bi.ls01f10a01.isChecked() ? "1"
                 : bi.ls01f10a02.isChecked() ? "2"
@@ -467,7 +484,7 @@ public class Form01Enrolment extends AppCompatActivity {
         }*/
         if (MainApp.round != 1) {
             if (!bi.ls01a07a.isChecked()) {
-                if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0896, bi.ls01a0896x, getString(R.string.ls01a08))) {
+                if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0898, getString(R.string.ls01a08))) {
                     return false;
                 }
                 if (bi.ls01a08a.isChecked()) {
@@ -529,13 +546,13 @@ public class Form01Enrolment extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05d, getString(R.string.ls01f05))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.ls01f05d, 0,29,getString(R.string.ls01f05),"Day(s)")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls01f05d, 0, 29, getString(R.string.ls01f05), "Day(s)")) {
                 return false;
             }
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05m, getString(R.string.ls01f05))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.ls01f05m,0,11 ,getString(R.string.ls01f05),"Month(s)")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls01f05m, 0, 11, getString(R.string.ls01f05), "Month(s)")) {
                 return false;
             }
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05y, getString(R.string.ls01f05))) {
@@ -567,7 +584,7 @@ public class Form01Enrolment extends AppCompatActivity {
                 if (!validatorClass.EmptyTextBox(this, bi.ls01f07c, getString(R.string.ls01f07c))) {
                     return false;
                 }
-                if (!validatorClass.RangeTextBox(this, bi.ls01f07c,8,35 ,getString(R.string.ls01f07c),"Years")) {
+                if (!validatorClass.RangeTextBox(this, bi.ls01f07c, 8, 35, getString(R.string.ls01f07c), "Years")) {
                     return false;
                 }
             }
@@ -576,7 +593,7 @@ public class Form01Enrolment extends AppCompatActivity {
             }
         }
 
-        if(!bi.ls01f08g.isChecked()){
+        if (!bi.ls01f08g.isChecked()) {
             if (!validatorClass.EmptyCheckBox(this, bi.ls01f08, bi.ls01f0896, bi.ls01f0896x, getString(R.string.ls01f08))) {
                 return false;
             }

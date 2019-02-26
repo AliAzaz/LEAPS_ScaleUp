@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
@@ -23,16 +24,15 @@ import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm14Binding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
-import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
-import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public class Form14Activity extends AppCompatActivity {
@@ -45,6 +45,7 @@ public class Form14Activity extends AppCompatActivity {
     Forms_04_05 participantDT;
     Forms _participantDT;
     Boolean isFormType7 = false;
+    ArrayList<String> formTypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,10 +57,21 @@ public class Form14Activity extends AppCompatActivity {
         bi.ls1403.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         getFtype = MainApp.FORM14;
         fc = new Forms();
-
+        formTypes = new ArrayList<>();
+        formTypes.add("....");
+        formTypes.add("1a");
+        formTypes.add("1b");
+        formTypes.add("4");
+        formTypes.add("5");
+        formTypes.add("6");
+        formTypes.add("7");
+        formTypes.add("8");
+        formTypes.add("9");
         deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
         this.setTitle(R.string.ls14Heading);
+        bi.spformType.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, formTypes));
+
     }
 
     public void BtnContinue() {
@@ -81,8 +93,11 @@ public class Form14Activity extends AppCompatActivity {
     }
 
     public void checkID() {
+//        bi.mainLayout1.setVisibility(View.VISIBLE);
+
         //startActivity(new Intent(getApplicationContext(), Form02HHPart_2_HI_SE.class).putExtra("complete", true));
         if (validatorClass.EmptyRadioButton(this, bi.ls14a, bi.ls14a01, getString(R.string.ls14)) && !TextUtils.isEmpty(bi.ls14b.getText().toString())) {
+
             /*bi.mainLayout1.setVisibility(View.VISIBLE);
             bi.ls14a01.setError(null);
             bi.ls14b.setError(null);*/
@@ -103,6 +118,7 @@ public class Form14Activity extends AppCompatActivity {
                         } else {
                             Toast.makeText(this, "You are not allowed to enter deviation form for this participant!!", Toast.LENGTH_SHORT).show();
                             bi.mainLayout1.setVisibility(View.GONE);
+
                             bi.ls1403.setText("");
                             bi.ls1404.setText("");
                             bi.ls1405.setText("");
@@ -197,6 +213,7 @@ public class Form14Activity extends AppCompatActivity {
                 : bi.ls1407b.isChecked() ? "2"
                 : "0");
         sF14.put("ls1408", bi.ls1408.getText().toString());
+        sF14.put("ls1409", bi.spformType.getSelectedItem().toString());
         fc.setSa1(String.valueOf(sF14));
 
     }
@@ -281,6 +298,9 @@ public class Form14Activity extends AppCompatActivity {
         if (!validatorClass.EmptyTextBox(this, bi.ls1405, getString(R.string.ls1405))) {
             return false;
         }
+        if (!validatorClass.EmptySpinner(this, bi.spformType, getString(R.string.spformType))) {
+            return false;
+        }
         if (!validatorClass.EmptyRadioButton(this, bi.ls1406, bi.ls140696, bi.ls140696x, getString(R.string.ls1406))) {
             return false;
         }
@@ -289,10 +309,7 @@ public class Form14Activity extends AppCompatActivity {
             return false;
         }
 
-        if (!validatorClass.EmptyTextBox(this, bi.ls1408, getString(R.string.ls1408))) {
-            return false;
-        }
-        return true;
+        return validatorClass.EmptyTextBox(this, bi.ls1408, getString(R.string.ls1408));
     }
 
 }
