@@ -214,7 +214,8 @@ public class YouthInfoActivity extends AppCompatActivity {
         fc_4_5.setUsername(MainApp.userName);
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         fc_4_5.setDeviceID(deviceID);
-        fc_4_5.setParticipantID(bi.lsyid01.getText().toString());
+//        fc_4_5.setParticipantID(bi.lsyid01.getText().toString());
+        fc_4_5.setStudyID(bi.lsyid01.getText().toString());
         fc_4_5.setClustercode(youthDT.getClustercode());
 
         setGPS(fc_4_5); // Set GPS
