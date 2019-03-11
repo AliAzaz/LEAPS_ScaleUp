@@ -947,7 +947,7 @@
     <!--Form 14-->
     <string name="ls14Heading">Protocol Deviation</string>
     <string name="ls14instruction">باني ڪري اڀياس جي دوران جيڪڏهن ڪو پروٽوڪول  ڊيويشن ٿئي ٿو ته هن فارم ۾ نوٽ ڪريو. پروٽوڪول جو مطلب ته ا اها اسسيسمينٽ جيڪا ڏنل خاص هدايتن موجب نه ڪئي وئي هجي</string>
-    <string name="ls14">Enter participant ID</string>
+    <string name="ls14">Enter Study ID</string>
     <string name="ls1401">Child ID (جيڪڏهن فارم ٻار جي ٽيسٽ ۾ ڀريو ويو آهي)</string>
     <string name="ls1402">CYL  ID(جيڪڏهن فارم CYL جي ٽيسٽ ۾ ڀريو ويو آهي)</string>
     <string name="ls1403">ڊيويشن جي تاريخ </string>

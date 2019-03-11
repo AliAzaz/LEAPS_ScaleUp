@@ -325,7 +325,8 @@ public class Form07Activity extends AppCompatActivity {
 
         fc.setClustercode(bi.ls07y05.getText().toString());
         fc.setYouthID(bi.ls07y04.getText().toString());
-        fc.setStudyID(MainApp.round + "" + bi.ls07y05.getText().toString() + bi.ls07y04.getText().toString());
+//        fc.setStudyID(MainApp.round + "" + bi.ls07y05.getText().toString() + bi.ls07y04.getText().toString());
+        fc.setStudyID("8" + bi.ls07y05.getText().toString() + bi.ls07y04.getText().toString());
         fc.setYouthName(bi.ls07y03.getText().toString()); //Name
 
         fc.setRound(String.valueOf(MainApp.round));
