@@ -166,7 +166,7 @@ public class InfoActivity extends AppCompatActivity {
             Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getChildRecord").execute(bi.lsid1.getText().toString()).get();
 
             if (childData != null) {
-                Toast.makeText(this, "Child ID validate..", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Study ID validate..", Toast.LENGTH_SHORT).show();
                 childDT = (Forms_04_05) childData;
 
                 // Child Name
@@ -212,7 +212,7 @@ public class InfoActivity extends AppCompatActivity {
                 bi.fldgrpls01.setVisibility(VISIBLE);
 
             } else {
-                Toast.makeText(this, "Child ID not found!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Study ID not found!!", Toast.LENGTH_SHORT).show();
             }
 
         } catch (InterruptedException e) {
@@ -261,7 +261,8 @@ public class InfoActivity extends AppCompatActivity {
         fc_4_5.setUsername(MainApp.userName);
         fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         fc_4_5.setDeviceID(deviceID);
-        fc_4_5.setParticipantID(bi.lsid1.getText().toString());
+//        fc_4_5.setParticipantID(bi.lsid1.getText().toString());
+        fc_4_5.setStudyID(bi.lsid1.getText().toString());
         fc_4_5.setClustercode(childDT.getClustercode());
 
         setGPS(fc_4_5); // Set GPS

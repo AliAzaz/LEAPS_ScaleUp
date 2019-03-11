@@ -303,10 +303,11 @@ public class MainActivity extends Activity {
                 retClass = Form07Activity.class;
                 break;
             case "8":
-                retClass = YouthInfoActivity.class;
-                break;
             case "9":
                 retClass = YouthInfoActivity.class;
+                break;
+            case "14":
+                retClass = Form14Activity.class;
                 break;
         }
 

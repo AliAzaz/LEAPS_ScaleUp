@@ -23,6 +23,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm14Binding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
+import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
@@ -102,36 +103,46 @@ public class Form14Activity extends AppCompatActivity {
             bi.ls14a01.setError(null);
             bi.ls14b.setError(null);*/
             try {
-                Object participantExists = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "checkParticipantExist").execute(bi.ls14b.getText().toString());
+                Object participantExists;
 
-                if (participantExists != null) {
-                    try {
-                        Object participantData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecord").execute(bi.ls14b.getText().toString()).get();
+                if (bi.ls14a01.isChecked())
+                    participantExists = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "checkParticipantExist").execute(bi.ls14b.getText().toString());
+                else
+                    participantExists = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordForm7").execute(bi.ls14b.getText().toString());
 
-                        if (participantData != null) {
-                            isFormType7 = false;
-                            participantDT = (Forms_04_05) participantData;
-                            // Enable view
-                            bi.mainLayout1.setVisibility(View.VISIBLE);
-                            bi.ls14a01.setError(null);
-                            bi.ls14b.setError(null);
-                        } else {
-                            Toast.makeText(this, "You are not allowed to enter deviation form for this participant!!", Toast.LENGTH_SHORT).show();
-                            bi.mainLayout1.setVisibility(View.GONE);
+                // Object participantExists = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "checkParticipantExist").execute(bi.ls14b.getText().toString());
+                // Object participantData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecord").execute(bi.ls14b.getText().toString()).get();
 
-                            bi.ls1403.setText("");
-                            bi.ls1404.setText("");
-                            bi.ls1405.setText("");
-                            bi.ls1406.clearCheck();
-                            bi.ls1407.clearCheck();
-                            bi.ls1408.setText("");
-                        }
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
+                if (((GetIndDBData) participantExists).get() != null) {
+//                    isFormType7 = false;
+
+                    if (((GetIndDBData) participantExists).get().getClass().getName().equals(Forms.class.getName())) {
+                        _participantDT = (Forms) ((GetIndDBData) participantExists).get();
+                        bi.ls1404.setText(_participantDT.getClustercode());
+                    } else {
+                        participantDT = (Forms_04_05) ((GetIndDBData) participantExists).get();
+                        bi.ls1404.setText(participantDT.getClustercode());
                     }
+
+                    // Enable view
+                    bi.mainLayout1.setVisibility(View.VISIBLE);
+                    bi.ls14a01.setError(null);
+                    bi.ls14b.setError(null);
                 } else {
+                    Toast.makeText(this, "Participant not found!!", Toast.LENGTH_SHORT).show();
+                    bi.mainLayout1.setVisibility(View.GONE);
+
+                    /*bi.ls1403.setText("");
+                    bi.ls1404.setText("");
+                    bi.ls1405.setText("");
+                    bi.ls1406.clearCheck();
+                    bi.ls1407.clearCheck();
+                    bi.ls1408.setText("");*/
+
+                    ClearClass.ClearAllFields(bi.mainLayout1);
+                }
+
+                /*else {
 
                     Object participantExistsinform7 = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordForm7").execute(bi.ls14b.getText().toString());
 
@@ -156,7 +167,7 @@ public class Form14Activity extends AppCompatActivity {
                     }
 
 
-                }
+                }*/
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -188,11 +199,12 @@ public class Form14Activity extends AppCompatActivity {
         setGPS(fc); // Set GPS
 
         fc.setClustercode(bi.ls1404.getText().toString());
-        fc.setYouthID(bi.ls14b.getText().toString());
-        fc.setRound("1");
-        fc.setStudyID(MainApp.round + "" + bi.ls1404.getText().toString() + bi.ls14b.getText().toString());
+//        fc.setYouthID(bi.ls14b.getText().toString());
+        fc.setStudyID(bi.ls14b.getText().toString());
+        fc.setRound(String.valueOf(MainApp.round));
+//        fc.setStudyID(MainApp.round + "" + bi.ls1404.getText().toString() + bi.ls14b.getText().toString());
         JSONObject sF14 = new JSONObject();
-        if (!isFormType7) {
+        if (bi.ls14a01.isChecked()) {
             fc.setYouthName(participantDT.getParticipantName());
             sF14.put("uuid", participantDT.getUid());
         } else {

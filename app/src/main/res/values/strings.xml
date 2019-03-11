@@ -459,7 +459,7 @@
     <string name="ls07y13"> فيميل يوٿ کي ٻار آهن؟ </string>
 
     <!--Info-->
-    <string name="lsid1"> ٻار جي آڊي</string>
+    <string name="lsid1"> مطالعي آڊي</string>
     <string name="lsid2"> ڪلسٽر جي آڊي</string>
     <string name="lsid3"> ضلعو</string>
     <string name="lsid4"> ٻا ر جو نالو ءِ ذات</string>
@@ -947,7 +947,7 @@
     <!--Form 14-->
     <string name="ls14Heading">Protocol Deviation</string>
     <string name="ls14instruction">باني ڪري اڀياس جي دوران جيڪڏهن ڪو پروٽوڪول  ڊيويشن ٿئي ٿو ته هن فارم ۾ نوٽ ڪريو. پروٽوڪول جو مطلب ته ا اها اسسيسمينٽ جيڪا ڏنل خاص هدايتن موجب نه ڪئي وئي هجي</string>
-    <string name="ls14">Enter participant ID</string>
+    <string name="ls14">Enter Study ID</string>
     <string name="ls1401">Child ID (جيڪڏهن فارم ٻار جي ٽيسٽ ۾ ڀريو ويو آهي)</string>
     <string name="ls1402">CYL  ID(جيڪڏهن فارم CYL جي ٽيسٽ ۾ ڀريو ويو آهي)</string>
     <string name="ls1403">ڊيويشن جي تاريخ </string>
@@ -1321,7 +1321,7 @@
 
 
     <!--youth Info Activity-->
-    <string name="lsyid01">فيميل يوٿ  جي ID</string>
+    <string name="lsyid01">مطالعي ID</string>
     <string name="lsyid02">فيميل يوٿ جو نالو ۽ ذات</string>
     <string name="lsyid03">انٽرويو جي تاريخ</string>
     <string name="lsyid04">فيميل يوٿ جوگروپ</string>
