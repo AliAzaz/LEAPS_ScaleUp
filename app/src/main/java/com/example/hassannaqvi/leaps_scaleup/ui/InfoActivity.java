@@ -264,6 +264,7 @@ public class InfoActivity extends AppCompatActivity {
 //        fc_4_5.setParticipantID(bi.lsid1.getText().toString());
         fc_4_5.setStudyID(bi.lsid1.getText().toString());
         fc_4_5.setClustercode(childDT.getClustercode());
+        fc_4_5.setRound(childDT.getRound());
 
         setGPS(fc_4_5); // Set GPS
 

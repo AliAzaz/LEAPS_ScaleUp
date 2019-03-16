@@ -30,7 +30,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
@@ -46,7 +46,7 @@ public class Form14Activity extends AppCompatActivity {
     Forms_04_05 participantDT;
     Forms _participantDT;
     Boolean isFormType7 = false;
-    ArrayList<String> formTypes;
+//    ArrayList<String> formTypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public class Form14Activity extends AppCompatActivity {
         bi.ls1403.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         getFtype = MainApp.FORM14;
         fc = new Forms();
-        formTypes = new ArrayList<>();
+        /*formTypes = new ArrayList<>();
         formTypes.add("....");
         formTypes.add("1a");
         formTypes.add("1b");
@@ -67,11 +67,10 @@ public class Form14Activity extends AppCompatActivity {
         formTypes.add("6");
         formTypes.add("7");
         formTypes.add("8");
-        formTypes.add("9");
+        formTypes.add("9");*/
         deviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
 
         this.setTitle(R.string.ls14Heading);
-        bi.spformType.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, formTypes));
 
     }
 
@@ -116,18 +115,28 @@ public class Form14Activity extends AppCompatActivity {
                 if (((GetIndDBData) participantExists).get() != null) {
 //                    isFormType7 = false;
 
+                    String[] formTypes;
+
                     if (((GetIndDBData) participantExists).get().getClass().getName().equals(Forms.class.getName())) {
                         _participantDT = (Forms) ((GetIndDBData) participantExists).get();
                         bi.ls1404.setText(_participantDT.getClustercode());
+
+                        formTypes = new String[]{"1a", "1b", "4", "5", "6"};
+
                     } else {
                         participantDT = (Forms_04_05) ((GetIndDBData) participantExists).get();
                         bi.ls1404.setText(participantDT.getClustercode());
+
+                        formTypes = new String[]{"7", "8", "9"};
                     }
 
                     // Enable view
                     bi.mainLayout1.setVisibility(View.VISIBLE);
                     bi.ls14a01.setError(null);
                     bi.ls14b.setError(null);
+
+                    bi.spformType.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(formTypes)));
+
                 } else {
                     Toast.makeText(this, "Participant not found!!", Toast.LENGTH_SHORT).show();
                     bi.mainLayout1.setVisibility(View.GONE);
@@ -201,14 +210,16 @@ public class Form14Activity extends AppCompatActivity {
         fc.setClustercode(bi.ls1404.getText().toString());
 //        fc.setYouthID(bi.ls14b.getText().toString());
         fc.setStudyID(bi.ls14b.getText().toString());
-        fc.setRound(String.valueOf(MainApp.round));
+//        fc.setRound(String.valueOf(MainApp.round));
 //        fc.setStudyID(MainApp.round + "" + bi.ls1404.getText().toString() + bi.ls14b.getText().toString());
         JSONObject sF14 = new JSONObject();
         if (bi.ls14a01.isChecked()) {
             fc.setYouthName(participantDT.getParticipantName());
+            fc.setRound(participantDT.getRound());
             sF14.put("uuid", participantDT.getUid());
         } else {
             fc.setYouthName(_participantDT.getYouthName());
+            fc.setRound(_participantDT.getRound());
             sF14.put("uuid", _participantDT.getUid());
         }
         sF14.put("ls1403", bi.ls1403.getText().toString());
