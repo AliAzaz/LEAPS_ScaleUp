@@ -121,11 +121,11 @@ public class Forms_04_05 implements Serializable {
         json.put("istatus", this.istatus == null ? JSONObject.NULL : this.istatus);
         if (this.formType.equals("1a")|| this.formType.equals("1b")) {
             json.put("participantName", this.participantName == null ? JSONObject.NULL : this.participantName);
-            json.put("round", this.round == null ? JSONObject.NULL : this.round);
-            json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
 
         }
         json.put("pdeviation", this.pdeviation == null ? JSONObject.NULL : this.pdeviation);
+        json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
+        json.put("round", this.round == null ? JSONObject.NULL : this.round);
 
         if (!this.sInfo.equals("")) {
             json.put("sInfo", this.sInfo.equals("") ? JSONObject.NULL : new JSONObject(this.sInfo));
