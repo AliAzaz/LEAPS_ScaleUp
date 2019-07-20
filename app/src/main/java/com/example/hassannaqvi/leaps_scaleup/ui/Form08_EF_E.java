@@ -14,6 +14,7 @@ import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm08EfEBinding;
+import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import org.json.JSONException;
@@ -43,6 +44,7 @@ public class Form08_EF_E extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     bi.fldgrpls08eap2.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls08eap2);
                 } else {
                     bi.fldgrpls08eap2.setVisibility(View.VISIBLE);
                 }
@@ -55,6 +57,7 @@ public class Form08_EF_E extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     bi.fldgrpls08ebp2.setVisibility(View.GONE);
+                    ClearClass.ClearAllCardFields(bi.fldgrpls08ebp2);
                 } else {
                     bi.fldgrpls08ebp2.setVisibility(View.VISIBLE);
                 }
