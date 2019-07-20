@@ -138,9 +138,9 @@ public class Form07Activity extends AppCompatActivity {
             }
         });
 
-        if (MainApp.round == 1) {
-            bi.fldgrpls0718.setVisibility(GONE);
-        }
+//        if (MainApp.round == 1) {
+//            bi.fldgrpls0718.setVisibility(GONE);
+//        }
 
 
     }
@@ -251,7 +251,13 @@ public class Form07Activity extends AppCompatActivity {
                 return false;
             }
 
-            if (!validatorClass.RangeTextBox(this, bi.ls07y09, 18, 24, getString(R.string.ls07y09), "Age")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls07y09, 16, 99, getString(R.string.ls07y09), "Age")) {
+                return false;
+            }
+            if (!validatorClass.EmptyTextBox(this, bi.ls07m09, getString(R.string.ls07y09))) {
+                return false;
+            }
+            if (!validatorClass.RangeTextBox(this, bi.ls07m09, 0, 11, getString(R.string.ls07y09), "Age")) {
                 return false;
             }
             //9

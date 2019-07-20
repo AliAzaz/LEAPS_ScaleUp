@@ -66,26 +66,38 @@ public class Form01Enrolment extends AppCompatActivity {
     private void setupView() {
 
         bi.ls01f03.setManager(getSupportFragmentManager());
-        bi.ls01f03.setMaxDate(DateUtils.getYearsBack("dd/MM/yyyy",-4));
+        bi.ls01f03.setMaxDate(DateUtils.getYearsBack("dd/MM/yyyy", -4));
         bi.ls01a10.setManager(getSupportFragmentManager());
         bi.ls01a10.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         bi.ls01a10.setMinDate("1/1/2019");
-        bi.ls01f03.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy",-6));
+        bi.ls01f03.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -6));
 
 
-        bi.ls01a07.check(MainApp.round == 1 ? bi.ls01a07a.getId() :
-                MainApp.round == 2 ? bi.ls01a07b.getId() :
-                        MainApp.round == 3 ? bi.ls01a07c.getId() : bi.ls01a07d.getId());
-
-        if (MainApp.round == 1) {
-            bi.fldgrpls01a07.setVisibility(GONE);
-            ClearClass.ClearAllFields(bi.fldgrpls01a07);
-        } else {
-            bi.fldgrpls01a07.setVisibility(VISIBLE);
-            checkingRound(MainApp.round);
-            //ClearClass.ClearAllFields(bi.fldgrpls01a07, true);
-
+        if (getFtype.equals("1b")) {
+            bi.ls01a07ques.setText(R.string.ls01a07Q2);
+            bi.ls01a07a.setText(R.string.ls01a0701);
+            bi.ls01a07b.setText(R.string.ls01a0702);
+            bi.ls01a07c.setText(R.string.ls01a07d);
+            bi.ls01a07d.setVisibility(GONE);
         }
+        if (getFtype.equals("1a")) {
+            bi.ls01a09d.setText(R.string.ls01a09d01);
+        }
+
+
+//        bi.ls01a07.check(MainApp.round == 1 ? bi.ls01a07a.getId() :
+//                MainApp.round == 2 ? bi.ls01a07b.getId() :
+//                        MainApp.round == 3 ? bi.ls01a07c.getId() : bi.ls01a07d.getId());
+
+//        if (MainApp.round == 1) {
+//            bi.fldgrpls01a07.setVisibility(GONE);
+//            ClearClass.ClearAllFields(bi.fldgrpls01a07);
+//        } else {
+//            bi.fldgrpls01a07.setVisibility(VISIBLE);
+//            checkingRound(MainApp.round);
+//            //ClearClass.ClearAllFields(bi.fldgrpls01a07, true);
+//
+//        }
 
         bi.ls01f04.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -187,7 +199,7 @@ public class Form01Enrolment extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
-                if(isChecked){
+                if (isChecked) {
                     ClearClass.ClearAllFields(bi.ls01f08);
                 }
             }
@@ -330,7 +342,7 @@ public class Form01Enrolment extends AppCompatActivity {
         fc_4_5.setClustercode(bi.ls01a05.getText().toString());
         fc_4_5.setParticipantID(bi.ls01a04.getText().toString());
         fc_4_5.setParticipantName(bi.ls01f01.getText().toString());
-        fc_4_5.setStudyID(MainApp.round + "" + bi.ls01a05.getText().toString() + bi.ls01a04.getText().toString());
+        fc_4_5.setStudyID((getFtype.equals("1a") ? MainApp.round : "6") + "" + bi.ls01a05.getText().toString() + bi.ls01a04.getText().toString());
         fc_4_5.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();
@@ -340,11 +352,11 @@ public class Form01Enrolment extends AppCompatActivity {
 //        f01.put("ls01a04", "");
         f01.put("ls01a05", cluster_name[3]); //VILLAGE
         f01.put("ls01a06", cluster_name[0]); //DISTRICT
-        f01.put("ls01a07", bi.ls01a07a.isChecked() ? "1"
-                : bi.ls01a07b.isChecked() ? "2"
-                : bi.ls01a07c.isChecked() ? "3"
-                : bi.ls01a07d.isChecked() ? "4"
-                : "0");
+        f01.put("ls01a07", getFtype.equals("1a") ? (bi.ls01a07a.isChecked() ? "1"
+                : bi.ls01a07b.isChecked() ? "2" : bi.ls01a07c.isChecked() ? "3"
+                : bi.ls01a07d.isChecked() ? "4" : "0") : (bi.ls01a07a.isChecked() ? "1"
+                : bi.ls01a07b.isChecked() ? "2" : bi.ls01a07c.isChecked() ? "3"
+                : "0"));
         f01.put("ls01a08", bi.ls01a08a.isChecked() ? "1"
                 : bi.ls01a08b.isChecked() ? "2"
                 : "0");
@@ -461,19 +473,15 @@ public class Form01Enrolment extends AppCompatActivity {
             return false;
         }
 
-        /*if (!validatorClass.EmptyRadioButton(this, bi.ls01a07, bi.ls01a07a, getString(R.string.ls01a07))) {
+        if (!validatorClass.EmptyRadioButton(this, bi.ls01a07, bi.ls01a07a, getString(R.string.ls01a07))) {
             return false;
-        }*/
-        if (MainApp.round != 1) {
-            if (!bi.ls01a07a.isChecked()) {
-//                if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a0896, bi.ls01a0896x, getString(R.string.ls01a08))) {
-//                    return false;
-//                }
-                if (bi.ls01a08a.isChecked()) {
-                    if (!validatorClass.EmptyRadioButton(this, bi.ls01a09, bi.ls01a09a, getString(R.string.ls01a09))) {
-                        return false;
-                    }
-                }
+        }
+        if (!validatorClass.EmptyRadioButton(this, bi.ls01a08, bi.ls01a08a, getString(R.string.ls01a08))) {
+            return false;
+        }
+        if (bi.ls01a08a.isChecked()) {
+            if (!validatorClass.EmptyRadioButton(this, bi.ls01a09, bi.ls01a09a, getString(R.string.ls01a09))) {
+                return false;
             }
         }
 
@@ -528,13 +536,13 @@ public class Form01Enrolment extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05d, getString(R.string.ls01f05))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.ls01f05d, 0,29,getString(R.string.ls01f05),"Day(s)")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls01f05d, 0, 29, getString(R.string.ls01f05), "Day(s)")) {
                 return false;
             }
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05m, getString(R.string.ls01f05))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.ls01f05m,0,11 ,getString(R.string.ls01f05),"Month(s)")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls01f05m, 0, 11, getString(R.string.ls01f05), "Month(s)")) {
                 return false;
             }
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05y, getString(R.string.ls01f05))) {
@@ -566,7 +574,7 @@ public class Form01Enrolment extends AppCompatActivity {
                 if (!validatorClass.EmptyTextBox(this, bi.ls01f07c, getString(R.string.ls01f07c))) {
                     return false;
                 }
-                if (!validatorClass.RangeTextBox(this, bi.ls01f07c,8,35 ,getString(R.string.ls01f07c),"Years")) {
+                if (!validatorClass.RangeTextBox(this, bi.ls01f07c, 8, 35, getString(R.string.ls01f07c), "Years")) {
                     return false;
                 }
             }
@@ -575,7 +583,7 @@ public class Form01Enrolment extends AppCompatActivity {
             }
         }
 
-        if(!bi.ls01f08g.isChecked()){
+        if (!bi.ls01f08g.isChecked()) {
             if (!validatorClass.EmptyCheckBox(this, bi.ls01f08, bi.ls01f0896, bi.ls01f0896x, getString(R.string.ls01f08))) {
                 return false;
             }
