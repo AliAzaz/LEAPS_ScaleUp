@@ -77,7 +77,7 @@ public class Form01Enrolment extends AppCompatActivity {
             bi.ls01a07ques.setText(R.string.ls01a07Q2);
             bi.ls01a07a.setText(R.string.ls01a0701);
             bi.ls01a07b.setText(R.string.ls01a0702);
-            bi.ls01a07c.setText(R.string.ls01a07d);
+            bi.ls01a07c.setVisibility(GONE);
             bi.ls01a07d.setVisibility(GONE);
         }
         if (getFtype.equals("1a")) {
@@ -355,7 +355,7 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01a07", getFtype.equals("1a") ? (bi.ls01a07a.isChecked() ? "1"
                 : bi.ls01a07b.isChecked() ? "2" : bi.ls01a07c.isChecked() ? "3"
                 : bi.ls01a07d.isChecked() ? "4" : "0") : (bi.ls01a07a.isChecked() ? "1"
-                : bi.ls01a07b.isChecked() ? "2" : bi.ls01a07c.isChecked() ? "3"
+                : bi.ls01a07b.isChecked() ? "2"
                 : "0"));
         f01.put("ls01a08", bi.ls01a08a.isChecked() ? "1"
                 : bi.ls01a08b.isChecked() ? "2"

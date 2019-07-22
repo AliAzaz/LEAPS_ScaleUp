@@ -347,6 +347,7 @@ public class Form07Activity extends AppCompatActivity {
                 : "0");
         f07.put("ls07y08", bi.ls07y08.getText().toString());
         f07.put("ls07y09", bi.ls07y09.getText().toString());
+        f07.put("ls07m09", bi.ls07m09.getText().toString());
 
         f07.put("ls07y10", bi.ls07y10a.isChecked() ? "1"
                 : bi.ls07y10b.isChecked() ? "2"
