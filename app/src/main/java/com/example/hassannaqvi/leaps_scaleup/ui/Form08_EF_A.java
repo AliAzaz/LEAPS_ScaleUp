@@ -30,7 +30,7 @@ import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 import static com.example.hassannaqvi.leaps_scaleup.utils.JsonUtils.mergeJSONObjects;
 
 public class Form08_EF_A extends AppCompatActivity {
-ActivityForm08EfABinding bi;
+    ActivityForm08EfABinding bi;
     RadioGroup.OnCheckedChangeListener level3 = new RadioGroup.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int i) {

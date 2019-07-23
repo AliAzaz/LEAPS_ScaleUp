@@ -50,6 +50,7 @@
                             android:text="@string/ls05b05a" />
 
                         <CheckBox
+                            android:tag="-1"
                             android:id="@+id/ls05b05a99"
                             style="@style/checkbox"
                             android:hint="@string/nores" />
@@ -79,11 +80,13 @@
                             android:text="@string/ls05b05b" />
 
                         <CheckBox
+                            android:tag="-1"
                             android:id="@+id/ls05b05b99"
                             style="@style/checkbox"
                             android:hint="@string/nores" />
 
                         <CheckBox
+                            android:tag="-1"
                             android:id="@+id/ls05b05b88"
                             style="@style/checkbox"
                             android:hint="@string/skp" />
@@ -545,6 +548,7 @@
                             android:text="@string/ls05b08a" />
 
                         <CheckBox
+                            android:tag="-1"
                             android:id="@+id/ls05b08a99"
                             style="@style/checkbox"
                             android:hint="@string/nores" />
