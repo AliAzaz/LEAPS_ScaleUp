@@ -141,25 +141,25 @@ public class YouthInfoActivity extends AppCompatActivity {
 
                 sInfo_parse = new Gson().fromJson(youthDT.getSa1(), Forms.Simple_Forms.class);
                 // Intervention Setting
-                bi.lsyid04.check(
-                        sInfo_parse.getLs07y07().equals("1") ? bi.lsyid04a.getId() :
-                                sInfo_parse.getLs07y07().equals("2") ? bi.lsyid04b.getId() :
-                                        bi.lsyid04c.getId());
-
-                for (byte i = 0; i < bi.lsyid04.getChildCount(); i++) {
-                    bi.lsyid04.getChildAt(i).setEnabled(false);
-                }
-                // Round Setting
-                bi.lsyid05.check(
-                        sInfo_parse.getLs07y18().equals("1") ? bi.lsyid05a.getId() :
-                                sInfo_parse.getLs07y18().equals("2") ? bi.lsyid05b.getId() :
-                                        sInfo_parse.getLs07y18().equals("3") ? bi.lsyid05c.getId() :
-                                                sInfo_parse.getLs07y18().equals("4") ? bi.lsyid05d.getId()
-                                                        : bi.lsyid05a.getId());
-
-                for (byte i = 0; i < bi.lsyid05.getChildCount(); i++) {
-                    bi.lsyid05.getChildAt(i).setEnabled(false);
-                }
+//                bi.lsyid04.check(
+//                        sInfo_parse.getLs07y07().equals("1") ? bi.lsyid04a.getId() :
+//                                sInfo_parse.getLs07y07().equals("2") ? bi.lsyid04b.getId() :
+//                                        bi.lsyid04c.getId());
+//
+//                for (byte i = 0; i < bi.lsyid04.getChildCount(); i++) {
+//                    bi.lsyid04.getChildAt(i).setEnabled(false);
+//                }
+//                // Round Setting
+//                bi.lsyid05.check(
+//                        sInfo_parse.getLs07y18().equals("1") ? bi.lsyid05a.getId() :
+//                                sInfo_parse.getLs07y18().equals("2") ? bi.lsyid05b.getId() :
+//                                        sInfo_parse.getLs07y18().equals("3") ? bi.lsyid05c.getId() :
+//                                                sInfo_parse.getLs07y18().equals("4") ? bi.lsyid05d.getId()
+//                                                        : bi.lsyid05a.getId());
+//
+//                for (byte i = 0; i < bi.lsyid05.getChildCount(); i++) {
+//                    bi.lsyid05.getChildAt(i).setEnabled(false);
+//                }
 
                 // Enable view
                 bi.fldgrplsyid01.setVisibility(VISIBLE);

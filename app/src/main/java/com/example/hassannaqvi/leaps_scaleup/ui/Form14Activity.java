@@ -121,7 +121,7 @@ public class Form14Activity extends AppCompatActivity {
                         _participantDT = (Forms) ((GetIndDBData) participantExists).get();
                         bi.ls1404.setText(_participantDT.getClustercode());
 
-                        formTypes = new String[]{"....", "1a", "1b", "4", "5", "6"};
+                        formTypes = new String[]{"....", "1a", "1b", "2a", "2b", "4", "5", "6", "7", "8", "9"};
 
                     } else {
                         participantDT = (Forms_04_05) ((GetIndDBData) participantExists).get();
