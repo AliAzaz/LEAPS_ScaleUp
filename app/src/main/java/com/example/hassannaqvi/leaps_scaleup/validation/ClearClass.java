@@ -2,6 +2,7 @@ package com.example.hassannaqvi.leaps_scaleup.validation;
 
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -66,6 +67,43 @@ public class ClearClass {
         }
     }
 
+    public static void ClearAllFields(View container, Boolean flag) {
+        for (int i = 0; i < ((ViewGroup) container).getChildCount(); i++) {
+            View v = ((ViewGroup) container).getChildAt(i);
+            if (v instanceof CheckBox) {
+                ((CheckBox) v).setChecked(false);
+                ((CheckBox) v).setError(null);
+                if (flag != null)
+                    v.setEnabled(flag);
+
+            } else if (v instanceof RadioGroup) {
+                ((RadioGroup) v).clearCheck();
+                if (flag != null) {
+                    for (int j = 0; j < ((RadioGroup) v).getChildCount(); j++) {
+                        ((RadioGroup) v).getChildAt(j).setEnabled(flag);
+                    }
+                }
+
+            } else if (v instanceof EditText) {
+                ((EditText) v).setText(null);
+                ((EditText) v).setError(null);
+                v.clearFocus();
+
+                if (flag != null)
+                    v.setEnabled(flag);
+
+            } else if (v instanceof RadioButton) {
+                if (flag != null)
+                    v.setEnabled(flag);
+            } else if (v instanceof CardView) {
+                ClearAllFields(v, flag);
+            } else if (v instanceof LinearLayout) {
+                ClearAllFields(v, flag);
+            }
+
+        }
+    }
+
     public static void ClearAllFields(LinearLayout container) {
         for (int i = 0; i < container.getChildCount(); i++) {
             View v = container.getChildAt(i);
@@ -73,7 +111,7 @@ public class ClearClass {
                 ((CheckBox) v).setChecked(false);
                 ((CheckBox) v).setError(null);
             } else if (v instanceof RadioGroup) {
-                    ((RadioGroup) v).clearCheck();
+                ((RadioGroup) v).clearCheck();
 
             } else if (v instanceof EditText) {
                 ((EditText) v).setText(null);

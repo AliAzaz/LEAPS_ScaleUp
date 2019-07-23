@@ -67,7 +67,10 @@
     <string name="ls01a05"> ڳوٺ جي ID </string>
     <string name="ls01a06"> ضلعو ۽ ID </string>
     <string name="ls01a07"> سروي رائونڊ نمبر </string>
+    <string name="ls01a07Q2"> اسيسمينٽ جو قسم </string>
     <string name="ls01a07a"> بيس لائين </string>
+    <string name="ls01a0701"> 	اسڪول ڪوهارٽ بيس لائين </string>
+    <string name="ls01a0702"> 		اسڪول ڪوهارٽ اينڊ لائين</string>
     <string name="ls01a07b"> اسٽيپ 1 </string>
     <string name="ls01a07c"> اسٽيپ 2 </string>
     <string name="ls01a07d"> اسٽيپ 3 </string>
@@ -77,6 +80,7 @@
     <string name="ls01a09b"> اسٽيپ 1 </string>
     <string name="ls01a09c"> اسٽيپ 2 </string>
     <string name="ls01a09d"> اسٽيپ 3 </string>
+    <string name="ls01a09d01"> 	اسڪول ڪوهورٽ</string>
     <string name="ls01a10"> پراجيڪٽ ۾ انرولمينٽ جي تاريخ </string>
     <string name="ls01a11"> انٽرويو ڏيندڙ جو نالو ۽ ذات </string>
     <string name="ls01a12"> ٻار سان رشتو </string>
@@ -172,6 +176,14 @@
     <string name="ls02pe01g"> ٻار ڪيترن مهينن کان پري اسڪول وچي رهيو آهي؟ </string>
     <string name="ls02pe01g01"> مهينا </string>
     <string name="ls02pe01h"> پوئين هفتي ۾ ٻار ڪيترا ڏينهن اسڪول ويو هو؟ </string>
+    <string name="ls02pe01i"> جيڪڏهن ٻار هاڻي پري اسڪول ۾ داخل نه آهي ته ڇا ٻار اسڪول جي ويٽنگ لسٽ تي آهي؟ </string>
+    <string name="ls02pe01j"> جيڪڏهن ها ته ڪهڙي اسڪول جي لسٽ تي آهي؟ </string>
+    <string name="ls02pe01ja">گورنمينٽ </string>
+    <string name="ls02pe01jb">پرائيوٽ </string>
+    <string name="ls02pe01jc"> مدرسو</string>
+    <string name="ls02pe01jd">NGO</string>
+    <string name="ls02pe01je"> ليپس پري اسڪول </string>
+    <string name="ls02pe01jf">    فيڊر اسڪول </string>
     <string name="ls02pe01h01"> ڏينهن </string>
     <string name="ls02pe02a"> جيڪڏهن ٻار هاڻي پي اسڪول ۾ داخل نه آهي ته ڇا ٻار ماضي ۾ اسڪول ويو هو؟ </string>
     <string name="ls02pe02b"> اسڪول جو نالو ڇا آهي؟ </string>
@@ -477,6 +489,7 @@
     <string name="lsid10b"> اسٽيپ 1 </string>
     <string name="lsid10c"> اسٽيپ 2 </string>
     <string name="lsid10d"> اسٽيپ 3 </string>
+    <string name="lsid10e">	 (جيڪڏهن اسڪول ڪوهارٽ آهي)  NA</string>
     <string name="lsid11a"> پاپوليشن سروي </string>
     <string name="lsid11b"> اسڪول ڪوهارٽ </string>
     <string name="lsid13a"> بيس لائين </string>

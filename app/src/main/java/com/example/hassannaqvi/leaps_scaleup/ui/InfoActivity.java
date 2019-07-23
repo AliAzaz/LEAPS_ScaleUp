@@ -73,10 +73,13 @@ public class InfoActivity extends AppCompatActivity {
         bi.lsid14.setManager(getSupportFragmentManager());
         bi.lsid14.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
+        if (fTYPE.equals("4") || fTYPE.equals("5")) {
+            bi.lsid10e.setVisibility(VISIBLE);
+        }
+
 
 
         /*Setting edittext*/
-        bi.lsid7m.setManager(this, "Month");
 
         /*Setting listeners*/
         bi.lsid1.addTextChangedListener(new TextWatcher() {
@@ -197,16 +200,16 @@ public class InfoActivity extends AppCompatActivity {
                 }
 
 
-                // Round Setting
-                bi.lsid10.check(
-                        sInfo_parse.getLs01a07().equals("1") ? bi.lsid10a.getId() :
-                                sInfo_parse.getLs01a07().equals("2") ? bi.lsid10b.getId() :
-                                        sInfo_parse.getLs01a07().equals("3") ? bi.lsid10c.getId() :
-                                                sInfo_parse.getLs01a07().equals("4") ? bi.lsid10d.getId() : bi.lsid10a.getId());
-
-                for (byte i = 0; i < bi.lsid10.getChildCount(); i++) {
-                    bi.lsid10.getChildAt(i).setEnabled(false);
-                }
+//                // Round Setting
+//                bi.lsid10.check(
+//                        sInfo_parse.getLs01a07().equals("1") ? bi.lsid10a.getId() :
+//                                sInfo_parse.getLs01a07().equals("2") ? bi.lsid10b.getId() :
+//                                        sInfo_parse.getLs01a07().equals("3") ? bi.lsid10c.getId() :
+//                                                sInfo_parse.getLs01a07().equals("4") ? bi.lsid10d.getId() : bi.lsid10a.getId());
+//
+//                for (byte i = 0; i < bi.lsid10.getChildCount(); i++) {
+//                    bi.lsid10.getChildAt(i).setEnabled(false);
+//                }
 
                 // Enable view
                 bi.fldgrpls01.setVisibility(VISIBLE);

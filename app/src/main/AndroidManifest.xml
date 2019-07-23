@@ -29,6 +29,7 @@
         <activity
             android:name=".ui.SplashscreenActivity"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -73,7 +74,9 @@
         <activity
             android:name=".ui.Form02HHPart_1"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
+            android:theme="@style/AppTheme1">
+
+        </activity>
         <activity
             android:name=".ui.Form02HHPart_2_HI_SE"
             android:screenOrientation="portrait"

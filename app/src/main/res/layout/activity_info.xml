@@ -103,11 +103,11 @@
                         <EditText
                             android:id="@+id/lsid4"
                             style="@style/textInput"
-                            android:enabled="false"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
+                            android:enabled="false"
                             android:hint="@string/lsid4" />
 
                     </LinearLayout>
@@ -166,7 +166,7 @@
                             android:inputType="number"
                             android:maxLength="1" />
 
-                        <com.edittextpicker.aliazaz.textpicker.TextPicker
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/lsid7m"
                             style="@style/textInput"
                             android:enabled="false"
@@ -225,6 +225,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/lsid10d" />
+
+                            <RadioButton
+                                android:id="@+id/lsid10e"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/lsid10e"
+                                android:visibility="gone" />
                         </RadioGroup>
 
                     </LinearLayout>
@@ -365,7 +372,7 @@
                                     android:id="@+id/lsid13d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/lsid13d" />
+                                    android:text="@string/ls01a09d01" />
                             </RadioGroup>
 
                         </LinearLayout>
