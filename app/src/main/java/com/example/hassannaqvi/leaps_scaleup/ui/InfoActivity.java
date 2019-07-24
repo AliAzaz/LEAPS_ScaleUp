@@ -73,9 +73,7 @@ public class InfoActivity extends AppCompatActivity {
         bi.lsid14.setManager(getSupportFragmentManager());
         bi.lsid14.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
 
-        if (fTYPE.equals("4") || fTYPE.equals("5")) {
-            bi.lsid10e.setVisibility(VISIBLE);
-        }
+
 
 
 
