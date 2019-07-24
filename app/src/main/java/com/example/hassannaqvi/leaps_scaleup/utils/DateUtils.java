@@ -49,11 +49,12 @@ public class DateUtils {
 
         return "";
     }
-    public static String getYearsBack(String format, int year){
+
+    public static String getYearsBack(String format, int year) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(cal.getTime());
         cal.add(Calendar.YEAR, year);
-        return new SimpleDateFormat(format).format(cal.getTime()).toString(); //"dd-MM-yyyy HH:mm"
+        return new SimpleDateFormat(format).format(cal.getTime()); //"dd-MM-yyyy HH:mm"
     }
 
     public static Calendar getCalendarDate(String value) {
@@ -78,11 +79,19 @@ public class DateUtils {
         long ageInYears = (diff / (24 * 60 * 60 * 1000)) / 365;
         return ageInYears;
     }
+
     public static String getYearsAndMonthsBack(String format, int month, int year) {
         Calendar cal = Calendar.getInstance();
         cal.setTime(cal.getTime());
         cal.add(Calendar.YEAR, year);
         cal.add(Calendar.MONTH, month);
-        return new SimpleDateFormat(format).format(cal.getTime()).toString(); //"dd-MM-yyyy HH:mm"
+        return new SimpleDateFormat(format).format(cal.getTime()); //"dd-MM-yyyy HH:mm"
+    }
+
+    public static String getMonthsBack(String format, int month) {
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(cal.getTime());
+        cal.add(Calendar.MONTH, month);
+        return new SimpleDateFormat(format).format(cal.getTime()); //"dd-MM-yyyy HH:mm"
     }
 }

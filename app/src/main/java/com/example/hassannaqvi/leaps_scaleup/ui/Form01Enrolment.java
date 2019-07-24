@@ -66,11 +66,11 @@ public class Form01Enrolment extends AppCompatActivity {
     private void setupView() {
 
         bi.ls01f03.setManager(getSupportFragmentManager());
-        bi.ls01f03.setMaxDate(DateUtils.getYearsBack("dd/MM/yyyy", -4));
+        bi.ls01f03.setMaxDate(DateUtils.getMonthsBack("dd/MM/yyyy", -42));
         bi.ls01a10.setManager(getSupportFragmentManager());
         bi.ls01a10.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         bi.ls01a10.setMinDate("1/1/2019");
-        bi.ls01f03.setMinDate(DateUtils.getYearsBack("dd/MM/yyyy", -6));
+        bi.ls01f03.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -78));
 
 
         if (getFtype.equals("1b")) {

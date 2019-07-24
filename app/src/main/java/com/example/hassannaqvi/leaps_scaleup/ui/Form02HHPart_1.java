@@ -83,6 +83,30 @@ public class Form02HHPart_1 extends AppCompatActivity {
             }
         });
 
+        bi.ls02pe03a.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.ls02pe03a02.getId()) {
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe19);
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe20);
+                }
+            }
+        });
+        bi.ls02pe03b.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                if (checkedId == bi.ls02pe03b02.getId()) {
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe19);
+
+                    ClearClass.ClearAllCardFields(bi.fldgrplspe20);
+
+                }
+            }
+        });
+
+
     }
 
     public void BtnContinue() {
