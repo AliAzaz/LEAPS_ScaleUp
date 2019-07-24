@@ -46,6 +46,7 @@ public class MainApp extends Application {
     public static final String _UPDATE_URL = "http://" + MainApp._IP + ":" + MainApp._PORT + "/leapsup/app/app-debug.apk";
 
     public static final Integer MONTHS_LIMIT = 11;
+    public static Boolean validateFlag = false;
     public static final Integer DAYS_LIMIT = 29;
     //public static final long MILLISECONDS_IN_5YEAR = (MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR);
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters

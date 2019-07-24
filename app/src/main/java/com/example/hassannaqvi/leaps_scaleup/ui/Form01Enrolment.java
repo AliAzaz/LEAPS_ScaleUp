@@ -549,7 +549,7 @@ public class Form01Enrolment extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05y, getString(R.string.ls01f05))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.ls01f05y, 4, 6, getString(R.string.ls01f05), "Years")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls01f05y, 3, 6, getString(R.string.ls01f05), "Years")) {
                 return false;
             }
         }
