@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
 <data>
 
@@ -28,7 +27,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
 
         <!--fs01a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs01"
             android:layout_width="match_parent"
@@ -77,10 +76,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs01b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs02"
             android:layout_width="match_parent"
@@ -129,10 +128,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs02a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs03"
             android:layout_width="match_parent"
@@ -181,10 +180,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs02b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs04"
             android:layout_width="match_parent"
@@ -233,10 +232,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs03a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs05"
             android:layout_width="match_parent"
@@ -285,10 +284,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs03b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/fldgrpfs06"
             style="@style/cardView"
             android:layout_width="match_parent"
@@ -337,10 +336,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs04a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs07"
             android:layout_width="match_parent"
@@ -389,10 +388,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs04b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs08"
             android:layout_width="match_parent"
@@ -441,10 +440,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs05a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs09"
             android:layout_width="match_parent"
@@ -493,10 +492,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs05b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs10"
             android:layout_width="match_parent"
@@ -545,10 +544,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs06a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs11"
             android:layout_width="match_parent"
@@ -597,10 +596,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs06b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs12"
             android:layout_width="match_parent"
@@ -649,10 +648,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs07a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs13"
             android:layout_width="match_parent"
@@ -701,10 +700,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs07b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs14"
             android:layout_width="match_parent"
@@ -753,10 +752,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs08a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs15"
             android:layout_width="match_parent"
@@ -805,10 +804,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs08b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs16"
             android:layout_width="match_parent"
@@ -857,10 +856,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs09a-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs17"
             android:layout_width="match_parent"
@@ -909,10 +908,10 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
         <!--fs09b-->
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             style="@style/cardView"
             android:id="@+id/fldgrpfs18"
             android:layout_width="match_parent"
@@ -961,7 +960,7 @@ tools:context="com.example.hassannaqvi.leaps_scaleup.ui.Form02HHPart_2_FS">
 
                 </RadioGroup>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
         <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
 
         <LinearLayout

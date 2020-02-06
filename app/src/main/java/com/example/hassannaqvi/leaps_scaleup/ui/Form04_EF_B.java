@@ -3,16 +3,17 @@ package com.example.hassannaqvi.leaps_scaleup.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
@@ -262,7 +263,7 @@ public class Form04_EF_B extends AppCompatActivity {
         field.set(this, value);
     }
 
-    public void skipPractice(EditText txtview, String response, android.support.v7.widget.CardView fldGrp, String pattern, EditText nextTxtView, Boolean skipNext) {
+    public void skipPractice(EditText txtview, String response, CardView fldGrp, String pattern, EditText nextTxtView, Boolean skipNext) {
         txtview.setText(response);
         if (skipNext) {
             if (txtview.getText().toString().equals(pattern)) {

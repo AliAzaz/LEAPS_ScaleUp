@@ -1,10 +1,11 @@
 package com.example.hassannaqvi.leaps_scaleup.ui;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
@@ -167,10 +168,7 @@ public class Form09_part_3_4_5_Activity extends AppCompatActivity {
         if (!validatorClass.EmptyRadioButton(this, bi.ls09srq19, bi.ls09srq19a, getString(R.string.ls09srq19))) {
             return false;
         }
-        if (!validatorClass.EmptyRadioButton(this, bi.ls09srq20, bi.ls09srq20a, getString(R.string.ls09srq20))) {
-            return false;
-        }
-        return true;
+        return validatorClass.EmptyRadioButton(this, bi.ls09srq20, bi.ls09srq20a, getString(R.string.ls09srq20));
     }
 
     public void BtnEnd() {

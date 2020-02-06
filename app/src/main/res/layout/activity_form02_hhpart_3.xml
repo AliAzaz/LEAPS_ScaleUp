@@ -27,7 +27,7 @@
 
 
             <!--ee01a-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee01"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -76,10 +76,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee01b-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee02"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -128,10 +128,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee01c-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee03"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -212,15 +212,15 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
                         android:inputType="text"
-                        android:text='@{ls02ee01c96.checked? ls02ee01c96x.getText.toString : ""}'
+                        android:text='@{ls02ee01c96.checked? ls02ee01c96x.getText().toString() : ""}'
                         android:visibility='@{ls02ee01c96.checked? View.VISIBLE : View.GONE}' />
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee02-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee04"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -257,10 +257,10 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee03a-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee05"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -309,10 +309,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee03b-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee06"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -361,10 +361,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee04-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee07"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -401,10 +401,10 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee05-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee08"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -528,14 +528,14 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
                         android:inputType="text"
-                        android:text='@{ls02ee0596.checked? ls02ee0596x.getText.toString : ""}'
+                        android:text='@{ls02ee0596.checked? ls02ee0596x.getText().toString() : ""}'
                         android:visibility='@{ls02ee0596.checked? View.VISIBLE : View.GONE}' />
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee06-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee09"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -584,10 +584,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee07-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee10"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -636,10 +636,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee08-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee11"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -676,10 +676,10 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee09-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee12"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -838,17 +838,17 @@
                         android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
                         android:hint="@string/other"
                         android:inputType="text"
-                        android:text='@{ls02ee0996.checked? ls02ee0996x.getText.toString : "" }'
+                        android:text='@{ls02ee0996.checked? ls02ee0996x.getText().toString() : "" }'
                         android:visibility='@{ls02ee0996.checked? View.VISIBLE : View.GONE}' />
 
 
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee10-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee13"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -897,10 +897,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee11-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee14"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -949,10 +949,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee12-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee15"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -1001,10 +1001,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee13-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee16"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -1058,10 +1058,10 @@
 
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee14-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee17"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -1098,10 +1098,10 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--ee15-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpee18"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -1138,7 +1138,7 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
                 android:layout_marginTop="20dp"

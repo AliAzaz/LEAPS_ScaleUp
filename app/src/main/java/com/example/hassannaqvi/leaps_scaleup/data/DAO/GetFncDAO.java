@@ -1,7 +1,7 @@
 package com.example.hassannaqvi.leaps_scaleup.data.DAO;
 
-import android.arch.persistence.room.Dao;
-import android.arch.persistence.room.Query;
+import androidx.room.Dao;
+import androidx.room.Query;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;

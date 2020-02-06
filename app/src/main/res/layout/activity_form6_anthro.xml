@@ -23,7 +23,7 @@
 
 
             <!--Q01-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpls0601"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -59,10 +59,10 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q02-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpls0602"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -98,11 +98,11 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
 
             <!--Q03-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpls0603"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -138,10 +138,10 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--Q04-->
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpls0604"
                 style="@style/cardView"
                 android:layout_width="match_parent"
@@ -177,7 +177,7 @@
                 </LinearLayout>
 
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
 
