@@ -44,6 +44,7 @@ import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import im.dino.dbinspector.activities.DbInspectorActivity;
@@ -75,10 +76,8 @@ public class MainActivity extends Activity {
         mainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         mainBinding.setCallback(this);
 
-        if (android.os.Build.VERSION.SDK_INT > 9) {
-            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(policy);
-        }
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         // mainBinding.lblheader.setText("Welcome! You're assigned to block ' " + MainApp.userName);
         mainBinding.lblheader.setText("Welcome!");
 
@@ -227,9 +226,7 @@ public class MainActivity extends Activity {
                 Toast.makeText(this, "" + data.size(), Toast.LENGTH_SHORT).show();
             }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -240,7 +237,7 @@ public class MainActivity extends Activity {
         final Intent oF = new Intent(MainActivity.this, selectedForm(fType))
                 .putExtra("fType", fType);
 
-        if (sharedPref.getString("tagName", null) != "" && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
+        if (!Objects.equals(sharedPref.getString("tagName", null), "") && sharedPref.getString("tagName", null) != null && !MainApp.userName.equals("0000")) {
             startActivity(oF);
         } else {
 
@@ -304,6 +301,9 @@ public class MainActivity extends Activity {
                 break;
             case "8":
             case "9":
+                retClass = YouthInfoActivity.class;
+                break;
+            case "10":
                 retClass = YouthInfoActivity.class;
                 break;
             case "14":
@@ -416,6 +416,7 @@ public class MainActivity extends Activity {
             // Require permissions INTERNET & ACCESS_NETWORK_STATE
             ConnectivityManager connMgr = (ConnectivityManager)
                     getSystemService(Context.CONNECTIVITY_SERVICE);
+            assert connMgr != null;
             NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
             if (networkInfo != null && networkInfo.isConnected()) {
 
@@ -431,9 +432,7 @@ public class MainActivity extends Activity {
                     Collection collection1 = null;
                     try {
                         collection1 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM01A).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -449,9 +448,7 @@ public class MainActivity extends Activity {
                     Collection collection2 = null;
                     try {
                         collection2 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM01B).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -466,9 +463,7 @@ public class MainActivity extends Activity {
                     Collection collection4 = null;
                     try {
                         collection4 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM04).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -484,9 +479,7 @@ public class MainActivity extends Activity {
                     Collection collection5 = null;
                     try {
                         collection5 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM05).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -501,9 +494,7 @@ public class MainActivity extends Activity {
                     Collection collection6 = null;
                     try {
                         collection6 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM06).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -518,9 +509,7 @@ public class MainActivity extends Activity {
                     Collection collection7 = null;
                     try {
                         collection7 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.FORM07).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -535,9 +524,7 @@ public class MainActivity extends Activity {
                     Collection collection8 = null;
                     try {
                         collection8 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM08).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -552,9 +539,7 @@ public class MainActivity extends Activity {
                     Collection collection9 = null;
                     try {
                         collection9 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_04_05").execute(MainApp.FORM09).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -569,9 +554,7 @@ public class MainActivity extends Activity {
                     Collection collection14 = null;
                     try {
                         collection14 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute(MainApp.FORM14).get();
-                    } catch (ExecutionException e) {
-                        e.printStackTrace();
-                    } catch (InterruptedException e) {
+                    } catch (ExecutionException | InterruptedException e) {
                         e.printStackTrace();
                     }
                     new SyncAllData(
@@ -656,6 +639,7 @@ public class MainActivity extends Activity {
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
+        assert connMgr != null;
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
 
