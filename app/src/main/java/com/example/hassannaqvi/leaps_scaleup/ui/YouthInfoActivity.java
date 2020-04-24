@@ -168,9 +168,7 @@ public class YouthInfoActivity extends AppCompatActivity {
                 Toast.makeText(this, "Youth ID not found!!", Toast.LENGTH_SHORT).show();
             }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
