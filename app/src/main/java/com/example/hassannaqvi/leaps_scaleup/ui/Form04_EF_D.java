@@ -3,15 +3,16 @@ package com.example.hassannaqvi.leaps_scaleup.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.hassannaqvi.leaps_scaleup.JSON.GeneratorClass;
 import com.example.hassannaqvi.leaps_scaleup.R;
@@ -163,7 +164,7 @@ public class Form04_EF_D extends AppCompatActivity implements RadioGroup.OnCheck
         return res.getString(res.getIdentifier(name, "string", context.getPackageName()));
     }
 
-    public void skipPractice(String selectedbtnTxt, android.support.v7.widget.CardView fldGrp, String pattern, RadioGroup nextRadio) {
+    public void skipPractice(String selectedbtnTxt, CardView fldGrp, String pattern, RadioGroup nextRadio) {
         if (selectedbtnTxt.equals(pattern)) {
             fldGrp.setVisibility(View.GONE);
             nextRadio.clearCheck();

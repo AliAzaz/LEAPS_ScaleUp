@@ -3,10 +3,8 @@ package com.example.hassannaqvi.leaps_scaleup.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
@@ -15,6 +13,9 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
@@ -388,7 +389,7 @@ public class Form01Enrolment extends AppCompatActivity {
         f01.put("ls01f01", bi.ls01f01.getText().toString());
 
         f01.put("ls01f02", bi.ls01f02a.isChecked() ? "1"
-                : bi.ls01f02a.isChecked() ? "2"
+                : bi.ls01f02b.isChecked() ? "2"
                 : "0");
         f01.put("ls01f03", bi.ls01f03.getText().toString());
 

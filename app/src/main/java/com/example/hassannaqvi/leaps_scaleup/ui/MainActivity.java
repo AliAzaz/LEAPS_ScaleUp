@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -23,6 +22,8 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.databinding.DataBindingUtil;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.core.CONSTANTS;
@@ -113,7 +114,7 @@ public class MainActivity extends Activity {
                 m_Text = input.getText().toString();
                 if (!m_Text.equals("")) {
                     editor.putString("tagName", m_Text);
-                    editor.commit();
+                    editor.apply();
                 }
             }
         });
@@ -142,9 +143,7 @@ public class MainActivity extends Activity {
             try {
                 unsyncedForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms").execute().get();
                 todaysForms = (Collection<Forms>) new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getTodaysForms").execute(dtToday).get();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
 
@@ -211,7 +210,7 @@ public class MainActivity extends Activity {
 
         /*Add data in Serial date wrt date*/
 //        Testing visibility
-        if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
+        if (Integer.parseInt(MainApp.versionName.split("\\.")[0]) > 0) {
             mainBinding.testing.setVisibility(View.GONE);
         } else {
             mainBinding.testing.setVisibility(View.VISIBLE);
@@ -304,7 +303,7 @@ public class MainActivity extends Activity {
                 retClass = YouthInfoActivity.class;
                 break;
             case "10":
-                retClass = YouthInfoActivity.class;
+                retClass = GPSCoordinateActivity.class;
                 break;
             case "14":
                 retClass = Form14Activity.class;

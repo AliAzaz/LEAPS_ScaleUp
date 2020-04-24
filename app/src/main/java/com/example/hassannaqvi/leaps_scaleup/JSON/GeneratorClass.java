@@ -1,7 +1,6 @@
 package com.example.hassannaqvi.leaps_scaleup.JSON;
 
 import android.content.Context;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -9,6 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+
+import androidx.cardview.widget.CardView;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -201,7 +202,7 @@ public abstract class GeneratorClass {
         if (nameconv.length() > 0) {
 
             String str = nameconv.substring(nameconv.length() - (nameconv.length() >= 2 ? 2 : 1)
-                    , nameconv.length());
+            );
 
             char[] str_str = str.toLowerCase().toCharArray();
 

@@ -1,11 +1,12 @@
 package com.example.hassannaqvi.leaps_scaleup.ui;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
@@ -189,7 +190,7 @@ public class Form02HHPart_3 extends AppCompatActivity {
                 : bi.ls02ee09h.isChecked() ? "8"
                 : bi.ls02ee09i.isChecked() ? "9"
                 : bi.ls02ee09j.isChecked() ? "10"
-                : bi.ls02ee09j.isChecked() ? "11"
+                : bi.ls02ee09j.isChecked() ? "11" // for J the value is 11 as always
                 : bi.ls02ee09k.isChecked() ? "12"
                 : bi.ls02ee09l.isChecked() ? "13"
                 : bi.ls02ee09m.isChecked() ? "14"

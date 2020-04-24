@@ -37,7 +37,7 @@
                 style="@style/linerlayout_view_wt_bound">
 
                 <!--Q01a-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1a"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -94,11 +94,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q01b-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1b"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -155,11 +155,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q01c-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1c"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -216,11 +216,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q01d-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1d"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -277,11 +277,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q01e-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1e"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -338,11 +338,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q01f-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1f"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -399,11 +399,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q01g-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1g"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -460,11 +460,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q01h-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d1h"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -520,7 +520,7 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     style="@style/textView2"
@@ -534,7 +534,7 @@
                     android:textColor="@android:color/black" />
 
                 <!--Q02a-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d2a"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -591,11 +591,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q02b-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d2b"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -652,11 +652,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q02c-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d2c"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -713,11 +713,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q02d-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d2d"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -774,7 +774,7 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     style="@style/textView2"
@@ -788,7 +788,7 @@
                     android:textColor="@android:color/black" />
 
                 <!--Q03a-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3a"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -845,11 +845,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q03b-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3b"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -906,11 +906,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q03c-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3c"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -967,11 +967,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q03d-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3d"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1028,11 +1028,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q03e-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3e"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1089,11 +1089,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q03f-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3f"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1150,11 +1150,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q03g-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3g"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1211,11 +1211,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q03h-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d3h"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1272,7 +1272,7 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     style="@style/textView2"
@@ -1285,7 +1285,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="@android:color/black" />
                 <!--Q04a-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4a"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1342,11 +1342,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04b-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4b"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1403,11 +1403,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04c-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4c"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1464,11 +1464,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04d-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4d"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1525,11 +1525,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04e-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4e"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1586,11 +1586,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04f-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4f"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1647,11 +1647,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04g-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4g"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1708,11 +1708,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04h-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4h"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1769,11 +1769,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04i-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4i"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1830,11 +1830,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04j-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4j"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1891,11 +1891,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04k-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4k"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -1952,11 +1952,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04l-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4l"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2013,11 +2013,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04m-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4m"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2074,11 +2074,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04n-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4n"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2135,11 +2135,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04o-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4o"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2196,11 +2196,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04p-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4p"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2257,11 +2257,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04q-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4q"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2318,11 +2318,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04r-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4r"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2379,11 +2379,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04s-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4s"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2440,11 +2440,11 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
                 <!--Q04t-->
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls08d4t"
                     style="@style/cardView"
                     android:layout_width="match_parent"
@@ -2501,7 +2501,7 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
 

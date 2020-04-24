@@ -43,7 +43,7 @@
                 style="@style/linerlayout_view_wt_bound">
 
                 <!--01-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView style="@style/cardView">
 
                     <LinearLayout style="@style/linerlayout_view">
 
@@ -76,9 +76,9 @@
                                 android:text="@string/nores" />
                         </RadioGroup>
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls04aa01a"
                     style="@style/cardView">
 
@@ -113,10 +113,10 @@
                                 android:text="@string/nores" />
                         </RadioGroup>
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <!--02-->
-                <android.support.v7.widget.CardView style="@style/cardView">
+                <androidx.cardview.widget.CardView style="@style/cardView">
 
                     <LinearLayout style="@style/linerlayout_view">
 
@@ -149,9 +149,9 @@
                                 android:text="@string/nores" />
                         </RadioGroup>
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpls04aa02a"
                     style="@style/cardView">
 
@@ -186,7 +186,7 @@
                                 android:text="@string/nores" />
                         </RadioGroup>
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
                 <LinearLayout
                     android:id="@+id/fldgrpadmin"
@@ -195,7 +195,7 @@
                     android:orientation="vertical">
 
                     <!--03-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -228,9 +228,9 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/fldgrpls04aa03a"
                         style="@style/cardView">
 
@@ -265,10 +265,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--04-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -301,9 +301,9 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <android.support.v7.widget.CardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/fldgrpls04aa04a"
                         style="@style/cardView">
 
@@ -338,7 +338,7 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
                 <TextView
@@ -371,7 +371,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/black" />
                     <!--01-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -404,10 +404,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--02-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -440,10 +440,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--03-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -476,7 +476,7 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
 <!--level3-->
                 <LinearLayout
@@ -499,7 +499,7 @@
                         android:textColor="@android:color/white" />
 
                     <!--04-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
                         <!--  <android.support.constraint.ConstraintLayout
                               xmlns:app="http://schemas.android.com/apk/res-auto"
                               android:layout_width="match_parent"
@@ -568,10 +568,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--05-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -604,10 +604,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--06-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -640,7 +640,7 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
 <!--level4-->
                 <LinearLayout
@@ -663,7 +663,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
                     <!--07-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -696,10 +696,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--08-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -732,10 +732,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--09-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -768,7 +768,7 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
 <!--level5-->
                 <LinearLayout
@@ -790,7 +790,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:textColor="@android:color/white" />
                     <!--10-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -823,10 +823,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--11-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -859,10 +859,10 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
                     <!--12-->
-                    <android.support.v7.widget.CardView style="@style/cardView">
+                    <androidx.cardview.widget.CardView style="@style/cardView">
 
                         <LinearLayout style="@style/linerlayout_view">
 
@@ -895,7 +895,7 @@
                                     android:text="@string/nores" />
                             </RadioGroup>
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
             </LinearLayout>
