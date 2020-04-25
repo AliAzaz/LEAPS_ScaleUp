@@ -1267,7 +1267,6 @@
 
 
     <!--Form 08 EF D-->
-
     <string name="ls08d">NUMBER STROOP SCORING SHEET</string>
     <string name="ls08dsub1">1. BASELINE TRIAL INTRODUCTION</string>
     <string name="ls08dsub2">2. NON-IDENTICAL TRIAL INTRODUCTION</string>
@@ -1319,7 +1318,6 @@
 
 
     <!--Form 08 EF E-->
-
     <string name="ls08e">TRAIL MAKING TEST</string>
     <string name="ls08esub1">PART A - TMT PRACTICE TRIAL </string>
     <string name="ls08esub2">PART A – TMT TEST TRIAL</string>
@@ -1347,6 +1345,38 @@
     <string name="lsyid05c"> اسٽيپ 2 </string>
     <string name="lsyid05d"> اسٽيپ 3 </string>
 
+
+    <!--GPS Coordinations form-->
+    <string name="gca0hinstruction">Instruction Notes:
+This form should be completed by the CCDA for collecting GPS coordinates of study locations in instances where GPS coordinates have not been captured through other data collection activities. GPS coordinates will be  collected for the following locations:
+•	School Cohort Participant Household
+•	CYL Household
+•	Youth Comparison Household
+•	LEAPS Preschools
+•	NCHD Feeder Schools in LEAPS clusters (OR if school has been handed over- a Re-Opened School)
+•	MELE Comparison Preschools
+•	NCHD District Office
+</string>
+
+    <string name="gca01">Name and surname of CCDA</string>
+
+    <string name="gca02a">If location is in a LEAPS cluster, enter Cluster ID</string>
+    <string name="gca02b">If location is not in a LEAPS cluster, enter Village name</string>
+
+    <string name="gca03">Enter District Name</string>
+
+    <string name="gca05">Select location: (select one)</string>
+    <string name="gca05a">School Cohort Participant Household</string>
+    <string name="gca05b">CYL Household</string>
+    <string name="gca05c">Youth Comparison Household</string>
+    <string name="gca05d">LEAPS Preschool</string>
+    <string name="gca05e">NCHD Feeder School (or Re-Opened School)</string>
+    <string name="gca05f">MELE Comparison Preschool</string>
+    <string name="gca05g">NCHD District Office</string>
+
+    <string name="gca06">Enter the corresponding school cohort child study ID </string>
+    <string name="gca07">Enter the corresponding youth participant study ID </string>
+    <string name="gca08">Enter the corresponding Control Preschool Teacher study ID</string>
 
 </resources>
 
