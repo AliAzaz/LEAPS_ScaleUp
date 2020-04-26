@@ -9,6 +9,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,13 +19,9 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
-import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityGpsCoordinateBinding;
-import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
-import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
-import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -62,7 +59,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     private void setupView() {
 
-        bi.ls01a05.addTextChangedListener(new TextWatcher() {
+        bi.gca02a.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -71,8 +68,8 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                bi.fldgrpls01a01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrpls01a01);
+                bi.fldgrpls01a01.setVisibility(VISIBLE);
+                //ClearClass.ClearAllFields(bi.fldgrpls01a01);
 
             }
 
@@ -82,16 +79,31 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             }
         });
 
+
+        bi.gca05.setOnCheckedChangeListener((new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (i == bi.gca05b.getId() || i == bi.gca05c.getId()) {
+                    Clear.clearAllFields(bi.fldgrpgca06);
+                } else if (i == bi.gca05f.getId()) {
+                    Clear.clearAllFields(bi.fldgrpgca07);
+                    bi.fldgrpgca06.setVisibility(GONE);
+                } else {
+                    bi.fldgrpgca06.setVisibility(VISIBLE);
+                }
+            }
+        }));
+
     }
 
     public void BtnClusterIDValid() {
-        if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
+       /* if (!validatorClass.EmptyTextBox(this, bi.gca02a, getString(R.string.ls01a05))) {
             return;
         }
 
         Object cluster = null;
         try {
-            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(bi.ls01a05.getText().toString()).get();
+            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(bi.gca02a.getText().toString()).get();
 
             if (cluster != null) {
                 Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
@@ -105,14 +117,14 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
             } else {
                 Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
-              /*  bi.fldgrpls01a01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrpls01a01,false);*/
+              *//*  bi.fldgrpls01a01.setVisibility(GONE);
+                ClearClass.ClearAllFields(bi.fldgrpls01a01,false);*//*
 
             }
 
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
-        }
+        }*/
 
 
     }
@@ -159,7 +171,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
+        /*if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
             return;
         }
 
@@ -173,7 +185,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 
@@ -190,7 +202,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         setGPS(fc_4_5); // Set GPS
 
-        fc_4_5.setClustercode(bi.ls01a05.getText().toString());
+        fc_4_5.setClustercode(bi.gca02a.getText().toString());
         fc_4_5.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();

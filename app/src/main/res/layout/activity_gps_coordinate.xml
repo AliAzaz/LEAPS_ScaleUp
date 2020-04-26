@@ -69,13 +69,14 @@
                         android:inputType="number"
                         android:maxLength="2"
                         android:text='@{gca02a98.checked ?  "" : gca02a.getText().toString() }'
-                        android:visibility='@{gca02a98.checked ? View.GONE : View.VISIBLE }' />
+                        android:enabled='@{gca02a98.checked ? false : true }' />
 
                     <CheckBox
                         android:id="@+id/gca02a98"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="1dp"
+                        android:tag="-1"
                         android:text="@string/dkn" />
 
                 </LinearLayout>
@@ -87,7 +88,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:elevation="10dp">
+                android:elevation="10dp"
+                android:visibility='@{gca02a98.checked ? View.VISIBLE : View.GONE }'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -112,7 +114,8 @@
                         android:layout_marginBottom="1dp"
                         android:hint="@string/gca02b"
                         android:inputType="number"
-                        android:maxLength="2" />
+                        android:maxLength="2"
+                        android:text='@{gca02a98.checked ?  "" : gca02b.getText().toString() }' />
 
                 </LinearLayout>
 
@@ -360,6 +363,14 @@
                                 android:layout_weight="1"
                                 android:text="@string/gca05f" />
 
+                            <RadioButton
+                                android:id="@+id/gca05g"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="1"
+                                android:text="@string/gca05g" />
+
 
                         </RadioGroup>
 
@@ -370,10 +381,12 @@
 
                 <!--gca06-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/fldgrpgca06"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:elevation="10dp"
+                    android:visibility='@{gca05b.checked || gca05c.checked ? View.GONE : View.VISIBLE }'>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -396,7 +409,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_marginBottom="1dp"
-                            android:digits="4"
+                            android:maxLength="4"
                             android:hint="@string/gca06"
                             android:inputType="number" />
 
@@ -406,10 +419,12 @@
 
                 <!--gca07-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/fldgrpgca07"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:elevation="10dp"
+                    android:visibility='@{gca05f.checked ? View.GONE : View.VISIBLE }'>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -432,7 +447,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_marginBottom="1dp"
-                            android:digits="4"
+                            android:maxLength="4"
                             android:hint="@string/gca07"
                             android:inputType="number" />
 
@@ -442,6 +457,7 @@
 
                 <!--gca08-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/fldgrpgca08"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -468,7 +484,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_marginBottom="1dp"
-                            android:digits="4"
+                            android:maxLength="4"
                             android:hint="@string/gca08"
                             android:inputType="number" />
 
@@ -503,6 +519,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 
 
