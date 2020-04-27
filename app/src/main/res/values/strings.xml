@@ -1347,8 +1347,7 @@
 
 
     <!--GPS Coordinations form-->
-    <string name="gca0hinstruction">Instruction Notes:
-This form should be completed by the CCDA for collecting GPS coordinates of study locations in instances where GPS coordinates have not been captured through other data collection activities. GPS coordinates will be  collected for the following locations:\n
+    <string name="gca0hinstruction">Instruction Notes: This form should be completed by the CCDA for collecting GPS coordinates of study locations in instances where GPS coordinates have not been captured through other data collection activities. GPS coordinates will be  collected for the following locations:\n
 •	School Cohort Participant Household \n
 •	CYL Household \n
 •	Youth Comparison Household \n

@@ -98,7 +98,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         }));
 
         //spinner gca03 districtName
-        String[] districtName = {"....", "0", "1", "2", "3", "4", "5"};
+        String[] districtName = {"....", "Naushahero Feroz", "Dadu", "Khairpur", "Sukkur"};
 
         bi.gca03.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(districtName)));
 
