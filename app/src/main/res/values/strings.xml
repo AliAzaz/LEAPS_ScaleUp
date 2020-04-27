@@ -1348,14 +1348,17 @@
 
     <!--GPS Coordinations form-->
     <string name="gca0hinstruction">Instruction Notes:
-This form should be completed by the CCDA for collecting GPS coordinates of study locations in instances where GPS coordinates have not been captured through other data collection activities. GPS coordinates will be  collected for the following locations:
-•	School Cohort Participant Household
-•	CYL Household
-•	Youth Comparison Household
-•	LEAPS Preschools
-•	NCHD Feeder Schools in LEAPS clusters (OR if school has been handed over- a Re-Opened School)
-•	MELE Comparison Preschools
-•	NCHD District Office
+This form should be completed by the CCDA for collecting GPS coordinates of study locations in instances where GPS coordinates have not been captured through other data collection activities. GPS coordinates will be  collected for the following locations:\n
+•	School Cohort Participant Household \n
+•	CYL Household \n
+•	Youth Comparison Household \n
+•	LEAPS Preschools \n
+•	NCHD Feeder Schools in LEAPS clusters (OR if school has been handed over- a Re-Opened School) \n
+•	MELE Comparison Preschools \n
+•	NCHD District Office. \n
+        This information will be used to assess how far CYLs travel, the distance from LEAPS schools to NCHD primary schools, distances that NCHD staff travel, and the clustering/reach of children enrolled.\n
+If there are any deviations from the protocol, please complete the Protocol Deviation Form.
+
 </string>
 
     <string name="gca01">Name and surname of CCDA</string>

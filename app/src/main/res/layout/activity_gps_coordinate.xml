@@ -37,7 +37,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/black" />
 
-            <!--gca02a-->
+            <!--EditText gca02a-->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--gca02b-->
+            <!--EditText gca02b-->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -116,6 +116,25 @@
                         android:inputType="number"
                         android:maxLength="2"
                         android:text='@{gca02a98.checked ?  "" : gca02b.getText().toString() }' />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--spinner gca03-->
+            <androidx.cardview.widget.CardView style="@style/cardView">
+
+                <LinearLayout style="@style/linerlayout_view">
+
+                    <TextView
+                        style="@style/textView"
+                        android:text="@string/gca03" />
+
+                    <Spinner
+                        android:id="@+id/gca03"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" />
 
                 </LinearLayout>
 
@@ -284,8 +303,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-
-                <!--gca05-->
+                <!--Radio Button gca05-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpgca05"
                     style="@style/cardView"
@@ -378,8 +396,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-
-                <!--gca06-->
+                <!--EditText gca06-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpgca06"
                     android:layout_width="match_parent"
@@ -417,7 +434,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!--gca07-->
+                <!--EditText gca07-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpgca07"
                     android:layout_width="match_parent"
@@ -455,7 +472,7 @@
 
                 </androidx.cardview.widget.CardView>
 
-                <!--gca08-->
+                <!--EditText gca08-->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldgrpgca08"
                     android:layout_width="match_parent"

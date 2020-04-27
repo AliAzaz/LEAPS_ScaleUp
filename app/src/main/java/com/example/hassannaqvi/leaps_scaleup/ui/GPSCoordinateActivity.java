@@ -9,6 +9,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
@@ -90,9 +92,15 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                     bi.fldgrpgca06.setVisibility(GONE);
                 } else {
                     bi.fldgrpgca06.setVisibility(VISIBLE);
+                    Clear.clearAllFields(bi.fldgrpgca08);
                 }
             }
         }));
+
+        //spinner gca03 districtName
+        String[] districtName = {"....", "0", "1", "2", "3", "4", "5"};
+
+        bi.gca03.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(districtName)));
 
     }
 
@@ -206,9 +214,30 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         fc_4_5.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();
-        f01.put("ls01a02", MainApp.userName);
-        f01.put("ls01a05", cluster_name[3]); //VILLAGE
-        f01.put("ls01a06", cluster_name[0]); //DISTRICT
+        //f01.put("ls01a02", MainApp.userName);
+        //f01.put("ls01a05", cluster_name[3]); //VILLAGE
+        //f01.put("ls01a06", cluster_name[0]); //DISTRICT
+
+
+        f01.put("gca02a", bi.gca02a.getText().toString());
+        f01.put("gca02a98", bi.gca02a98.isChecked() ? "1" : "0");
+
+        f01.put("gca02b", bi.gca02b.getText().toString());
+
+        f01.put("gca03", bi.gca03.getSelectedItem().toString());
+
+        f01.put("gca05", bi.gca05a.isChecked() ? "1"
+                : bi.gca05b.isChecked() ? "2"
+                : bi.gca05c.isChecked() ? "3"
+                : bi.gca05d.isChecked() ? "2"
+                : bi.gca05e.isChecked() ? "3"
+                : bi.gca05f.isChecked() ? "2"
+                : bi.gca05g.isChecked() ? "3"
+                : "0");
+
+        f01.put("gca06", bi.gca06.getText().toString());
+        f01.put("gca07", bi.gca07.getText().toString());
+        f01.put("gca08", bi.gca08.getText().toString());
 
         fc_4_5.setSInfo(String.valueOf(f01));
 
