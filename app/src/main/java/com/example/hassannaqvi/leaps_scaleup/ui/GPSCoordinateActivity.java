@@ -182,8 +182,6 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         /*if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
             return;
         }
-
-
         try {
             SaveDraft();
             if (UpdateDB()) {
