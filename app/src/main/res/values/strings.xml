@@ -1376,7 +1376,7 @@ If there are any deviations from the protocol, please complete the Protocol Devi
     <string name="gca05f">MELE Comparison Preschool</string>
     <string name="gca05g">NCHD District Office</string>
 
-    <string name="gca06">Enter the corresponding school cohort child study ID </string>
+    <string name="gca06">Enter the corresponding study ID </string>
     <string name="gca07">Enter the corresponding youth participant study ID </string>
     <string name="gca08">Enter the corresponding Control Preschool Teacher study ID</string>
 

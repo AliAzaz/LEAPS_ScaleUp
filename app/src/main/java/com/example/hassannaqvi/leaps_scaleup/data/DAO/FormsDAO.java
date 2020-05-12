@@ -10,6 +10,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase.Sub_DBConnection;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
 
@@ -23,6 +24,9 @@ public interface FormsDAO {
     @Insert
     Long insertForm_04_05(Forms_04_05 forms);
 
+    @Insert
+    Long insertForm_GPS(Forms_GPS forms);
+
     @Delete
     void delete(Forms forms);
 
@@ -31,6 +35,9 @@ public interface FormsDAO {
 
     @Update
     int updateForm_04_05(Forms_04_05 forms);
+
+    @Update
+    int updateForm_GPS(Forms_GPS forms);
 
     /*Others Sync*/
     @Insert
@@ -63,6 +70,9 @@ public interface FormsDAO {
 
     @Query("UPDATE Forms_04_05 SET synced = '1' , synced_date= :synced_date WHERE id =:id")
     int updateSyncedForms_04_05(String synced_date, int id);
+
+    @Query("UPDATE Forms_GPS SET synced = '1' , synced_date= :synced_date WHERE id =:id")
+    int updateSyncedForms_GPS(String synced_date, int id);
 
 
 }

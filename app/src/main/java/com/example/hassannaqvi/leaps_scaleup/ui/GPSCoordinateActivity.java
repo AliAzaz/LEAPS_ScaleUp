@@ -11,7 +11,6 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +22,7 @@ import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
-import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityGpsCoordinateBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
@@ -44,7 +43,7 @@ import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public class GPSCoordinateActivity extends AppCompatActivity {
     private static final String TAG = GPSCoordinateActivity.class.getName();
-    public static Forms_04_05 fc_4_5;
+    public static Forms_GPS fc_gps;
     ActivityGpsCoordinateBinding bi;
     String getFtype = "", deviceID;
     String[] cluster_name;
@@ -87,7 +86,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         });
 
 
-        bi.gca05.setOnCheckedChangeListener((new RadioGroup.OnCheckedChangeListener() {
+        /*bi.gca05.setOnCheckedChangeListener((new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if (i == bi.gca05b.getId() || i == bi.gca05c.getId()) {
@@ -100,7 +99,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                     Clear.clearAllFields(bi.fldgrpgca08);
                 }
             }
-        }));
+        }));*/
 
         //spinner gca03 districtName
         String[] districtName = {"....", "Naushahero Feroz", "Dadu", "Khairpur", "Sukkur"};
@@ -171,7 +170,8 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             try {
                 SaveDraft();
                 if (UpdateDB()) {
-                    startActivity(new Intent(getApplicationContext(), Form02HHPart_1.class));
+                    finish();
+                    startActivity(new Intent(this, MainActivity.class));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }
@@ -185,13 +185,13 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         try {
 
-            Long longID = new crudOperations(db, fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "insertForm_04_05").get();
+            Long longID = new crudOperations(db, fc_gps).execute(FormsDAO.class.getName(), "formsDao", "insertForm_GPS").get();
 
             if (longID != 0) {
-                fc_4_5.setId(longID.intValue());
-                fc_4_5.setUid(deviceID + fc_4_5.getId());
+                fc_gps.setId(longID.intValue());
+                fc_gps.setUid(deviceID + fc_gps.getId());
 
-                longID = new crudOperations(db, fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
+                longID = new crudOperations(db, fc_gps).execute(FormsDAO.class.getName(), "formsDao", "updateForm_GPS").get();
                 return longID == 1;
 
             } else {
@@ -226,28 +226,26 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        fc_4_5 = new Forms_04_05();
+        fc_gps = new Forms_GPS();
 
-        fc_4_5.setDevicetagID(MainApp.getTagName(this));
-        fc_4_5.setFormType(getIntent().getStringExtra("fType"));
-        fc_4_5.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
-        fc_4_5.setUsername(MainApp.userName);
-        fc_4_5.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        fc_4_5.setDeviceID(deviceID);
+        fc_gps.setDevicetagID(MainApp.getTagName(this));
+        fc_gps.setFormType(getIntent().getStringExtra("fType"));
+        fc_gps.setAppversion(MainApp.versionName + "." + MainApp.versionCode);
+        fc_gps.setUsername(MainApp.userName);
+        fc_gps.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        fc_gps.setDeviceID(deviceID);
 
-        setGPS(fc_4_5); // Set GPS
+        setGPS(fc_gps); // Set GPS
 
-        fc_4_5.setClustercode(bi.gca02a.getText().toString());
-        fc_4_5.setRound(String.valueOf(MainApp.round));
+        fc_gps.setClustercode(bi.gca02a.getText().toString());
+        fc_gps.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();
-        //f01.put("ls01a02", MainApp.userName);
-        //f01.put("ls01a05", cluster_name[3]); //VILLAGE
-        //f01.put("ls01a06", cluster_name[0]); //DISTRICT
-
+        f01.put("ls01a05", cluster_name[3]); //VILLAGE
+        f01.put("ls01a06", cluster_name[0]); //DISTRICT
 
         f01.put("gca02a", bi.gca02a.getText().toString());
-        f01.put("gca02a98", bi.gca02a98.isChecked() ? "1" : "0");
+        f01.put("gca02a98", bi.gca02a98.isChecked() ? "98" : "0");
 
         f01.put("gca02b", bi.gca02b.getText().toString());
 
@@ -262,11 +260,12 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                 : bi.gca05g.isChecked() ? "3"
                 : "0");
 
-        f01.put("gca06", bi.gca06.getText().toString());
+        fc_gps.setStudyID(bi.gca06.getText().toString());
+        /*f01.put("gca06", bi.gca06.getText().toString());
         f01.put("gca07", bi.gca07.getText().toString());
-        f01.put("gca08", bi.gca08.getText().toString());
+        f01.put("gca08", bi.gca08.getText().toString());*/
 
-        fc_4_5.setSInfo(String.valueOf(f01));
+        fc_gps.setSa1(String.valueOf(f01));
 
     }
 
@@ -274,7 +273,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         return Validator.emptyCheckingContainer(this, bi.fldGrpGPSCoord01);
     }
 
-    public void setGPS(Forms_04_05 fc) {
+    public void setGPS(Forms_GPS fc) {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
         try {
             String lat = GPSPref.getString("Latitude", "0");
