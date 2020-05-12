@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -20,8 +21,12 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.crudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityGpsCoordinateBinding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
+import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -71,7 +76,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
                 bi.fldgrpls01a01.setVisibility(VISIBLE);
-                //ClearClass.ClearAllFields(bi.fldgrpls01a01);
+                Clear.clearAllFields(bi.fldgrpls01a02);
 
             }
 
@@ -102,14 +107,35 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         bi.gca03.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(districtName)));
 
+        bi.gca02a98.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b) {
+                    bi.gca02a.setText(null);
+                    bi.gca02a.setEnabled(false);
+                    bi.fldgrpls01a05.setVisibility(VISIBLE);
+                    bi.fldgrpls01a02.setVisibility(VISIBLE);
+                    bi.fldgrpls01a04.setVisibility(GONE);
+                    bi.fldgrpls01a01.setVisibility(GONE);
+                } else {
+                    bi.gca02a.setEnabled(true);
+                    bi.fldgrpls01a04.setVisibility(VISIBLE);
+                    bi.fldgrpls01a02.setVisibility(GONE);
+                    bi.gca02b.setText(null);
+                    bi.fldgrpls01a05.setVisibility(GONE);
+                    Clear.clearAllFields(bi.fldgrpls01a05);
+                }
+            }
+        });
+
     }
 
     public void BtnClusterIDValid() {
-       /* if (!validatorClass.EmptyTextBox(this, bi.gca02a, getString(R.string.ls01a05))) {
+        if (!validatorClass.EmptyTextBox(this, bi.gca02a, getString(R.string.ls01a05))) {
             return;
         }
 
-        Object cluster = null;
+        Object cluster;
         try {
             cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(bi.gca02a.getText().toString()).get();
 
@@ -122,17 +148,20 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                 bi.ls01aVil.setText(cluster_name[3]);
 
                 bi.fldgrpls01a01.setVisibility(VISIBLE);
+                bi.fldgrpls01a01.setVisibility(VISIBLE);
 
             } else {
                 Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
-              *//*  bi.fldgrpls01a01.setVisibility(GONE);
-                ClearClass.ClearAllFields(bi.fldgrpls01a01,false);*//*
+                bi.fldgrpls01a01.setVisibility(GONE);
+                bi.fldgrpls01a02.setVisibility(GONE);
+                Clear.clearAllFields(bi.fldgrpls01a01, false);
+                Clear.clearAllFields(bi.fldgrpls01a02);
 
             }
 
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
-        }*/
+        }
 
 
     }

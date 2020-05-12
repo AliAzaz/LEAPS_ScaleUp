@@ -10,6 +10,7 @@ import org.json.JSONException;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -18,17 +19,19 @@ import java.net.URL;
 
 public class GetAllData extends AsyncTask<String, String, String> {
 
-    HttpURLConnection urlConnection;
+    private HttpURLConnection urlConnection;
     private String TAG = "";
     private Context mContext;
     private ProgressDialog pd;
     private String syncClass, URL;
-
+    private ParticipantFlag delegate;
 
     public GetAllData(Context context, String syncClass, String url) {
         mContext = context;
         this.syncClass = syncClass;
         this.URL = url;
+
+        delegate = (ParticipantFlag) context;
 
         TAG = "Get" + syncClass;
     }
@@ -66,9 +69,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     result.append(line);
                 }
             }
-        } catch (java.net.SocketTimeoutException e) {
-            return null;
-        } catch (java.io.IOException e) {
+        } catch (IOException e) {
             return null;
         } finally {
             urlConnection.disconnect();
@@ -83,10 +84,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
         //Do something with the JSON string
         if (result != null) {
-            String json = result;
-            if (json.length() > 0) {
+            if (result.length() > 0) {
                 try {
-                    JSONArray jsonArray = new JSONArray(json);
+                    JSONArray jsonArray = new JSONArray(result);
 
                     switch (syncClass) {
                         case "User":
@@ -95,16 +95,30 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "Clusters":
                             GetSyncFncs.syncClusters(jsonArray);
                             break;
+                        case "YouthParticipants":
+                        case "SchoolParticipants":
+                        case "AllParticipants":
+                            GetSyncFncs.syncParticipants(jsonArray, syncClass.equals("AllParticipants"));
+                            break;
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());
                     pd.show();
+
+                    if (syncClass.equals("YouthParticipants")) {
+                        delegate.schoolParticipantFlag(true);
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             } else {
-                pd.setMessage("Received: " + json.length() + "");
+                pd.setMessage("Received: " + result.length() + "");
                 pd.show();
+
+                if (syncClass.equals("YouthParticipants")) {
+                    delegate.schoolParticipantFlag(true);
+                }
             }
         } else {
             pd.setTitle("Connection Error");
@@ -113,4 +127,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
         }
     }
 
+    public interface ParticipantFlag {
+        void schoolParticipantFlag(boolean flag);
+    }
 }

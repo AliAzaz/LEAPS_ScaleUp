@@ -69,7 +69,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class LoginActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>, GetAllData.ParticipantFlag {
 
     /**
      * A dummy authentication store containing known user names and passwords.
@@ -83,12 +83,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
     public ArrayList<String> values;
     public Map<String, String> valuesnlabels;
     // UI references.
-
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
-
     String DirectoryName;
-
     private UserLoginTask mAuthTask = null;
     private StringBuffer jsonString_output;
     private JSONArray json;
@@ -125,7 +122,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                     .getPackageManager()
                     .getPackageInfo("com.example.hassannaqvi.leaps_scaleup", 0)
                     .versionName;
-            bi.txtinstalldate.setText("Ver. " + versionName + "." + versionCode + " \r\n( Last Updated: " + new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn)) + " )");
+            bi.txtinstalldate.setText(new StringBuilder("Ver. ").append(versionName).append(".").append(versionCode).append(" \r\n( Last Updated: ").append(new SimpleDateFormat("dd MMM. yyyy").format(new Date(installedOn))).append(" )"));
 
             MainApp.versionCode = versionCode;
             MainApp.versionName = versionName;
@@ -148,7 +145,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
         }
 
-
         bi.password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
@@ -163,7 +159,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 return false;
             }
         });
-
 
         Target viewTarget = new ViewTarget(R.id.syncData, this);
 
@@ -186,7 +181,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
        /* ArrayList<UCContract> ucList = new ArrayList<UCContract>();
         ucList = db.getAllUC();*/
 
-
 //        DB backup
         dbBackup();
 
@@ -194,7 +188,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         db = AppDatabase.getDatabase(getApplicationContext());
 
 //        Testing visibility
-        if (Integer.valueOf(MainApp.versionName.split("\\.")[0]) > 0) {
+        if (Integer.parseInt(MainApp.versionName.split("\\.")[0]) > 0) {
             bi.testing.setVisibility(View.GONE);
         } else {
             bi.testing.setVisibility(View.VISIBLE);
@@ -246,55 +240,50 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         for (int i = 0; i < permissions.length; i++) {
-            if (permissions[i].equals(Manifest.permission.READ_CONTACTS)) {
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-                    populateAutoComplete();
-                }
-            } else if (permissions[i].equals(Manifest.permission.GET_ACCOUNTS)) {
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-
-
-                }
-            } else if (permissions[i].equals(Manifest.permission.READ_PHONE_STATE)) {
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-                    doPermissionGrantedStuffs();
-                    //loadIMEI();
-                }
-            } else if (permissions[i].equals(Manifest.permission.ACCESS_COARSE_LOCATION)) {
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-
-
-                }
-            } else if (permissions[i].equals(Manifest.permission.ACCESS_FINE_LOCATION)) {
-                if(grantResults[i] == PackageManager.PERMISSION_GRANTED) {
-                    locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-                    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
-                            != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                        // TODO: Consider calling
-                        //    ActivityCompat#requestPermissions
-                        // here to request the missing permissions, and then overriding
-                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                        //                                          int[] grantResults)
-                        // to handle the case where the user grants the permission. See the documentation
-                        // for ActivityCompat#requestPermissions for more details.
-                        return;
+            switch (permissions[i]) {
+                case Manifest.permission.READ_CONTACTS:
+                    if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                        populateAutoComplete();
                     }
-                    locationManager.requestLocationUpdates(
-                            LocationManager.GPS_PROVIDER,
-                            MINIMUM_TIME_BETWEEN_UPDATES,
-                            MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
-                            new GPSLocationListener() // Implement this class from code
+                    break;
+                case Manifest.permission.GET_ACCOUNTS:
+                case Manifest.permission.ACCESS_COARSE_LOCATION:
+                case Manifest.permission.WRITE_EXTERNAL_STORAGE:
+                case Manifest.permission.CAMERA:
+                    if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
 
-                    );
-                }
-            } else if (permissions[i].equals(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
 
-                }
-            } else if (permissions[i].equals(Manifest.permission.CAMERA)) {
-                if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                    }
+                    break;
+                case Manifest.permission.READ_PHONE_STATE:
+                    if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                        doPermissionGrantedStuffs();
+                        //loadIMEI();
+                    }
+                    break;
+                case Manifest.permission.ACCESS_FINE_LOCATION:
+                    if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+                        locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                            // TODO: Consider calling
+                            //    ActivityCompat#requestPermissions
+                            // here to request the missing permissions, and then overriding
+                            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                            //                                          int[] grantResults)
+                            // to handle the case where the user grants the permission. See the documentation
+                            // for ActivityCompat#requestPermissions for more details.
+                            return;
+                        }
+                        locationManager.requestLocationUpdates(
+                                LocationManager.GPS_PROVIDER,
+                                MINIMUM_TIME_BETWEEN_UPDATES,
+                                MINIMUM_DISTANCE_CHANGE_FOR_UPDATES,
+                                new GPSLocationListener() // Implement this class from code
 
-                }
+                        );
+                    }
+                    break;
             }
         }
     }
@@ -440,10 +429,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
             String dt = sharedPref.getString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
 
-            if (dt != new SimpleDateFormat("dd-MM-yy").format(new Date())) {
+            if (!dt.equals(new SimpleDateFormat("dd-MM-yy").format(new Date()))) {
                 editor.putString("dt", new SimpleDateFormat("dd-MM-yy").format(new Date()));
-
-                editor.commit();
+                editor.apply();
             }
 
             File folder = new File(Environment.getExternalStorageDirectory() + File.separator + "DMU-LEAPSSUP");
@@ -515,7 +503,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                 getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            new syncData(this).execute();
+            new SyncData(this).execute();
         } else {
             Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
         }
@@ -576,7 +564,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             listPermissionsNeeded.add(Manifest.permission.CAMERA);
         }
         if (!listPermissionsNeeded.isEmpty()) {
-            ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[listPermissionsNeeded.size()]), MY_PERMISSIONS_REQUEST_READ_CONTACTS);
+            ActivityCompat.requestPermissions(this, listPermissionsNeeded.toArray(new String[0]), MY_PERMISSIONS_REQUEST_READ_CONTACTS);
             return false;
         }
 
@@ -652,32 +640,25 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         // On Honeycomb MR2 we have the ViewPropertyAnimator APIs, which allow
         // for very easy animations. If available, use these APIs to fade-in
         // the progress spinner.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR2) {
-            int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
+        int shortAnimTime = getResources().getInteger(android.R.integer.config_shortAnimTime);
 
-            bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
-            bi.loginForm.animate().setDuration(shortAnimTime).alpha(
-                    show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
-                }
-            });
+        bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
+        bi.loginForm.animate().setDuration(shortAnimTime).alpha(
+                show ? 0 : 1).setListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
+            }
+        });
 
-            bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
-            bi.loginProgress.animate().setDuration(shortAnimTime).alpha(
-                    show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
-                }
-            });
-        } else {
-            // The ViewPropertyAnimator APIs are not available, so simply show
-            // and hide the relevant UI components.
-            bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
-            bi.loginForm.setVisibility(show ? View.GONE : View.VISIBLE);
-        }
+        bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
+        bi.loginProgress.animate().setDuration(shortAnimTime).alpha(
+                show ? 1 : 0).setListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                bi.loginProgress.setVisibility(show ? View.VISIBLE : View.GONE);
+            }
+        });
     }
 
     @Override
@@ -740,6 +721,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
         int ADDRESS = 0;
         int IS_PRIMARY = 1;
+    }
+
+    @Override
+    public void schoolParticipantFlag(boolean flag) {
+        if (flag) {
+            /*Toast.makeText(LoginActivity.this, "Sync School Participants", Toast.LENGTH_LONG).show();
+            new GetAllData(LoginActivity.this, "SchoolParticipants", MainApp._HOST_URL + CONSTANTS.URL_SCHOOL_PARTICIPANTS).execute();*/
+        }
     }
 
     /**
@@ -833,9 +822,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
                 }
 
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
+            } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
 
@@ -849,11 +836,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         }
     }
 
-    public class syncData extends AsyncTask<String, String, String> {
+    public class SyncData extends AsyncTask<String, String, String> {
 
         private Context mContext;
 
-        public syncData(Context mContext) {
+        SyncData(Context mContext) {
             this.mContext = mContext;
         }
 
@@ -868,6 +855,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                     new GetAllData(mContext, "User", MainApp._HOST_URL + CONSTANTS.URL_USERS).execute();
                     Toast.makeText(LoginActivity.this, "Sync Clusters", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "Clusters", MainApp._HOST_URL + CONSTANTS.URL_CLUSTERS).execute();
+                    Toast.makeText(LoginActivity.this, "Sync Youth Participants", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "AllParticipants", MainApp._HOST_URL + CONSTANTS.URL_ALL_PARTICIPANTS).execute();
                 }
             });
 

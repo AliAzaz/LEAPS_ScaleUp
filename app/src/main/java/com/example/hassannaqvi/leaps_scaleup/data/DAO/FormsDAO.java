@@ -10,6 +10,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase.Sub_DBConnection;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
 
 @Dao
@@ -38,11 +39,17 @@ public interface FormsDAO {
     @Insert
     Long insertClusters(Clusters clusters);
 
+    @Insert
+    Long insertParticipants(Participant participant);
+
     @Query("DELETE from " + Sub_DBConnection.TABLE_USERS)
     int deleteUsers();
 
     @Query("DELETE from " + Sub_DBConnection.TABLE_CLUSTERS)
     int deleteClusters();
+
+    @Query("DELETE from " + Sub_DBConnection.TABLE_PARTICIPANT)
+    int deleteParticipants();
 
 
     /*Update methods after upload on server*/

@@ -413,7 +413,7 @@ public class Forms_04_05 implements Serializable {
         this.pdeviation = pdeviation;
     }
 
-    public class Simple_Forms_04_05 {
+    public static class Simple_Forms_04_05 {
 
         String ls01a05, ls01a06, ls01a07, ls01a09, ls01f03, ls01f04, ls01f05d, ls01f05m, ls01f05y, ls01a10;
 

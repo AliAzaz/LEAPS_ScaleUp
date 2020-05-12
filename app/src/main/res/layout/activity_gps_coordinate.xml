@@ -67,9 +67,7 @@
                         android:layout_marginBottom="1dp"
                         android:hint="@string/gca02a"
                         android:inputType="number"
-                        android:maxLength="2"
-                        android:text='@{gca02a98.checked ?  "" : gca02a.getText().toString() }'
-                        android:enabled='@{gca02a98.checked ? false : true }' />
+                        android:maxLength="2" />
 
                     <CheckBox
                         android:id="@+id/gca02a98"
@@ -83,68 +81,73 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--EditText gca02b-->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:elevation="10dp"
-                android:visibility='@{gca02a98.checked ? View.VISIBLE : View.GONE }'>
+            <LinearLayout
+                android:id="@+id/fldgrpls01a02"
+                style="@style/linerlayout_view_wt_bound"
+                android:visibility="gone">
 
-                <LinearLayout
+                <!--EditText gca02b-->
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@color/colorPrimary"
-                        android:text="@string/gca02b"
-                        android:textColor="@android:color/white"
-                        android:textSize="20sp" />
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/gca02b"
-                        style="@style/textInput"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:layout_marginBottom="1dp"
-                        android:hint="@string/gca02b"
-                        android:text='@{gca02a98.checked ?  "" : gca02b.getText().toString() }' />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/gca02b"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/gca02b"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:hint="@string/gca02b" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <!--spinner gca03-->
-            <androidx.cardview.widget.CardView style="@style/cardView">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout style="@style/linerlayout_view">
+                <!--spinner gca03-->
+                <androidx.cardview.widget.CardView style="@style/cardView">
 
-                    <TextView
-                        style="@style/textView"
-                        android:text="@string/gca03" />
+                    <LinearLayout style="@style/linerlayout_view">
 
-                    <Spinner
-                        android:id="@+id/gca03"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp" />
+                        <TextView
+                            style="@style/textView"
+                            android:text="@string/gca03" />
 
-                </LinearLayout>
+                        <Spinner
+                            android:id="@+id/gca03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp" />
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
 
             <!--Cluster ID Valid Btn-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/fldgrpls01a04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:elevation="10dp"
-                android:visibility='@{gca02a98.checked ? View.GONE : View.VISIBLE }'>
+                android:elevation="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -165,52 +168,83 @@
 
             </androidx.cardview.widget.CardView>
 
-            <LinearLayout
+            <!--Info-->
+            <androidx.cardview.widget.CardView
                 android:id="@+id/fldgrpls01a01"
-                style="@style/linerlayout_view_wt_bound"
-                android:visibility="gone"
-                tools:visibility="visible">
+                style="@style/cardView"
+                android:elevation="10dp"
+                android:layoutDirection="ltr"
+                android:visibility="gone">
 
-                <!--Info-->
-                <androidx.cardview.widget.CardView
-                    style="@style/cardView"
-                    android:elevation="10dp"
-                    android:layoutDirection="ltr"
-                    android:visibility='@{gca02a98.checked ? View.GONE : View.VISIBLE }'>
+                <LinearLayout style="@style/linerlayout_view_wt_bound">
 
-                    <LinearLayout style="@style/linerlayout_view_wt_bound">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--District-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="District"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ls01aDis"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="2"
+                            android:background="@color/dullWhileOverlay"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                        <!--Tehsil-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Tehsil"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ls01aTeh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="2"
+                            android:background="@color/dullWhileOverlay"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal">
 
-                            <!--District-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="4dp"
-                                android:layout_weight="1"
-                                android:background="@color/colorPrimary"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:text="District"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:id="@+id/ls01aDis"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:layout_marginBottom="4dp"
-                                android:layout_weight="2"
-                                android:background="@color/dullWhileOverlay"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="16sp" />
-
-                            <!--Tehsil-->
+                            <!--UC-->
                             <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
@@ -219,16 +253,41 @@
                                 android:layout_weight="1"
                                 android:background="@color/colorPrimary"
                                 android:gravity="center_horizontal|center_vertical"
-                                android:text="Tehsil"
+                                android:text="UC"
                                 android:textAppearance="?android:attr/textAppearanceLarge"
                                 android:textColor="@android:color/white" />
 
                             <TextView
-                                android:id="@+id/ls01aTeh"
+                                android:id="@+id/ls01aUC"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="2"
+                                android:background="@color/dullWhileOverlay"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
+                            <!--Village-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="Village"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:id="@+id/ls01aVil"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="13dp"
-                                android:layout_marginBottom="4dp"
+                                android:layout_marginBottom="8dp"
                                 android:layout_weight="2"
                                 android:background="@color/dullWhileOverlay"
                                 android:gravity="center_horizontal|center_vertical"
@@ -236,72 +295,17 @@
                                 android:textSize="16sp" />
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <!--UC-->
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp"
-                                    android:layout_marginBottom="8dp"
-                                    android:layout_weight="1"
-                                    android:background="@color/colorPrimary"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:text="UC"
-                                    android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:textColor="@android:color/white" />
-
-                                <TextView
-                                    android:id="@+id/ls01aUC"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp"
-                                    android:layout_marginBottom="4dp"
-                                    android:layout_weight="2"
-                                    android:background="@color/dullWhileOverlay"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="16sp" />
-
-                                <!--Village-->
-                                <TextView
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="16dp"
-                                    android:layout_marginBottom="8dp"
-                                    android:layout_weight="1"
-                                    android:background="@color/colorPrimary"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:text="Village"
-                                    android:textAppearance="?android:attr/textAppearanceLarge"
-                                    android:textColor="@android:color/white" />
-
-                                <TextView
-                                    android:id="@+id/ls01aVil"
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="13dp"
-                                    android:layout_marginBottom="8dp"
-                                    android:layout_weight="2"
-                                    android:background="@color/dullWhileOverlay"
-                                    android:gravity="center_horizontal|center_vertical"
-                                    android:textColor="@color/colorPrimaryDark"
-                                    android:textSize="16sp" />
-                            </LinearLayout>
-
-                        </LinearLayout>
-
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/fldgrpls01a05"
+                style="@style/linerlayout_view_wt_bound"
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <!--Radio Button gca05-->
                 <androidx.cardview.widget.CardView
@@ -426,9 +430,9 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_marginBottom="1dp"
-                            android:maxLength="4"
                             android:hint="@string/gca06"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="4" />
 
                     </LinearLayout>
 
@@ -464,9 +468,9 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_marginBottom="1dp"
-                            android:maxLength="4"
                             android:hint="@string/gca07"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="4" />
 
                     </LinearLayout>
 
@@ -501,9 +505,9 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:layout_marginBottom="1dp"
-                            android:maxLength="4"
                             android:hint="@string/gca08"
-                            android:inputType="number" />
+                            android:inputType="number"
+                            android:maxLength="4" />
 
                     </LinearLayout>
 
@@ -526,10 +530,10 @@
                     <Button
                         android:id="@+id/btn_End"
                         style="@style/button"
-                        android:visibility="gone"
                         android:layout_marginRight="10dp"
                         android:onClick="@{() -> callback.BtnEnd()}"
-                        android:text="@string/end_interview" />
+                        android:text="@string/end_interview"
+                        android:visibility="gone" />
 
                     <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
                 </LinearLayout>

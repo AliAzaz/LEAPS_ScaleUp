@@ -11,18 +11,18 @@ import java.lang.reflect.Method;
  * Created by openm on 19-Jul-18.
  */
 
-public class syncOperations extends AsyncTask<String, Void, Long> {
+public class SyncOperations extends AsyncTask<String, Void, Long> {
 
-    AppDatabase db;
+    private AppDatabase db;
 
-    public syncOperations(AppDatabase db) {
+    public SyncOperations(AppDatabase db) {
         this.db = db;
     }
 
     @Override
     protected Long doInBackground(String... fnNames) {
 
-        Long longID = new Long(0);
+        Long longID = 0L;
 
         try {
 
@@ -46,13 +46,7 @@ public class syncOperations extends AsyncTask<String, Void, Long> {
                 }
             }
 
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 

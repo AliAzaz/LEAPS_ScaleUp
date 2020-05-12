@@ -13,8 +13,8 @@ import java.lang.reflect.Method;
 
 public class crudOperations extends AsyncTask<String, Void, Long> {
 
-    AppDatabase db;
-    Object forms;
+    private AppDatabase db;
+    private Object forms;
 
     public crudOperations(AppDatabase db, Object forms) {
         this.db = db;
@@ -24,7 +24,7 @@ public class crudOperations extends AsyncTask<String, Void, Long> {
     @Override
     protected Long doInBackground(String... fnNames) {
 
-        Long longID = new Long(0);
+        Long longID = 0L;
 
         try {
 
@@ -48,13 +48,7 @@ public class crudOperations extends AsyncTask<String, Void, Long> {
                 }
             }
 
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 
