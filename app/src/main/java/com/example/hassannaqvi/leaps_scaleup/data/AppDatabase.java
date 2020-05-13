@@ -30,13 +30,27 @@ public abstract class AppDatabase extends RoomDatabase {
                     + Participant.SinglePart.COLUMN_STUDY_ID + " TEXT,"
                     + Participant.SinglePart.COLUMN_PART_NAME + " TEXT,"
                     + Participant.SinglePart.COLUMN_PART_TYPE + " TEXT, PRIMARY KEY(" + Participant.SinglePart._ID + ") );");
-            database.execSQL(
-                    //TODO: Waqar here your work
-                    "CREATE TABLE " + Sub_DBConnection.TABLE_FORMS_GPS + "("
-                            + Forms_GPS.Forms_GPS._ID + " INTEGER,"
-                            + Forms_GPS.SinglePart.COLUMN_UID + " TEXT,"
-                            + Forms_GPS.SinglePart.COLUMN_PART_NAME + " TEXT,"
-                            + Forms_GPS.SinglePart.COLUMN_PART_TYPE + " TEXT, PRIMARY KEY(" + Participant.SinglePart._ID + ") );");
+            database.execSQL("CREATE TABLE " + Sub_DBConnection.TABLE_FORMS_GPS + "(" +
+                    Forms_GPS.SinglePart.COLUMN_PROJECT_NAME + " TEXT," +
+                    Forms_GPS.SinglePart._ID + " INTEGER," +
+                    Forms_GPS.SinglePart.COLUMN_FORMTYPE + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_FORMDATE + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_UID + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_USER + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_STUDYID + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_CLUSTERCODE + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_ENDINGDATETIME + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_GPSLAT + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_GPSLNG + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_GPSDATE + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_GPSACC + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_DEVICEID + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_GPSELEV + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_DEVICE_TAGID + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_APPVERSION + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_ROUND + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_SA1 + " TEXT, PRIMARY KEY(" + Forms_GPS.SinglePart._ID + ") );"
+            );
 
         }
     };

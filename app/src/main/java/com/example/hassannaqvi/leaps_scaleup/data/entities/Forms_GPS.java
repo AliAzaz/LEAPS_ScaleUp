@@ -1,5 +1,7 @@
 package com.example.hassannaqvi.leaps_scaleup.data.entities;
 
+import android.provider.BaseColumns;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -79,30 +81,28 @@ public class Forms_GPS implements Serializable {
 
         JSONObject json = new JSONObject();
 
-        json.put("projectName", this._projectName);
-        json.put("_id", this.id == 0 ? JSONObject.NULL : this.id);
-        json.put("formType", this.formType == null ? JSONObject.NULL : this.formType);
-        json.put("formDate", this.formDate == null ? JSONObject.NULL : this.formDate);
-        json.put("uid", this.uid == null ? JSONObject.NULL : this.uid);
-        json.put("username", this.username == null ? JSONObject.NULL : this.username);
-        json.put("studyID", this.studyID == null ? JSONObject.NULL : this.studyID);
-        json.put("clustercode", this.clustercode == null ? JSONObject.NULL : this.clustercode);
-        json.put("endtime", this.endtime == null ? JSONObject.NULL : this.endtime);
-        json.put("gpsLat", this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
-        json.put("gpsLng", this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
-        json.put("gpsDT", this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
-        json.put("gpsAcc", this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
-        json.put("deviceID", this.deviceID == null ? JSONObject.NULL : this.deviceID);
-        json.put("gpsElev", this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
-        json.put("devicetagID", this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
+        json.put(SinglePart.COLUMN_PROJECT_NAME, this._projectName);
+        json.put(SinglePart._ID, this.id == 0 ? JSONObject.NULL : this.id);
+        json.put(SinglePart.COLUMN_FORMTYPE, this.formType == null ? JSONObject.NULL : this.formType);
+        json.put(SinglePart.COLUMN_FORMDATE, this.formDate == null ? JSONObject.NULL : this.formDate);
+        json.put(SinglePart.COLUMN_UID, this.uid == null ? JSONObject.NULL : this.uid);
+        json.put(SinglePart.COLUMN_USER, this.username == null ? JSONObject.NULL : this.username);
+        json.put(SinglePart.COLUMN_STUDYID, this.studyID == null ? JSONObject.NULL : this.studyID);
+        json.put(SinglePart.COLUMN_CLUSTERCODE, this.clustercode == null ? JSONObject.NULL : this.clustercode);
+        json.put(SinglePart.COLUMN_ENDINGDATETIME, this.endtime == null ? JSONObject.NULL : this.endtime);
+        json.put(SinglePart.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
+        json.put(SinglePart.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
+        json.put(SinglePart.COLUMN_GPSDATE, this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
+        json.put(SinglePart.COLUMN_GPSACC, this.gpsAcc == null ? JSONObject.NULL : this.gpsAcc);
+        json.put(SinglePart.COLUMN_DEVICEID, this.deviceID == null ? JSONObject.NULL : this.deviceID);
+        json.put(SinglePart.COLUMN_GPSELEV, this.gpsElev == null ? JSONObject.NULL : this.gpsElev);
+        json.put(SinglePart.COLUMN_DEVICE_TAGID, this.devicetagID == null ? JSONObject.NULL : this.devicetagID);
         /*json.put("synced", this.synced == null ? JSONObject.NULL : this.synced);
         json.put("synced_date", this.synced_date == null ? JSONObject.NULL : this.synced_date);*/
-        json.put("appversion", this.appversion == null ? JSONObject.NULL : this.appversion);
-
-        json.put("round", this.round == null ? JSONObject.NULL : this.round);
-
+        json.put(SinglePart.COLUMN_APPVERSION, this.appversion == null ? JSONObject.NULL : this.appversion);
+        json.put(SinglePart.COLUMN_ROUND, this.round == null ? JSONObject.NULL : this.round);
         if (!this.sa1.equals("")) {
-            json.put("sa1", this.sa1.equals("") ? JSONObject.NULL : new JSONObject(this.sa1));
+            json.put(SinglePart.COLUMN_SA1, new JSONObject(this.sa1));
         }
 
 
@@ -283,6 +283,28 @@ public class Forms_GPS implements Serializable {
 
     public void setRound(String round) {
         this.round = round;
+    }
+
+
+    public static final class SinglePart implements BaseColumns {
+        public static final String COLUMN_PROJECT_NAME = "projectName";
+        public static final String COLUMN_UID = "uid";
+        public static final String COLUMN_FORMDATE = "formDate";
+        public static final String COLUMN_FORMTYPE = "formType";
+        public static final String COLUMN_USER = "username";
+        public static final String COLUMN_STUDYID = "studyID";
+        public static final String COLUMN_CLUSTERCODE = "clustercode";
+        public static final String COLUMN_ENDINGDATETIME = "endtime";
+        public static final String COLUMN_GPSLAT = "gpsLat";
+        public static final String COLUMN_GPSLNG = "gpsLng";
+        public static final String COLUMN_GPSDATE = "gpsDT";
+        public static final String COLUMN_GPSACC = "gpsAcc";
+        public static final String COLUMN_GPSELEV = "gpsElev";
+        public static final String COLUMN_DEVICEID = "deviceID";
+        public static final String COLUMN_DEVICE_TAGID = "devicetagID";
+        public static final String COLUMN_APPVERSION = "appversion";
+        public static final String COLUMN_ROUND = "round";
+        public static final String COLUMN_SA1 = "sa1";
     }
 
 }

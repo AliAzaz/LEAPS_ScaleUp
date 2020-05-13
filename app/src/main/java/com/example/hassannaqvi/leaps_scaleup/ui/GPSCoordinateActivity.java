@@ -241,8 +241,8 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         fc_gps.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();
-        f01.put("ls01a05", cluster_name[3]); //VILLAGE
-        f01.put("ls01a06", cluster_name[0]); //DISTRICT
+        /*f01.put("ls01a05", cluster_name[3]); //VILLAGE
+        f01.put("ls01a06", cluster_name[0]); //DISTRICT*/
 
         f01.put("gca02a", bi.gca02a.getText().toString());
         f01.put("gca02a98", bi.gca02a98.isChecked() ? "98" : "0");
