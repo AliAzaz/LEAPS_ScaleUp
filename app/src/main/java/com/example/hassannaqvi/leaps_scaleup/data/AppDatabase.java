@@ -32,8 +32,12 @@ public abstract class AppDatabase extends RoomDatabase {
                     + Participant.SinglePart.COLUMN_PART_TYPE + " TEXT, PRIMARY KEY(" + Participant.SinglePart._ID + ") );");
             database.execSQL(
                     //TODO: Waqar here your work
-                    ""
-            );
+                    "CREATE TABLE " + Sub_DBConnection.TABLE_FORMS_GPS + "("
+                            + Forms_GPS.Forms_GPS._ID + " INTEGER,"
+                            + Forms_GPS.SinglePart.COLUMN_UID + " TEXT,"
+                            + Forms_GPS.SinglePart.COLUMN_PART_NAME + " TEXT,"
+                            + Forms_GPS.SinglePart.COLUMN_PART_TYPE + " TEXT, PRIMARY KEY(" + Participant.SinglePart._ID + ") );");
+
         }
     };
 
