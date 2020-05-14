@@ -71,15 +71,15 @@
     <string name="ls01a07a"> بيس لائين </string>
     <string name="ls01a0701"> 	اسڪول ڪوهارٽ بيس لائين </string>
     <string name="ls01a0702"> 		اسڪول ڪوهارٽ اينڊ لائين</string>
-    <string name="ls01a07b"> اسٽيپ 1 </string>
-    <string name="ls01a07c"> اسٽيپ 2 </string>
-    <string name="ls01a07d"> اسٽيپ 3 </string>
+    <string name="ls01a07b"> رائونڊ 1 </string>
+    <string name="ls01a07c"> رائونڊ 2 </string>
+    <string name="ls01a07d"> رائونڊ 3 </string>
     <string name="ls01a08"> چا ٻار جواڳ  ۾ ٽيسٽ  ٿيو آهي؟ </string>
     <string name="ls01a09"> جيڪڏهن ٻار پهريان اسيس ٿيو آهي ته ڪهڙي رائونڊ ۾؟ </string>
     <string name="ls01a09a"> بيس لائين </string>
-    <string name="ls01a09b"> اسٽيپ 1 </string>
-    <string name="ls01a09c"> اسٽيپ 2 </string>
-    <string name="ls01a09d"> اسٽيپ 3 </string>
+    <string name="ls01a09b"> رائونڊ 1 </string>
+    <string name="ls01a09c"> رائونڊ 2 </string>
+    <string name="ls01a09d">رائونڊ 3</string>
     <string name="ls01a09d01"> 	اسڪول ڪوهورٽ</string>
     <string name="ls01a10"> پراجيڪٽ ۾ انرولمينٽ جي تاريخ </string>
     <string name="ls01a11"> انٽرويو ڏيندڙ جو نالو ۽ ذات </string>
@@ -486,16 +486,16 @@
     <string name="lsid13"> جيڪڏهن ٻار پهريان اسيس ٿيو آهي ته ڪهڙي رائونڊ ۾؟</string>
     <string name="lsid14"> جائزي ۾ داخلا جي تاريخ</string>
     <string name="lsid10a"> بيس لائين </string>
-    <string name="lsid10b"> اسٽيپ 1 </string>
-    <string name="lsid10c"> اسٽيپ 2 </string>
-    <string name="lsid10d"> اسٽيپ 3 </string>
+    <string name="lsid10b"> رائونڊ 1 </string>
+    <string name="lsid10c"> رائونڊ 2 </string>
+    <string name="lsid10d"> رائونڊ 3 </string>
     <string name="lsid10e">	 (جيڪڏهن اسڪول ڪوهارٽ آهي)  NA</string>
     <string name="lsid11a"> پاپوليشن سروي </string>
     <string name="lsid11b"> اسڪول ڪوهارٽ </string>
     <string name="lsid13a"> بيس لائين </string>
-    <string name="lsid13b"> اسٽيپ 1 </string>
-    <string name="lsid13c"> اسٽيپ 2 </string>
-    <string name="lsid13d"> اسٽيپ 3 </string>
+    <string name="lsid13b"> رائونڊ 1 </string>
+    <string name="lsid13c"> رائونڊ 2 </string>
+    <string name="lsid13d"> رائونڊ 3 </string>
 
     <!--Form 5 (B)-->
     <string name="ls05b01ha">1. PERSONAL AWARENESS (SOCIO – EMOTIONAL) </string>
@@ -1341,9 +1341,9 @@
     <string name="lsyid04c"> گروپ نه ڏنو آهي </string>
     <string name="lsyid05">فيميل يوٿ جي ٽيسٽ ڪهڙي رائونڊ ۾  ٿي؟</string>
     <string name="lsyid05a"> بيس لائين </string>
-    <string name="lsyid05b"> اسٽيپ 1 </string>
-    <string name="lsyid05c"> اسٽيپ 2 </string>
-    <string name="lsyid05d"> اسٽيپ 3 </string>
+    <string name="lsyid05b"> فالواپ 1 </string>
+    <string name="lsyid05c"> فالواپ 2 </string>
+    <string name="lsyid05d"> فالواپ 3 </string>
 
 
     <!--GPS Coordinations form-->
