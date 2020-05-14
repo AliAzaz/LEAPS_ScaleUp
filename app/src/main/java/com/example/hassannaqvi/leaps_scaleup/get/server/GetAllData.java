@@ -95,8 +95,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "Clusters":
                             GetSyncFncs.syncClusters(jsonArray);
                             break;
-                        case "YouthParticipants":
-                        case "SchoolParticipants":
                         case "AllParticipants":
                             GetSyncFncs.syncParticipants(jsonArray);
                             break;
@@ -105,20 +103,12 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     pd.setMessage("Received: " + jsonArray.length());
                     pd.show();
 
-                    if (syncClass.equals("YouthParticipants")) {
-                        delegate.schoolParticipantFlag(true);
-                    }
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             } else {
                 pd.setMessage("Received: " + result.length() + "");
                 pd.show();
-
-                if (syncClass.equals("YouthParticipants")) {
-                    delegate.schoolParticipantFlag(true);
-                }
             }
         } else {
             pd.setTitle("Connection Error");
