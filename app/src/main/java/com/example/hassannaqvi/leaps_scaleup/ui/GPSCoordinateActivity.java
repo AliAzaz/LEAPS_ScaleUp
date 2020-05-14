@@ -47,6 +47,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
     ActivityGpsCoordinateBinding bi;
     String getFtype = "", deviceID;
     String[] cluster_name;
+    boolean gpsFlag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,6 +170,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         if (formValidation()) {
             try {
                 SaveDraft();
+                if (!gpsFlag) return;
                 if (UpdateDB()) {
                     finish();
                     startActivity(new Intent(this, MainActivity.class));
@@ -283,12 +285,16 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         try {
             Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecord").execute(bi.gca06.getText().toString(), selectedID).get();
-            return childData != null;
+            if (childData == null) {
+                Toast.makeText(this, "StudyID not exist!!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
 
         } catch (Exception ignore) {
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     public void setGPS(Forms_GPS fc) {
@@ -301,8 +307,10 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
             if (lat.equals("0") && lang.equals("0")) {
                 Toast.makeText(this, "Could not obtained GPS points", Toast.LENGTH_SHORT).show();
+                gpsFlag = false;
             } else {
                 Toast.makeText(this, "GPS set", Toast.LENGTH_SHORT).show();
+                gpsFlag = true;
             }
 
             String date = DateFormat.format("dd-MM-yyyy HH:mm", Long.parseLong(GPSPref.getString("Time", "0"))).toString();

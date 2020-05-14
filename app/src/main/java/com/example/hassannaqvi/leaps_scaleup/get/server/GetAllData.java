@@ -98,7 +98,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "YouthParticipants":
                         case "SchoolParticipants":
                         case "AllParticipants":
-                            GetSyncFncs.syncParticipants(jsonArray, syncClass.equals("AllParticipants"));
+                            GetSyncFncs.syncParticipants(jsonArray);
                             break;
                     }
 

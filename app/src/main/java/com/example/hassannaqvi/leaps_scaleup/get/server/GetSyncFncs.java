@@ -52,10 +52,9 @@ public abstract class GetSyncFncs {
         }
     }
 
-    static void syncParticipants(JSONArray participantList, Boolean syncClassFlag) {
+    static void syncParticipants(JSONArray participantList) {
 
-        if (syncClassFlag)
-            new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteParticipants");
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteParticipants");
 
         try {
             for (int i = 0; i < participantList.length(); i++) {

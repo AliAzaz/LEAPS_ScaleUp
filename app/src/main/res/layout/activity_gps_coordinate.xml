@@ -435,7 +435,7 @@
                             android:layout_marginBottom="1dp"
                             android:hint="@string/gca06"
                             android:inputType="number"
-                            android:maxLength="4"
+                            android:maxLength="5"
                             android:text='@{gca05d.checked || gca05e.checked || gca05g.checked ? "" : gca06.getText().toString()}' />
 
                     </LinearLayout>
