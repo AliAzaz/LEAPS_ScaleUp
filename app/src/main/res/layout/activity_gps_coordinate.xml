@@ -84,7 +84,8 @@
             <LinearLayout
                 android:id="@+id/fldgrpls01a02"
                 style="@style/linerlayout_view_wt_bound"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <!--EditText gca02b-->
                 <androidx.cardview.widget.CardView
@@ -174,7 +175,8 @@
                 style="@style/cardView"
                 android:elevation="10dp"
                 android:layoutDirection="ltr"
-                android:visibility="gone">
+                android:visibility="gone"
+                tools:visibility="visible">
 
                 <LinearLayout style="@style/linerlayout_view_wt_bound">
 

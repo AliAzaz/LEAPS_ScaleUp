@@ -241,8 +241,10 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         fc_gps.setRound(String.valueOf(MainApp.round));
 
         JSONObject f01 = new JSONObject();
-        /*f01.put("ls01a05", cluster_name[3]); //VILLAGE
-        f01.put("ls01a06", cluster_name[0]); //DISTRICT*/
+        if (!bi.gca02a98.isChecked()) {
+            f01.put("ls01a05", cluster_name[3]); //VILLAGE
+            f01.put("ls01a06", cluster_name[0]); //DISTRICT
+        }
 
         f01.put("gca02a", bi.gca02a.getText().toString());
         f01.put("gca02a98", bi.gca02a98.isChecked() ? "98" : "0");
@@ -254,10 +256,10 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         f01.put("gca05", bi.gca05a.isChecked() ? "1"
                 : bi.gca05b.isChecked() ? "2"
                 : bi.gca05c.isChecked() ? "3"
-                : bi.gca05d.isChecked() ? "2"
-                : bi.gca05e.isChecked() ? "3"
-                : bi.gca05f.isChecked() ? "2"
-                : bi.gca05g.isChecked() ? "3"
+                : bi.gca05d.isChecked() ? "4"
+                : bi.gca05e.isChecked() ? "5"
+                : bi.gca05f.isChecked() ? "6"
+                : bi.gca05g.isChecked() ? "7"
                 : "0");
 
         fc_gps.setStudyID(bi.gca06.getText().toString());
@@ -270,7 +272,23 @@ public class GPSCoordinateActivity extends AppCompatActivity {
     }
 
     public boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpGPSCoord01);
+        if (!Validator.emptyCheckingContainer(this, bi.fldGrpGPSCoord01))
+            return false;
+
+        if (bi.gca05d.isChecked() || bi.gca05e.isChecked() || bi.gca05g.isChecked()) return true;
+
+        String selectedID = bi.gca05a.isChecked() ? "1"
+                : bi.gca05b.isChecked() ? "2"
+                : bi.gca05c.isChecked() ? "2" : "3";
+
+        try {
+            Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecord").execute(bi.gca06.getText().toString(), selectedID).get();
+            return childData != null;
+
+        } catch (Exception ignore) {
+        }
+
+        return false;
     }
 
     public void setGPS(Forms_GPS fc) {

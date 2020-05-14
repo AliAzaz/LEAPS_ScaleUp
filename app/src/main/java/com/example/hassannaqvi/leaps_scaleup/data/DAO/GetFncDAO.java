@@ -8,6 +8,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
 
 import java.util.List;
@@ -71,5 +72,8 @@ public interface GetFncDAO {
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where studyID=:study_id and formType='7' and istatus = '1' order by id DESC")
     Forms getYouthRecord(String study_id);
+
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_PARTICIPANT + " where studyID=:study_id and partType=:partType order by studyID DESC")
+    Participant getParticipantRecord(String study_id, String partType);
 
 }
