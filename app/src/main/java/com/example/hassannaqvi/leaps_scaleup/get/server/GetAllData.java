@@ -29,7 +29,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
         mContext = context;
         this.syncClass = syncClass;
         this.URL = url;
-
         TAG = "Get" + syncClass;
     }
 

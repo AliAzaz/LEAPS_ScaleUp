@@ -372,7 +372,7 @@
                                     android:id="@+id/lsid13d"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/ls01a09d01" />
+                                    android:text="@string/lsid13d" />
                             </RadioGroup>
 
                         </LinearLayout>

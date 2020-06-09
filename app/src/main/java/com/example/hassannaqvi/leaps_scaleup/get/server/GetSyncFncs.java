@@ -11,7 +11,7 @@ import org.json.JSONObject;
 
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
-public abstract class GetSyncFncs {
+abstract class GetSyncFncs {
 
     public static void syncUsers(JSONArray userlist) {
 
@@ -25,7 +25,7 @@ public abstract class GetSyncFncs {
                 String password = jsonObjectUser.getString("password");
 
                 Users users = new Users(userName, password);
-                new crudOperations(db, users).execute(FormsDAO.class.getName(), "formsDao", "insertUsers").get();
+                new CrudOperations(db, users).execute(FormsDAO.class.getName(), "formsDao", "insertUsers").get();
             }
             db.close();
 
@@ -45,7 +45,7 @@ public abstract class GetSyncFncs {
                 Clusters clusters = new Clusters();
                 clusters.Sync(jsonObjectUser);
 
-                new crudOperations(db, clusters).execute(FormsDAO.class.getName(), "formsDao", "insertClusters").get();
+                new CrudOperations(db, clusters).execute(FormsDAO.class.getName(), "formsDao", "insertClusters").get();
             }
             db.close();
 

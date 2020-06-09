@@ -63,7 +63,7 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where studyID=:study_id and pdeviation = '1' and  formType != '14' order by id DESC")
     Forms getParticipantRecordForm7(String study_id); //youth
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05 + " where participantID=:part_id and pdeviation = '1' and istatus = '1' and formType != '14' order by id DESC")
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_04_05 + " where participantID=:part_id and pdeviation = '1'  and formType != '14' order by id DESC")
     Forms_04_05 getParticipantRecord(String part_id);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " where studyID=:study_id and formType='7' and istatus = '1' order by id DESC")
