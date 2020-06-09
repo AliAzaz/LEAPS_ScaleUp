@@ -190,7 +190,7 @@ public class Form02HHPart_3 extends AppCompatActivity {
                 : bi.ls02ee09h.isChecked() ? "8"
                 : bi.ls02ee09i.isChecked() ? "9"
                 : bi.ls02ee09j.isChecked() ? "10"
-                : bi.ls02ee09j.isChecked() ? "11"
+                : bi.ls02ee09j.isChecked() ? "11" // for J the value is 11 as always
                 : bi.ls02ee09k.isChecked() ? "12"
                 : bi.ls02ee09l.isChecked() ? "13"
                 : bi.ls02ee09m.isChecked() ? "14"

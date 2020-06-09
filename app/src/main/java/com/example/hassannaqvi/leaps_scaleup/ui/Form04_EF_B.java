@@ -70,9 +70,7 @@ public class Form04_EF_B extends AppCompatActivity {
             Long longID = new CrudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -158,9 +156,7 @@ public class Form04_EF_B extends AppCompatActivity {
         String btnPressed = b.getText().toString();
         try {
             setVariable(qID, settingAnswers(tv, btnPressed, getVariable(qID), getStringbyIdName(this, qID + "pattern")));
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
         int sumofC = ls04bc01 + ls04bc02 + ls04bc03 + ls04bc04 + ls04bc05 + ls04bc06;

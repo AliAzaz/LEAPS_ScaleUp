@@ -150,9 +150,7 @@ public class Form04_EF_A extends AppCompatActivity implements RadioGroup.OnCheck
         try {
             Long longID = new CrudOperations(db, InfoActivity.fc_4_5).execute(FormsDAO.class.getName(), "formsDao", "updateForm_04_05").get();
             return longID == 1;
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 

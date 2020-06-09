@@ -53,14 +53,16 @@ dependencies {
     implementation "com.google.android.gms:play-services-location:17.0.0"
     implementation "im.dino:dbinspector:3.4.1@aar"
 
-    implementation 'androidx.room:room-runtime:2.2.3'
-    annotationProcessor 'androidx.room:room-compiler:2.2.3'
+    implementation 'androidx.room:room-runtime:2.2.5'
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
 
     implementation 'com.github.Shashank02051997:FancyToast-Android:0.1.6'
 
     implementation 'androidx.cardview:cardview:1.0.0'
 
-    implementation 'com.github.AliAzaz:TextPicker-Library:1.0.4'
+    //Ali mask
+    implementation 'com.github.AliAzaz:Edittext-Library:2.0.0'
+    implementation 'com.github.AliAzaz:AndroidValidatorCrawler:1.0.2'
 
     implementation 'com.google.code.gson:gson:2.8.6'
 
