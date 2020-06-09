@@ -10,6 +10,7 @@ import org.json.JSONException;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -18,12 +19,11 @@ import java.net.URL;
 
 public class GetAllData extends AsyncTask<String, String, String> {
 
-    HttpURLConnection urlConnection;
+    private HttpURLConnection urlConnection;
     private String TAG = "";
     private Context mContext;
     private ProgressDialog pd;
     private String syncClass, URL;
-
 
     public GetAllData(Context context, String syncClass, String url) {
         mContext = context;
@@ -65,9 +65,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     result.append(line);
                 }
             }
-        } catch (java.net.SocketTimeoutException e) {
-            return null;
-        } catch (java.io.IOException e) {
+        } catch (IOException e) {
             return null;
         } finally {
             urlConnection.disconnect();
@@ -82,10 +80,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
         //Do something with the JSON string
         if (result != null) {
-            String json = result;
-            if (json.length() > 0) {
+            if (result.length() > 0) {
                 try {
-                    JSONArray jsonArray = new JSONArray(json);
+                    JSONArray jsonArray = new JSONArray(result);
 
                     switch (syncClass) {
                         case "User":
@@ -98,11 +95,12 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
                     pd.setMessage("Received: " + jsonArray.length());
                     pd.show();
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             } else {
-                pd.setMessage("Received: " + json.length() + "");
+                pd.setMessage("Received: " + result.length() + "");
                 pd.show();
             }
         } else {
@@ -111,5 +109,4 @@ public class GetAllData extends AsyncTask<String, String, String> {
             pd.show();
         }
     }
-
 }

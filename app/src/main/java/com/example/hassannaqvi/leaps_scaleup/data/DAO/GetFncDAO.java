@@ -7,6 +7,8 @@ import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
 
 import java.util.List;
@@ -38,9 +40,11 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
 
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_GPS + " WHERE synced = ''")
+    List<Forms_GPS> getUnSyncedForms_GPS();
+
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS)
     List<Forms> getForms();
-
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = '' AND formType = :formType")
     List<Forms> getUnSyncedForms(String formType);
