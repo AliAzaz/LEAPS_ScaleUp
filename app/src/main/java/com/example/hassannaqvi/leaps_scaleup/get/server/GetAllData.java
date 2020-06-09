@@ -91,6 +91,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "Clusters":
                             GetSyncFncs.syncClusters(jsonArray);
                             break;
+                        case "AllParticipants":
+                            GetSyncFncs.syncParticipants(jsonArray);
+                            break;
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());

@@ -48,7 +48,25 @@ abstract class GetSyncFncs {
             }
             db.close();
 
-        } catch (Exception e) {
+        } catch (Exception ignored) {
+        }
+    }
+
+    static void syncParticipants(JSONArray participantList) {
+
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteParticipants");
+
+        try {
+            for (int i = 0; i < participantList.length(); i++) {
+                JSONObject jsonObjectUser = participantList.getJSONObject(i);
+
+                Participant participant = new Participant();
+                participant.Sync(jsonObjectUser);
+
+                new CrudOperations(db, participant).execute(FormsDAO.class.getName(), "formsDao", "insertParticipants");
+            }
+            db.close();
+        } catch (Exception ignored) {
         }
     }
 
