@@ -31,6 +31,7 @@ import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityMainBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetAllDBData;
 import com.example.hassannaqvi.leaps_scaleup.sync.SyncAllData;
@@ -562,6 +563,21 @@ public class MainActivity extends Activity {
                             "updateSyncedForms",
                             Forms.class,
                             MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM14 + ".php")), collection14
+                    ).execute();
+
+//                Upload Form 10
+                    Collection collection10 = null;
+                    try {
+                        collection10 = new GetAllDBData(db, GetFncDAO.class.getName(), "getFncDao", "getUnSyncedForms_GPS").execute(MainApp.FORM10).get();
+                    } catch (ExecutionException | InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    new SyncAllData(
+                            MainActivity.this,
+                            "Forms10",
+                            "getUnSyncedForms_GPS",
+                            Forms_GPS.class,
+                            MainApp.buildUrl(CONSTANTS.URL_FORMS.replace(".php", MainApp.FORM10 + ".php")), collection10
                     ).execute();
 
                 } catch (final Exception e) {
