@@ -15,6 +15,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityForm02Hhpart1Binding;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.validatorcrawler.aliazaz.Clear;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -107,6 +108,17 @@ public class Form02HHPart_1 extends AppCompatActivity {
             }
         });
 
+        RadioGroup[] radio = new RadioGroup[]{bi.ls02pe03a, bi.ls02pe03b};
+        for (RadioGroup radioItems : radio) {
+            radioItems.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    if (bi.ls02pe03a02.isChecked() && bi.ls02pe03b02.isChecked()) {
+                        Clear.clearAllFields(bi.fldGrpForm0219);
+                    }
+                }
+            });
+        }
 
     }
 
