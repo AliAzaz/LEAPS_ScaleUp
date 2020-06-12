@@ -40,8 +40,8 @@ public interface GetFncDAO {
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS + " WHERE synced = ''")
     List<Forms> getUnSyncedForms();
 
-    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_GPS + " WHERE synced = ''")
-    List<Forms_GPS> getUnSyncedForms_GPS();
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS_GPS + " WHERE synced = '' AND formType = :formType")
+    List<Forms_GPS> getUnSyncedForms_GPS(String formType);
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FORMS)
     List<Forms> getForms();

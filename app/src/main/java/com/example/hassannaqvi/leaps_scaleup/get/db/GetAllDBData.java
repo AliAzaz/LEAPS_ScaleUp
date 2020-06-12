@@ -59,7 +59,7 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
                                 break;
                             }*/
 
-                            Class<?> params[] = new Class[fnNames.length];
+                            Class<?>[] params = new Class[fnNames.length];
                             for (int i = 0; i < fnNames.length; i++) {
                                 if (fnNames[i] instanceof Integer) {
                                     params[i] = Integer.TYPE;
@@ -79,13 +79,7 @@ public class GetAllDBData extends AsyncTask<Object, Void, Collection<?>> {
                     break;
                 }
             }
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (NoSuchMethodException e) {
+        } catch (IllegalAccessException | InvocationTargetException | ClassNotFoundException | NoSuchMethodException e) {
             e.printStackTrace();
         }
 
