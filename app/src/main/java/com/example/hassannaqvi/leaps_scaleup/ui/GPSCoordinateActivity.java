@@ -169,7 +169,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                 if (!gpsFlag) return;
                 if (UpdateDB()) {
                     finish();
-                    startActivity(new Intent(this, MainActivity.class));
+                    startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true).putExtra("fc_data", fc_gps));
                 } else {
                     Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
                 }
@@ -211,7 +211,10 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         try {
             SaveDraft();
             if (UpdateDB()) {
-                MainApp.endActivity(this, this, EndingActivity.class, false, fc_gps);
+                Intent end_intent = new Intent(this, EndingActivity.class);
+                end_intent.putExtra("complete", false);
+                end_intent.putExtra("fc_data", fc_gps);
+                startActivity(end_intent);
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }

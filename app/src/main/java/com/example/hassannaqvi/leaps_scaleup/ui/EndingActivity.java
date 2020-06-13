@@ -16,7 +16,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityEndingBinding;
-import com.validatorcrawler.aliazaz.Validator;
+import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -66,6 +66,7 @@ public class EndingActivity extends AppCompatActivity {
         else if (flag == 2)
             fc04_05 = (Forms_04_05) getIntent().getSerializableExtra("fc_data");
         else {
+            fc_gps = (Forms_GPS) getIntent().getSerializableExtra("fc_data");
             bi.protocol.setVisibility(View.GONE);
             istatus88x_flag = true;
         }
@@ -84,7 +85,7 @@ public class EndingActivity extends AppCompatActivity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -120,7 +121,11 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.fldGrpEnd);
+        if (flag == 1 || flag == 2)
+            if (!validatorClass.EmptyRadioButton(this, bi.pdeviation, bi.pdeviationc, getString(R.string.pdeviation))) {
+                return false;
+            }
+        return validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusb, getString(R.string.istatus));
     }
 
     @Override
