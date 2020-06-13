@@ -2,6 +2,8 @@ package com.example.hassannaqvi.leaps_scaleup.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +14,9 @@ import com.example.hassannaqvi.leaps_scaleup.RMOperations.CrudOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityEndingBinding;
-import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
+import com.validatorcrawler.aliazaz.Validator;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -30,7 +33,9 @@ public class EndingActivity extends AppCompatActivity {
     ActivityEndingBinding bi;
     Forms_04_05 fc04_05;
     Forms fc_;
-    boolean flag;
+    Forms_GPS fc_gps;
+    int flag;
+    boolean istatus88x_flag = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +46,7 @@ public class EndingActivity extends AppCompatActivity {
 
         this.setTitle("End Interview");
 
-        Boolean check = getIntent().getExtras().getBoolean("complete");
+        boolean check = getIntent().getBooleanExtra("complete", false);
 
         if (check) {
             bi.istatusa.setEnabled(true);
@@ -55,11 +60,23 @@ public class EndingActivity extends AppCompatActivity {
             bi.istatusd.setEnabled(true);
         }
 
-        flag = getIntent().getBooleanExtra("typeFlag", false);
-        if (flag)
+        flag = getIntent().getIntExtra("typeFlag", 0);
+        if (flag == 1)
             fc_ = (Forms) getIntent().getSerializableExtra("fc_data");
-        else
+        else if (flag == 2)
             fc04_05 = (Forms_04_05) getIntent().getSerializableExtra("fc_data");
+        else {
+            bi.protocol.setVisibility(View.GONE);
+            istatus88x_flag = true;
+        }
+
+        bi.istatus.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                bi.istatus88x.setVisibility(checkedId == bi.istatusc.getId() && istatus88x_flag ? View.VISIBLE : View.GONE);
+            }
+        });
+
 
     }
 
@@ -67,7 +84,7 @@ public class EndingActivity extends AppCompatActivity {
         if (formValidation()) {
             SaveDraft();
             if (UpdateDB()) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
@@ -75,26 +92,27 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() {
-        if (flag) {
+        if (flag == 1) {
             fc_.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
             fc_.setEndtime(dtToday);
             fc_.setPdeviation(bi.pdeviationa.isChecked() ? "1" : bi.pdeviationb.isChecked() ? "2" : bi.pdeviationc.isChecked() ? "3" : "0");
-
-        } else {
+        } else if (flag == 2) {
             fc04_05.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
             fc04_05.setEndtime(dtToday);
             fc04_05.setPdeviation(bi.pdeviationa.isChecked() ? "1" : bi.pdeviationb.isChecked() ? "2" : bi.pdeviationc.isChecked() ? "3" : "0");
+        } else {
+            fc_gps.setIstatus(bi.istatusa.isChecked() ? "1" : bi.istatusb.isChecked() ? "2" : bi.istatusc.isChecked() ? "3" : bi.istatusd.isChecked() ? "4" : "0");
+            fc_gps.setEndtime(dtToday);
+            fc_gps.setIstatus88x(bi.istatus88x.getText().toString());
         }
     }
 
     public boolean UpdateDB() {
         try {
-            Long longID = new CrudOperations(db, flag ? fc_ : fc04_05).execute(FormsDAO.class.getName(), "formsDao", flag ? "updateForm" : "updateForm_04_05").get();
+            Long longID = new CrudOperations(db, flag == 1 ? fc_ : flag == 2 ? fc04_05 : fc_gps).execute(FormsDAO.class.getName(), "formsDao", flag == 1 ? "updateForm" : flag == 2 ? "updateForm_04_05" : "updateForm_GPS").get();
             return longID == 1;
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -102,15 +120,12 @@ public class EndingActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        if (!validatorClass.EmptyRadioButton(this, bi.pdeviation, bi.pdeviationc, getString(R.string.pdeviation))) {
-            return false;
-        }
-        return validatorClass.EmptyRadioButton(this, bi.istatus, bi.istatusb, getString(R.string.istatus));
+        return Validator.emptyCheckingContainer(this, bi.fldGrpEnd);
     }
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "You Can't go back", Toast.LENGTH_LONG).show();
     }
 
 }

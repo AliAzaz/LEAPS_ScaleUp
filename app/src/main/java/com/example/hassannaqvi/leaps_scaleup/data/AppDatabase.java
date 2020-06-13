@@ -40,6 +40,8 @@ public abstract class AppDatabase extends RoomDatabase {
                     Forms_GPS.SinglePart.COLUMN_STUDYID + " TEXT," +
                     Forms_GPS.SinglePart.COLUMN_CLUSTERCODE + " TEXT," +
                     Forms_GPS.SinglePart.COLUMN_ENDINGDATETIME + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_ISTATUS + " TEXT," +
+                    Forms_GPS.SinglePart.COLUMN_ISTATUS88X + " TEXT," +
                     Forms_GPS.SinglePart.COLUMN_GPSLAT + " TEXT," +
                     Forms_GPS.SinglePart.COLUMN_GPSLNG + " TEXT," +
                     Forms_GPS.SinglePart.COLUMN_GPSDATE + " TEXT," +

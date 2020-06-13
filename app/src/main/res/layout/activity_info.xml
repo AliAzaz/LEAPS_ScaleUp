@@ -373,6 +373,12 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/lsid13d" />
+
+                                <RadioButton
+                                    android:id="@+id/lsid13e"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lsid13e" />
                             </RadioGroup>
 
                         </LinearLayout>

@@ -281,6 +281,7 @@ public class InfoActivity extends AppCompatActivity {
                     : bi.lsid13b.isChecked() ? "2"
                     : bi.lsid13c.isChecked() ? "3"
                     : bi.lsid13d.isChecked() ? "4"
+                    : bi.lsid13e.isChecked() ? "5"
                     : "0");
 
         } catch (JSONException e) {

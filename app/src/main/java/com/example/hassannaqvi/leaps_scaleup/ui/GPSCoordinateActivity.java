@@ -185,7 +185,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
             Long longID = new CrudOperations(db, fc_gps).execute(FormsDAO.class.getName(), "formsDao", "insertForm_GPS").get();
 
-            if (longID != 0) {
+            if (longID > 0) {
                 fc_gps.setId(longID.intValue());
                 fc_gps.setUid(deviceID + fc_gps.getId());
 
@@ -206,19 +206,18 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     public void BtnEnd() {
 
-        /*if (!validatorClass.EmptyTextBox(this, bi.ls01a05, getString(R.string.ls01a05))) {
-            return;
-        }
+        if (!Validator.emptyCheckingContainer(this, bi.fldgrpls01a)) return;
+        else if (!Validator.emptyCheckingContainer(this, bi.fldgrpls01a02)) return;
         try {
             SaveDraft();
             if (UpdateDB()) {
-                MainApp.endActivity(this, this, EndingActivity.class, false, fc_4_5);
+                MainApp.endActivity(this, this, EndingActivity.class, false, fc_gps);
             } else {
                 Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show();
             }
         } catch (JSONException e) {
             e.printStackTrace();
-        }*/
+        }
 
     }
 

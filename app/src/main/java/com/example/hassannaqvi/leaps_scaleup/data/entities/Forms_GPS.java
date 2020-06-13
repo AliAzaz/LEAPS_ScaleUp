@@ -90,6 +90,8 @@ public class Forms_GPS implements Serializable {
         json.put(SinglePart.COLUMN_STUDYID, this.studyID == null ? JSONObject.NULL : this.studyID);
         json.put(SinglePart.COLUMN_CLUSTERCODE, this.clustercode == null ? JSONObject.NULL : this.clustercode);
         json.put(SinglePart.COLUMN_ENDINGDATETIME, this.endtime == null ? JSONObject.NULL : this.endtime);
+        json.put(SinglePart.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
+        json.put(SinglePart.COLUMN_ISTATUS88X, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
         json.put(SinglePart.COLUMN_GPSLAT, this.gpsLat == null ? JSONObject.NULL : this.gpsLat);
         json.put(SinglePart.COLUMN_GPSLNG, this.gpsLng == null ? JSONObject.NULL : this.gpsLng);
         json.put(SinglePart.COLUMN_GPSDATE, this.gpsDT == null ? JSONObject.NULL : this.gpsDT);
@@ -295,6 +297,8 @@ public class Forms_GPS implements Serializable {
         public static final String COLUMN_STUDYID = "studyID";
         public static final String COLUMN_CLUSTERCODE = "clustercode";
         public static final String COLUMN_ENDINGDATETIME = "endtime";
+        public static final String COLUMN_ISTATUS = "istatus";
+        public static final String COLUMN_ISTATUS88X = "istatus88x";
         public static final String COLUMN_GPSLAT = "gpsLat";
         public static final String COLUMN_GPSLNG = "gpsLng";
         public static final String COLUMN_GPSDATE = "gpsDT";

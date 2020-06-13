@@ -36,9 +36,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.EndInterview"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".ui.LoginActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name="im.dino.dbinspector.activities.DbInspectorActivity">
@@ -55,10 +52,6 @@
         <activity
             android:name=".ui.MainActivity"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.StartActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1" />
         <activity
             android:name=".ui.InfoActivity"
             android:screenOrientation="portrait"

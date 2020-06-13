@@ -20,9 +20,8 @@ import android.text.format.DateFormat;
 
 import androidx.core.app.ActivityCompat;
 
-import com.example.hassannaqvi.leaps_scaleup.contracts.FamilyMembersContract;
-import com.example.hassannaqvi.leaps_scaleup.contracts.FormsContract;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.utils.TypefaceUtil;
 
 import java.io.Serializable;
@@ -74,18 +73,12 @@ public class MainApp extends Application {
     public static String deviceId;
 
     public static Boolean admin = false;
-    public static FormsContract fc;
-    public static FamilyMembersContract fmc;
     public static String userName = "0000";
     public static int versionCode;
     public static String versionName;
     public static String[] loginMem;
     public static String userName2 = "0000";
     public static int round = 3;
-    public static int tehsilCode = 0;
-    public static int villageCode = 0;
-    public static int lhwCode = 0;
-    public static String HHno;
     public static String IMEI;
     public static final String FORM01A = "1a";
     public static final String FORM01B = "1b";
@@ -159,7 +152,7 @@ public class MainApp extends Application {
                                 activity.finish();
                                 Intent end_intent = new Intent(context, EndActivityClass);
                                 end_intent.putExtra("complete", complete);
-                                end_intent.putExtra("typeFlag", objectData.getClass().equals(Forms.class));
+                                end_intent.putExtra("typeFlag", objectData.getClass().equals(Forms.class) ? 1 : objectData.getClass().equals(Forms_04_05.class) ? 2 : 0);
                                 end_intent.putExtra("fc_data", (Serializable) objectData);
                                 context.startActivity(end_intent);
                             }
