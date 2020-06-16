@@ -186,7 +186,7 @@ public class InfoActivity extends AppCompatActivity {
                     m = sInfo_parse.getLs01f05m();
                 } else {
                     y = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'y'));
-                    m = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'm'));
+                    m = String.valueOf(MainApp.ageInMonthsByDOB(sInfo_parse.getLs01f03()));
                 }
                 bi.lsid7y.setText(y);
                 bi.lsid7m.setText(m);
@@ -217,9 +217,7 @@ public class InfoActivity extends AppCompatActivity {
                 Toast.makeText(this, "Study ID not found!!", Toast.LENGTH_SHORT).show();
             }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
@@ -244,9 +242,7 @@ public class InfoActivity extends AppCompatActivity {
                 return false;
             }
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 

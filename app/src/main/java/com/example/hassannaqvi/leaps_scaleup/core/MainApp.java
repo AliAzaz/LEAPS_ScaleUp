@@ -118,6 +118,7 @@ public class MainApp extends Application {
         Calendar calendar = Calendar.getInstance();
         try {
             Date date = sdf.parse(value);
+            if (date == null) return calendar;
             calendar.setTime(date);
             return calendar;
 
@@ -137,6 +138,15 @@ public class MainApp extends Application {
             ageInYears = Calendar.getInstance().get(Calendar.MONTH) - cal.get(Calendar.MONTH);
 
         return ageInYears;
+    }
+
+    public static long ageInMonthsByDOB(String dateStr) {
+        Calendar cal = getCalendarDate(dateStr);
+        Date dob = cal.getTime();
+        Date today = new Date();
+        long diff = today.getTime() - dob.getTime();
+        double ageInMonths = ((double) diff / (24 * 60 * 60 * 1000)) / 30.4375;
+        return (long) Math.floor(ageInMonths);
     }
 
     public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
