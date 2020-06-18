@@ -23,6 +23,7 @@ import androidx.core.app.ActivityCompat;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.utils.TypefaceUtil;
+import com.jakewharton.threetenabp.AndroidThreeTen;
 
 import java.io.Serializable;
 import java.net.MalformedURLException;
@@ -199,6 +200,10 @@ public class MainApp extends Application {
         } else {
             requestLocationUpdate();
         }
+
+
+        //Initiate DateTime
+        AndroidThreeTen.init(this);
 
     }
 

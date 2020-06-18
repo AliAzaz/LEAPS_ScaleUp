@@ -24,15 +24,18 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityInfoBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
+import com.example.hassannaqvi.leaps_scaleup.utils.DateUtils;
 import com.example.hassannaqvi.leaps_scaleup.validation.ClearClass;
 import com.example.hassannaqvi.leaps_scaleup.validation.validatorClass;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.threeten.bp.LocalDate;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.ExecutionException;
 
@@ -185,8 +188,30 @@ public class InfoActivity extends AppCompatActivity {
                     y = sInfo_parse.getLs01f05y();
                     m = sInfo_parse.getLs01f05m();
                 } else {
-                    y = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'y'));
-                    m = String.valueOf(MainApp.ageInMonthsByDOB(sInfo_parse.getLs01f03()));
+                    /*y = String.valueOf(MainApp.ageInYear_MonthByDOB(sInfo_parse.getLs01f03(), 'y'));
+                    long months = MainApp.ageInMonthsByDOB(sInfo_parse.getLs01f03());
+                    months = months / 12;
+                    m = String.valueOf(months);*/
+
+                    Calendar cal = DateUtils.getCalendarDate(sInfo_parse.getLs01f03());
+
+                    int curdate = LocalDate.now().getDayOfMonth();
+                    int curmonth = LocalDate.now().getMonthValue();
+                    int curyear = LocalDate.now().getYear();
+                    int day = cal.get(Calendar.DAY_OF_MONTH);
+                    int month = cal.get(Calendar.MONTH) + 1;
+                    int year = cal.get(Calendar.YEAR);
+
+                    if (day > curdate) {
+                        curmonth -= 1;
+                    }
+                    if (month > curmonth) {
+                        curyear -= 1;
+                        curmonth += 12;
+                    }
+                    m = String.valueOf(curmonth - month);
+                    y = String.valueOf(curyear - year);
+
                 }
                 bi.lsid7y.setText(y);
                 bi.lsid7m.setText(m);
