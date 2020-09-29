@@ -152,7 +152,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                 : bi.gca05f.isChecked() ? "6"
                 : "0");
 
-        fc_gps.setStudyID(bi.gca06.getText().toString());
+//        fc_gps.setStudyID(bi.gca06.getText().toString());
 
         f01.put("gca06", bi.gca06.getText().toString());
         f01.put("gca06b01", bi.gca06b01.getText().toString());
