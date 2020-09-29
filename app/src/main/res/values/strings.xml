@@ -1362,24 +1362,35 @@ If there are any deviations from the protocol, please complete the Protocol Devi
 </string>
 
     <string name="gca01">Name and surname of CCDA</string>
-
-    <string name="gca02a">If location is in a LEAPS cluster, enter Cluster ID</string>
-    <string name="gca02b">If location is not in a LEAPS cluster, enter Village name</string>
-
-    <string name="gca03">Enter District Name</string>
+    <string name="gca02">For all locations, enter the Village name.</string>
+    <string name="gca03">For all locations, enter District Name.</string>
 
     <string name="gca05">Select location: (select one)</string>
-    <string name="gca05a">School Cohort Participant Household</string>
-    <string name="gca05b">CYL Household</string>
-    <string name="gca05c">Youth Comparison Household</string>
-    <string name="gca05d">LEAPS Preschool</string>
-    <string name="gca05e">NCHD Feeder School (or Re-Opened School)</string>
-    <string name="gca05f">MELE Comparison Preschool</string>
-    <string name="gca05g">NCHD District Office</string>
+    <string name="gca05a">CYL Household</string>
+    <string name="gca05b">LEAPS Preschool</string>
+    <string name="gca05c">NCHD Feeder School (or Re-Opened School)</string>
+    <string name="gca05d">MELE Comparison Preschool</string>
+    <string name="gca05e">NCHD District Office</string>
+    <string name="gca05f">MOE Parent School</string>
 
-    <string name="gca06">Enter the corresponding school cohort child study ID </string>
-    <string name="gca07">Enter the corresponding youth participant study ID </string>
-    <string name="gca08">Enter the corresponding Control Preschool Teacher study ID</string>
+    <string name="gca06">For CYL Household coordinates, please enter the CYL’s  study ID </string>
+    <string name="gca06blbl">For CYL Household coordinates, please enter the CYL’s  first name and family name. </string>
+    <string name="gca06b01">First name</string>
+    <string name="gca06b02">Family name</string>
+
+    <string name="gca07">Enter the Cluster ID where the LEAPS preschool is located. </string>
+
+    <string name="gca08">Enter the Cluster ID of the LEAPS preschool that the NCHD Feeder School is affiliated with.</string>
+    <string name="gca08blbl">Enter the first name and family name of the feeder school teacher who teaches KG2 </string>
+    <string name="gca08b01">First name</string>
+    <string name="gca08b02">Family name</string>
+    <string name="gca08c">Feeder school name</string>
+
+    <string name="gca09">Enter the 3-digit study ID for the comparison school (assigned during MELE data collection).</string>
+    <string name="gca09b">Enter the name of the comparison school.</string>
+
+    <string name="gca10">Enter the Cluster ID of the LEAPS preschool that the MOE Parent School is affiliated with.</string>
+    <string name="gca10b">Enter the name of the MOE parent school</string>
 
 </resources>
 
