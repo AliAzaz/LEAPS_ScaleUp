@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +19,11 @@ import com.example.hassannaqvi.leaps_scaleup.R;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.CrudOperations;
 import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityGpsCoordinateBinding;
+import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -30,6 +35,8 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
 import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 
 public class GPSCoordinateActivity extends AppCompatActivity {
@@ -67,9 +74,9 @@ public class GPSCoordinateActivity extends AppCompatActivity {
     public void BtnContinue() {
         if (formValidation()) {
             try {
-                SaveDraft();
+                saveDraft();
                 if (!gpsFlag) return;
-                if (UpdateDB()) {
+                if (updateDB()) {
                     finish();
                     startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true).putExtra("fc_data", fc_gps));
                 } else {
@@ -81,7 +88,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         }
     }
 
-    private boolean UpdateDB() {
+    private boolean updateDB() {
 
         try {
 
@@ -110,8 +117,8 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         if (!Validator.emptyCheckingContainer(this, bi.fldgrpls01a02)) return;
         try {
-            SaveDraft();
-            if (UpdateDB()) {
+            saveDraft();
+            if (updateDB()) {
                 Intent end_intent = new Intent(this, EndingActivity.class);
                 end_intent.putExtra("complete", false);
                 end_intent.putExtra("fc_data", fc_gps);
@@ -125,7 +132,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     }
 
-    private void SaveDraft() throws JSONException {
+    private void saveDraft() throws JSONException {
 
         fc_gps = new Forms_GPS();
 
@@ -196,7 +203,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         }*/
     }
 
-    public void setGPS(Forms_GPS fc) {
+    private void setGPS(Forms_GPS fc) {
         SharedPreferences GPSPref = getSharedPreferences("GPSCoordinates", Context.MODE_PRIVATE);
         try {
             String lat = GPSPref.getString("Latitude", "0");
@@ -224,6 +231,43 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             Log.e(TAG, "setGPS: " + e.getMessage());
         }
 
+    }
+
+    public void BtnClusterIDValid(View v, String id) {
+        if (!Validator.emptyTextBox(this, (EditText) v))
+            return;
+
+        Object cluster;
+        try {
+            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(id).get();
+            if (cluster != null) {
+                Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
+                cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
+                bi.ls01aDis.setText(cluster_name[0]);
+                bi.ls01aTeh.setText(cluster_name[1]);
+                bi.ls01aUC.setText(cluster_name[2]);
+                bi.ls01aVil.setText(cluster_name[3]);
+                bi.fldgrpls01a01.setVisibility(VISIBLE);
+                setBtnVisibility(VISIBLE);
+            } else {
+                Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
+                bi.fldgrpls01a01.setVisibility(GONE);
+                setBtnVisibility(GONE);
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    public void clusterIDWatch(CharSequence charSequence, int i, int i1, int i2) {
+        bi.fldgrpls01a01.setVisibility(GONE);
+        setBtnVisibility(GONE);
+    }
+
+    private void setBtnVisibility(int view) {
+        bi.endButtons.setVisibility(view);
     }
 
 }

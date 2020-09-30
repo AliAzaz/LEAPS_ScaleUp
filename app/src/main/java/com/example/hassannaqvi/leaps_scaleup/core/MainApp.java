@@ -150,7 +150,7 @@ public class MainApp extends Application {
         return (long) Math.floor(ageInMonths);
     }
 
-    public static void endActivity(final Context context, final Activity activity, final Class EndActivityClass, final boolean complete, final Object objectData) {
+    public static void endActivity(final Context context, final Activity activity, final Class<?> EndActivityClass, final boolean complete, final Object objectData) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 context);
         alertDialogBuilder

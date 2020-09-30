@@ -340,16 +340,33 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
-                            android:id="@+id/gca07"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:layout_marginBottom="1dp"
-                            android:hint="@string/gca07"
-                            android:inputType="number"
-                            android:maxLength="4" />
+                        <LinearLayout
+                            style="@style/linerlayout_view_wt_bound"
+                            android:orientation="horizontal">
+
+                            <Button
+                                style="@style/button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(gca07,gca07.getText().toString())}"
+                                android:text="VALIDATE" />
+
+                            <EditText
+                                android:id="@+id/gca07"
+                                style="@style/textInput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="2"
+                                android:hint="@string/gca10"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:onTextChanged="@{callback.clusterIDWatch}" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -385,16 +402,33 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
-                            android:id="@+id/gca08"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:layout_marginBottom="1dp"
-                            android:hint="@string/gca08"
-                            android:inputType="number"
-                            android:maxLength="4" />
+                        <LinearLayout
+                            style="@style/linerlayout_view_wt_bound"
+                            android:orientation="horizontal">
+
+                            <Button
+                                style="@style/button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(gca08,gca08.getText().toString())}"
+                                android:text="VALIDATE" />
+
+                            <EditText
+                                android:id="@+id/gca08"
+                                style="@style/textInput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="2"
+                                android:hint="@string/gca10"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:onTextChanged="@{callback.clusterIDWatch}" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -639,16 +673,33 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
-                            android:id="@+id/gca10"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:layout_marginBottom="1dp"
-                            android:hint="@string/gca10"
-                            android:inputType="number"
-                            android:maxLength="4" />
+                        <LinearLayout
+                            style="@style/linerlayout_view_wt_bound"
+                            android:orientation="horizontal">
+
+                            <Button
+                                style="@style/button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(gca10,gca10.getText().toString())}"
+                                android:text="VALIDATE" />
+
+                            <EditText
+                                android:id="@+id/gca10"
+                                style="@style/textInput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="2"
+                                android:hint="@string/gca10"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:onTextChanged="@{callback.clusterIDWatch}" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -695,13 +746,149 @@
 
             </LinearLayout>
 
+            <!--Info-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fldgrpls01a01"
+                style="@style/cardView"
+                android:elevation="10dp"
+                android:layoutDirection="ltr"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout style="@style/linerlayout_view_wt_bound">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!--District-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="District"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ls01aDis"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="2"
+                            android:background="@color/dullWhileOverlay"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+                        <!--Tehsil-->
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Tehsil"
+                            android:textAppearance="?android:attr/textAppearanceLarge"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:id="@+id/ls01aTeh"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginBottom="4dp"
+                            android:layout_weight="2"
+                            android:background="@color/dullWhileOverlay"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <!--UC-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="UC"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:id="@+id/ls01aUC"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="4dp"
+                                android:layout_weight="2"
+                                android:background="@color/dullWhileOverlay"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
+                            <!--Village-->
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimary"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:text="Village"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:id="@+id/ls01aVil"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginBottom="8dp"
+                                android:layout_weight="2"
+                                android:background="@color/dullWhileOverlay"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
+                android:id="@+id/endButtons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="@{gca05d.checked ? View.VISIBLE : View.GONE}">
 
                 <Button
                     android:id="@+id/btn_Continue"

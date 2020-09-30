@@ -24,7 +24,7 @@ public class CrudOperations extends AsyncTask<String, Void, Long> {
     @Override
     protected Long doInBackground(String... fnNames) {
 
-        Long longID = 0L;
+        long longID = 0L;
 
         try {
 
@@ -37,7 +37,7 @@ public class CrudOperations extends AsyncTask<String, Void, Long> {
                     for (Method method2 : fnClass.getDeclaredMethods()) {
                         if (method2.getName().equals(fnNames[2])) {
 
-                            longID = Long.valueOf(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
+                            longID = Long.parseLong(String.valueOf(fnClass.getMethod(method2.getName(), forms.getClass())
                                     .invoke(db.getClass().getMethod(fnNames[1]).invoke(db), forms)));
 
                             break;
