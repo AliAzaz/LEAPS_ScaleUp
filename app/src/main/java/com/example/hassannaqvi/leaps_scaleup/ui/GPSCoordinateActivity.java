@@ -76,7 +76,6 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         bi.gca05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radiogroup, int i) {
-
                 bi.fldgrpls01a01.setVisibility(GONE);
                 setBtnVisibility(GONE);
                 Clear.clearAllFields(bi.fldGrpllGca06);
@@ -198,9 +197,9 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         if (partData != null) {
             Participant part_item = (Participant) partData;
-            f01.put("study_id", part_item.getStudyID());
-            f01.put("part_type", part_item.getPartType());
-            f01.put("part_name", part_item.getPartName());
+            f01.put("studyid", part_item.getStudyID());
+            f01.put("_luid", part_item.getPartType());
+            f01.put("youthName", part_item.getPartName());
         } else if (clusterData != null) {
             Clusters cluster_item = (Clusters) clusterData;
             f01.put("cluster_code", cluster_item.getCluster_code());
@@ -278,9 +277,11 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             partData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordFromMainDB").execute(id).get();
             if (partData != null) {
                 Toast.makeText(this, "CYL ID found", Toast.LENGTH_SHORT).show();
+                bi.partname.setText(String.format("Youth Name: %s", ((Participant) partData).getPartName().toUpperCase()));
                 setBtnVisibility(VISIBLE);
             } else {
                 Toast.makeText(this, "CYL ID not found", Toast.LENGTH_SHORT).show();
+                bi.partname.setText(null);
                 setBtnVisibility(GONE);
             }
         } catch (InterruptedException | ExecutionException e) {
