@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,8 +23,10 @@ import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityGpsCoordinateBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -46,6 +49,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
     String getFtype = "", deviceID;
     String[] cluster_name;
     boolean gpsFlag = false;
+    Object clusterData, partData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +72,20 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         String[] districtName = {"....", "Naushahero Feroz", "Dadu", "Khairpur", "Sukkur"};
 
         bi.gca03.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Arrays.asList(districtName)));
+
+        bi.gca05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radiogroup, int i) {
+
+                bi.fldgrpls01a01.setVisibility(GONE);
+                setBtnVisibility(GONE);
+                Clear.clearAllFields(bi.fldGrpllGca06);
+                Clear.clearAllFields(bi.fldGrpllGca07);
+                Clear.clearAllFields(bi.fldGrpllGca08);
+                Clear.clearAllFields(bi.fldGrpllGca09);
+                Clear.clearAllFields(bi.fldGrpllGca10);
+            }
+        });
 
     }
 
@@ -178,29 +196,23 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         f01.put("gca10", bi.gca10.getText().toString());
         f01.put("gca10b", bi.gca10b.getText().toString());
 
+        if (partData != null) {
+            Participant part_item = (Participant) partData;
+            f01.put("study_id", part_item.getStudyID());
+            f01.put("part_type", part_item.getPartType());
+            f01.put("part_name", part_item.getPartName());
+        } else if (clusterData != null) {
+            Clusters cluster_item = (Clusters) clusterData;
+            f01.put("cluster_code", cluster_item.getCluster_code());
+            f01.put("cluster_name", cluster_item.getCluster_name());
+        }
+
         fc_gps.setSa1(String.valueOf(f01));
 
     }
 
     public boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpGPSCoord01);
-
-        /*if (bi.gca05d.isChecked() || bi.gca05e.isChecked() || bi.gca05g.isChecked()) return true;
-
-        String selectedID = bi.gca05a.isChecked() ? "1"
-                : bi.gca05b.isChecked() ? "2"
-                : bi.gca05c.isChecked() ? "2" : "3";
-
-        try {
-            Object childData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecord").execute(bi.gca06.getText().toString(), selectedID).get();
-            if (childData == null) {
-                Toast.makeText(this, "StudyID not exist!!", Toast.LENGTH_SHORT).show();
-                return false;
-            }
-
-        } catch (Exception ignore) {
-            return false;
-        }*/
     }
 
     private void setGPS(Forms_GPS fc) {
@@ -237,12 +249,10 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         if (!Validator.emptyTextBox(this, (EditText) v))
             return;
 
-        Object cluster;
         try {
-            cluster = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(id).get();
-            if (cluster != null) {
-                Toast.makeText(this, "Cluster ID validate..", Toast.LENGTH_SHORT).show();
-                cluster_name = ((Clusters) cluster).getCluster_name().split("\\|");
+            clusterData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(id).get();
+            if (clusterData != null) {
+                cluster_name = ((Clusters) clusterData).getCluster_name().split("\\|");
                 bi.ls01aDis.setText(cluster_name[0]);
                 bi.ls01aTeh.setText(cluster_name[1]);
                 bi.ls01aUC.setText(cluster_name[2]);
@@ -250,7 +260,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                 bi.fldgrpls01a01.setVisibility(VISIBLE);
                 setBtnVisibility(VISIBLE);
             } else {
-                Toast.makeText(this, "Cluster not found!!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Cluster not found", Toast.LENGTH_SHORT).show();
                 bi.fldgrpls01a01.setVisibility(GONE);
                 setBtnVisibility(GONE);
             }
@@ -261,9 +271,29 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     }
 
+    public void BtnCYLIDValid(View v, String id) {
+        if (!Validator.emptyTextBox(this, (EditText) v))
+            return;
+        try {
+            partData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordFromMainDB").execute(id).get();
+            if (partData != null) {
+                Toast.makeText(this, "CYL ID found", Toast.LENGTH_SHORT).show();
+                setBtnVisibility(VISIBLE);
+            } else {
+                Toast.makeText(this, "CYL ID not found", Toast.LENGTH_SHORT).show();
+                setBtnVisibility(GONE);
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void clusterIDWatch(CharSequence charSequence, int i, int i1, int i2) {
         bi.fldgrpls01a01.setVisibility(GONE);
         setBtnVisibility(GONE);
+        partData = null;
+        clusterData = null;
     }
 
     private void setBtnVisibility(int view) {

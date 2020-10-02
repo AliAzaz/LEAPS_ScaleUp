@@ -183,6 +183,7 @@
 
 
             <LinearLayout
+                android:id="@+id/fldGrpllGca06"
                 style="@style/linerlayout_view_wt_bound"
                 android:visibility='@{gca05a.checked ? View.VISIBLE : View.GONE }'>
 
@@ -209,16 +210,33 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
-                            android:id="@+id/gca06"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:layout_marginBottom="1dp"
-                            android:hint="@string/gca06"
-                            android:inputType="number"
-                            android:maxLength="4" />
+                        <LinearLayout
+                            style="@style/linerlayout_view_wt_bound"
+                            android:orientation="horizontal">
+
+                            <Button
+                                style="@style/button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:onClick="@{() -> callback.BtnCYLIDValid(gca06,gca06.getText().toString())}"
+                                android:text="VALIDATE" />
+
+                            <EditText
+                                android:id="@+id/gca06"
+                                style="@style/textInput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="2"
+                                android:hint="@string/gca10"
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:onTextChanged="@{callback.clusterIDWatch}" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -314,6 +332,7 @@
 
 
             <LinearLayout
+                android:id="@+id/fldGrpllGca07"
                 style="@style/linerlayout_view_wt_bound"
                 android:visibility='@{gca05b.checked ? View.VISIBLE : View.GONE }'>
 
@@ -376,6 +395,7 @@
 
 
             <LinearLayout
+                android:id="@+id/fldGrpllGca08"
                 style="@style/linerlayout_view_wt_bound"
                 android:visibility='@{gca05c.checked ? View.VISIBLE : View.GONE }'>
 
@@ -563,6 +583,7 @@
 
 
             <LinearLayout
+                android:id="@+id/fldGrpllGca09"
                 style="@style/linerlayout_view_wt_bound"
                 android:visibility='@{gca05d.checked ? View.VISIBLE : View.GONE }'>
 
@@ -647,6 +668,7 @@
 
 
             <LinearLayout
+                android:id="@+id/fldGrpllGca10"
                 style="@style/linerlayout_view_wt_bound"
                 android:visibility='@{gca05f.checked ? View.VISIBLE : View.GONE }'>
 
@@ -888,7 +910,7 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
-                android:visibility="@{gca05d.checked ? View.VISIBLE : View.GONE}">
+                android:visibility="@{gca05d.checked || gca05e.checked ? View.VISIBLE : View.GONE}">
 
                 <Button
                     android:id="@+id/btn_Continue"
