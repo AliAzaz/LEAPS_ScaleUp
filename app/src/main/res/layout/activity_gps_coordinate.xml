@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".ui.GPSCoordinateActivity">
 
@@ -245,12 +246,12 @@
                 <TextView
                     android:id="@+id/partname"
                     style="@style/textView2"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:background="@color/dullWhile"
                     android:padding="20dp"
-                    android:text="Youth Name: ABCD" />
+                    android:text="Youth Name" />
 
                 <TextView
                     android:id="@+id/gca06b"
@@ -379,7 +380,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(gca07,gca07.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca07ll,gca07,gca07.getText().toString())}"
                                 android:text="VALIDATE" />
 
                             <EditText
@@ -396,6 +397,10 @@
                                 android:onTextChanged="@{callback.clusterIDWatch}" />
 
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fldgrpgca07ll"
+                            style="@style/linerlayout_view" />
 
                     </LinearLayout>
 
@@ -442,7 +447,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(gca08,gca08.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca08ll,gca08,gca08.getText().toString())}"
                                 android:text="VALIDATE" />
 
                             <EditText
@@ -459,6 +464,10 @@
                                 android:onTextChanged="@{callback.clusterIDWatch}" />
 
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fldgrpgca08ll"
+                            style="@style/linerlayout_view" />
 
                     </LinearLayout>
 
@@ -620,7 +629,7 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <EditText
+                        <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/gca09"
                             style="@style/textInput"
                             android:layout_width="match_parent"
@@ -629,7 +638,10 @@
                             android:layout_marginBottom="1dp"
                             android:hint="@string/gca09"
                             android:inputType="number"
-                            android:maxLength="4" />
+                            android:maxLength="3"
+                            app:maxValue="300"
+                            app:minValue="1"
+                            app:type="range" />
 
                     </LinearLayout>
 
@@ -715,7 +727,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(gca10,gca10.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca10ll,gca10,gca10.getText().toString())}"
                                 android:text="VALIDATE" />
 
                             <EditText
@@ -732,6 +744,10 @@
                                 android:onTextChanged="@{callback.clusterIDWatch}" />
 
                         </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fldgrpgca10ll"
+                            style="@style/linerlayout_view" />
 
                     </LinearLayout>
 
@@ -777,140 +793,6 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
-
-            <!--Info-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldgrpls01a01"
-                style="@style/cardView"
-                android:elevation="10dp"
-                android:layoutDirection="ltr"
-                android:visibility="gone"
-                tools:visibility="visible">
-
-                <LinearLayout style="@style/linerlayout_view_wt_bound">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <!--District-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="1"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:text="District"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-                        <TextView
-                            android:id="@+id/ls01aDis"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="2"
-                            android:background="@color/dullWhileOverlay"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-
-                        <!--Tehsil-->
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_weight="1"
-                            android:background="@color/colorPrimary"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:text="Tehsil"
-                            android:textAppearance="?android:attr/textAppearanceLarge"
-                            android:textColor="@android:color/white" />
-
-                        <TextView
-                            android:id="@+id/ls01aTeh"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="13dp"
-                            android:layout_marginBottom="4dp"
-                            android:layout_weight="2"
-                            android:background="@color/dullWhileOverlay"
-                            android:gravity="center_horizontal|center_vertical"
-                            android:textColor="@color/colorPrimaryDark"
-                            android:textSize="16sp" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <!--UC-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_weight="1"
-                                android:background="@color/colorPrimary"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:text="UC"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:id="@+id/ls01aUC"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="4dp"
-                                android:layout_weight="2"
-                                android:background="@color/dullWhileOverlay"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="16sp" />
-
-                            <!--Village-->
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="16dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_weight="1"
-                                android:background="@color/colorPrimary"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:text="Village"
-                                android:textAppearance="?android:attr/textAppearanceLarge"
-                                android:textColor="@android:color/white" />
-
-                            <TextView
-                                android:id="@+id/ls01aVil"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="13dp"
-                                android:layout_marginBottom="8dp"
-                                android:layout_weight="2"
-                                android:background="@color/dullWhileOverlay"
-                                android:gravity="center_horizontal|center_vertical"
-                                android:textColor="@color/colorPrimaryDark"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
 
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout

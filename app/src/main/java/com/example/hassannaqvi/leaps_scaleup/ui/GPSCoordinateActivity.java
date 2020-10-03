@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -25,6 +27,7 @@ import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityGpsCoordinateBinding;
+import com.example.hassannaqvi.leaps_scaleup.databinding.IdentifiedClusterLayoutBinding;
 import com.example.hassannaqvi.leaps_scaleup.get.db.GetIndDBData;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
@@ -36,6 +39,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 
 import static android.view.View.GONE;
@@ -76,7 +80,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         bi.gca05.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radiogroup, int i) {
-                bi.fldgrpls01a01.setVisibility(GONE);
+//                bi.fldgrpls01a01.setVisibility(GONE);
                 setBtnVisibility(GONE);
                 Clear.clearAllFields(bi.fldGrpllGca06);
                 Clear.clearAllFields(bi.fldGrpllGca07);
@@ -244,23 +248,23 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     }
 
-    public void BtnClusterIDValid(View v, String id) {
-        if (!Validator.emptyTextBox(this, (EditText) v))
+    public void BtnClusterIDValid(ViewGroup grp, View txt, String id) {
+        if (!Validator.emptyTextBox(this, (EditText) txt))
             return;
 
         try {
             clusterData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(id).get();
             if (clusterData != null) {
                 cluster_name = ((Clusters) clusterData).getCluster_name().split("\\|");
-                bi.ls01aDis.setText(cluster_name[0]);
-                bi.ls01aTeh.setText(cluster_name[1]);
-                bi.ls01aUC.setText(cluster_name[2]);
-                bi.ls01aVil.setText(cluster_name[3]);
-                bi.fldgrpls01a01.setVisibility(VISIBLE);
+                IdentifiedClusterLayoutBinding bi_c = DataBindingUtil.inflate((LayoutInflater) Objects.requireNonNull(this.getSystemService(Context.LAYOUT_INFLATER_SERVICE)), R.layout.identified_cluster_layout, grp, true);
+                bi_c.ls01aDis.setText(cluster_name[0]);
+                bi_c.ls01aTeh.setText(cluster_name[1]);
+                bi_c.ls01aUC.setText(cluster_name[2]);
+                bi_c.ls01aVil.setText(cluster_name[3]);
                 setBtnVisibility(VISIBLE);
             } else {
                 Toast.makeText(this, "Cluster not found", Toast.LENGTH_SHORT).show();
-                bi.fldgrpls01a01.setVisibility(GONE);
+//                bi.fldgrpls01a01.setVisibility(GONE);
                 setBtnVisibility(GONE);
             }
         } catch (InterruptedException | ExecutionException e) {
@@ -291,14 +295,22 @@ public class GPSCoordinateActivity extends AppCompatActivity {
     }
 
     public void clusterIDWatch(CharSequence charSequence, int i, int i1, int i2) {
-        bi.fldgrpls01a01.setVisibility(GONE);
+//        bi.fldgrpls01a01.setVisibility(GONE);
         setBtnVisibility(GONE);
         partData = null;
         clusterData = null;
+        bi.fldgrpgca07ll.removeAllViews();
+        bi.fldgrpgca08ll.removeAllViews();
+        bi.fldgrpgca10ll.removeAllViews();
     }
 
     private void setBtnVisibility(int view) {
         bi.endButtons.setVisibility(view);
+        if (view == GONE) {
+            bi.fldgrpgca07ll.removeAllViews();
+            bi.fldgrpgca08ll.removeAllViews();
+            bi.fldgrpgca10ll.removeAllViews();
+        }
     }
 
 }
