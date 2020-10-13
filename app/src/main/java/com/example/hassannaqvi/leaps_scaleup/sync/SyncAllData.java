@@ -19,6 +19,7 @@ import java.lang.reflect.Method;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.Collection;
 
 
@@ -152,7 +153,7 @@ public class SyncAllData extends AsyncTask<String, String, String> {
 
 
                     BufferedReader br = new BufferedReader(new InputStreamReader(
-                            connection.getInputStream(), "utf-8"));
+                            connection.getInputStream(), StandardCharsets.UTF_8));
                     StringBuffer sb = new StringBuffer();
 
                     while ((line = br.readLine()) != null) {
@@ -186,37 +187,27 @@ public class SyncAllData extends AsyncTask<String, String, String> {
     protected void onPostExecute(String result) {
         int sSynced = 0;
         int sDuplicate = 0;
-        String sSyncedError = "";
+        StringBuilder sSyncedError = new StringBuilder();
 
         //Do something with the JSON string
         if (result != null) {
-            String _json = result;
-            if (_json.length() > 0) {
+            if (result.length() > 0) {
                 JSONArray json = null;
                 try {
                     json = new JSONArray(result);
-
-//                    DatabaseHelper db = new DatabaseHelper(mContext); // Database Helper
 
                     for (int i = 0; i < json.length(); i++) {
                         int id = 0;
                         JSONObject jsonObject = new JSONObject(json.getString(i));
 
                         if (jsonObject.getString("status").equals("1") && jsonObject.getString("error").equals("0")) {
-
-                            //  db.updateSyncedChildForm(jsonObject.getString("id"));  // UPDATE SYNCED
-
                             id = Integer.parseInt(jsonObject.getString("id"));
-
                             sSynced++;
                         } else if (jsonObject.getString("status").equals("2") && jsonObject.getString("error").equals("0")) {
-                            //db.updateSyncedChildForm(jsonObject.getString("id")); // UPDATE DUPLICATES
-
                             id = Integer.parseInt(jsonObject.getString("id"));
-
                             sDuplicate++;
                         } else {
-                            sSyncedError += "\nError: " + jsonObject.getString("message");
+                            sSyncedError.append("\nError: ").append(jsonObject.getString("message"));
                         }
                         switch (updateSyncClass) {
                             case "updateSyncedForms_04_05":
@@ -224,6 +215,9 @@ public class SyncAllData extends AsyncTask<String, String, String> {
                                 break;
                             case "updateSyncedForms":
                                 UpdateFncs.updateSyncedForms(id);
+                                break;
+                            case "getUnSyncedForms_GPS":
+                                UpdateFncs.getUnSyncedForms_GPS(id);
                                 break;
                         }
                     }
@@ -246,7 +240,7 @@ public class SyncAllData extends AsyncTask<String, String, String> {
                 }
 
             } else {
-                pd.setMessage("Received: " + _json.length() + "");
+                pd.setMessage("Received: " + result.length() + "");
                 pd.show();
             }
         } else {

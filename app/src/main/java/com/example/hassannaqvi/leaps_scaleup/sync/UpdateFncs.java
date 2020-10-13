@@ -11,28 +11,27 @@ import static com.example.hassannaqvi.leaps_scaleup.ui.LoginActivity.db;
 public abstract class UpdateFncs {
 
     public static void updateSyncedForms_04_05(int _id) {
-
-//        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_04_05");
         try {
-            new UpdateSyncedStatus(db, new Date().toString(),_id).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_04_05").get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+            new UpdateSyncedStatus(db, new Date().toString(), _id).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_04_05").get();
+        } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
 
     }
 
     public static void updateSyncedForms(int _id) {
-
-//        new syncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_04_05");
         try {
-            new UpdateSyncedStatus(db, new Date().toString(),_id).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms").get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
+            new UpdateSyncedStatus(db, new Date().toString(), _id).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms").get();
+        } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }
+    }
 
+    public static void getUnSyncedForms_GPS(int _id) {
+        try {
+            new UpdateSyncedStatus(db, new Date().toString(), _id).execute(FormsDAO.class.getName(), "formsDao", "updateSyncedForms_GPS").get();
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
