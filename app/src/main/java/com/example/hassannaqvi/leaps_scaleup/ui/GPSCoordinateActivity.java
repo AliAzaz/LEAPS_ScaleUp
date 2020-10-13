@@ -201,12 +201,12 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         if (partData != null) {
             Participant part_item = (Participant) partData;
-            f01.put("studyid", part_item.getStudyID());
+            fc_gps.setStudyID(part_item.getStudyID());
             f01.put("_luid", part_item.getPartType());
             f01.put("youthName", part_item.getPartName());
         } else if (clusterData != null) {
             Clusters cluster_item = (Clusters) clusterData;
-            f01.put("cluster_code", cluster_item.getCluster_code());
+            fc_gps.setClustercode(cluster_item.getCluster_code());
             f01.put("cluster_name", cluster_item.getCluster_name());
         }
 
