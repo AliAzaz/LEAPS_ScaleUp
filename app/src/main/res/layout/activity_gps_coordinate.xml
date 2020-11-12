@@ -901,7 +901,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:elevation="10dp">
+                    android:elevation="10dp"
+                    android:layoutDirection="ltr">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -918,37 +919,15 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <LinearLayout
-                            style="@style/linerlayout_view_wt_bound"
-                            android:orientation="horizontal">
-
-                            <Button
-                                style="@style/button"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca11bll,gca11b,gca11b.getText().toString())}"
-                                android:text="VALIDATE" />
-
-                            <EditText
-                                android:id="@+id/gca11b"
-                                style="@style/textInput"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:layout_margin="10dp"
-                                android:layout_marginBottom="1dp"
-                                android:layout_weight="2"
-                                android:hint="@string/gca11b"
-                                android:inputType="number"
-                                android:maxLength="4"
-                                android:onTextChanged="@{callback.clusterIDWatch}" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/fldgrpgca11bll"
-                            style="@style/linerlayout_view" />
+                        <EditText
+                            android:id="@+id/gca11b"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="2"
+                            android:hint="@string/gca11b" />
 
                     </LinearLayout>
 
@@ -960,8 +939,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:elevation="10dp"
-                    android:layoutDirection="ltr">
+                    android:elevation="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -978,19 +956,40 @@
                             android:textColor="@android:color/white"
                             android:textSize="20sp" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/gca11c"
-                            style="@style/textInput"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10dp"
-                            android:layout_marginBottom="1dp"
-                            android:hint="@string/gca11c"
-                            android:inputType="number"
-                            android:maxLength="2"
-                            app:maxValue="99"
-                            app:minValue="1"
-                            app:type="range" />
+                        <LinearLayout
+                            style="@style/linerlayout_view_wt_bound"
+                            android:orientation="horizontal">
+
+                            <Button
+                                style="@style/button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca11cll,gca11c,gca11c.getText().toString())}"
+                                android:text="VALIDATE" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/gca11c"
+                                style="@style/textInput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="2"
+                                android:layout_marginBottom="1dp"
+                                android:hint="@string/gca11c"
+                                android:inputType="number"
+                                android:maxLength="2"
+                                app:maxValue="99"
+                                app:minValue="1"
+                                app:type="range"
+                                android:onTextChanged="@{callback.clusterIDWatch}" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fldgrpgca11cll"
+                            style="@style/linerlayout_view" />
 
                     </LinearLayout>
 

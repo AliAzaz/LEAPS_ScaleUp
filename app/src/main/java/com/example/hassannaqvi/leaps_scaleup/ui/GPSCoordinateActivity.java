@@ -309,7 +309,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         bi.fldgrpgca07ll.removeAllViews();
         bi.fldgrpgca08ll.removeAllViews();
         bi.fldgrpgca10ll.removeAllViews();
-        bi.fldgrpgca11bll.removeAllViews();
+        bi.fldgrpgca11cll.removeAllViews();
     }
 
     private void setBtnVisibility(int view) {
@@ -318,7 +318,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             bi.fldgrpgca07ll.removeAllViews();
             bi.fldgrpgca08ll.removeAllViews();
             bi.fldgrpgca10ll.removeAllViews();
-            bi.fldgrpgca11bll.removeAllViews();
+            bi.fldgrpgca11cll.removeAllViews();
         }
     }
 
