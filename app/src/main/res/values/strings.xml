@@ -1372,6 +1372,7 @@ If there are any deviations from the protocol, please complete the Protocol Devi
     <string name="gca05d">MELE Comparison Preschool</string>
     <string name="gca05e">NCHD District Office</string>
     <string name="gca05f">MOE Parent School</string>
+    <string name="gca05g">FO Household</string>
 
     <string name="gca06">For CYL Household coordinates, please enter the CYL’s  study ID </string>
     <string name="gca06blbl">For CYL Household coordinates, please enter the CYL’s  first name and family name. </string>
@@ -1391,6 +1392,12 @@ If there are any deviations from the protocol, please complete the Protocol Devi
 
     <string name="gca10">Enter the Cluster ID of the LEAPS preschool that the MOE Parent School is affiliated with.</string>
     <string name="gca10b">Enter the name of the MOE parent school</string>
+
+    <string name="gca11">Enter the FO’s first name and family name.</string>
+    <string name="gca11a01">First name</string>
+    <string name="gca11a02">Family name</string>
+    <string name="gca11b">Write the district in which the FO lives.</string>
+    <string name="gca11c">Enter the FO’s two-digit assigned ID:</string>
 
 </resources>
 

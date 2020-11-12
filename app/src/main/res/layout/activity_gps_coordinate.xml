@@ -13,7 +13,6 @@
             type="com.example.hassannaqvi.leaps_scaleup.ui.GPSCoordinateActivity" />
     </data>
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,6 +25,7 @@
             android:layoutDirection="rtl"
             android:orientation="vertical">
 
+
             <TextView
                 style="@style/textView2"
                 android:layout_width="match_parent"
@@ -37,6 +37,7 @@
                 android:text="@string/gca0hinstruction"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="@android:color/black" />
+
 
             <LinearLayout
                 android:id="@+id/fldgrpls01a02"
@@ -96,6 +97,7 @@
                 </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
 
             <!--Radio Button gca05-->
             <androidx.cardview.widget.CardView
@@ -175,6 +177,13 @@
                             android:layout_weight="1"
                             android:text="@string/gca05f" />
 
+                        <RadioButton
+                            android:id="@+id/gca05g"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="1dp"
+                            android:layout_weight="1"
+                            android:text="@string/gca05g" />
 
                     </RadioGroup>
 
@@ -794,6 +803,202 @@
 
             </LinearLayout>
 
+
+            <LinearLayout
+                android:id="@+id/fldGrpllGca11"
+                style="@style/linerlayout_view_wt_bound"
+                android:visibility='@{gca05g.checked ? View.VISIBLE : View.GONE }'>
+
+                <TextView
+                    android:id="@+id/gca11"
+                    style="@style/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:text="@string/gca11"
+                    android:textSize="20sp" />
+
+                <!--EditText gca11a01-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldgrpgca11a01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp"
+                    android:layoutDirection="ltr">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gca11a01Txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/gca11a01"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/gca11a01"
+                            style="@style/EditText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="2"
+                            android:hint="@string/gca11a01" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--EditText gca11a02-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldgrpgca11a02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp"
+                    android:layoutDirection="ltr">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gca11a02Txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/gca11a02"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/gca11a02"
+                            style="@style/EditText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="2"
+                            android:hint="@string/gca11a02" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--EditText gca11b-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldgrpgca11b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/gca11bTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/gca11b"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            style="@style/linerlayout_view_wt_bound"
+                            android:orientation="horizontal">
+
+                            <Button
+                                style="@style/button"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca11bll,gca11b,gca11b.getText().toString())}"
+                                android:text="VALIDATE" />
+
+                            <EditText
+                                android:id="@+id/gca11b"
+                                style="@style/textInput"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="1dp"
+                                android:layout_weight="2"
+                                android:hint="@string/gca11b"
+                                android:inputType="number"
+                                android:maxLength="4"
+                                android:onTextChanged="@{callback.clusterIDWatch}" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fldgrpgca11bll"
+                            style="@style/linerlayout_view" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--EditText gca11c-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldgrpgca11c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp"
+                    android:layoutDirection="ltr">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/gca11cTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/gca11c"
+                            android:textColor="@android:color/white"
+                            android:textSize="20sp" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/gca11c"
+                            style="@style/textInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginBottom="1dp"
+                            android:hint="@string/gca11c"
+                            android:inputType="number"
+                            android:maxLength="2"
+                            app:maxValue="99"
+                            app:minValue="1"
+                            app:type="range" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
             <!--  = = = = =  END OF FORM FIELDS  = = = = = -->
             <LinearLayout
                 android:id="@+id/endButtons"
@@ -824,6 +1029,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 </layout>

@@ -87,6 +87,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpllGca08);
                 Clear.clearAllFields(bi.fldGrpllGca09);
                 Clear.clearAllFields(bi.fldGrpllGca10);
+                Clear.clearAllFields(bi.fldGrpllGca11);
             }
         });
 
@@ -178,6 +179,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
                 : bi.gca05d.isChecked() ? "4"
                 : bi.gca05e.isChecked() ? "5"
                 : bi.gca05f.isChecked() ? "6"
+                : bi.gca05g.isChecked() ? "7"
                 : "0");
 
 //        fc_gps.setStudyID(bi.gca06.getText().toString());
@@ -198,6 +200,11 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
         f01.put("gca10", bi.gca10.getText().toString());
         f01.put("gca10b", bi.gca10b.getText().toString());
+
+        f01.put("gca11a01", bi.gca11a01.getText().toString());
+        f01.put("gca11a02", bi.gca11a02.getText().toString());
+        f01.put("gca11b", bi.gca11b.getText().toString());
+        f01.put("gca11c", bi.gca11c.getText().toString());
 
         if (partData != null) {
             Participant part_item = (Participant) partData;
@@ -302,6 +309,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
         bi.fldgrpgca07ll.removeAllViews();
         bi.fldgrpgca08ll.removeAllViews();
         bi.fldgrpgca10ll.removeAllViews();
+        bi.fldgrpgca11bll.removeAllViews();
     }
 
     private void setBtnVisibility(int view) {
@@ -310,6 +318,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             bi.fldgrpgca07ll.removeAllViews();
             bi.fldgrpgca08ll.removeAllViews();
             bi.fldgrpgca10ll.removeAllViews();
+            bi.fldgrpgca11bll.removeAllViews();
         }
     }
 
