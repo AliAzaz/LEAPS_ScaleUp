@@ -8,6 +8,7 @@ import androidx.room.Update;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase.Sub_DBConnection;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.FO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
@@ -27,8 +28,10 @@ public interface FormsDAO {
     @Insert
     Long insertForm_GPS(Forms_GPS forms);
 
+
     @Delete
     void delete(Forms forms);
+
 
     @Update
     int updateForm(Forms forms);
@@ -38,6 +41,7 @@ public interface FormsDAO {
 
     @Update
     int updateForm_GPS(Forms_GPS forms);
+
 
     /*Others Sync*/
     @Insert
@@ -49,6 +53,10 @@ public interface FormsDAO {
     @Insert
     Long insertParticipants(Participant participant);
 
+    @Insert
+    Long insertFO(FO fo);
+
+
     @Query("DELETE from " + Sub_DBConnection.TABLE_USERS)
     int deleteUsers();
 
@@ -57,6 +65,9 @@ public interface FormsDAO {
 
     @Query("DELETE from " + Sub_DBConnection.TABLE_PARTICIPANT)
     int deleteParticipants();
+
+    @Query("DELETE from " + Sub_DBConnection.TABLE_FO)
+    int deleteFO();
 
 
     /*Update methods after upload on server*/

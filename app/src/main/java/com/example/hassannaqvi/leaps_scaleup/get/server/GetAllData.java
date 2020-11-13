@@ -21,9 +21,10 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
     private HttpURLConnection urlConnection;
     private String TAG = "";
-    private Context mContext;
+    private final Context mContext;
     private ProgressDialog pd;
-    private String syncClass, URL;
+    private final String syncClass;
+    private final String URL;
 
     public GetAllData(Context context, String syncClass, String url) {
         mContext = context;
@@ -93,6 +94,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             break;
                         case "AllParticipants":
                             GetSyncFncs.syncParticipants(jsonArray);
+                            break;
+                        case "FO":
+                            GetSyncFncs.syncFO(jsonArray);
                             break;
                     }
 

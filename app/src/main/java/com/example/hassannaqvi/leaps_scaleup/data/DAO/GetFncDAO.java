@@ -5,6 +5,7 @@ import androidx.room.Query;
 
 import com.example.hassannaqvi.leaps_scaleup.data.AppDatabase;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.FO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_04_05;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
@@ -75,5 +76,8 @@ public interface GetFncDAO {
 
     @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_PARTICIPANT + " where studyID=:study_id order by studyID DESC")
     Participant getParticipantRecordFromMainDB(String study_id);
+
+    @Query("SELECT * FROM " + AppDatabase.Sub_DBConnection.TABLE_FO + " where fid=:f_id order by fid DESC")
+    FO getFORecordFromMainDB(String f_id);
 
 }

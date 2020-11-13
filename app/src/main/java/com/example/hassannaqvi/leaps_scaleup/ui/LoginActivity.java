@@ -830,7 +830,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
 
     public class SyncData extends AsyncTask<String, String, String> {
 
-        private Context mContext;
+        private final Context mContext;
 
         SyncData(Context mContext) {
             this.mContext = mContext;
@@ -849,6 +849,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
                     new GetAllData(mContext, "Clusters", MainApp._HOST_URL + CONSTANTS.URL_CLUSTERS).execute();
                     Toast.makeText(LoginActivity.this, "Sync Youth Participants", Toast.LENGTH_LONG).show();
                     new GetAllData(mContext, "AllParticipants", MainApp._HOST_URL + CONSTANTS.URL_ALL_PARTICIPANTS).execute();
+                    Toast.makeText(LoginActivity.this, "Sync FO", Toast.LENGTH_LONG).show();
+                    new GetAllData(mContext, "FO", MainApp._HOST_URL + CONSTANTS.URL_FO).execute();
                 }
             });
 

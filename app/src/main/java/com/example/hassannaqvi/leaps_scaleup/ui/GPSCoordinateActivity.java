@@ -24,6 +24,7 @@ import com.example.hassannaqvi.leaps_scaleup.core.MainApp;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.GetFncDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.FO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Forms_GPS;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.databinding.ActivityGpsCoordinateBinding;
@@ -53,7 +54,7 @@ public class GPSCoordinateActivity extends AppCompatActivity {
     String getFtype = "", deviceID;
     String[] cluster_name;
     boolean gpsFlag = false;
-    Object clusterData, partData;
+    Object clusterData, partData, foData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -255,12 +256,13 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     }
 
-    public void BtnClusterIDValid(ViewGroup grp, View txt, String id) {
-        if (!Validator.emptyTextBox(this, (EditText) txt))
+    public void BtnClusterIDValid(ViewGroup grp, View txt) {
+        EditText edit = (EditText) txt;
+        if (!Validator.emptyTextBox(this, edit))
             return;
 
         try {
-            clusterData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(id).get();
+            clusterData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getClusterRecord").execute(edit.getText().toString()).get();
             if (clusterData != null) {
                 cluster_name = ((Clusters) clusterData).getCluster_name().split("\\|");
                 IdentifiedClusterLayoutBinding bi_c = DataBindingUtil.inflate((LayoutInflater) Objects.requireNonNull(this.getSystemService(Context.LAYOUT_INFLATER_SERVICE)), R.layout.identified_cluster_layout, grp, true);
@@ -281,11 +283,12 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     }
 
-    public void BtnCYLIDValid(View v, String id) {
-        if (!Validator.emptyTextBox(this, (EditText) v))
+    public void BtnCYLIDValid(View txt) {
+        EditText edit = (EditText) txt;
+        if (!Validator.emptyTextBox(this, edit))
             return;
         try {
-            partData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordFromMainDB").execute(id).get();
+            partData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getParticipantRecordFromMainDB").execute(edit.getText().toString()).get();
             if (partData != null) {
                 Toast.makeText(this, "CYL ID found", Toast.LENGTH_SHORT).show();
                 bi.partname.setText(String.format("Youth Name: %s", ((Participant) partData).getPartName().toUpperCase()));
@@ -301,15 +304,35 @@ public class GPSCoordinateActivity extends AppCompatActivity {
 
     }
 
+    public void BtnFOIDValid(View txt) {
+        EditText edit = (EditText) txt;
+        if (!Validator.emptyTextBox(this, edit))
+            return;
+        try {
+            foData = new GetIndDBData(db, GetFncDAO.class.getName(), "getFncDao", "getFORecordFromMainDB").execute(edit.getText().toString()).get();
+            if (foData != null) {
+                Toast.makeText(this, "FO ID found", Toast.LENGTH_SHORT).show();
+                bi.foname.setText(String.format("FO Name: %s", ((FO) foData).getFname().toUpperCase()));
+                setBtnVisibility(VISIBLE);
+            } else {
+                Toast.makeText(this, "FO ID not found", Toast.LENGTH_SHORT).show();
+                bi.foname.setText(null);
+                setBtnVisibility(GONE);
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
+
+    }
+
     public void clusterIDWatch(CharSequence charSequence, int i, int i1, int i2) {
-//        bi.fldgrpls01a01.setVisibility(GONE);
         setBtnVisibility(GONE);
         partData = null;
         clusterData = null;
+        foData = null;
         bi.fldgrpgca07ll.removeAllViews();
         bi.fldgrpgca08ll.removeAllViews();
         bi.fldgrpgca10ll.removeAllViews();
-        bi.fldgrpgca11cll.removeAllViews();
     }
 
     private void setBtnVisibility(int view) {
@@ -318,7 +341,6 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             bi.fldgrpgca07ll.removeAllViews();
             bi.fldgrpgca08ll.removeAllViews();
             bi.fldgrpgca10ll.removeAllViews();
-            bi.fldgrpgca11cll.removeAllViews();
         }
     }
 

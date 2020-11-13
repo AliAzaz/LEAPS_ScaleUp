@@ -4,6 +4,7 @@ import com.example.hassannaqvi.leaps_scaleup.RMOperations.CrudOperations;
 import com.example.hassannaqvi.leaps_scaleup.RMOperations.SyncOperations;
 import com.example.hassannaqvi.leaps_scaleup.data.DAO.FormsDAO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Clusters;
+import com.example.hassannaqvi.leaps_scaleup.data.entities.FO;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Participant;
 import com.example.hassannaqvi.leaps_scaleup.data.entities.Users;
 
@@ -64,6 +65,24 @@ abstract class GetSyncFncs {
                 participant.Sync(jsonObjectUser);
 
                 new CrudOperations(db, participant).execute(FormsDAO.class.getName(), "formsDao", "insertParticipants");
+            }
+            db.close();
+        } catch (Exception ignored) {
+        }
+    }
+
+    static void syncFO(JSONArray foList) {
+
+        new SyncOperations(db).execute(FormsDAO.class.getName(), "formsDao", "deleteFO");
+
+        try {
+            for (int i = 0; i < foList.length(); i++) {
+                JSONObject jsonObjectUser = foList.getJSONObject(i);
+
+                FO fo = new FO();
+                fo.Sync(jsonObjectUser);
+
+                new CrudOperations(db, fo).execute(FormsDAO.class.getName(), "formsDao", "insertFO");
             }
             db.close();
         } catch (Exception ignored) {

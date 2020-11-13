@@ -230,7 +230,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnCYLIDValid(gca06,gca06.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnCYLIDValid(gca06)}"
                                 android:text="VALIDATE" />
 
                             <EditText
@@ -389,7 +389,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca07ll,gca07,gca07.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca07ll,gca07)}"
                                 android:text="VALIDATE" />
 
                             <EditText
@@ -456,7 +456,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca08ll,gca08,gca08.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca08ll,gca08)}"
                                 android:text="VALIDATE" />
 
                             <EditText
@@ -736,7 +736,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca10ll,gca10,gca10.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca10ll,gca10)}"
                                 android:text="VALIDATE" />
 
                             <EditText
@@ -965,10 +965,10 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:layout_weight="1"
-                                android:onClick="@{() -> callback.BtnClusterIDValid(fldgrpgca11cll,gca11c,gca11c.getText().toString())}"
+                                android:onClick="@{() -> callback.BtnFOIDValid(gca11c)}"
                                 android:text="VALIDATE" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <EditText
                                 android:id="@+id/gca11c"
                                 style="@style/textInput"
                                 android:layout_width="0dp"
@@ -979,16 +979,19 @@
                                 android:hint="@string/gca11c"
                                 android:inputType="number"
                                 android:maxLength="2"
-                                app:maxValue="99"
-                                app:minValue="1"
-                                app:type="range"
                                 android:onTextChanged="@{callback.clusterIDWatch}" />
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:id="@+id/fldgrpgca11cll"
-                            style="@style/linerlayout_view" />
+                        <TextView
+                            android:id="@+id/foname"
+                            style="@style/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/dullWhile"
+                            android:padding="20dp"
+                            android:text="FO Name" />
 
                     </LinearLayout>
 

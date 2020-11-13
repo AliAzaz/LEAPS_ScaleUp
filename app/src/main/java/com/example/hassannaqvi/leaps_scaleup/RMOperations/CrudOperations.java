@@ -13,8 +13,8 @@ import java.lang.reflect.Method;
 
 public class CrudOperations extends AsyncTask<String, Void, Long> {
 
-    private AppDatabase db;
-    private Object forms;
+    private final AppDatabase db;
+    private final Object forms;
 
     public CrudOperations(AppDatabase db, Object forms) {
         this.db = db;
