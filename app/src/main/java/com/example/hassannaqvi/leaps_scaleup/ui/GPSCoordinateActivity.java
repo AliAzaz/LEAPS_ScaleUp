@@ -216,6 +216,8 @@ public class GPSCoordinateActivity extends AppCompatActivity {
             Clusters cluster_item = (Clusters) clusterData;
             fc_gps.setClustercode(cluster_item.getCluster_code());
             f01.put("cluster_name", cluster_item.getCluster_name());
+        } else if (foData != null) {
+            f01.put("foName", ((FO) foData).getFname());
         }
 
         fc_gps.setSa1(String.valueOf(f01));
