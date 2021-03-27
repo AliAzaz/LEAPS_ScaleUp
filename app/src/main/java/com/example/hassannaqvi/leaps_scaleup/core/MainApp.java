@@ -79,7 +79,7 @@ public class MainApp extends Application {
     public static String versionName;
     public static String[] loginMem;
     public static String userName2 = "0000";
-    public static int round = 3;
+    public static int round = 4;
     public static String IMEI;
     public static final String FORM01A = "1a";
     public static final String FORM01B = "1b";
