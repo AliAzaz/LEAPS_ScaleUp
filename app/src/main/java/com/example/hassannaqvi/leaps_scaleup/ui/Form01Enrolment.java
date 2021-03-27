@@ -71,7 +71,7 @@ public class Form01Enrolment extends AppCompatActivity {
         bi.ls01a10.setManager(getSupportFragmentManager());
         bi.ls01a10.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         bi.ls01a10.setMinDate("1/1/2019");
-        bi.ls01f03.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -78));
+        bi.ls01f03.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -90));
 
 
         if (getFtype.equals("1b")) {
