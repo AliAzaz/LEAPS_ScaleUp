@@ -71,7 +71,7 @@ public class Form01Enrolment extends AppCompatActivity {
         bi.ls01a10.setManager(getSupportFragmentManager());
         bi.ls01a10.setMaxDate(new SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis()));
         bi.ls01a10.setMinDate("1/1/2019");
-        bi.ls01f03.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -90));
+        bi.ls01f03.setMinDate(DateUtils.getMonthsBack("dd/MM/yyyy", -102));
 
 
         if (getFtype.equals("1b")) {
@@ -550,7 +550,7 @@ public class Form01Enrolment extends AppCompatActivity {
             if (!validatorClass.EmptyTextBox(this, bi.ls01f05y, getString(R.string.ls01f05))) {
                 return false;
             }
-            if (!validatorClass.RangeTextBox(this, bi.ls01f05y, 3, 6, getString(R.string.ls01f05), "Years")) {
+            if (!validatorClass.RangeTextBox(this, bi.ls01f05y, 3, 8, getString(R.string.ls01f05), "Years")) {
                 return false;
             }
         }
